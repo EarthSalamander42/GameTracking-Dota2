@@ -614,7 +614,7 @@
 
 
 		"DOTA_Item_Ping_Neutral_Offer"			"%s1Кто-нибудь хочет %s4?"
-		"DOTA_Item_Ping_Neutral_Request"		"%s1Хочу %s4 (сейчас у %s3)"
+		"DOTA_Item_Ping_Neutral_Request"		"%s1Хочу %s4 (сейчас %s3)"
 		"DOTA_Item_Ping_Neutral_Equip"			"%s1Хочу, чтобы %s4 был у %s3"
 		
 		
@@ -7614,7 +7614,7 @@
 		"StoreBanner_Header_SHADOWSHAMAN_EkiSet"		"Shadow Shaman: Набор «Eki Spiritual Implements»"
 		"StoreBanner_Text_SHADOWSHAMAN_EkiSet"		"Отправьте их в великую пустоту!"
 		"StoreBanner_Header_BLOODSEEKER_ScarletRavenSet"		"Bloodseeker: Набор «Ardor of the Scarlet Raven»"
-		"StoreBanner_Text_BLOODSEEKER_ScarletRavenSet"		"Птичьи поилки Кхатцатокатля наполнены кровью…"
+		"StoreBanner_Text_BLOODSEEKER_ScarletRavenSet"		"Птичьи поилки Ксакатокатля наполнены кровью..."
 		"StoreBanner_Header_BM_SteelwebSet"		"Broodmother: Набор «Steelweb of Pytheos»"
 		"StoreBanner_Text_BM_SteelwebSet"		"Посмотрим, как они пойдут по этому!"
 		"StoreBanner_Header_BM_WebofThornsSet"		"Broodmother: Набор «Web of Thorns»"
@@ -18237,7 +18237,7 @@
 
 		"DOTARankTierFormat" "{s:rank_tier_name}{s:rank_pips_name}"
 
-		"DOTARankTierName0" "Без ранга"
+		"DOTARankTierName0" "На калибровке"
 		"DOTARankTierName1" "Рекрут"
 		"DOTARankTierName2" "Страж"
 		"DOTARankTierName3" "Рыцарь"
@@ -21997,6 +21997,12 @@
 	"ranked_mmr_locked_explain"			"Рейтинговый подбор игр:\nОткроется после {i:ranked_required_play_time_hrs_for_unlock} часов игры в нерейтинговых режимах.\n\nСоревновательные режимы, которые подбирают игроков по ролям и показывают их успехи в виде медалей сезонного рейтинга. Для игры в рейтинговом подборе необходимо привязать к аккаунту Steam уникальный номер телефона, не используемый на других аккаунтах."
 	"ranked_mmr_lock_progress"			"{s:mmr_unlock_progress} ч. сыграно"
 
+	"ranked_mmr_label"				"Рейтинг"
+	"ranked_mmr_value"				"{i:mmr}"
+	"ranked_mmr_calibrating"		"НЕТ (игр осталось: {i:calibrating_games})"
+	"ranked_mmr_no_data"			"Игр для калибровки: {i:calibrating_required_games}"
+
+
 	"ranked_phone_status_none_button"		"ПРИВЯЗАТЬ НОМЕР К STEAM"
 	"ranked_phone_status_none_label"		"Чтобы участвовать в рейтинговых играх, привяжите номер телефона к аккаунту Steam."
 	"ranked_phone_status_steam_button"		"ПРИВЯЗАТЬ НОМЕР ТЕЛЕФОНА"
@@ -22089,6 +22095,8 @@
 	"dota_play_lobbies_section"					"Лобби"
 	"dota_play_create_lobby"					"Создать"
 	"dota_play_browse_lobbies"					"Найти"
+	"dota_play_role_queue"						"По ролям"
+	"dota_play_classic"							"Classic"
 
 	"dota_play_practice_1v1_playtab"			"ТРЕНИРОВКА 1 НА 1"
 	"dota_play_mutation"						"МУТАЦИЯ"
@@ -26009,6 +26017,11 @@
 	"FrontPage_NewBloom2020_Treasure_Desc"              	"Содержит редкий, очень редкий и крайне редкий наборы для Puck, Legion Commander и Templar Assassin, а также наборы для Kunkka, Arc Warden, Dazzle и не только."
 	"FrontPage_NewBloom2020_Treasure_Header"        	    "Сокровищница Новоцвета"
 	
+	
+	"FrontPage_February2020_Treasure_Name"              	"Treasure of the Fallen Cinder"
+	"FrontPage_February2020_Treasure_Desc"              	"Содержит очень редкий набор для Wraith King, редкий набор для Phoenix и обычные наборы для Clockwerk, Beastmaster, Oracle и других."
+	"FrontPage_February2020_Treasure_Header"        	    "Новая сокровищница"
+		
 
 	"FrontPage_Frostivus_Treasure_Name"              	"Сокровищница Холодрыжества 2017"
 	"FrontPage_Frostivus_Treasure_Desc"              	"Содержит уникальные холодрыжеские наборы для ваших любимых героев!"
@@ -27089,6 +27102,8 @@
 	"DOTA_SurpriseWheel_Title"	"Боевое колесо Рилай"
 	"DOTA_SurpriseWheel_Instructions"	"Потяните за рычаг и ждите свою награду"
 	"DOTA_SurpriseWheel_SpinAgain"	"Крутите снова"
+	"DOTA_SurpriseWheel_SpinsRemaining_Singular"	"Осталось попыток: {d:spins_remaining}"
+	"DOTA_SurpriseWheel_SpinsRemaining_Plural"		"Осталось попыток: {d:spins_remaining}"
 
 	"DOTA_BattlePass_Expired"			"Этот боевой пропуск больше не действует"
 
@@ -29509,7 +29524,7 @@
 	"DOTA_FrontPage_New_Announcer_Pack_Header"	"Новый набор комментаторов"
 
 	"DOTA_SeasonRank_Tooltip_Title" "Медали сезонного ранга"
-	"DOTA_SeasonRank_Tooltip_YourMedalsSubtitle" "Ваши текущие медали"
+	"DOTA_SeasonRank_Tooltip_YourMedalsSubtitle" "Ваша текущая медаль"
 	"DOTA_SeasonRank_Tooltip_TitleCore" "Медали сезонного ранга — основа"
 	"DOTA_SeasonRank_Tooltip_TitleSupport" "Медали сезонного ранга — поддержка"
 	"DOTA_SeasonRank_Tooltip_Text1" "Ваши успехи в этом сезоне представлены медалью ранга."
@@ -30333,6 +30348,11 @@
 
     "DOTA_RR_RoleQueue"                     "Ролевой поиск"
     "DOTA_RR_NoRoleQueue"                   "Нет жетонов ролевого поиска"
+    "DOTA_RR_RolePerformanceTitle"			"Поиск игры с учётом ваших результатов"
+
+    "DOTA_RR_RoleHandicapTitle"				"Результаты игр по ролям"	
+    "DOTA_RR_RoleHandicapExplain"			"Основываясь на ваших успехах в ролевом рейтинге, система поиска скорректирует ваш ранг так, чтобы учитывать ваши возможности игры на той или иной роли. Так вам будут попадаться более честные игры, вне зависимости от стиля игры и роли."
+
 
     "DOTA_Play_RR_Roles"                    "{d:party_role_total} из 5 ролей выбрано"
     "DOTA_Play_RR_PartyEligible"            "Ролевой поиск"
@@ -31255,7 +31275,9 @@
 	"DOTA_VersusScreen_Loading"							"Загрузка экрана соперников"
 
     "DOTA_Underlords_Tag"           "Новая игра от Valve"
+	"DOTA_Underlords_Release_Tag"  	"Официальный выход"
 	"DOTA_Underlords_Name"			"Dota Underlords"
+	"DOTA_Underlords_Season"		"Первый сезон"
 	"DOTA_Underlords_Label"			"Уже доступно"
 	"DOTA_Underlords_Description"	"Играйте на ПК, Mac, iOS и Android"
 	"DOTA_Underlords_Includes"		"Теперь с рейтинговым подбором игр<br>Доступно на ПК, Mac, iOS и Android"
@@ -31456,8 +31478,6 @@
 
 	"DOTA_EmoticonReward"									"Смайлик {s:emoticon_text}"
 
-	"DOTA_VAC_Warning_Header_Solo"	"Возможно, ваш компьютер блокирует систему VAC. Убедитесь, что вы не используете программы, мешающие работе VAC, а клиент Steam установлен правильно. Если вам требуется помощь, прочтите справку на сайте <a href=\"https://support.steampowered.com/kb_article.php?ref=2117-ilzv-2837\">поддержки Steam</a>. Если не устранить эту ошибку, игра по сети может быть недоступна."
-
-
+	"DOTA_VAC_Warning_Header_Solo"							"Античит Valve не может подтвердить надёжность вашего устройства. Если не устранить эту проблему, игра по сети может быть недоступна."
 	}
 }
