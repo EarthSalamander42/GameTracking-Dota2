@@ -181,7 +181,6 @@
 		"#dota_tip_intermediate_49"	"1"
 		"#dota_tip_intermediate_50"	"1"
 		"#dota_tip_intermediate_51"	"1"
-		"#dota_tip_intermediate_52"	"1"
 		"#dota_tip_intermediate_53"	"1"
 		"#dota_tip_intermediate_54"	"1"
 		"#dota_tip_intermediate_55"	"1"
@@ -205,7 +204,6 @@
 		"#dota_tip_intermediate_74" "1"
 		"#dota_tip_intermediate_75"	"1"
 		"#dota_tip_intermediate_76"	"1"
-		"#dota_tip_intermediate_77"	"1"
 	}
 
 	"Advanced"

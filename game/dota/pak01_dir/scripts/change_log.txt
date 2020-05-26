@@ -4,6 +4,63 @@
 {	
 	"change"
 	{
+		"date"			"1588439116"
+		"type"			"Default"
+		"description"	"#DOTA_726c_Update"
+		"event"			"DOTAShowPatchVersion( '7.26c' )"
+	}
+	"change"
+	{
+		"date"			"1588080428"
+		"type"			"Default"
+		"description"	"#DOTA_726b_Update"
+		"event"			"DOTAShowPatchVersion( '7.26b' )"
+	}
+	"change"
+	{
+		"date"			"1587490336"
+		"type"			"Default"
+		"description"	"#DOTA_726a_Update"
+		"event"			"DOTAShowPatchVersion( '7.26a' )"
+	}
+
+	"change"
+	{
+		"date"			"1587165556"
+		"type"			"Default"
+		"description"	"#DOTA_726_Update"
+		"event"			"DOTAShowPatchVersion( '7.26' )"
+	}
+	"change"
+	{
+		"date"			"1586211497"
+		"type"			"Default"
+		"description"	"#DOTA_725c_Update"
+		"event"			"DOTAShowPatchVersion( '7.25c' )"
+	}
+	"change"
+	{
+		"date"			"1585063373"
+		"type"			"Default"
+		"description"	"#DOTA_725b_Update"
+		"event"			"DOTAShowPatchVersion( '7.25b' )"
+	}
+	"change"
+	{
+		"date"			"1584547254"
+		"type"			"Default"
+		"description"	"#DOTA_725a_Update"
+		"event"			"DOTAShowPatchVersion( '7.25a' )"
+	}
+	"change"
+	{
+		"date"			"1584458202"
+		"type"			"Default"
+		"description"	"#DOTA_725_Update"
+		"event"			"DOTAShowPatchVersion( '7.25' )"
+	}
+	"change"
+	{
 		"date"			"1582777081"
 		"type"			"Default"
 		"description"	"#DOTA_724b_Update"
