@@ -23565,8 +23565,8 @@ Battle Pass และไอเท็มสมบัติทั้งหมด�
 "DOTA_Item_Desc_Frostmoot"	"ภายในบรรจุไอเท็มทั้งหมดของเซ็ต 'Frostmoot' สำหรับ Tiny"
 "DOTA_Item_Desc_The_International_2020__11_Battle_Pass_Levels"	"อัปเกรด Battle Pass ของ The International 2020 ของคุณ"
 "DOTA_Item_Desc_The_International_2020__5_Battle_Pass_Levels"	"อัปเกรด Battle Pass ของ The International 2020 ของคุณ"
-"DOTA_Item_The_International_2020__11_Battle_Pass_Levels"	"The International 2020 - 11 เลเวล Battle Pass"
-"DOTA_Item_The_International_2020__5_Battle_Pass_Levels"	"The International 2020 - 5 เลเวล Battle Pass"
+"DOTA_Item_The_International_2020__11_Battle_Pass_Levels"	"The International 2020 - 11 เลเวลแบตเทิลพาส"
+"DOTA_Item_The_International_2020__5_Battle_Pass_Levels"	"The International 2020 - 5 เลเวลแบตเทิลพาส"
 "DOTA_Item_Armor_of_Vile_Reliquary"	"Armor of Vile Reliquary"
 "DOTA_Item_Arms_of_Vile_Reliquary"	"Arms of Vile Reliquary"
 "DOTA_Item_Arms_of_the_Monument_of_Ruin"	"Arms of the Monument of Ruin"
@@ -23650,5 +23650,8 @@ Battle Pass และไอเท็มสมบัติทั้งหมด�
 "DOTA_Set_Vile_Reliquary"	"Vile Reliquary"
 "DOTA_Set_Whispers_of_the_Sleepless_Augur"	"Whispers of the Sleepless Augur"
 "DOTA_Item_Desc_Treasure_of_the_Fallen_Cinder"	"ไม่จำเป็นต้องมีผนึกหรือกุญแจในการเปิดสมบัติชิ้นนี้ เพราะมันปลดล็อคอยู่แล้ว สมบัติชิ้นนี้เต็มไปด้วยชุดเซ็ตอันมีเอกลักษณ์สำหรับฮีโร่โปรดของคุณ"
+"DOTA_Item_The_International_10_Battle_Pass"	"แบตเทิลพาสของ The International 10"
+"DOTA_Item_The_International_10_Gauntlet_Ticket"	"ตั๋วสังเวียนของ The International 10"
+"DOTA_WearableType_Gauntlet_Ticket"	"ตั๋วสังเวียน"
 }
 }

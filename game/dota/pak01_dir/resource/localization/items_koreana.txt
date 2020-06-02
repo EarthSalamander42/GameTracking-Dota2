@@ -4630,16 +4630,16 @@ The International 2017에서 선취점을 목격하고 받은 아이템입니다
 	This item will never be tradeable or purchasable on the marketplace."
 		"DOTA_Item_Desc_Brightskye__Aegis_of_the_Immortal_Style_Unlock"		"이 International 10 전투 패스 보상으로 스타일 메뉴에서 적용하는 업그레이드 스타일을 잠금 해제합니다.
 	앞으로도 장터에서 거래하거나 구매할 수 없는 아이템입니다."
-		"DOTA_Item_Desc_Brightskye__Gem_of_Truesight_Style_Unlock"		"이 International 10 전투 패스 보상으로 스타일 메뉴에서 적용하는 업그레이드 스타일을 잠금 해제합니다. 
-	앞으로도 장터에서 거래하거나 구매할 수 없는 아이템입니다."
-		"DOTA_Item_Desc_Brightskye__Octarine_Core_Style_Unlock"		"이 International 10 전투 패스 보상으로 스타일 메뉴에서 적용하는 업그레이드 스타일을 잠금 해제합니다.
-	앞으로도 장터에서 거래하거나 구매할 수 없는 아이템입니다."
+		"DOTA_Item_Desc_Brightskye__Gem_of_Truesight_Style_Unlock"		"This International 10 Battle Pass reward enables an upgrade to be unlocked in the style menu. 
+	This item will never be tradeable or purchasable on the marketplace."
+		"DOTA_Item_Desc_Brightskye__Octarine_Core_Style_Unlock"		"This International 10 Battle Pass reward enables an upgrade to be unlocked in the style menu.
+	This item will never be tradeable or purchasable on the marketplace."
 		"DOTA_Item_Desc_Brightskye__Refresher_Orb_Style_Unlock"		"이 International 10 전투 패스 보상으로 스타일 메뉴에서 적용하는 업그레이드 스타일을 잠금 해제합니다.
 	앞으로도 장터에서 거래하거나 구매할 수 없는 아이템입니다."
-		"DOTA_Item_Desc_Brightskye__Soul_Booster_Style_Unlock"		"이 International 10 전투 패스 보상으로 스타일 메뉴에서 적용하는 업그레이드 스타일을 잠금 해제합니다.
-	앞으로도 장터에서 거래하거나 구매할 수 없는 아이템입니다."
-		"DOTA_Item_Desc_Brightskye__Ultimate_Orb_Style_Unlock"		"이 International 10 전투 패스 보상으로 스타일 메뉴에서 적용하는 업그레이드 스타일을 잠금 해제합니다.
-	앞으로도 장터에서 거래하거나 구매할 수 없는 아이템입니다."
+		"DOTA_Item_Desc_Brightskye__Soul_Booster_Style_Unlock"		"This International 10 Battle Pass reward enables an upgrade to be unlocked in the style menu.
+	This item will never be tradeable or purchasable on the marketplace."
+		"DOTA_Item_Desc_Brightskye__Ultimate_Orb_Style_Unlock"		"This International 10 Battle Pass reward enables an upgrade to be unlocked in the style menu.
+	This item will never be tradeable or purchasable on the marketplace."
 		"DOTA_Item_Desc_Bristlebacks_Back"		"기본 아이템"
 		"DOTA_Item_Desc_Bristlebacks_Bracers"		"기본 아이템"
 		"DOTA_Item_Desc_Bristlebacks_Head"		"기본 아이템"
@@ -5905,10 +5905,10 @@ Crumbling Island Arena 맞춤 게임 패스 소유 시 얻는 혜택:<br>
 		"DOTA_Item_Desc_Deathripper"		"흑마법과 잘못된 과학의 끔찍한 조합으로 빚어진 야수와 같은 존재, 죽음의 몽마는 주인에게는 긴요하지만 다른 이들에게는 악몽이나 마찬가지입니다.<br><br>철의 왕국 출신인 죽음의 몽마는 전설적인 테이블탑 미니어처 게임 WARMACHINE에 있는 언데드 왕국 크릭스의 치명적인 피조물입니다. WARMACHINE에 대한 추가 정보는 www.privateerpress.com을 참고해 주세요."
 		"DOTA_Item_Desc_Deathwielder"		"장막의 자매는 무엇이든 꿰뚫을 수 있는 이 검을 대단히 자랑스러워합니다."
 		"DOTA_Item_Desc_Debts_of_the_Nightwatchman"		"가시멧돼지를 위한 '야경꾼의 빚' 세트 아이템이 모두 들어 있습니다."
-		"DOTA_Item_Desc_Declaration_of_the_Divine_Light_Radiant_Towers"		"International 10 전투 패스로 획득하는 맞춤 포탑으로, 공용 아이템 장비창 메뉴의 세계 옵션에서 장착할 수 있습니다.
-	앞으로도 장터에서 거래하거나 구매할 수 없는 아이템입니다."
-		"DOTA_Item_Desc_Declaration_of_the_Divine_Shadow_Dire_Towers"		"International 10 전투 패스로 획득하는 맞춤 포탑으로, 공용 아이템 장비창 메뉴의 세계 옵션에서 장착할 수 있습니다.
-	앞으로도 장터에서 거래하거나 구매할 수 없는 아이템입니다."
+		"DOTA_Item_Desc_Declaration_of_the_Divine_Light_Radiant_Towers"		"These custom towers from The International 10 Battle Pass can be equipped in the World options of the Global Items loadout menu.
+	This item will never be tradeable or purchasable on the marketplace."
+		"DOTA_Item_Desc_Declaration_of_the_Divine_Shadow_Dire_Towers"		"These custom towers from The International 10 Battle Pass can be equipped in the World options of the Global Items loadout menu.
+	This item will never be tradeable or purchasable on the marketplace."
 		"DOTA_Item_Desc_Decorative_Armor_of_the_Bone_Scryer"		"죽음의 예언자는 오직 죽음만을 생각합니다. 이 갑옷은 그녀의 냉혹한 마음과 뼈만 남은 외모를 돋보이게 해줍니다."
 		"DOTA_Item_Desc_Deep_Sea_Scoundrel"		"슬라크를 위한 '깊은 바다 악당' 세트 아이템이 모두 들어 있습니다."
 		"DOTA_Item_Desc_Deep_Vault_Guardian_Armplates"		"팔목보호대에 고대 보물 수호자들의 인장이 새겨져 있습니다."
@@ -11083,18 +11083,21 @@ The Battle Begins!는 인도 플레이어만을 위해 더블 일리미네이션
 		"DOTA_Item_Desc_The_International_10__25_Battle_Pass_Levels_Token"		"International 10 전투 패스 레벨을 올립니다."
 		"DOTA_Item_Desc_The_International_10__5_Battle_Pass_Levels"		"International 10 전투 패스 레벨을 올립니다."
 		"DOTA_Item_Desc_The_International_10__5_Battle_Pass_Levels_Token"		"International 10 전투 패스 레벨을 올립니다."
-		"DOTA_Item_Desc_The_International_10__Battle_Level_1000"		"The International 10 전투 패스 1,000레벨 달성을 기념하여 지급되었습니다.
-	앞으로도 장터에서 거래하거나 구매할 수 없는 아이템입니다.
-<br><br>The International 10 최종 결승전 종료 시 전투 레벨 1,000을 달성한 플레이어는 그 유명한 트로피를 본떠 1/5 크기에 합금으로 만든 모형인 올해 수집가의 아이기스를 받으실 수 있습니다.
-<br><br>이 아이템의 빛나는 특별 효과는 2021년 5월 1일에 만료됩니다."
-		"DOTA_Item_Desc_The_International_10__Battle_Level_2000"		"The International 10 전투 패스 2,000레벨 달성을 기념하여 지급되었습니다.
-	앞으로도 장터에서 거래하거나 구매할 수 없는 아이템입니다.
-
-<br><br>눈부신 업적을 게임 안에서 드러낼 수 있도록 2,000레벨을 달성한 분들께는 로샨이 기본 모습이 아닌 맞춤 형태로 변경되어 나타납니다.
-
-<br><br>The International 10 전투 패스 판매 종료일까지 전투 레벨 2,000을 달성한 플레이어는 2,000레벨 수집가의 새끼 로샨을 요청하실 수 있습니다.
-
-<br><br>이 아이템으로 적용되는 특별 로샨 효과는 2021년 5월 1일에 만료됩니다."
+		"DOTA_Item_Desc_The_International_10__Battle_Level_1000"		"Granted for achieving level 1000 as part of the The International 10 Battle Pass.
+	This item will never be tradeable or purchasable on the marketplace.
+	
+	<br><br>Players who reach Battle Level 1000 by the conclusion of The International 10 Grand Finals will also be able to claim this year's Collector's Aegis, a 1/5th-scale alloy replica of the famed trophy.
+	
+	
+	<br><br>The special glow effects of this item expire on May 1st, 2021."
+		"DOTA_Item_Desc_The_International_10__Battle_Level_2000"		"Granted for achieving level 2000 as part of the The International 10 Battle Pass.
+	This item will never be tradeable or purchasable on the marketplace.
+	
+	<br><br>As a way to show off your achievement in-game, all Level 2000 players will have a custom version of Roshan replace his default form.
+	
+	<br><br>Players who reach Battle Level 2000 by the conclusion of The International 10 Battle Pass Sales Date will also be able to claim a Level 2000 Collector's Baby Roshan
+	
+	<br><br>The special Roshan effect of this item expires on May 1st, 2021."
 		"DOTA_Item_Desc_The_International_2013_Battle_Point_Booster"		"이 아이템을 사용하면 6일 동안 <font color='#9da1a9'>전투 점수</font>를 최대 <font color='#9da1a9'>225%</font> 더 얻습니다. 아울러, 게임에 참가하는 다른 플레이어도 <font color='#9da1a9'>전투 점수</font>를 <font color='#9da1a9'>25%</font> 더 얻습니다."
 		"DOTA_Item_Desc_The_International_2013_Interactive_Compendium"		"The International 2013 기록서에서 최신 토너먼트 소식을 접하세요. 무료 짐꾼 스미빌과 전투 보너스 등 도전 목표 보상이 함께 포함되어 있습니다!"
 		"DOTA_Item_Desc_The_International_2013_Interactive_Compendium_Bundle"		"The International 2013 기록서에서 올해의 토너먼트 소식을 확인해 보십시오. 도전 목표 보상과 함께하는 무료 짐꾼 스미빌과 전투 보너스가 포함되어 있습니다."

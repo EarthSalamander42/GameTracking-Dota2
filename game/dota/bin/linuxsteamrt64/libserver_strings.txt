@@ -5382,7 +5382,6 @@ $tK
 20CAbilityNameModifier
 20CAdditionalEquipSlot
 20CAnimGraphGameSystem
-20CAnnouncerDescriptor
 20CArcanaLevelModifier
 20CBaseCombatCharacter
 20CCLCMsg_CmdKeyValues
@@ -6040,6 +6039,7 @@ $tK
 22TreeModelReplacement_t
 23CAnimGraphTraceProvider
 23CAnnouncerSharedThinker
+23CAssetModifierContainer
 23CBaseAnimatingEasings_t
 23CCLCMsg_LoadingProgress
 23CClassPtrSaveRestoreOps
@@ -15936,7 +15936,6 @@ CAnimationDecodeContext::AddAnimationDecodeDesc ran out of allocator memory (2)
 CAnimationDecodeContext::AddAnimationDecodeDesc ran out of allocator memory (3)
 CAnimationGroup
 CAnimationLayer
-CAnnouncerDescriptor
 CAreaPortal
 CAssociateResourceBlockLoader::BlockingLoadResourceFileData: Trying to load an illegal resource name %s!
 CAttachment
@@ -25322,7 +25321,7 @@ Guild Contract completion rewards
 Guild perk %s has invalid perk_type '%s'
 Guild perk %s is missing guild_level
 GuildBannerUpgrade
-GuildChallengeProgress: Player %d(%u) QueryID(%d) ContractID(%llu, %s) - %s
+GuildChallengeProgress: QueryID(%d) challenge %s - %s
 Gus Bot
 H
 H:%x
@@ -27840,6 +27839,7 @@ ItemChargeCount
 ItemCombinable
 ItemContributesToNetWorthWhenDropped
 ItemDeclarations
+ItemDef
 ItemDef %u claims to be a default item, but that slot was already filled by itemdef %u.
 ItemDisassembleRule
 ItemDisplayOwnership
@@ -32693,6 +32693,7 @@ ServerMVP: Not calculating stats, invalid game mode %d.
 ServerMVP: Not calculating stats, invalid lobby type %d.
 ServerMVP: Not calculating stats, invalid winning team %d.
 ServerMVP: Not calculating stats, missing gamerules or playerresource.
+ServerMVP: Not calculating stats, this lobby is low pri.
 ServerMVP: Submitting MVP stats for %d players in match %llu.
 ServerName
 ServerSessionID
@@ -33547,7 +33548,6 @@ SrvCalc [%d] %f, %f, %f - SPEED %f
 Ss
 St11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE
 St14_Function_base
-St15_Sp_counted_ptrIP23CAssetModifierContainerLN9__gnu_cxx12_Lock_policyE2EE
 St15binary_functionIR8CNavAreaP19NavSearchAreaInfo_t21NavSearchAreaResult_tE
 St15binary_functionIRK6VectorRK8CNavArea20NavSearchPosResult_tE
 St16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE
@@ -40446,7 +40446,6 @@ granite_golem_hp_aura
 grant_account_flag
 grant_action
 grant_action_custom
-grant_action_id
 grant_backpack_slots
 grant_cavern_crawl_map_variant
 grant_cavern_item
@@ -40464,7 +40463,6 @@ grant_in_order
 grant_item
 grant_item_gift
 grant_items
-grant_league_def
 grant_loot_
 grant_loot_list
 grant_max_periodic_points
@@ -40473,7 +40471,6 @@ grant_news_feed_event
 grant_one_of_each_item
 grant_ping_wheel_messages
 grant_points_custom
-grant_points_def
 grant_premium_points
 grant_quest
 grant_reward_item
@@ -42907,7 +42904,6 @@ m_RelationshipString
 m_RenderAttributeIDs
 m_RenderAttributeValues
 m_Renderers
-m_Replacement
 m_RequestGoToSecretShopTimer
 m_RequestedPlayerHealth
 m_Resolution
@@ -43663,7 +43659,6 @@ m_bItemIsPurchasable
 m_bItemIsPureSupport
 m_bItemIsRecipe
 m_bItemIsRecipeGenerated
-m_bItemOwnedByLocalPlayer
 m_bItemQueried
 m_bItemRequiresCustomShop
 m_bItemStackable
@@ -44023,7 +44018,6 @@ m_bUseCustomBuybackCooldown
 m_bUseCustomBuybackCost
 m_bUseCustomHeroLevels
 m_bUseCustomHeroXPValue
-m_bUseDefaultAnnouncer
 m_bUseEntityPivot
 m_bUseGlobalsTime
 m_bUseHelper
@@ -44036,6 +44030,7 @@ m_bUseLenientAFK
 m_bUseLocalTime
 m_bUseNeutralCreepBehavior
 m_bUseOffScreenIndicator
+m_bUsePanelCache
 m_bUseParentRenderBounds
 m_bUseProjectile
 m_bUsePuntSound
@@ -46698,7 +46693,6 @@ m_nAnimationParity
 m_nAnimationType
 m_nAnnounceHeroPickDirePlayerID
 m_nAnnounceHeroPickRadiantPlayerID
-m_nAnnouncerItemDef
 m_nArcanaColor
 m_nArcanaLevel
 m_nAssists
@@ -47428,7 +47422,6 @@ m_pAmbientSoundEffect
 m_pAnimGraphInstance
 m_pAnimationStatues
 m_pAnimationStatuesKeyValues
-m_pAnnouncerItem
 m_pAreas
 m_pAsyncSaveCallQueue
 m_pAttackerClassNameFilter
@@ -47996,6 +47989,8 @@ m_unFanfareGoodGuys
 m_unFingerPrestigeKills
 m_unFrameFuncThreadID == unCurrentThread
 m_unGameTime
+m_unGuildFlags
+m_unGuildID
 m_unGuildLogo
 m_unGuildPattern
 m_unGuildPrimaryColor
@@ -52478,7 +52473,6 @@ origin_z
 original_damage
 original_entindex
 original_hit
-original_purchaser_field
 original_start_time
 originy
 originz

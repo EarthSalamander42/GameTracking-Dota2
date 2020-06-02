@@ -2788,11 +2788,10 @@
 
 		"AbilityDraftAbilities"
 		{
-			//illusory orb requires a second hotkey which breaks Ability Draft rules 
-			//	 of only allowing ultimates to have second hotkey
-			"Ability1"		"puck_waning_rift"
-			"Ability2"		"puck_phase_shift"
-			"Ability3"		"puck_dream_coil"
+			"Ability1"      "puck_illusory_orb"
+			"Ability2"		"puck_waning_rift"
+			"Ability3"		"puck_phase_shift"
+			"Ability4"		"puck_dream_coil"
 		}		
 
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -19832,7 +19831,7 @@
 		"NameAliases"		"Kaolin,Earth"
 		"workshop_guide_name"		"Earth Spirit"
 		"NoCombine"		"0"
-		"AbilityDraftDisabled"		"1"
+		"AbilityDraftDisabled"		"0"
 		"HeroSelectSoundEffect"		"Hero_EarthSpirit.Pick"
 		"GibType"		"stone"
 		"PickSound"		"earth_spirit_earthspi_spawn_02"
@@ -19843,6 +19842,14 @@
 		"Ability4"		"earth_spirit_stone_caller"
 		"Ability5"		"earth_spirit_petrify"
 		"Ability6"		"earth_spirit_magnetize"
+
+		"AbilityDraftAbilities"
+		{
+			"Ability1"		"earth_spirit_boulder_smash"
+			"Ability2"		"earth_spirit_rolling_boulder"
+			"Ability3"		"earth_spirit_magnetize"
+		}
+
 		"Ability10"		"special_bonus_unique_earth_spirit_4"
 		"Ability11"		"special_bonus_attack_damage_50"
 		"Ability12"		"special_bonus_armor_6"
@@ -20195,7 +20202,8 @@
 		{
 			"Ability1"		"phoenix_icarus_dive"
 			"Ability2"		"phoenix_fire_spirits"
-			"Ability3"		"phoenix_supernova"
+			"Ability3"		"phoenix_sun_ray"
+			"Ability4"		"phoenix_supernova"
 		}
 
 		"ArmorPhysical"		"-1"

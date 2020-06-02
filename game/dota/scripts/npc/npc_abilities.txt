@@ -27754,6 +27754,7 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"FightRecapLevel"				"1"
 		"AbilitySound"					"Hero_KeeperOfTheLight.Illuminate.Discharge"
+		"AbilityDraftPreAbility"		"keeper_of_the_light_spirit_form_illuminate"
 		
 		"HasScepterUpgrade"			"1"
 
@@ -33507,6 +33508,9 @@
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"FightRecapLevel"				"2"
 		"AbilitySound"					"Hero_EarthSpirit.Magnetize.Cast"
+
+		"AbilityDraftPreAbility"		"earth_spirit_stone_caller"
+		"AbilityDraftUltScepterAbility" "earth_spirit_petrify"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -56320,7 +56324,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"5.5"
+				"value"				"5.0"
 				"ad_linked_ability"			"venomancer_poison_nova"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -64400,6 +64404,7 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"value"				"120"
+				"ad_linked_ability"			"earth_spirit_rolling_boulder"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -64446,6 +64451,7 @@
 			{
 				"var_type"					"FIELD_FLOAT"
 				"value"				"0.6"
+				"ad_linked_ability"			"earth_spirit_rolling_boulder"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -64469,11 +64475,13 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"value"				"325"
+				"ad_linked_ability"			"earth_spirit_rolling_boulder"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
 				"value2"				"650"
+				"ad_linked_ability"			"earth_spirit_rolling_boulder"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}

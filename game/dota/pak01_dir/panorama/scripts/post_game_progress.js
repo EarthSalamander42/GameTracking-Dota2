@@ -936,7 +936,7 @@ AnimateCavernCrawlScreenAction.prototype.start = function ()
         }));
     })(this);
 
-	this.seq.actions.push( new AddScreenLinkAction( panel, 'CavernsProgress', '#DOTACavernCrawl_Title_TI2019' ) );
+	this.seq.actions.push( new AddScreenLinkAction( panel, 'CavernsProgress', '#DOTACavernCrawl_Title_TI2020' ) );
 
 	this.seq.actions.push( new AddClassAction( panel, 'ShowScreen' ) );
 	this.seq.actions.push( new SkippableAction( new WaitAction( 1.0 ) ) );
@@ -3069,7 +3069,13 @@ AnimateMVP2ScreenAction.prototype.start = function ()
                 }
                 else
                 {
-                    $.GetContextPanel().SpawnHeroInScenePanelByHeroId( map, mvpDetails.overrideheroid, "featured_hero" );
+					var econId = mvpDetails.overrideeconid;
+					if(econId == undefined)
+                    {
+						econId = -1;
+                    }
+
+                    $.GetContextPanel().SpawnHeroInScenePanelByHeroId( map, mvpDetails.overrideheroid, "featured_hero", econId );
                 }
 
                 //setup accolades for mvp
@@ -4785,28 +4791,28 @@ g_MVP_Accolade_TypeMap = {
 	148:
 	{	// kKillEaterEvent_ShadowFiend_RequiemMultiKills
 		title_loc_token: "#DOTA_mvp2_accolade_title_kKillEaterEvent_ShadowFiend_RequiemMultiKills",
-		ability_name: "bane_fiends_grip",
+		ability_name: "nevermore_requiem",
 		gradient: "red",
 		detail_loc_token: "#DOTA_mvp2_accolade_detail_kKillEaterEvent_ShadowFiend_RequiemMultiKills",
 	},
 	149:
 	{	// kKillEaterEvent_ShadowFiend_QRazeKills
 		title_loc_token: "#DOTA_mvp2_accolade_title_kKillEaterEvent_ShadowFiend_QRazeKills",
-		ability_name: "bane_fiends_grip",
+		ability_name: "nevermore_shadowraze1",
 		gradient: "red",
 		detail_loc_token: "#DOTA_mvp2_accolade_detail_kKillEaterEvent_ShadowFiend_QRazeKills",
 	},
 	150:
 	{	// kKillEaterEvent_ShadowFiend_WRazeKills
 		title_loc_token: "#DOTA_mvp2_accolade_title_kKillEaterEvent_ShadowFiend_WRazeKills",
-		ability_name: "nevermore_shadowraze1",
+		ability_name: "nevermore_shadowraze2",
 		gradient: "red",
 		detail_loc_token: "#DOTA_mvp2_accolade_detail_kKillEaterEvent_ShadowFiend_WRazeKills",
 	},
 	151:
 	{	// kKillEaterEvent_ShadowFiend_ERazeKills
 		title_loc_token: "#DOTA_mvp2_accolade_title_kKillEaterEvent_ShadowFiend_ERazeKills",
-		ability_name: "bane_fiends_grip",
+		ability_name: "nevermore_shadowraze3",
 		gradient: "red",
 		detail_loc_token: "#DOTA_mvp2_accolade_detail_kKillEaterEvent_ShadowFiend_ERazeKills",
 	},
@@ -5471,14 +5477,14 @@ g_MVP_Accolade_TypeMap = {
 	254:
 	{	// kKillEaterEventType_Furion_EnemyHeroesTrapped
 		title_loc_token: "#DOTA_mvp2_accolade_title_kKillEaterEventType_Furion_EnemyHeroesTrapped",
-		ability_name: "courier_go_to_enemy_secretshop",
+		ability_name: "furion_sprout",
 		gradient: "red",
 		detail_loc_token: "#DOTA_mvp2_accolade_detail_kKillEaterEventType_Furion_EnemyHeroesTrapped",
 	},
 	255:
 	{	// kKillEaterEventType_Pangolier_HeartpiercerKills
 		title_loc_token: "#DOTA_mvp2_accolade_title_kKillEaterEventType_Pangolier_HeartpiercerKills",
-		ability_name: "pangolier_heartpiercer",
+		ability_name: "pangolier_lucky_shot",
 		gradient: "red",
 		detail_loc_token: "#DOTA_mvp2_accolade_detail_kKillEaterEventType_Pangolier_HeartpiercerKills",
 	},
@@ -5629,8 +5635,11 @@ function TestMVP2Screen() {
 					slot: 3,
 					accountid: 174054,
 					guildid: 4,
-					heroname: 'npc_dota_hero_earthshaker',
-					overrideheroid: 7,
+					heroname: 'npc_dota_hero_wraithking', // just for display
+					// Find hero id in game\dota\scripts\npc\npc_heroes.txt
+					overrideheroid: 42,
+					// Find econ id in game\dota\scripts\items\items_game.txt
+					overrideeconid: 13456,
 					was_dire: false,
 					accolades: [
 						{ type: accolades[0], detail_value: 113 },
