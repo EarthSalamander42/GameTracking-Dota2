@@ -257,6 +257,16 @@
     height: 46px;
 }
 
+.Collapsed
+{
+	visibility:collapse;
+}
+
+.NoGold .Found
+{
+	visibility:collapse;
+}
+
 .AchievementCircle
 {
     width: 32px;

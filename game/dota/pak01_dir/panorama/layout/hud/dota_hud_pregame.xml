@@ -61,11 +61,8 @@
 
 	<DOTAHudPreGame class="Hidden" hittest="false">
 		<Panel id="PreGameBackgroundImage"/>
+		<Panel id="PregameBGStatic" />		
 		<DOTAScenePanel id="PregameBG" camera="shot_cameraA" map="backgrounds/pregame_phase" hittest="false" particleonly="false" />
-		<Panel id="AmbientFXContainer" hittest="false" hittestchildren="false">
-			<DOTAScenePanel id="RadiantAmbient" class="AmbientCameraFX" camera="camera_top" map="scenes/pregame_dire_ambient" hittest="false" particleonly="true" />
-			<DOTAScenePanel id="DireAmbient" class="AmbientCameraFX" camera="camera_bottom" map="scenes/pregame_dire_ambient" hittest="false" particleonly="true" />
-		</Panel>
 		<Panel id="ConnectionFailed" class="TopBottomFlow">
 			<Panel id="ConnectionErrorIcon"/>
 			<Label text="#DOTA_Hero_Selection_ConnectionFailure"/>
@@ -74,9 +71,9 @@
 			<Panel id="ScreenContainer">
 				<Panel id="HeroPickScreen">
 					<Panel id="TitlesContainer" class="LeftRightFlow">
-						<Panel class="CenterBuffer"/>
+						<!-- <Panel class="CenterBuffer"/> -->
 						<Label id="HeroSelectionText" />
-						<Panel class="CenterBuffer RightBuffer"/>
+						<!-- <Panel class="CenterBuffer RightBuffer"/> -->
 					</Panel>
 					<Panel id="HeroPickScreenContents">
 						<Panel id="MainHeroPickScreenContents">
@@ -512,6 +509,16 @@
 							</Panel>
 						</Panel>
 						<Panel id="PickModeSubtitleInfo">
+							<!-- <Panel id="PickModeBanPhase">
+								<Label text="Ban Phase" />
+							</Panel> -->
+							<Panel id="PickModePickPhase">
+								<Panel id="RadiantPip1" class="PickPip RadiantPip RadiantPip1 Hidden" />
+								<Panel id="RadiantPip2" class="PickPip RadiantPip RadiantPip2 Hidden" />
+								<Label text="{s:all_draft_phase_name}" />
+								<Panel id="DirePip1" class="PickPip DirePip DirePip1 Hidden" />
+								<Panel id="DirePip2" class="PickPip DirePip DirePip2 Hidden" />
+							</Panel>
 							<Panel id="HeaderPenaltyTime">
 								<Panel id="PenaltyTimeInfoIcon" onmouseout="UIHideTextTooltip()" />
 								<Label id="PenaltyTimeLabel" text="#DOTA_Hero_Selection_PenaltyTime" />
@@ -692,7 +699,7 @@
 				</Panel>
 			</Panel>
 			<Panel id="TestCircle" hittest="false"/>
-			<Panel id="DebugTextContainer" class="LeftRightFlow">
+			<Panel id="DebugTextContainer" class="LeftRightFlow" hittest="false" hittestchildren="false">
 				<Label id="ReconnectLabel" class="DebugText" text="RECONNECT"/>
 				<Label id="PreloadLabel" class="DebugText" text="PRELOAD"/>
 				<Label id="BecomeActiveLabel" class="DebugText" text="BECOMEACTIVE"/>
@@ -706,6 +713,7 @@
 				<Label id="FinishedLabel" class="DebugText" text="FINISHED"/>
 			</Panel>
 		</Panel>
+		<Label id="DebugInfoBlock" hittest="false" />
 
 	</DOTAHudPreGame>
 </root>

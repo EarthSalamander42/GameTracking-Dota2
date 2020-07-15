@@ -116,7 +116,6 @@ message CMsgConnectedPlayers {
 	repeated .CMsgConnectedPlayers.Player disconnected_players = 7;
 	optional .DOTA_GameState game_state = 2 [default = DOTA_GAMERULES_STATE_INIT];
 	optional bool first_blood_happened = 6;
-	optional bool legacy_mass_disconnect = 9;
 	optional .CMsgPoorNetworkConditions poor_network_conditions = 10;
 	optional .CMsgConnectedPlayers.SendReason send_reason = 8 [default = INVALID];
 	optional uint32 radiant_kills = 11;
@@ -369,7 +368,6 @@ message CMsgGameMatchSignOut {
 	repeated .CMsgEconPlayerStrangeCountAdjustment player_strange_count_adjustments = 17;
 	optional bool automatic_surrender = 18;
 	optional uint32 server_version = 19;
-	optional bool legacy_mass_disconnect = 21;
 	optional .CMsgPoorNetworkConditions poor_network_conditions = 35;
 	repeated .CMsgGameMatchSignOut.CAdditionalSignoutMsg additional_msgs = 20;
 	repeated .CMsgGameMatchSignOut.CSocialFeedMatchEvent social_feed_events = 36;
@@ -396,6 +394,16 @@ message CMsgSignOutBotInfo {
 	optional .DOTABotDifficulty bot_difficulty_radiant = 2 [default = BOT_DIFFICULTY_PASSIVE];
 	optional bool created_lobby = 3;
 	optional .DOTABotDifficulty bot_difficulty_dire = 5 [default = BOT_DIFFICULTY_PASSIVE];
+}
+
+message CMsgSignOutTextMuteInfo {
+	message TextMuteMessage {
+		optional uint32 region = 1;
+		optional bool caused_text_mute = 2;
+		optional string chat_message = 3;
+	}
+
+	repeated .CMsgSignOutTextMuteInfo.TextMuteMessage text_mute_messages = 1;
 }
 
 message CMsgSignOutPlayerStats {
@@ -433,6 +441,11 @@ message CMsgSignOutPlayerStats {
 
 message CMsgSignOutCommunicationSummary {
 	message PlayerCommunication {
+		message PingDetail {
+			optional uint32 type = 1;
+			optional uint32 count = 2;
+		}
+
 		optional uint32 account_id = 1;
 		optional uint32 pings = 2;
 		optional uint32 max_pings_per_interval = 3;
@@ -447,6 +460,7 @@ message CMsgSignOutCommunicationSummary {
 		optional uint32 voice_chat_seconds = 12;
 		optional uint32 chat_mutes = 13;
 		optional uint32 voice_mutes = 14;
+		repeated .CMsgSignOutCommunicationSummary.PlayerCommunication.PingDetail ping_details = 15;
 	}
 
 	repeated .CMsgSignOutCommunicationSummary.PlayerCommunication players = 1;
@@ -1314,7 +1328,6 @@ message CMsgSignOutMVPStats {
 		optional int32 assists = 8;
 		optional int32 xp = 9;
 		optional int32 net_worth = 10;
-		optional int32 item_value = 11;
 		optional int32 support_gold_spent = 12;
 		optional int32 wards_placed = 13;
 		optional int32 wards_spotted_for_dewarding = 14;
@@ -1346,4 +1359,27 @@ message CMsgServerToGCRefreshGuildContract {
 }
 
 message CMsgServerToGCRefreshGuildContractResponse {
+}
+
+message CMsgServerToGCGetGuildContracts {
+	repeated uint32 account_ids = 1;
+}
+
+message CMsgServerToGCGetGuildContractsResponse {
+	message ContractDetails {
+		optional uint64 contract_id = 1;
+		optional uint32 challenge_instance_id = 2;
+		optional uint32 challenge_parameter = 3;
+		optional uint32 contract_stars = 4;
+		optional uint32 contract_slot = 5;
+	}
+
+	message Player {
+		optional uint32 account_id = 1;
+		optional uint32 guild_id = 2;
+		optional .EEvent event_id = 3 [default = EVENT_ID_NONE];
+		repeated .CMsgServerToGCGetGuildContractsResponse.ContractDetails contracts = 4;
+	}
+
+	repeated .CMsgServerToGCGetGuildContractsResponse.Player player_contracts = 1;
 }

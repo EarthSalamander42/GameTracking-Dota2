@@ -1720,6 +1720,17 @@
 			"sounds/misc/soundboard/yahoo.vsnd",
 		]
 	}
+	soundboard.holy_moly = 
+	{
+		type = "dota_src1_2d"
+		volume = 1.000000
+		pitch = 1.000000
+		limiter_on = 1.000000
+		vsnd_files = 
+		[
+			"sounds/misc/soundboard/holy_moly.vsnd",
+		]
+	}
 	soundboard.patience = 
 	{
 		type = "dota_src1_2d"
@@ -1755,17 +1766,6 @@
 		vsnd_files = 
 		[
 			"sounds/misc/soundboard/wow.vsnd",
-		]
-	}
-	soundboard.disastah = 
-	{
-		type = "dota_src1_2d"
-		volume = 1.000000
-		pitch = 1.000000
-		limiter_on = 1.000000
-		vsnd_files = 
-		[
-			"sounds/misc/soundboard/disastah.vsnd",
 		]
 	}
 	soundboard.brutal = 
@@ -1887,17 +1887,6 @@
 		vsnd_files = 
 		[
 			"sounds/misc/soundboard/bozhe_ti_posmotri.vsnd",
-		]
-	}
-	soundboard.oh_my_lord = 
-	{
-		type = "dota_src1_2d"
-		volume = 1.000000
-		pitch = 1.000000
-		limiter_on = 1.000000
-		vsnd_files = 
-		[
-			"sounds/misc/soundboard/oh_my_lord.vsnd",
 		]
 	}
 	soundboard.playing_to_win = 
@@ -2999,17 +2988,6 @@
 			"sounds/misc/soundboard/what_the_f_just_happened.vsnd",
 		]
 	}
-	soundboard.whoa_how_close_was_that = 
-	{
-		type = "dota_src1_2d"
-		volume = 1.000000
-		pitch = 1.000000
-		limiter_on = 1.000000
-		vsnd_files = 
-		[
-			"sounds/misc/soundboard/whoa_how_close_was_that.vsnd",
-		]
-	}
 	soundboard.a_net_net_da = 
 	{
 		type = "dota_src1_2d"
@@ -3152,6 +3130,50 @@
 		vsnd_files = 
 		[
 			"sounds/misc/soundboard/tiao_zou_le.vsnd",
+		]
+	}
+	soundboard.ti10eventgame.reward1 = 
+	{
+		type = "dota_src1_2d"
+		volume = 1.000000
+		pitch = 1.000000
+		limiter_on = 1.000000
+		vsnd_files = 
+		[
+			"sounds/misc/soundboard/ti10eventgame_reward1.vsnd",
+		]
+	}
+	soundboard.ti10eventgame.reward2 = 
+	{
+		type = "dota_src1_2d"
+		volume = 1.000000
+		pitch = 1.000000
+		limiter_on = 1.000000
+		vsnd_files = 
+		[
+			"sounds/misc/soundboard/ti10eventgame_reward2.vsnd",
+		]
+	}
+	soundboard.ti10eventgame.reward3 = 
+	{
+		type = "dota_src1_2d"
+		volume = 1.000000
+		pitch = 1.000000
+		limiter_on = 1.000000
+		vsnd_files = 
+		[
+			"sounds/misc/soundboard/ti10eventgame_reward3.vsnd",
+		]
+	}
+	soundboard.ti10eventgame.reward4 = 
+	{
+		type = "dota_src1_2d"
+		volume = 1.000000
+		pitch = 1.000000
+		limiter_on = 1.000000
+		vsnd_files = 
+		[
+			"sounds/misc/soundboard/ti10eventgame_reward4.vsnd",
 		]
 	}
 }

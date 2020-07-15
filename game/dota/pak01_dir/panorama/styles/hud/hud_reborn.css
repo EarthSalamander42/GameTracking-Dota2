@@ -2119,7 +2119,7 @@ DOTAHud.IsBeforeGameplay.HUDFlipped #minimap_container
 
 .Reborn #stash.QuickBuyRows2
 {
-	margin-bottom: 90px;
+	margin-bottom: 56px;
 }
 
 .Reborn #stash.QuickBuyRows2.ShopOpen
@@ -2129,7 +2129,7 @@ DOTAHud.IsBeforeGameplay.HUDFlipped #minimap_container
 
 .Reborn #shop.QuickBuyRows2
 {
-	margin-bottom: 240px;
+	margin-bottom: 206px;
 }
 
 #quickstats,
@@ -2403,11 +2403,6 @@ DOTAHud.IsBeforeGameplay.HUDFlipped #minimap_container
 	/* margin-left: 340px; */
 }
 
-.PlusSubscriber #spectator_game_stats
-{
-	margin-top: 185px;
-}
-
 .DOTA_GAMEMODE_EVENT #SpectatorGraph,
 .DOTA_GAMEMODE_EVENT #spectator_game_stats
 {
@@ -2423,6 +2418,11 @@ DOTAHud.IsBeforeGameplay.HUDFlipped #minimap_container
 
 	/* For debugging next to old version */
 	/* margin-right: 200px; */
+}
+
+.DOTA_GAMEMODE_EVENT.Season_International2020 #spectator_options
+{
+	visibility: collapse;
 }
 
 #combat_events {
@@ -3021,12 +3021,17 @@ DOTAHud.IsBeforeGameplay.HUDFlipped #minimap_container
 
 #OrdersContainer
 {
-	height: 95px;
 	width: fit-children;
 	vertical-align: bottom;
 	horizontal-align: center;
 	margin-bottom: 250px;
 	margin-left: 280px;
 	flow-children: right;
+}
+
+#QueuedOrders
+{
+	height: 95px;
+	vertical-align: bottom;
 }
 

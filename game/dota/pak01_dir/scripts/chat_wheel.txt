@@ -16,7 +16,20 @@
 				"HeeHaw"	"1"
 				"Oops"		"1"
 				"WoopWoo"	"1"
-				
+			}
+		}
+
+		"ti10_event_game_reward"
+		{
+			"name"	"#dota_chatwheel_header_international2020_event_game_reward"
+			"description"	"#dota_chatwheel_header_international2020_event_game_reward_desc"
+			"style"			"ActiveEventCategory"
+			"messages"
+			{				
+				"TI10EventGameReward1"						"1"
+				"TI10EventGameReward2"						"1"
+				"TI10EventGameReward3"						"1"
+				"TI10EventGameReward4"						"1"
 			}
 		}
 
@@ -26,8 +39,8 @@
 			"description"	"#dota_chatwheel_header_international2020_casters_desc"
 			"style"			"ActiveEventCategory"
 			"messages"
-			{
-				"Whoa_How_Close_Was_That"				"1"
+			{				
+				"Holy_Moly"								"1"
 				"Takaya_Haliava"						"1"
 				"wo_shi_yi"								"1"
 
@@ -54,7 +67,6 @@
 			}
 		}
 	
-
 		"ti10_legacy_2019_casters"
 		{
 			"name"	"#dota_chatwheel_header_international2020_legacy_2019"
@@ -62,9 +74,9 @@
 			"style"			"ActiveEventCategory"
 			"messages"
 			{
-				"Waow"						"1"
-				"Disastah"					"1"
-				"Oh_my_Lord"				"1"
+				"Youre_a_Hero"				"1"
+				"What_Just_Happened"		"1"
+				"Waow"						"1"												
 				"All_Dead"					"1"
 				"Ding_Ding_Ding"			"1"
 				"Lets_Play_Dota"			"1"
@@ -132,6 +144,8 @@
 				"Goodness_Gracious"			"1" //190
 				"Nakupuuu"					"1" //191
 				"Whats_Cooking"				"1" //192
+				"TI9_GlaDOS_Estimate_99"	"1" //194
+				"TI9_GlaDOS_Disappointed"	"1" //195
 
 				"Kor_Roshan"				"1" //227
 				"Kor_Yes_No"				"1" //224
@@ -1378,26 +1392,25 @@
 			"unlock_event_id"		"EVENT_ID_INTERNATIONAL_2020"
 			"unlock_event_action"	"level_reward_655"
 		}
-		"Disastah"
+		"What_Just_Happened"
 		{
 			"message_id"	"119"
-			"label"		"Disastah"
-			"message"	"It's a disastah!"
-			"sound"		"soundboard.disastah"
-			"all_chat"	"1"
+			"label"		"What Just Happened?"
+			"message"	"I can't believe what we're seeing. What just happened?"
+			"sound"		"soundboard.what_just_happened"
 			"unlock_event_id"		"EVENT_ID_INTERNATIONAL_2020"
-			"unlock_event_action"	"level_reward_655"
-		}	
-		"Oh_my_Lord"
+			"unlock_event_action"	"level_reward_655"			
+		}
+		"Youre_a_Hero"
 		{
 			"message_id"	"120"
-			"label"		"Oh My Lord"
-			"message"	"Oh my lord!"
-			"sound"		"soundboard.oh_my_lord"
-			"all_chat"	"1"
+			"label"		"You're a Goddamn Hero!"
+			"message"	"You're a goddamn hero!"
+			"sound"		"soundboard.youre_a_hero"
 			"unlock_event_id"		"EVENT_ID_INTERNATIONAL_2020"
-			"unlock_event_action"	"level_reward_655"				
-		}				
+			"unlock_event_action"	"level_reward_655"			
+		}
+						
 		"All_Dead"
 		{
 			"message_id"	"121"
@@ -2144,8 +2157,8 @@
 			"message"	"99% Probability of Winning."
 			"sound"		"soundboard.glados.probability_99"
 			"all_chat"	"1"
-			"unlock_event_id"		"EVENT_ID_INTERNATIONAL_2019"
-			"unlock_event_action"	"level_reward_785"		
+			"unlock_event_id"		"EVENT_ID_INTERNATIONAL_2020"
+			"unlock_event_action"	"level_reward_1245"		
 		}
 
 		"TI9_GlaDOS_Disappointed"
@@ -2154,8 +2167,8 @@
 			"label"		"I'm Just Disappointed"
 			"message"	"I'm not angry, I'm Just Disappointed"
 			"sound"		"soundboard.glados.disappointed"
-			"unlock_event_id"		"EVENT_ID_INTERNATIONAL_2019"
-			"unlock_event_action"	"level_reward_785"
+			"unlock_event_id"		"EVENT_ID_INTERNATIONAL_2020"
+			"unlock_event_action"	"level_reward_1245"		
 		}
 
 
@@ -2745,14 +2758,15 @@
 
 
 		// Caster Pack 1
-		"Whoa_How_Close_Was_That"
+		"Holy_Moly"
 		{
 			"message_id"	"263"
-			"label"		"How Close Was That"
-			"message"	"Whoa, how close was that?"
-			"sound"		"soundboard.whoa_how_close_was_that"
+			"label"		"Holy Moly!"
+			"message"	"Holy Moly!"
+			"sound"		"soundboard.holy_moly"
 			"unlock_event_id"		"EVENT_ID_INTERNATIONAL_2020"
 			"unlock_event_action"	"level_reward_94"
+			
 		}
 		"Takaya_Haliava"
 		{
@@ -2933,6 +2947,50 @@
 			"unlock_event_id"		"EVENT_ID_INTERNATIONAL_2020"
 			"unlock_event_action"	"level_reward_545"
 			"all_chat"		"1"
+		}	
+
+		"TI10EventGameReward1"
+		{
+			"message_id"	"281"
+			"label"		"#dota_chatwheel_label_ti10eventgame_reward1"
+			"message"	"#dota_chatwheel_message_ti10eventgame_reward1"
+			"sound"		"soundboard.ti10eventgame.reward1"
+			"all_chat"	"1"
+			"unlock_event_id"		"EVENT_ID_INTERNATIONAL_2020"
+			"unlock_event_action"	"aghanim_ascension_victory"
+		}		
+		
+		"TI10EventGameReward2"
+		{
+			"message_id"	"282"
+			"label"		"#dota_chatwheel_label_ti10eventgame_reward2"
+			"message"	"#dota_chatwheel_message_ti10eventgame_reward2"
+			"sound"		"soundboard.ti10eventgame.reward2"
+			"all_chat"	"1"
+			"unlock_event_id"		"EVENT_ID_INTERNATIONAL_2020"
+			"unlock_event_action"	"aghanim_ascension_victory"
+		}	
+
+		"TI10EventGameReward3"
+		{
+			"message_id"	"283"
+			"label"		"#dota_chatwheel_label_ti10eventgame_reward3"
+			"message"	"#dota_chatwheel_message_ti10eventgame_reward3"
+			"sound"		"soundboard.ti10eventgame.reward3"
+			"all_chat"	"1"
+			"unlock_event_id"		"EVENT_ID_INTERNATIONAL_2020"
+			"unlock_event_action"	"aghanim_ascension_victory"
+		}	
+
+		"TI10EventGameReward4"
+		{
+			"message_id"	"284"
+			"label"		"#dota_chatwheel_label_ti10eventgame_reward4"
+			"message"	"#dota_chatwheel_message_ti10eventgame_reward4"
+			"sound"		"soundboard.ti10eventgame.reward4"
+			"all_chat"	"1"
+			"unlock_event_id"		"EVENT_ID_INTERNATIONAL_2020"
+			"unlock_event_action"	"aghanim_ascension_victory"
 		}	
 	}
 

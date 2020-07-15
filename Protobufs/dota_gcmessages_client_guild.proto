@@ -24,8 +24,9 @@ enum EGuildAuditAction {
 	k_EGuildAuditAction_AdminLock = 21;
 	k_EGuildAuditAction_GuildNameChanged = 22;
 	k_EGuildAuditAction_GuildTagChanged = 23;
-	k_EGuildAuditAction_AdminWhitelisted = 24;
-	k_EGuildAuditAction_AdminBlacklisted = 25;
+	k_EGuildAuditAction_AdminPermitted = 24;
+	k_EGuildAuditAction_AdminBlocked = 25;
+	k_EGuildAuditAction_AdminBannedUser = 26;
 }
 
 enum EGuildChatType {
@@ -76,6 +77,7 @@ message CMsgGuildMember {
 	optional uint32 member_account_id = 1;
 	optional uint32 member_role_id = 2;
 	optional uint32 member_joined_timestamp = 3;
+	optional uint32 member_last_active_timestamp = 4;
 }
 
 message CMsgGuildInvite {
@@ -201,6 +203,11 @@ message CMsgClientToGCRequestGuildDataResponse {
 message CMsgGCToClientGuildDataUpdated {
 	optional .CMsgGuildData guild_data = 1;
 	optional uint32 update_flags = 2;
+}
+
+message CMsgGCToClientGuildMembersDataUpdated {
+	optional uint32 guild_id = 1;
+	repeated .CMsgGuildMember members_data = 2;
 }
 
 message CMsgClientToGCRequestGuildMembership {

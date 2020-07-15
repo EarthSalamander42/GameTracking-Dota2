@@ -1,4 +1,4 @@
-"lang"
+﻿"lang"
 { 
 	"Language" "korean" 
 	"Tokens" 
@@ -866,6 +866,7 @@
 		//NEVERMORE
 		"DOTA_Tooltip_ability_nevermore_shadowraze1"									"그림자 휩쓸기"
 		"DOTA_Tooltip_ability_nevermore_shadowraze1_Description"						"그림자 마귀가 바로 앞의 지면을 휩쓸어 해당 범위 내의 적 유닛에게 피해를 줍니다. 대상은 중첩 피해가 증폭되어 중첩당 그림자 휩쓸기 피해를 추가로 받습니다."
+		"DOTA_Tooltip_ability_nevermore_shadowraze1_abilitydraft_note"				    "그림자 휩쓸기(근거리)"
 		"DOTA_Tooltip_ability_nevermore_shadowraze1_Lore"								"네버모어가 영혼을 수확할 때 대표적으로 사용하는 능력입니다."
 		"DOTA_Tooltip_ability_nevermore_shadowraze1_Note0"								"중첩 지속시간은 중첩이 될 때 다시 처음부터 시작됩니다."
 		"DOTA_Tooltip_ability_nevermore_shadowraze1_shadowraze_range"					"범위:"
@@ -1714,6 +1715,7 @@
 		//PUCK
 		"DOTA_Tooltip_ability_puck_illusory_orb"										"신비로운 구슬"
 		"DOTA_Tooltip_ability_puck_illusory_orb_Description"							"퍽이 전방을 향해 날아가며 닿는 적 유닛에게 피해를 주는 마법의 구슬을 발사합니다. 퍽은 언제라도 에테르 이동 능력을 사용해서 구슬의 위치로 순간이동할 수 있습니다."
+		"DOTA_Tooltip_ability_puck_illusory_orb_abilitydraft_note"						"능력 조합에서만, 신비로운 구슬 능력은 구슬이 움직이는 동안 에테르 이동으로 교체됩니다."
 		"DOTA_Tooltip_ability_puck_illusory_orb_Lore"									"장난기 넘치는 요정용 퍽은 예상치 못한 곳에 갑자기 나타났다가 홀연히 사라지면서 사람들을 혼란스럽게 하는 것을 즐깁니다."
 		"DOTA_Tooltip_ability_puck_illusory_orb_Note0"									"신비로운 구슬은 통과하는 지역에 대해 방해 없는 시야를 제공합니다."
 		"DOTA_Tooltip_ability_puck_illusory_orb_Note1"									"에테르 이동 시 퍽에게 발사되는 모든 투사체는 무효화됩니다."
@@ -2135,6 +2137,7 @@
 		"DOTA_Tooltip_ability_tinker_march_of_the_machines_duration"					"지속시간:"
 		"DOTA_Tooltip_ability_tinker_march_of_the_machines_damage"						"피해:"
 		"DOTA_Tooltip_ability_tinker_rearm"												"재무장"
+		"DOTA_Tooltip_ability_tinker_rearm_abilitydraft_note"							"충전이 적용되는 능력에는, 재무장이 시전될 때마다 해당 능력에 충전 1회가 추가됩니다."
 		"DOTA_Tooltip_ability_tinker_rearm_Description"									"집중 기술 - 아이템 및 대부분 기술의 쿨다운을 초기화합니다."
 		"DOTA_Tooltip_ability_tinker_rearm_Lore"										"'새 전지는 여기에, 또 다른 로켓은 저기에…' 바우시는 기존 기술을 개선하는 노력을 게을리하지 않습니다."
 		"DOTA_Tooltip_ability_tinker_rearm_Note0"										"재무장은 영겁의 원반, 신비의 장화, 칠흑왕의 지팡이, 미다스의 손, 지배자의 투구, 린켄의 구슬, 유성 망치, 네크로노미콘, 통찰의 파이프, 지식의 고서, 재생의 구슬을 제외한 모든 아이템의 쿨다운을 초기화합니다."
@@ -2515,6 +2518,7 @@
 		"DOTA_Tooltip_ability_pugna_decrepify_bonus_spell_damage_pct_allies"			"%아군 마법 피해 증가"
 		"DOTA_Tooltip_ability_pugna_decrepify_bonus_movement_speed"						"%적 이동 둔화:"
 		"DOTA_Tooltip_ability_pugna_decrepify_abilityduration"							"지속시간:"
+		"DOTA_Tooltip_ability_pugna_decrepify_abilitycastrange"							"시전 범위:"
 		"DOTA_Tooltip_ability_pugna_nether_ward"										"황천 와드"
 		"DOTA_Tooltip_ability_pugna_nether_ward_Description"							"퍼그나가 대상 위치에 황천 와드를 설치합니다. 와드는 주위 적 영웅이 매초 최대 마나의 일정 비율을 잃게 하고 주문을 시전하는 적 영웅을 공격합니다. 황천 와드는 기본 피해에 더불어 적 영웅이 소모한 마나에 비례하는 피해를 줍니다."
 		"DOTA_Tooltip_ability_pugna_nether_ward_Lore"									"퍼그나는 사원에서 망각의 술법을 익히는 동안 황천의 마법을 담은 와드 하나만으로 다른 수련생을 압도하는 법을 배웠습니다."
@@ -3435,6 +3439,7 @@
 		//DOOM BRINGER
 		"DOTA_Tooltip_ability_doom_bringer_devour"							"삼키기"
 		"DOTA_Tooltip_ability_doom_bringer_devour_Description"				"적 또는 중립 크립을 흡수하여 해당 유닛이 지닌 특수 능력을 획득합니다. 자동 시전을 활성화하면, 크립의 능력을 획득하지 않습니다. 주문의 지속시간 동안 보너스 체력 재생을 얻습니다. 지속시간은 쿨다운과 동일합니다."
+		"DOTA_Tooltip_ability_doom_bringer_devour_abilitydraft_note"		"삼키기로는 점유한 크립의 지속 능력만을 획득합니다. 재무장을 선발하여 시전했을 때, 삼키기의 쿨다운은 초기화하지 <b>않습니다</b>."
 		"DOTA_Tooltip_ability_doom_bringer_devour_Lore"						"루시퍼의 허기와 욕망은 충족되는 법이 없습니다."
 		"DOTA_Tooltip_ability_doom_bringer_devour_Note0"					"이 기술로 크립을 처치하면, 크립의 골드에 추가로 보너스 골드를 얻습니다."
 		"DOTA_Tooltip_ability_doom_bringer_devour_Note1"					"능력이 없는 크립을 삼키면, 이전에 흡수한 능력이 유지됩니다."
@@ -3573,6 +3578,10 @@
 		"DOTA_Tooltip_modifier_ursa_fury_swipes_damage_increase_Description"	"우르사에게 받는 피해 %dMODIFIER_PROPERTY_TOOLTIP% 증가"
 		"DOTA_Tooltip_modifier_ursa_enrage"									"격분"
 		"DOTA_Tooltip_modifier_ursa_enrage_Description"						"받는 피해 %dMODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE%%% 감소"
+
+		
+		"DOTA_Tooltip_modifier_fountain_fury_swipes_damage_increase"			"분수 피해"
+		"DOTA_Tooltip_modifier_fountain_fury_swipes_damage_increase_Description"	"공격을 받을 때마다 분수에서 받는 피해가 계속 증가합니다."
 		
 
 		//GYROCOPTER
@@ -4537,7 +4546,8 @@
 		"DOTA_Tooltip_ability_treant_overgrowth_duration"				"지속시간:"
 		"DOTA_Tooltip_ability_treant_overgrowth_radius"					"반경:"
 		"DOTA_Tooltip_ability_treant_overgrowth_damage"					"초당 피해:"
-		"DOTA_Tooltip_ability_treant_overgrowth_aghanim_description"	"새로운 능력으로 숲의 눈을 얻습니다.\n 과대 성장을 시전하면, 숲의 눈 효과가 있는 곳 주위에도 해당 효과가 적용됩니다. 모든 나무가 훨씬 더 빠르게 재생성됩니다."	
+		"DOTA_Tooltip_ability_treant_overgrowth_aghanim_description"	"새로운 능력으로 숲의 눈을 얻습니다.\n 과대 성장을 시전하면, 숲의 눈 효과가 있는 곳 주위에도 해당 효과가 적용됩니다. 모든 나무가 훨씬 더 빠르게 재생성됩니다."
+		"DOTA_Tooltip_ability_treant_overgrowth_abilitydraft_note"		"능력 조합에서 숲의 눈을 사용할 수 있습니다."
 		"DOTA_Tooltip_ability_treant_eyes_in_the_forest"						"숲의 눈"
 		"DOTA_Tooltip_ability_treant_eyes_in_the_forest_Description"			"나무정령 수호자가 나무에 마력을 주입하여 해당 지역에서 방해 없는 시야를 획득합니다. 과대 성장을 시전하면 마력이 주입된 나무의 일정 반경에 있는 유닛은 땅에 묶이면서 피해를 받습니다."
 		"DOTA_Tooltip_ability_treant_eyes_in_the_forest_vision_aoe"		"나무 시야 반경:"
@@ -5857,6 +5867,7 @@
 		"DOTA_Tooltip_ability_earth_spirit_boulder_smash"					"바위 치기"
 		"DOTA_Tooltip_ability_earth_spirit_boulder_smash_Description"		"대지령이 대상 적이나 아군을 강타하여 대지령이 바라보는 방향으로 밀쳐냅니다. 만약 지역을 대상으로 선택하면 %remnant_smash_radius_tooltip% 반경 내에서 가장 가까운 바위 잔영을 밀칩니다. 대상 유닛이나 바위 잔영은 밀쳐지면서 부딪치는 모든 유닛에게 피해를 줍니다. 적이 바위 잔영에 부딪히면 둔화합니다. 바위 잔영은 유닛보다 더 멀리까지 밀려납니다."
 		"DOTA_Tooltip_ability_earth_spirit_boulder_smash_Lore"				"대지령이 산과 같은 위력으로 적을 강타합니다."
+		"DOTA_Tooltip_ability_earth_spirit_boulder_smash_abilitydraft_note"     "바위 잔영 연계를 사용하려면 자력 조합을 선택해야 바위 잔영이 생길 수 있습니다."
 		"DOTA_Tooltip_ability_earth_spirit_boulder_smash_rock_search_aoe"			"잔영 바위 치기 반경:"
 		"DOTA_Tooltip_ability_earth_spirit_boulder_smash_rock_damage"		"피해:"
 		"DOTA_Tooltip_ability_earth_spirit_boulder_smash_duration"		"둔화 지속시간:"
@@ -5867,6 +5878,7 @@
 		"DOTA_Tooltip_ability_earth_spirit_rolling_boulder"					"바위 구르기"
 		"DOTA_Tooltip_ability_earth_spirit_rolling_boulder_Description"		"대지령이 바위의 형태를 취하고 %delay%초의 지연시간 후 대상 위치까지 굴러가며 적 유닛에게 피해를 주고 기절시킵니다. 적 영웅과 충돌하거나 기절에 빠지면 제자리에서 멈춥니다. 바위 잔영 위로 굴러가면 잔영을 흡수하여 더 멀리까지 더 빠른 속도로 이동하고 적을 더 오래 기절시킵니다."
 		"DOTA_Tooltip_ability_earth_spirit_rolling_boulder_Lore"			"대지령이 땅과 연결된 힘을 불러내어 주변에 흩어진 돌을 흡수하고 단단한 바윗덩이로 변해 짧은 거리를 굴러갑니다."
+		"DOTA_Tooltip_ability_earth_spirit_rolling_boulder_abilitydraft_note"     "바위 잔영 연계를 사용하려면 자력 조합을 선택해야 바위 잔영이 생길 수 있습니다."
 		"DOTA_Tooltip_ability_earth_spirit_rolling_boulder_speed"			"속도:"
 		"DOTA_Tooltip_ability_earth_spirit_rolling_boulder_rock_speed"		"속도(잔영):"
 		"DOTA_Tooltip_ability_earth_spirit_rolling_boulder_damage"			"피해:"
@@ -5898,6 +5910,7 @@
 		"DOTA_Tooltip_ability_earth_spirit_magnetize_rock_search_radius"	"잔영 효과 초기화 반경:"
 		"DOTA_Tooltip_ability_earth_spirit_magnetize_rock_explosion_radius"	"잔영 폭발 반경:"						
 		"DOTA_Tooltip_ability_earth_spirit_magnetize_Lore"					"대지령의 부름에 적의 피와 뼈에 있는 무기질이 신체에 반발하여 작용합니다."
+		"DOTA_Tooltip_ability_earth_spirit_magnetize_abilitydraft_note"     "또한, 바위 잔영 능력을 부여합니다. 아가님의 홀을 장착하면 잔영 마력 부여 능력을 얻습니다."
 		"DOTA_Tooltip_ability_earth_spirit_petrify"						"잔영 마력 부여"
 		"DOTA_Tooltip_ability_earth_spirit_petrify_Description"						"대지령이 일시적으로 영웅에게 마력을 주입하여 바위 잔영의 속성을 부여합니다. 짧은 지속시간 후 잔영이 부서지면 영웅은 풀려나면서 주위 적 유닛에게 피해를 줍니다."
 		"DOTA_Tooltip_ability_earth_spirit_petrify_duration"		"잔영 지속시간:"
@@ -6015,6 +6028,7 @@
 		"DOTA_Tooltip_ability_phoenix_launch_fire_spirit_attackspeed_slow"		"공격 속도 둔화:"
 		"DOTA_Tooltip_ability_phoenix_sun_ray"							"태양 광선"
 		"DOTA_Tooltip_ability_phoenix_sun_ray_Description"				"불사조가 자신의 체력을 소모하여 거대한 빛줄기를 방출합니다. 빛줄기는 기본 수치에 체력의 일정 비율만큼 적에게 피해를 주고 아군의 체력을 회복합니다. 빛줄기가 지속하는 시간이 길어질수록 체력의 비율도 증가합니다."
+		"DOTA_Tooltip_ability_phoenix_sun_ray_abilitydraft_note"		"능력 조합에서는, 태양 광선으로 이동할 수 없습니다. 태양 광선이 활성화되어 있는 동안 영웅은 제자리에서 방향만 돌릴 수 있습니다."
 		"DOTA_Tooltip_ability_phoenix_sun_ray_Lore"						"원자 하나만한 구멍에서 그토록 강력한 별의 기운이 흘러 나옵니다."
 		"DOTA_Tooltip_ability_phoenix_sun_ray_hp_cost_perc_per_second"	"%초당 소모 체력:"
 		"DOTA_Tooltip_ability_phoenix_sun_ray_base_damage"					"기본 초당 피해:"
@@ -6037,6 +6051,7 @@
 		"DOTA_Tooltip_ability_phoenix_supernova"							"초신성"
 		"DOTA_Tooltip_ability_phoenix_supernova_Description"				"불사조가 스스로 생명을 버리고 부활을 준비합니다. 불사조는 타오르는 태양으로 모습을 바꾸고 넓은 범위에 걸쳐 적을 불태웁니다. 태양으로 모습을 바꾼 동안에도 적 영웅들의 공격을 받으면 죽을 수 있습니다. 태양은 %abilityduration%초 후 폭발하며 주위 적들을 기절시키고, 불사조는 체력과 마나를 모두 회복하여 모든 기술을 사용할 수 있는 상태로 부활합니다.\n\n해제 유형: 강한 해제"
 		"DOTA_Tooltip_ability_phoenix_supernova_aghanim_description"	"초신성을 파괴할 때 필요한 공격 횟수가 증가하며 불사조가 아군에게 초신성을 시전하여 함께 태양으로 들어가 다시 태어납니다."
+		"DOTA_Tooltip_ability_phoenix_supernova_abilitydraft_note"		"20레벨 특성은 태양 광선도 함께 선택해야 합니다."
 		"DOTA_Tooltip_ability_phoenix_supernova_Lore"						"초신성의 태양 도가니는 생명을 앗아가지만, 그 불길에서는 새로운 빛이 솟아올라 영원을 떠돕니다."
 		"DOTA_Tooltip_ability_phoenix_supernova_aura_radius"				"반경:"
 		"DOTA_Tooltip_ability_phoenix_supernova_abilityduration"			"지속시간:"
@@ -6194,6 +6209,7 @@
 		"DOTA_Tooltip_ability_techies_suicide_Note2"			"나무를 파괴합니다."
 		"DOTA_Tooltip_ability_techies_remote_mines"						"원격 지뢰"
 		"DOTA_Tooltip_ability_techies_remote_mines_Description"			"발동 시 짧은 지연 후 폭발하는 투명 폭탄을 설치합니다. 건물에는 피해를 주지 않습니다."
+		"DOTA_Tooltip_ability_techies_remote_mines_abilitydraft_note"	"지뢰밭 표지 능력도 부여합니다."
 		"DOTA_Tooltip_ability_techies_remote_mines_Lore"				"준설만이 몰락한 이유입니다!"
 		"DOTA_Tooltip_ability_techies_remote_mines_radius"				"폭발 반경:"
 		"DOTA_Tooltip_ability_techies_remote_mines_damage"				"피해:"
@@ -6341,7 +6357,7 @@
 		"DOTA_Tooltip_ability_monkey_king_tree_dance_jump_damage_cooldown"	"피해 쿨다운:"
 		"DOTA_Tooltip_ability_monkey_king_tree_dance_impact_damage_tooltip"	"원시의 반동 피해:"
 		"DOTA_Tooltip_ability_monkey_king_tree_dance_impact_movement_slow_tooltip"	"%원시의 반동 둔화:"
-		"DOTA_Tooltip_ability_monkey_king_tree_dance_abilitydraft_note"		"원시의 반동은 능력 조합에서 사용할 수 없습니다. 수목 유희로는 나무 사이를 건너뛰어 다닐 수만 있습니다."
+		"DOTA_Tooltip_ability_monkey_king_tree_dance_abilitydraft_note"		"능력 조합에서만, 나무 위에 올라 있을 때 수목 유희를 원시의 반동과 교체할 수 있습니다. 이제 다른 나무로 건너뛰려면 먼저 지면으로 다시 내려가야 합니다."
 		"DOTA_Tooltip_ability_monkey_king_primal_spring"					"원시의 반동"
 		"DOTA_Tooltip_ability_monkey_king_primal_spring_Description"		"원숭이 왕이 올라앉아 있던 나무에서 튀어나와 착지하는 지역에 있는 적에게 피해를 주고 둔화합니다. 피해 및 둔화의 양은 정신 집중을 한 시간에 비례합니다."
 		"DOTA_Tooltip_ability_monkey_king_primal_spring_Lore"				"손오공은 안전하게 숨어 있다가 적 한가운데로 튀어나오면서 무자비하게 적을 공격합니다."
@@ -6358,7 +6374,7 @@
 		"DOTA_Tooltip_ability_monkey_king_boundless_strike_strike_crit_mult"	"%치명타 피해:"
 		"DOTA_Tooltip_ability_monkey_king_boundless_strike_Note0"				"주문 면역 상태의 적에게는 영향을 주지 않습니다."
 		"DOTA_Tooltip_ability_monkey_king_jingu_mastery"						"여의봉술"
-		"DOTA_Tooltip_ability_monkey_king_jingu_mastery_Description"			"원숭이 왕이 공격하면 여의금고봉의 힘이 깨어납니다. 동일한 적 영웅에게 네 번 타격을 가하면, 원숭이 왕은 보너스 피해 및 흡혈 효과가 있는 공격을 네 번 할 수 있습니다."
+		"DOTA_Tooltip_ability_monkey_king_jingu_mastery_Description"			"원숭이 왕이 공격하면 여의금고봉의 힘이 깨어납니다. 동일한 적 영웅에게 네 번 타격을 가하면, 원숭이 왕이 보너스 피해 및 흡혈 효과가 있으며 4회 충전된 공격 능력을 얻습니다."
 		"DOTA_Tooltip_ability_monkey_king_jingu_mastery_Lore"					"항상 주인의 기분에 민감하게 반응하는 여의금고봉은 손오공의 전투 열의가 넘쳐날 때 힘을 내뿜습니다."
 		"DOTA_Tooltip_ability_monkey_king_jingu_mastery_Note0"					"무한일격으로 적을 타격해도 타격 수에 포함됩니다."
 		"DOTA_Tooltip_ability_monkey_king_jingu_mastery_Note1"					"적을 반복하여 타격하면 여의봉술의 약화 효과 지속시간이 초기화됩니다."
@@ -7542,7 +7558,7 @@
 		"DOTA_Tooltip_ability_special_bonus_unique_faceless_void_2"	"시간의 구슬 효과 범위 +{s:value}"
 		"DOTA_Tooltip_ability_special_bonus_unique_faceless_void_3"	"시간 가두기 피해 +{s:value}"
 		"DOTA_Tooltip_ability_special_bonus_unique_faceless_void_4"	"시간 되감기 +{s:dodge_chance_pct}%"
-		"DOTA_Tooltip_ability_special_bonus_unique_faceless_void_4_Description"		"%value%%% 확률로 모든 피해를 피합니다."
+		"DOTA_Tooltip_ability_special_bonus_unique_faceless_void_4_Description"		"{s:dodge_chance_pct}% 확률로 모든 피해를 피합니다."
 		"DOTA_Tooltip_ability_special_bonus_unique_faceless_void_5"	"시간 이동 쿨다운 -{s:value}초"
 		"DOTA_Tooltip_ability_special_bonus_unique_night_stalker"	"어둠의 승천 쿨다운 -{s:value}초"
 		"DOTA_Tooltip_ability_special_bonus_unique_night_stalker_2"	"밤의 사냥꾼 공격 속도 +{s:value}"
@@ -8012,6 +8028,7 @@
 		"DOTA_Tooltip_Ability_item_javelin"				"투창"
 		"DOTA_Tooltip_Ability_item_lesser_crit"			"수정검"
 		"DOTA_Tooltip_Ability_item_lifesteal"				"섬뜩한 가면"
+		"DOTA_Tooltip_Ability_item_voodoo_mask"				"부두교 가면"
 		"DOTA_Tooltip_Ability_item_sphere"				"린켄의 구슬"
 		"DOTA_Tooltip_Ability_item_maelstrom"				"혼돈의 망치"
 		"DOTA_Tooltip_Ability_item_magic_stick"			"마법 막대"
@@ -8047,6 +8064,7 @@
 		"DOTA_Tooltip_Ability_item_power_treads_agi"		"민첩"
 		"DOTA_Tooltip_Ability_item_power_treads_int"		"지능"
 		"DOTA_Tooltip_Ability_item_quarterstaff"			"전투 지팡이"
+		"DOTA_Tooltip_Ability_item_blitz_knuckles"			"맹폭 쇠마디"
 		"DOTA_Tooltip_Ability_item_echo_sabre"				"공명의 군도"
 		"DOTA_Tooltip_Ability_item_quelling_blade"			"벌목 도끼"
 		"DOTA_Tooltip_Ability_item_radiance"				"신광검"
@@ -8060,6 +8078,7 @@
 		"DOTA_Tooltip_Ability_item_ring_of_basilius"			"바실리우스의 반지"
 		"DOTA_Tooltip_Ability_item_holy_locket"			"성스러운 금합"
 		"DOTA_Tooltip_Ability_item_recipe_holy_locket"				"성스러운 금합 조합법"
+		"DOTA_Tooltip_Ability_item_recipe_witch_blade"				"마녀검 조합법"
 		"DOTA_Tooltip_Ability_item_ring_of_health"			"체력 반지"
 		"DOTA_Tooltip_Ability_item_ring_of_protection"			"수호의 반지"
 		"DOTA_Tooltip_Ability_item_ring_of_regen"			"재생의 반지"
@@ -8092,7 +8111,7 @@
 		"DOTA_Tooltip_Ability_item_recipe_tranquil_boots2"	"평온의 장화 2레벨 조합법"
 		"DOTA_Tooltip_Ability_item_travel_boots"			"여행의 장화"
 		"DOTA_Tooltip_Ability_item_recipe_travel_boots"			"여행의 장화 조합법"
-		"DOTA_Tooltip_Ability_item_travel_boots_2"			"여행의 장화"
+		"DOTA_Tooltip_Ability_item_travel_boots_2"			"여행의 장화 2"
 		"DOTA_Tooltip_Ability_item_ultimate_orb"			"궁극구"
 		"DOTA_Tooltip_Ability_item_ultimate_scepter"			"아가님의 홀"
 		"DOTA_Tooltip_Ability_item_ultimate_scepter_2"			"아가님의 축복(소모성)"
@@ -8324,6 +8343,9 @@
 		"DOTA_Tooltip_modifier_gnoll_assassin_envenomed_weapon_poison"						"맹독성 무기"
 		"DOTA_Tooltip_modifier_gnoll_assassin_envenomed_weapon_poison_Description"			"초당 %dMODIFIER_PROPERTY_TOOLTIP%의 피해 받음"
 
+		"DOTA_Tooltip_modifier_gnoll_assassin_envenomed_weapon"								"맹독성 무기"
+		"DOTA_Tooltip_modifier_gnoll_assassin_envenomed_weapon_Description"					"초당 %dMODIFIER_PROPERTY_TOOLTIP%의 독 피해를 크립에게는 %dMODIFIER_PROPERTY_TOOLTIP%초 동안, 영웅에게는 %dMODIFIER_PROPERTY_TOOLTIP%초 동안 적용"
+
 		// Ghost: Frost Attack
 
 		"DOTA_Tooltip_ability_ghost_frost_attack"											"서리 공격"
@@ -8362,6 +8384,9 @@
 		"DOTA_Tooltip_ability_mudgolem_cloak_aura_radius"								    "오라 반경:"
 		"DOTA_Tooltip_ability_mudgolem_cloak_aura_bonus_magical_armor"				        "%영웅 마법 저항력:"
 		"DOTA_Tooltip_ability_mudgolem_cloak_aura_bonus_magical_armor_creeps"				"%크립 마법 저항력:"
+
+		"DOTA_Tooltip_modifier_mudgolem_cloak_aura"	        						"감싸기 오라"
+		"DOTA_Tooltip_modifier_mudgolem_cloak_aura_Description"	                    "마법 저항력 %MODIFIER_PROPERTY_MAGICAL_RESISTANCE_DIRECT_MODIFICATION%%% 증가"
 
 		"DOTA_Tooltip_modifier_mudgolem_cloak_aura_bonus"	        						"감싸기 오라"
 		"DOTA_Tooltip_modifier_mudgolem_cloak_aura_bonus_Description"	                    "마법 저항력 %dMODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS%%% 증가"
@@ -8409,6 +8434,9 @@
 		"DOTA_Tooltip_ability_alpha_wolf_critical_strike_Description"						"잔혹한 우두머리 늑대가 기회가 있을 때마다 적의 무방비한 급소를 공격하여 치명상을 입힙니다."
 		"DOTA_Tooltip_ability_alpha_wolf_critical_strike_crit_chance"						"%치명타 확률:"
 		"DOTA_Tooltip_ability_alpha_wolf_critical_strike_crit_mult"							"%치명타 피해:"
+
+		"DOTA_Tooltip_modifier_alpha_wolf_critical_strike"									"치명타"
+		"DOTA_Tooltip_modifier_alpha_wolf_critical_strike_Description"						"%dMODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE%%% 확률로 %dMODIFIER_PROPERTY_TOOLTIP%%%의 치명타를 가함"
 
 		// Alpha Wolf: Wolf Aura
 
@@ -8538,7 +8566,8 @@
 		"DOTA_Tooltip_ability_mud_golem_hurl_boulder_duration"		"기절 지속시간:"
 		"DOTA_Tooltip_ability_mud_golem_rock_destroy"				"분리된 조각"
 		"DOTA_Tooltip_ability_mud_golem_rock_destroy_Description"	"진흙 골렘이 죽을 때 2개의 조각 골렘으로 부서집니다. 조각 골렘은 %shard_health_tooltip% 체력을 보유하고 공격당 %shard_damage_tooltip%  피해를 주며 %shard_duration_tooltip%초 동안 지속됩니다."		
-		
+		"DOTA_Tooltip_modifier_mud_golem_rock_destroy"				"분리된 조각"
+		"DOTA_Tooltip_modifier_mud_golem_rock_destroy_Description"	"죽을 때 조각 골렘 2마리로 부서집니다. 조각 골렘은 %dMODIFIER_PROPERTY_TOOLTIP%의 체력을 보유하고 공격당 %dMODIFIER_PROPERTY_TOOLTIP%의 피해를 주며 %dMODIFIER_PROPERTY_TOOLTIP%초 동안 지속합니다."		
 
 		// Harpy Stormcrafter: Chain Lightning
 
@@ -8630,7 +8659,7 @@
 		"DOTA_Tooltip_ability_big_thunder_lizard_wardrums_aura_accuracy"	"%명중률 증가:"
 		"DOTA_Tooltip_ability_big_thunder_lizard_wardrums_aura_radius"					"반경:"
 		
-		"DOTA_Tooltip_modifier_big_thunder_lizard_wardrums_aura"									"전쟁의 북 오라"
+		"DOTA_Tooltip_modifier_big_thunder_lizard_wardrums_aura"							"전쟁의 북 오라"
 		"DOTA_Tooltip_modifier_big_thunder_lizard_wardrums_aura_Description"				"공격 속도 %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT% 및 공격력 %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%% 증가"	
 
 		"DOTA_Tooltip_ability_item_aegis_Description"							"<h1>지속 효과: 부활</h1>사망 시 %reincarnate_time%초 후에 체력과 마나가 전부 회복된 상태로 그 자리에서 되살아납니다. <br><br>습득 후 %disappear_time_minutes_tooltip%분 이내에 사용되지 않으면 불멸의 아이기스가 사라집니다. 불멸의 아이기스가 사라지면 소유자에게 5초에 걸쳐 체력 및 마나 회복 효과를 줍니다. (피해를 받으면 효과가 제거됩니다.)"
@@ -8677,7 +8706,6 @@
 		"DOTA_Tooltip_ability_item_assault_Lore"								"황천의 틈에서 벼려진 이 섬뜩한 갑옷을 착용하면 방어력과 공격 속도가 증가합니다."
 		"DOTA_Tooltip_ability_item_assault_bonus_attack_speed"					"+$attack"
 		"DOTA_Tooltip_ability_item_assault_bonus_armor"							"+$armor"
-		"DOTA_Tooltip_ability_item_assault_bonus_all_stats"							"+$all"
 		//"DOTA_Tooltip_ability_item_assault_aura_attack_speed"					"AURA ATTACK SPEED:"
 		//"DOTA_Tooltip_ability_item_assault_aura_positive_armor"					"AURA ALLY BONUS ARMOR:"
 		//"DOTA_Tooltip_ability_item_assault_aura_negative_armor"					"AURA ENEMY ARMOR REDUCTION:"
@@ -8734,14 +8762,14 @@
 		"DOTA_Tooltip_modifier_black_king_bar_immune"				"칠흑왕의 지팡이"
 		"DOTA_Tooltip_modifier_black_king_bar_immune_Description"	"주문 면역"
 
-		"DOTA_Tooltip_ability_item_blade_mail_Description"						"<h1>시전 기술: 피해 반사</h1> %duration%초 동안, 받는 피해를 복사하여 피해를 가한 유닛에게 되돌려줍니다."
+		"DOTA_Tooltip_ability_item_blade_mail_Description"						"<h1>시전 기술: 피해 반사</h1>%duration%초 동안 모든 원인으로부터 반사되는 피해가 %active_reflection_pct%%% 증가합니다.\n<h1>지속 효과: 피해 반사</h1>공격을 받을 때마다 %passive_reflection_constant%의 피해와 자신에게 가해진 공격 피해의 %passive_reflection_pct%%%를 반사합니다."
 		"DOTA_Tooltip_ability_item_blade_mail_Lore"								"칼날을 두른 이 갑옷은 전투에서 희생을 마다하지 않는 순교자들이 입는 방어구입니다."
 		"DOTA_Tooltip_ability_item_blade_mail_Note0"							"반사 피해는 어떤 유형이든 피해 감소가 일어나기 전에 계산됩니다."
 		"DOTA_Tooltip_ability_item_blade_mail_Note1"							"다른 유형의 칼날 갑옷으로 받은 피해는 반사하지 않습니다."
 		"DOTA_Tooltip_ability_item_blade_mail_Note2"							"반사 피해 유형은 받은 피해와 동일합니다."
 		"DOTA_Tooltip_ability_item_blade_mail_bonus_damage"						"+$damage"
 		"DOTA_Tooltip_ability_item_blade_mail_bonus_armor"						"+$armor"
-		"DOTA_Tooltip_ability_item_blade_mail_bonus_intellect"					"+$int"
+		//"DOTA_Tooltip_ability_item_blade_mail_bonus_intellect"					"+$int"
 		//"DOTA_Tooltip_ability_item_blade_mail_duration"						"DAMAGE RETURN DURATION:"
 		
 		"DOTA_Tooltip_modifier_item_blade_mail_reflect"					"칼날 갑옷 반사"
@@ -8761,13 +8789,15 @@
 		"DOTA_Tooltip_ability_item_super_blink_Description"						"<h1>시전 기술: 점멸</h1> 최대 %blink_range%유닛 거리 내에서 지정 대상에게 순간이동합니다."
 		"DOTA_Tooltip_ability_item_super_blink_Lore"							"이 전설적인 단검은 이 땅에서 가장 빠른 암살자가 사용했던 것입니다."
 
-		"DOTA_Tooltip_ability_item_bloodstone_Description"						"<h1>시전 기술: 피의 서약</h1> %restore_duration%초에 걸쳐 최대 마나의 %mana_cost_percentage%%%를 체력 재생 효과로 전환합니다.\n <h1>지속 효과: 마나 동력원</h1>충전당 %regen_per_charge%의 마나 재생 및 %amp_per_charge%%%의 주문 증폭 효과를 얻습니다. 근처에서 적이 죽으면 %kill_charges%회 충전됩니다. 죽으면 충전 수 %death_charges%회를 잃습니다. 아이템을 처음 획득할 때 %initial_charges_tooltip%회 충전되어 있습니다. +%mana_regen_multiplier%%%의 마나 재생 증폭 효과를 제공합니다."
+		"DOTA_Tooltip_ability_item_bloodstone_Description"						"<h1>시전 기술: 피의 서약</h1> %restore_duration%초에 걸쳐 최대 마나의 %mana_cost_percentage%%%를 체력 재생 효과로 전환합니다.\n <h1>지속 효과: 마나 동력원</h1>충전당 %regen_per_charge%의 마나 재생 및 %amp_per_charge%%%의 주문 증폭 효과를 얻습니다. 근처에서 적이 죽으면 %kill_charges%회 충전됩니다. 죽으면 충전 수 %death_charges%회를 잃습니다. 아이템을 처음 획득할 때 %initial_charges_tooltip%회 충전되어 있습니다."
 		"DOTA_Tooltip_ability_item_bloodstone_Lore"								"혈석을 지닌 자는 거의 무한한 활력과 정신력을 얻으며 그 찬란한 붉은 빛은 전장에서 누구나 알아볼 정도입니다."
 		"DOTA_Tooltip_ability_item_bloodstone_bonus_health"						"+$health"
 		"DOTA_Tooltip_ability_item_bloodstone_bonus_mana"						"+$mana"
+		"DOTA_Tooltip_ability_item_bloodstone_bonus_magical_armor"				"%+$spell_resist"		
 		"DOTA_Tooltip_ability_item_bloodstone_bonus_intellect"					"+$int"
-		"DOTA_Tooltip_ability_item_bloodstone_spell_amp"					"%+기본 주문 증폭"
-		"DOTA_Tooltip_ability_item_bloodstone_manacost_reduction"			"%+마나 소모 및 마나 손실 감소"
+		"DOTA_Tooltip_ability_item_bloodstone_spell_amp"						"%+주문 증폭"
+		"DOTA_Tooltip_ability_item_bloodstone_mana_regen_multiplier"			"%+마나 재생 증폭"
+		"DOTA_Tooltip_ability_item_bloodstone_spell_lifesteal_amp"				"%+주문 흡혈 증폭"
 		
 		"DOTA_Tooltip_ability_item_boots_Description"							"장화의 이동 속도 증가 효과는 서로 중첩되지 않습니다."						
 		"DOTA_Tooltip_ability_item_boots_Lore"									"이동 속도를 높여주는 빠른 신발입니다."
@@ -8792,10 +8822,8 @@
 		"DOTA_Tooltip_ability_item_bracer_bonus_strength"						"+$str"
 		"DOTA_Tooltip_ability_item_bracer_bonus_agility"						"+$agi"
 		"DOTA_Tooltip_ability_item_bracer_bonus_intellect"						"+$int"
-		//"DOTA_Tooltip_ability_item_bracer_bonus_status_resistance"				"%+Status Resistance"
-		//"DOTA_Tooltip_ability_item_bracer_bonus_damage"				"+$damage"
-		//"DOTA_Tooltip_ability_item_bracer_bonus_health_regen"					"+$hp_regen"		
-		"DOTA_Tooltip_ability_item_bracer_bonus_magic_resistance"					"%+$spell_resist"
+		"DOTA_Tooltip_ability_item_bracer_bonus_damage"				"+$damage"
+		"DOTA_Tooltip_ability_item_bracer_bonus_health_regen"			"+$hp_regen"
 
 		"DOTA_Tooltip_ability_item_branches_Description"						"<h1>사용: 나무 심기</h1> 땅 위의 지정한 지점에 %tree_duration%초 동안 지속하는 행복의 꼬마 나무를 심습니다. 참 쉽죠?<br><br>범위: %abilitycastrange%"
 		"DOTA_Tooltip_ability_item_branches_Lore"								"보기에는 평범한 나뭇가지이지만, 이 아이템을 소지한 자는 강철처럼 강인해집니다."
@@ -8815,9 +8843,9 @@
 		"DOTA_Tooltip_ability_item_butterfly_Note0"								"다른 회피 효과와 중첩 시 효율이 점차 감소합니다."
 		"DOTA_Tooltip_ability_item_butterfly_Lore"								"전투에서 뛰어난 솜씨를 발휘할 수 있게 해 주는 무기로, 가장 강력하고 숙련된 전사만이 나비검을 휘두를 수 있습니다."
 		"DOTA_Tooltip_ability_item_butterfly_bonus_agility"						"+$agi"
-		"DOTA_Tooltip_ability_item_butterfly_bonus_damage"						"+$damage"
 		"DOTA_Tooltip_ability_item_butterfly_bonus_evasion"						"%+$evasion"
 		"DOTA_Tooltip_ability_item_butterfly_bonus_attack_speed"				"+$attack"		
+		"DOTA_Tooltip_ability_item_butterfly_bonus_damage"				"+$damage"		
 		//"DOTA_Tooltip_ability_item_butterfly_bonus_move_speed"				"%FLUTTER BONUS MOVE SPEED:"	
 		//"DOTA_Tooltip_ability_item_butterfly_duration"				"FLUTTER DURATION:"
 		
@@ -8837,7 +8865,7 @@
 		"DOTA_Tooltip_Ability_item_refresher_shard_lore"					"끝없는 전투의 시대를 지나면서도, 불멸의 아이기스에 담긴 승리의 의지는 조금도 사그라지지 않았습니다."
 		"DOTA_Tooltip_ability_item_refresher_shard_Note0"								"재생의 파편은 공유할 수 있습니다."
 
-		"DOTA_Tooltip_ability_item_circlet_Lore"								"인간 공주를 위해 제작된 우아하기 그지없는 머리 장식입니다."
+		"DOTA_Tooltip_ability_item_circlet_Lore"								"인간 공주를 위해 제작된 것으로, 우아하기 그지없는 머리관입니다."
 		"DOTA_Tooltip_ability_item_circlet_bonus_all_stats"						"+$all"
 			
 		"DOTA_Tooltip_ability_item_crown_bonus_all_stats"						"+$all"	
@@ -8876,13 +8904,13 @@
 		//"DOTA_Tooltip_ability_item_bloodthorn_target_crit_multiplier"           "%SILENCE CRITICAL DAMAGE:"
 
 		"DOTA_Tooltip_modifier_bloodthorn_debuff"                       "핏빛가시"
-		"DOTA_Tooltip_modifier_bloodthorn_debuff_Description"           "침묵 상태에 빠지고 30% 추가 피해를 받음, 추가 피해는 약화 효과의 지속시간이 다한 후 마법 피해로 받음\n모든 받는 공격이 135% 피해를 주는 치명타로 적용"
+		"DOTA_Tooltip_modifier_bloodthorn_debuff_Description"           "침묵 상태에 빠지고 30%% 추가 피해를 받음, 추가 피해는 약화 효과의 지속시간이 다한 후 마법 피해로 받음\n모든 받는 공격이 130%% 피해를 주는 치명타로 적용"
 
 		"DOTA_Tooltip_Ability_item_echo_sabre_Description"			        "<h1>지속 효과: 공명 타격</h1> 근접 공격 시 빠르게 연속으로 두 번 공격합니다. 이중 공격은 %slow_duration%초 동안 매 타격 시 이동 속도를 %movement_slow%%% 둔화합니다."
 		"DOTA_Tooltip_Ability_item_echo_sabre_Lore"			                "공명하는 마법이 깃들어 믿을 수 없을 정도로 빠르게 움직이는 검입니다."
-		"DOTA_Tooltip_Ability_item_echo_sabre_bonus_intellect"               "+$int"
 		"DOTA_Tooltip_Ability_item_echo_sabre_bonus_strength"                "+$str"
-		"DOTA_Tooltip_Ability_item_echo_sabre_bonus_attack_speed"            "+$attack"
+		"DOTA_Tooltip_Ability_item_echo_sabre_bonus_intellect"                 "+$int"
+		"DOTA_Tooltip_Ability_item_echo_sabre_bonus_attack_speed"                  "+$attack"
 		"DOTA_Tooltip_Ability_item_echo_sabre_bonus_damage"                  "+$damage"
 		"DOTA_Tooltip_Ability_item_echo_sabre_bonus_mana_regen"              "+$mana_regen"
 		//"DOTA_Tooltip_Ability_item_echo_sabre_movement_slow"                 "%MOVEMENT SLOW:"
@@ -8988,7 +9016,6 @@
 		"DOTA_Tooltip_ability_item_dagon_Lore"									"오래 쓸수록 더 강해지는 이 작은 지팡이는 마력을 불러내어 소유자의 손에 전해 줍니다."
 		"DOTA_Tooltip_ability_item_dagon_Note0"									"환영을 즉시 제거합니다."
 		//"DOTA_Tooltip_ability_item_dagon_damage"						        "BURST DAMAGE:"
-		"DOTA_Tooltip_ability_item_dagon_bonus_intellect"						"+$int"
 		"DOTA_Tooltip_ability_item_dagon_bonus_all_stats"						"+$all"
 		//"DOTA_Tooltip_ability_item_dagon_abilitycastrange"							"CAST RANGE:"
 
@@ -8996,7 +9023,6 @@
 		"DOTA_Tooltip_ability_item_dagon_2_Lore"									"오래 쓸수록 더 강해지는 이 작은 지팡이는 마력을 불러내어 소유자의 손에 전해 줍니다."
 		"DOTA_Tooltip_ability_item_dagon_2_Note0"									"환영을 즉시 제거합니다."
 		//"DOTA_Tooltip_ability_item_dagon_2_damage"						        "BURST DAMAGE:"
-		"DOTA_Tooltip_ability_item_dagon_2_bonus_intellect"						"+$int"
 		"DOTA_Tooltip_ability_item_dagon_2_bonus_all_stats"						"+$all"
 		//"DOTA_Tooltip_ability_item_dagon_2_abilitycastrange"							"CAST RANGE:"
 
@@ -9004,7 +9030,6 @@
 		"DOTA_Tooltip_ability_item_dagon_3_Lore"									"오래 쓸수록 더 강해지는 이 작은 지팡이는 마력을 불러내어 소유자의 손에 전해 줍니다."
 		"DOTA_Tooltip_ability_item_dagon_3_Note0"									"환영을 즉시 제거합니다."
 		//"DOTA_Tooltip_ability_item_dagon_3_damage"						        "BURST DAMAGE:"
-		"DOTA_Tooltip_ability_item_dagon_3_bonus_intellect"						"+$int"
 		"DOTA_Tooltip_ability_item_dagon_3_bonus_all_stats"						"+$all"
 		//"DOTA_Tooltip_ability_item_dagon_3_abilitycastrange"							"CAST RANGE:"
 
@@ -9012,7 +9037,6 @@
 		"DOTA_Tooltip_ability_item_dagon_4_Lore"									"오래 쓸수록 더 강해지는 이 작은 지팡이는 마력을 불러내어 소유자의 손에 전해 줍니다."
 		"DOTA_Tooltip_ability_item_dagon_4_Note0"									"환영을 즉시 제거합니다."
 		//"DOTA_Tooltip_ability_item_dagon_4_damage"						        "BURST DAMAGE:"
-		"DOTA_Tooltip_ability_item_dagon_4_bonus_intellect"						"+$int"
 		"DOTA_Tooltip_ability_item_dagon_4_bonus_all_stats"						"+$all"
 		//"DOTA_Tooltip_ability_item_dagon_4_abilitycastrange"							"CAST RANGE:"
 
@@ -9021,7 +9045,6 @@
 		"DOTA_Tooltip_ability_item_dagon_5_Lore"									"오래 쓸수록 더 강해지는 이 작은 지팡이는 마력을 불러내어 소유자의 손에 전해 줍니다."
 		"DOTA_Tooltip_ability_item_dagon_5_Note0"									"환영을 즉시 제거합니다."
 		//"DOTA_Tooltip_ability_item_dagon_5_damage"						        "BURST DAMAGE:"
-		"DOTA_Tooltip_ability_item_dagon_5_bonus_intellect"						"+$int"
 		"DOTA_Tooltip_ability_item_dagon_5_bonus_all_stats"						"+$all"
 		//"DOTA_Tooltip_ability_item_dagon_5_abilitycastrange"							"CAST RANGE:"
 		
@@ -9159,28 +9182,24 @@
 		"DOTA_Tooltip_modifier_item_headdress_aura"				"머리보호구 재생력 오라"
 		"DOTA_Tooltip_modifier_item_headdress_aura_Description"	"초당 체력 %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% 회복"
 
-		"DOTA_Tooltip_ability_item_heart_Description"							"<h1>지속 효과: 체력 재생</h1> 매초 최대 체력의 %health_regen_rate%%%만큼 체력을 회복합니다. <br><br>적 영웅 또는 로샨에게 피해를 받으면 근접 영웅은 %cooldown_melee%초 동안, 원거리 영웅은 %cooldown_ranged_tooltip%초 동안 체력 회복 효과가 중단됩니다."
+		"DOTA_Tooltip_ability_item_heart_Description"							"<h1>지속 효과: 재생 증폭</h1>모든 지속 체력 재생 효과가 %hp_regen_amp%%% 증가합니다. <br><br>적 영웅 또는 로샨에게 피해를 받으면, 근접 영웅은 %cooldown_melee%초 동안, 원거리 영웅은 %cooldown_ranged_tooltip%초 동안 증폭 효과가 중단됩니다."
 		"DOTA_Tooltip_ability_item_heart_Lore"									"지금은 멸종한 괴물의 심장을 보존한 것으로 이 물건을 소지한 자는 강인한 힘을 얻습니다."
 		"DOTA_Tooltip_ability_item_heart_bonus_strength"						"+$str"
 		"DOTA_Tooltip_ability_item_heart_bonus_health"							"+$health"
-		"DOTA_Tooltip_ability_item_heart_hp_regen_amp"							"%+체력 재생 증폭"
-		"DOTA_Tooltip_ability_item_heart_fixed_health_regen"					"+$hp_regen"
-		//"DOTA_Tooltip_ability_item_heart_health_regen_rate"						"+%HEALTH RESTORED PER SECOND:"
+		"DOTA_Tooltip_ability_item_heart_health_regen_pct"							"%+최대 체력 재생"
 		
 		"DOTA_Tooltip_ability_item_helm_of_iron_will_Lore"				"전투에서 쓰러진 전설적인 전사가 착용했던 투구입니다."
 		"DOTA_Tooltip_ability_item_helm_of_iron_will_bonus_armor"				"+$armor"
 		"DOTA_Tooltip_ability_item_helm_of_iron_will_bonus_regen"				"+$hp_regen"
 		
-		"DOTA_Tooltip_ability_item_helm_of_the_dominator_Description"			"<h1>시전 기술: 지배</h1> 고대 크립이 아닌 중립 크립 하나를 조종합니다. 대상이 된 유닛은 이동 속도가 %speed_base%, 최대 체력이 %health_min% 이상으로 고정됩니다. <br><br>지배된 유닛의 최대 체력이 %health_min%보다 클 경우 원래의 최대 체력을 유지합니다. 지배된 유닛을 처치하고 얻는 고정 골드: %bounty_gold%<br><br>범위: %abilitycastrange%\n<h1>지속 효과: 지배자의 오라</h1> 근처에 있는 아군 영웅과 플레이어 유닛의 기본 공격력이 %attack_damage_aura%%%, 체력 재생이 %hp_regen_aura% 증가합니다. 플레이어 유닛에게는 효과가 %creep_bonus%%%만큼 더 커집니다.<br><br>반경: %aura_radius%"
+		"DOTA_Tooltip_ability_item_helm_of_the_dominator_Description"			"<h1>시전 기술: 지배</h1> 고대 크립이 아닌 중립 크립 하나를 조종합니다. 대상이 된 유닛은 이동 속도가 %speed_base%, 최대 체력이 %health_min% 이상으로 고정됩니다. 또한, 해당 유닛에게 기본 공격력 +%creep_bonus_damage%, 체력 재생 +%creep_bonus_hp_regen%, 마나 재생 +%creep_bonus_mp_regen%를 부여합니다.<br><br>지배된 유닛의 최대 체력이 %health_min%보다 크면 원래의 최대 체력을 유지합니다. 지배된 유닛 처치 시 %bounty_gold%골드를 고정으로 획득합니다.<br><br>범위: %abilitycastrange%"
 		"DOTA_Tooltip_ability_item_helm_of_the_dominator_Lore"					"죽은 강령술사의 강력한 투구입니다."
 		"DOTA_Tooltip_ability_item_helm_of_the_dominator_Note0"					"한 번에 한 마리의 유닛만 지배할 수 있습니다. 새로운 유닛을 지배하면 기존 지배하던 유닛은 죽습니다."
 		"DOTA_Tooltip_ability_item_helm_of_the_dominator_Note1"					"적의 전선 크립이나 소환한 유닛도 지배할 수 있습니다."
 		"DOTA_Tooltip_ability_item_helm_of_the_dominator_Note2"					"지배자의 투구를 팔면 지배한 유닛이 죽습니다."
-		//"DOTA_Tooltip_ability_item_helm_of_the_dominator_attack_speed_aura"     "AURA ATTACK SPEED:"
-		//"DOTA_Tooltip_ability_item_helm_of_the_dominator_hp_regen_aura"			"AURA HEALTH REGEN:"
 		"DOTA_Tooltip_ability_item_helm_of_the_dominator_bonus_stats"			"+$all"
-		//"DOTA_Tooltip_ability_item_helm_of_the_dominator_health_min"			"DOMINATED HEALTH MINIMUM:"
-		//"DOTA_Tooltip_ability_item_helm_of_the_dominator_speed_base"			"CREEP MOVEMENT SPEED:"
+		"DOTA_Tooltip_ability_item_helm_of_the_dominator_bonus_armor"				"+$armor"
+		"DOTA_Tooltip_ability_item_helm_of_the_dominator_bonus_regen"				"+$hp_regen"
 
 		"DOTA_Tooltip_modifier_item_helm_of_the_dominator_aura"					"지배자의 투구 오라"
 		"DOTA_Tooltip_modifier_item_helm_of_the_dominator_aura_Description"		"체력 재생 %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% 및 기본 피해 %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%% 증가"
@@ -9224,10 +9243,12 @@
 		"DOTA_Tooltip_modifier_item_invisibility_edge_windwalk"				"그림자 보행"
 		"DOTA_Tooltip_modifier_item_invisibility_edge_windwalk_Description"	"바람처럼 투명하게 움직임, 이동 속도 %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% 증가, 유닛을 통과하여 이동 가능, 투명 상태에서 공격을 시도하면 투명화가 풀리고 175의 보너스 피해 추가됨"
 
-		"DOTA_Tooltip_ability_item_silver_edge_Description"						"<h1>시전 기술: 그림자 보행</h1> %windwalk_duration%초 동안 몸이 투명해집니다. 지속시간이 다하거나 적을 공격하거나 주문을 시전하면 투명화가 풀립니다. 그림자 보행 중에는 이동 속도가 %windwalk_movement_speed%%% 증가하며 유닛을 통과하여 움직일 수 있습니다. <br><br>투명화 상태에서 적을 공격하면 투명화가 풀리면서 %windwalk_bonus_damage%의 보너스 물리 피해를 주고 %backstab_duration%초 동안 지속 능력을 무력화합니다."
+		"DOTA_Tooltip_ability_item_silver_edge_Description"						"<h1>시전 기술: 그림자 보행</h1> %windwalk_duration%초 동안 몸이 투명해집니다. 지속시간이 다하거나 적을 공격하거나 주문을 시전하면 투명화가 풀립니다. 그림자 보행 중에는 이동 속도가 %windwalk_movement_speed%%% 증가하며 유닛을 통과하여 움직일 수 있습니다. <br><br>투명화 상태에서 적을 공격하면 투명화가 풀리면서 %windwalk_bonus_damage%의 보너스 물리 피해를 주고 %backstab_duration%초 동안 지속 능력을 무력화합니다.\n<h1>지속 효과: 공명 타격</h1> 근접 공격 시 빠르게 연속으로 두 번 공격합니다. 이중 공격은 %slow_duration%초 동안 매 타격 시 이동 속도를 %movement_slow%%% 둔화합니다."
 		"DOTA_Tooltip_ability_item_silver_edge_bonus_damage"				"+$damage"
 		"DOTA_Tooltip_ability_item_silver_edge_bonus_attack_speed"			"+$attack"
-		"DOTA_Tooltip_ability_item_silver_edge_bonus_all_stats"				"+$all"
+		"DOTA_Tooltip_ability_item_silver_edge_bonus_mana_regen"              "+$mana_regen"
+		"DOTA_Tooltip_ability_item_silver_edge_bonus_strength"                "+$str"
+		"DOTA_Tooltip_ability_item_silver_edge_bonus_intellect"                "+$int"
 		//"DOTA_Tooltip_ability_item_silver_edge_windwalk_duration"					"SHADOW WALK DURATION:"
 		//"DOTA_Tooltip_ability_item_silver_edge_windwalk_bonus_damage"		"BONUS ATTACK DAMAGE:"
 		//"DOTA_Tooltip_ability_item_silver_edge_backstab_reduction"		"%ENEMY DAMAGE REDUCTION:"
@@ -9254,9 +9275,10 @@
 		"DOTA_Tooltip_ability_item_red_mist_Lore"						"설명"	
 		
 		"DOTA_Tooltip_ability_item_octarine_core_Description"						"<h1>지속 효과: 쿨다운 감소</h1> 모든 주문과 아이템의 쿨다운 시간이 %bonus_cooldown%%% 감소합니다.\n<h1>지속 효과: 주문 흡혈</h1> 유형에 상관없이 적 영웅에게 가한 주문 피해의 %hero_lifesteal%%%만큼 체력을 회복합니다. <br><br>크립에게는 흡혈 효과가 %creep_lifesteal%%%로 감소합니다."
-		"DOTA_Tooltip_ability_item_octarine_core_bonus_intelligence"		"+$int"
+		//"DOTA_Tooltip_ability_item_octarine_core_bonus_intelligence"		"+$int"
 		"DOTA_Tooltip_ability_item_octarine_core_bonus_health"				"+$health"
 		"DOTA_Tooltip_ability_item_octarine_core_bonus_mana"				"+$mana"
+		"DOTA_Tooltip_ability_item_octarine_core_bonus_magical_armor"				"%+$spell_resist"		
 		//"DOTA_Tooltip_ability_item_octarine_core_bonus_cooldown"			"%COOLDOWN REDUCTION:"
 		//"DOTA_Tooltip_ability_item_octarine_core_hero_lifesteal"				"%HERO SPELL LIFESTEAL:"
 		//"DOTA_Tooltip_ability_item_octarine_core_creep_lifesteal"				"%CREEP SPELL LIFESTEAL:"
@@ -9294,9 +9316,8 @@
 		"DOTA_Tooltip_ability_item_nightfall_striders_Description"						"지문"
 		"DOTA_Tooltip_ability_item_nightfall_striders_Lore"						"설명"
 		
-		"DOTA_Tooltip_ability_item_guardian_greaves_Description"			"<h1>시전 기술: 치료</h1> 근처 아군의 체력을 %replenish_health%, 마나를 %replenish_mana% 회복합니다. 시전 시 시전자에게 걸린 약화 효과를 대부분 제거합니다.<br><br>반경: %replenish_radius%<br>해제 유형: <span class=\"GameplayValues GameplayVariable\">기본 해제</span>\n<h1>지속 효과: 수호자의 오라</h1> 근처 아군의 체력 재생이 %aura_health_regen% 증가합니다. 아군 영웅의 체력이 %aura_bonus_threshold%%% 미만으로 떨어지면 체력 재생이 %aura_health_regen_bonus%, 방어력이 %aura_armor_bonus% 증가합니다. <br><br>반경: %aura_radius% \n장화의 이동 속도 증가 효과는 서로 중첩되지 않습니다."
+		"DOTA_Tooltip_ability_item_guardian_greaves_Description"			"<h1>시전 기술: 치료</h1> 근처 아군의 체력을 %replenish_health%, 마나를 %replenish_mana% 회복합니다. 시전 시 시전자에게 걸린 약화 효과를 대부분 제거합니다.<br><br>반경: %replenish_radius%<br>해제 유형: <span class=\"GameplayValues GameplayVariable\">기본 해제</span>\n<h1>지속 효과: 수호자의 오라</h1> 근처 아군에게 %aura_health_regen%의 체력 재생과 %aura_armor%의 방어력을 부여합니다. 아군 영웅의 체력이 %aura_bonus_threshold%%% 미만으로 떨어지면 체력 재생이 %aura_health_regen_bonus%, 방어력이 %aura_armor_bonus% 증가합니다. <br><br>반경: %aura_radius% \n장화의 이동 속도 증가 효과는 서로 중첩되지 않습니다."
 		"DOTA_Tooltip_ability_item_guardian_greaves_bonus_movement"			"+$move_speed"
-		"DOTA_Tooltip_ability_item_guardian_greaves_bonus_all_stats"		"+$all"		
 		"DOTA_Tooltip_ability_item_guardian_greaves_bonus_mana"				"+$mana"		
 		"DOTA_Tooltip_ability_item_guardian_greaves_bonus_armor"			"+$armor"		
 		//"DOTA_Tooltip_ability_item_guardian_greaves_aura_health_regen"		"AURA HEALTH REGEN:"
@@ -9311,7 +9332,7 @@
 		"DOTA_Tooltip_ability_item_guardian_greaves_Note0"				"이 오라의 효과는 영웅에게만 적용됩니다."
 		
 		"DOTA_Tooltip_modifier_item_guardian_greaves_aura"		"수호자의 오라"
-		"DOTA_Tooltip_modifier_item_guardian_greaves_aura_Description"		"초당 체력 %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% 재생, 방어력 %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS% 증가"
+		"DOTA_Tooltip_modifier_item_guardian_greaves_aura_Description"	"방어력 %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS% 및 체력 재생 %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% 제공"
 
 
 		"DOTA_Tooltip_ability_item_bounty_pact_Description"						"지문"
@@ -9357,6 +9378,7 @@
 		//"DOTA_Tooltip_ability_item_lifesteal_bonus_damage"						"+$damage"
 		//"DOTA_Tooltip_ability_item_lifesteal_lifesteal_percent"					"%LIFESTEAL:"
 		
+		"DOTA_Tooltip_ability_item_voodoo_mask_Description"						"<h1>지속 효과: 주문 흡혈</h1> 유형에 상관없이 적 영웅에게 가한 주문 피해의 %hero_lifesteal%%%만큼 체력을 회복합니다. <br><br>크립에게는 흡혈 효과가 %creep_lifesteal%%%로 감소합니다."
 		
 		"DOTA_Tooltip_ability_item_sphere_Description"							"<h1>지속 효과: 마법 차단</h1> 대부분의 대상 지정 주문을 %block_cooldown%초마다 한 번씩 막아냅니다.\n<h1>시전 기술: 마법 차단 전달</h1> 일시적으로 %block_cooldown%초 동안 마법 차단 효과를 소유자에게서 제거하여 아군 유닛에게 전달합니다.<br><br>범위: %abilitycastrange%"
 		"DOTA_Tooltip_ability_item_sphere_Lore"									"역사상 가장 유명했던 영웅을 지켜 주었던 마법의 구슬입니다."
@@ -9410,7 +9432,7 @@
 		
 		"DOTA_Tooltip_ability_item_mask_of_madness_Description"					"<h1>시전 기술: 광폭화</h1> 공격 속도가 %berserk_bonus_attack_speed% 증가하고 이동 속도가 %berserk_bonus_movement_speed% 증가합니다. 동시에 방어력이 %berserk_armor_reduction% 감소하고 침묵합니다. %berserk_duration%초 동안 지속합니다. \n<h1>지속 효과: 흡혈</h1> 가한 피해의 %lifesteal_percent%%%(만큼) 공격자를 치유합니다."
 		"DOTA_Tooltip_ability_item_mask_of_madness_Lore"						"이 가면을 쓴 자는 주체할 수 없는 공격성을 띱니다."
-		"DOTA_Tooltip_ability_item_mask_of_madness_bonus_damage"				"+$damage"
+		"DOTA_Tooltip_ability_item_mask_of_madness_bonus_damage"			"+$damage"
 		"DOTA_Tooltip_ability_item_mask_of_madness_bonus_attack_speed"			"+$attack"
 		//"DOTA_Tooltip_ability_item_mask_of_madness_lifesteal_percent"			"%LIFESTEAL:"
 		//"DOTA_Tooltip_ability_item_mask_of_madness_berserk_bonus_attack_speed"	"BERSERK ATTACK SPEED:"
@@ -9421,15 +9443,14 @@
 		"DOTA_Tooltip_modifier_item_mask_of_madness_berserk"				"광폭화"
 		"DOTA_Tooltip_modifier_item_mask_of_madness_berserk_Description"	"공격 속도 %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%, 이동 속도 %dMODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT% 증가, 방어력 %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS% 감소 및 침묵함"
 
-		"DOTA_Tooltip_ability_item_mekansm_Description"							"<h1>시전 기술: 회복</h1> %heal_radius%반경에 있는 아군 유닛의 체력을 %heal_amount%만큼 회복합니다.\n<h1>지속 효과: 메칸즘 오라</h1> %aura_radius%반경에 있는 아군 유닛에게 %aura_health_regen%의 체력 재생 효과를 부여합니다."
+		"DOTA_Tooltip_ability_item_mekansm_Description"							"<h1>시전 기술: 회복</h1> %heal_radius%반경에 있는 아군 유닛의 체력을 %heal_amount%만큼 회복합니다.\n<h1>지속 효과: 메칸즘 오라</h1> %aura_radius%반경에 있는 아군 유닛에게 %aura_health_regen%의 체력 재생 및 %aura_armor%의 방어력을 부여합니다."
 		"DOTA_Tooltip_ability_item_mekansm_Lore"							    "알 수 없는 방식으로 갖가지 부품을 완벽하게 끼워 맞춰 빛나는 보석을 만들어 냈습니다."
 		"DOTA_Tooltip_ability_item_mekansm_Note0"								"최근 25초 내에 메칸즘으로 회복을 받은 유닛은 회복 효과의 대상에서 제외됩니다."
 		"DOTA_Tooltip_ability_item_mekansm_Note1" 								"메칸즘 오라는 서로 중첩되지 않습니다."
-		"DOTA_Tooltip_ability_item_mekansm_bonus_all_stats"						"+$all"
 		"DOTA_Tooltip_ability_item_mekansm_bonus_armor"						"+$armor"
 		
 		"DOTA_Tooltip_modifier_item_mekansm_aura"				"메칸즘 오라"
-		"DOTA_Tooltip_modifier_item_mekansm_aura_Description"	"초당 체력 %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% 회복 중"
+		"DOTA_Tooltip_modifier_item_mekansm_aura_Description"	"방어력 %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS% 및 체력 재생 %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% 제공"
 		"DOTA_Tooltip_modifier_item_mekansm_noheal"	"치유 쿨다운"
 		"DOTA_Tooltip_modifier_item_mekansm_noheal_Description"	"메칸즘의 회복이나 수호자의 경갑 치료 효과를 받고 얼마 지나지 않았다면 회복이나 치료 효과를 받을 수 없음"
 
@@ -9464,7 +9485,7 @@
 		"DOTA_Tooltip_ability_item_mystic_staff_Lore"					"제일 값비싼 수정으로 만든 불가사의한 지팡이입니다."
 		"DOTA_Tooltip_ability_item_mystic_staff_bonus_intellect"				"+$int"
 		
-		"DOTA_Tooltip_ability_item_necronomicon_Description"					"<h1>시전 기술: 악마 소환</h1>자신을 위해 %summon_duration%초 동안 싸우는 전사와 궁수를 하나씩 소환합니다.<br><br><h1>전사:</h1>매 타격 시 마나를 불태웁니다. 네크로노미콘 전사를 처치하면 마법 피해를 받습니다. 3레벨에 진실의 시야를 얻습니다.<br>체력: %warrior_health_tooltip%<br>피해: %warrior_damage_tooltip%<br>마나 불태우기 피해: %warrior_mana_break_tooltip%<br>유언 피해: %explosion%<br><br><h1>궁수:</h1>지속하여 이동 속도와 공격 속도 오라 효과를 받습니다. 3레벨에 정화를 습득합니다.<br>체력: %archer_health_tooltip%<br>피해: %archer_damage_tooltip%<br>오라 이동 속도: %archer_move_speed%<br>오라 공격 속도: %archer_attack_speed%<br>오라 반경: %archer_aura_radius_tooltip%"
+		"DOTA_Tooltip_ability_item_necronomicon_Description"					"<h1>시전 기술: 악마 소환</h1>자신을 위해 %summon_duration%초 동안 싸우는 전사와 궁수를 하나씩 소환합니다.<br><br><h1>전사:</h1>매 타격 시 마나를 불태웁니다. 네크로노미콘 전사를 처치하면 마법 피해를 받습니다. 3레벨에 진실의 시야를 얻습니다.<br>체력: %warrior_health_tooltip%<br>피해: %warrior_damage_tooltip%<br>마나 불태우기 피해: %warrior_mana_break_tooltip%<br>유언 피해: %explosion%<br><br><h1>궁수:</h1>3레벨에 정화를 습득합니다.<br>체력: %archer_health_tooltip%<br>피해: %archer_damage_tooltip%"
 		"DOTA_Tooltip_ability_item_necronomicon_Lore"						"강령술과 악마학의 극치로 여겨지는 이 책에는 강력하고도 사악한 힘이 담겨 있습니다."
 		"DOTA_Tooltip_ability_item_necronomicon_bonus_strength"				"+$str"
 		"DOTA_Tooltip_ability_item_necronomicon_bonus_mana_regen"					"+$mana_regen"
@@ -9481,7 +9502,7 @@
 		"DOTA_Tooltip_modifier_necronomicon_archer_aura"				"궁수 오라"
 		"DOTA_Tooltip_modifier_necronomicon_archer_aura_Description"	"이동 속도 %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% 및 공격 속도 %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT% 증가"
 		
-		"DOTA_Tooltip_ability_item_necronomicon_2_Description"					"<h1>시전 기술: 악마 소환</h1>자신을 위해 %summon_duration%초 동안 싸우는 전사와 궁수를 하나씩 소환합니다. <br><br><h1>전사:</h1>매 타격 시 마나를 불태웁니다. 네크로노미콘 전사를 처치하면 마법 피해를 받습니다. 3레벨에 진실의 시야를 얻습니다.<br>체력: %warrior_health_tooltip%<br>피해: %warrior_damage_tooltip%<br>마나 불태우기 피해: %warrior_mana_break_tooltip%<br>유언 피해: %explosion%<br><br><h1>궁수:</h1>지속하여 이동 속도와 공격 속도 오라의 효과를 받습니다. 3레벨에 정화를 습득합니다.<br>체력: %archer_health_tooltip%<br>피해: %archer_damage_tooltip%<br>오라 이동 속도: %archer_move_speed%<br>오라 공격 속도: %archer_attack_speed%<br>오라 반경: %archer_aura_radius_tooltip%"
+		"DOTA_Tooltip_ability_item_necronomicon_2_Description"					"<h1>시전 기술: 악마 소환</h1>자신을 위해 %summon_duration%초 동안 싸우는 전사와 궁수를 하나씩 소환합니다.<br><br><h1>전사:</h1>매 타격 시 마나를 불태웁니다. 네크로노미콘 전사를 처치하면 마법 피해를 받습니다. 3레벨에 진실의 시야를 얻습니다.<br>체력: %warrior_health_tooltip%<br>피해: %warrior_damage_tooltip%<br>마나 불태우기 피해: %warrior_mana_break_tooltip%<br>유언 피해: %explosion%<br><br><h1>궁수:</h1>3레벨에 정화를 습득합니다.<br>체력: %archer_health_tooltip%<br>피해: %archer_damage_tooltip%"
 		"DOTA_Tooltip_ability_item_necronomicon_2_Lore"						"강령술과 악마학의 극치로 여겨지는 이 책에는 강력하고도 사악한 힘이 담겨 있습니다."
 		"DOTA_Tooltip_ability_item_necronomicon_2_bonus_strength"				"+$str"
 		"DOTA_Tooltip_ability_item_necronomicon_2_bonus_mana_regen"					"+$mana_regen"
@@ -9494,7 +9515,7 @@
 		//"DOTA_Tooltip_ability_item_necronomicon_2_archer_mana_burn"			"ARCHER MANA BURN:"
 		//"DOTA_Tooltip_ability_item_necronomicon_2_archer_attack_speed"		"%ARCHER AURA SPEED:"
 		
-		"DOTA_Tooltip_ability_item_necronomicon_3_Description"					"<h1>시전 기술: 악마 소환</h1> 자신을 위해 %summon_duration%초 동안 싸우는 전사와 궁수를 하나씩 소환합니다.<br><br><h1>전사:</h1>매 타격 시 마나를 불태웁니다. 네크로노미콘 전사를 처치하면 마법 피해를 받습니다. 3레벨에 진실의 시야를 얻습니다.<br>체력: %warrior_health_tooltip%<br>피해: %warrior_damage_tooltip%<br>마나 불태우기 피해: %warrior_mana_break_tooltip%<br>유언 피해: %explosion%<br><br><h1>궁수:</h1>지속하여 이동 속도와 공격 속도 오라의 효과를 받습니다. 3레벨에 정화를 습득합니다.<br>체력: %archer_health_tooltip%<br>피해: %archer_damage_tooltip%<br>오라 이동 속도: %archer_move_speed%<br>오라 공격 속도: %archer_attack_speed%<br>오라 반경: %archer_aura_radius_tooltip%"
+		"DOTA_Tooltip_ability_item_necronomicon_3_Description"					"<h1>시전 기술: 악마 소환</h1>자신을 위해 %summon_duration%초 동안 싸우는 전사와 궁수를 하나씩 소환합니다.<br><br><h1>전사:</h1>매 타격 시 마나를 불태웁니다. 네크로노미콘 전사를 처치하면 마법 피해를 받습니다. 3레벨에 진실의 시야를 얻습니다.<br>체력: %warrior_health_tooltip%<br>피해: %warrior_damage_tooltip%<br>마나 불태우기 피해: %warrior_mana_break_tooltip%<br>유언 피해: %explosion%<br><br><h1>궁수:</h1>3레벨에 정화를 습득합니다.<br>체력: %archer_health_tooltip%<br>피해: %archer_damage_tooltip%"
 		"DOTA_Tooltip_ability_item_necronomicon_3_Lore"						"강령술과 악마학의 극치로 여겨지는 이 책에는 강력하고도 사악한 힘이 담겨 있습니다."
 		"DOTA_Tooltip_ability_item_necronomicon_3_bonus_strength"				"+$str"
 		"DOTA_Tooltip_ability_item_necronomicon_3_bonus_mana_regen"					"+$mana_regen"
@@ -9511,6 +9532,7 @@
 		"DOTA_Tooltip_ability_item_null_talisman_bonus_strength"				"+$str"
 		"DOTA_Tooltip_ability_item_null_talisman_bonus_agility"					"+$agi"
 		"DOTA_Tooltip_ability_item_null_talisman_bonus_intellect"				"+$int"
+		"DOTA_Tooltip_ability_item_null_talisman_bonus_mana_regen"					"+$mana_regen"
 		"DOTA_Tooltip_ability_item_null_talisman_bonus_spell_amp"				"%+주문 증폭"
 		
 		"DOTA_Tooltip_ability_item_whip_Description"						"아군이나 적군 대상을 채찍질합니다. 채찍질 당한 대상은 2초 동안 35% 빠르게 움직이고 그다음 3.5초 동안 35% 느리게 움직입니다. 50의 물리 피해를 줍니다. 아군 또는 적군을 대상으로 할 수 있습니다."
@@ -9518,11 +9540,11 @@
 		"DOTA_Tooltip_ability_item_whip_bonus_damage"					"+$damage"
 		
 		"DOTA_Tooltip_ability_item_oblivion_staff_Lore"					"평범한 지팡이처럼 보이지만 실제로는 원래의 소유자였던 엘드리치처럼 매우 강력한 무기입니다."
+		"DOTA_Tooltip_ability_item_oblivion_staff_bonus_damage"			"+$damage"
 		"DOTA_Tooltip_ability_item_oblivion_staff_bonus_intellect"				"+$int"
 		"DOTA_Tooltip_ability_item_oblivion_staff_bonus_attack_speed"			"+$attack"
-		"DOTA_Tooltip_ability_item_oblivion_staff_bonus_damage"					"+$damage"
 		"DOTA_Tooltip_ability_item_oblivion_staff_bonus_mana_regen"				"+$mana_regen"
-		
+						
 		"DOTA_Tooltip_ability_item_ogre_axe_Lore"								"들고만 있어도 강력한 힘이 느껴집니다."
 		"DOTA_Tooltip_ability_item_ogre_axe_bonus_strength"						"+$str"
 		
@@ -9530,7 +9552,8 @@
 		"DOTA_Tooltip_ability_item_orchid_Lore"								"화염 악마의 정수로 만들어진 석류석 막대입니다."
 		"DOTA_Tooltip_ability_item_orchid_bonus_intellect"						"+$int"
 		"DOTA_Tooltip_ability_item_orchid_bonus_attack_speed"					"+$attack"
-		"DOTA_Tooltip_ability_item_orchid_bonus_damage"							"+$damage"
+		"DOTA_Tooltip_ability_item_orchid_bonus_damage"					"+$damage"
+		"DOTA_Tooltip_ability_item_orchid_bonus_armor"							"+$armor"
 		"DOTA_Tooltip_ability_item_orchid_bonus_mana_regen"						"+$mana_regen"
 		//"DOTA_Tooltip_ability_item_orchid_silence_damage_percent"				"%SOUL BURN INCREASED DAMAGE:"
 		//"DOTA_Tooltip_ability_item_orchid_silence_duration"							"SOUL BURN DURATION:"		
@@ -9602,8 +9625,10 @@
 		"DOTA_Tooltip_ability_item_power_treads_bonus_attack_speed"				"+$attack"
 		
 		"DOTA_Tooltip_ability_item_quarterstaff_Lore"							"빠르게 공격할 수 있는 기본적인 형태의 지팡이입니다."
-		"DOTA_Tooltip_ability_item_quarterstaff_bonus_damage"					"+$damage"
 		"DOTA_Tooltip_ability_item_quarterstaff_bonus_speed"					"+$attack"
+		"DOTA_Tooltip_ability_item_quarterstaff_bonus_damage"					"+$damage"
+		
+		"DOTA_Tooltip_ability_item_blitz_knuckles_bonus_attack_speed"					"+$attack"
 		
 		"DOTA_Tooltip_ability_item_quelling_blade_Description"					"<h1>시전 기술: 나무 베기</h1> 대상 나무를 벱니다.<br><br>시전 범위: %abilitycastrange%\n<h1>지속 효과: 진압</h1> 비영웅 유닛을 상대로 근접 영웅은 %damage_bonus%, 원거리 영웅은 %damage_bonus_ranged%만큼 공격력이 증가합니다."
 		"DOTA_Tooltip_ability_item_quelling_blade_Lore"							"쓰러진 난쟁이의 도끼로, 숲에서 효과적으로 길을 낼 수 있습니다."
@@ -9639,8 +9664,9 @@
 		"DOTA_Tooltip_ability_item_kaya_lore"					"명성 높은 마법사의 지팡이입니다. 헤아릴 수도 없이 오랜 세월 전에 사라졌던 것입니다."
 		"DOTA_Tooltip_ability_item_kaya_note0"					"이 아이템 효과는 서로 중첩되지 않습니다."
 		"DOTA_Tooltip_ability_item_kaya_bonus_intellect"					"+$int"
-		"DOTA_Tooltip_ability_item_kaya_spell_amp"					"%+주문 증폭"
-		"DOTA_Tooltip_ability_item_kaya_manacost_reduction"			"%+마나 소모 및 마나 손실 감소"
+		"DOTA_Tooltip_ability_item_kaya_spell_amp"						"%+주문 증폭"
+		"DOTA_Tooltip_ability_item_kaya_mana_regen_multiplier"				"%+마나 재생 증폭"
+		"DOTA_Tooltip_ability_item_kaya_spell_lifesteal_amp"				"%+주문 흡혈 증폭"
 
 		
 		"DOTA_Tooltip_ability_item_reaver_Lore"									"산을 통채로 찢어발길 수 있는 거대한 도끼입니다."
@@ -9659,7 +9685,7 @@
 		//"DOTA_Tooltip_ability_item_ring_of_basilius_bonus_all_stats"			"+$all"
 
 		
-		"DOTA_Tooltip_ability_item_holy_locket_Description"				"<h1>시전 기술: 에너지 충전</h1> 중첩된 충전 1회당 %restore_per_charge%의 체력과 마나를 즉시 회복합니다.<br><br> 최대 %max_charges%회까지 충전할 수 있습니다. %charge_radius% 범위 안에 있는 비투명 상태의 적이 기술을 한 번 사용할 때마다 에너지를 1회 충전합니다.  \n\n <h1>지속 효과: 성스러운 축복</h1>제공하는 치유 효과가 %heal_increase%%% 증폭됩니다." 
+		"DOTA_Tooltip_ability_item_holy_locket_Description"				"<h1>시전 기술: 에너지 충전</h1>아군 유닛을 대상으로 지정하여 쌓인 충전 1회당 %restore_per_charge%의 체력과 마나를 즉시 회복합니다.<br><br> 최대 %max_charges%회까지 충전할 수 있습니다. %charge_radius% 범위 안에 있는 비투명 상태의 적이 기술을 한 번 사용할 때마다 에너지를 1회 충전합니다.  \n\n <h1>지속 효과: 성스러운 축복</h1>제공하는 치유 효과가 %heal_increase%%% 증폭됩니다." 
 		"DOTA_Tooltip_ability_item_holy_locket_bonus_health"					"+$health"
 		"DOTA_Tooltip_ability_item_holy_locket_bonus_mana"					"+$mana"
 		"DOTA_Tooltip_ability_item_holy_locket_health_regen"				"+$hp_regen"
@@ -9704,17 +9730,19 @@
 		"DOTA_Tooltip_ability_item_kaya_and_sange_bonus_strength"						"+$str"
 		"DOTA_Tooltip_ability_item_kaya_and_sange_bonus_intellect"					"+$int"
 		"DOTA_Tooltip_ability_item_kaya_and_sange_spell_amp"					"%+주문 증폭"
-		"DOTA_Tooltip_ability_item_kaya_and_sange_manacost_reduction"			"%+마나 소모 및 마나 손실 감소"
+		"DOTA_Tooltip_ability_item_kaya_and_sange_mana_regen_multiplier"				"%+마나 재생 증폭"
 		"DOTA_Tooltip_ability_item_kaya_and_sange_status_resistance"					"%+상태 저항력"
 		"DOTA_Tooltip_ability_item_kaya_and_sange_hp_regen_amp"							"%+자신 체력 재생 및 흡혈 증폭"
+		"DOTA_Tooltip_ability_item_kaya_and_sange_spell_lifesteal_amp"				"%+주문 흡혈 증폭"
 
 		
 		"DOTA_Tooltip_ability_item_yasha_and_kaya_bonus_intellect"					"+$int"
 		"DOTA_Tooltip_ability_item_yasha_and_kaya_spell_amp"					"%+주문 증폭"
-		"DOTA_Tooltip_ability_item_yasha_and_kaya_manacost_reduction"			"%+마나 소모 및 마나 손실 감소"
+		"DOTA_Tooltip_ability_item_yasha_and_kaya_mana_regen_multiplier"				"%+마나 재생 증폭"
 		"DOTA_Tooltip_ability_item_yasha_and_kaya_bonus_agility"							"+$agi"
 		"DOTA_Tooltip_ability_item_yasha_and_kaya_bonus_attack_speed"					"+$attack"
 		"DOTA_Tooltip_ability_item_yasha_and_kaya_movement_speed_percent_bonus"			"%+$move_speed"
+		"DOTA_Tooltip_ability_item_yasha_and_kaya_spell_lifesteal_amp"				"%+주문 흡혈 증폭"
 		
 		"DOTA_Tooltip_modifier_sange_buff"						"상해"
 		"DOTA_Tooltip_modifier_sange_buff_Description"			"이동 속도 %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% 및 공격 속도 %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT% 감소"
@@ -9747,7 +9775,7 @@
 		"DOTA_Tooltip_ability_item_satanic_Lore"								"영혼을 바친 대가로 막강한 힘을 줍니다."
 		"DOTA_Tooltip_ability_item_satanic_bonus_strength"						"+$str"
 		"DOTA_Tooltip_ability_item_satanic_bonus_damage"						"+$damage"
-		"DOTA_Tooltip_ability_item_satanic_status_resistance"					"%+상태 저항력"
+		"DOTA_Tooltip_ability_item_satanic_status_resistance"						"%+상태 저항력"
 		//"DOTA_Tooltip_ability_item_satanic_lifesteal_percent"					"%LIFESTEAL:"
 		//"DOTA_Tooltip_ability_item_satanic_unholy_lifesteal_total_tooltip"		"%UNHOLY RAGE LIFESTEAL:"
 		//"DOTA_Tooltip_ability_item_satanic_unholy_duration"					    "UNHOLY RAGE DURATION:"
@@ -9767,7 +9795,7 @@
 		"DOTA_Tooltip_modifier_sheepstick_debuff"				"돼지 변이"
 		"DOTA_Tooltip_modifier_sheepstick_debuff_Description"	"돼지로 변이됨, 공격 및 주문 시전 불가"
 
-		"DOTA_Tooltip_ability_item_shivas_guard_Description"					"<h1>시전 기술: 극지의 돌풍</h1> 차가운 바람을 내뿜어 적에게 %blast_damage% 마법 피해를 주고 %blast_debuff_duration%초 동안 적의 이동 속도를 %blast_movement_speed%%%만큼 느려지게 합니다.<br><br>반경: %blast_radius%\n<h1>지속 효과: 빙결의 오라</h1> 적 모두의 공격 속도를 %aura_attack_speed% 감소시킵니다. <br><br>반경: %aura_radius%"
+		"DOTA_Tooltip_ability_item_shivas_guard_Description"					"<h1>시전 기술: 극지의 돌풍</h1> 차가운 바람을 내뿜어 적에게 %blast_damage% 마법 피해를 주고 %blast_debuff_duration%초 동안 적의 이동 속도를 %blast_movement_speed%%%만큼 느려지게 합니다.<br><br>반경: %blast_radius%\n<h1>지속 효과: 빙결의 오라</h1> 적 모두의 공격 속도를 %aura_attack_speed%, 모든 치유, 재생, 흡혈 효과를 %hp_regen_degen_aura%%% 감소시킵니다. <br><br>반경: %aura_radius%"
 		"DOTA_Tooltip_ability_item_shivas_guard_Lore"							"여신의 것이었다고 전해지는 아이템입니다. 지금까지도 예전의 힘이 많이 남아 있습니다."
 		"DOTA_Tooltip_ability_item_shivas_guard_Note0"							"돌풍의 속도는 %blast_speed%에서 시작해 %blast_radius%까지 빨라집니다."
 		"DOTA_Tooltip_ability_item_shivas_guard_Note1"							"극지의 돌풍은 시전자를 따라다닙니다."
@@ -9781,11 +9809,11 @@
 		//"DOTA_Tooltip_ability_item_shivas_guard_blast_radius"						"BLAST RADIUS:"
 		
 		"DOTA_Tooltip_modifier_item_shivas_guard_aura"				"빙결의 오라"
-		"DOTA_Tooltip_modifier_item_shivas_guard_aura_Description"	"공격 속도 %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT% 감소"
+		"DOTA_Tooltip_modifier_item_shivas_guard_aura_Description"	"공격 속도 %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT% 및 재생 %dMODIFIER_PROPERTY_LIFESTEAL_AMPLIFY_PERCENTAGE%%% 감소"
 		"DOTA_Tooltip_modifier_item_shivas_guard_blast"				"극지의 돌풍"
 		"DOTA_Tooltip_modifier_item_shivas_guard_blast_Description"	"이동 속도 %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% 둔화"
 
-		"DOTA_Tooltip_ability_item_skadi_Description"							"<h1>지속 효과: 냉기 공격</h1> 공격 시 %cold_duration%초 동안 이동 및 공격 속도를 느려지게 하고 치유량, 치유 재, 흡혈 효과를 %heal_reduction%%% 감소시킵니다. 적이 원거리 영웅이면 이동 속도가 %cold_slow_ranged%%%, 공격 속도가 %cold_slow_ranged% 둔화합니다. 적이 근접 영웅이면 이동 속도가 %cold_slow_melee%%%, 공격 속도가 %cold_slow_melee% 둔화합니다. "
+		"DOTA_Tooltip_ability_item_skadi_Description"							"<h1>지속 효과: 냉기 공격</h1> 공격 시 %cold_duration%초 동안 이동 및 공격 속도를 느려지게 하고 치유량, 치유 재생, 흡혈, 주문 흡혈 효과를 %heal_reduction%%% 감소시킵니다. 적이 원거리 영웅이면 이동 속도가 %cold_slow_ranged%%%, 공격 속도가 %cold_slow_ranged% 둔화합니다. 적이 근접 영웅이면 이동 속도가 %cold_slow_melee%%%, 공격 속도가 %cold_slow_melee% 둔화합니다. "
 		"DOTA_Tooltip_ability_item_skadi_Lore"									"극도로 희귀한 계승물이며, 하늘빛 용이 보호합니다."
 		"DOTA_Tooltip_ability_item_skadi_bonus_all_stats"						"+$all"
 		"DOTA_Tooltip_ability_item_skadi_bonus_health"							"+$health"
@@ -9807,12 +9835,13 @@
 		"DOTA_Tooltip_ability_item_soul_booster_Lore"					"잃어버린 용기가 되살아납니다."
 		"DOTA_Tooltip_ability_item_soul_booster_bonus_health"					"+$health"
 		"DOTA_Tooltip_ability_item_soul_booster_bonus_mana"						"+$mana"
+		"DOTA_Tooltip_ability_item_soul_booster_bonus_magical_armor"			"%+$spell_resist"		
 
 		"DOTA_Tooltip_ability_item_soul_ring_Description"						"<h1>시전 기술: 희생</h1> %health_sacrifice% 체력을 소모하여 일시적으로 %mana_gain% 마나를 회복합니다. %duration%초 동안 지속합니다.<br><br>회복한 마나가 전체 마나량보다 많을 때는 완충량이 생성되어 본 마나량보다 먼저 소진합니다."
 		"DOTA_Tooltip_ability_item_soul_ring_Lore"								"착용한 자의 영혼을 흡수하는 반지입니다."
 		"DOTA_Tooltip_ability_item_soul_ring_Note0"								"지속시간이 다하기 전에 사용하지 않으면 추가로 획득한 마나는 소멸됩니다."
-		"DOTA_Tooltip_ability_item_soul_ring_bonus_strength"					"+$str"
-		"DOTA_Tooltip_ability_item_soul_ring_bonus_health_regen"			"+$hp_regen"
+		"DOTA_Tooltip_ability_item_soul_ring_bonus_strength"						"+$str"
+		"DOTA_Tooltip_ability_item_soul_ring_bonus_armor"					"+$armor"
 		//"DOTA_Tooltip_ability_item_soul_ring_duration"								"SACRIFICE DURATION:"
 		
 		"DOTA_Tooltip_modifier_item_soul_ring_buff"				"희생"
@@ -9940,7 +9969,6 @@
 		"DOTA_Tooltip_ability_item_crimson_guard_Lore"								"모두가 두려워하는 봄의 해괴수에 맞서고자 제작된 흉갑입니다."
 		"DOTA_Tooltip_ability_item_crimson_guard_bonus_health"						"+$health"
 		"DOTA_Tooltip_ability_item_crimson_guard_bonus_health_regen"					"+$hp_regen"
-		"DOTA_Tooltip_ability_item_crimson_guard_bonus_all_stats"					"+$all"
 		"DOTA_Tooltip_ability_item_crimson_guard_bonus_armor"					"+$armor"
 		//"DOTA_Tooltip_ability_item_crimson_guard_block_damage_melee"			"BLOCK DAMAGE MELEE:"
 		//"DOTA_Tooltip_ability_item_crimson_guard_block_damage_ranged"				"BLOCK DAMAGE RANGED:"		
@@ -9951,7 +9979,9 @@
 		//"DOTA_Tooltip_ability_item_crimson_guard_bonus_aoe_radius"				"GUARD RADIUS:"
 		"DOTA_Tooltip_ability_item_crimson_guard_Note0"								"다수의 피해 방어 효과는 서로 중첩되지 않습니다."
 
-		
+		"DOTA_Tooltip_modifier_item_crimson_guard_aura"					"핏빛 수호 방어력 보너스"
+		"DOTA_Tooltip_modifier_item_crimson_guard_aura_Description"		"방어력 %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS% 증가"
+
 		"DOTA_Tooltip_modifier_item_crimson_guard_effect"					"핏빛 수호 방어력 보너스"
 		"DOTA_Tooltip_modifier_item_crimson_guard_effect_Description"		"방어력 %MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS% 증가"
 
@@ -9963,9 +9993,8 @@
 		"DOTA_Tooltip_ability_item_vitality_booster_Lore"						"전사 혈족 사이에서 대대로 전해져 내려오는 루비입니다."
 		"DOTA_Tooltip_ability_item_vitality_booster_bonus_health"				"+$health"
 		
-		"DOTA_Tooltip_ability_item_vladmir_Description"							"<h1>지속 효과: 블라드미르의 오라</h1>처에 있는 아군에게 %vampiric_aura%%% 흡혈 효과, %mana_regen_aura% 마나 재생, %armor_aura% 방어력을 제공합니다. <br><br>반경: %aura_radius%"
-		"DOTA_Tooltip_ability_item_vladmir_Lore"								"죽은 흡혈귀의 원한이 씌인 섬뜩한 가면입니다."
-		"DOTA_Tooltip_ability_item_vladmir_bonus_all_stats"			"+$all"
+		"DOTA_Tooltip_ability_item_vladmir_Description"							"<h1>지속 효과: 블라드미르의 오라</h1>근처에 있는 아군에게 %lifesteal_aura%%% 흡혈, %damage_aura%%% 보너스 피해, %mana_regen_aura% 마나 재생을 부여합니다. <br><br>반경: %aura_radius%"
+		"DOTA_Tooltip_ability_item_vladmir_Lore"								"죽은 흡혈귀의 원한이 씌어 섬뜩하기 그지없는 가면입니다."
 		//"DOTA_Tooltip_ability_item_vladmir_hp_regen"							"AURA HEALTH REGEN:"
 		//"DOTA_Tooltip_ability_item_vladmir_vampiric_aura"						"%AURA MELEE LIFESTEAL:"
 		//"DOTA_Tooltip_ability_item_vladmir_vampiric_aura_ranged"						"%AURA RANGED LIFESTEAL:"
@@ -9975,7 +10004,7 @@
 		//"DOTA_Tooltip_ability_item_vladmir_aura_radius"							"AURA RADIUS:"
 		
 		"DOTA_Tooltip_modifier_item_vladmir_aura"				"블라드미르의 오라"
-		"DOTA_Tooltip_modifier_item_vladmir_aura_Description"	"%dMODIFIER_PROPERTY_TOOLTIP%%% 흡혈 효과, 마나 재생 %fMODIFIER_PROPERTY_MANA_REGEN_CONSTANT%, 방어력 %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS% 획득"
+		"DOTA_Tooltip_modifier_item_vladmir_aura_Description"	"흡혈 %dMODIFIER_PROPERTY_TOOLTIP%%%, 공격력 %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%, 마나 재생 %fMODIFIER_PROPERTY_MANA_REGEN_CONSTANT% 획득"
 
 		"DOTA_Tooltip_ability_item_void_stone_Description"						""
 		"DOTA_Tooltip_ability_item_void_stone_Lore"								"황천계의 마법을 전달하는 데 쓰였던 장신구로, 아직도 힘의 파동이 뿜어져 나옵니다."
@@ -10004,6 +10033,7 @@
 		"DOTA_Tooltip_ability_item_wraith_band_bonus_agility"					"+$agi"
 		"DOTA_Tooltip_ability_item_wraith_band_bonus_intellect"					"+$int"
 		"DOTA_Tooltip_ability_item_wraith_band_bonus_attack_speed"				"+$attack"
+		"DOTA_Tooltip_ability_item_wraith_band_bonus_armor"						"+$armor"
 
 		"DOTA_Tooltip_ability_item_yasha_Lore"									"야차는 지금까지 만들어진 무기 중 가장 빠른 무기로 여겨집니다."	
 		"DOTA_Tooltip_ability_item_yasha_Note0"							"야차를 기본으로 하는 아이템의 이동 속도 보너스는 서로 중첩되지 않습니다."	
@@ -10031,15 +10061,12 @@
 
 
 
-		"DOTA_Tooltip_ability_item_ancient_janggo_Description"					"<h1>시전 기술: 인내</h1> %duration%초 동안 근처에 있는 아군의 공격 속도가 %bonus_attack_speed_pct% 증가하고 이동 속도가 %bonus_movement_speed_pct%%% 증가합니다.<br><br>반경: %radius% \n\n<h1>지속 효과: 속도의 오라</h1> 근처 아군의 공격 속도가 %attack_speed_aura% 증가합니다.<br><br>반경: %radius%"
+		"DOTA_Tooltip_ability_item_ancient_janggo_Description"					"<h1>시전 기술: 인내</h1> %duration%초 동안 근처에 있는 아군의 공격 속도가 %bonus_attack_speed_pct%, 이동 속도가 %bonus_movement_speed_pct%%% 증가합니다.<br><br>반경: %radius% "
 		"DOTA_Tooltip_ability_item_ancient_janggo_Note0"					"지구력의 북 조합법을 다시 구매하면 충전 횟수가 모두 회복됩니다."
-		"DOTA_Tooltip_ability_item_ancient_janggo_Note1"					"신속의 오라는 서로 중첩되지 않습니다."
 		"DOTA_Tooltip_ability_item_ancient_janggo_Lore"						"이 유물을 지닌 이는 위급한 상황에서 빠르게 이동할 수 있습니다."
 		"DOTA_Tooltip_ability_item_ancient_janggo_bonus_all_stats"					"+$all"
-		//"DOTA_Tooltip_ability_item_ancient_janggo_bonus_int" 					"+$int"
-		//"DOTA_Tooltip_ability_item_ancient_janggo_bonus_str" 					"+$str"
-		//"DOTA_Tooltip_ability_item_ancient_janggo_bonus_agi" 					"+$agi"
-		//"DOTA_Tooltip_ability_item_ancient_janggo_bonus_mana_regen" 			"+$mana_regen"
+		//"DOTA_Tooltip_ability_item_ancient_janggo_bonus_attack_speed"					"+$attack"
+		"DOTA_Tooltip_ability_item_ancient_janggo_bonus_mana_regen" 			"+$mana_regen"
 		"DOTA_Tooltip_ability_item_ancient_janggo_bonus_movement_speed"			"+$move_speed"
 		//"DOTA_Tooltip_ability_item_ancient_janggo_bonus_aura_movement_speed"		"AURA MOVE SPEED:"
 		//"DOTA_Tooltip_ability_item_ancient_janggo_bonus_attack_speed_pct"			"ENDURANCE ATTACK SPEED:"
@@ -10102,7 +10129,6 @@
 
 		"DOTA_Tooltip_ability_item_shadow_amulet_Description"					"<h1>시전 기술: 사라지기</h1> 자신 또는 아군 영웅이 가만히 있는 동안 투명화 상태가 됩니다. <br><br>%fade_time%초에 걸쳐 투명화하며, 움직이는 즉시 모습이 드러납니다. <br><br>자신에게 아이템을 사용할 때는 쿨다운이 적용되지 않습니다.<br><br>범위: %abilitycastrange%"
 		"DOTA_Tooltip_ability_item_shadow_amulet_Lore"							"이 작은 부적을 완벽한 정지 상태로 들고 있으면 적의 감각이 흐려집니다."
-		"DOTA_Tooltip_ability_item_shadow_amulet_bonus_attack_speed"			"+$attack"
 		//"DOTA_Tooltip_ability_item_shadow_amulet_fade_time"					"FADE TIME:"
 
 		"DOTA_Tooltip_modifier_item_shadow_amulet_fade"		"그림자 부적"
@@ -10110,8 +10136,7 @@
 
 		"DOTA_Tooltip_ability_item_meteor_hammer_Description"                   "<h1>시전 기술: 유성 망치</h1> 집중 기술 - 흐트러지지 않고 정신을 집중한 후 유성을 소환해 %impact_radius% 효과 범위에 떨어뜨려 %stun_duration%초 동안 적을 기절시키고 충격 피해를 줍니다. %burn_duration%초 동안 적 유닛과 건물에 지속 피해를 줍니다.<BR><BR>건물 충격 피해: %impact_damage_buildings% <BR>건물 지속 피해: %burn_dps_buildings% <BR><BR>건물 외 대상 충격 피해: %impact_damage_units% <BR>건물 외 대상 지속 피해: %burn_dps_units% <BR><BR>집중 지속시간: %max_duration%초<BR>낙하 시간: %land_time%초"		
 		"DOTA_Tooltip_ability_item_meteor_hammer_lore"                   "이 마력 깃든 망치는 엄청난 유성 폭풍에 파괴된 마을의 폐허에서 발견한 금속을 벼려 만들었습니다."		
-		"DOTA_Tooltip_ability_item_meteor_hammer_bonus_strength"				"+$str"
-		"DOTA_Tooltip_ability_item_meteor_hammer_bonus_intellect"				"+$int"
+		"DOTA_Tooltip_ability_item_meteor_hammer_bonus_all_stats"						"+$all"	
 		"DOTA_Tooltip_ability_item_meteor_hammer_bonus_health_regen"			"+$hp_regen"
 		"DOTA_Tooltip_ability_item_meteor_hammer_bonus_mana_regen"				"+$mana_regen"
 
@@ -10131,7 +10156,7 @@
 		"DOTA_Tooltip_modifier_item_nullifier_slow_Description"				"%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% 둔화"
 
 
-		"DOTA_Tooltip_ability_item_spirit_vessel_Description"					"<h1>시전 기술: 영혼 해방</h1> 적에게 사용하면, 대상은 초당 현재 체력의 %enemy_hp_drain%%%가 감소하고 체력 재생과 치유 효과가 %hp_regen_reduction_enemy%%% 줄어들며, 초당 %soul_damage_amount%의 피해를 받습니다. <br><br>아군에게 사용하면, 초당 %soul_heal_amount%의 체력 재생 효과를 얻습니다. <br><br>%duration%초 동안 지속합니다. <br><br>%soul_radius% 유닛 거리 안에서 적 영웅이 죽을 때마다 충전됩니다. 죽는 영웅으로부터 가장 가까이에 있는 혼령 단지만 충전됩니다.<br><br>시전 범위: %abilitycastrange% \n<h1>지속 효과: 혼령 단지 약화의 오라</h1>근처 적 유닛의 모든 치유, 재생, 흡혈 효과가 %hp_regen_degen_aura%%% 감소합니다.<br><br>반경: %hp_regen_degen_aura_range%" 		
+		"DOTA_Tooltip_ability_item_spirit_vessel_Description"					"<h1>시전 기술: 영혼 해방</h1> 적에게 사용하면, 대상은 초당 현재 체력의 %enemy_hp_drain%%%가 감소하고 체력 재생, 치유, 흡혈, 주문 흡혈 효과가 %hp_regen_reduction_enemy%%% 줄어들며, 초당 %soul_damage_amount%의 피해를 받습니다. <br><br>아군에게 사용하면, 초당 %soul_heal_amount%의 체력 재생 효과를 얻습니다. <br><br>%duration%초 동안 지속합니다. <br><br>%soul_radius% 유닛 거리 안에서 적 영웅이 죽을 때마다 충전됩니다. 죽는 영웅으로부터 가장 가까이에 있는 혼령 단지만 충전됩니다.<br><br>시전 범위: %abilitycastrange%" 		
 		"DOTA_Tooltip_ability_item_spirit_vessel_lore"					"다른 존재의 영혼을 옭아 넣도록 신이 빚어냈습니다." 		
 		"DOTA_Tooltip_ability_item_spirit_vessel_bonus_health"                     "+$health"
 		"DOTA_Tooltip_ability_item_spirit_vessel_bonus_mana_regen"                "+$mana_regen"
@@ -10270,7 +10295,7 @@
 		"DOTA_Tooltip_ability_item_imp_claw_Description"					"<h1>지속 효과: 치명타</h1> 다음 공격을 강화하여 치명타로 %crit_multiplier%%%의 피해를 줍니다."
 		"DOTA_Tooltip_ability_item_imp_claw_bonus_damage"       "+$damage"	 
 
-		"DOTA_Tooltip_ability_item_flicker_Description"					"<h1>시전 기술: 점멸섬광</h1> 약화 효과를 해제하고 600 범위의 무작위 위치로 점멸 이동합니다. 피해를 받아도 무효가 되지 않습니다."
+		"DOTA_Tooltip_ability_item_flicker_Description"					"<h1>시전 기술: 점멸섬광</h1> 약화 효과를 해제하고 %range%범위의 무작위 위치로 점멸 이동합니다. 피해를 받아도 무효가 되지 않습니다."
 		"DOTA_Tooltip_ability_item_flicker_bonus_movement_speed"		"+$move_speed"
 		
 		"DOTA_Tooltip_ability_item_spy_gadget_Description"		"<h1>지속 효과: 예지의 오라</h1> 탐색 쿨다운을 %scan_cooldown_reduction%%% 감소시킵니다. %aura_range% 유닛 반경 안에 있는 아군의 공격과 시전 범위가 증가합니다."
@@ -10361,11 +10386,12 @@
 		"DOTA_Tooltip_Ability_item_trident_bonus_strength"				"+$str"
 		"DOTA_Tooltip_Ability_item_trident_bonus_agility"				"+$agi"
 		"DOTA_Tooltip_Ability_item_trident_spell_amp"					"%+주문 증폭"
-		"DOTA_Tooltip_Ability_item_trident_manacost_reduction"			"%+마나 소모 및 마나 손실 감소"
+		"DOTA_Tooltip_Ability_item_trident_mana_regen_multiplier"				"%+마나 재생 증폭"
 		"DOTA_Tooltip_Ability_item_trident_bonus_attack_speed"			"+$attack"
 		"DOTA_Tooltip_Ability_item_trident_movement_speed_percent_bonus"	"%+$move_speed"		
 		"DOTA_Tooltip_Ability_item_trident_status_resistance"					"%+상태 저항력"
 		"DOTA_Tooltip_Ability_item_trident_hp_regen_amp"							"%+자신 체력 재생 및 흡혈 증폭"
+		"DOTA_Tooltip_Ability_item_trident_spell_lifesteal_amp"				"%+주문 흡혈 증폭"
 
 		
 		"DOTA_Tooltip_Ability_item_demonicon_Description"		"<h1>시전 기술: 크나큰 악마 소환</h1> %summon_duration%초 동안 지속하는 3레벨 네크로노미콘 유닛 2쌍을 소환합니다. 소환한 유닛은 체력과 공격력이 50% 더 많습니다."
@@ -10381,7 +10407,7 @@
 		"DOTA_Tooltip_modifier_item_fallen_sky_burn_Description"						"지속하여 피해 받음"
 		
 		
-		"DOTA_Tooltip_Ability_item_pirate_hat_Description"		"<h1>지속 효과: 풍요로운 처치</h1> 적 영웅을 처치하면 300골드를 훔칩니다."
+		"DOTA_Tooltip_Ability_item_pirate_hat_Description"		"<h1>시전 기술: 파기</h1> %abilitychanneltime%초 동안 정신을 집중합니다. <br>항상 풍요 룬 한 개를 발견합니다!"
 		"DOTA_Tooltip_Ability_item_pirate_hat_bonus_attack_speed"				"+$attack"
 
 		
@@ -10397,7 +10423,7 @@
 		
 		"DOTA_Tooltip_Ability_item_paladin_sword_bonus_damage"		"+$damage"
 		"DOTA_Tooltip_Ability_item_paladin_sword_bonus_lifesteal"		"%+흡혈"
-		"DOTA_Tooltip_Ability_item_paladin_sword_Description"		"<h1>지속 효과: 크나큰 치유</h1> 착용자의 재생, 치유, 흡혈 효과가 %bonus_amp%%% 증폭됩니다."
+		"DOTA_Tooltip_Ability_item_paladin_sword_Description"		"<h1>지속 효과: 크나큰 치유</h1> 착용자의 재생, 치유, 흡혈, 주문 흡혈 효과가 %bonus_amp%%% 증폭됩니다."
 
 		
 		"DOTA_Tooltip_Ability_item_minotaur_horn_bonus_strength"		"+$str"
@@ -10543,6 +10569,9 @@
 		"DOTA_Tooltip_modifier_buyback_gold_penalty_Description"		"획득하는 모든 골드가 60% 감소"
 		"DOTA_Tooltip_modifier_watch_tower_invulnerable"					"사용 불가"
 		"DOTA_Tooltip_modifier_watch_tower_invulnerable_Description"		"아직은 전초기지를 장악할 수 없습니다."
+		
+		"DOTA_Tooltip_modifier_watch_tower_allied_aura_tracker"					"전초기지 보너스"
+		"DOTA_Tooltip_modifier_watch_tower_allied_aura_tracker_Description"		"유닛이 골드와 경험치를 8%% 더 제공합니다."	
 		
 		
 		"DOTA_Tooltip_rune_doubledamage"				"더블 대미지"
@@ -10704,3 +10733,4 @@
 		"DOTA_Tooltip_modifier_ti9_monkey_poop_Description"						"원숭이가 당신의 행동에 불쾌감을 표시합니다."
 	}
 }
+

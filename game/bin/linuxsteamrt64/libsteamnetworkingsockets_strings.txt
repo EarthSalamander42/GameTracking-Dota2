@@ -208,10 +208,12 @@ $tI/home/buildbot/buildslave/sdr_public_ubuntu64_linux/build/src/steamnetworking
 %s algorithm "%s" unsupported
 %s appears to be SDR public address.
 %s downtime warning expired; assumed back online.
+%s has received sequence packets, but MaxRecvPktNum==0
 %s isn't valid SteamID for identity.
 %s sent routing secret in msg 0x%02x.  Marking as fully trusted.  (Previous trust was %d)
 %s#%d (%s)
 %s%02X
+%s%lld
 %s%s
 %s(%d):
 %s(%d): OpenSSL internal error, assertion failed: %s
@@ -360,6 +362,7 @@ $tI/home/buildbot/buildslave/sdr_public_ubuntu64_linux/build/src/steamnetworking
 /home/buildbot/buildslave/sdr_public_ubuntu64_linux/build/src/steamnetworkingsockets/clientlib/../steamdatagram_internal.h
 /home/buildbot/buildslave/sdr_public_ubuntu64_linux/build/src/steamnetworkingsockets/clientlib/../steamnetworking_statsutils.h
 /home/buildbot/buildslave/sdr_public_ubuntu64_linux/build/src/steamnetworkingsockets/clientlib/../steamnetworkingsockets_internal.h
+/home/buildbot/buildslave/sdr_public_ubuntu64_linux/build/src/steamnetworkingsockets/clientlib/csteamnetworkingmessages.cpp
 /home/buildbot/buildslave/sdr_public_ubuntu64_linux/build/src/steamnetworkingsockets/clientlib/csteamnetworkingsockets.cpp
 /home/buildbot/buildslave/sdr_public_ubuntu64_linux/build/src/steamnetworkingsockets/clientlib/csteamnetworkingsockets.h
 /home/buildbot/buildslave/sdr_public_ubuntu64_linux/build/src/steamnetworkingsockets/clientlib/csteamnetworkingsockets_sdr.cpp
@@ -389,6 +392,8 @@ $tI/home/buildbot/buildslave/sdr_public_ubuntu64_linux/build/src/steamnetworking
 /home/buildbot/buildslave/sdr_public_ubuntu64_linux/build/src/tier1/utlmemory.cpp
 /home/buildbot/buildslave/sdr_public_ubuntu64_linux/build/src/vstdlib/strtools.cpp
 /proc/%d/status
+/usr/include/c++/4.8/debug/map.h
+/usr/include/c++/4.8/debug/safe_iterator.h
 /usr/local/ssl
 /usr/local/ssl/cert.pem
 /usr/local/ssl/certs
@@ -697,6 +702,7 @@ Assertion Failed: !HasOverlappingRange( range, m_senderState.m_listReadyRetryRel
 Assertion Failed: !IsDevConfigValue( s_vecConfigValueTable[0]->m_eValue )
 Assertion Failed: !IsExternallyAllocated()
 Assertion Failed: !ListenSocket()
+Assertion Failed: !bEndToEnd
 Assertion Failed: !bFoundNextToTimeout
 Assertion Failed: !bFoundPendingAck
 Assertion Failed: !cert.m_authScope.IsEmpty()
@@ -857,6 +863,7 @@ Assertion Failed: d.m_nDirectPing <= k_nMaxReasonablePing || d.m_nDirectPing == 
 Assertion Failed: d.m_nID
 Assertion Failed: d.m_nIndirectPing <= k_nMaxReasonablePing
 Assertion Failed: eMode == k_eFindClient_Other
+Assertion Failed: eOldState == k_ESteamNetworkingConnectionState_Connected
 Assertion Failed: eReason > k_ESteamNetConnectionEnd_AppException_Max
 Assertion Failed: eReplyRequested != k_EStatsReplyRequest_NothingToSend
 Assertion Failed: false
@@ -917,7 +924,6 @@ Assertion Failed: itCur->second.m_nEnd < nAckEnd
 Assertion Failed: itGap != m_receiverState.m_mapPacketGaps.begin()
 Assertion Failed: itGap != m_receiverState.m_mapPacketGaps.end()
 Assertion Failed: itGap->first < itGap->second.m_nEnd
-Assertion Failed: itGap->first <= nPktNum
 Assertion Failed: itMsgStart != end
 Assertion Failed: itMsgStart->first.m_nMsgNum == nMsgNum
 Assertion Failed: itNext->first == INT64_MAX
@@ -950,6 +956,8 @@ Assertion Failed: m_connection.m_statsEndToEnd.m_usecTimeLastRecv > 0
 Assertion Failed: m_connection.m_unConnectionIDRemote != 0
 Assertion Failed: m_eClientType == k_EClientType_P2PConnection
 Assertion Failed: m_eConnectionState == k_ESteamNetworkingConnectionState_Dead
+Assertion Failed: m_eConnectionWireState == eOldState
+Assertion Failed: m_eConnectionWireState == k_ESteamNetworkingConnectionState_Dead
 Assertion Failed: m_eKeyType == x.m_eKeyType
 Assertion Failed: m_eNegotiatedCipher != k_ESteamNetworkingSocketsCipher_INVALID
 Assertion Failed: m_eNegotiatedCipher == k_ESteamNetworkingSocketsCipher_INVALID
@@ -1327,6 +1335,7 @@ Assertion Failed: usecNextThinkRelay > usecNow
 Assertion Failed: usecNextThinkSession > usecNow
 Assertion Failed: usecNow > 0x20000*k_usecAckDelayPrecision
 Assertion Failed: usecTimeoutDuration > 0
+Assertion Failed: usecWhen > 0
 Assertion Failed: whenEnded >= m_usecWhenSelected
 Assertion Failed: x != kInvalidItem
 AsyncCertRequest
@@ -1756,7 +1765,6 @@ Cert allows appid %u, but CA trust chain does not
 Cert does not authorize us for App %u
 Cert expired %d seconds ago.  Discarding and requesting another
 Cert expired %lld seconds ago
-Cert expires in %d seconds.  Not requesting another
 Cert expires in %d seconds.  Requesting another, but keeping current cert in case request fails
 Cert failed protobuf decode
 Cert failed protobuf parse
@@ -1798,7 +1806,8 @@ ChallengeRequest
 Char=
 Claiming protocol V%u now, but earlier was using V%u
 ClearField
-Client message using SessionID 0x%x, without a client identity or connection ID.  We don't recognize that address+SessionID.  Why does the relay think we know the connection info?
+Client message using RelaySessionID %u, Connection #%u from '%s',  not recognized.  Replying with NoConnection
+Client message using RelaySessionID %u, without a client identity or connection ID.  We don't recognize that address+SessionID.  Why does the relay think we know the connection info?
 Client sessions in physical socket table, even thogh we are about to destroy the parent logical listen socket
 ClientPingSampleRequest
 CloseChannelWithUser
@@ -1991,7 +2000,6 @@ End-to-end connection: connected
 End-to-end connection: connecting
 End-to-end connection: performing rendezvous
 End-to-end ping sample
-EndToEnd
 Enter PEM pass phrase:
 Enterprises
 Enum type "
@@ -2162,6 +2170,7 @@ GENERAL_SUBTREE
 GENSTR
 GENTIME
 GLIBCXX_3.4
+GLIBCXX_3.4.10
 GLIBCXX_3.4.11
 GLIBCXX_3.4.14
 GLIBCXX_3.4.18
@@ -2534,6 +2543,23 @@ Must specify local port.
 MutableRawRepeatedField
 MutableRepeatedMessage
 N
+N11__gnu_debug14_Safe_iteratorISt17_Rb_tree_iteratorISt4pairIKN25SteamNetworkingSocketsLib10SNPRange_tEPNS3_23CSteamNetworkingMessageEEENSt7__debug3mapIS4_S7_NS4_18NonOverlappingLessESaIS8_EEEEE
+N11__gnu_debug14_Safe_iteratorISt17_Rb_tree_iteratorISt4pairIKN25SteamNetworkingSocketsLib28SSNPRecvUnreliableSegmentKeyENS3_29SSNPRecvUnreliableSegmentDataEEENSt7__debug3mapIS4_S6_St4lessIS4_ESaIS7_EEEEE
+N11__gnu_debug14_Safe_iteratorISt17_Rb_tree_iteratorISt4pairIKxN25SteamNetworkingSocketsLib13SSNPPacketGapEEENSt7__debug3mapIxS5_St4lessIxESaIS6_EEEEE
+N11__gnu_debug14_Safe_iteratorISt17_Rb_tree_iteratorISt4pairIKxN25SteamNetworkingSocketsLib19SNPInFlightPacket_tEEENSt7__debug3mapIxS5_St4lessIxESaIS6_EEEEE
+N11__gnu_debug14_Safe_iteratorISt17_Rb_tree_iteratorISt4pairIKxxEENSt7__debug3mapIxxSt4lessIxESaIS4_EEEEE
+N11__gnu_debug14_Safe_iteratorISt23_Rb_tree_const_iteratorISt4pairIKN25SteamNetworkingSocketsLib10SNPRange_tEPNS3_23CSteamNetworkingMessageEEENSt7__debug3mapIS4_S7_NS4_18NonOverlappingLessESaIS8_EEEEE
+N11__gnu_debug14_Safe_iteratorISt23_Rb_tree_const_iteratorISt4pairIKN25SteamNetworkingSocketsLib28SSNPRecvUnreliableSegmentKeyENS3_29SSNPRecvUnreliableSegmentDataEEENSt7__debug3mapIS4_S6_St4lessIS4_ESaIS7_EEEEE
+N11__gnu_debug14_Safe_iteratorISt23_Rb_tree_const_iteratorISt4pairIKxN25SteamNetworkingSocketsLib13SSNPPacketGapEEENSt7__debug3mapIxS5_St4lessIxESaIS6_EEEEE
+N11__gnu_debug14_Safe_iteratorISt23_Rb_tree_const_iteratorISt4pairIKxN25SteamNetworkingSocketsLib19SNPInFlightPacket_tEEENSt7__debug3mapIxS5_St4lessIxESaIS6_EEEEE
+N11__gnu_debug14_Safe_iteratorISt23_Rb_tree_const_iteratorISt4pairIKxxEENSt7__debug3mapIxxSt4lessIxESaIS4_EEEEE
+N11__gnu_debug14_Safe_sequenceINSt7__debug3mapIN25SteamNetworkingSocketsLib10SNPRange_tEPNS3_23CSteamNetworkingMessageENS4_18NonOverlappingLessESaISt4pairIKS4_S6_EEEEEE
+N11__gnu_debug14_Safe_sequenceINSt7__debug3mapIN25SteamNetworkingSocketsLib28SSNPRecvUnreliableSegmentKeyENS3_29SSNPRecvUnreliableSegmentDataESt4lessIS4_ESaISt4pairIKS4_S5_EEEEEE
+N11__gnu_debug14_Safe_sequenceINSt7__debug3mapIxN25SteamNetworkingSocketsLib13SSNPPacketGapESt4lessIxESaISt4pairIKxS4_EEEEEE
+N11__gnu_debug14_Safe_sequenceINSt7__debug3mapIxN25SteamNetworkingSocketsLib19SNPInFlightPacket_tESt4lessIxESaISt4pairIKxS4_EEEEEE
+N11__gnu_debug14_Safe_sequenceINSt7__debug3mapIxxSt4lessIxESaISt4pairIKxxEEEEEE
+N11__gnu_debug19_Safe_iterator_baseE
+N11__gnu_debug19_Safe_sequence_baseE
 N25SteamNetworkingSocketsLib13CPacketLaggerE
 N25SteamNetworkingSocketsLib13CSharedSocket10RemoteHostE
 N25SteamNetworkingSocketsLib15CSDRHTTPRequestE
@@ -2566,7 +2592,6 @@ N25SteamNetworkingSocketsLib27CSteamNetworkConnectionBaseE
 N25SteamNetworkingSocketsLib27CSteamNetworkConnectionPipeE
 N25SteamNetworkingSocketsLib28CSteamNetworkListenSocketP2PE
 N25SteamNetworkingSocketsLib28LinkStatsTrackerRelayOutsideE
-N25SteamNetworkingSocketsLib29CSteamNetworkListenSocketBaseE
 N25SteamNetworkingSocketsLib30CSteamNetworkingUtilsSteamBaseE
 N25SteamNetworkingSocketsLib30SteamNetworkingMessagesSessionE
 N25SteamNetworkingSocketsLib31CSteamNetworkingSocketsCallbackI23SteamServersConnected_tEE
@@ -2661,6 +2686,8 @@ N6google8protobuf8internal26GeneratedMessageReflectionE
 N6google8protobuf8internal27UnknownFieldSetFieldSkipperE
 N6google8protobuf8internal29CodedOutputStreamFieldSkipperE
 N6google8protobuf8internal29DescriptorPoolExtensionFinderE
+N9__gnu_cxx24__concurrence_lock_errorE
+N9__gnu_cxx26__concurrence_unlock_errorE
 NACK
 NAME_CONSTRAINTS
 NAT traversal aborted
@@ -2684,6 +2711,11 @@ NO X509_NAME
 NOTICEREF
 NSt6thread10_Impl_baseE
 NSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEEE
+NSt7__debug3mapIN25SteamNetworkingSocketsLib10SNPRange_tEPNS1_23CSteamNetworkingMessageENS2_18NonOverlappingLessESaISt4pairIKS2_S4_EEEE
+NSt7__debug3mapIN25SteamNetworkingSocketsLib28SSNPRecvUnreliableSegmentKeyENS1_29SSNPRecvUnreliableSegmentDataESt4lessIS2_ESaISt4pairIKS2_S3_EEEE
+NSt7__debug3mapIxN25SteamNetworkingSocketsLib13SSNPPacketGapESt4lessIxESaISt4pairIKxS2_EEEE
+NSt7__debug3mapIxN25SteamNetworkingSocketsLib19SNPInFlightPacket_tESt4lessIxESaISt4pairIKxS2_EEEE
+NSt7__debug3mapIxxSt4lessIxESaISt4pairIKxxEEEE
 NULL
 NULL output buffer with non-zero size passed to Base64Decode
 NULL output buffer with non-zero size passed to Base64Encode
@@ -2733,7 +2765,7 @@ No client identity
 No configured STUN servers
 No data
 No default value
-No dropped packets, pkt num %lld -> %lld, dup bit not set?  recvseq=%lld, lurch=%lld, ooo=%lld, mask=[0x%llx, 0x%llx].  (%s)
+No dropped packets, pkt num %lld, dup bit not set?  recvseq=%lld inorder=%lld, dup=%lld, lurch=%lld, ooo=%lld, %s.  (%s)
 No field named "uninterpreted_option" in the Options proto.
 No identity data
 No identity data is present
@@ -2991,7 +3023,6 @@ Problem     : Field is not the right type for this message:    Expected  :
 Proc-Type:
 Proc-Type: 4,
 Processed thinkers %d times -- probably one thinker keeps requesting an immediate wakeup call.
-Processing a packet multiple times
 Protobuf failed to parse
 Protobuf failed to parse CMsgSteamDatagramCertificateSigned
 Protobuf parse failed %s
@@ -3069,13 +3100,15 @@ Received ConnectRequest in P2P rendezvous message, but we are the 'client'!
 Received GameserverSessionEstablished from %s for connection ID %u
 Received Steam datagram ticket for server %s vport %d.%s
 Received SteamNetworkingSocketsRecvP2PRendezvous_t, but no ISteamNetworkingSocketsSerialized?
-Received client message from %s using RelaySessionID %u for %s connection %u.  But previously that session was for client %s connection %u!  This is suspicious.  Unlinking that session from this connection.
+Received client message from %s using RelaySessionID %u for %s connection #%u.  But previously that session was for client %s connection #%u!  This is suspicious.  Unlinking that session from this connection.
 Received malformed %s from %s
 Received malformed CMsgSteamDatagramDiagnostic from %s
 Received message for connection %s associated with Messages interface, but no session.  Connection state is %d
 Received packet of invalid size %d from %s
 Received redundant ConnectOK for ConnectionID %u to %s.
 Received successful communication from Steam Datagram routing cluster.
+Received unexpected 'no connection'
+Received unexpected 'no connection' from peer
 Received unexpected P2P 'non connection' signal
 Received unknown control message %d from %s
 Received unreliable msg %lld offset %d twice.  Sizes %d,%d
@@ -3233,6 +3266,7 @@ SendMessageToUser
 SendMessages
 SendRateMax
 SendRateMin
+SendUDPacket
 Sender sent abs latest recv pkt number using %llx mod %llx, next send %llx
 Sender sent abs unreliable message number using %llx mod %llx, highest seen %llx
 Sender sent reliable stream pos using %llx mod %llx, expected next %llx
@@ -3293,6 +3327,11 @@ St11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE
 St16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE
 St19_Sp_make_shared_tag
 St23_Sp_counted_ptr_inplaceINSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEEESaIS7_ELN9__gnu_cxx12_Lock_policyE2EE
+St3mapIN25SteamNetworkingSocketsLib10SNPRange_tEPNS0_23CSteamNetworkingMessageENS1_18NonOverlappingLessESaISt4pairIKS1_S3_EEE
+St3mapIN25SteamNetworkingSocketsLib28SSNPRecvUnreliableSegmentKeyENS0_29SSNPRecvUnreliableSegmentDataESt4lessIS1_ESaISt4pairIKS1_S2_EEE
+St3mapIxN25SteamNetworkingSocketsLib13SSNPPacketGapESt4lessIxESaISt4pairIKxS1_EEE
+St3mapIxN25SteamNetworkingSocketsLib19SNPInFlightPacket_tESt4lessIxESaISt4pairIKxS1_EEE
+St3mapIxxSt4lessIxESaISt4pairIKxxEEE
 Stats sending didn't clear stats need to send reason %s!
 StatsP2PRouterToClient
 Steam datagram
@@ -3322,7 +3361,6 @@ SteamNetworkingIPAddr_ToString
 SteamNetworkingIdentityFromProtobufMsg returned 0, but but we don't have any unknown fields?
 SteamNetworkingIdentity_ParseString
 SteamNetworkingIdentity_ToString
-SteamNetworkingMessagesSession::ConnectionStateChanged after detaching from connection?
 SteamNetworkingMessages_Lib
 SteamNetworkingSockets lock held for %.1fms.  (Performance warning).  %s
 SteamNetworkingSocketsCert_t
@@ -3403,7 +3441,6 @@ Tokenizer::ParseInteger() passed text that could not have been tokenized as an i
 Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string:
 Told peer to stop acking up to %lld, but latest packet we have sent is %lld
 Too many connections.
-Too many expected acks!  Either we're sending packts requiring acks too fast, or else we're not expiring them properly
 TracerPid:
 Trailer Field: 0x
 TransportChangeConfirm
@@ -3448,6 +3485,7 @@ Unauthenticated connections not allowed.
 Unencrypted
 Unexpected AvailAnyRouterCommunication %d
 Unexpected NoConnection
+Unexpected auth avail %d (%s)
 Unexpected failure while serializing option submessage
 Unexpected g_eAvailAnyRelay %d while ping measurement in progress
 Unexpected g_eAvailNetworkConfig %d
@@ -3652,6 +3690,8 @@ ZLONG
 [%s] Cannot accept connection, current state is %d.
 [%s] Cannot accept connection; already closed by remote host.
 [%s] Cannot calculate metrics to %s, but we have a session
+[%s] Cannot locate gap, or processing packet %lld multiple times. %s | %s
+[%s] Cannot locate gap, or processing packet %lld multiple times. [%lld,%lld) %s | %s
 [%s] Cannot use unsigned cert; failing connection.
 [%s] Client switching active relay %s -> %s (msgID %d)
 [%s] ConnectionTimedOut didn't do what it is supposed to! (%d -> %d)
@@ -3660,7 +3700,9 @@ ZLONG
 [%s] Deselected '%s' transport, no transport currently active!
 [%s] Deselecting active session #%d.  We no longer have a route through that cluster.  Previous route went through remote relay in '%s'
 [%s] Discarding inactive session %s.  %s
+[%s] End-to-end sequence number is duplicate or old, or fails to decrypt, but relay sequence number from %s is OK?  Dropping.
 [%s] End-to-end sequence number is duplicate or old, or fails to decrypt, but relay sequence number is OK?
+[%s] Expecting %d acks!  %04x=%lld %04x=%lld %04x=%lld ... %04x=%lld %04x=%lld %04x=%lld
 [%s] Forgetting relay session %s.  Last communication was %.1f seconds ago
 [%s] Front ping %d is greater than measured end-to-end ping %d.
 [%s] Got P2P signal from %s.  Wrong connection type!
@@ -3692,8 +3734,10 @@ ZLONG
 [%s] Message updated, now at revision %d.
 [%s] No relevant changes to routing messsage, revision %d.
 [%s] Not using STUN servers as per P2P_Transport_ICE_Enable
+[%s] Our cert expires in %d seconds.
 [%s] P2P route through '%s' now forwarding to '%s%s', revision %d
 [%s] Packet data chunk failed to decrypt!  Could be tampering/spoofing or a bug.
+[%s] Packet gap bug.  %lld [%lld,%lld) %s | %s
 [%s] Peer acked our routes for revision %u, but our latest revision is %u!
 [%s] Peer appears to be using '%s' transport as primary
 [%s] Primary router %s going offline in %d seconds; seeking replacement
@@ -3742,13 +3786,18 @@ ZLONG
 [%s] Sent P2P %s to %s, but we have reason to believe that it might not get through end-to-end.  Also sending via steam
 [%s] Sent UDP stats (%s):%s
 [%s] Sent stats (%s) via %s:%s
+[%s] Sequence number from %s is duplicate / old, and end-to-end sequence number is duplicate / old or fails to decrypt.  Dropping.
+[%s] Sequence number from %s is duplicate or old, but end-to-end sequence number is OK?  Dropping.
 [%s] Sequence number from relay is duplicate or old, and end-to-end sequence number is duplicate or old or fails to decrypt
 [%s] Sequence number from relay is duplicate or old, but end-to-end sequence number is OK?
 [%s] Set remote auth to %s / %s
 [%s] Should not be trying to acccept this connection, it was not initiated remotely.
 [%s] Shouldn't be rbeuilding routing message - basic routing data is dirty for reason '%s'
 [%s] Started migration to %s at request of current primary %s
-[%s] StatsRouterToServer: Discarding end-to-end packet number %lld (latest %lld), but relay pkt num is OK %lld (last %lld)
+[%s] StatsRouterToServer: Discarding because relay wire pkt num %lld (last %lld) from %s duplicate or old, but end-to-end packet number %lld (latest %lld) is OK?
+[%s] StatsRouterToServer: Discarding end-to-end wire packet number %lld (latest %lld) and relay wire pkt num %lld (last %lld) from %s
+[%s] StatsRouterToServer: Discarding end-to-end wire packet number %lld (latest %lld), but relay pkt num is OK %lld (latest %lld) from %s
+[%s] StatsRouterToServer: Discarding relay wire pkt num %lld (last %lld) from %s duplicate or old
 [%s] Switched primary to %s (%s) from %s (%s)
 [%s] Switched to '%s' transport (ping=%d, score=%d=%d) from '%s' (ping=%d, score=%d+%d)
 [%s] Switched to backup #%d %s (%s) as primary, from %s (%s)
@@ -3819,6 +3868,15 @@ _
 _ITM_deregisterTMCloneTable
 _ITM_registerTMCloneTable
 _Jv_RegisterClasses
+_ZN11__gnu_debug19_Safe_iterator_base9_M_attachEPNS_19_Safe_sequence_baseEb@@GLIBCXX_3.4
+_ZN11__gnu_debug19_Safe_iterator_base9_M_detachEv@@GLIBCXX_3.4
+_ZN11__gnu_debug19_Safe_sequence_base12_M_get_mutexEv@@GLIBCXX_3.4.9
+_ZN11__gnu_debug19_Safe_sequence_base13_M_detach_allEv@@GLIBCXX_3.4
+_ZNK11__gnu_debug16_Error_formatter10_M_messageENS_13_Debug_msg_idE@@GLIBCXX_3.4
+_ZNK11__gnu_debug16_Error_formatter17_M_get_max_lengthEv@@GLIBCXX_3.4.10
+_ZNK11__gnu_debug16_Error_formatter8_M_errorEv@@GLIBCXX_3.4
+_ZNK11__gnu_debug19_Safe_iterator_base11_M_singularEv@@GLIBCXX_3.4
+_ZNK11__gnu_debug19_Safe_iterator_base14_M_can_compareERKS0_@@GLIBCXX_3.4
 _ZNKSs13find_first_ofEPKcm@@GLIBCXX_3.4
 _ZNKSs17find_first_not_ofEPKcm@@GLIBCXX_3.4
 _ZNKSs2atEm@@GLIBCXX_3.4
@@ -3924,6 +3982,8 @@ __cxa_atexit
 __cxa_atexit@@GLIBC_2.2.5
 __cxa_begin_catch
 __cxa_begin_catch@@CXXABI_1.3
+__cxa_call_unexpected
+__cxa_call_unexpected@@CXXABI_1.3
 __cxa_end_catch
 __cxa_end_catch@@CXXABI_1.3
 __cxa_finalize
@@ -3951,6 +4011,17 @@ __fprintf_chk@@GLIBC_2.3.4
 __fxstat
 __fxstat@@GLIBC_2.2.5
 __gmon_start__
+__gnu_cxx::__concurrence_lock_error
+__gnu_cxx::__concurrence_unlock_error
+__gnu_debug::_Error_formatter::_M_error() const
+__gnu_debug::_Error_formatter::_M_get_max_length() const
+__gnu_debug::_Error_formatter::_M_message(__gnu_debug::_Debug_msg_id) const
+__gnu_debug::_Safe_iterator_base::_M_attach(__gnu_debug::_Safe_sequence_base*, bool)
+__gnu_debug::_Safe_iterator_base::_M_can_compare(__gnu_debug::_Safe_iterator_base const&) const
+__gnu_debug::_Safe_iterator_base::_M_detach()
+__gnu_debug::_Safe_iterator_base::_M_singular() const
+__gnu_debug::_Safe_sequence_base::_M_detach_all()
+__gnu_debug::_Safe_sequence_base::_M_get_mutex()
 __gxx_personality_v0
 __gxx_personality_v0@@CXXABI_1.3
 __isoc99_sscanf
@@ -3961,6 +4032,7 @@ __memmove_chk
 __memmove_chk@@GLIBC_2.3.4
 __memset_chk
 __memset_chk@@GLIBC_2.3.4
+__position
 __printf_chk
 __printf_chk@@GLIBC_2.3.4
 __pthread_key_create
@@ -5082,6 +5154,7 @@ ld-linux-x86-64.so.2
 leading_comments
 length is greater than %ld
 lhash.c
+lhs
 lib(%lu)
 libc.so.6
 libm.so.6
@@ -5117,6 +5190,7 @@ map_key must not name a repeated field.
 maskGenAlgorithm
 maskGenFunc
 maximum
+maxrecv=%lld, init=%lld, inorder=%lld, mask=%llx,%llx
 maxsize=
 md2
 md2WithRSAEncryption
@@ -5519,6 +5593,7 @@ revoked_keys
 rewind
 rewind@@GLIBC_2.2.5
 rfc822Mailbox
+rhs
 rid
 ripemd160
 ripemd160WithRSA
@@ -6017,6 +6092,7 @@ text:
 textEncodedORAddress
 textNotice
 the global scope
+this
 thisUpdate
 thread=%lu,
 thread=%lu, file=%s, line=%d, info="
@@ -6040,9 +6116,13 @@ type() == TYPE_LENGTH_DELIMITED
 type() == TYPE_VARINT
 type_id
 type_name
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
 typeinfo for std::exception
 typeinfo for std::overflow_error
 typeinfo for std::runtime_error
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
 u
 ucl
 ui
@@ -6139,6 +6219,8 @@ void std::vector<void*, std::allocator<void*> >::_M_emplace_back_aux<void* const
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
 vv == NULL
 w
 wap-wsg

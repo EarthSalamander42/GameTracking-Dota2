@@ -148,6 +148,7 @@ message CSODOTAParty {
 	optional uint32 matchmaking_flags = 67;
 	optional .EHighPriorityMMState high_priority_state = 68 [default = k_EHighPriorityMM_Unknown];
 	optional bool lane_selections_enabled = 69;
+	optional uint32 custom_game_difficulty_mask = 70;
 }
 
 message CSODOTAPartyInvite {
@@ -192,34 +193,7 @@ message CMsgLeaverState {
 	optional bool mass_disconnect = 6;
 }
 
-message CMsgLobbyMemberGuildContractDetails {
-	optional uint64 contract_id = 1;
-	optional uint32 challenge_instance_id = 2;
-	optional uint32 challenge_parameter = 3;
-	optional uint32 contract_stars = 4;
-	optional uint32 contract_slot = 5;
-}
-
-message CMsgLobbyMemberGuildInfo {
-	optional uint32 guild_id = 1;
-	optional .EEvent event_id = 2 [default = EVENT_ID_NONE];
-	optional uint32 guild_points = 3;
-	repeated .CMsgLobbyMemberGuildContractDetails contracts = 4;
-	optional string guild_tag = 5;
-	optional uint64 guild_logo = 6;
-	optional uint32 guild_primary_color = 7;
-	optional uint32 guild_secondary_color = 8;
-	optional uint32 guild_pattern = 9;
-	optional uint32 guild_flags = 10;
-}
-
 message CDOTALobbyMember {
-	message CDOTALobbyMemberXPBonus {
-		optional uint32 type = 1;
-		optional float xp_bonus = 2;
-		optional uint64 source_key = 3;
-	}
-
 	optional fixed64 id = 1 [(key_field) = true];
 	optional uint32 hero_id = 2;
 	optional .DOTA_GC_TEAM team = 3 [default = DOTA_GC_TEAM_GOOD_GUYS];
@@ -232,7 +206,6 @@ message CDOTALobbyMember {
 	optional .DOTALeaverStatus_t leaver_status = 16 [default = DOTA_LEAVER_NONE];
 	optional uint32 leaver_actions = 28;
 	optional uint32 channel = 17 [default = 6];
-	optional uint32 prize_def_index = 18;
 	repeated uint32 disabled_hero_id = 20;
 	optional .PartnerAccountType partner_account_type = 21 [default = PARTNER_NONE];
 	repeated uint32 enabled_hero_id = 22;
@@ -240,13 +213,10 @@ message CDOTALobbyMember {
 	optional uint32 coach_rating = 42;
 	optional uint32 pwrd_cyber_cafe_id = 24;
 	optional string pwrd_cyber_cafe_name = 25;
-	repeated uint32 disabled_random_hero_id = 26 [packed = true];
 	repeated fixed32 disabled_random_hero_bits = 41;
-	repeated .CDOTALobbyMember.CDOTALobbyMemberXPBonus xp_bonuses = 27;
 	optional sint32 rank_change = 29;
 	optional bool cameraman = 30;
 	repeated uint32 custom_game_product_ids = 31;
-	optional uint32 lobby_mvp_vote_account_id = 32;
 	optional .MatchType search_match_type = 33 [default = MATCH_TYPE_CASUAL];
 	optional uint64 favorite_team_packed = 35;
 	optional bool is_plus_subscriber = 36;
@@ -260,8 +230,8 @@ message CDOTALobbyMember {
 	optional .EDOTAMMRBoostType rank_mmr_boost_type = 46 [default = k_EDOTAMMRBoostType_None];
 	optional sint32 queue_point_adjustment = 47;
 	optional int32 rank_tier = 48;
-	repeated .CMsgLobbyMemberGuildInfo guild_info = 49;
 	optional uint32 title = 50;
+	optional uint32 guild_id = 51;
 }
 
 message CLobbyTeamDetails {
@@ -280,7 +250,7 @@ message CLobbyTeamDetails {
 	optional string team_logo_url = 20;
 }
 
-message CLobbyTeamGuildDetails {
+message CLobbyGuildDetails {
 	optional uint32 guild_id = 1;
 	optional uint32 guild_primary_color = 2;
 	optional uint32 guild_secondary_color = 3;
@@ -289,6 +259,8 @@ message CLobbyTeamGuildDetails {
 	optional uint32 guild_points = 6;
 	optional uint32 guild_event = 7;
 	optional uint32 guild_flags = 8;
+	optional .DOTA_GC_TEAM team_for_guild = 9 [default = DOTA_GC_TEAM_GOOD_GUYS];
+	optional string guild_tag = 10;
 }
 
 message CLobbyTimedRewardDetails {
@@ -430,11 +402,9 @@ message CSODOTALobby {
 	optional .DOTASelectionPriorityChoice series_current_non_priority_team_choice = 101 [default = k_DOTASelectionPriorityChoice_Invalid];
 	optional bool series_current_selection_priority_used_coin_toss = 102;
 	optional .EEvent current_primary_event = 103 [default = EVENT_ID_NONE];
-	optional bool lowpri_deprecated = 104;
 	repeated uint32 emergency_disabled_hero_ids = 105;
 	optional fixed64 custom_game_private_key = 106;
 	optional bool custom_game_penalties = 107;
-	repeated uint32 mutations = 108;
 	optional string lan_host_ping_location = 109;
 	optional uint32 league_node_id = 110;
 	optional uint32 match_duration = 111;
@@ -443,7 +413,7 @@ message CSODOTALobby {
 	optional bool record_detailed_stats = 114;
 	optional bool experimental_gameplay_enabled = 116;
 	repeated .CLobbyGuildChallenge guild_challenges = 117;
-	repeated .CLobbyTeamGuildDetails guild_team_details = 118;
+	repeated .CLobbyGuildDetails guild_details = 118;
 }
 
 message CMsgLobbyPlaytestDetails {

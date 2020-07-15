@@ -14,7 +14,7 @@ DOTAAntiAddictionBadge
 DOTAAntiAddictionBadge Label
 {
 	text-shadow: 1px 1px 2px #000000; 
-	color: #3f4a4e;
+	color: colorHomeStatLineText;
 	font-size: 14px;
 	font-weight: thin;
 	text-transform: uppercase;
@@ -22,30 +22,12 @@ DOTAAntiAddictionBadge Label
 
 DOTAAntiAddictionBadge:hover Label
 {
-	color: #525d61;
+	color: colorHomeStatLineTextBright;
 }
 
 DOTAAntiAddictionBadge.NotVisible
 {
 	visibility: collapse;
-}
-
-.AA_New
-{
-    visibility: collapse;
-}
-.SteamDurationControl .AA_New
-{
-    visibility: visible;
-}
-
-.AA_Old
-{
-    visibility: visible;
-}
-.SteamDurationControl .AA_Old
-{
-    visibility: collapse;
 }
 
 .StateImage
@@ -74,19 +56,19 @@ DOTAAntiAddictionBadge.NotVisible
 	background-image: url("s2r://panorama/images/topbar/anti_addiction_red_png.vtex");
 }
 
-.AA_New .StateImage
+.StateImage
 {
     visibility: collapse;
 }
-.GreenState .AA_New .StateImage__Green
+.GreenState .StateImage__Green
 {
     visibility: visible;
 }
-.YellowState .AA_New .StateImage__Yellow
+.YellowState .StateImage__Yellow
 {
     visibility: visible;
 }
-.RedState .AA_New .StateImage__Red
+.RedState .StateImage__Red
 {
     visibility: visible;
 }
@@ -94,25 +76,5 @@ DOTAAntiAddictionBadge.NotVisible
 .AA_State
 {
 	flow-children: right;
-	visibility: collapse;
-}
-
-.GreenState .AA_State__Green
-{
-	visibility: visible;
-}
-
-.YellowState .AA_State__Yellow
-{
-	visibility: visible;
-}
-
-.RedState .AA_State__Red
-{
-	visibility: visible;
-}
-
-.AA_State_Remaining
-{
     visibility: visible;
 }

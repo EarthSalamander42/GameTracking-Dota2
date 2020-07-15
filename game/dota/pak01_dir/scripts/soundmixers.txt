@@ -14,6 +14,17 @@
 			ducker_threshold = 40
 		},
 		{
+			name = "Debut_VO"
+			path_substring = "amp_wei_enter"
+			class_substring = ""
+			chan_type = ""
+			priority = 60
+			is_ducked = 0
+			causes_ducking = 0
+			duck_to_percent = 100
+			ducker_threshold = 40
+		},
+		{
 			name = "ambient"
 			path_substring = "ambient"
 			class_substring = ""
@@ -445,6 +456,14 @@
 				solo = 0
 				mute = 0
 			},
+			{
+				mixgroup = "Debut_VO"
+				vol = 0.5
+				lvl = 1
+				dsp = 1
+				solo = 0
+				mute = 0
+			},
 		]
 		Paused_Mix = 
 		[
@@ -627,6 +646,193 @@
 			{
 				mixgroup = "All"
 				vol = 0.5
+				lvl = 1
+				dsp = 1
+				solo = 0
+				mute = 0
+			},
+		]
+		Aghanim_Mix = 
+		[
+			{
+				mixgroup = "voip"
+				vol = 0.8
+				lvl = 1
+				dsp = 1
+				solo = 0.1
+				mute = 0
+			},
+			{
+				mixgroup = "ambient"
+				vol = 0.25
+				lvl = 1
+				dsp = 1
+				solo = 0
+				mute = 0
+			},
+			{
+				mixgroup = "misc"
+				vol = 0.6
+				lvl = 1
+				dsp = 1
+				solo = 0
+				mute = 0
+			},
+			{
+				mixgroup = "Ping"
+				vol = 0.5
+				lvl = 1
+				dsp = 1
+				solo = 0
+				mute = 0
+			},
+			{
+				mixgroup = "QuickDuck"
+				vol = 0.5
+				lvl = 1
+				dsp = 1
+				solo = 0
+				mute = 0
+			},
+			{
+				mixgroup = "VOFX"
+				vol = 0.4
+				lvl = 1
+				dsp = 1
+				solo = 0
+				mute = 0
+			},
+			{
+				mixgroup = "Silencer"
+				vol = 0.4
+				lvl = 1
+				dsp = 1
+				solo = 0
+				mute = 0
+			},
+			{
+				mixgroup = "ESA"
+				vol = 0.4
+				lvl = 1
+				dsp = 1
+				solo = 0
+				mute = 0
+			},
+			{
+				mixgroup = "Ultimates"
+				vol = 0.33
+				lvl = 1
+				dsp = 1
+				solo = 0
+				mute = 0
+			},
+			{
+				mixgroup = "Announcer"
+				vol = 0.66
+				lvl = 1
+				dsp = 1
+				solo = 0.1
+				mute = 0
+			},
+			{
+				mixgroup = "VO"
+				vol = 0.33
+				lvl = 1
+				dsp = 1
+				solo = 0
+				mute = 0
+			},
+			{
+				mixgroup = "PlayerDamage"
+				vol = 0.5
+				lvl = 1
+				dsp = 1
+				solo = 0
+				mute = 0
+			},
+			{
+				mixgroup = "Stingers"
+				vol = 0.33
+				lvl = 1
+				dsp = 1
+				solo = 0
+				mute = 0
+			},
+			{
+				mixgroup = "NoDuck"
+				vol = 0.4
+				lvl = 1
+				dsp = 1
+				solo = 0
+				mute = 0
+			},
+			{
+				mixgroup = "Weapons"
+				vol = 0.33
+				lvl = 1
+				dsp = 1
+				solo = 0
+				mute = 0
+			},
+			{
+				mixgroup = "BaseAttacks"
+				vol = 0.33
+				lvl = 1
+				dsp = 1
+				solo = 0
+				mute = 0
+			},
+			{
+				mixgroup = "HeroPick"
+				vol = 0.33
+				lvl = 1
+				dsp = 1
+				solo = 0
+				mute = 0
+			},
+			{
+				mixgroup = "Music"
+				vol = 0.33
+				lvl = 1
+				dsp = 1
+				solo = 0
+				mute = 0
+			},
+			{
+				mixgroup = "Creeps"
+				vol = 0.25
+				lvl = 1
+				dsp = 1
+				solo = 0
+				mute = 0
+			},
+			{
+				mixgroup = "Deaths"
+				vol = 0.404
+				lvl = 1
+				dsp = 1
+				solo = 0
+				mute = 0
+			},
+			{
+				mixgroup = "Physics"
+				vol = 0.25
+				lvl = 1
+				dsp = 1
+				solo = 0
+				mute = 0
+			},
+			{
+				mixgroup = "UI"
+				vol = 0.33
+				lvl = 1
+				dsp = 1
+				solo = 0
+				mute = 0
+			},
+			{
+				mixgroup = "All"
+				vol = 0.3
 				lvl = 1
 				dsp = 1
 				solo = 0
@@ -1123,6 +1329,30 @@
 				},
 			]
 		}
+		Debut_VO = 
+		{
+			Mixers = 
+			[
+				{
+					mixgroup = "Stingers"
+					vol = 0.4
+					lvl = 0.0
+					dsp = 0.0
+					solo = 0.0
+					mute = 0.0
+				},
+			]
+			Triggers = 
+			[
+				{
+					trigger = "Debut_VO"
+					threshold = 0.35
+					mixamount = 1.0
+					attack = 3.0
+					release = 3.0
+				},
+			]
+		}
 		PlayerDamage = 
 		{
 			Mixers = 
@@ -1244,7 +1474,7 @@
 			[
 				{
 					trigger = "Stingers"
-					threshold = 0.20
+					threshold = 0.2
 					mixamount = 1.0
 					attack = 0.1
 					release = 2.0

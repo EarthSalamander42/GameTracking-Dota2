@@ -168,3 +168,7 @@
 .TI10Features .OverlayPips .PaginationButton {
 	margin: 0px;
 }
+
+DOTAFrontpageInternational2020WeekendBundle.AlreadyPurchased2 {
+	visibility: collapse;
+}
