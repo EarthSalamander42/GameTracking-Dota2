@@ -58,6 +58,8 @@ function CMapEncounter:constructor( hRoom, szEncounterName )
 	self.SpawnedExplosiveBarrels = {}
 
 	self.bCalculateRewardsFromUnitCount = false
+	self.hTreasureRandomStream = nil
+	self.hTreasureList = {}
 
 	local nTotalGoldReward = self:GetTotalGoldRewardPerPlayer()
 	self.nGoldReward = nTotalGoldReward
@@ -75,23 +77,23 @@ function CMapEncounter:constructor( hRoom, szEncounterName )
 
 	self.nChestsToSpawn = 0
 	if self.hRoom:GetType() == ROOM_TYPE_TRAPS then
-		self.nChestsToSpawn = RandomInt( DEFAULT_MIN_CHESTS, DEFAULT_MAX_CHESTS )
+		self.nChestsToSpawn = self:RoomRandomInt( DEFAULT_MIN_CHESTS, DEFAULT_MAX_CHESTS )
 	--elseif self.hRoom:GetType() == ROOM_TYPE_STARTING then
 		--self.nChestsToSpawn = 8 -- dev test
 	end
 
 	self.nCratesToSpawn = 0
 	if self.hRoom:GetType() == ROOM_TYPE_ENEMY then
-		self.nCratesToSpawn = RandomInt( DEFAULT_MIN_CRATES_ENEMY_ENC, DEFAULT_MAX_CRATES_ENEMY_ENC )
+		self.nCratesToSpawn = self:RoomRandomInt( DEFAULT_MIN_CRATES_ENEMY_ENC, DEFAULT_MAX_CRATES_ENEMY_ENC )
 	elseif self.hRoom:GetType() == ROOM_TYPE_BOSS then
-		self.nCratesToSpawn = RandomInt( DEFAULT_MIN_CRATES_BOSS_ENC, DEFAULT_MAX_CRATES_BOSS_ENC )
+		self.nCratesToSpawn = self:RoomRandomInt( DEFAULT_MIN_CRATES_BOSS_ENC, DEFAULT_MAX_CRATES_BOSS_ENC )
 	end
 
 	self.nExplosiveBarrelsToSpawn = 0
-	local bSpawnExplosiveBarrels = RollPercentChance( ENCOUNTER_SPAWN_BARRELS_CHANCE )
+	local bSpawnExplosiveBarrels = self:RoomRollPercentage( ENCOUNTER_SPAWN_BARRELS_CHANCE )
 	if bSpawnExplosiveBarrels then
 		if self.hRoom:GetType() == ROOM_TYPE_ENEMY then
-			self.nExplosiveBarrelsToSpawn = RandomInt( DEFAULT_MIN_BARRELS_ENEMY_ENC, DEFAULT_MAX_BARRELS_ENEMY_ENC )
+			self.nExplosiveBarrelsToSpawn = self:RoomRandomInt( DEFAULT_MIN_BARRELS_ENEMY_ENC, DEFAULT_MAX_BARRELS_ENEMY_ENC )
 		end
 	end
 
@@ -102,6 +104,40 @@ function CMapEncounter:constructor( hRoom, szEncounterName )
 	self.ClientData[ "encounter_depth" ] = self.hRoom:GetDepth()
 	self.ClientData[ "room_type" ] = GetStringForRoomType( self.hRoom:GetType() )
 	self.ClientData[ "objectives" ] = {}
+end
+
+--------------------------------------------------------------------------------
+
+function CMapEncounter:RoomRandomInt( nMinInt, nMaxInt )
+	return self:GetRoom():RoomRandomInt( nMinInt, nMaxInt )
+end
+
+--------------------------------------------------------------------------------
+
+function CMapEncounter:RoomRandomFloat( flMin, flMin )
+	return self:GetRoom():RoomRandomFloat( flMin, flMin )
+end
+
+---------------------------------------------------------------------------
+
+function CMapEncounter:RoomRollPercentage( nChance )
+	local bOutcome = self:RoomRandomInt( 1, 100 ) <= nChance
+	return bOutcome
+end
+
+---------------------------------------------------------------------------
+
+function CMapEncounter:GetTreasureRandomStream( )
+	if self.hTreasureRandomStream == nil then
+		self.hTreasureRandomStream = CreateUniformRandomStream( GameRules.Aghanim:GetRandomSeed() + MakeStringToken( self:GetRoom():GetName() ) )
+	end
+	return self.hTreasureRandomStream
+end
+
+---------------------------------------------------------------------------
+
+function CMapEncounter:RegisterTreasureItem( hTreasureItem )
+	table.insert( self.hTreasureList, hTreasureItem )
 end
 
 --------------------------------------------------------------------------------
@@ -208,7 +244,7 @@ function CMapEncounter:SelectAscensionAbilities( )
 				break
 			end
 
-			local nPick = math.random( 1, #vecEliteAbilityOptions )
+			local nPick = self:RoomRandomInt( 1, #vecEliteAbilityOptions )
 			print( "Encounter " .. self.szEncounterName .. " added ELITE ascension ability " .. vecEliteAbilityOptions[nPick] )
 			table.insert( self.AscensionAbilities, vecEliteAbilityOptions[nPick] )
 			self.ClientData[ "ascension_abilities" ][ tostring(i) ] = vecEliteAbilityOptions[nPick]
@@ -225,7 +261,7 @@ function CMapEncounter:SelectAscensionAbilities( )
 			break
 		end
 
-		local nPick = math.random( 1, #vecAbilityOptions )
+		local nPick = self:RoomRandomInt( 1, #vecAbilityOptions )
 		print( "Encounter " .. self.szEncounterName .. " added ascension ability " .. vecAbilityOptions[nPick] )
 		table.insert( self.AscensionAbilities, vecAbilityOptions[nPick] )
 		self.ClientData[ "ascension_abilities" ][ tostring(i) ] = vecAbilityOptions[nPick]
@@ -565,14 +601,17 @@ function CMapEncounter:Start()
 	end
 
 	if self.hRoom:GetType() == ROOM_TYPE_ENEMY then
-		self.nNumItemsToDrop = GameRules.Aghanim:RollRandomNeutralItemDrops()
-		self.nNumBPToDrop = RandomInt( 0, 2 )
+		self.nNumItemsToDrop = GameRules.Aghanim:RollRandomNeutralItemDrops( self )
+		self.nNumBPToDrop = self:RoomRandomInt( 0, 2 )
 	end
 
 	if self.hRoom:GetType() == ROOM_TYPE_ENEMY or self.hRoom:GetType() == ROOM_TYPE_TRAPS then
 		self.nNumFragmentsToDrop = GameRules.Aghanim:RollRandomFragmentDrops()
 	end
 
+	self.ClientData[ "start_time" ] = self:GetStartTime() - GameRules.Aghanim:GetExpeditionStartTime()
+	CustomNetTables:SetTableValue( "encounter_state", "depth_started", { tostring( self.hRoom:GetDepth() ) } )
+	self:UpdateClient()
 end
 
 --------------------------------------------------------------------------------
@@ -610,7 +649,7 @@ function CMapEncounter:SpawnChests()
 				local vSpawnLoc = hSpawner:GetOrigin() + RandomVector( RandomFloat( 0, chestData.nMaxSpawnDistance ) )
 
 				local fThreshold = 1 - fSpawnChance
-				local bSpawnChest = RandomFloat( 0, 1 ) >= fThreshold
+				local bSpawnChest = self:RoomRandomFloat( 0, 1 ) >= fThreshold
 
 				-- Force chest spawns if we'd run out of spawners otherwise
 				local nSpawnersRemaining = #hSpawners - i
@@ -637,6 +676,8 @@ function CMapEncounter:SpawnChests()
 						hUnit.fTrapChance = chestData.fTrapChance
 						hUnit.nTrapLevel = chestData.nTrapLevel
 						hUnit.szTraps = chestData.szTraps
+						hUnit.Encounter = self
+						self:RegisterTreasureItem( hUnit )
 					else
 						printf( "ERROR -- CMapEncounter:SpawnChests: Failed to spawn chest named \"%s\"", chestData.szNPCName )
 					end
@@ -684,7 +725,7 @@ function CMapEncounter:SpawnBreakableContainers()
 					local vSpawnLoc = hSpawner:GetOrigin() + RandomVector( RandomFloat( 0, breakableData.nMaxSpawnDistance ) )
 
 					local fThreshold = 1 - fSpawnChance
-					local bSpawnBreakable = RandomFloat( 0, 1 ) >= fThreshold
+					local bSpawnBreakable = self:RoomRandomFloat( 0, 1 ) >= fThreshold
 
 					-- Force crate spawns if we'd run out of spawners otherwise
 					local nSpawnersRemaining = #hSpawners - i
@@ -768,7 +809,7 @@ function CMapEncounter:SpawnExplosiveBarrels()
 					local vSpawnLoc = hSpawner:GetOrigin() + RandomVector( RandomFloat( 0, barrelData.nMaxSpawnDistance ) )
 
 					local fThreshold = 1 - fSpawnChance
-					local bSpawnBarrel = RandomFloat( 0, 1 ) >= fThreshold
+					local bSpawnBarrel = self:RoomRandomFloat( 0, 1 ) >= fThreshold
 
 					-- Force crate spawns if we'd run out of spawners otherwise
 					local nSpawnersRemaining = #hSpawners - i
@@ -979,6 +1020,12 @@ end
 function CMapEncounter:OnComplete()
 	GameRules.Aghanim:GetAnnouncer():OnEncounterComplete( self )
 	
+	-- Delete any unclaimed treasures
+	for i=1,#self.hTreasureList do
+		UTIL_Remove( self.hTreasureList[i] )
+	end
+	self.hTreasureList = {}
+
 	self:RegisterSummonForAghanim()
 	
 	--CustomNetTables:SetTableValue( "room_data", "status", { complete=true } )
@@ -1847,15 +1894,15 @@ function CMapEncounter:DropNeutralItemFromUnit( hVictim, hAttacker, bAnnounce )
 
 	if hHero == nil or hVictim == nil then
 		print( "ERROR, trying to drop neutral item without a valid hero and victim" )
-		return
+		return nil
 	end
 
-	local szItemDrop = GameRules.Aghanim:PrepareNeutralItemDrop( self.hRoom:GetDepth(), false )
+	local szItemDrop = GameRules.Aghanim:PrepareNeutralItemDrop( self.hRoom, false )
 	if szItemDrop == nil then
-		return
+		return nil
 	end
 
-	DropNeutralItemAtPositionForHero( szItemDrop, hVictim:GetAbsOrigin(), hHero, -1, true )
+	local hItem = DropNeutralItemAtPositionForHero( szItemDrop, hVictim:GetAbsOrigin(), hHero, -1, true )
 	-- local newItem = CreateItem( szItemDrop, nil, nil )
 	-- newItem:SetPurchaseTime( 0 )
 	
@@ -1884,6 +1931,8 @@ function CMapEncounter:DropNeutralItemFromUnit( hVictim, hAttacker, bAnnounce )
 	-- 		FireGameEvent( "dota_combat_event_message", gameEvent )
 	-- 	end
 	-- end
+
+	return hItem
 end
 
 --------------------------------------------------------------------------------
@@ -2118,12 +2167,12 @@ function CMapEncounter:ResetHeroState()
 					CenterCameraOnUnit( nPlayerID, hPlayerHero )
 				end
 
-				--				   PositiveBuffs, NegativeBuffs, FrameOnly, RemoveStuns, RemoveExceptions
-				hPlayerHero:Purge( false,		  true,			 false,		true,		 false )
-
 				-- make the players invulnerable for a few seconds after winning - just generally protecting them from stuff that might be lingering in the room
 				hPlayerHero:AddNewModifier( hPlayerHero, nil, "modifier_invulnerable", { duration = 5 } )
 
+				--				   PositiveBuffs, NegativeBuffs, FrameOnly, RemoveStuns, RemoveExceptions
+				hPlayerHero:Purge( false,		  true,			 false,		true,		 false )
+		
 				hPlayerHero:SetHealth( hPlayerHero:GetMaxHealth() )
 				hPlayerHero:SetMana( hPlayerHero:GetMaxMana() )
 			end
@@ -2204,7 +2253,7 @@ function CMapEncounter:AddRewardItemsToCrate( hRewardCrate, bDebug )
 		table.insert( hRewardCrate.RoomReward, "item_tome_of_greater_knowledge" )
 
 		for nItem=1,nTier do
-			local szItemName = GameRules.Aghanim:PrepareNeutralItemDrop( self.hRoom:GetDepth(), bHardRoom )
+			local szItemName = GameRules.Aghanim:PrepareNeutralItemDrop( self.hRoom, bHardRoom )
 			if szItemName ~= nil then 
 				table.insert( hRewardCrate.RoomReward, szItemName )
 			end
@@ -2212,44 +2261,9 @@ function CMapEncounter:AddRewardItemsToCrate( hRewardCrate, bDebug )
 
 		local vecItems = TREASURE_REWARDS[ nTier ]
 		for i = 1, NUM_CONSUMABLES_FROM_ROOM_REWARD do
-			table.insert( hRewardCrate.RoomReward, vecItems[ math.random( 1, #vecItems ) ] )
+			table.insert( hRewardCrate.RoomReward, vecItems[ self:RoomRandomInt( 1, #vecItems ) ] )
 		end
 	end
-
---[[
-	if self.hRoom:GetRoomChoiceReward() == "REWARD_TYPE_CONSUMABLES" then
-		local nNumConsumables = 2
-		if bHardRoom then
-			nNumConsumables = 4
-		end
-		for i = 1, nNumConsumables do
-			local szItemDrop = CONSUMABLES_REWARD_LIST[ math.random( 1, #CONSUMABLES_REWARD_LIST ) ]
-			table.insert( hRewardCrate.RoomReward, szItemDrop )
-		end
-		--printf( "hRewardCrate.RoomReward contains:" )
-		--PrintTable( hRewardCrate.RoomReward, "  " )
-	end
-
-	if self.hRoom:GetRoomChoiceReward() == "REWARD_TYPE_ITEM" then
-		for i=1,AGHANIM_PLAYERS do
-			local vecPotentialItems = GetPricedNeutralItems( self.hRoom:GetDepth(), ( self.hRoom:GetEliteRank() > 0 ) )
-			local vecFilteredItems = GameRules.Aghanim:FilterPreviouslyDroppedItems( vecPotentialItems )
-
-			local vecTable = vecFilteredItems
-			if #vecTable == 0 then
-				print( "WARNING! All potential items have been dropped, falling back to original depth list. ")
-				vecTable = vecPotentialItems
-				if #vecPotentialItems == 0 then
-					print( "WARNING! trying to drop a neutral item in a place where there is no priced list, depth " .. self.hRoom:GetDepth() )
-					break
-				end
-			end
-
-			local szItemDrop = vecFilteredItems[ math.random( 1, #vecFilteredItems ) ]
-			table.insert( hRewardCrate.RoomReward, szItemDrop )
-		end
-	end
-	]]--
 
 end
 
@@ -2288,17 +2302,17 @@ function CMapEncounter:CreateRewardCrate()
 	hRewardCrate.RoomReward = {}
 	hRewardCrate.nDepth = self.hRoom:GetDepth()
 	hRewardCrate.nEliteRank = self.hRoom:GetEliteRank()
-	self:AddRewardItemsToCrate( hRewardCrate, false )
 
 	if self.hRoom:GetType() == ROOM_TYPE_ENEMY then
 		local nNumItemsToDrop = self.nNumItemsToDrop
-		if ( nNumItemsToDrop == 0 ) and GameRules.Aghanim:GetTestEncounterDebugRoom() ~= nil then
+		if ( nNumItemsToDrop == 0 ) and hDebugRoom ~= nil then
+			-- Must do this here because when debugging, we don't actually start encounters we skip
 			nNumItemsToDrop = GameRules.Aghanim:RollRandomNeutralItemDrops()
 		end
 
 		if nNumItemsToDrop > 0 then
 			for i=1,nNumItemsToDrop do
-				local szItemName = GameRules.Aghanim:PrepareNeutralItemDrop( self.hRoom:GetDepth(), false )
+				local szItemName = GameRules.Aghanim:PrepareNeutralItemDrop( self.hRoom, false )
 				if szItemName ~= nil then
 					print( "adding " .. szItemName .. " to reward crate" )  
 					table.insert( hRewardCrate.RoomReward, szItemName )
@@ -2313,6 +2327,11 @@ function CMapEncounter:CreateRewardCrate()
 			end
 		end
 	end
+
+	-- NOTE: This must happen *after* RollRandomNeutralItemDrops above to ensure reproduceability of neutral drops
+	-- Basically, all rolls related to neutral drops must occur between encounter Start + now [with no other rolls for anything else]
+	-- Then we can do more rolls for neutral items to be placed in the treasure
+	self:AddRewardItemsToCrate( hRewardCrate, false )
 
 	if self.hRoom:GetType() == ROOM_TYPE_ENEMY or self.hRoom:GetType() == ROOM_TYPE_TRAPS then
 		-- Spawn any un-dropped Arcance Fragments
@@ -2372,7 +2391,7 @@ function CMapEncounter:GenerateRewards()
 		return
 	end
 
-	local bHardRoom = ( self.hRoom:GetEliteRank() > 0 )
+	local bHardRoom = ( self.hRoom:GetEliteRank() > 0 ) or ( self.hRoom:GetType() == ROOM_TYPE_TRAPS )
 
 	local nBPReward = ENCOUNTER_DEPTH_BATTLE_POINTS[ self.hRoom:GetDepth() ]
 	nBPReward = nBPReward * BATTLE_POINT_DIFFICULTY_MODIFIERS[ GameRules.Aghanim:GetAscensionLevel() + 1 ]
@@ -2663,7 +2682,7 @@ function CMapEncounter:SetupBristlebackShop( bRepopulateNeutralItems )
 		end
 
 		for i=1,8 do 
-			local index = math.random( 1, #vecFilteredItems )
+			local index = self:RoomRandomInt( 1, #vecFilteredItems )
 			local szItemName = vecFilteredItems[ index ]
 			GameRules:GetGameModeEntity():AddItemToCustomShop( szItemName, "boss_shop", "2" )
 			table.remove( vecFilteredItems, index )

@@ -33639,7 +33639,7 @@
 	"TI10_EventGame_AscensionName_3"								"大魔导师"
 	"TI10_EventGame_ChallengeName"									"挑战模式"
 	"TI10_EventGame_ChallengeName_Title"							"阿哈利姆的试炼"
-	"TI10_EventGame_ChallengeName_Countdown"						"{t:d:EventGameCountdownTime}"
+	"TI10_EventGame_ChallengeName_Countdown"						"{t:d:t:T:EventGameCountdownTime}"
 	"MMGameMode_CoachesNotAllowed"									"本游戏模式不允许教练参与。"
 
 	"TI10_EventGame_BlessingStoreIntro_Title"						"查看福佑商店"
@@ -33695,6 +33695,7 @@
 	"DOTA_TI10_EventGame_Blessing_Fragments_Earned"					"已拥有奥术碎片"
 	"DOTA_TI10_EventGame_Learn_More"								"了解阿哈利姆的天地迷宫更多相关内容"
 	"DOTA_TI10_EventGame_Blessing_Progress"							"{d:event_game_num_claimed_blessings} / 40 已解锁福佑"
+	"DOTA_TI10_EventGame_PatchNotes"								"改动日志1.00"
 
 	"DOTA_TI10_EventGame_Blessings_ConfirmPurchase_Title"			"确认福佑购买"
 	"DOTA_TI10_EventGame_Blessings_ConfirmPurchase_Body"			"确定要消费%s2块奥术碎片购买福佑“%s1”？"
@@ -33809,12 +33810,16 @@
 
 	"DOTA_TI10_EventGame_BP_Earned"									"已获得勇士积分："
 	"DOTA_TI10_EventGame_BP_EarnedValue"							"{d:event_game_points_earned} / {d:event_game_point_cap}"
-	"DOTA_TI10_EventGame_AF_Used"									"已使用碎片奖励："
+	"DOTA_TI10_EventGame_AF_Used"									"已获得的成倍碎片："
 	"DOTA_TI10_EventGame_AF_UsedValue"								"{d:event_game_premium_points_used} / {d:event_game_premium_point_cap}"
 
 	"DOTA_TI10_EventGame_GamesPlayed"								"游戏场数"
 	"DOTA_TI10_EventGame_CurrentAscension"							"当前提升"
 	"DOTA_TI10_EventGame_DeepestJourney"							"最远的旅程：{d:max_ascension_level_depth_completed}个房间"
+
+	"DOTA_TI10_EventGame_BestTimedRun"								"最佳：{s:best_run_time}"
+	"DOTA_TI10_EventGame_BestTimedRunRel"							"（{s:best_rel_run_time}）"
+	"DOTA_TI10_EventGame_NewPersonalBest"							"个人最佳"
 
 	"DOTA_TI10_EventGame_BPForWin"									"+{d:points_for_win} 每场胜利"
 	"DOTA_TI10_EventGame_BPDailyBonus"								"+{d:daily_bonus_bp} 每日奖励生效时每场胜利额外积分（每天1次）"
@@ -33831,8 +33836,8 @@
 	"DOTA_TI10_EventGame_ChallengeMode"								"阿哈利姆的试炼"
 	"DOTA_TI10_EventGame_ChallengeModeCountdownTimerShort"			"还有{t:d:t:T:countdown_time}"
 	"DOTA_TI10_EventGame_ChallengeModeCountdownTimerLong"			"{t:d:t:T:countdown_time}后竞赛开始"
-	"DOTA_TI10_EventGame_WindowCountdownTimer"						"{t:d:t:T:countdown_time}后竞赛开始"
-	"DOTA_TI10_EventGame_ChallengeModeActiveTimerShort"				"{t:d:t:T:countdown_time}"
+	"DOTA_TI10_EventGame_WindowCountdownTimer"						"{t:d:t:T:countdown_time}后<br>竞赛开始"
+	"DOTA_TI10_EventGame_ChallengeModeActiveTimerShort"				"剩余{t:d:t:T:countdown_time}"
 	"DOTA_TI10_EventGame_ChallengeModeActiveTimerLong"				"{t:d:t:T:countdown_time}后竞赛开始"
 
 	"DOTA_TI10_EventGame_Lore"										"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
@@ -34441,10 +34446,10 @@
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_glimpse_cast_aoe_Description"					"恶念瞥视的施放范围提升%value%"
 
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_glimpse_hit_on_arrival"						"惊鸿一瞥"
-	"DOTA_Tooltip_ability_aghsfort_special_disruptor_glimpse_hit_on_arrival_Description"			"目标到达最后的目的地时，干扰者对他们附近%hit_radius%内所有敌人造成基础攻击伤害。"
+	"DOTA_Tooltip_ability_aghsfort_special_disruptor_glimpse_hit_on_arrival_Description"			"目标到达最后的目的地时，干扰者对他们附近%hit_radius%内所有敌人造成%int_pct%%%干扰者智力的伤害。"
 	   	
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_glimpse_travel_damage"							"惊吓之旅"
-	"DOTA_Tooltip_ability_aghsfort_special_disruptor_glimpse_travel_damage_Description"				"被瞥视的敌人在瞥视的持续时间内每经过75距离都会受到干扰者%value%%%基础攻击伤害。"
+	"DOTA_Tooltip_ability_aghsfort_special_disruptor_glimpse_travel_damage_Description"				"被瞥视的敌人在瞥视的持续时间内每经过75距离都会受到%value%%%干扰者智力的伤害。"
 	   	
 	   	
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_kinetic_field_instant_setup" 					"高墙立现"
@@ -34454,7 +34459,7 @@
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_kinetic_field_damage_Description" 				"动能力场每0.5秒对困在其中的敌人造成干扰者%value%%%基础攻击伤害。"
 
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_kinetic_field_allied_heal" 					"极乐区域"
-	"DOTA_Tooltip_ability_aghsfort_special_disruptor_kinetic_field_allied_heal_Description" 		"动能力场内友军每秒恢复%value%%%最大生命值。"
+	"DOTA_Tooltip_ability_aghsfort_special_disruptor_kinetic_field_allied_heal_Description" 		"动能力场内友军每0.5秒受到%value%%%干扰者智力的治疗。"
 
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_kinetic_field_allied_attack_buff"				"主场优势"
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_kinetic_field_allied_attack_buff_Description" 	"动能力场提升友军%value%攻击速度。"
@@ -34466,7 +34471,7 @@
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_static_storm_kinetic_field_on_cast_Description"	"静态风暴在施放时自动创造一个动能力场。"
 
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_static_storm_crits_on_attacks"					"梦境力场"
-	"DOTA_Tooltip_ability_aghsfort_special_disruptor_static_storm_crits_on_attacks_Description" 	"受到作用的敌人承受所有攻击都是%value%的致命一击伤害。"
+	"DOTA_Tooltip_ability_aghsfort_special_disruptor_static_storm_crits_on_attacks_Description" 	"所有攻击对作用下的敌人都有%crit_chance%%%几率产生%crit_damage%%%伤害的致命一击。"
 
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_static_storm_damage_reduction"					"太平洋风暴"
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_static_storm_damage_reduction_Description" 	"受到静态风暴作用的敌人造成的伤害降低%damage_reduction_pct%%%。"	   	
@@ -34493,7 +34498,7 @@
 	"aghsfort_disruptor_kinetic_field_flat_duration"						"+{s:value}秒 {s:ability_name}持续时间"
 	"aghsfort_disruptor_kinetic_field_formation_time"						"{s:value}% {s:ability_name}成形时间"
 
-	"aghsfort_disruptor_static_storm_flat_damage_max"						"+{s:value}秒 {s:ability_name}最大伤害"
+	"aghsfort_disruptor_static_storm_flat_damage_max"						"+{s:value} {s:ability_name}最大伤害"
 	"aghsfort_disruptor_static_storm_flat_duration"							"+{s:value}秒 {s:ability_name}持续时间"
 	"aghsfort_disruptor_static_storm_pct_mana_cost"							"-{s:value}% {s:ability_name}魔法消耗"
 	"aghsfort_disruptor_static_storm_pct_cooldown"							"-{s:value}% {s:ability_name}冷却时间"
@@ -34608,7 +34613,7 @@
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_multicookie"						"十三饼干"
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_multicookie_Description"		"电炎绝手向主目标周围%value%区域内所有目标喂食龙炎饼干。只有主目标向前跳跃，次级目标原地跳跃。"
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_enemytarget"						"龙炎葡萄干"
-	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_enemytarget_Description"			"龙炎饼干现在可以喂给敌人，使其飞到空中，并造成伤害。"
+	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_enemytarget_Description"			"龙炎饼干现在可以喂给敌人，让他们飞到半空中，并受到伤害。吃下饼干的敌人将受到两次伤害。"
 
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_allied_buff"						"新鲜烤制"
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_allied_buff_Description"			"龙炎饼干给予友军%bonus_attack_range%攻击距离加成（仅远程）和%bonus_attack_damage%点攻击力，持续%buff_duration%秒。"
@@ -34882,7 +34887,7 @@
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_apply_fury_swipes_Description"	"震撼大地对击中的所有敌人施加怒意狂击。"
 
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_knockback"				"炮弹"
-	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_knockback_Description"	"震撼大地施加%value%距离击退效果。"
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_knockback_Description"	"震撼大地施加%value%距离的击退，和%value3%秒眩晕。"
 
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_miss_chance"				"利爪变钝"
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_miss_chance_Description"	"震撼大地施加%value%%%攻击落空几率。"
@@ -34913,6 +34918,10 @@
 
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_enrage_magic_immunity"				"保护幼崽"
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_enrage_magic_immunity_Description"	"激怒为%value%范围内友军提供技能免疫。"
+
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_enrage_allies"						"保护幼崽"
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_enrage_allies_Description"			"激怒为%value%范围内友军提供所有激怒的加成效果。"
+
 
 	"DOTA_Tooltip_modifier_aghsfort_ursa_enrage_magic_immunity"					"保护幼崽"
 	"DOTA_Tooltip_modifier_aghsfort_ursa_enrage_magic_immunity_Description"		"这个单位处于魔法免疫状态。"
@@ -35164,6 +35173,8 @@
 	"DOTA_Tooltip_ability_aghsfort_special_mars_gods_rebuke_full_circle_Description"			"神之谴戒对玛尔斯周围一个整圆的敌人造成伤害。"
 	"DOTA_Tooltip_ability_aghsfort_special_mars_gods_rebuke_stun_Description"				"神之谴戒对敌人造成眩晕，持续%value%秒。"
 	"DOTA_Tooltip_ability_aghsfort_special_mars_gods_rebuke_strength_buff_Description"		"神之谴戒每击中一名敌人，玛尔斯就会获得%strength_gain%点力量，持续%buff_duration%秒。"
+	"DOTA_Tooltip_modifier_aghsfort_special_mars_gods_rebuke_strength_buff"  				"强力训诫"
+	"DOTA_Tooltip_modifier_aghsfort_special_mars_gods_rebuke_strength_buff_Description"		"每有一名敌人受到神之谴戒作用，玛尔斯都会获得力量。"
 
 	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_counter_rebuke"		"护身甲盾反击"
 	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_healing"		"护身甲盾治疗"
@@ -35402,7 +35413,7 @@
 
 
 	"DOTA_Tooltip_ability_aghsfort_special_weaver_swarm_allies_Description"								"甲虫附着于友军，根据基础技能的数值进行治疗，并提升其护甲。"
-	"DOTA_Tooltip_ability_aghsfort_special_weaver_swarm_explosion_Description"							"当甲虫阵亡后将会爆炸，对%value%范围内敌人造成伤害，伤害量等于对目标造成的伤害。"
+	"DOTA_Tooltip_ability_aghsfort_special_weaver_swarm_explosion_Description"							"当甲虫阵亡后将会爆炸，对%value%范围内敌人造成伤害，伤害量为%damage_pct%%%对目标造成的伤害。"
 	"DOTA_Tooltip_ability_aghsfort_special_weaver_swarm_damage_transfer_Description"					"所有受到虫群作用的敌人会将%value%%%所受伤害转移至附近其他受到作用的单位"
 
 	"DOTA_Tooltip_ability_aghsfort_special_weaver_geminate_attack_splitshot_Description"				"编织者的额外攻击会额外击中编织者攻击距离+%bonus_range%距离内%attack_count%个目标。"
@@ -35522,13 +35533,13 @@
 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_repel_outgoing_damage_Description"		"天国恩赐作用下的单位造成的伤害提升%value%%%。"
 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_repel_applies_degen_aura_Description"		"天国恩赐作用下的单位还将对附近敌人施加全能骑士当前等级的退化光环效果。"
 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_repel_damage_instance_refraction_Description"		"天国恩赐帮助友方目标格挡%damage_instances%次伤害。"
-	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_repel_knockback_on_cast_Description"		"天国恩赐在施放时击退%knockback_radius%范围内的敌人，并对受到作用的敌人造成等于全能骑士基础攻击的伤害。"
+	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_repel_knockback_on_cast_Description"		"天国恩赐在施放时击退%knockback_radius%范围内的敌人，并对受到作用的敌人造成%knockback_damage_pct%%%全能骑士基础攻击的伤害。"
 
 
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_toggle"							"正义之道"
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_damage"							"谴责"
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_restoration"						"赦免"
- 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_toggle_Description"				"退化光环还会影响友军，提升他们的移动和攻击速度。"
+ 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_toggle_Description"				"退化光环还能作用于友军，提升%value%%%退化光环数值的移动和攻击速度。"
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_damage_Description"				"退化光环每隔%damage_interval%秒对作用范围内敌人造成%attack_damage_pct%%%全能骑士基础攻击伤害。"
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_restoration_Description"			"在退化光环作用范围内阵亡的敌方单位将使全能骑士回复%value%%%最大生命和魔法。"
 
@@ -35539,7 +35550,7 @@
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_guardian_angel_single_target_dummy"				"个人救星"
 
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_guardian_angel_purification_Description"				"每当守护天使作用下的单位被攻击时，有%purification_trigger_chance%%%几率该单位将被全能骑士当前等级的洗礼进行治疗。"
- 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_guardian_angel_immune_flight_Description"				"守护天使在持续时间内提供技能免疫和飞行移动状态。"
+ 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_guardian_angel_immune_flight_Description"				"守护天使在持续时间内提供%value%%%魔法抗性和飞行移动状态。"
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_guardian_angel_single_target_Description"				"全能骑士获得一个独立技能，可以对单体目标施放当前等级的守护天使。魔法消耗减少百分之%mana_cost_modifier%。"
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_guardian_angel_single_target_dummy_Description"				"全能骑士获得一个独立技能，可以对单体目标施放当前等级的守护天使。魔法消耗减少百分之%mana_cost_modifier%。"
 
@@ -35557,6 +35568,7 @@
 
  	"aghsfort_omniknight_purification_flat_heal"						"+{s:value} {s:ability_name}治疗/伤害"
  	"aghsfort_omniknight_purification_flat_radius"						"+{s:value} {s:ability_name}作用范围"
+ 	"aghsfort_omniknight_purification_flat_cast_range"						"+{s:value} {s:ability_name}施法距离"
  	"aghsfort_omniknight_degen_aura_flat_radius"						"+{s:value} {s:ability_name}作用范围"
  	"aghsfort_omniknight_degen_aura_flat_move_speed_bonus"				"-{s:value}% {s:ability_name}移动速度"
  	"aghsfort_omniknight_degen_aura_flat_attack_speed_bonus"			"-{s:value} {s:ability_name}攻击速度"
@@ -35693,7 +35705,7 @@
  	"aghsfort_witch_doctor_paralyzing_cask_manacost"				"-{s:value}% {s:ability_name}魔法消耗"
  	"aghsfort_witch_doctor_voodoo_restoration_flat_heal"			"+{s:value} {s:ability_name}治疗"
  	"aghsfort_witch_doctor_voodoo_restoration_flat_radius"			"+{s:value} {s:ability_name}作用范围"
- 	"aghsfort_witch_doctor_voodoo_restoration_manacost"				"-{s:value}% {s:ability_name}魔法消耗"
+ 	"aghsfort_witch_doctor_voodoo_restoration_manacost"				"{s:value}% {s:ability_name}魔法消耗"
 	"aghsfort_witch_doctor_voodoo_restoration_mul_heal_interval"	"{s:value} {s:ability_name}治疗间隔"
 
 
@@ -35703,8 +35715,13 @@
 	//--------------------------------------------------------------------------------------------------------------
 	// ABILITY UPGRADE END
 	//--------------------------------------------------------------------------------------------------------------
-
-
+	
+	"#DOTA_RP_PLAYING_EVENT_MATCH_2020"	 "天地迷宫中 - {%param0%} 第{%param1%}层"
+	"#DOTA_EventGameName_International2020"	"阿哈利姆的天地迷宫"
+	"#DOTA_EventGameDifficulty_International2020_0" 	"学徒"
+	"#DOTA_EventGameDifficulty_International2020_1" 	"法师"
+	"#DOTA_EventGameDifficulty_International2020_2" 	"巫师"
+	"#DOTA_EventGameDifficulty_International2020_3" 	"大魔导师"
 	//END TI10 EVENT GAME
 
 	}

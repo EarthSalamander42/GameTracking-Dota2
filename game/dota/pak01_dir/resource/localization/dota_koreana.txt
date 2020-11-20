@@ -515,7 +515,7 @@
 		"dota_chatwheel_message_MissingHero"		"%s1|이|가| 사라졌다!"
 		"dota_chatwheel_message_ReturnedHero"		"%s1|이|가| 돌아왔다!"
 		"dota_chatwheel_message_MissingHero:g"		"%s1 is missing!"
-		"dota_chatwheel_message_ReturnedHero:g"		"%s1 has returned!"
+		"dota_chatwheel_message_ReturnedHero:g"		"%s1|이|가| 돌아왔다!"
 		"dota_chatwheel_message_GG"					"GG"
 		"dota_chatwheel_message_GGWP"				"GGWP"
 		"dota_chatwheel_message_All_GG"				"GG"
@@ -16801,7 +16801,7 @@
 		"DOTA_ChallengeDesc_Snapfire_DamageOnShotgunSlowed"    		"<font color='#ffffff'>산탄포격</font>의 영향을 받는 적 영웅에게 피해 <font color='#ffffff'>%s1</font> 주기"
 		"DOTA_ChallengeDesc_Snapfire_DamageWhileShredder"   		"<font color='#ffffff'>갈기갈기포</font>의 효과가 적용된 상태에서 적 영웅에게 피해 <font color='#ffffff'>%s1</font> 주기"
 		"DOTA_ChallengeDesc_Snapfire_DoubleShotgunBlast"    		"<font color='#ffffff'>산탄포격</font>으로 적 영웅을 <font color='#ffffff'>2명 이상</font> 총 <font color='#ffffff'>%s1</font>회 타격"
-		"DOTA_ChallengeDesc_Snapfire_KillWhileShredder" 			"<font color='#ffffff'>갈기갈기 포</font>의 효과가 적용된 상태에서 적 영웅 <font color='#ffffff'>%s1</font>명 처치"
+		"DOTA_ChallengeDesc_Snapfire_KillWhileShredder" 			"<font color='#ffffff'>갈기갈기포</font>의 효과가 적용된 상태에서 적 영웅 <font color='#ffffff'>%s1</font>명 처치"
 		"DOTA_ChallengeDesc_Snapfire_LizardBlobsMaxDamage"    		"<font color='#ffffff'>모티머의 입맞춤</font> 단 한 번으로 적 영웅에게 피해 <font color='#ffffff'>%s1</font> 주기"
 
 
@@ -33528,7 +33528,7 @@
 	"DOTA_GuildPerk_BonusTips"							"매주 수고비 {d:perk_value} 추가"
 	"DOTA_GuildPerk_BonusChallenges"					"매주 길드 도전 과제 {d:perk_value}개 추가"
 	"DOTA_GuildPerk_WagerTokensPerWeek"					"매주 내기 주화 {d:perk_value}개 추가"
-	"DOTA_GuildPerk_EventGameModeUpgrade"				"{d:perk_value} Extra Arcane Fragment Bonus Multiplier Per Week"
+	"DOTA_GuildPerk_EventGameModeUpgrade"				"주당 추가 비전 조각 보너스 배수: {d:perk_value}"
 	"DOTA_GuildPerk_BonusUnderdraftGoldPerChallenge"	"완료한 길드 도전 과제마다 보조 상점 골드 {d:perk_value} 추가"
 	"DOTA_GuildPerk_BonusTipValue"						"수고비마다 전투 점수 {d:perk_value}점 추가"
 	"DOTA_GuildPerk_BonusChallengeGuildPoints"			"완료한 도전 과제에 {d:perk_value}% 보너스 길드 점수"
@@ -33642,7 +33642,7 @@
 	"TI10_EventGame_AscensionName_3"								"Grand Magus"
 	"TI10_EventGame_ChallengeName"									"Challenge Mode"
 	"TI10_EventGame_ChallengeName_Title"							"Aghanim's Trial"
-	"TI10_EventGame_ChallengeName_Countdown"						"{t:d:EventGameCountdownTime}"
+	"TI10_EventGame_ChallengeName_Countdown"						"{t:d:t:T:EventGameCountdownTime}"
 	"MMGameMode_CoachesNotAllowed"									"Coaches are not permitted in this game mode."
 
 	"TI10_EventGame_BlessingStoreIntro_Title"						"Visit The Blessings Store"
@@ -33677,7 +33677,7 @@
 
    	"DOTA_BattlePassPostGame_EventGameProgress_2020"		"Aghanim's Labyrinth"
    	"DOTA_BattlePassPostGame_EventGameTI10_ArcaneFragments"		"Arcane Fragments"
-   	"DOTA_BattlePassPostGame_EventGameTI10_ArcaneFragments_Desc"			"Use to buy permanent upgrades"
+   	"DOTA_BattlePassPostGame_EventGameTI10_ArcaneFragments_Desc"			"사용하여 영구 업그레이드 구매"
    	"DOTA_BattlePassPostGame_EventGameTI10_WeeklyPremiumCap"	"Weekly Fragment <br><span class=\"Bonus\">+3x Bonus</span>"
    	"DOTA_BattlePassPostGame_EventGameTI10_WeeklyPremiumProgress"	"{d:weekly_premium_start_value} / {d:weekly_premium_complete_limit}"
    	"DOTA_BattlePassPostGame_EventGameTI10_WeeklyCap"			"Weekly Battle Points"
@@ -33698,6 +33698,7 @@
 	"DOTA_TI10_EventGame_Blessing_Fragments_Earned"					"Arcane Fragments Owned"
 	"DOTA_TI10_EventGame_Learn_More"								"Learn More about Aghanim's Labyrinth"
 	"DOTA_TI10_EventGame_Blessing_Progress"							"{d:event_game_num_claimed_blessings} / 40 Blessings Unlocked"
+	"DOTA_TI10_EventGame_PatchNotes"								"1.00 패치 노트"
 
 	"DOTA_TI10_EventGame_Blessings_ConfirmPurchase_Title"			"Confirm Blessing Purchase"
 	"DOTA_TI10_EventGame_Blessings_ConfirmPurchase_Body"			"Are you sure you want to spend %s2 Arcane Fragments on the \"%s1\" Blessing?"
@@ -33792,7 +33793,7 @@
 	"DOTA_TI10_EventGame_blessing_restore_mana_Desc"				"Restore 6 mana after killing an enemy."
 	"DOTA_TI10_EventGame_blessing_refresher_shard_Title"			"Bounty of Renewal"
 	"DOTA_TI10_EventGame_blessing_refresher_shard_Desc"				"Refresher Shards restore 50% of your maximum health."
-	"DOTA_TI10_EventGame_blessing_potion_arcanist_Title"			"The Arcanist's Touch"
+	"DOTA_TI10_EventGame_blessing_potion_arcanist_Title"			"비전술사의 손길"
 	"DOTA_TI10_EventGame_blessing_potion_arcanist_Desc"				"Arcanist Potions are 50% more effective."
 
 	"DOTA_TI10_EventGame_LeaderboardTabLabel"						"{t:t:s:start_time}"	
@@ -33819,6 +33820,10 @@
 	"DOTA_TI10_EventGame_CurrentAscension"							"Current Ascension"
 	"DOTA_TI10_EventGame_DeepestJourney"							"Furthest Journey: {d:max_ascension_level_depth_completed} Rooms"
 
+	"DOTA_TI10_EventGame_BestTimedRun"								"최고: {s:best_run_time}"
+	"DOTA_TI10_EventGame_BestTimedRunRel"							"({s:best_rel_run_time})"
+	"DOTA_TI10_EventGame_NewPersonalBest"							"개인 최고 기록"
+
 	"DOTA_TI10_EventGame_BPForWin"									"+{d:points_for_win} PER WIN"
 	"DOTA_TI10_EventGame_BPDailyBonus"								"+{d:daily_bonus_bp} Additional Points Per Win with Daily Bonus Active (Max 1 Token Per Day)"
 	"DOTA_TI10_EventGame_BPForLoss"									"+{d:points_for_loss} PER LOSS"
@@ -33834,8 +33839,8 @@
 	"DOTA_TI10_EventGame_ChallengeMode"								"Aghanim's Trials"
 	"DOTA_TI10_EventGame_ChallengeModeCountdownTimerShort"			"In {t:d:t:T:countdown_time}"
 	"DOTA_TI10_EventGame_ChallengeModeCountdownTimerLong"			"Competition Begins in {t:d:t:T:countdown_time}"
-	"DOTA_TI10_EventGame_WindowCountdownTimer"						"Competition Window Opens in {t:d:t:T:countdown_time}"
-	"DOTA_TI10_EventGame_ChallengeModeActiveTimerShort"				"{t:d:t:T:countdown_time}"
+	"DOTA_TI10_EventGame_WindowCountdownTimer"						"Competition Window Opens in<br>{t:d:t:T:countdown_time}"
+	"DOTA_TI10_EventGame_ChallengeModeActiveTimerShort"				"{t:d:t:T:countdown_time} Left"
 	"DOTA_TI10_EventGame_ChallengeModeActiveTimerLong"				"Competition Window Active for {t:d:t:T:countdown_time}"
 
 	"DOTA_TI10_EventGame_Lore"										"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
@@ -34028,8 +34033,8 @@
 	"DOTA_Tooltip_ability_aghsfort_winter_wyvern_arctic_burn_move_slow"				"%MOVEMENT SLOW:"
 	"DOTA_Tooltip_ability_aghsfort_winter_wyvern_arctic_burn_damage_duration"		"BURN DURATION:"
 	"DOTA_Tooltip_ability_aghsfort_winter_wyvern_arctic_burn_night_vision_bonus"		"ADDED NIGHT VISION RANGE:"
-	"DOTA_Tooltip_ability_aghsfort_winter_wyvern_arctic_burn_Note0"		"Reduces Winter Wyvern's attack point to %attack_point%."
-	"DOTA_Tooltip_ability_aghsfort_winter_wyvern_arctic_burn_Note1"		"The damage and slow from Arctic Burn can be dispelled."
+	"DOTA_Tooltip_ability_aghsfort_winter_wyvern_arctic_burn_Note0"					"Reduces Winter Wyvern's attack point to %attack_point%."
+	"DOTA_Tooltip_ability_aghsfort_winter_wyvern_arctic_burn_Note1"					"The damage and slow from Arctic Burn can be dispelled."
 
 	"DOTA_Tooltip_ability_aghsfort_winter_wyvern_splinter_blast"						"Splinter Blast"
 	"DOTA_Tooltip_ability_aghsfort_winter_wyvern_splinter_blast_Description"			"Launches a ball of brittle ice toward an enemy. The ice shatters on impact, leaving the primary target completely unaffected, while hurling damaging splinters into nearby enemies in a %split_radius% radius. Enemies struck by these splinters are slowed by %movespeed_slow_tooltip%%%."
@@ -34207,10 +34212,10 @@
 	"DOTA_Tooltip_Ability_aghsfort_special_magnataur_skewer_bonus_strength"				"Bulldoze"
 	"DOTA_Tooltip_ability_aghsfort_special_magnataur_skewer_bonus_strength_Description"	"Magnus gains %strength_gain% strength per target skewered for %buff_duration% seconds."
 
-	"DOTA_Tooltip_modifier_aghsfort_magnataur_skewer_bonus_strength"					"Bulldoze"
-	"DOTA_Tooltip_modifier_aghsfort_magnataur_skewer_bonus_strength_Description"					"Strength increased by Buldoze"
+	"DOTA_Tooltip_modifier_aghsfort_magnataur_skewer_bonus_strength"					"밀어붙이기"
+	"DOTA_Tooltip_modifier_aghsfort_magnataur_skewer_bonus_strength_Description"					"밀어붙이기로 증가한 힘"
 
-	"DOTA_Tooltip_modifier_aghsfort_watch_tower_capturing"								"Selecting Exit"
+	"DOTA_Tooltip_modifier_aghsfort_watch_tower_capturing"								"나가기 선택"
 
 
 
@@ -34394,7 +34399,7 @@
 	"DOTA_Tooltip_ability_aghsfort_disruptor_thunder_strike_Lore"					"Disruptor's charged coils occasionally overload, and a singed armor plate or tuft of fur is the enemy's result."
 	"DOTA_Tooltip_ability_aghsfort_disruptor_thunder_strike_radius"					"RADIUS:"
 	"DOTA_Tooltip_ability_aghsfort_disruptor_thunder_strike_strikes"					"STRIKES:"
-	"DOTA_Tooltip_ability_aghsfort_disruptor_thunder_strike_strike_interval"			"STRIKE INTERVAL:"
+	"DOTA_Tooltip_ability_aghsfort_disruptor_thunder_strike_strike_interval"			"타격 간격:"
 	"DOTA_Tooltip_ability_aghsfort_disruptor_thunder_strike_strike_damage"					"STRIKE DAMAGE:"
 	"DOTA_Tooltip_ability_aghsfort_disruptor_glimpse"								"Glimpse"
 	"DOTA_Tooltip_ability_aghsfort_disruptor_glimpse_Description"					"Teleports the target hero back to where it was 4 seconds ago.  Instantly kills illusions. Disruptor fires an attack that deals bonus damage on all targets hit by Glimpse."
@@ -34444,10 +34449,10 @@
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_glimpse_cast_aoe_Description"					"Increases glimpse cast area by %value%"
 
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_glimpse_hit_on_arrival"						"Blast In The Past"
-	"DOTA_Tooltip_ability_aghsfort_special_disruptor_glimpse_hit_on_arrival_Description"			"When enemies arrive at their final destination, Disruptor's Base Attack damage is dealt in a %hit_radius% radius around them."
+	"DOTA_Tooltip_ability_aghsfort_special_disruptor_glimpse_hit_on_arrival_Description"			"When enemies arrive at their final destination, %int_pct%%% of Disruptor's Intelligence is dealt in a %hit_radius% radius around them."
 	   	
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_glimpse_travel_damage"							"Shocking Travel"
-	"DOTA_Tooltip_ability_aghsfort_special_disruptor_glimpse_travel_damage_Description"				"Deals %value%%% of Disruptor's Base Attack Damage for every 75 units of distance the enemy has been glimpsed, over the course of the glimpse duration"
+	"DOTA_Tooltip_ability_aghsfort_special_disruptor_glimpse_travel_damage_Description"				"Deals %value%%% of Disruptor's Intelligence for every 75 units of distance the enemy has been glimpsed, over the course of the glimpse duration"
 	   	
 	   	
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_kinetic_field_instant_setup" 					"Insta-wall"
@@ -34457,7 +34462,7 @@
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_kinetic_field_damage_Description" 				"Kinetic Field deals %value%%% of Disruptor's Base Attack Damage to enemies trapped inside every 0.5 seconds."
 
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_kinetic_field_allied_heal" 					"Area of Bliss"
-	"DOTA_Tooltip_ability_aghsfort_special_disruptor_kinetic_field_allied_heal_Description" 		"Allies inside the kinetic field regenerate %value%%% of their Max Health per second."
+	"DOTA_Tooltip_ability_aghsfort_special_disruptor_kinetic_field_allied_heal_Description" 		"Allies inside the kinetic field heal %value%%% of Disruptor's Intelligence every 0.5 seconds."
 
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_kinetic_field_allied_attack_buff"				"Stay in the Zone"
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_kinetic_field_allied_attack_buff_Description" 	"Kinetic Field increases allied attack speed by %value%."
@@ -34469,7 +34474,7 @@
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_static_storm_kinetic_field_on_cast_Description"	"Static Storm automatically creates a Kinetic Field on cast."
 
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_static_storm_crits_on_attacks"					"Field of Dreams"
-	"DOTA_Tooltip_ability_aghsfort_special_disruptor_static_storm_crits_on_attacks_Description" 	"All attacks on the affected enemies will crit for %value% damage."
+	"DOTA_Tooltip_ability_aghsfort_special_disruptor_static_storm_crits_on_attacks_Description" 	"All attacks on the affected enemies have a %crit_chance%%% chance to crit for %crit_damage%%% damage."
 
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_static_storm_damage_reduction"					"Pacific Storm"
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_static_storm_damage_reduction_Description" 	"All enemies caught in Static Storm deal %damage_reduction_pct%%% less damage."	   	
@@ -34537,10 +34542,10 @@
 	"DOTA_Tooltip_ability_aghsfort_snapfire_firesnap_cookie_impact_damage"	"IMPACT DAMAGE:"
 	"DOTA_Tooltip_ability_aghsfort_snapfire_firesnap_cookie_impact_stun_duration"	"IMPACT STUN DURATION:"
 
-	"DOTA_Tooltip_ability_aghsfort_snapfire_lil_shredder"				"Lil' Shredder"
+	"DOTA_Tooltip_ability_aghsfort_snapfire_lil_shredder"				"갈기갈기포"
 	"DOTA_Tooltip_ability_aghsfort_snapfire_lil_shredder_Description"	"Snapfire heats up her mounted turret to rapidly fire %buffed_attacks% fixed-damage attacks. Each attack slows the enemy's attack speed. Provides bonus attack range for the duration."
 	"DOTA_Tooltip_ability_aghsfort_snapfire_lil_shredder_Note0"			"Sets %base_attack_time% base attack rate for the duration."
-	"DOTA_Tooltip_ability_aghsfort_snapfire_lil_shredder_Note1"			"Attack modifiers have a chance to proc on Lil' Shredder attacks."
+	"DOTA_Tooltip_ability_aghsfort_snapfire_lil_shredder_Note1"			"공격 변형 요인은 갈기갈기포 공격 시 일정 확률로 발동합니다."
 	"DOTA_Tooltip_ability_aghsfort_snapfire_lil_shredder_Lore"			"Beadie constantly tinkers with a design she first dreamed up plotting an exodus from her old gang."
 	"DOTA_Tooltip_ability_aghsfort_snapfire_lil_shredder_attack_speed_bonus"	"BONUS ATTACK SPEED:"
 	//"DOTA_Tooltip_ability_aghsfort_snapfire_lil_shredder_buff_duration_tooltip"	"BUFF DURATION:"
@@ -34549,14 +34554,14 @@
 	"DOTA_Tooltip_ability_aghsfort_snapfire_lil_shredder_attack_speed_slow_per_stack"	"ATTACK SLOW PER STACK:"
 	"DOTA_Tooltip_ability_aghsfort_snapfire_lil_shredder_slow_duration"	"ATTACK SLOW DURATION:"
 
-	"DOTA_Tooltip_modifier_aghsfort_snapfire_lil_shredder_buff"				"Lil' Shredder"
+	"DOTA_Tooltip_modifier_aghsfort_snapfire_lil_shredder_buff"				"갈기갈기포"
 	"DOTA_Tooltip_modifier_aghsfort_snapfire_lil_shredder_buff_Description"	"Attack speed increased by %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT% and applying attack speed reduction to the target on hit."
 
-	"DOTA_Tooltip_modifier_aghsfort_snapfire_lil_shredder_debuff"				"Lil' Shredder"
+	"DOTA_Tooltip_modifier_aghsfort_snapfire_lil_shredder_debuff"				"갈기갈기포"
 	"DOTA_Tooltip_modifier_aghsfort_snapfire_lil_shredder_debuff_Description"	"This unit has reduced attack speed."
 
 	"DOTA_Tooltip_ability_aghsfort_snapfire_mortimer_kisses"					"Mortimer Kisses"
-	"DOTA_Tooltip_ability_aghsfort_snapfire_mortimer_kisses_Description"		"Snapfire's friend launches a barrage of firespit globs over %duration_tooltip% seconds. Globs cause impact damage and create pools of firespit, which slow and apply damage over time. Snapfire has a reduced turn rate for the duration and a minimum launch range of %min_range%. Each glob can be targeted with a right click."
+	"DOTA_Tooltip_ability_aghsfort_snapfire_mortimer_kisses_Description"		"스냅파이어의 친구가 %duration_tooltip%초에 걸쳐 불침 방울을 일제히 퍼붓습니다. 방울은 충격 피해를 주며 불침 웅덩이를 생성하여 적을 둔화하고 지속하여 피해를 줍니다. 스냅파이어는 지속시간 동안 방향 전환율이 감소하며 %min_range%의 최소 발사 거리가 적용됩니다. 각각의 방울을 오른 클릭하여 대상으로 지정할 수 있습니다."
 	"DOTA_Tooltip_ability_aghsfort_snapfire_mortimer_kisses_Note0"			"Can be cancelled by pressing Stop, Hold Position, or using another ability."
 	"DOTA_Tooltip_ability_aghsfort_snapfire_mortimer_kisses_Note1"			"Has a minimum travel time of %min_lob_travel_time% and maximum travel time of %max_lob_travel_time%."
 	"DOTA_Tooltip_ability_aghsfort_snapfire_mortimer_kisses_Lore"				"Little did Beadie know when she adopted Mortimer, dragon toads--which aren't even toads at all--share more than just a name with their distant draconic cousins."
@@ -34611,7 +34616,7 @@
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_multicookie"						"Baker's Dozen"
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_multicookie_Description"		"Snapfire gives Firesnaps to all targets in a %value% area around her main target. Only the main target hops forward, secondary targets hop in place."
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_enemytarget"						"Raisin Firesnaps"
-	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_enemytarget_Description"			"Firesnaps can now be given to enemies, launching them in the air and damaging them."
+	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_enemytarget_Description"			"Firesnaps can now be given to enemies, launching them in the air and damaging them. The enemy that ate the cookie gets damaged twice."
 
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_allied_buff"						"Freshly Baked"
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_allied_buff_Description"			"Firesnaps give allies %bonus_attack_range% Bonus Attack Range (ranged only) and %bonus_attack_damage% Attack Damage for %buff_duration% seconds."
@@ -34695,7 +34700,7 @@
 	"DOTA_Tooltip_ability_aghsfort_tusk_snowball_snowball_speed"				"SNOWBALL SPEED:"
 	"DOTA_Tooltip_ability_aghsfort_tusk_snowball_stun_duration"				"STUN DURATION:"
 	"DOTA_Tooltip_ability_aghsfort_tusk_snowball_snowball_windup_radius"		"GATHER RADIUS:"
-	"DOTA_Tooltip_ability_aghsfort_tusk_snowball_snowball_windup"			"LAUNCH TIME:"
+	"DOTA_Tooltip_ability_aghsfort_tusk_snowball_snowball_windup"			"굴리기 시간:"
 	"DOTA_Tooltip_ability_aghsfort_tusk_launch_snowball"						"Launch Snowball"
 	"DOTA_Tooltip_ability_aghsfort_tusk_launch_snowball_Description"			"Launch the snowball toward the target."
 	"DOTA_Tooltip_ability_aghsfort_tusk_launch_snowball_Lore"				"Into the great wide white!"
@@ -34762,24 +34767,24 @@
 	"DOTA_Tooltip_modifier_aghsfort_tusk_tag_team_aura_Description"	"Slowing enemies and causing attacks against them to deal more physical damage."
 
 
-	"DOTA_Tooltip_ability_aghsfort_special_tusk_ice_shards_circle"		"Ice Shard Circle"
-	"DOTA_Tooltip_ability_aghsfort_special_tusk_ice_shards_explode"		"Ice Shard Explosion"
-	"DOTA_Tooltip_ability_aghsfort_special_tusk_ice_shards_stun"			"Ice Shard Stun"
+	"DOTA_Tooltip_ability_aghsfort_special_tusk_ice_shards_circle"				"Ice Shard Circle"
+	"DOTA_Tooltip_ability_aghsfort_special_tusk_ice_shards_explode"				"Icebreaker"
+	"DOTA_Tooltip_ability_aghsfort_special_tusk_ice_shards_stun"				"Deep Freeze"
 
 	"DOTA_Tooltip_Ability_aghsfort_special_tusk_ice_shards_secondary"				"Ice Shard Extension"
 	"DOTA_Tooltip_Ability_aghsfort_special_tusk_ice_shards_secondary_Description"	"The Ice Shard projectile continues past the cast target, dealing damage to enemies up to %value% units away. Ice shards will still be created in the usual place."
 
-	"DOTA_Tooltip_ability_aghsfort_special_tusk_snowball_heal"			"Snow Fort"
-	"DOTA_Tooltip_ability_aghsfort_special_tusk_snowball_end_damage"		"Snowball Blast"
-	"DOTA_Tooltip_ability_aghsfort_special_tusk_snowball_global"			"Global Cooling"
+	"DOTA_Tooltip_ability_aghsfort_special_tusk_snowball_heal"					"Snow Fort"
+	"DOTA_Tooltip_ability_aghsfort_special_tusk_snowball_end_damage"			"Snowball Blast"
+	"DOTA_Tooltip_ability_aghsfort_special_tusk_snowball_global"				"Global Cooling"
 
-	"DOTA_Tooltip_ability_aghsfort_special_tusk_tag_team_lifesteal"		"Tag Team Lifesteal"
-	"DOTA_Tooltip_ability_aghsfort_special_tusk_tag_team_toggle"			"Tag, You're In"
-	"DOTA_Tooltip_ability_aghsfort_special_tusk_tag_team_global"			"Everybody Tag Now"
+	"DOTA_Tooltip_ability_aghsfort_special_tusk_tag_team_lifesteal"				"Cool Party"
+	"DOTA_Tooltip_ability_aghsfort_special_tusk_tag_team_toggle"				"Tag, You're In"
+	"DOTA_Tooltip_ability_aghsfort_special_tusk_tag_team_global"				"Everybody Tag Now"
 
 
-	"DOTA_Tooltip_ability_aghsfort_special_tusk_walrus_punch_reset"			"Re: Punch"
-	"DOTA_Tooltip_ability_aghsfort_special_tusk_walrus_punch_land_damage"	"Ground Pound"
+	"DOTA_Tooltip_ability_aghsfort_special_tusk_walrus_punch_reset"				"And Another Punch!"
+	"DOTA_Tooltip_ability_aghsfort_special_tusk_walrus_punch_land_damage"		"Tusky-duskie"
 	"DOTA_Tooltip_ability_aghsfort_special_tusk_walrus_punch_wallop"			"Walrus Wallop"
 
 	"DOTA_Tooltip_ability_aghsfort_special_tusk_ice_shards_circle_Description"		"Creates twice as many ice shards and forms a complete circle around the target area"
@@ -34885,7 +34890,7 @@
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_apply_fury_swipes_Description"	"Earthshock applies Fury Swipes to all enemies hit."
 
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_knockback"				"Cannonball"
-	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_knockback_Description"	"Earthshock applies %value% knockback."
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_knockback_Description"	"Earthshock applies %value% knockback and stuns for %value3% seconds."
 
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_miss_chance"				"Blunt Their Claws"
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_miss_chance_Description"	"Earthshock applies %value%%% miss chance."
@@ -34916,6 +34921,10 @@
 
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_enrage_magic_immunity"				"Protect the Cubs"
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_enrage_magic_immunity_Description"	"Enrage provides magic immunity to allies within %value% radius."
+
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_enrage_allies"						"Protect the Cubs"
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_enrage_allies_Description"			"Enrage also provides all enrage benefits to allies within %value% radius."
+
 
 	"DOTA_Tooltip_modifier_aghsfort_ursa_enrage_magic_immunity"					"Protect the Cubs"
 	"DOTA_Tooltip_modifier_aghsfort_ursa_enrage_magic_immunity_Description"		"This unit is magic immune."
@@ -34966,7 +34975,7 @@
 	// SNIPER ABILITIES START
 	//--------------------------------------------------------------------------------------------------------------
 	"DOTA_Tooltip_ability_aghsfort_sniper_shrapnel"							"Shrapnel"
-	"DOTA_Tooltip_ability_aghsfort_sniper_shrapnel_Description"				"Consumes a charge to launch a ball of shrapnel that showers the target area in explosive pellets. Enemies are subject to damage and slowed movement. Reveals the targeted area. Shrapnel charges restore every %abilitychargerestoretime% seconds."
+	"DOTA_Tooltip_ability_aghsfort_sniper_shrapnel_Description"				"충전을 하나 소모하여 목표 지역에 폭발성 탄환을 퍼붓는 유산탄 덩어리를 발사합니다. 범위 내에 있는 적은 피해를 받고 이동 속도가 감소합니다. 목표 지역의 시야를 밝힙니다. 유산탄은 %abilitychargerestoretime%초마다 재충전됩니다."
 	"DOTA_Tooltip_ability_aghsfort_sniper_shrapnel_Lore"					"Kardel's modular rifle also fires incendiary rounds, useful for assaulting entrenched locations."
 	"DOTA_Tooltip_ability_aghsfort_sniper_shrapnel_Note0"					"Damage is dealt 11 times, immediately at spell effect then every second."
 	"DOTA_Tooltip_ability_aghsfort_sniper_shrapnel_Note1"					"Does not damage buildings."
@@ -35162,11 +35171,13 @@
 
 	"DOTA_Tooltip_ability_aghsfort_special_mars_gods_rebuke_full_circle"		"Full Circle"
 	"DOTA_Tooltip_ability_aghsfort_special_mars_gods_rebuke_stun"		"Stunning Rebuke"
-	"DOTA_Tooltip_ability_aghsfort_special_mars_gods_rebuke_strength_buff"		"Strong Argument"
+	"DOTA_Tooltip_ability_aghsfort_special_mars_gods_rebuke_strength_buff"		"강한 주장"
 
 	"DOTA_Tooltip_ability_aghsfort_special_mars_gods_rebuke_full_circle_Description"			"God's Rebuke deals damage in a full circle around Mars."
 	"DOTA_Tooltip_ability_aghsfort_special_mars_gods_rebuke_stun_Description"				"God's Rebuke stuns enemies for %value% seconds."
 	"DOTA_Tooltip_ability_aghsfort_special_mars_gods_rebuke_strength_buff_Description"		"God's Rebuke grants Mars %strength_gain% strength for %buff_duration% seconds for each enemy hit."
+	"DOTA_Tooltip_modifier_aghsfort_special_mars_gods_rebuke_strength_buff"  				"강한 주장"
+	"DOTA_Tooltip_modifier_aghsfort_special_mars_gods_rebuke_strength_buff_Description"		"신의 질책에 영향받은 적 하나당 힘 획득"
 
 	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_counter_rebuke"		"Bulwark Counter"
 	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_healing"		"Bulwark Healing"
@@ -35182,7 +35193,7 @@
 
 	"DOTA_Tooltip_ability_aghsfort_special_mars_arena_of_blood_fear"		"Arena of Fear"
 	"DOTA_Tooltip_ability_aghsfort_special_mars_arena_of_blood_global"		"Remote Workplace"
-	"DOTA_Tooltip_ability_aghsfort_special_mars_arena_of_blood_attack_buff"		"Coliseum"
+	"DOTA_Tooltip_ability_aghsfort_special_mars_arena_of_blood_attack_buff"		"Colosseum"
 	"DOTA_Tooltip_ability_aghsfort_special_mars_arena_of_blood_outside_perimeter"	"Anyway, Here's Spearwall"
 
 
@@ -35301,13 +35312,13 @@
 	"DOTA_Tooltip_ability_aghsfort_special_viper_viper_strike_allies"				"Antitoxin"
 	"DOTA_Tooltip_ability_aghsfort_special_viper_viper_strike_allies_Description"	"Viper Strike can target allies, healing them for the damage amount and buffing their movement and attack for the slow amounts."
 
-	"DOTA_Tooltip_ability_aghsfort_special_viper_chain_viper_strike"				"Chain Viper Strike"
+	"DOTA_Tooltip_ability_aghsfort_special_viper_chain_viper_strike"				"Snakebite"
 	"DOTA_Tooltip_ability_aghsfort_special_viper_chain_viper_strike_Description"	"Viper Strike will bounce to %value% additional targets."
 
 	"DOTA_Tooltip_ability_aghsfort_special_viper_channeled_viper_strike"				"Channeled Viper Strike"
 	"DOTA_Tooltip_ability_aghsfort_special_viper_channeled_viper_strike_Description"	"Viper Strike becomes a no target channeled spell with twice cooldown. Any enemy walking in 900 range during the channel will be struck by a Viper Strike every 0.5 seconds."
 
-	"DOTA_Tooltip_ability_aghsfort_special_viper_periodic_strike"				"Periodic Strike"
+	"DOTA_Tooltip_ability_aghsfort_special_viper_periodic_strike"					"Contamination"
 	"DOTA_Tooltip_ability_aghsfort_special_viper_periodic_strike_Description"	"Viper Strike becomes a no target spell. Any target walking within Viper Strike cast range for the duration of the ability will be struck by a Viper Strike every %value% seconds. The duration of the ability is equal to Viper Strike's overall debuff duration."
 
 
@@ -35405,7 +35416,7 @@
 
 
 	"DOTA_Tooltip_ability_aghsfort_special_weaver_swarm_allies_Description"								"Beetles attach to allies, healing them and increasing their armor for the values of the base ability."
-	"DOTA_Tooltip_ability_aghsfort_special_weaver_swarm_explosion_Description"							"When a Beetle is killed, it explodes in a %value% radius, dealing damage equal to the damage it already dealt to it's target."
+	"DOTA_Tooltip_ability_aghsfort_special_weaver_swarm_explosion_Description"							"When a Beetle is killed, it explodes in a %value% radius, dealing damage equal to %damage_pct%%% of the damage it already dealt to it's target."
 	"DOTA_Tooltip_ability_aghsfort_special_weaver_swarm_damage_transfer_Description"					"All enemies affected by the Swarm transfer %value%%% of damage dealt to other affected units in their vicinity"
 
 	"DOTA_Tooltip_ability_aghsfort_special_weaver_geminate_attack_splitshot_Description"				"Weaver's additional attack hits an additional %attack_count% targets in Weaver's attack range + %bonus_range%."
@@ -35525,13 +35536,13 @@
 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_repel_outgoing_damage_Description"		"Heavenly Grace amplifies damage dealt by the affected unit by %value%%%."
 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_repel_applies_degen_aura_Description"		"A unit affected by Heavenly Grace also applies Omniknight's current level of Degen Aura around them."
 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_repel_damage_instance_refraction_Description"		"Heavenly Grace blocks %damage_instances% instances of damage on the targeted ally."
-	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_repel_knockback_on_cast_Description"		"Heavenly Grace knocks back enemies within %knockback_radius% of the target on cast, and deals damage equal to Omniknight's base attack to the affected enemies."
+	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_repel_knockback_on_cast_Description"		"Heavenly Grace knocks back enemies within %knockback_radius% of the target on cast, and deals damage equal to %knockback_damage_pct%%% of Omniknight's base attack to the affected enemies."
 
 
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_toggle"							"Righteous Path"
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_damage"							"Condemnation"
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_restoration"						"Absolution"
- 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_toggle_Description"				"Degen Aura also affects allies, increasing their movement and attack speeds."
+ 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_toggle_Description"				"Degen Aura also affects allies, increasing their movement and attack speeds by %value%%% of the Degen Aura values."
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_damage_Description"				"Degen Aura damages enemies in its area of effect for %attack_damage_pct%%% of Omniknight's base attack damage every %damage_interval% seconds."
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_restoration_Description"			"Enemy units that die within Degen Aura's area of effect restore %value%%% of Omniknight's max Health and Mana."
 
@@ -35542,7 +35553,7 @@
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_guardian_angel_single_target_dummy"				"Personal Savior"
 
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_guardian_angel_purification_Description"				"Any time a unit affected by Guardian Angel is attacked, there is a %purification_trigger_chance% chance that the unit will be healed by Omniknight's current level of Purification."
- 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_guardian_angel_immune_flight_Description"				"Guardian Angel gives total magic immunity and flight for it's duration"
+ 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_guardian_angel_immune_flight_Description"				"Guardian Angel gives %value%%% magic resistance and flight for it's duration"
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_guardian_angel_single_target_Description"				"Omniknight gains a separate ability, allowing him to cast his current level of Guardian angel on a single target. Mana cost is reduced by %mana_cost_modifier% percent."
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_guardian_angel_single_target_dummy_Description"				"Omniknight gains a separate ability, allowing him to cast his current level of Guardian angel on a single target. Mana cost is reduced by %mana_cost_modifier% percent."
 
@@ -35560,6 +35571,7 @@
 
  	"aghsfort_omniknight_purification_flat_heal"						"+{s:value} {s:ability_name} Heal/Damage"
  	"aghsfort_omniknight_purification_flat_radius"						"+{s:value} {s:ability_name} Radius"
+ 	"aghsfort_omniknight_purification_flat_cast_range"						"+{s:value} {s:ability_name} Cast Range"
  	"aghsfort_omniknight_degen_aura_flat_radius"						"+{s:value} {s:ability_name} Radius"
  	"aghsfort_omniknight_degen_aura_flat_move_speed_bonus"				"-{s:value}% {s:ability_name} Movement Speed"
  	"aghsfort_omniknight_degen_aura_flat_attack_speed_bonus"			"-{s:value} {s:ability_name} Attack Speed"
@@ -35696,7 +35708,7 @@
  	"aghsfort_witch_doctor_paralyzing_cask_manacost"				"-{s:value}% {s:ability_name} Mana Cost"
  	"aghsfort_witch_doctor_voodoo_restoration_flat_heal"			"+{s:value} {s:ability_name} Heal"
  	"aghsfort_witch_doctor_voodoo_restoration_flat_radius"			"+{s:value} {s:ability_name} Radius"
- 	"aghsfort_witch_doctor_voodoo_restoration_manacost"				"-{s:value}% {s:ability_name} Mana Cost"
+ 	"aghsfort_witch_doctor_voodoo_restoration_manacost"				"{s:value}% {s:ability_name} Mana Cost"
 	"aghsfort_witch_doctor_voodoo_restoration_mul_heal_interval"	"{s:value} {s:ability_name} Heal Interval"
 
 
@@ -35706,8 +35718,13 @@
 	//--------------------------------------------------------------------------------------------------------------
 	// ABILITY UPGRADE END
 	//--------------------------------------------------------------------------------------------------------------
-
-
+	
+	"#DOTA_RP_PLAYING_EVENT_MATCH_2020"	 "미궁 - {%param0%} 깊이 {%param1%}층"
+	"#DOTA_EventGameName_International2020"	"아가님의 미궁"
+	"#DOTA_EventGameDifficulty_International2020_0" 	"수습생"
+	"#DOTA_EventGameDifficulty_International2020_1" 	"마도사"
+	"#DOTA_EventGameDifficulty_International2020_2" 	"마법사"
+	"#DOTA_EventGameDifficulty_International2020_3" 	"대마도사"
 	//END TI10 EVENT GAME
 
 	}

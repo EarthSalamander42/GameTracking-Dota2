@@ -1,4 +1,3 @@
-
 // Dota Heroes File
 "DOTAAbilities"
 {
@@ -638,7 +637,8 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"kill_threshold"			"250 325 400"
+				"kill_threshold"			"250 350 450"
+				"LinkedSpecialBonus"		"special_bonus_unique_axe_5"
 			}
 			"02"
 			{
@@ -734,7 +734,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"90 115 140 165"
+		"AbilityManaCost"				"110 130 150 170"
 
 		
 		"AbilitySpecial"
@@ -903,9 +903,9 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5015"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"FightRecapLevel"				"1"
@@ -915,9 +915,13 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastPoint"				"0.2"
 
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"25"	
+
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"9 8 7 6"
+		"AbilityCooldown"				"14 12 10 8"
 		
 		// Cast Range
 		//-------------------------------------------------------------------------------------------------------------
@@ -934,42 +938,27 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"9 10 11 12"
+				"duration"					"8"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage_increase_outgoing_pct"		"12 18 24 30"
-				"CalculateSpellDamageTooltip"	"0"
+				"attack_speed"				"50 80 110 140"
+				"LinkedSpecialBonus"		"special_bonus_unique_bloodseeker_5"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage_increase_incoming_pct"		"10 14 18 22"
-				"CalculateSpellDamageTooltip"	"0"
+				"spell_amp"				"6 12 18 24"
 			}
 			"04"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"health_bonus_pct"			"10 15 20 25"
-			}
-			"05"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"health_bonus_creep_pct"	"10 15 20 25"
-			}
-			"06"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"health_bonus_aoe"	"300"
-			}
-			"07"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"health_bonus_share_percent"	"50"
+				"var_type"					"FIELD_FLOAT"
+				"damage_pct"				"2.2 2.4 2.6 2.8"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastGestureSlot"		"DEFAULT"
 	}
 	
 	//=================================================================================================================
@@ -1017,7 +1006,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage"					"125 175 225 275"
+				"damage"					"120 180 240 300"
 				"LinkedSpecialBonus"		"special_bonus_unique_bloodseeker_2"
 			}
 			"04"
@@ -1063,24 +1052,34 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_attack_speed"		"30 45 60 75"
+				"hero_kill_heal"		"12 18 24 30"
 			}		
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
+				"creep_kill_heal"		"8 12 16 20"
+			}		
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"half_bonus_aoe"		"300"
+			}		
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
 				"max_bonus_pct"				"25"
 			}	
-			"05"
+			"07"
 			{
 				"var_type"					"FIELD_INTEGER"
 				"visibility_threshold_pct"	"25"
 			}
-			"06"
+			"08"
 			{
 				"var_type"					"FIELD_INTEGER"
 				"invis_threshold_pct"	"25"
 			}
-			"07"
+			"09"
 			{
 				"var_type"					"FIELD_FLOAT"
 				"linger_duration"			"4.0"
@@ -1156,8 +1155,7 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"abilitycastrange"			""
-				"LinkedSpecialBonus"		"special_bonus_unique_bloodseeker_3"
-				
+				"LinkedSpecialBonus"		"special_bonus_unique_bloodseeker_3"				
 			}
 			"05"
 			{
@@ -1566,7 +1564,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"fissure_duration"			"8.0"
+				"fissure_duration"			"6.5 7 7.5 8.0"
 			}
 			"03"
 			{
@@ -1955,7 +1953,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"attack_rate_multiplier"	"1.7"
+				"attack_rate_multiplier"	"1.6"
 			}
 			"02"
 			{
@@ -1965,11 +1963,17 @@
 			}
 			"03"
 			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_attack_speed"				"40"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+			"04"
+			{
 				"var_type"					"FIELD_FLOAT"
 				"duration"					"3 3.25 3.5"
 				"LinkedSpecialBonus"		"special_bonus_unique_juggernaut_2"
 			}
-			"04"
+			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
 				"omni_slash_radius"			"425"
@@ -2590,7 +2594,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage"					"450 650 850"
+				"damage"					"500 700 900"
 			}
 			"02"
 			{
@@ -2843,6 +2847,7 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"damage_per_kill"			"40"
+				"LinkedSpecialBonus"			"special_bonus_unique_lion_8"
 				"CalculateSpellDamageTooltip"	"0"
 			}
 			"04"
@@ -2879,7 +2884,7 @@
 
 
 	//=================================================================================================================
-	// Ability: Mirana Arrow
+	// Ability: Mirana Arrow (sacred arrow)
 	//=================================================================================================================
 	"mirana_arrow"
 	{
@@ -2900,7 +2905,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"18 17 16 15"
+		"AbilityCooldown"				"19 18 17 16"
 		"AbilityDuration"				"3.11 3.11 3.11 3.11"
 
 		// Damage.
@@ -3005,7 +3010,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_movement_speed"		"15"
+				"bonus_movement_speed"		"9 12 15"
 			}
 		}
 	}
@@ -3039,7 +3044,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"leap_distance"			"550"
+				"leap_distance"			"575"
 			}
 			"02"
 			{
@@ -3830,14 +3835,14 @@
 			"01"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"necromastery_damage_per_soul"	"2"
+				"necromastery_damage_per_soul"	"1 2 3 4"
 				"CalculateSpellDamageTooltip"	"0"
 				"LinkedSpecialBonus"			"special_bonus_unique_nevermore_1"
 			}
 			"02"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"necromastery_max_souls"	"12 20 28 36"
+				"necromastery_max_souls"	"11 14 17 20"
 				"LinkedSpecialBonus"			"special_bonus_unique_nevermore_4"
 			}
 			"03"
@@ -3848,12 +3853,7 @@
 			"04"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"necromastery_souls_hero_bonus"	"11"
-			}
-			"05"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"necromastery_max_souls_scepter" "22 30 38 46"
+				"necromastery_max_souls_scepter" "25"
 				"RequiresScepter"			"1"
 			}			
 		}
@@ -3966,7 +3966,7 @@
 			"06"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"requiem_soul_conversion"	"2 2 2"
+				"requiem_soul_conversion"	"1"
 			}
 			"07"
 			{
@@ -4045,7 +4045,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"lance_damage"				"100 150 200 250"
+				"lance_damage"				"100 160 220 280"
 				"LinkedSpecialBonus"		"special_bonus_unique_phantom_lancer_2"
 			}
 			"02"
@@ -4230,6 +4230,7 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"tooltip_illusion_damage"	"22"
+				"LinkedSpecialBonus"		"special_bonus_unique_phantom_lancer_6"
 				"CalculateSpellDamageTooltip"	"0"
 			}
 			"07"
@@ -4603,7 +4604,7 @@
 			"02"
 			{
 				"var_type"							"FIELD_FLOAT"
-				"flesh_heap_strength_buff_amount"	"1.0 1.5 2 2.5"
+				"flesh_heap_strength_buff_amount"	"1.5 2 2.5 3.0"
 				"LinkedSpecialBonus"			"special_bonus_unique_pudge_1"
 			}
 			"03"
@@ -4636,7 +4637,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"27 22 17 12"
+		"AbilityCooldown"				"21 18 15 12"
 
 		// Damage.
 		//-------------------------------------------------------------------------------------------------------------
@@ -4652,25 +4653,31 @@
 		{
 			"01"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"hook_speed"			"1450.0"
+				"var_type"				"FIELD_INTEGER"
+				"damage"			"150 220 290 360"
+				"LinkedSpecialBonus"			"special_bonus_unique_pudge_7"
 			}
 			"02"
 			{
-				"var_type"			"FIELD_INTEGER"
-				"hook_width"		"100"
+				"var_type"				"FIELD_FLOAT"
+				"hook_speed"			"1450.0"
 			}
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"hook_distance"		"1300"
+				"hook_width"		"100"
 			}
 			"04"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"vision_radius"		"500 500 500 500"
+				"hook_distance"		"1300"
 			}
 			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"vision_radius"		"500 500 500 500"
+			}
+			"06"
 			{
 				"var_type"			"FIELD_FLOAT"
 				"vision_duration"	"4.0 4.0 4.0 4.0"
@@ -4714,7 +4721,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"rot_slow"				"-11 -18 -25 -32"
+				"rot_slow"				"-14 -20 -26 -32"
 				"LinkedSpecialBonus"			"special_bonus_unique_pudge_4"
 			}
 			"04"
@@ -5119,7 +5126,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"14"
+		"AbilityCooldown"				"13 12 11 10"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -5262,17 +5269,8 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"movement_speed_pct"	"2 4 6 8"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"self_movement_speed_pct"	"6 10 14 18"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"radius"				"1200"
+				"self_movement_speed_pct"	"12 16 20 24"
+				"LinkedSpecialBonus"	"special_bonus_unique_razor_5"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
@@ -5324,35 +5322,24 @@
 			}
 			"02"
 			{
-				"var_type"			"FIELD_INTEGER"
-				"passive_area_damage"		"60 100 140"		
-				"LinkedSpecialBonus"	"special_bonus_unique_razor_4"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"passive_area_interval"	"3"		
-			}
-			"04"
-			{
 				"var_type"			"FIELD_FLOAT"
 				"duration"			"30.0"		
 			}
-			"05"
+			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
 				"strike_interval"		"0.7 0.6 0.5"	
 				"LinkedSpecialBonus"	"special_bonus_unique_razor_2"
 			}
-			"06"
+			"04"
 			{
 				"var_type"			"FIELD_INTEGER"
 				"armor_reduction"	"1 1 1"		
 			}
-			"07"
+			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"damage"			"40 55 70"		
+				"damage"			"60 75 90"		
 			}
 		}
 	}
@@ -5452,18 +5439,13 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"vampiric_aura"			"5 10 15 20"
+				"vampiric_aura"			"8 16 24 32"
 				"LinkedSpecialBonus"	"special_bonus_unique_wraith_king_2"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"			"4 10 16 22"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"self_bonus"			"1.5"
+				"vampiric_aura_ranged_pct"			"50"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
@@ -5645,7 +5627,7 @@
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"600"
-		"AbilityCastPoint"				"0.4"
+		"AbilityCastPoint"				"0.2"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -6074,7 +6056,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cleave_distance"			"650"
+				"cleave_distance"			"700"
 			}
 			"04"
 			{
@@ -6110,7 +6092,7 @@
 	
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"60"
+		"AbilityManaCost"				"30 40 50 60"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -6119,7 +6101,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"movespeed"			"10 14 18 22"
+				"movespeed"			"8 12 16 20"
 			}
 			"02"
 			{
@@ -6127,11 +6109,6 @@
 				"bonus_armor"		"6 9 12 15"		
 			}
 			"03"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"bonus_damage"		"12 16 20 24"		
-			}
-			"04"
 			{
 				"var_type"			"FIELD_INTEGER"
 				"radius"		"700"
@@ -6167,7 +6144,7 @@
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"110"
-		"AbilityDuration"				"25.0"
+		"AbilityDuration"				"40.0"
 	
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -6180,15 +6157,10 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"gods_strength_damage"		"80 120 160"		
+				"gods_strength_damage"		"110 160 210"	
+				"LinkedSpecialBonus"		"special_bonus_unique_sven_2"	
 			}
-			"02"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"gods_strength_bonus_str"		"10 20 30"		
-				"LinkedSpecialBonus"		"special_bonus_unique_sven_2"
-			}
-		}
+		}	
 	}
 
 	//=================================================================================================================
@@ -6421,12 +6393,12 @@
 			"05"
 			{
 				"var_type"							"FIELD_INTEGER"
-				"ball_lightning_travel_cost_base"	"12"		
+				"ball_lightning_travel_cost_base"	"10"		
 			}
 			"06"
 			{
 				"var_type"								"FIELD_FLOAT"
-				"ball_lightning_travel_cost_percent"	"0.7"		
+				"ball_lightning_travel_cost_percent"	"0.65"		
 			}
 			"07"
 			{
@@ -6603,38 +6575,30 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"caustic_finale_radius"		"400"
+				"caustic_finale_radius"		"500"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"caustic_finale_damage"		"90 130 170 220"
+				"caustic_finale_damage_base"		"70 90 110 130"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"caustic_finale_damage_expire"		"20 50 80 110"
+				"caustic_finale_damage_pct"		"10 14 18 22"
 			}
 			"04"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"caustic_finale_duration"	"6"
+				"caustic_finale_duration"	"5"
 			}
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"caustic_finale_slow"		"-15 -20 -25 -30"
-			}
-			"06"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"caustic_finale_slow_as"		"-15 -20 -25 -30"
-			}
-			"07"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"caustic_finale_slow_duration"		"3 3.5 4 4.5"
-			}					
+				"caustic_finale_slow"		"-10 -15 -20 -25"
+				"LinkedSpecialBonus"	"special_bonus_unique_sand_king_6"
+				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_SUBTRACT"
+			}				
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
@@ -6767,8 +6731,8 @@
 			}
 			"06"
 			{
-				"var_type"					"FIELD_FLOAT"
-				"projectile_duration"		"0.5"
+				"var_type"					"FIELD_INTEGER"
+				"projectile_speed"		"1200"
 			}
 			"07"
 			{
@@ -6819,7 +6783,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"1.3"
+				"duration"				"1.4"
 			}
 			"02"
 			{
@@ -6942,49 +6906,55 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_damage"		"10 20 30 40"
-				"CalculateSpellDamageTooltip"	"0"
+				"attack_count"				"5"
+				"LinkedSpecialBonus"	"special_bonus_unique_tiny_6"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_damage_buildings"		"20 50 80 110"
+				"bonus_damage"		"25"
 				"CalculateSpellDamageTooltip"	"0"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"attack_range"				"350"
+				"bonus_damage_buildings"		"90 120 150 180"
+				"CalculateSpellDamageTooltip"	"0"
 			}
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"splash_width"				"200"
+				"attack_range"				"350"
 			}
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"splash_range"				"400"
+				"splash_width"				"200"
 			}
 			"06"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"splash_pct"				"30 40 50 60"
+				"splash_range"				"400"
 			}
 			"07"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"throw_splash_pct"			"150"
+				"splash_pct"				"40 60 80 100"
 			}
 			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"throw_splash_pct"			"150"
+			}
+			"09"
 			{
 				"var_type"					"FIELD_FLOAT"
 				"bat_increase"			"0.0"
 			}
-			"09"
+			"10"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"speed_reduction"			"30"
+				"speed_reduction"			"0"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
@@ -7029,7 +6999,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_damage"				"10 20 30 40"
+				"bonus_damage"				"25"
 				"CalculateSpellDamageTooltip"	"0"
 			}
 			"04"
@@ -7153,7 +7123,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_damage"				"30 45 60"
+				"bonus_damage"				"25 50 75"
 				"CalculateSpellDamageTooltip"	"0"
 			}
 			"03"
@@ -7199,7 +7169,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"arc_damage"			"70 95 120 145"
+				"arc_damage"			"75 100 125 150"
 				"LinkedSpecialBonus"	"special_bonus_unique_zeus_2"
 			}
 			"02"
@@ -7252,7 +7222,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"90 105 120 135"
+		"AbilityManaCost"				"125 130 135 140"
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -7317,7 +7287,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"35"
+		"AbilityCooldown"				"45"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -7424,7 +7394,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"90.0"
+		"AbilityCooldown"				"120.0"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -7452,13 +7422,13 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"250 350 450"
+				"damage"				"300 400 500"
 			}
 		}
 	}
 		
 	//=================================================================================================================
-	// Ability: Slardar Sprint
+	// Ability: Slardar Guardian Sprint
 	//=================================================================================================================
 	"slardar_sprint"
 	{
@@ -7733,7 +7703,8 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"armor_reduction"		"-8 -13 -18"
+				"armor_reduction"		"-10 -15 -20"
+				"LinkedSpecialBonus"	"special_bonus_unique_slardar_5"
 			}
 			"02"
 			{
@@ -7848,7 +7819,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_reduction"		"12 24 36 48"
+				"damage_reduction"		"14 26 38 50"
 				"LinkedSpecialBonus"	"special_bonus_unique_tidehunter_4"
 				"CalculateSpellDamageTooltip"	"0"
 			}
@@ -8067,6 +8038,7 @@
 			{
 				"var_type"			"FIELD_INTEGER"
 				"bonus_attack_range"	"50 75 100 125"
+				"LinkedSpecialBonus"	"special_bonus_unique_vengeful_spirit_8"
 			}
 			"03"
 			{
@@ -8142,7 +8114,7 @@
 			"04"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"vision_aoe"		"300"
+				"vision_aoe"		"350"
 			}
 			"05"
 			{
@@ -8423,7 +8395,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"radius"			"835"
+				"radius"			"810"
 			}		
 			"02"
 			{
@@ -8474,7 +8446,7 @@
 			"11"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"scepter_delay"	"2"
+				"scepter_delay"	"1.75"
 				"RequiresScepter"		"1"
 			}
 		}
@@ -8771,6 +8743,22 @@
 	}
 	
 	//=================================================================================================================
+	// Puck: Focus Fire Cancel
+	//=================================================================================================================
+	"windrunner_focusfire_cancel"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"587"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+		"AbilityCastAnimation"			"ACT_INVALID"
+	}
+	
+	//=================================================================================================================
 	// Lich: Frost Nova
 	//=================================================================================================================
 	"lich_frost_nova"
@@ -8832,6 +8820,7 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"aoe_damage"			"75 100 125 150"
+				"LinkedSpecialBonus"		"special_bonus_unique_lich_6"
 			}
 			
 		}
@@ -9175,6 +9164,7 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"damage"				"250 400 550"
+				"LinkedSpecialBonus"		"special_bonus_unique_lich_7"
 			}
 			"02"
 			{
@@ -9410,6 +9400,7 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"bonus_damage"				"16 24 32 40"
+				"LinkedSpecialBonus"	"special_bonus_unique_witch_doctor_7"
 			}
 			"04"
 			{
@@ -9482,6 +9473,12 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"bounce_radius"				"650 650 650"
+				"RequiresScepter"		"1"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"scepter_lifesteal"			"10"
 				"RequiresScepter"		"1"
 			}
 		}
@@ -9781,7 +9778,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"30 55 80 105"
+				"damage"				"40 60 80 100"
 				"LinkedSpecialBonus"	"special_bonus_unique_enigma_5"
 			}
 			"04"
@@ -9847,6 +9844,7 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"eidolon_hp_tooltip"	"180 200 220 240"
+				"LinkedSpecialBonus"	"special_bonus_unique_enigma_7"
 			}
 			"04"
 			{
@@ -9910,6 +9908,7 @@
 			{
 				"var_type"					"FIELD_FLOAT"
 				"duration"					"9 10 11 12"
+				"LinkedSpecialBonus"	"special_bonus_unique_enigma_8"
 			}
 		}
 	}
@@ -10316,7 +10315,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"shrapnel_damage"		"20 40 60 80"
+				"shrapnel_damage"		"20 35 50 65"
 				"LinkedSpecialBonus"	"special_bonus_unique_sniper_1"
 			}
 			"04"
@@ -10496,7 +10495,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"scepter_stun_duration"			"1.5"
+				"scepter_stun_duration"			"1 1.25 1.5"
 				"RequiresScepter"		"1"
 			}
 			"04"
@@ -10868,7 +10867,7 @@
 		
 		// Cast Range
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"450 550 650 750"
+		"AbilityCastRange"				"450 600 750 900"
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -11159,7 +11158,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"80 85 90 95"		
+		"AbilityManaCost"				"80"		
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -11294,7 +11293,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"50"
+		"AbilityManaCost"				"60 65 70 75"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -11379,6 +11378,7 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"hawk_vision_tooltip"		"600 700 800 900"
+				"LinkedSpecialBonus"	"special_bonus_unique_beastmaster_5"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
@@ -11677,7 +11677,7 @@
 	
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"110"
+		"AbilityManaCost"				"110 120 130 140"
 	
 		
 		// Special	
@@ -11687,7 +11687,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"strike_damage"			"50 75 100 125"
+				"strike_damage"			"30 60 90 120"
 			}
 			"02"
 			{
@@ -11834,7 +11834,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"250 360 500"
+		"AbilityManaCost"				"250 400 550"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -11988,7 +11988,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage"					"6 12 18 24"
+				"damage"					"8 16 24 32"
 			}
 			"03"
 			{
@@ -11996,11 +11996,6 @@
 				"movement_speed"			"-11 -13 -15 -17"
 				"LinkedSpecialBonus"		"special_bonus_unique_venomancer_2"
 			}	
-			"04"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"hp_regen_reduction"		"15 20 25 30"
-			}			
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
@@ -12029,7 +12024,7 @@
 		
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"20 20 20 20"
+		"AbilityManaCost"				"20"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -12044,7 +12039,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"ward_hp_tooltip"		"75 200 325 450"
+				"ward_hp_tooltip"		"120 230 340 450"
 				"LinkedSpecialBonus"	"special_bonus_unique_venomancer"
 				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
 			}
@@ -12133,7 +12128,7 @@
 			"05"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"cooldown_scepter"			"140.0 120.0 60.0"
+				"cooldown_scepter"			"100.0 80.0 60.0"
 				"RequiresScepter"		"1"
 			}
 			"06"
@@ -12210,7 +12205,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"radius_scepter"				"250"
+				"radius_scepter"				"350"
 				"RequiresScepter"		"1"
 			}
 		}
@@ -12698,6 +12693,7 @@
 			{
 				"var_type"				"FIELD_FLOAT"
 				"duration"				"1.75 2.5 3.25 4"
+				"LinkedSpecialBonus"		"special_bonus_unique_phantom_assassin_5"
 			}
 			"04"
 			{
@@ -12762,6 +12758,12 @@
 				"var_type"				"FIELD_FLOAT"
 				"duration"				"2.0"
 			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"abilitycastrange"			""
+				"LinkedSpecialBonus"		"special_bonus_unique_phantom_assassin_6"				
+			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
@@ -12824,7 +12826,7 @@
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"scepter_cooldown"			"12"
+				"scepter_cooldown"			"10"
 				"RequiresScepter"		"1"
 			}
 		}
@@ -12940,7 +12942,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"6"
+		"AbilityCooldown"				"12 10 8 6"
 		"AbilityDuration"				"12"
 
 		// Cost
@@ -12959,7 +12961,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_armor"				"-2 -4 -6 -8"
+				"bonus_armor"				"-5 -6 -7 -8"
 				"LinkedSpecialBonus"		"special_bonus_unique_templar_assassin_2"
 			}
 		}
@@ -13660,12 +13662,12 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bounces"					"1 2 3 6"
+				"bounces"					"3 4 5 6"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage_reduction_percent"	"35"
+				"damage_reduction_percent"	"52 46 40 34"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
@@ -13694,14 +13696,9 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage_pct"			"15 20 25 30"
+				"damage_pct"			"10 18 26 34"
 			}
 			"03"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"armor_pct"		"15 20 25 30"
-			}
-			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
 				"bonus_night_vision"		"200 400 600 800"
@@ -14640,6 +14637,7 @@
 			{	
 				"var_type"			"FIELD_INTEGER"
 				"attacks_to_destroy"	"2"
+				"LinkedSpecialBonus"		"special_bonus_unique_clockwerk_5"
 			}
 			"05"
 			{	
@@ -14713,7 +14711,7 @@
 			"02"
 			{	
 				"var_type"			"FIELD_FLOAT"
-				"duration"			"10.0"
+				"duration"			"8.0"
 			}
 			"03"
 			{	
@@ -14857,6 +14855,7 @@
 			{
 				"var_type"			"FIELD_INTEGER"
 				"radius"			"150 175 200 225"
+				"LinkedSpecialBonus"	"special_bonus_unique_leshrac_5"
 			}
 			
 			"03"
@@ -14961,9 +14960,6 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"80 100 120 140"
 		
-		// Damage.
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"90 130 170 210"
 			
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -14972,36 +14968,42 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"jump_count"			"4 6 8 10"
+				"damage"			"90 130 170 210"
+				"LinkedSpecialBonus"	"special_bonus_unique_leshrac_6"
 			}			
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
+				"jump_count"			"4 6 8 10"
+			}			
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
 				"radius"			"475"
 			}
-			"03"
+			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
 				"jump_delay"			"0.25 0.25 0.25 0.25"
 			}
-			"04"
+			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
 				"slow_movement_speed"	"-75"
 			}
-			"05"
+			"06"
 			{
 				"var_type"				"FIELD_FLOAT"
 				"slow_duration"			"0.4 0.6 0.8 1.0"
 				"LinkedSpecialBonus"	"special_bonus_unique_leshrac_2"
 			}	
-			"06"
+			"07"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"interval_scepter"			"1.75"
+				"interval_scepter"			"1.5"
 				"RequiresScepter"		"1"
 			}		
-			"07"
+			"08"
 			{
 				"var_type"				"FIELD_INTEGER"
 				"radius_scepter"	"750"
@@ -15738,7 +15740,7 @@
 		
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"100 130 160 190"
+		"AbilityManaCost"				"60 90 120 150"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -15758,7 +15760,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"50 100 150 200"
+				"damage"				"100 150 200 250"
 			}
 			"04"
 			{
@@ -15939,6 +15941,7 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"tooltip_outgoing"	"70 85 100"
+				"LinkedSpecialBonus"	"special_bonus_unique_dark_seer_7"
 			}
 			"04"
 			{
@@ -15969,7 +15972,7 @@
 			"09"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"slow_duration"				"0.75"
+				"slow_duration"				"1"
 			}	
 			"10"
 			{
@@ -15995,12 +15998,12 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"30 25 20 15"
+		"AbilityCooldown"				"34 30 26 22"
 		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
 		
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"75 80 85 90"
+		"AbilityManaCost"				"40 50 60 70"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -16009,13 +16012,14 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"3.5"
+				"duration"					"3 4 5 6"
 				"LinkedSpecialBonus"		"special_bonus_unique_clinkz_2"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"attack_speed_bonus_pct"	"110 160 210 260"
+				"attack_speed_bonus_pct"	"90 120 150 180"
+				"LinkedSpecialBonus"			"special_bonus_unique_clinkz_7"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
@@ -16048,7 +16052,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"9 10 11 12"
+		"AbilityManaCost"				"12"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -16057,7 +16061,7 @@
 			"01"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"damage_bonus"					"25 35 45 55"
+				"damage_bonus"					"24 36 48 60"
 				"LinkedSpecialBonus"			"special_bonus_unique_clinkz_1"
 			}
 		}
@@ -16075,7 +16079,6 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"AbilitySound"					"Hero_Clinkz.WindWalk"
-        "HasScepterUpgrade"			"1"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -16093,7 +16096,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"20.0 25.0 30.0 35.0"
+				"duration"					"25 30 35 40"
 			}
 			"02"
 			{
@@ -16103,37 +16106,8 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"move_speed_bonus_pct"		"15 25 35 45"
+				"move_speed_bonus_pct"		"15 30 45 60"
 			}
-			"04"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"attack_speed_duration"					"4"
-				"LinkedSpecialBonus"		"special_bonus_unique_clinkz_2"
-			}
-			"05"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"attack_speed_bonus_pct"	"70 100 130 160"
-			}
-			"06"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"scepter_bonus"		"30"
-				"RequiresScepter"		"1"
-			}
-			"07"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"scepter_skeleton_count"		"2"
-				"RequiresScepter"		"1"
-			}
-            "08"
-            {
-                "var_type"					"FIELD_INTEGER"
-                "scepter_bonus_tooltip"		"45 55 65 75"
-				"RequiresScepter"		"1"
-            }
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
@@ -16148,8 +16122,12 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"7319"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+		"IsGrantedByScepter"			"1"
+		"HasScepterUpgrade"				"1"
 		"FightRecapLevel"				"1"
 		"AbilitySound"					"Hero_Clinkz.DeathPact"
 
@@ -16161,12 +16139,11 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"110"
+		"AbilityCooldown"				"90"
 		
-
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"125 175 225"
+		"AbilityManaCost"				"150"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -16185,7 +16162,7 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"count"			"4 5 6"
+				"count"			"5"
 			}
 			"04"
 			{
@@ -16232,9 +16209,11 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5262"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"AbilitySound"					"Hero_Clinkz.DeathPact"
+		"AbilityDraftUltScepterAbility" "clinkz_burning_army"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -16244,11 +16223,11 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"90"
+		"AbilityCooldown"				"80 70 60"
 		
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"60"
+		"AbilityManaCost"				"100"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -16257,33 +16236,20 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"55"
+				"duration"				"65"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"health_gain"			"250 350 450 550"
-				"LinkedSpecialBonus"		"special_bonus_unique_clinkz_6"
+				"health_gain_pct"		"40 70 100"
+				"LinkedSpecialBonus"			"special_bonus_unique_clinkz_8"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_gain"		"0"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"permanent_bonus"		"5"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"debuff_duration"		"3"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"armor_reduction"		"2 3 4 5"
+				"damage_gain_pct"		"4 9 14"
+				"LinkedSpecialBonus"			"special_bonus_unique_clinkz_8"
+				"LinkedSpecialBonusField"		"value2"
 			}
 		}
 	}
@@ -16306,7 +16272,7 @@
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"400"
+		"AbilityCastRange"				"550"
 		"AbilityCastPoint"				"0.2"
 		
 		// Time		
@@ -16315,7 +16281,7 @@
 		
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"85 100 115 130"
+		"AbilityManaCost"				"80 95 110 125"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -16465,7 +16431,7 @@
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"275"
+		"AbilityCastRange"				"375"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -16480,13 +16446,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"attack_bonus_tooltip"	"10 18 26 34"
-				"LinkedSpecialBonus"	"special_bonus_unique_omniknight_2"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"radius"				"300"
+				"radius"				"375"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
@@ -16636,6 +16596,12 @@
 				"hop_height"		"150"
 				"RequiresScepter"			"1"
 			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"attack_range"				"150"
+				"RequiresScepter"			"1"
+			}
 		}
 	}
 
@@ -16732,7 +16698,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"heal_interval"			"1.0"
+				"heal_interval"			"0.5"
 			}
 			"02"
 			{
@@ -16928,7 +16894,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"knockback_distance"	"550"
+				"knockback_distance"	"400"
 			}
 			"05"
 			{
@@ -17140,7 +17106,6 @@
 		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
 		"AbilityCooldown"				"11 10 9 8"
 		"AbilityManaCost"				"80 90 100 110"
-		"AbilityDamage"					"80 160 240 320"
 			
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -17152,31 +17117,37 @@
 		{
 			"01"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"duration_day"			"1.25"
+				"var_type"				"FIELD_INTEGER"
+				"damage"			"80 160 240 320"
+				"LinkedSpecialBonus"		"special_bonus_unique_night_stalker_4"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration_night"		"2.5 3 3.5 4"
+				"duration_day"			"1.25"
 			}
 			"03"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"movespeed_slow"		"-50"
+				"var_type"				"FIELD_FLOAT"
+				"duration_night"		"2.5 3 3.5 4"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"attackspeed_slow"		"-50"
+				"movespeed_slow"		"-50"
 			}
 			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"attackspeed_slow"		"-50"
+			}
+			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
 				"radius_scepter"		"900"
 				"RequiresScepter"		"1"
 			}
-			"06"
+			"07"
 			{
 				"var_type"				"FIELD_FLOAT"
 				"scepter_ministun"		"0.5"
@@ -17251,6 +17222,7 @@
 			{
 				"var_type"							"FIELD_INTEGER"
 				"bonus_movement_speed_pct_night"	"22 28 34 40"
+				"LinkedSpecialBonus"		"special_bonus_unique_night_stalker_5"
 			}
 			"02"
 			{
@@ -17534,7 +17506,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_movespeed"		"-16 -26 -36 -46"
+				"bonus_movespeed"		"-20 -30 -40 -50"
 			}
 			"03"
 			{
@@ -17690,6 +17662,7 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"bonus_damage"			"70 100 130 160"
+				"LinkedSpecialBonus"	"special_bonus_unique_bounty_hunter_4"
 			}
 			"02"
 			{
@@ -17779,7 +17752,7 @@
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
 
 		"AbilityCooldown"				"4"
-		"AbilityManaCost"				"65"
+		"AbilityManaCost"				"60"
 			
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -17947,7 +17920,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"speed"				"200 220 240 260"
+				"speed"				"200 230 260 290"
 				"LinkedSpecialBonus"	"special_bonus_unique_weaver_2"
 			}
 			"03"
@@ -18020,7 +17993,7 @@
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
-		"AbilityCastRange"				"1000"
+		"AbilityCastRange"				"600"
 		"AbilitySound"					"Hero_Weaver.TimeLapse"
 
 		"FightRecapLevel"				"2"
@@ -18039,13 +18012,13 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cooldown_scepter"		"16"
+				"cooldown_scepter"		"20"
 				"RequiresScepter"		"1"
 			}	
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cast_range_tooltip_scepter"		"1000"
+				"cast_range_tooltip_scepter"		"600"
 				"RequiresScepter"		"1"
 			}				
 		}
@@ -18085,7 +18058,7 @@
 		
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"135 140 155 170"
+		"AbilityManaCost"				"140 150 160 170"
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -18178,7 +18151,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"90"		
+		"AbilityManaCost"				"100"		
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -18391,6 +18364,7 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"damage"				"10 15 20 25"
+				"LinkedSpecialBonus"	"special_bonus_unique_batrider_4"
 				"CalculateSpellDamageTooltip"		"1"
 			}
 			"02"
@@ -18411,7 +18385,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"turn_rate_pct"			"-70 -70 -70 -70"
+				"turn_rate_pct"			"-40 -50 -60 -70"
 			}
 			"06"
 			{
@@ -18651,7 +18625,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"grab_radius_scepter"		"450"
+				"grab_radius_scepter"		"550"
 				"RequiresScepter"		"1"
 			}
 			"06"
@@ -19101,23 +19075,13 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"20 30 40 50"
+				"bonus_damage"			"24 36 48 60"
 				"LinkedSpecialBonus"		"special_bonus_unique_spectre_2"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"radius"				"500"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"blind_pct"				"40 50 60 70"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"blind_duration"		"5.0"
+				"radius"				"425"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
@@ -19222,7 +19186,7 @@
 			"06"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"attack_delay"				"1.0 1.0 1.0"
+				"attack_delay"				"0"
 			}			
 		}
 	}
@@ -19239,6 +19203,7 @@
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"FightRecapLevel"				"2"
 		"MaxLevel"						"3"
@@ -19299,7 +19264,7 @@
 			"06"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"attack_delay"				"1.0 1.0 1.0"
+				"attack_delay"				"0"
 				"RequiresScepter"			"1"
 			}		
 			"07"
@@ -19368,13 +19333,13 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_gold"			"20 80 140 200"
+				"bonus_gold"			"50 100 150 200"
 				"LinkedSpecialBonus"	"special_bonus_unique_doom_3"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"regen"					"3 7 11 15"
+				"regen"					"2 6 10 14"
 			}
 			"03"
 			{
@@ -19464,7 +19429,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"16 12 8 4"
 		"AbilityManaCost"				"40"
-		"AbilityCastRange"				"175"
+		"AbilityCastRange"				"200"
 		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
 
 		// Special
@@ -19682,7 +19647,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"40 60 80 100"
+		"AbilityManaCost"				"40 55 70 85"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -19905,7 +19870,7 @@
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0.47 0.47 0.47 0.47"
+		"AbilityCastPoint"				"0.3"
 		"AbilityCastRange"				"0"
 
 		// Time		
@@ -20207,7 +20172,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"9 8 7 6"
+		"AbilityCooldown"				"11 10 9 8"
 		"AbilityDuration"				"4.0"
 
 		// Damage.
@@ -20231,7 +20196,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"movement_slow"				"-10 -25 -40 -55"
+				"movement_slow"				"-10 -20 -30 -40"
 			}
 			"03"
 			{
@@ -20362,7 +20327,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"50 40 30"
+		"AbilityCooldown"				"70 50 30"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -20519,8 +20484,8 @@
 			}
 			"07"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"pre_flight_time"			"3"
+				"var_type"					"FIELD_FLOAT"
+				"pre_flight_time"			"2.5"
 			}
 			"08"
 			{
@@ -20572,7 +20537,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"20"
+		"AbilityCooldown"				"18"
 		
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -20832,7 +20797,7 @@
 			"07"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"radius"					"200"
+				"radius"					"250"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
@@ -20904,7 +20869,7 @@
 			"08"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"midair_explosion_radius"	"200"
+				"midair_explosion_radius"	"250"
 			}
 			"09"
 			{
@@ -21628,6 +21593,7 @@
 				"var_type"				"FIELD_FLOAT"
 				"main_damage"			"57.5 75 92.5 110 127.5 145 162.5 180"
 				"LinkedSpecialBonus"		"special_bonus_unique_invoker_6"
+				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
 				"levelkey"				"exortlevel"
 			}
 			"09"
@@ -21639,6 +21605,8 @@
 			{
 				"var_type"				"FIELD_FLOAT"
 				"burn_dps"				"11.5 15 18.5 22 25.5 29 32.5 36"
+				"LinkedSpecialBonus"		"special_bonus_unique_invoker_6"
+				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
 				"levelkey"				"exortlevel"
 				"CalculateSpellDamageTooltip"	"1"
 			}
@@ -21796,9 +21764,6 @@
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"MaxLevel"						"1"
 		
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"40"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -22692,7 +22657,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"damage"			"16 24 32 40"
+				"damage"			"16 26 36 46"
 				"LinkedSpecialBonus"	"special_bonus_unique_silencer"
 			}
 			"02"
@@ -22862,7 +22827,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"130.0"
+		"AbilityCooldown"				"130 115 100"
 		"AbilityDuration"				"4.5 5.25 6.0"
 
 
@@ -22910,7 +22875,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"110 140 170 200"
+		"AbilityManaCost"				"80 120 160 200"
 		"AbilityCooldown"				"0"
 
 		// Special
@@ -22940,7 +22905,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5392"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY | DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
@@ -22957,7 +22922,7 @@
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"225 300 375 450"
+		"AbilityCastRange"				"300 350 400 450"
 		"AbilityCastPoint"				"0.25 0.25 0.25 0.25"
 
 		// Cost
@@ -23116,12 +23081,12 @@
 			"04"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"slow_duration"		"1.75"
+				"slow_duration"		"2"
 			}
 			"05"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"duration"			"6"
+				"duration"			"8"
 			}
 		}
 	}
@@ -23611,7 +23576,7 @@
 			"05"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"backlash_damage"			"10.0"
+				"backlash_damage"			"20.0"
 			}
 			"06"
 			{
@@ -23847,7 +23812,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_armor"				"10 15 20"
+				"bonus_armor"				"8 10 12"
 			}
 			"02"
 			{
@@ -24038,7 +24003,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"creep_duration"		"2.25 4.5 6.75 9.0"
+				"creep_damage_multiplier"		"3"
 //				"LinkedSpecialBonus"	"special_bonus_unique_lone_druid_3"
 			}
 		}
@@ -24200,13 +24165,7 @@
 				"var_type"					"FIELD_FLOAT"
 				"duration"					"4.0"
 				"LinkedSpecialBonus"		"special_bonus_unique_brewmaster_3"
-			}
-			"06"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"duration_creeps"			"8.0 8.0 8.0 8.0"
-				"LinkedSpecialBonus"		"special_bonus_unique_brewmaster_3"
-			}			
+			}	
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}
@@ -24289,7 +24248,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"80"		
+		"AbilityManaCost"				"50 60 70 80"		
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -24303,7 +24262,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"total_damage"				"100 160 220 280"
+				"total_damage"				"75 150 225 300"
 			}
 			"03"
 			{
@@ -25071,6 +25030,7 @@
 			{
 				"var_type"				"FIELD_FLOAT"
 				"stun_min"				"1.25 1.5 1.75 2"
+				"LinkedSpecialBonus"		"special_bonus_unique_chaos_knight_3"
 			}
 			"03"
 			{
@@ -25167,9 +25127,6 @@
 		"AbilitySound"					"Hero_ChaosKnight.ChaosStrike"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		
-		// Time		
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"4"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -25178,14 +25135,20 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"crit_min"				"120"
+				"chance"				"30"
+				"LinkedSpecialBonus"		"special_bonus_unique_chaos_knight_5"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
+				"crit_min"				"120"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
 				"crit_max"				"140 170 200 230"
 			}	
-			"03"
+			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
 				"lifesteal"					"25 40 55 70"
@@ -25221,11 +25184,11 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"125"
+		"AbilityCooldown"				"75"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"125 200 275"
+		"AbilityManaCost"				"75 125 175"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -25234,7 +25197,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"images_count"				"3"
+				"images_count"				"1 2 3"
 			}
 			"02"
 			{
@@ -25245,12 +25208,12 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"outgoing_damage"			"-60 -30 0"
+				"outgoing_damage"			"0"
 			}
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"outgoing_damage_tooltip"			"40 70 100"
+				"outgoing_damage_tooltip"			"100"
 			}	
 			"05"
 			{
@@ -25275,7 +25238,7 @@
 			"09"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"magic_resistance"			"25"
+				"magic_resistance"			"0"
 			}			
 		}
 	}
@@ -25634,7 +25597,7 @@
 	"treant_leech_seed"
 	{
 		"ID"					"5435"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"	
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
@@ -25643,15 +25606,16 @@
 		"AbilitySound"					"Hero_Treant.LeechSeed.Cast"
 
 		"AbilityCastPoint"				"0.4"
+		"AbilityCastRange"				"400"
 		"FightRecapLevel"				"1"
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"22 19 16 13"
+		"AbilityCooldown"				"18 16 14 12"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"110"
+		"AbilityManaCost"				"110 120 130 140"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -25660,28 +25624,23 @@
 			"01"
 			{
 				"var_type"						"FIELD_FLOAT"
-				"damage_interval"				"0.5"
+				"damage_interval"				"1"
 			}
 			"02"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"leech_damage"					"15 30 45 60"
+				"leech_damage"					"16 32 48 64"
 				"LinkedSpecialBonus"			"special_bonus_unique_treant_2"
 			}		
 			"03"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"movement_slow"					"-18 -24 -30 -36"
+				"movement_slow"					"-8 -14 -20 -26"
 			}	
-			"04"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"slow_duration"					"0.5"
-			}
 			"05"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"radius"						"700"
+				"radius"						"650"
 			}
 			"06"
 			{
@@ -25691,7 +25650,7 @@
 			"07"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"projectile_speed"				"550"
+				"projectile_speed"				"450"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
@@ -25835,7 +25794,8 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"35"
+		"AbilityCharges"				"3"
+		"AbilityChargeRestoreTime"		"40.0"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -25981,7 +25941,7 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"scepter_mana"		"60"
+				"scepter_mana"		"45"
 				"RequiresScepter"	"1"
 			}
 			"04"
@@ -26491,7 +26451,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage"					"25 35 45"
+				"damage_amp"				"25 30 35"
 			}
 			"03"
 			{
@@ -26509,16 +26469,6 @@
 				"duration"					"40"
 			}	
 			"06"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"spawn_rate"				"3 2.5 2"
-			}	
-			"07"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"zombie_radius"			"400"
-			}
-			"08"
 			{
 				"var_type"					"FIELD_INTEGER"
 				"movement_bonus"			"30"
@@ -26644,7 +26594,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"135 140 145 150"
+		"AbilityManaCost"				"120 130 140 150"
 		
 		// Cast Range
 		//-------------------------------------------------------------------------------------------------------------
@@ -26661,7 +26611,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage"					"80 160 240 320"
+				"damage"					"100 175 250 325"
 			}
 			"02"
 			{
@@ -26672,27 +26622,21 @@
 			"03"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"hero_attack_damage_reduction"	"20 25 30 35"
+				"attack_damage_reduction"	"10 18 26 34"
 				"LinkedSpecialBonus"		"special_bonus_unique_rubick_2"
 				"CalculateSpellDamageTooltip"	"0"
 			}
 			"04"
 			{
-				"var_type"						"FIELD_INTEGER"
-				"creep_attack_damage_reduction"	"10 13 15 17"
-				"CalculateSpellDamageTooltip"	"0"
-			}			
-			"05"
-			{
 				"var_type"					"FIELD_FLOAT"
 				"duration"					"10.0 10.0 10.0 10.0"
 			}
-			"06"
+			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
 				"radius"					"440"
 			}			
-			"07"
+			"06"
 			{
 				"var_type"					"FIELD_FLOAT"
 				"jump_delay"				"0.25 0.25 0.25 0.25"
@@ -27062,7 +27006,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"radius"					"340"
+				"radius"					"350"
 			}
 			"02"
 			{
@@ -27127,6 +27071,8 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"pulses"					"20"
+				"LinkedSpecialBonus"			"special_bonus_unique_disruptor_7"
+				"LinkedSpecialBonusField"		"value2"
 			}
 			"03"
 			{
@@ -27137,6 +27083,7 @@
 			{
 				"var_type"					"FIELD_FLOAT"
 				"duration"					"5.0"
+				"LinkedSpecialBonus"		"special_bonus_unique_disruptor_7"
 			}
 		}
 	}
@@ -27205,7 +27152,7 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"impale_damage"			"80 140 200 260"
+				"impale_damage"			"100 160 220 280"
 				"LinkedSpecialBonus"	"special_bonus_unique_nyx_2"
 			}
 		}
@@ -27585,6 +27532,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		//"AbilityUnitTargetFlags"			"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"FightRecapLevel"				"1"
@@ -27592,7 +27540,7 @@
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0.6"
+		"AbilityCastPoint"				"0.5"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -27618,7 +27566,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"net_speed"					"1500 1500 1500 1500"
+				"net_speed"					"1500"
 			}
 			"03"
 			{
@@ -27747,6 +27695,12 @@
 				"regen_rate_tooltip_scepter"				"10"
 				"RequiresScepter"	"1"
 			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"scepter_cooldown"				"140 100 60"
+				"RequiresScepter"	"1"
+			}
 		}
 	}
 
@@ -27797,7 +27751,7 @@
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"11"
-		"AbilityChannelTime"			"2.0 3.0 4.0 5.0"
+		"AbilityChannelTime"			"2 2.7 3.4 4.1"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -27809,13 +27763,14 @@
 		{
 			"01"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"damage_per_second"		"100.0 100.0 100.0 100.0"
+				"var_type"				"FIELD_INTEGER"
+				"total_damage"				"200 300 400 500"
+				"LinkedSpecialBonus"		"special_bonus_unique_keeper_of_the_light"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"max_channel_time"		"2.0 3.0 4.0 5.0"
+				"max_channel_time"		"2 2.7 3.4 4.1"
 			}
 			"03"
 			{
@@ -27861,12 +27816,6 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"channel_vision_step"		"150"
-			}
-			"12"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"total_damage"				"200 300 400 500"
-				"LinkedSpecialBonus"		"special_bonus_unique_keeper_of_the_light"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
@@ -28293,13 +28242,14 @@
 		{
 			"01"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"damage_per_second"		"100.0 100.0 100.0 100.0"
+				"var_type"				"FIELD_INTEGER"
+				"total_damage"				"200 300 400 500"
+				"LinkedSpecialBonus"		"special_bonus_unique_keeper_of_the_light"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"max_channel_time"		"2.0 3.0 4.0 5.0"
+				"max_channel_time"		"2 2.7 3.4 4.1"
 			}
 			"03"
 			{
@@ -28345,12 +28295,6 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"channel_vision_step"		"150"
-			}
-			"12"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"total_damage"				"200 300 400 500"
-				"LinkedSpecialBonus"		"special_bonus_unique_keeper_of_the_light"
 			}
 		}
 	}
@@ -28457,7 +28401,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"150"		
+		"AbilityManaCost"				"135 140 145 150"		
 
 		// Cast Range
 		//-------------------------------------------------------------------------------------------------------------
@@ -29316,9 +29260,9 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"5504"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"		
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -29331,23 +29275,23 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_modifier"		"-70 -55 -40 -25"
+				"damage_modifier"		"-50 -40 -30 -20"
 			}
 			"02"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"damage_modifier_tooltip"		"30 45 60 75"
+				"damage_modifier_tooltip"		"50 60 70 80"
 			}
 			"03"
 			{	
 				"var_type"					"FIELD_INTEGER"
-				"arrow_count"				"3"
+				"arrow_count"				"4"
 				"LinkedSpecialBonus"			"special_bonus_unique_medusa_2"
 			}
 			"04"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"split_shot_bonus_range"		"100"
+				"split_shot_bonus_range"		"150"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
@@ -29374,11 +29318,11 @@
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"700"
-		"AbilityCastPoint"				"0.4 0.4 0.4 0.4"
+		"AbilityCastPoint"				"0.2"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"11"
+		"AbilityCooldown"				"10"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -29858,6 +29802,7 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"attack_speed"			"15 20 25 30"
+				"LinkedSpecialBonus"		"special_bonus_unique_troll_warlord_5"
 			}
 			"02"
 			{
@@ -29969,8 +29914,8 @@
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastPoint"				"0.5 0.5 0.5 0.5"
-		"AbilityCooldown"				"22 19 16 13"
-		"AbilityManaCost"				"115 120 125 130"
+		"AbilityCooldown"				"15 14 13 12"
+		"AbilityManaCost"				"100 110 120 130"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -29984,13 +29929,13 @@
 			"02"
 			{
 				"var_type"						"FIELD_FLOAT"
-				"stun_duration"					"2.0 2.25 2.5 2.75"
+				"stun_duration"					"1.7 2.0 2.3 2.6"
 				"LinkedSpecialBonus"			"special_bonus_unique_centaur_2"
 			}
 			"03"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"stomp_damage"					"80 110 140 170"
+				"stomp_damage"					"100 150 200 250"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
@@ -30014,7 +29959,7 @@
 
 		// Stats		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"5.0"
+		"AbilityCooldown"				"4.0"
 		"AbilityCastRange"				"150 150 150 150"
 		"AbilityCastPoint"				"0.4"
 
@@ -30053,17 +29998,12 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"5516"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 		"AbilityCastGestureSlot"		"DEFAULT"
-
-		// Time		
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"55 50 45 40"
-
 
 		
 		// Special
@@ -30073,25 +30013,15 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"return_damage"				"16 36 56 76"
+				"return_damage"				"15 30 45 60"
 				"LinkedSpecialBonus"			"special_bonus_unique_centaur_3"
 			}
 			"02"
 			{
-				"var_type"					"FIELD_FLOAT"
-				"damage_gain_pct"			"4 6 8 10"
+				"var_type"					"FIELD_INTEGER"
+				"return_damage_str"			"20 25 30 35"
 			}
 			"03"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"damage_gain_duration"		"20"
-			}
-			"04"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"max_stacks"				"13"
-			}
-			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
 				"aura_radius"				"1200"
@@ -30240,7 +30170,7 @@
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"movement_slow"				"60"
+				"movement_slow"				"75"
 			}
 			"06"
 			{
@@ -30315,7 +30245,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage_pct"		"10 15 20 25"
+				"bonus_damage_pct"		"11 18 25 32"
 				"LinkedSpecialBonus"	"special_bonus_unique_magnus_2"
 			}
 			"03"
@@ -30386,7 +30316,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"26 24 22 20"
+		"AbilityCooldown"				"22 20 18 16"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -30415,7 +30345,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"skewer_radius"				"135"
+				"skewer_radius"				"145"
 			}
 			"05"
 			{
@@ -31295,7 +31225,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"snowball_damage_bonus"		"20 30 40 50"
+				"snowball_damage_bonus"		"20 40 60 80"
 			}
 			"04"
 			{
@@ -31919,7 +31849,7 @@
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"500"
+		"AbilityCastRange"				"575"
 		"AbilityCastPoint"				"0.25"
 		
 		// Time		
@@ -32151,7 +32081,7 @@
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
  		"AbilityCastAnimation"			"ACT_INVALID"
-		"AbilityCastPoint"				"0.4 0.4 0.4 0.4"
+		"AbilityCastPoint"				"0.4"
  		"AbilityCastRange"				"500"
 		"AbilityChannelTime"			"1.3"
 
@@ -32317,7 +32247,7 @@
 			"05"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"speed"							"800"
+				"speed"							"900"
 			}
 			"06"
 			{
@@ -32794,7 +32724,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"reward_damage"			"10 18 26"
+				"reward_damage"			"10 20 30"
 				"LinkedSpecialBonus"	"special_bonus_unique_legion_commander"
 			}
 			"04"
@@ -32993,7 +32923,7 @@
 			"05"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"damage_per_second"				"30 40 50 60"
+				"damage_per_second"				"25 35 45 55"
 				"LinkedSpecialBonus"			"special_bonus_unique_ember_spirit_3"
 			}
 			"06"
@@ -33290,7 +33220,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"radius"				"150"
+				"radius"				"160"
 			}
 			"02"
 			{
@@ -33570,7 +33500,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_per_second"			"50 75 100"
+				"damage_per_second"			"40 80 120"
 			}
 			"03"
 			{
@@ -33623,8 +33553,8 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		
-		"AbilityCastRange"				"750"
-		"AbilityCastPoint"				"0.6"
+		"AbilityCastRange"				"675"
+		"AbilityCastPoint"				"0.5"
 		"FightRecapLevel"				"1"
 		
 		// Time		
@@ -33642,7 +33572,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"radius"					"400"
+				"radius"					"400 430 460 490"
 			}
 			"02"
 			{
@@ -33709,13 +33639,13 @@
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"AbilitySound"					"Hero_AbyssalUnderlord.PitOfMalice"
 
-		"AbilityCastRange"				"750"
+		"AbilityCastRange"				"675"
 		"AbilityCastPoint"				"0.45"
 		"FightRecapLevel"				"1"
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"22 20 18 16"
+		"AbilityCooldown"				"18 17 16 15"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -33729,6 +33659,7 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"radius"					"400"
+				"LinkedSpecialBonus"			"special_bonus_unique_underlord_6"
 			}
 			"02"
 			{
@@ -33772,14 +33703,14 @@
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"1200"
+		"AbilityCastRange"				"900"
 
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"radius"						"1200"
+				"radius"						"900"
 			}
 			"02"
 			{
@@ -33789,7 +33720,7 @@
 			"03"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"bonus_damage_from_creep"		"5"
+				"bonus_damage_from_creep"		"4 5 6 7"
 			}
 			"04"
 			{
@@ -33799,19 +33730,13 @@
 			"05"
 			{
 				"var_type"						"FIELD_FLOAT"
-				"bonus_damage_duration"			"30 40 50 60"
+				"bonus_damage_duration"			"30 45 60 75"
 			}
 			"06"
 			{
 				"var_type"						"FIELD_FLOAT"
 				"bonus_damage_duration_scepter"		"70 80 90 100"
 				"RequiresScepter"	"1"
-			}
-			"07"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"permanent_bonus"		"2 3 4 5"
-				"LinkedSpecialBonus"			"special_bonus_unique_underlord_3"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
@@ -34064,7 +33989,7 @@
 			"07"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"speed_loss"				"30"
+				"speed_loss"				"0"
 			}
 			"08"
 			{
@@ -34308,7 +34233,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"80 90 100 110"
+		"AbilityManaCost"				"120"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -34544,7 +34469,7 @@
 			"04"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"max_hero_attacks"	"5 8 11"
+				"max_hero_attacks"	"6 8 10"
 				"LinkedSpecialBonus"	"special_bonus_unique_phoenix_1"
 			}
 			"05"
@@ -34667,7 +34592,6 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"850"
 		"AbilityCastPoint"				"0"
-		"AbilityChannelTime"			"2.5"
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -34683,44 +34607,51 @@
 		{
 			"01"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"damage"					"120 150 180 210"
+				"var_type"					"FIELD_FLOAT"
+				"channel_time"					"2.5"
+				"LinkedSpecialBonus"	"special_bonus_unique_oracle_7"
+				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_SUBTRACT"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bolt_speed"				"1000"
+				"damage"					"120 150 180 210"
 			}
 			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bolt_speed"				"1000"
+			}
+			"04"
 			{
 				"var_type"					"FIELD_FLOAT"
 				"minimum_purge_duration"	"0.5"
 				"LinkedSpecialBonus"	"special_bonus_unique_oracle_2"
 			}
-			"04"
+			"05"
 			{
 				"var_type"					"FIELD_FLOAT"
 				"maximum_purge_duration"	"2.5"
 				"LinkedSpecialBonus"	"special_bonus_unique_oracle_2"
 			}
-			"05"
+			"06"
 			{
 				"var_type"					"FIELD_INTEGER"
 				"radius"					"300"
 			}
-			"06"
+			"07"
 			{
 				"var_type"					"FIELD_INTEGER"
 				"scepter_bonus_range"					"800"
 				"RequiresScepter"	"1"
 			}
-			"07"
+			"08"
 			{
 				"var_type"					"FIELD_INTEGER"
 				"scepter_bonus_radius"					"150"
 				"RequiresScepter"	"1"
 			}
-			"08"
+			"09"
 			{
 				"var_type"					"FIELD_INTEGER"
 				"scepter_stun_percentage"	"50"
@@ -34798,7 +34729,7 @@
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"850"
-		"AbilityCastPoint"				"0.3"
+		"AbilityCastPoint"				"0.15"
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -35305,7 +35236,7 @@
 			"07"
 			{
 				"var_type"							"FIELD_FLOAT"
-				"attack_speed"						"1.2"
+				"attack_speed"						"1.1"
 			}
 			"08"
 			{
@@ -35385,7 +35316,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"counter_duration"			"10"
+				"counter_duration"			"7 8 9 10"
 			}
 			"03"
 			{
@@ -35395,7 +35326,7 @@
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_damage"				"60 90 120 150"
+				"bonus_damage"				"40 70 100 130"
 				"LinkedSpecialBonus"		"special_bonus_unique_monkey_king_2"
 			}
 			"05"
@@ -35979,7 +35910,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"return_travel_speed"	"500"
+				"return_travel_speed"	"600"
 			}
 			"05"
 			{
@@ -36090,11 +36021,12 @@
 			{
 				"var_type"				"FIELD_FLOAT"
 				"stun_duration"			"1.75 2.25 2.75 3.25"
+				"LinkedSpecialBonus"			"special_bonus_unique_dark_willow_6"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"stun_radius"			"325"
+				"stun_radius"			"360"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
@@ -36420,6 +36352,7 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"movespeed_bonus_pct"	"12 14 16 18"
+				"LinkedSpecialBonus"		"special_bonus_unique_grimstroke_6"
 			}
 			"03"
 			{
@@ -36809,7 +36742,7 @@
 			"05"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"formation_time"	"0.6"
+				"formation_time"	"0.3"
 			}
 			"06"
 			{
@@ -36904,7 +36837,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"value"					"2"
+				"value"					"3"
 				"ad_linked_ability"			"mars_spear"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -37295,7 +37228,7 @@
 			"09"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"charge_restore_time"		"16"
+				"charge_restore_time"		"18"
 				"RequiresScepter"			"1"
 			}
 			"10"
@@ -37591,9 +37524,14 @@
 			"07"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"point_blank_range"			"450"
+				"attack_slow_pct"			"100"
 			}
 			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"point_blank_range"			"450"
+			}
+			"09"
 			{
 				"var_type"					"FIELD_FLOAT"
 				"point_blank_dmg_bonus_pct"	"50.0"
@@ -38046,7 +37984,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage"					"35 50 65 80"
+				"damage"					"20 40 60 80"
 			}
 			"02"
 			{
@@ -38076,12 +38014,12 @@
 			"07"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"attack_speed_slow_per_stack"	"15 20 25 30"
+				"armor_reduction_per_attack"	"1"
 			}
 			"08"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"slow_duration"				"3.0"
+				"armor_duration"				"4.0"
 			}
 		}
 	}
@@ -38234,8 +38172,30 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"value"				"48"
+				"value"				"60"
 				"ad_linked_ability"			"snapfire_scatterblast"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Snapfire Special Bonus (Bonus Scatterblast Damage)
+	//=================================================================================================================
+	"special_bonus_unique_snapfire_8"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"500"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"value"				"3"
+				"ad_linked_ability"			"snapfire_lil_shredder"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -44324,7 +44284,7 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"80"
+		"AbilityCooldown"				"90"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -44614,7 +44574,7 @@
 			"03"
 			{
 				"var_type"						"FIELD_FLOAT"
-				"duration"						"50"
+				"duration"						"45"
 			}
 			"04"
 			{
@@ -48436,6 +48396,29 @@
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
+	"special_bonus_agility_and_intelligence_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"489"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"6"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
 	"special_bonus_intelligence_6"
 	{
 		// General
@@ -50642,6 +50625,52 @@
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
+	"special_bonus_attack_damage_16"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"487"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"16"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_attack_damage_18"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"488"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"18"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
 	"special_bonus_attack_damage_20"
 	{
 		// General
@@ -51148,6 +51177,29 @@
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
+	"special_bonus_attack_base_damage_20"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"496"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"20"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
 	"special_bonus_attack_base_damage_25"
 	{
 		// General
@@ -51210,6 +51262,29 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"value"				"45"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_attack_base_damage_50"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"548"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"50"
 			}
 		}
 	}
@@ -51440,6 +51515,29 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"value"				"300"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_attack_range_325"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"584"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"325"
 			}
 		}
 	}
@@ -51953,6 +52051,29 @@
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
+	"special_bonus_spell_amplify_9"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"511"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"9"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
 	"special_bonus_spell_amplify_10"
 	{
 		// General
@@ -52222,6 +52343,29 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"value"				"12"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_cooldown_reduction_14"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"568"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"14"
 			}
 		}
 	}
@@ -53547,6 +53691,31 @@
 		}
 	}
 
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_clockwerk_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"502"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"1"
+				"ad_linked_ability"			"rattletrap_power_cogs"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
@@ -53589,7 +53758,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"10"
+				"value"				"15"
 				"ad_linked_ability"			"omniknight_degen_aura"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -53613,7 +53782,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"6.5"
+				"value"				"3"
 				"ad_linked_ability"			"omniknight_repel"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -53694,6 +53863,30 @@
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
+	"special_bonus_unique_omniknight_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"501"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"60"
+				"ad_linked_ability"			"omniknight_guardian_angel"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
 	"special_bonus_unique_centaur_1"
 	{
 		// General
@@ -53757,7 +53950,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"70"
+				"value"				"50"
 				"ad_linked_ability"			"centaur_return"						// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -53964,6 +54157,30 @@
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
+	"special_bonus_unique_witch_doctor_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"555"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"15"
+				"ad_linked_ability"			"witch_doctor_maledict"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
 	"special_bonus_unique_necrophos"
 	{
 		// General
@@ -53979,7 +54196,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"2"
+				"value"				"2.5"
 				"ad_linked_ability"			"necrolyte_death_pulse"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -54123,7 +54340,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"45"
+				"value"				"50"
 				"ad_linked_ability"			"antimage_mana_void"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -54231,7 +54448,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"65"
+				"value"				"75"
 				"ad_linked_ability"			"mirana_leap"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -54384,6 +54601,30 @@
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
+	"special_bonus_unique_bounty_hunter_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"484"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"40"
+				"ad_linked_ability"			"bounty_hunter_jinada"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
 	"special_bonus_unique_queen_of_pain"
 	{
 		// General
@@ -54519,8 +54760,56 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"20"
+				"value"				"15"
 				"ad_linked_ability"			"abyssal_underlord_firestorm"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_underlord_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"556"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"3"
+				"ad_linked_ability"			"abyssal_underlord_firestorm"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_underlord_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"557"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"75"
+				"ad_linked_ability"			"abyssal_underlord_pit_of_malice"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -54567,7 +54856,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"28"
+				"value"				"30"
 				"ad_linked_ability"			"pudge_rot"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -54671,6 +54960,30 @@
 				"var_type"					"FIELD_INTEGER"
 				"value2"				"2" // ticks
 				"ad_linked_ability"			"pudge_dismember"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_pudge_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"507"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"80"
+				"ad_linked_ability"			"pudge_meat_hook"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -55038,6 +55351,54 @@
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
+	"special_bonus_unique_razor_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"567"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"15"
+				"ad_linked_ability"			"razor_unstable_current"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_razor_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"586"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"1"
+				"ad_linked_ability"			"razor_eye_of_the_storm"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
 	"special_bonus_unique_visage_1"
 	{
 		// General
@@ -55347,7 +55708,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"2.5"
+				"value"				"4"
 				"ad_linked_ability"			"lich_frost_shield"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -55372,6 +55733,54 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"value"				"1"
+				"ad_linked_ability"			"lich_chain_frost"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_lich_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"530"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"60"
+				"ad_linked_ability"			"lich_frost_nova"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_lich_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"531"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"100"
 				"ad_linked_ability"			"lich_chain_frost"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -55419,7 +55828,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"80"
+				"value"				"15"
 				"ad_linked_ability"			"rubick_fade_bolt"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -55500,6 +55909,30 @@
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
+	"special_bonus_unique_rubick_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"518"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"0"
+				"ad_linked_ability"			"rubick_fade_bolt"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
 	"special_bonus_unique_sven"
 	{
 		// General
@@ -55539,7 +55972,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"32"
+				"value"				"50"
 				"ad_linked_ability"			"sven_gods_strength"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -55707,8 +56140,56 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"100"
+				"value"				"75"
 				"ad_linked_ability"			"dark_seer_ion_shell"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_dark_seer_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"513"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"400"
+				"ad_linked_ability"			"dark_seer_ion_shell"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_dark_seer_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"560"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"25"
+				"ad_linked_ability"			"dark_seer_wall_of_replica"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -55755,7 +56236,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"24"
+				"value"				"30"
 				"ad_linked_ability"			"dazzle_shadow_wave"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -55803,7 +56284,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"0.4"
+				"value"				"0.5"
 				"ad_linked_ability"			"dazzle_bad_juju"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -55875,7 +56356,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"320"
+				"value"				"340"
 				"ad_linked_ability"			"shadow_shaman_ether_shock"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -55922,8 +56403,8 @@
 		{
 			"01"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"4"
+				"var_type"					"FIELD_FLOAT"
+				"value"				"4.5"
 				"ad_linked_ability"			"shadow_shaman_voodoo"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -55947,7 +56428,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"100"
+				"value"				"140"
 				"ad_linked_ability"			"shadow_shaman_shackles"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -56115,7 +56596,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"160"
+				"value"				"200"
 				"ad_linked_ability"			"vengefulspirit_magic_missile"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -56260,6 +56741,30 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"value"				"1"
+				"ad_linked_ability"			"vengefulspirit_command_aura"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_vengeful_spirit_8"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"493"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"100"
 				"ad_linked_ability"			"vengefulspirit_command_aura"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -56427,7 +56932,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"12"
+				"value"				"15"
 				"ad_linked_ability"			"venomancer_plague_ward"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -56667,7 +57172,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"2.5"
+				"value"				"1.0"
 				"ad_linked_ability"			"leshrac_lightning_storm"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -56717,6 +57222,54 @@
 				"var_type"					"FIELD_INTEGER"
 				"value"				"1"
 				"ad_linked_ability"			"leshrac_diabolic_edict"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_leshrac_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"509"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"40"
+				"ad_linked_ability"			"leshrac_split_earth"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_leshrac_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"516"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"175"
+				"ad_linked_ability"			"leshrac_lightning_storm"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -56844,6 +57397,30 @@
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
+	"special_bonus_unique_jakiro_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"526"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"	
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"1"
+				"ad_linked_ability"			"jakiro_ice_path"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
 	"special_bonus_unique_enigma"
 	{
 		// General
@@ -56859,7 +57436,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"6"
+				"value"				"5"
 				"ad_linked_ability"			"enigma_demonic_conversion"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -56985,8 +57562,56 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"0.25"
+				"value"				"0.35"
 				"ad_linked_ability"			"enigma_malefice"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_enigma_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"520"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"135"
+				"ad_linked_ability"			"enigma_demonic_conversion"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_enigma_8"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"521"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"4"
+				"ad_linked_ability"			"enigma_midnight_pulse"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -57129,7 +57754,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"2"
+				"value"				"3"
 				"ad_linked_ability"			"nevermore_necromastery"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -57249,7 +57874,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"4"
+				"value"				"6"
 				"ad_linked_ability"			"templar_assassin_refraction"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -57495,7 +58120,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"8"
+				"value"				"6"
 				"ad_linked_ability"			"crystal_maiden_brilliance_aura"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -57519,7 +58144,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"2"
+				"value"				"3"
 				"ad_linked_ability"			"crystal_maiden_crystal_nova"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -57615,7 +58240,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"16"
+				"value"				"30"
 				"ad_linked_ability"			"doom_bringer_scorched_earth"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -57687,7 +58312,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"3"
+				"value"				"2"
 				"ad_linked_ability"			"doom_bringer_doom"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -57783,7 +58408,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"140"
+				"value"				"120"
 				"ad_linked_ability"			"brewmaster_drunken_brawler"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -57975,7 +58600,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"15"
+				"value"				"25"
 				"ad_linked_ability"			"furion_wrath_of_nature"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -58125,7 +58750,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"14"
+				"value"				"18"
 				"ad_linked_ability"			"phoenix_icarus_dive"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -58318,7 +58943,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"8"
+				"value"				"10"
 				"ad_linked_ability"			"batrider_flamebreak"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -58342,8 +58967,32 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"2.0"
+				"value"				"1.0"
 				"ad_linked_ability"			"batrider_flamebreak"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_batrider_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"512"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"5"
+				"ad_linked_ability"			"batrider_sticky_napalm"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -58655,7 +59304,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"85"
+				"value"				"110"
 				"ad_linked_ability"			"kunkka_tidebringer"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -58981,8 +59630,14 @@
 		{
 			"01"
 			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"1.3"
+				"ad_linked_ability"			"invoker_chaos_meteor"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+			"02"
+			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"50"
+				"value_tooltip"				"30"
 				"ad_linked_ability"			"invoker_chaos_meteor"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -59198,7 +59853,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"340"
+				"value"				"375"
 				"ad_linked_ability"			"abaddon_death_coil"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -59270,7 +59925,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"350"
+				"value"				"400"
 				"ad_linked_ability"			"alchemist_unstable_concoction"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -59318,7 +59973,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"40"
+				"value"				"50"
 				"ad_linked_ability"			"alchemist_chemical_rage"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -59471,6 +60126,30 @@
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
+	"special_bonus_unique_axe_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"562"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"150"
+				"ad_linked_ability"			"axe_counter_culling_blade"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
 	"special_bonus_unique_beastmaster"
 	{
 		// General
@@ -59486,7 +60165,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"80"
+				"value"				"100"
 				"ad_linked_ability"			"beastmaster_wild_axes"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -59567,6 +60246,30 @@
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
+	"special_bonus_unique_beastmaster_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"506"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"200"
+				"ad_linked_ability"			"beastmaster_call_of_the_wild_hawk"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
 	"special_bonus_unique_clinkz_1"
 	{
 		// General
@@ -59582,7 +60285,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"12"
+				"value"				"25"
 				"ad_linked_ability"			"clinkz_searing_arrows"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -59711,6 +60414,132 @@
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
+	"special_bonus_unique_clinkz_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"494"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"50"
+				"ad_linked_ability"			"clinkz_strafe"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_clinkz_8"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"495"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"50"
+				"ad_linked_ability"			"clinkz_death_pact"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value2"				"5"
+				"ad_linked_ability"			"clinkz_death_pact"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_clinkz_9"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"554"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"1"
+				"ad_linked_ability"			"clinkz_wind_walk"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_clinkz_10"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"523"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"10"
+				"ad_linked_ability"			"clinkz_wind_walk"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_clinkz_11"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"583"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"0"
+				"ad_linked_ability"			"clinkz_death_pact"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
 	"special_bonus_unique_juggernaut"
 	{
 		// General
@@ -59774,7 +60603,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"100"
+				"value"				"140"
 				"ad_linked_ability"			"juggernaut_blade_fury"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -59798,7 +60627,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"80"
+				"value"				"100"
 				"ad_linked_ability"			"juggernaut_blade_fury"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -60182,7 +61011,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"350"
+				"value"				"275"
 				"ad_linked_ability"			"faceless_void_time_walk"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -60278,7 +61107,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"					"1.2"
+				"value"					"1.75"
 				"ad_linked_ability"			"faceless_void_time_walk"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -60352,6 +61181,54 @@
 				"var_type"					"FIELD_FLOAT"
 				"value"				"3"
 				"ad_linked_ability"			"night_stalker_void"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_night_stalker_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"505"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"45"
+				"ad_linked_ability"			"night_stalker_void"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_night_stalker_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"503"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"7"
+				"ad_linked_ability"			"night_stalker_hunter_in_the_night"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -60614,7 +61491,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"1"
+				"value"				"3"
 				"ad_linked_ability"			"ursa_earthshock"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -60806,7 +61683,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"1.5"
+				"value"				"1"
 				"ad_linked_ability"			"chaos_knight_chaos_bolt"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -60832,6 +61709,30 @@
 				"var_type"					"FIELD_FLOAT"
 				"value"				"8"
 				"ad_linked_ability"			"chaos_knight_phantasm"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_chaos_knight_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"510"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"10"
+				"ad_linked_ability"			"chaos_knight_chaos_strike"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -61288,6 +62189,54 @@
 				"var_type"					"FIELD_INTEGER"
 				"value"				"4"
 				"ad_linked_ability"			"phantom_lancer_doppelwalk"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_phantom_lancer_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"563"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"1"
+				"ad_linked_ability"			"phantom_lancer_spirit_lance"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_phantom_lancer_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"564"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"4"
+				"ad_linked_ability"			"phantom_lancer_juxtapose"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -61815,7 +62764,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"24"
+				"value"				"30"
 				"ad_linked_ability"			"tidehunter_kraken_shell"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -62064,6 +63013,30 @@
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
+	"special_bonus_unique_tiny_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"558"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"3"
+				"ad_linked_ability"			"tiny_tree_grab"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
 	"special_bonus_unique_troll_warlord"
 	{
 		// General
@@ -62127,7 +63100,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"70"
+				"value"				"90"
 				"ad_linked_ability"			"troll_warlord_whirling_axes"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -62156,6 +63129,31 @@
 			}
 		}
 	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_troll_warlord_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"492"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"5"
+				"ad_linked_ability"			"troll_warlord_fervor"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
 
 	//=================================================================================================================
 	// Ability: Special Bonus
@@ -62199,7 +63197,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"2"
+				"value"				"2.0"
 				"ad_linked_ability"			"undying_decay"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -62784,6 +63782,30 @@
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
+	"special_bonus_unique_lifestealer_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"499"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"4"
+				"ad_linked_ability"			"life_stealer_open_wounds"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
 	"special_bonus_reincarnation_200"
 	{
 		// General
@@ -63003,6 +64025,54 @@
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
+	"special_bonus_unique_lion_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"540"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"2"
+				"ad_linked_ability"			"lion_impale"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_lion_8"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"541"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"20"
+				"ad_linked_ability"			"lion_finger_of_death"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
 	"special_bonus_unique_skywrath"
 	{
 		// General
@@ -63018,7 +64088,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"7"
+				"value"				"8"
 				"ad_linked_ability"			"skywrath_mage_ancient_seal"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -63140,6 +64210,30 @@
 				"var_type"					"FIELD_INTEGER"
 				"value"				"1"
 				"ad_linked_ability"			"skywrath_mage_arcane_bolt"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_skywrath_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"519"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"250"
+				"ad_linked_ability"			"skywrath_mage_ancient_seal"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -63378,7 +64472,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"20"
+				"value"				"30"
 				"ad_linked_ability"			"silencer_curse_of_the_silent"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -63498,7 +64592,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"15"
+				"value"				"20"
 				"ad_linked_ability"			"silencer_curse_of_the_silent"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -63522,7 +64616,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"6"
+				"value"				"8"
 				"ad_linked_ability"			"death_prophet_exorcism"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -63546,7 +64640,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"2.5"
+				"value"				"3"
 				"ad_linked_ability"			"death_prophet_carrion_swarm"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -63666,7 +64760,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"30"
+				"value"				"35"
 				"ad_linked_ability"			"phantom_assassin_blur"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -63692,6 +64786,78 @@
 				"var_type"					"FIELD_INTEGER"
 				"value"				"100"
 				"ad_linked_ability"			"phantom_assassin_coup_de_grace"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_phantom_assassin_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"491"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"						"1"
+				"ad_linked_ability"			"phantom_assassin_stifling_dagger"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_phantom_assassin_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"490"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"350"
+				"ad_linked_ability"			"phantom_assassin_phantom_strike"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_phantom_assassin_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"559"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"						"1"
+				"ad_linked_ability"			"phantom_assassin_stifling_dagger"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -64002,7 +65168,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"6"
+				"value"				"8"
 				"ad_linked_ability"			"tusk_snowball"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -64266,7 +65432,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"100"
+				"value"				"140"
 				"ad_linked_ability"			"magnataur_shockwave"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -64410,8 +65576,32 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"40"
+				"value"				"50"
 				"ad_linked_ability"			"drow_ranger_wave_of_silence"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_drow_ranger_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"486"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"6"
+				"ad_linked_ability"			"drow_ranger_multishot"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -64894,7 +66084,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"0.8"
+				"value"				"1.0"
 				"ad_linked_ability"			"oracle_purifying_flames"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -64927,6 +66117,30 @@
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
+	"special_bonus_unique_oracle_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"544"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"1.5"
+				"ad_linked_ability"			"oracle_fortunes_end"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
 	"special_bonus_unique_sand_king"
 	{
 		// General
@@ -64942,7 +66156,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"2"
+				"value"				"4"
 				"ad_linked_ability"			"sandking_epicenter"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -65038,8 +66252,56 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"25"
+				"value"				"20"
 				"ad_linked_ability"			"sandking_epicenter"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_sand_king_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"497"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"8"
+				"ad_linked_ability"			"sandking_caustic_finale"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_sand_king_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"498"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"2"
+				"ad_linked_ability"			"sandking_burrowstrike"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -65302,8 +66564,32 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"3.5"
+				"value"				"4"
 				"ad_linked_ability"			"slardar_slithereen_crush"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_slardar_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"504"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"-4"
+				"ad_linked_ability"			"slardar_amplify_damage"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -65350,7 +66636,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"24"
+				"value"				"30"
 				"ad_linked_ability"			"lina_fiery_soul"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 			"02"
@@ -65452,7 +66738,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"65"
+				"value"				"70"
 				"ad_linked_ability"			"ancient_apparition_chilling_touch"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -65572,7 +66858,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"140"
+				"value"				"175"
 				"ad_linked_ability"			"ancient_apparition_chilling_touch"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -65620,7 +66906,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"3"
+				"value"				"2"
 				"ad_linked_ability"			"disruptor_kinetic_field"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -65725,6 +67011,36 @@
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
+	"special_bonus_unique_disruptor_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"517"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"1.5"
+				"ad_linked_ability"			"disruptor_static_storm"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value2"				"6"
+				"ad_linked_ability"			"disruptor_static_storm"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
 	"special_bonus_unique_gyrocopter_1"
 	{
 		// General
@@ -65788,7 +67104,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"12"
+				"value"				"16"
 				"ad_linked_ability"			"gyrocopter_rocket_barrage"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -66109,6 +67425,30 @@
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
+	"special_bonus_unique_keeper_of_the_light_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"527"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"4"
+				"ad_linked_ability"			"keeper_of_the_light_chakra_magic"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
 	"special_bonus_unique_legion_commander"
 	{
 		// General
@@ -66124,7 +67464,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"32"
+				"value"				"30"
 				"ad_linked_ability"			"legion_commander_duel"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -66220,7 +67560,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"275"
+				"value"				"400"
 				"ad_linked_ability"			"legion_commander_press_the_attack"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -66244,7 +67584,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"4"
+				"value"				"6"
 				"ad_linked_ability"			"legion_commander_overwhelming_odds"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -66316,7 +67656,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"0.85"
+				"value"				"0.75"
 				"ad_linked_ability"			"puck_dream_coil"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -66388,7 +67728,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"350"
+				"value"				"300"
 				"ad_linked_ability"			"puck_waning_rift"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -66580,7 +67920,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"6"
+				"value"				"8"
 				"ad_linked_ability"			"shredder_reactive_armor"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -66652,7 +67992,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"60"
+				"value"				"75"
 				"ad_linked_ability"			"bloodseeker_blood_bath"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -66702,6 +68042,30 @@
 				"var_type"					"FIELD_INTEGER"
 				"value"				"14"
 				"ad_linked_ability"			"bloodseeker_thirst"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_bloodseeker_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"482"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"30"
+				"ad_linked_ability"			"bloodseeker_bloodrage"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -66772,7 +68136,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"100"
+				"value"				"80"
 				"ad_linked_ability"			"broodmother_spawn_spiderlings"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -66796,7 +68160,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"25"
+				"value"				"18"
 				"ad_linked_ability"			"broodmother_spawn_spiderlings"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -67206,7 +68570,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"-0.15"
+				"value"				"-0.1"
 				"ad_linked_ability"			"lone_druid_spirit_bear"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -67646,7 +69010,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"325"
+				"value"				"350"
 				"ad_linked_ability"			"arc_warden_flux"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -67790,7 +69154,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"80"
+				"value"				"100"
 				"ad_linked_ability"			"monkey_king_jingu_mastery"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -67862,7 +69226,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"325"
+				"value"				"400"
 				"ad_linked_ability"			"monkey_king_tree_dance"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -68169,6 +69533,54 @@
 	}
 
 	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_dark_willow_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"514"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"value"				"2"
+				"ad_linked_ability"			"dark_willow_shadow_realm"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_dark_willow_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"515"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"value"				"0.4"
+				"ad_linked_ability"			"dark_willow_cursed_crown"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
 	// Ability: Special Bonus - +200 Ink Swell Radius
 	//=================================================================================================================
 	"special_bonus_unique_grimstroke_1"
@@ -68234,7 +69646,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"value"					"650"
+				"value"					"800"
 				"ad_linked_ability"			"grimstroke_dark_artistry"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -68283,6 +69695,30 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"value"					"80"
+				"ad_linked_ability"			"grimstroke_spirit_walk"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus - Phantom's Embrace Rend Damage
+	//=================================================================================================================
+	"special_bonus_unique_grimstroke_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"508"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"value"					"20"
 				"ad_linked_ability"			"grimstroke_spirit_walk"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}

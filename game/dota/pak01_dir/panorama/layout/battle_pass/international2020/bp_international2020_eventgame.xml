@@ -93,7 +93,6 @@
 					<Panel id="AghanimsLogo">
 						<DOTAScenePanel id="AghanimsLogoFX" camera="shot_cameraA" map="scenes/battlepass_ti10/aghslogofx" particleonly="true"/>
 					</Panel>
-
 					<Panel id="ModeButtonContainer">
 						<TextButton id="StandardModeButton" class="ModeButton" text="#DOTA_TI10_EventGame_StandardMode" onactivate="DOTATI10EventGameSetStandardMode()" />
 						<Panel id="ModeButtonDivider" />
@@ -177,14 +176,17 @@
 							</Countdown>-->
 
 							<!-- Learn More Button -->
-							<TextButton id="TextLink" text="#DOTA_TI10_EventGame_Learn_More" onactivate="BrowserGoToURL( https://www.dota2.com/aghanim )"/>
+							<TextButton class="TextLink" text="#DOTA_TI10_EventGame_Learn_More" onactivate="BrowserGoToURL( https://www.dota2.com/aghanim )"/>
+
+							<!-- Patch Notes -->
+							<TextButton id="PatchNotes" class="TextLink" text="#DOTA_TI10_EventGame_PatchNotes" onactivate="BrowserGoToURL( https://www.dota2.com/patches )"/>
 						</Panel>
 							
 						<!-- Challenge Mode -->
 						<Panel id="ChallengeGameModeContainer">
 							<Countdown id="ChallengeModeCountdownLong">
-								<Label id="ChallengeModeCountdownTimerLong" text="#DOTA_TI10_EventGame_ChallengeModeCountdownTimerShort" />
-								<Label id="ChallengeModeActiveTimerLong" text="#DOTA_TI10_EventGame_ChallengeModeCountdownTimerShort" />
+								<Label id="ChallengeModeCountdownTimerLong" text="#DOTA_TI10_EventGame_ChallengeModeCountdownTimerLong" />
+								<Label id="ChallengeModeActiveTimerLong" text="#DOTA_TI10_EventGame_ChallengeModeActiveTimerLong" />
 							</Countdown>
 
 							<Panel class="TrialsDesc">
@@ -709,8 +711,8 @@
 						<Panel id="LeaderboardTab4" class="LeaderboardTab" onactivate="DOTATI10EventGameSetActiveLeaderboardTab( 4 )">
 							<Label id="LeaderboardTabLabel4" text="#DOTA_TI10_EventGame_LeaderboardTabLabel"/>
 						</Panel>
-						<Button id="RefreshButtonIcon" class="ControlIconButton RefreshButton" onactivate="DOTATI10EventGameLeaderboardRefresh()"/>
 						<Button class="ControlIconButton ForwardButton" onactivate="DOTATI10EventGameLeaderboardTimeChange(1)"/>
+						<Button id="RefreshButtonIcon" class="ControlIconButton RefreshButton" onactivate="DOTATI10EventGameLeaderboardRefresh()"/>
 					</Panel>
 
 					<!--<Panel id="LeaderboardPlaceholder">
@@ -721,7 +723,7 @@
 					<Panel class="LeaderboardContainer">
 						<Panel id="LeaderboardWindow1" class="LeaderboardList"/>
 						<Countdown id="LeaderboardCountdown" class="CompetitionCountdown SectionHeaderTimer">
-							<Label id="WindowCountdownTimer" text="#DOTA_TI10_EventGame_WindowCountdownTimer" />
+							<Label id="WindowCountdownTimer" html="true" text="#DOTA_TI10_EventGame_WindowCountdownTimer" />
 						</Countdown>
 						<Label id="ComingSoonLabel" text="#DOTA_TI10_EventGame_ComingSoon" />
 					</Panel>
@@ -729,7 +731,7 @@
 					<Panel class="LeaderboardContainer">
 						<Panel id="LeaderboardWindow2" class="LeaderboardList"/>
 						<Countdown id="LeaderboardCountdown" class="CompetitionCountdown SectionHeaderTimer">
-							<Label id="WindowCountdownTimer" text="#DOTA_TI10_EventGame_WindowCountdownTimer" />
+							<Label id="WindowCountdownTimer" html="true" text="#DOTA_TI10_EventGame_WindowCountdownTimer" />
 						</Countdown>
 						<Label id="ComingSoonLabel" text="#DOTA_TI10_EventGame_ComingSoon" />
 					</Panel>
@@ -737,7 +739,7 @@
 					<Panel class="LeaderboardContainer">
 						<Panel id="LeaderboardWindow3" class="LeaderboardList"/>
 						<Countdown id="LeaderboardCountdown" class="CompetitionCountdown SectionHeaderTimer">
-							<Label id="WindowCountdownTimer" text="#DOTA_TI10_EventGame_WindowCountdownTimer" />
+							<Label id="WindowCountdownTimer" html="true" text="#DOTA_TI10_EventGame_WindowCountdownTimer" />
 						</Countdown>
 						<Label id="ComingSoonLabel" text="#DOTA_TI10_EventGame_ComingSoon" />
 					</Panel>
@@ -745,7 +747,7 @@
 					<Panel class="LeaderboardContainer">
 						<Panel id="LeaderboardWindow4" class="LeaderboardList"/>
 						<Countdown id="LeaderboardCountdown" class="CompetitionCountdown SectionHeaderTimer">
-							<Label id="WindowCountdownTimer" text="#DOTA_TI10_EventGame_WindowCountdownTimer" />
+							<Label id="WindowCountdownTimer" html="true" text="#DOTA_TI10_EventGame_WindowCountdownTimer" />
 						</Countdown>
 						<Label id="ComingSoonLabel" text="#DOTA_TI10_EventGame_ComingSoon" />
 					</Panel>
@@ -753,7 +755,7 @@
 					<Panel class="LeaderboardContainer">
 						<Panel id="LeaderboardWindow5" class="LeaderboardList"/>
 						<Countdown id="LeaderboardCountdown" class="CompetitionCountdown SectionHeaderTimer">
-							<Label id="WindowCountdownTimer" text="#DOTA_TI10_EventGame_WindowCountdownTimer" />
+							<Label id="WindowCountdownTimer" html="true" text="#DOTA_TI10_EventGame_WindowCountdownTimer" />
 						</Countdown>
 						<Label id="ComingSoonLabel" text="#DOTA_TI10_EventGame_ComingSoon" />
 					</Panel>

@@ -33697,7 +33697,7 @@
 	"TI10_EventGame_AscensionName_3"								"Великий маг"
 	"TI10_EventGame_ChallengeName"									"Режим испытания"
 	"TI10_EventGame_ChallengeName_Title"							"Испытание Аганима"
-	"TI10_EventGame_ChallengeName_Countdown"						"{t:d:EventGameCountdownTime}"
+	"TI10_EventGame_ChallengeName_Countdown"						"{t:d:t:T:EventGameCountdownTime}"
 	"MMGameMode_CoachesNotAllowed"									"В этом режиме игры тренеры запрещены."
 
 	"TI10_EventGame_BlessingStoreIntro_Title"						"Открыть магазин даров"
@@ -33753,6 +33753,7 @@
 	"DOTA_TI10_EventGame_Blessing_Fragments_Earned"					"Волшебных фрагментов у вас"
 	"DOTA_TI10_EventGame_Learn_More"								"Подробнее о лабиринте Аганима"
 	"DOTA_TI10_EventGame_Blessing_Progress"							"{d:event_game_num_claimed_blessings} / 40 даров открыто"
+	"DOTA_TI10_EventGame_PatchNotes"								"Версия 1.00"
 
 	"DOTA_TI10_EventGame_Blessings_ConfirmPurchase_Title"			"Покупка дара"
 	"DOTA_TI10_EventGame_Blessings_ConfirmPurchase_Body"			"Вы уверены, что хотите потратить %s2 волшебных осколков на дар «%s1»?"
@@ -33874,6 +33875,10 @@
 	"DOTA_TI10_EventGame_CurrentAscension"							"Текущее вознесение"
 	"DOTA_TI10_EventGame_DeepestJourney"							"Лучший результат: {d:max_ascension_level_depth_completed} комнат"
 
+	"DOTA_TI10_EventGame_BestTimedRun"								"Лучшее: {s:best_run_time}"
+	"DOTA_TI10_EventGame_BestTimedRunRel"							"({s:best_rel_run_time})"
+	"DOTA_TI10_EventGame_NewPersonalBest"							"Лучший личный результат"
+
 	"DOTA_TI10_EventGame_BPForWin"									"+{d:points_for_win} ОЧКОВ ЗА ПОБЕДУ"
 	"DOTA_TI10_EventGame_BPDailyBonus"								"+{d:daily_bonus_bp} доп. очков за ежедневный бонус (действует только на первую победу за день)"
 	"DOTA_TI10_EventGame_BPForLoss"									"+{d:points_for_loss} ОЧКОВ ЗА ПОРАЖЕНИЕ"
@@ -33889,8 +33894,8 @@
 	"DOTA_TI10_EventGame_ChallengeMode"								"Испытание Аганима"
 	"DOTA_TI10_EventGame_ChallengeModeCountdownTimerShort"			"{t:d:t:T:countdown_time}"
 	"DOTA_TI10_EventGame_ChallengeModeCountdownTimerLong"			"До начала испытания {t:d:t:T:countdown_time}"
-	"DOTA_TI10_EventGame_WindowCountdownTimer"						"До начала испытания {t:d:t:T:countdown_time}"
-	"DOTA_TI10_EventGame_ChallengeModeActiveTimerShort"				"{t:d:t:T:countdown_time}"
+	"DOTA_TI10_EventGame_WindowCountdownTimer"						"До начала испытания<br>{t:d:t:T:countdown_time}"
+	"DOTA_TI10_EventGame_ChallengeModeActiveTimerShort"				"{t:d:t:T:countdown_time} осталось"
 	"DOTA_TI10_EventGame_ChallengeModeActiveTimerLong"				"До конца испытания {t:d:t:T:countdown_time}"
 
 	"DOTA_TI10_EventGame_Lore"										"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
@@ -34499,10 +34504,10 @@
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_glimpse_cast_aoe_Description"					"Радиус области применения Glimpse увеличен на %value%."
 
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_glimpse_hit_on_arrival"						"Blast In The Past"
-	"DOTA_Tooltip_ability_aghsfort_special_disruptor_glimpse_hit_on_arrival_Description"			"Когда завершается перемещение жертвы Glimpse, она и все враги в радиусе %hit_radius% от неё получают урон, равный базовому урону атаки Disruptor."
+	"DOTA_Tooltip_ability_aghsfort_special_disruptor_glimpse_hit_on_arrival_Description"			"Когда завершается перемещение жертвы Glimpse, она и все враги в радиусе %hit_radius% от неё получают урон, равный %int_pct%%% от интеллекта Disruptor."
 	   	
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_glimpse_travel_damage"							"Shocking Travel"
-	"DOTA_Tooltip_ability_aghsfort_special_disruptor_glimpse_travel_damage_Description"				"Цель Glimpse при возвращении получает урон, равный %value%%% базового урона атаки героя за каждые 75 единиц преодолённого расстояния."
+	"DOTA_Tooltip_ability_aghsfort_special_disruptor_glimpse_travel_damage_Description"				"Цель Glimpse при возвращении получает урон, равный %value%%% от интеллекта Disruptor за каждые 75 единиц преодолённого расстояния."
 	   	
 	   	
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_kinetic_field_instant_setup" 					"Insta-wall"
@@ -34512,7 +34517,7 @@
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_kinetic_field_damage_Description" 				"Все враги внутри барьера Kinetic Field каждые 0,5 секунды получают урон, равный %value%%% базового урона атаки Disruptor."
 
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_kinetic_field_allied_heal" 					"Area of Bliss"
-	"DOTA_Tooltip_ability_aghsfort_special_disruptor_kinetic_field_allied_heal_Description" 		"Союзники, находящиеся в барьере Kinetic Field, каждую секунду восстанавливают %value%%% от максимального запаса здоровья."
+	"DOTA_Tooltip_ability_aghsfort_special_disruptor_kinetic_field_allied_heal_Description" 		"Союзники внутри Kinetic Field каждые 0,5 секунд восстанавливают здоровье, равное %value%%% от интеллекта Disruptor."
 
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_kinetic_field_allied_attack_buff"				"Stay in the Zone"
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_kinetic_field_allied_attack_buff_Description" 	"Союзники, находящиеся в барьере Kinetic Field, получают +%value% к скорости атаки."
@@ -34524,7 +34529,7 @@
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_static_storm_kinetic_field_on_cast_Description"	"При применении Static Storm, вокруг него автоматически создаётся барьер Kinetic Field."
 
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_static_storm_crits_on_attacks"					"Field of Dreams"
-	"DOTA_Tooltip_ability_aghsfort_special_disruptor_static_storm_crits_on_attacks_Description" 	"Атаки по врагам, попавшим в Static Storm, наносят %value%%% критического урона."
+	"DOTA_Tooltip_ability_aghsfort_special_disruptor_static_storm_crits_on_attacks_Description" 	"Все атаки по врагам, находящимся под действием Static Storm, имеют шанс в %crit_chance%%% нанести %crit_damage%%% критического урона."
 
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_static_storm_damage_reduction"					"Pacific Storm"
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_static_storm_damage_reduction_Description" 	"Все враги, попавшие в Static Storm, наносят на %damage_reduction_pct%%% меньше урона."	   	
@@ -34666,7 +34671,7 @@
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_multicookie"						"Baker's Dozen"
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_multicookie_Description"		"Герой бросает печеньки всем целям в радиусе %value% от основной. Прыжок вперёд совершает только выбранное существо, а остальные лишь подпрыгивают на месте."
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_enemytarget"						"Raisin Firesnaps"
-	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_enemytarget_Description"			"Печеньку можно скормить противнику, заставив его подпрыгнуть на месте и получить урон."
+	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_enemytarget_Description"			"Firesnap Cookie можно скормить противнику, заставив его подпрыгнуть на месте и получить урон от способности дважды."
 
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_allied_buff"						"Freshly Baked"
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_allied_buff_Description"			"Печенька на %buff_duration% сек. даёт союзнику +%bonus_attack_range% к дальности атаки (только для дальнего боя) и +%bonus_attack_damage% к урону от атак."
@@ -34870,8 +34875,8 @@
 	"aghsfort_tusk_tag_team_flat_debuff_duration"				"+{s:value} сек. длительности ауры {s:ability_name}"
 	"aghsfort_tusk_walrus_punch_pct_cooldown"					"–{s:value}% перезарядки {s:ability_name}"
 	"aghsfort_tusk_walrus_punch_pct_mana_cost"					"–{s:value}% расхода маны на {s:ability_name}"
-	"aghsfort_tusk_walrus_punch_flat_crit_multiplier"			"+{s:value} критическому урону от {s:ability_name}"
-	"aghsfort_tusk_walrus_punch_pct_crit_multiplier"				"+{s:value}% критическому урону от {s:ability_name}"
+	"aghsfort_tusk_walrus_punch_flat_crit_multiplier"			"+{s:value} к критическому урону от {s:ability_name}"
+	"aghsfort_tusk_walrus_punch_pct_crit_multiplier"				"+{s:value}% к критическому урону от {s:ability_name}"
 	"aghsfort_tusk_walrus_punch_flat_slow_duration"				"+{s:value} сек. замедления от {s:ability_name}"
 	"aghsfort_tusk_walrus_punch_flat_move_slow"					"+{s:value}% к замедлению от {s:ability_name}"
 	"aghsfort_tusk_walrus_punch_flat_air_time"					"+{s:value} сек. в воздухе от {s:ability_name}"
@@ -34940,7 +34945,7 @@
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_apply_fury_swipes_Description"	"На жертв Earthshock накладывается один эффект Fury Swipes."
 
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_knockback"				"Cannonball"
-	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_knockback_Description"	"Earthshock отталкивает врагов на расстояние в %value%."
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_knockback_Description"	"Earthshock оглушает противников на %value3% сек. и отталкивает на расстояние в %value% единиц."
 
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_miss_chance"				"Blunt Their Claws"
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_miss_chance_Description"	"Жертвы Earthshock промахиваются атаками с шансом в %value%%%."
@@ -34971,6 +34976,10 @@
 
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_enrage_magic_immunity"				"Protect the Cubs"
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_enrage_magic_immunity_Description"	"Enrage даёт невосприимчивость к магии всем союзникам в радиусе %value%."
+
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_enrage_allies"						"Protect the Cubs"
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_enrage_allies_Description"			"Enrage также действует на союзников в радиусе %value%."
+
 
 	"DOTA_Tooltip_modifier_aghsfort_ursa_enrage_magic_immunity"					"Protect the Cubs"
 	"DOTA_Tooltip_modifier_aghsfort_ursa_enrage_magic_immunity_Description"		"Это существо невосприимчиво к магии."
@@ -35128,7 +35137,7 @@
 	"aghsfort_sniper_shrapnel_flat_radius"				"+{s:value} к радиусу {s:ability_name}"
 	"aghsfort_sniper_shrapnel_percent_cooldown"			"–{s:value}% времени восст. заряда {s:ability_name}"
 	"aghsfort_sniper_shrapnel_percent_mana_cost"		"–{s:value}% расхода маны на {s:ability_name}"
-	"aghsfort_sniper_shrapnel_flat_slow_movement_speed"	"+{s:value}% к замедлению передвижения от {s:ability_name}"
+	"aghsfort_sniper_shrapnel_flat_slow_movement_speed"	"{s:value}% скорости передвижения врагов от {s:ability_name}"
 	"aghsfort_sniper_shrapnel_duration"					"+{s:value} сек. действия {s:ability_name}"
 
 	"aghsfort_sniper_headshot_flat_damage"				"+{s:value} к урону от {s:ability_name}"
@@ -35222,6 +35231,8 @@
 	"DOTA_Tooltip_ability_aghsfort_special_mars_gods_rebuke_full_circle_Description"			"God's Rebuke наносит урон во все стороны."
 	"DOTA_Tooltip_ability_aghsfort_special_mars_gods_rebuke_stun_Description"				"God's Rebuke оглушает врагов на %value% сек."
 	"DOTA_Tooltip_ability_aghsfort_special_mars_gods_rebuke_strength_buff_Description"		"Применяя God's Rebuke, герой на %buff_duration% сек. получает %strength_gain% силы за каждого задетого врага."
+	"DOTA_Tooltip_modifier_aghsfort_special_mars_gods_rebuke_strength_buff"  				"Strong Argument"
+	"DOTA_Tooltip_modifier_aghsfort_special_mars_gods_rebuke_strength_buff_Description"		"Получает дополнительную силу за каждого врага, задетого способностью God's Rebuke."
 
 	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_counter_rebuke"		"Bulwark Counter"
 	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_healing"		"Bulwark Healing"
@@ -35237,7 +35248,7 @@
 
 	"DOTA_Tooltip_ability_aghsfort_special_mars_arena_of_blood_fear"		"Arena of Fear"
 	"DOTA_Tooltip_ability_aghsfort_special_mars_arena_of_blood_global"		"Remote Workplace"
-	"DOTA_Tooltip_ability_aghsfort_special_mars_arena_of_blood_attack_buff"		"Coliseum"
+	"DOTA_Tooltip_ability_aghsfort_special_mars_arena_of_blood_attack_buff"		"Colosseum"
 	"DOTA_Tooltip_ability_aghsfort_special_mars_arena_of_blood_outside_perimeter"	"Anyway, Here's Spearwall"
 
 
@@ -35253,7 +35264,7 @@
 	"aghsfort_mars_spear_flat_knockback_distance"			"+{s:value} к дальности отталкивания у {s:ability_name}"
 	"aghsfort_mars_gods_rebuke_percent_manacost"			"–{s:value}% к расходу маны на {s:ability_name}"
 	"aghsfort_mars_gods_rebuke_percent_cooldown"			"–{s:value}% перезарядки {s:ability_name}"
-	"aghsfort_mars_gods_rebuke_flat_crit_mult"				 "+{s:value} критическому урону от {s:ability_name}"
+	"aghsfort_mars_gods_rebuke_flat_crit_mult"				 "+{s:value} к критическому урону от {s:ability_name}"
 	"aghsfort_mars_gods_rebuke_flat_knockback_slow_duration" "+{s:value} сек. замедления от {s:ability_name}"
 	"aghsfort_mars_bulwark_damage_reduction_front"			"+{s:value} к снижению урона спереди от {s:ability_name}"
 	"aghsfort_mars_bulwark_damage_reduction_sides"			"+{s:value} к снижению урона сбоку от {s:ability_name}"
@@ -35460,7 +35471,7 @@
 
 
 	"DOTA_Tooltip_ability_aghsfort_special_weaver_swarm_allies_Description"								"Жуки от The Swarm могут цепляться за союзников, излечивая их и увеличивая броню."
-	"DOTA_Tooltip_ability_aghsfort_special_weaver_swarm_explosion_Description"							"Если убить жука от The Swarm, то он взорвётся и нанесёт всем врагам в радиусе %value% столько же урона, сколько он нанёс своей жертве."
+	"DOTA_Tooltip_ability_aghsfort_special_weaver_swarm_explosion_Description"							"Если убить жука от The Swarm, то он взорвётся, и все враги в радиусе %value% получат %damage_pct%%% от урона, нанесённого жуком."
 	"DOTA_Tooltip_ability_aghsfort_special_weaver_swarm_damage_transfer_Description"					"%value%%% урона жуков от The Swarm также наносится ближайшим героям под действием этой способности."
 
 	"DOTA_Tooltip_ability_aghsfort_special_weaver_geminate_attack_splitshot_Description"				"Дополнительные атаки от Geminate Attack действуют на %attack_count% доп. целей в радиусе, равном дальности атаки героя + %bonus_range%."
@@ -35501,7 +35512,7 @@
 	// WEAVER ABILITY UPGRADES END
 	//--------------------------------------------------------------------------------------------------------------	
 		
-	"DOTA_Tooltip_Ability_aghsfort_minor_stats_upgrade"					"Улучшение "
+	"DOTA_Tooltip_Ability_aghsfort_minor_stats_upgrade"					"Upgrade "
 	"DOTA_Tooltip_Ability_aghsfort_minor_stats_upgrade_Description"		"Улучшает базовые характеристики вашего героя: здоровье, броню, урон от атак и так далее."
 	//"DOTA_Tooltip_Ability_aghsfort_minor_stats_upgrade_bonus_strength"		"STR:"
 	//"DOTA_Tooltip_Ability_aghsfort_minor_stats_upgrade_bonus_agility"		"AGI:"
@@ -35562,7 +35573,7 @@
 	"DOTA_Tooltip_ability_aghsfort_omniknight_repel_Description"				"Создаёт вокруг цели божественный щит, который увеличивает её силу и <font color='#70EA72'>сопротивление урону</font>.\n\nТИП РАЗВЕИВАНИЯ: сильное"
 	"DOTA_Tooltip_ability_aghsfort_omniknight_repel_Lore"						"Оказавшись у ямы жертвоприношений, Ревнитель показал свою стойкость к магии."
 	"DOTA_Tooltip_ability_aghsfort_omniknight_repel_duration"					"ДЛИТЕЛЬНОСТЬ:"
-	"DOTA_Tooltip_ability_aghsfort_omniknight_repel_damage_reduction"			"<font color='#70EA72'>СОПРОТИВЛЕНИЕ УРОНУ:</font>:"
+	"DOTA_Tooltip_ability_aghsfort_omniknight_repel_damage_reduction"			"<font color='#70EA72'>СОПРОТИВЛЕНИЕ УРОНУ</font>:"
 	"DOTA_Tooltip_ability_aghsfort_omniknight_repel_bonus_str"					"ДОПОЛНИТЕЛЬНАЯ СИЛА:"
 	"DOTA_Tooltip_ability_aghsfort_omniknight_repel_hp_regen"					"ВОССТАНОВЛЕНИЕ ЗДОРОВЬЯ:"
 
@@ -35580,13 +35591,13 @@
 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_repel_outgoing_damage_Description"		"Heavenly Grace увеличивает весь урон, наносимый целью, на %value%%%."
 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_repel_applies_degen_aura_Description"		"Цель Heavenly Grace получает ауру способности Degen Aura текущего уровня."
 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_repel_damage_instance_refraction_Description"		"Heavenly Grace блокирует любой получаемый целью урон до %damage_instances% раз."
-	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_repel_knockback_on_cast_Description"		"Применение Heavenly Grace отталкивает врагов в радиусе %knockback_radius% от цели и наносит им урон, равный базовому урону героя."
+	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_repel_knockback_on_cast_Description"		"Применение Heavenly Grace отталкивает врагов в радиусе %knockback_radius% от цели и наносит им урон, равный %knockback_damage_pct%%% от базового урона Omniknight."
 
 
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_toggle"							"Righteous Path"
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_damage"							"Condemnation"
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_restoration"						"Absolution"
- 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_toggle_Description"				"Degen Aura также действует на союзников, ускоряя их атаку и передвижение."
+ 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_toggle_Description"				"Degen Aura действует на союзников, увеличивая скорость их передвижения и атаки на %value%%% от соответствующих замедлений Degen Aura."
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_damage_Description"				"Degen Aura каждые %damage_interval% сек. наносит врагам урон, равный %attack_damage_pct%%% от базового урона героя."
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_restoration_Description"			"Каждый раз, когда в радиусе действия Degen Aura погибает враг, Omniknight восстанавливает %value%%% от макс. запаса здоровья и маны."
 
@@ -35597,7 +35608,7 @@
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_guardian_angel_single_target_dummy"				"Personal Savior"
 
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_guardian_angel_purification_Description"				"Каждый раз, когда существо под действием Guardian Angel атакуют, оно с шансом в %purification_trigger_chance%%% будет излечено способностью Purification текущего уровня."
- 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_guardian_angel_immune_flight_Description"				"Guardian Angel даёт полную защиту от магии и беспрепятственное передвижение."
+ 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_guardian_angel_immune_flight_Description"				"Guardian Angel даёт беспрепятственное передвижение и +%value%%% к сопротивлению магии."
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_guardian_angel_single_target_Description"				"Omniknight получает новую способность, позволяющую применять Guardian Angel текущего уровня на одну цель. Расход маны на эту способность меньше на %mana_cost_modifier%%%."
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_guardian_angel_single_target_dummy_Description"				"Omniknight получает новую способность, позволяющую применять Guardian Angel текущего уровня на одну цель. Расход маны на эту способность меньше на %mana_cost_modifier%%%."
 
@@ -35615,6 +35626,7 @@
 
  	"aghsfort_omniknight_purification_flat_heal"						"+{s:value} к лечению/урону от {s:ability_name}"
  	"aghsfort_omniknight_purification_flat_radius"						"+{s:value} к радиусу {s:ability_name}"
+ 	"aghsfort_omniknight_purification_flat_cast_range"						"+{s:value} к дальности применения {s:ability_name}"
  	"aghsfort_omniknight_degen_aura_flat_radius"						"+{s:value} к радиусу {s:ability_name}"
  	"aghsfort_omniknight_degen_aura_flat_move_speed_bonus"				"+{s:value}% к замедлению передвижения от {s:ability_name}"
  	"aghsfort_omniknight_degen_aura_flat_attack_speed_bonus"			"+{s:value} к замедлению атаки от {s:ability_name}"
@@ -35708,7 +35720,7 @@
   		"DOTA_Tooltip_ability_aghsfort_special_witch_doctor_maledict_affects_allies"						"Strange Boon"
   		"DOTA_Tooltip_ability_aghsfort_special_witch_doctor_maledict_affects_allies_Description"			"Maledict действует и на союзников: %value%%% от урона способности лечит союзников, а также они периодически излечиваются в зависимости от количества полученного урона."
   		"DOTA_Tooltip_ability_aghsfort_special_witch_doctor_maledict_infectious"							"Infectious Malady"
-  		"DOTA_Tooltip_ability_aghsfort_special_witch_doctor_maledict_infectious_Description"				"Каждое срабатывание способности Maledic накладывает её на врагов в радиусе %value%."
+  		"DOTA_Tooltip_ability_aghsfort_special_witch_doctor_maledict_infectious_Description"				"Каждое срабатывание способности Maledict накладывает её на врагов в радиусе %value%."
   		 
   		"DOTA_Tooltip_ability_aghsfort_special_witch_doctor_voodoo_restoration_enemy_damage"				"Hocus-Pocus"
   		"DOTA_Tooltip_ability_aghsfort_special_witch_doctor_voodoo_restoration_enemy_damage_Description"	"Аура Voodoo Restoration действует и на врагов, нанося им урон, равный лечению способности."
@@ -35751,7 +35763,7 @@
  	"aghsfort_witch_doctor_paralyzing_cask_manacost"				"–{s:value}% расхода маны на {s:ability_name}"
  	"aghsfort_witch_doctor_voodoo_restoration_flat_heal"			"+{s:value} к лечению от {s:ability_name}"
  	"aghsfort_witch_doctor_voodoo_restoration_flat_radius"			"+{s:value} к радиусу {s:ability_name}"
- 	"aghsfort_witch_doctor_voodoo_restoration_manacost"				"–{s:value}% расхода маны на {s:ability_name}"
+ 	"aghsfort_witch_doctor_voodoo_restoration_manacost"				"{s:value}% расхода маны на {s:ability_name}"
 	"aghsfort_witch_doctor_voodoo_restoration_mul_heal_interval"	"{s:value} сек. интервала лечения от {s:ability_name}"
 
 
@@ -35761,8 +35773,13 @@
 	//--------------------------------------------------------------------------------------------------------------
 	// ABILITY UPGRADE END
 	//--------------------------------------------------------------------------------------------------------------
-
-
+	
+	"#DOTA_RP_PLAYING_EVENT_MATCH_2020"	 "В лабиринте: {%param0%}, глубина {%param1%}"
+	"#DOTA_EventGameName_International2020"	"Лабиринт Аганима"
+	"#DOTA_EventGameDifficulty_International2020_0" 	"Ученик"
+	"#DOTA_EventGameDifficulty_International2020_1" 	"Чародей"
+	"#DOTA_EventGameDifficulty_International2020_2" 	"Заклинатель"
+	"#DOTA_EventGameDifficulty_International2020_3" 	"Великий маг"
 	//END TI10 EVENT GAME
 
 	}

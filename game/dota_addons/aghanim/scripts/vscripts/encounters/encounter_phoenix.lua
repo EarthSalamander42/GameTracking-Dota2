@@ -22,18 +22,18 @@ function CMapEncounter_Phoenix:constructor( hRoom, szEncounterName )
 	{
 		{
 			Time = 3,
-			Count = 1,
-		},
-		{
-			Time = 23,
 			Count = 2,
 		},
 		{
-			Time = 43,
+			Time = 21,
 			Count = 2,
 		},
 		{
-			Time = 63,
+			Time = 39,
+			Count = 2,
+		},
+		{
+			Time = 57,
 			Count = 2,
 		},
 	}
@@ -45,15 +45,15 @@ function CMapEncounter_Phoenix:constructor( hRoom, szEncounterName )
 			Count = 1,
 		},
 		{
-			Time = 23,
+			Time = 21,
 			Count = 1,
 		},
 		{
-			Time = 43,
+			Time = 39,
 			Count = 1,
 		},
 		{
-			Time = 63,
+			Time = 57,
 			Count = 2,
 		},
 	}
@@ -130,7 +130,7 @@ function CMapEncounter_Phoenix:OnSpawnerFinished( hSpawner, hSpawnedUnits )
 		return
 	end
 
-	if hSpawner.szSpawnerName == self.szPortal then
+	if hSpawner.szSpawnerName == self.szEmberPortal or hSpawner.szSpawnerName == self.szPhoenixPortal then
 		if hSpawner.schedule then
 			local nCurrentValue = self:GetEncounterObjectiveProgress( "survive_waves" )
 			self:UpdateEncounterObjective( "survive_waves", nCurrentValue + 1, nil )

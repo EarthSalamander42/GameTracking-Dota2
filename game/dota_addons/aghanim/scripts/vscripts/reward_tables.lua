@@ -61,24 +61,24 @@ _G.ENCOUNTER_DEPTH_GOLD_REWARD =
 _G.ENCOUNTER_DEPTH_BATTLE_POINTS =
 {
 	0, --1
-	20, --2
-	20,	--3
-	20, --4
-	20, --5
-	40, --6  120
+	25, --2
+	25,	--3
+	25, --4
+	25, --5
+	50, --6  120
 	0, 	--7
-	20, --8
-	20, --9
-	20, --10
-	20, --11
+	25, --8
+	25, --9
+	25, --10
+	25, --11
 	0, --12
-	40, --13 240
+	50, --13 240
 	0, --14
-	20, --15
-	20, --16
-	20, --17
+	25, --15
+	25, --16
+	25, --17
 	0, --18
-	40, --19 340
+	50, --19 340
 }
 
 _G.BATTLE_POINT_DIFFICULTY_MODIFIERS =
@@ -89,8 +89,8 @@ _G.BATTLE_POINT_DIFFICULTY_MODIFIERS =
 	1.3
 }
 
-_G.BATTLE_POINT_MIN_DROP_VALUE = 10
-_G.BATTLE_POINT_MAX_DROP_VALUE = 20
+_G.BATTLE_POINT_MIN_DROP_VALUE = 15
+_G.BATTLE_POINT_MAX_DROP_VALUE = 30
 
 _G.ARCANE_FRAGMENT_ROOM_CLEAR_VALUE = 0.5
 _G.ARCANE_FRAGMENT_DROP_VALUE = 0.5
@@ -257,7 +257,7 @@ _G.PRICED_ITEM_REWARD_LIST =
 	item_watchers_gaze = 4250,
 	item_guardian_shell = 4250,
 
-	item_force_boots = 4500,
+	
 	item_ex_machina = 4500,
 	item_mirror_shield = 4750,
 	item_wand_of_the_brine = 4750,
@@ -265,7 +265,8 @@ _G.PRICED_ITEM_REWARD_LIST =
 
 	item_treads_of_ermacor = 5000,
 	item_demonicon = 5000,
-	item_slippers_of_the_abyss = 5000,
+	item_force_boots = 5500,
+	item_slippers_of_the_abyss = 5500,
 	item_apex = 6000,
 	item_desolator_2 = 6000,
 }

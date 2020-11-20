@@ -33694,6 +33694,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_TI10_EventGame_Blessing_Fragments_Earned"					"Arcane Fragments Owned"
 	"DOTA_TI10_EventGame_Learn_More"								"Learn More about Aghanim's Labyrinth"
 	"DOTA_TI10_EventGame_Blessing_Progress"							"{d:event_game_num_claimed_blessings} / 40 Blessings Unlocked"
+	"DOTA_TI10_EventGame_PatchNotes"								"Patch Notes 1.00"
 
 	"DOTA_TI10_EventGame_Blessings_ConfirmPurchase_Title"			"Confirm Blessing Purchase"
 	"DOTA_TI10_EventGame_Blessings_ConfirmPurchase_Body"			"Are you sure you want to spend %s2 Arcane Fragments on the \"%s1\" Blessing?"
@@ -33815,6 +33816,10 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_TI10_EventGame_CurrentAscension"							"Current Ascension"
 	"DOTA_TI10_EventGame_DeepestJourney"							"Furthest Journey: {d:max_ascension_level_depth_completed} Rooms"
 
+	"DOTA_TI10_EventGame_BestTimedRun"								"Best: {s:best_run_time}"
+	"DOTA_TI10_EventGame_BestTimedRunRel"							"({s:best_rel_run_time})"
+	"DOTA_TI10_EventGame_NewPersonalBest"							"Personal Best Run"
+
 	"DOTA_TI10_EventGame_BPForWin"									"+{d:points_for_win} PER WIN"
 	"DOTA_TI10_EventGame_BPDailyBonus"								"+{d:daily_bonus_bp} Additional Points Per Win with Daily Bonus Active (Max 1 Token Per Day)"
 	"DOTA_TI10_EventGame_BPForLoss"									"+{d:points_for_loss} PER LOSS"
@@ -33830,8 +33835,8 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_TI10_EventGame_ChallengeMode"								"Aghanim's Trials"
 	"DOTA_TI10_EventGame_ChallengeModeCountdownTimerShort"			"In {t:d:t:T:countdown_time}"
 	"DOTA_TI10_EventGame_ChallengeModeCountdownTimerLong"			"Competition Begins in {t:d:t:T:countdown_time}"
-	"DOTA_TI10_EventGame_WindowCountdownTimer"						"Competition Window Opens in {t:d:t:T:countdown_time}"
-	"DOTA_TI10_EventGame_ChallengeModeActiveTimerShort"				"{t:d:t:T:countdown_time}"
+	"DOTA_TI10_EventGame_WindowCountdownTimer"						"Competition Window Opens in<br>{t:d:t:T:countdown_time}"
+	"DOTA_TI10_EventGame_ChallengeModeActiveTimerShort"				"{t:d:t:T:countdown_time} Left"
 	"DOTA_TI10_EventGame_ChallengeModeActiveTimerLong"				"Competition Window Active for {t:d:t:T:countdown_time}"
 
 	"DOTA_TI10_EventGame_Lore"										"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
@@ -34440,10 +34445,10 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_glimpse_cast_aoe_Description"					"Increases glimpse cast area by %value%"
 
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_glimpse_hit_on_arrival"						"Blast In The Past"
-	"DOTA_Tooltip_ability_aghsfort_special_disruptor_glimpse_hit_on_arrival_Description"			"When enemies arrive at their final destination, Disruptor's Base Attack damage is dealt in a %hit_radius% radius around them."
+	"DOTA_Tooltip_ability_aghsfort_special_disruptor_glimpse_hit_on_arrival_Description"			"When enemies arrive at their final destination, %int_pct%%% of Disruptor's Intelligence is dealt in a %hit_radius% radius around them."
 	   	
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_glimpse_travel_damage"							"Shocking Travel"
-	"DOTA_Tooltip_ability_aghsfort_special_disruptor_glimpse_travel_damage_Description"				"Deals %value%%% of Disruptor's Base Attack Damage for every 75 units of distance the enemy has been glimpsed, over the course of the glimpse duration"
+	"DOTA_Tooltip_ability_aghsfort_special_disruptor_glimpse_travel_damage_Description"				"Deals %value%%% of Disruptor's Intelligence for every 75 units of distance the enemy has been glimpsed, over the course of the glimpse duration"
 	   	
 	   	
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_kinetic_field_instant_setup" 					"Insta-wall"
@@ -34453,7 +34458,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_kinetic_field_damage_Description" 				"Kinetic Field deals %value%%% of Disruptor's Base Attack Damage to enemies trapped inside every 0.5 seconds."
 
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_kinetic_field_allied_heal" 					"Area of Bliss"
-	"DOTA_Tooltip_ability_aghsfort_special_disruptor_kinetic_field_allied_heal_Description" 		"Allies inside the kinetic field regenerate %value%%% of their Max Health per second."
+	"DOTA_Tooltip_ability_aghsfort_special_disruptor_kinetic_field_allied_heal_Description" 		"Allies inside the kinetic field heal %value%%% of Disruptor's Intelligence every 0.5 seconds."
 
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_kinetic_field_allied_attack_buff"				"Stay in the Zone"
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_kinetic_field_allied_attack_buff_Description" 	"Kinetic Field increases allied attack speed by %value%."
@@ -34465,7 +34470,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_static_storm_kinetic_field_on_cast_Description"	"Static Storm automatically creates a Kinetic Field on cast."
 
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_static_storm_crits_on_attacks"					"Field of Dreams"
-	"DOTA_Tooltip_ability_aghsfort_special_disruptor_static_storm_crits_on_attacks_Description" 	"All attacks on the affected enemies will crit for %value% damage."
+	"DOTA_Tooltip_ability_aghsfort_special_disruptor_static_storm_crits_on_attacks_Description" 	"All attacks on the affected enemies have a %crit_chance%%% chance to crit for %crit_damage%%% damage."
 
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_static_storm_damage_reduction"					"Pacific Storm"
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_static_storm_damage_reduction_Description" 	"All enemies caught in Static Storm deal %damage_reduction_pct%%% less damage."	   	
@@ -34607,7 +34612,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_multicookie"						"Baker's Dozen"
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_multicookie_Description"		"Snapfire gives Firesnaps to all targets in a %value% area around her main target. Only the main target hops forward, secondary targets hop in place."
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_enemytarget"						"Raisin Firesnaps"
-	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_enemytarget_Description"			"Firesnaps can now be given to enemies, launching them in the air and damaging them."
+	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_enemytarget_Description"			"Firesnaps can now be given to enemies, launching them in the air and damaging them. The enemy that ate the cookie gets damaged twice."
 
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_allied_buff"						"Freshly Baked"
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_allied_buff_Description"			"Firesnaps give allies %bonus_attack_range% Bonus Attack Range (ranged only) and %bonus_attack_damage% Attack Damage for %buff_duration% seconds."
@@ -34881,7 +34886,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_apply_fury_swipes_Description"	"Earthshock applies Fury Swipes to all enemies hit."
 
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_knockback"				"Cannonball"
-	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_knockback_Description"	"Earthshock applies %value% knockback."
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_knockback_Description"	"Earthshock applies %value% knockback and stuns for %value3% seconds."
 
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_miss_chance"				"Blunt Their Claws"
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_miss_chance_Description"	"Earthshock applies %value%%% miss chance."
@@ -34912,6 +34917,10 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_enrage_magic_immunity"				"Protect the Cubs"
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_enrage_magic_immunity_Description"	"Enrage provides magic immunity to allies within %value% radius."
+
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_enrage_allies"						"Protect the Cubs"
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_enrage_allies_Description"			"Enrage also provides all enrage benefits to allies within %value% radius."
+
 
 	"DOTA_Tooltip_modifier_aghsfort_ursa_enrage_magic_immunity"					"Protect the Cubs"
 	"DOTA_Tooltip_modifier_aghsfort_ursa_enrage_magic_immunity_Description"		"This unit is magic immune."
@@ -35180,7 +35189,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 
 	"DOTA_Tooltip_ability_aghsfort_special_mars_arena_of_blood_fear"		"Arena of Fear"
 	"DOTA_Tooltip_ability_aghsfort_special_mars_arena_of_blood_global"		"Remote Workplace"
-	"DOTA_Tooltip_ability_aghsfort_special_mars_arena_of_blood_attack_buff"		"Coliseum"
+	"DOTA_Tooltip_ability_aghsfort_special_mars_arena_of_blood_attack_buff"		"Colosseum"
 	"DOTA_Tooltip_ability_aghsfort_special_mars_arena_of_blood_outside_perimeter"	"Anyway, Here's Spearwall"
 
 
@@ -35403,7 +35412,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 
 
 	"DOTA_Tooltip_ability_aghsfort_special_weaver_swarm_allies_Description"								"Beetles attach to allies, healing them and increasing their armor for the values of the base ability."
-	"DOTA_Tooltip_ability_aghsfort_special_weaver_swarm_explosion_Description"							"When a Beetle is killed, it explodes in a %value% radius, dealing damage equal to the damage it already dealt to it's target."
+	"DOTA_Tooltip_ability_aghsfort_special_weaver_swarm_explosion_Description"							"When a Beetle is killed, it explodes in a %value% radius, dealing damage equal to %damage_pct%%% of the damage it already dealt to it's target."
 	"DOTA_Tooltip_ability_aghsfort_special_weaver_swarm_damage_transfer_Description"					"All enemies affected by the Swarm transfer %value%%% of damage dealt to other affected units in their vicinity"
 
 	"DOTA_Tooltip_ability_aghsfort_special_weaver_geminate_attack_splitshot_Description"				"Weaver's additional attack hits an additional %attack_count% targets in Weaver's attack range + %bonus_range%."
@@ -35523,13 +35532,13 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_repel_outgoing_damage_Description"		"Heavenly Grace amplifies damage dealt by the affected unit by %value%%%."
 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_repel_applies_degen_aura_Description"		"A unit affected by Heavenly Grace also applies Omniknight's current level of Degen Aura around them."
 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_repel_damage_instance_refraction_Description"		"Heavenly Grace blocks %damage_instances% instances of damage on the targeted ally."
-	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_repel_knockback_on_cast_Description"		"Heavenly Grace knocks back enemies within %knockback_radius% of the target on cast, and deals damage equal to Omniknight's base attack to the affected enemies."
+	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_repel_knockback_on_cast_Description"		"Heavenly Grace knocks back enemies within %knockback_radius% of the target on cast, and deals damage equal to %knockback_damage_pct%%% of Omniknight's base attack to the affected enemies."
 
 
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_toggle"							"Righteous Path"
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_damage"							"Condemnation"
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_restoration"						"Absolution"
- 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_toggle_Description"				"Degen Aura also affects allies, increasing their movement and attack speeds."
+ 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_toggle_Description"				"Degen Aura also affects allies, increasing their movement and attack speeds by %value%%% of the Degen Aura values."
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_damage_Description"				"Degen Aura damages enemies in its area of effect for %attack_damage_pct%%% of Omniknight's base attack damage every %damage_interval% seconds."
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_restoration_Description"			"Enemy units that die within Degen Aura's area of effect restore %value%%% of Omniknight's max Health and Mana."
 
@@ -35540,7 +35549,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_guardian_angel_single_target_dummy"				"Personal Savior"
 
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_guardian_angel_purification_Description"				"Any time a unit affected by Guardian Angel is attacked, there is a %purification_trigger_chance% chance that the unit will be healed by Omniknight's current level of Purification."
- 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_guardian_angel_immune_flight_Description"				"Guardian Angel gives total magic immunity and flight for it's duration"
+ 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_guardian_angel_immune_flight_Description"				"Guardian Angel gives %value%%% magic resistance and flight for it's duration"
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_guardian_angel_single_target_Description"				"Omniknight gains a separate ability, allowing him to cast his current level of Guardian angel on a single target. Mana cost is reduced by %mana_cost_modifier% percent."
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_guardian_angel_single_target_dummy_Description"				"Omniknight gains a separate ability, allowing him to cast his current level of Guardian angel on a single target. Mana cost is reduced by %mana_cost_modifier% percent."
 
@@ -35558,6 +35567,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 
  	"aghsfort_omniknight_purification_flat_heal"						"+{s:value} {s:ability_name} Heal/Damage"
  	"aghsfort_omniknight_purification_flat_radius"						"+{s:value} {s:ability_name} Radius"
+ 	"aghsfort_omniknight_purification_flat_cast_range"						"+{s:value} {s:ability_name} Cast Range"
  	"aghsfort_omniknight_degen_aura_flat_radius"						"+{s:value} {s:ability_name} Radius"
  	"aghsfort_omniknight_degen_aura_flat_move_speed_bonus"				"-{s:value}% {s:ability_name} Movement Speed"
  	"aghsfort_omniknight_degen_aura_flat_attack_speed_bonus"			"-{s:value} {s:ability_name} Attack Speed"
@@ -35654,7 +35664,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
   		"DOTA_Tooltip_ability_aghsfort_special_witch_doctor_maledict_infectious_Description"				"Every time Maledict does a burst, it infects enemies in a %value% radius with the same level of Maledict."
   		 
   		"DOTA_Tooltip_ability_aghsfort_special_witch_doctor_voodoo_restoration_enemy_damage"				"Hocus-Pocus"
-  		"DOTA_Tooltip_ability_aghsfort_special_witch_doctor_voodoo_restoration_enemy_damage_Description"	"Voodoo Restoration effects enemies as well, dealing the the heal amount as damage."
+  		"DOTA_Tooltip_ability_aghsfort_special_witch_doctor_voodoo_restoration_enemy_damage_Description"	"Voodoo Restoration affects enemies as well, dealing the the heal amount as damage."
   		"DOTA_Tooltip_ability_aghsfort_special_witch_doctor_voodoo_restoration_lifesteal"					"Invigorating Charm"
   		"DOTA_Tooltip_ability_aghsfort_special_witch_doctor_voodoo_restoration_lifesteal_Description"		"Allies affected by Voodoo Restoration also gain %value%%% lifesteal."
   		"DOTA_Tooltip_ability_aghsfort_special_witch_doctor_voodoo_restoration_damage_amp"					"Cursed Aura"
@@ -35694,7 +35704,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
  	"aghsfort_witch_doctor_paralyzing_cask_manacost"				"-{s:value}% {s:ability_name} Mana Cost"
  	"aghsfort_witch_doctor_voodoo_restoration_flat_heal"			"+{s:value} {s:ability_name} Heal"
  	"aghsfort_witch_doctor_voodoo_restoration_flat_radius"			"+{s:value} {s:ability_name} Radius"
- 	"aghsfort_witch_doctor_voodoo_restoration_manacost"				"-{s:value}% {s:ability_name} Mana Cost"
+ 	"aghsfort_witch_doctor_voodoo_restoration_manacost"				"{s:value}% {s:ability_name} Mana Cost"
 	"aghsfort_witch_doctor_voodoo_restoration_mul_heal_interval"	"{s:value} {s:ability_name} Heal Interval"
 
 
@@ -35704,8 +35714,13 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	//--------------------------------------------------------------------------------------------------------------
 	// ABILITY UPGRADE END
 	//--------------------------------------------------------------------------------------------------------------
-
-
+	
+	"#DOTA_RP_PLAYING_EVENT_MATCH_2020"	 "In the Labyrinth - {%param0%} Depth {%param1%}"
+	"#DOTA_EventGameName_International2020"	"Aghanim's Labyrinth"
+	"#DOTA_EventGameDifficulty_International2020_0" 	"Apprentice"
+	"#DOTA_EventGameDifficulty_International2020_1" 	"Magician"
+	"#DOTA_EventGameDifficulty_International2020_2" 	"Sorcerer"
+	"#DOTA_EventGameDifficulty_International2020_3" 	"Grand Magnus"
 	//END TI10 EVENT GAME
 
 	}
