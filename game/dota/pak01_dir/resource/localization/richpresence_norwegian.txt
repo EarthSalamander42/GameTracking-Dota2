@@ -215,5 +215,16 @@
 "#DOTA_Guilds_message_level"	"Gildet har nådd nivå %param0%"
 "#DOTA_Guild_message_promoted"	"%target_persona% ble forfremmet til %guild_role% av %requester_persona%."
 "#DOTA_Guild_message_demoted"	"%target_persona% ble degradert til %guild_role% av %requester_persona%."
+"#dota_rp_playing_event_match_2020"	"Labyrint: {%param0%} (dybde %param1%)"
+"#DOTA_EventGameName_International2020"	"Aghanims labyrint"
+"#dota_eventgamedifficulty_international2020_0"	"Lærling"
+"#dota_eventgamedifficulty_international2020_1"	"Magiker"
+"#dota_eventgamedifficulty_international2020_2"	"Trollmann"
+"#dota_eventgamedifficulty_international2020_3"	"Stormagus"
+"#dota_eventgamedifficulty_international2020_4"	"Ypperstemagiker"
+"#DOTA_EventGameName_Diretide2020"	"Diretide"
+"#DOTA_RP_PLAYING_DIRETIDE_MATCH"	"Diretide: {%param1%} (runde %param0%)"
+"#npc_dota_hero_mars"	"Mars"
+"#DOTA_RP_PLAYING_DIRETIDE_MATCH_PREGAME"	"Diretide: Valg av helt"
 }
 }

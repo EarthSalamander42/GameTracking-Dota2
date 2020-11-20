@@ -86,7 +86,8 @@ enum EEvent {
 	EVENT_ID_NEW_BLOOM_2020 = 28;
 	EVENT_ID_INTERNATIONAL_2020 = 29;
 	EVENT_ID_TEAM_FANDOM = 30;
-	EVENT_ID_COUNT = 31;
+	EVENT_ID_DIRETIDE_2020 = 31;
+	EVENT_ID_COUNT = 32;
 }
 
 enum DOTALeaverStatus_t {
@@ -548,6 +549,14 @@ enum EDPCPushNotification {
 enum EEventActionScoreMode {
 	k_eEventActionScoreMode_Add = 0;
 	k_eEventActionScoreMode_Min = 1;
+}
+
+enum EDOTAReportMarkerType {
+	k_EDOTAReportMarkerType_Unknown = 0;
+	k_EDOTAReportMarkerType_Comms = 1;
+	k_EDOTAReportMarkerType_Scripting = 2;
+	k_EDOTAReportMarkerType_Feeding = 3;
+	k_EDOTAReportMarkerType_Suspicious = 4;
 }
 
 message CDOTAClientHardwareSpecs {

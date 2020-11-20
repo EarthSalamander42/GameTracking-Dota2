@@ -580,7 +580,6 @@
 		"DOTA_Tooltip_ability_witch_doctor_death_ward_Note2"							"Death Ward attacks once every 0.22 seconds."
 		"DOTA_Tooltip_ability_witch_doctor_death_ward_damage"							"DAMAGE:"
 		"DOTA_Tooltip_ability_witch_doctor_death_ward_attack_range_tooltip"				"ATTACK RANGE:"
-		"DOTA_Tooltip_ability_witch_doctor_death_ward_scepter_lifesteal"				"%LIFESTEAL:"
 		"DOTA_Tooltip_ability_witch_doctor_death_ward_aghanim_description"				"Death Ward attacks have True Strike and bounce between nearby enemies."
 		
 		"DOTA_Tooltip_modifier_voodoo_restoration_heal"					"Voodoo Restoration"
@@ -1183,7 +1182,7 @@
 
 		//BLOOD SEEKER
 		"DOTA_Tooltip_ability_bloodseeker_bloodrage"									"Bloodrage"
-		"DOTA_Tooltip_ability_bloodseeker_bloodrage_Description"						"Drives you into a bloodthirsty rage during which you attacks faster and deal more spell damage at the cost a percentage of your health per second. Provides half attack speed to allied heroes."
+		"DOTA_Tooltip_ability_bloodseeker_bloodrage_Description"						"Drives you into a bloodthirsty rage during which causes you to attack faster and deal more spell damage at the cost of a percentage of your health per second. Provides half attack speed to allied heroes."
 		"DOTA_Tooltip_ability_bloodseeker_bloodrage_Lore"								"Strygwyr shares his animalistic thirst for bloodshed."
 		"DOTA_Tooltip_ability_bloodseeker_bloodrage_Note0"								"Bloodrage can be cast on yourself or an enemy units."
 		"DOTA_Tooltip_ability_bloodseeker_bloodrage_duration"							"DURATION:"
@@ -2186,8 +2185,8 @@
 		"DOTA_Tooltip_modifier_sniper_assassinate_Description"		"Sniper's taking aim at your head!"
 		"DOTA_Tooltip_modifier_sniper_headshot_slow"		"Headshot Stop"
 		"DOTA_Tooltip_modifier_sniper_headshot_slow_Description" "Stopped by Sniper's headshot!"
-		"DOTA_Tooltip_modifier_sniper_take_aim"	"Take Aim"
-		"DOTA_Tooltip_modifier_sniper_take_aim_Description"	"Attack range doubled for one shot."
+		"DOTA_Tooltip_modifier_sniper_take_aim_bonus"	"Take Aim"
+		"DOTA_Tooltip_modifier_sniper_take_aim_bonus_Description"	"Attack range doubled for one shot."
 
 
 		//NECROLYTE
@@ -2528,7 +2527,7 @@
 		"DOTA_Tooltip_ability_pugna_nether_ward_attacks_to_destroy_tooltip"				"ATTACKS TO DESTROY:"
 		"DOTA_Tooltip_ability_pugna_nether_ward_abilityduration"						"WARD DURATION:"
 		"DOTA_Tooltip_ability_pugna_life_drain"											"Life Drain"
-		"DOTA_Tooltip_ability_pugna_life_drain_Description"								"CHANNELED - When cast on an enemy, Pugna drains health from the target enemy unit to heal himself and granting vision over the target. If Pugna has full HP, and the enemy target is a Hero, Life Drain will restore mana instead.\n\nWhen cast on an ally, Pugna will drain his own health into his ally."
+		"DOTA_Tooltip_ability_pugna_life_drain_Description"								"CHANNELED - When cast on an enemy, Pugna drains health from the target enemy unit to heal himself and grant vision over the target. If Pugna has full HP, and the enemy target is a Hero, Life Drain will restore mana instead.\n\nWhen cast on an ally, Pugna will drain his own health into his ally."
 		"DOTA_Tooltip_ability_pugna_life_drain_Lore"									"Pugna has truly become more powerful than even the grandmaster of Oblivion."
 		"DOTA_Tooltip_ability_pugna_life_drain_Note0"									"Health gained depends on the actual damage dealt."
 		"DOTA_Tooltip_ability_pugna_life_drain_Note1"									"Illusions are destroyed on the first tick of damage."
@@ -2766,11 +2765,10 @@
 		"DOTA_Tooltip_ability_dark_seer_ion_shell_duration"								"DURATION:"
 		"DOTA_Tooltip_ability_dark_seer_ion_shell_damage_per_second"					"DAMAGE PER SECOND:"
 		"DOTA_Tooltip_ability_dark_seer_surge"											"Surge"
-		"DOTA_Tooltip_ability_dark_seer_surge_Description"								"Charges a target friendly unit with power, giving it a brief burst of movement speed and removes unit collisions. Allows the unit to surpass the movement speed limit and cannot be slowed."
+		"DOTA_Tooltip_ability_dark_seer_surge_Description"								"Charges a target friendly unit with power, giving it a brief burst of movement speed and removes unit collisions. Allows the unit to reach maximum movement speed and cannot be slowed."
 		"DOTA_Tooltip_ability_dark_seer_surge_Lore"										"Ish'Kafel once used his speed of mind to navigate the maze between the walls."
 		"DOTA_Tooltip_ability_dark_seer_surge_Note0"									"Units with Surge cannot be slowed unless the Surge effect is removed."
 		"DOTA_Tooltip_ability_dark_seer_surge_duration"									"DURATION:"
-		"DOTA_Tooltip_ability_dark_seer_surge_speed_boost"								"SPEED BONUS:"
 		"DOTA_Tooltip_ability_dark_seer_wall_of_replica"								"Wall of Replica"
 		"DOTA_Tooltip_ability_dark_seer_wall_of_replica_Description"					"Raises a wall of warping light that slows and creates replicas of any enemy hero who crosses it. Enemy replicas serve at the Dark Seer's will. Replicas last until they are destroyed, or until the wall's duration ends."
 		"DOTA_Tooltip_ability_dark_seer_wall_of_replica_Lore"							"The Dark Seer, while unable to return to his natural realm, can channel part of the prismatic wall with powerful strength of mind, sowing confusion amongst enemy ranks."
@@ -2869,6 +2867,7 @@
 		"DOTA_Tooltip_ability_enchantress_enchant_abilityduration"						"HERO SLOW DURATION:"
 		"DOTA_Tooltip_ability_enchantress_enchant_dominate_duration"					"CREEP ENCHANT DURATION:"
 		"DOTA_Tooltip_ability_enchantress_enchant_enchant_health"						"CREEP MAX HEALTH BONUS:"
+		"DOTA_Tooltip_ability_enchantress_enchant_enchant_armor"						"CREEP ARMOR BONUS:"
 		"DOTA_Tooltip_ability_enchantress_enchant_enchant_damage"						"CREEP ATTACK DAMAGE BONUS:"
 		"DOTA_Tooltip_ability_enchantress_natures_attendants"							"Nature's Attendants"
 		"DOTA_Tooltip_ability_enchantress_natures_attendants_Description"				"A cloud of wisps heals Enchantress and any friendly units nearby. Lasts %abilityduration% seconds."
@@ -5319,12 +5318,13 @@
 
 		// MAGNATAUR
 		"DOTA_Tooltip_ability_magnataur_shockwave"								"Shockwave"
-		"DOTA_Tooltip_ability_magnataur_shockwave_Description"					"Magnus sends out a wave of force, damaging enemy units in a line, pulling them towards him and slowing them for %basic_slow_duration% seconds."
+		"DOTA_Tooltip_ability_magnataur_shockwave_Description"					"Magnus sends out a wave of force, damaging enemy units in a line, pulling them towards him and slowing them for a brief period."
 		"DOTA_Tooltip_ability_magnataur_shockwave_Lore"							"Mt. Joerlak was a somewhat unstable mass, and Magnus has learned to channel its reverberations."
 		"DOTA_Tooltip_ability_magnataur_shockwave_shock_damage"					"DAMAGE:"
 		"DOTA_Tooltip_ability_magnataur_shockwave_movement_slow"				"%MOVEMENT SLOW:"
+		"DOTA_Tooltip_ability_magnataur_shockwave_basic_slow_duration"				"SLOW DURATION:"
 		"DOTA_Tooltip_ability_magnataur_empower"								"Empower"
-		"DOTA_Tooltip_ability_magnataur_empower_Description"					"Gives an allied unit bonus damage and cleave on attack. Magnus receives %self_multiplier% times the bonus."
+		"DOTA_Tooltip_ability_magnataur_empower_Description"					"Gives an allied unit bonus damage and cleave on attack. Magnus receives %self_multiplier%%% larger bonus."
 		"DOTA_Tooltip_ability_magnataur_empower_Lore"							"With a deep bellow, Magnus displays his true power."
 		"DOTA_Tooltip_ability_magnataur_empower_Note0"							"The bonus damage is based only on base damage and damage from primary attributes."
 		"DOTA_Tooltip_ability_magnataur_empower_Note1"							"Cleave damage goes through spell immunity."
@@ -6801,7 +6801,7 @@
 		"DOTA_Tooltip_modifier_snapfire_lil_shredder_buff_Description"	"Attack speed increased by %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT% and applying attack speed reduction to the target on hit."
 
 		"DOTA_Tooltip_modifier_snapfire_lil_shredder_debuff"				"Lil' Shredder"
-		"DOTA_Tooltip_modifier_snapfire_lil_shredder_debuff_Description"	"This unit has reduced attack speed."
+		"DOTA_Tooltip_modifier_snapfire_lil_shredder_debuff_Description"	"This unit has reduced armor."
 
 		"DOTA_Tooltip_ability_snapfire_mortimer_kisses"					"Mortimer Kisses"
 		"DOTA_Tooltip_ability_snapfire_mortimer_kisses_Description"		"Snapfire's friend launches a barrage of firespit globs over %duration_tooltip% seconds. Globs cause impact damage and create pools of firespit, which slow and apply damage over time. Snapfire has a reduced turn rate for the duration and a minimum launch range of %min_range%. Each glob can be targeted with a right click."
@@ -7019,6 +7019,7 @@
 		"DOTA_Tooltip_ability_special_bonus_intelligence_25"	"+{s:value} Intelligence"
 		"DOTA_Tooltip_ability_special_bonus_intelligence_30"	"+{s:value} Intelligence"
 		"DOTA_Tooltip_ability_special_bonus_intelligence_35"	"+{s:value} Intelligence"
+		"DOTA_Tooltip_ability_special_bonus_intelligence_75"	"+{s:value} Intelligence"
 		"DOTA_Tooltip_ability_special_bonus_strength_3"			"+{s:value} Strength"
 		"DOTA_Tooltip_ability_special_bonus_strength_4"			"+{s:value} Strength"
 		"DOTA_Tooltip_ability_special_bonus_strength_5"			"+{s:value} Strength"
@@ -7110,6 +7111,7 @@
 		"DOTA_Tooltip_ability_special_bonus_attack_damage_250"	"+{s:value} Damage"
 		"DOTA_Tooltip_ability_special_bonus_attack_damage_251"	"+{s:value} Damage"
 		"DOTA_Tooltip_ability_special_bonus_attack_damage_400"	"+{s:value} Damage"
+		"DOTA_Tooltip_ability_special_bonus_attack_base_damage_15"	"+{s:value} Base Damage"
 		"DOTA_Tooltip_ability_special_bonus_attack_base_damage_20"	"+{s:value} Base Damage"
 		"DOTA_Tooltip_ability_special_bonus_attack_base_damage_25"	"+{s:value} Base Damage"
 		"DOTA_Tooltip_ability_special_bonus_attack_base_damage_30"	"+{s:value} Base Damage"
@@ -7340,7 +7342,7 @@
 		"DOTA_Tooltip_ability_special_bonus_unique_lich_3"	"-{s:value}s Frost Blast Cooldown"
 		"DOTA_Tooltip_ability_special_bonus_unique_lich_4"	"+{s:value}s Frost Shield Duration"
 		"DOTA_Tooltip_ability_special_bonus_unique_lich_5"	"Chain Frost Unlimited Bounces"
-		"DOTA_Tooltip_ability_special_bonus_unique_lich_6"	"+{s:value} Frost Nova AoE Damage"
+		"DOTA_Tooltip_ability_special_bonus_unique_lich_6"	"+{s:value} Frost Blast AoE Damage"
 		"DOTA_Tooltip_ability_special_bonus_unique_lich_7"	"+{s:value} Chain Frost Damage"
 		"DOTA_Tooltip_ability_special_bonus_unique_rubick"	"+{s:value} Telekinesis Land Distance"
 		"DOTA_Tooltip_ability_special_bonus_unique_rubick_2"	"-{s:value}% Fade Bolt Damage Reduction"
@@ -7765,6 +7767,7 @@
 		"DOTA_Tooltip_ability_special_bonus_unique_magnus_3"	"+{s:value} Skewer Range"
 		"DOTA_Tooltip_ability_special_bonus_unique_magnus_4"	"+{s:value} Shockwave Damage"
 		"DOTA_Tooltip_ability_special_bonus_unique_magnus_5"	"+{s:value}s Reverse Polarity Stun Duration"
+		"DOTA_Tooltip_ability_special_bonus_unique_magnus_6"	"+{s:value}s Shockwave Slow Duration"
 		"DOTA_Tooltip_ability_special_bonus_unique_earth_spirit"	"+{s:value} Rolling Boulder Damage"
 		"DOTA_Tooltip_ability_special_bonus_unique_earth_spirit_2"	"Geomagnetic Grip Targets Allies"
 		"DOTA_Tooltip_ability_special_bonus_unique_earth_spirit_3"	"+{s:value}s Rolling Boulder Stun Duration"
@@ -8286,6 +8289,10 @@
 		"DOTA_Tooltip_Ability_item_recipe_dagon"					"Dagon Recipe"
 		"DOTA_Tooltip_Ability_item_recipe_soul_ring"				"Soul Ring Recipe"
 		"DOTA_Tooltip_Ability_item_recipe_yasha"					"Yasha Recipe"
+		"DOTA_Tooltip_Ability_item_recipe_octarine_core"			"Octarine Core Recipe"
+		"DOTA_Tooltip_Ability_item_recipe_satanic"					"Satanic Recipe"
+		"DOTA_Tooltip_Ability_item_recipe_blade_mail"				"Blade Mail Recipe"
+		"DOTA_Tooltip_Ability_item_recipe_heavens_halberd"			"Heaven's Halberd Recipe"
 		"DOTA_Tooltip_Ability_item_recipe_crimson_guard"			"Crimson Guard Recipe"
 		"DOTA_Tooltip_Ability_item_recipe_necronomicon"				"Necronomicon Recipe"
 		"DOTA_Tooltip_Ability_item_recipe_sange"					"Sange Recipe"
@@ -8305,6 +8312,7 @@
 		"DOTA_Tooltip_Ability_item_recipe_rod_of_atos"				"Rod of Atos Recipe"
 		"DOTA_Tooltip_Ability_item_recipe_nullifier"				"Nullifier Recipe"
 		"DOTA_Tooltip_Ability_item_recipe_bfury"					"Battle Fury Recipe"
+		"DOTA_Tooltip_Ability_item_recipe_monkey_king_bar"			"Monkey King Bar Recipe"
 
 		// Roshan
 		"DOTA_Tooltip_Ability_roshan_spell_block"				"Spell Block"
@@ -8323,14 +8331,14 @@
 		"DOTA_Tooltip_Ability_roshan_slam_damage"			"DAMAGE:"
 		"DOTA_Tooltip_Ability_roshan_slam_damage_growth"			"DAMAGE GROWTH PER MINUTE:"
 		"DOTA_Tooltip_Ability_roshan_devotion"				"Strength of the Immortal"
-		"DOTA_Tooltip_Ability_roshan_devotion_Description"	"Roshan possesses numerous protective abilities, including 55% magic damage resistance, the ability to reduce damage from attacking illusions, and a scaling armor bonus that increases as time goes on."
+		"DOTA_Tooltip_Ability_roshan_devotion_Description"	"Roshan possesses numerous protective abilities, including 55%% magic damage resistance, the ability to reduce damage from attacking illusions, and a scaling armor bonus that increases as time goes on."
 
 		"DOTA_Tooltip_modifier_roshan_spell_block"		"Spell Block"
 		"DOTA_Tooltip_modifier_roshan_spell_block_Description"			"Roshan will block one targeted spell every 15 seconds."
 		"DOTA_Tooltip_modifier_roshan_bash"				"Bash"
 		"DOTA_Tooltip_modifier_roshan_slam"				"Slam"
 		"DOTA_Tooltip_modifier_roshan_devotion"			"Devotion"
-		"DOTA_Tooltip_modifier_roshan_devotion_Description"			"55% magic damage resistance, the ability to reduce damage from attacking illusions, and %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS% bonus armor. The armor bonus increases over time."
+		"DOTA_Tooltip_modifier_roshan_devotion_Description"			"55%% magic damage resistance, the ability to reduce damage from attacking illusions, and %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS% bonus armor. The armor bonus increases over time."
 
 
 
@@ -8399,6 +8407,9 @@
 
 		"DOTA_Tooltip_modifier_ghost_frost_attack_slow"										"Frost Attack"
 		"DOTA_Tooltip_modifier_ghost_frost_attack_slow_Description"							"Movement speed reduced by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% and attack speed reduced by %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%."
+
+		"DOTA_Tooltip_modifier_ghost_frost_attack"										    "Frost Attack"
+		"DOTA_Tooltip_modifier_ghost_frost_attack_Description"								"Reduce target's movement by %dMODIFIER_PROPERTY_TOOLTIP%%% and attack speed by %dMODIFIER_PROPERTY_TOOLTIP%%%."
 
 		// Hellbear Smasher: Thunder Clap
 
@@ -9234,7 +9245,7 @@
 		"DOTA_Tooltip_ability_item_helm_of_iron_will_bonus_armor"				"+$armor"
 		"DOTA_Tooltip_ability_item_helm_of_iron_will_bonus_regen"				"+$hp_regen"
 		
-		"DOTA_Tooltip_ability_item_helm_of_the_dominator_Description"			"<h1>Active: Dominate</h1>Takes control of one neutral, non-ancient target unit and sets its movement speed to %speed_base% and max health to a minimum of %health_min%. Also provides the unit with +%creep_bonus_damage% base attack damage, +%creep_bonus_hp_regen% health regen and +%creep_bonus_mp_regen% mana regen<br><br>Dominated units with a max health of greater than %health_min% retain their original max health.  Dominated unit's bounty is set to %bounty_gold% gold.<br><br>Range: %abilitycastrange%"
+		"DOTA_Tooltip_ability_item_helm_of_the_dominator_Description"			"<h1>Active: Dominate</h1>Takes control of one neutral, non-ancient target unit and sets its movement speed to %speed_base% and max health to a minimum of %health_min%. Also provides the unit with +%creep_bonus_damage% base attack damage, +%creep_bonus_hp_regen% health regen, +%creep_bonus_mp_regen% mana regen and +%creep_bonus_armor% armor. <br><br>Dominated units with a max health of greater than %health_min% retain their original max health.  Dominated unit's bounty is set to %bounty_gold% gold.<br><br>Range: %abilitycastrange%"
 		"DOTA_Tooltip_ability_item_helm_of_the_dominator_Lore"					"The powerful headpiece of a dead necromancer."
 		"DOTA_Tooltip_ability_item_helm_of_the_dominator_Note0"					"Cannot dominate more than one unit at a time.  If a new unit is dominated, the old one will die."
 		"DOTA_Tooltip_ability_item_helm_of_the_dominator_Note1"					"Can also Dominate enemy lane creeps and summoned units."
@@ -9727,7 +9738,7 @@
 		//"DOTA_Tooltip_ability_item_ring_of_basilius_bonus_all_stats"			"+$all"
 
 		
-		"DOTA_Tooltip_ability_item_holy_locket_Description"				"<h1>Active: Energy Charge</h1>Target an allied unit to instantly restores %restore_per_charge% health and mana per charge stored. <br><br>Max %max_charges% charges. Gains a charge whenever a visible enemy within %charge_radius% range uses an ability.  \n\n <h1>Passive: Holy Blessing</h1>Amplifies heals you provide by %heal_increase%%%." 
+		"DOTA_Tooltip_ability_item_holy_locket_Description"				"<h1>Active: Energy Charge</h1>Target an allied unit to instantly restore %restore_per_charge% health and mana per charge stored. <br><br>Max %max_charges% charges. Gains a charge whenever a visible enemy within %charge_radius% range uses an ability.  \n\n <h1>Passive: Holy Blessing</h1>Amplifies heals you provide by %heal_increase%%%." 
 		"DOTA_Tooltip_ability_item_holy_locket_bonus_health"					"+$health"
 		"DOTA_Tooltip_ability_item_holy_locket_bonus_mana"					"+$mana"
 		"DOTA_Tooltip_ability_item_holy_locket_health_regen"				"+$hp_regen"

@@ -215,5 +215,16 @@
 "#DOTA_Guilds_message_level"	"กิลด์นี้ได้บรรลุเลเวล %param0%"
 "#DOTA_Guild_message_promoted"	"%target_persona% ได้รับการเลื่อนระดับสู่ %guild_role% โดย %requester_persona%"
 "#DOTA_Guild_message_demoted"	"%target_persona% ได้ถูกลดระดับสู่ %guild_role% โดย %requester_persona%"
+"#dota_rp_playing_event_match_2020"	"เขาวงกต: {%param0%} ระดับความลึก %param1%"
+"#DOTA_EventGameName_International2020"	"เขาวงกตของ Aghanim"
+"#dota_eventgamedifficulty_international2020_0"	"นักเวทฝึกหัด"
+"#dota_eventgamedifficulty_international2020_1"	"นักเล่นคาถา"
+"#dota_eventgamedifficulty_international2020_2"	"จอมเวท"
+"#dota_eventgamedifficulty_international2020_3"	"จอมมหาเวท"
+"#dota_eventgamedifficulty_international2020_4"	"ยอดจอมเวท"
+"#DOTA_EventGameName_Diretide2020"	"Diretide"
+"#DOTA_RP_PLAYING_DIRETIDE_MATCH"	"Diretide: รอบที่ %param0% เล่นเป็น {%param1%}"
+"#npc_dota_hero_mars"	"Mars"
+"#DOTA_RP_PLAYING_DIRETIDE_MATCH_PREGAME"	"Diretide: เลือกฮีโร่"
 }
 }

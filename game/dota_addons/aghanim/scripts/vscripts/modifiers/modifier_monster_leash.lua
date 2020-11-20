@@ -22,7 +22,7 @@ function modifier_monster_leash:OnCreated( kv )
 		self.bAddedGem = false
 		
 		self.bProvideVision = false
-		self.fProvideVisionTime = 240
+		self.fProvideVisionTime = TIME_BEFORE_PROVIDE_VISION
 
 		self:StartIntervalThink( 0.01 )
 	end
@@ -38,19 +38,23 @@ function modifier_monster_leash:OnIntervalThink()
 		return
 	end
 
-	-- Check to see if we want to add a gem as counter-invisibility
-	if self.bAddedGem == false and self:GetParent():IsConsideredHero() and 
-		hEncounter:HasStarted() == true and ( ( GameRules:GetGameTime() - hEncounter:GetStartTime() ) > 150 ) then
-		self.bAddedGem = true
-		self:GetParent():AddNewModifier( self:GetParent(), nil, "modifier_detect_invisible", {} )
-	end
+	if self:GetParent():GetTeamNumber() ~= DOTA_TEAM_GOODGUYS then
 
-	-- Provide vision if the room has gone on for too long - helps to protect against enemies getting lost or stuck
-	if self.bProvideVision == false and
-		hEncounter:HasStarted() == true and ( ( GameRules:GetGameTime() - hEncounter:GetStartTime() ) > self.fProvideVisionTime ) then
+		-- Check to see if we want to add a gem as counter-invisibility
+		if self.bAddedGem == false and self:GetParent():IsConsideredHero() and 
+			hEncounter:HasStarted() == true and ( ( GameRules:GetGameTime() - hEncounter:GetStartTime() ) > TIME_BEFORE_DETECT_INVIS ) then
+			self.bAddedGem = true
+			self:GetParent():AddNewModifier( self:GetParent(), nil, "modifier_detect_invisible", {} )
+		end
 
-		self.bProvideVision = true
-		self:GetParent():AddNewModifier( thisEntity, nil, "modifier_provide_vision", { duration = -1 } )
+		-- Provide vision if the room has gone on for too long - helps to protect against enemies getting lost or stuck
+		if self.bProvideVision == false and
+			hEncounter:HasStarted() == true and ( ( GameRules:GetGameTime() - hEncounter:GetStartTime() ) > self.fProvideVisionTime ) then
+
+			self.bProvideVision = true
+			self:GetParent():AddNewModifier( thisEntity, nil, "modifier_provide_vision", { duration = -1 } )
+		end
+
 	end
 
 	local vOrigin = self:GetParent():GetAbsOrigin()

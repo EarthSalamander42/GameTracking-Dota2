@@ -47,6 +47,7 @@ enum LobbyDotaTVDelay {
 	LobbyDotaTV_10 = 0;
 	LobbyDotaTV_120 = 1;
 	LobbyDotaTV_300 = 2;
+	LobbyDotaTV_900 = 3;
 }
 
 enum LobbyDotaPauseSetting {
@@ -194,7 +195,7 @@ message CMsgLeaverState {
 	optional bool mass_disconnect = 6;
 }
 
-message CDOTALobbyMember {
+message CSODOTALobbyMember {
 	optional fixed64 id = 1 [(key_field) = true];
 	optional uint32 hero_id = 2;
 	optional .DOTA_GC_TEAM team = 3 [default = DOTA_GC_TEAM_GOOD_GUYS];
@@ -262,6 +263,7 @@ message CLobbyGuildDetails {
 	optional uint32 guild_flags = 8;
 	optional .DOTA_GC_TEAM team_for_guild = 9 [default = DOTA_GC_TEAM_GOOD_GUYS];
 	optional string guild_tag = 10;
+	optional uint32 guild_weekly_percentile = 11;
 }
 
 message CLobbyTimedRewardDetails {
@@ -323,8 +325,12 @@ message CSODOTALobby {
 	}
 
 	optional uint64 lobby_id = 1 [(key_field) = true];
-	repeated .CDOTALobbyMember members = 2;
-	repeated .CDOTALobbyMember left_members = 7;
+	repeated .CSODOTALobbyMember v2_members = 2;
+	repeated .CSODOTALobbyMember v2_left_members = 7;
+	repeated .CSODOTALobbyMember all_members = 120;
+	repeated uint32 member_indices = 121;
+	repeated uint32 left_member_indices = 122;
+	repeated uint32 free_member_indices = 123;
 	optional fixed64 leader_id = 11;
 	optional fixed64 server_id = 6 [default = 0];
 	optional uint32 game_mode = 3;
@@ -416,6 +422,7 @@ message CSODOTALobby {
 	repeated .CLobbyGuildChallenge guild_challenges = 117;
 	repeated .CLobbyGuildDetails guild_details = 118;
 	repeated .CMsgLobbyEventPoints lobby_event_points = 119;
+	repeated uint32 requested_hero_ids = 124;
 }
 
 message CMsgLobbyPlaytestDetails {

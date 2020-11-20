@@ -1,10 +1,10 @@
 
 @define firstColumn: 0px;
-@define secondColumn: 352px;
-@define thirdColumn: 704px;
+@define secondColumn: 174px;
 
 @define firstRow: 0px;
 @define secondRow: 250px;
+@define thirdRow: 500px;
 
 .TopLeftCell
 {
@@ -12,34 +12,39 @@
 	y: firstRow;
 }
 
-.TopMiddleCell
+.TopRightCell
 {
 	x: secondColumn;
 	y: firstRow;
 }
 
-.TopRightCell
-{
-	x: thirdColumn;
-	y: firstRow;
-}
-
-.BottomLeftCell
+.MiddleLeftCell
 {
 	x: firstColumn;
 	y: secondRow;
 }
 
-.BottomMiddleCell
+.MiddleRightCell
 {
 	x: secondColumn;
 	y: secondRow;
 }
 
+.BottomLeftCell
+{
+	x: firstColumn;
+	y: thirdRow;
+}
+
+.BottomLeftCell.BelowTrailer
+{
+	y: 568px;
+}
+
 .BottomRightCell
 {
-	x: thirdColumn;
-	y: secondRow;
+	x: secondColumn;
+	y: thirdRow;
 }
 
 
@@ -58,16 +63,6 @@
 	visibility: collapse;
 }
 
-/* Styles that are useful for cells which are only visible for certain partner types */
-.HideForPerfectWorld
-{
-	visibility: collapse;
-}
-
-.PartnerNone .HideForPerfectWorld
-{
-	visibility: visible;
-}
 
 /* Useful if you wrap a cell in a Countdown so that it is only visible sometimes */
 .VisibleWhenCountdownActive
@@ -93,14 +88,9 @@
 {
 	visibility: collapse;
 }
-
-#LastMatch {
-	visibility: collapse;
-}
-
 .ShowWeekendTourneyCell #BattleCup
 {
-	visibility: collapse;
+	visibility: visible;
 }
 
 /* Trivia */
@@ -114,61 +104,4 @@
 .TriviaVisible #TriviaGame
 {
 	opacity: 1.0;
-}
-
-#UnderlordsRelease
-{
-	 visibility: collapse;
-}
-.PartnerNone #UnderlordsRelease
-{
-	visibility: visible;
-}
-
-#SKBackgroundGlow 
-{
-	width: 630px;
-	height: 450px;
-	background-color: gradient( radial, 50% 50%, 0% 0%, 50% 50%, from( rgb(197, 194, 188) ), color-stop( 0.6, #716D6555 ), to( #33339900 ) );
-	z-index: 0;
-	horizontal-align: center;
-	margin-left: 600px;
-	margin-top: 0px;
-	opacity-mask: url("s2r://panorama/images/masks/softeredge_box_psd.vtex");
-}
-
-#SKBackgroundScene
-{
-	width: 800px;
-	height: 980px;
-	margin-top: -200px;
-	margin-bottom: 0px;
-	margin-right: -200px;
-	/* //margin-left: -150px; */
-	horizontal-align: right;
-	z-index: 0;
-	opacity-mask: url("s2r://panorama/images/masks/softeredge_box_psd.vtex");
-	
-}
-
-#SKFrontpageCell
-{
-	box-shadow: none;
-	horizontal-align: center;
-	width: 354px;
-	height: 484px;
-	padding: 0px 16px 0px 16px;
-	margin-left: 687px;
-	vertical-align: bottom;
-	overflow: noclip;
-}
-
-/* TI10 CAROUSEL  */
-
-.TI10Features .OverlayPips .PaginationButton {
-	margin: 0px;
-}
-
-DOTAFrontpageInternational2020WeekendBundle.AlreadyPurchased2 {
-	visibility: collapse;
 }

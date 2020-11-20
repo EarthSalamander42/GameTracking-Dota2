@@ -1744,7 +1744,111 @@
 			"x"		"0"
 			"y"		"288"
 			"width"		"32"
-			"height"		"32"
+			"height"	"32"
+		}
+		"minimap_heroicon_npc_dota_hero_pudge_persona1"
+		{
+			"file"		"materials/vgui/hud/minimap_hero_sheet.vmat"
+			"x"		"32"
+			"y"		"288"
+			"width"		"32"
+			"height"	"32"
+		}
+		"minimap_heroicon_npc_dota_hero_windrunner_alt1"
+		{
+			"file"		"materials/vgui/hud/minimap_hero_sheet.vmat"
+			"x"		"64"
+			"y"		"288"
+			"width"		"32"
+			"height"	"32"
+		}
+		"minimap_heroicon_npc_dota_hero_windrunner_alt2"
+		{
+			"file"		"materials/vgui/hud/minimap_hero_sheet.vmat"
+			"x"		"96"
+			"y"		"288"
+			"width"		"32"
+			"height"	"32"
+		}
+		"minimap_0"
+		{
+			"file" "materials/vgui/hud/minimap_sheet.vmat"
+			"x" "320"
+			"y" "448"
+			"width" "32"
+			"height" "32"
+		}
+		"minimap_1"
+		{
+			"file" "materials/vgui/hud/minimap_sheet.vmat"
+			"x" "352"
+			"y" "448"
+			"width" "32"
+			"height" "32"
+		}
+		"minimap_2"
+		{
+			"file" "materials/vgui/hud/minimap_sheet.vmat"
+			"x" "320"
+			"y" "480"
+			"width" "32"
+			"height" "32"
+		}
+		"minimap_3"
+		{
+			"file" "materials/vgui/hud/minimap_sheet.vmat"
+			"x" "352"
+			"y" "480"
+			"width" "32"
+			"height" "32"
+		}
+		"minimap_4"
+		{
+			"file" "materials/vgui/hud/minimap_sheet.vmat"
+			"x" "384"
+			"y" "448"
+			"width" "32"
+			"height" "32"
+		}
+		"minimap_5"
+		{
+			"file" "materials/vgui/hud/minimap_sheet.vmat"
+			"x" "416"
+			"y" "448"
+			"width" "32"
+			"height" "32"
+		}
+		"minimap_6"
+		{
+			"file" "materials/vgui/hud/minimap_sheet.vmat"
+			"x" "384"
+			"y" "480"
+			"width" "32"
+			"height" "32"
+		}
+		"minimap_7"
+		{
+			"file" "materials/vgui/hud/minimap_sheet.vmat"
+			"x" "416"
+			"y" "480"
+			"width" "32"
+			"height" "32"
+		}
+		"minimap_8"
+		{
+			"file" "materials/vgui/hud/minimap_sheet.vmat"
+			"x" "448"
+			"y" "480"
+			"width" "32"
+			"height" "32"
+		}
+		"minimap_9"
+		{
+			"file" "materials/vgui/hud/minimap_sheet.vmat"
+			"x" "480"
+			"y" "480"
+			"width" "32"
+			"height" "32"
 		}
 	}
 }

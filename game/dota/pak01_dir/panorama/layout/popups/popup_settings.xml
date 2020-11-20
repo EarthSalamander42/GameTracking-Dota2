@@ -1376,6 +1376,23 @@
 								</Panel>
 							</Panel>
 						</Panel>
+						<Panel class="SettingsSection">
+							<Panel style="flow-children: right;">
+								<Label text="#DOTA_MMR_Recalibration_Title" class="SectionHeader" />
+								<Panel class="InfoIcon" style="horizontal-align:right;" onmouseover="UIShowTextTooltip( #DOTA_MMR_Recalibration_Info )" onmouseout="UIHideTextTooltip()"/>
+							</Panel>
+							<Panel class="SectionHeaderLine"/>
+							<Button id="RecalibrateMMRButton" class="BlueButton" onactivate="DOTARecalibrateMMR()">
+								<Label text="#DOTA_MMR_Recalibration_ButtonLabel"/>
+							</Button>
+							<Label id="MMR_Recalibration_CountdownLabel" text="#DOTA_MMR_Recalibration_CountdownLabel" />
+							<Label id="MMR_Recalibration_Consumed" text="#DOTA_MMR_Recalibration_Consumed" />
+						</Panel>
+						<Panel id="ProInfoSection" class="SettingsSection">
+							<Label class="SectionHeader" text="#DOTA_ManageProInfo_Header" />
+							<Panel class="SectionHeaderLine"/>
+							<TextButton class="ButtonBevel" text="#DOTA_ManageProInfo_Button" onactivate="UIPopupButtonClicked( DOTAShowTeamsPage() )" />
+						</Panel>
 					</Panel>
 				</Panel>
 			</Panel>
@@ -1392,13 +1409,16 @@
 							<DOTASettingsCheckbox convar="dota_chat_enable_whispers" text="#dota_settings_chat_whispers" />
 							<DOTASettingsCheckbox convar="dota_chat_allow_global" text="#dota_settings_chat_allow_global" onmouseover="UIShowTextTooltipStyled( #DOTA_Settings_Tooltip_BroadcastChannelChat, OptionsTooltip)" onmouseout="UIHideTextTooltip()" />
 
-							<DOTASettingsCheckbox convar="dota_text_filter" text="#dota_settings_text_filter_filtered"/>
 							<DOTASettingsEnum convar="dota_chat_filter_settings" text="#dota_settings_chat_filter">
 								<RadioButton text="#dota_settings_chat_filter_allow_none" value="0" class="EnumButton"	group="chatpermissions" />
 								<RadioButton text="#dota_settings_chat_filter_allow_friendly" value="1" class="EnumButton" group="chatpermissions" />
 								<RadioButton text="#dota_settings_chat_filter_allow_teams" value="2" class="EnumButton" group="chatpermissions" />
 								<RadioButton text="#dota_settings_chat_filter_allow_all" value="3" class="EnumButton" group="chatpermissions" />
 							</DOTASettingsEnum>
+
+							<Button class="BlueButton" onactivate="DOTAShowSteamTextFilterSettings()">
+								<Label text="#dota_settings_steam_text_filter"/>
+							</Button>
 						</Panel>
 					</Panel>
 
@@ -1482,6 +1502,12 @@
 		<snippet name="ChatWheelUnlockInfo_ShardsPurchase">
 			<Panel class="ChatWheelUnlockInfo_ShardsPurchase">
 				<Panel id="LockIcon" onmouseout="UIHideTextTooltip()" onactivate="UIPopupButtonClicked( DOTAShowStorePlusChatWheelPage() )" />
+			</Panel>
+		</snippet>
+
+		<snippet name="ChatWheelUnlockInfo_GuildPercentile">
+			<Panel class="ChatWheelUnlockInfo_GuildPercentile">
+				<Label class="ChatWheelUnlockLevel MonoNumbersFont" text="#DOTA_ChatWheelPhraseLocked_GuildLevel" />
 			</Panel>
 		</snippet>
 

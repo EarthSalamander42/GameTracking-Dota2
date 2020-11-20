@@ -375,9 +375,36 @@
 		"dota_chatwheel_label_AnnoyedPenguin"			"Недовольный пингвин"
 		"dota_chatwheel_label_FastPenguin"				"Быстрый пингвин"
 		"dota_chatwheel_label_newbloom_firecrackers"	"Петарды!"
-		"dota_chatwheel_label_Celebratory_Gong"		"Праздничный гонг"
+		"dota_chatwheel_label_Celebratory_Gong"			"Праздничный гонг"
+		"dota_chatwheel_label_Black_Cat"				"Чёрный кот"
+		"dota_chatwheel_label_Ghost"					"Призрак"
+		"dota_chatwheel_label_Nightmare"				"Кошмар"
+		"dota_chatwheel_label_Scream"					"Крик"
+		"dota_chatwheel_label_Stabby"					"Чик-чик"
+		"dota_chatwheel_label_Laugh"					"Смех"
 
+		"dota_chatwheel_label_Candy_From_A_Baby"	"Как конфетку..."
+		"dota_chatwheel_message_Candy_From_A_Baby" "Как конфетку у ребёнка отобрать. У неживого ребёнка."
+		
+		"dota_chatwheel_label_Moon_Drives_You"	"Лунное беспамятство"
+		"dota_chatwheel_message_Moon_Drives_You"	"Луна вводит тебя в беспамятство!"
+		
+		"dota_chatwheel_label_One_by_One"	"Один за другим"
+		"dota_chatwheel_message_One_by_One"	"Они погибают, один за другим!"
 
+		"dota_chatwheel_label_Celebrate"	"Празднуем!"
+		"dota_chatwheel_message_Celebrate"	"Празднуем в свете Безумной луны!"
+
+		"dota_chatwheel_label_Something_Dire"	"Что-то тёмное грядёт."
+		"dota_chatwheel_message_Something_Dire"	"Что-то тёмное грядёт."
+
+		"dota_chatwheel_label_Woods_Begin"	"Леса волнуются"
+		"dota_chatwheel_message_Woods_Begin"	"Леса начинают волноваться!"
+
+		"dota_chatwheel_label_Reap_Your_Harvest"	"Пожинай плоды"
+		"dota_chatwheel_message_Reap_Your_Harvest"	"Пожинай плоды, да береги свою душу!"
+
+		
 		"dota_chatwheel_header_positioning"			"Местоположение"
 		"dota_chatwheel_header_status"				"Состояние"
 		"dota_chatwheel_header_enemy"				"Противник"
@@ -416,6 +443,10 @@
 		"dota_chatwheel_header_international2019_legacy_2018"		"TI9: повторы"
 		"dota_chatwheel_header_international2019_legacy_2018_desc"	"Ваши любимые звуки из боевого пропуска 2018 года! Доступны только владельцам боевого пропуска The International 2019."
 
+
+		"dota_chatwheel_header_guilds"				"Гильдия"
+		"dota_chatwheel_header_guilds_desc"			"Открывается в еженедельной таблице гильдий-лидеров."
+		"dota_chatwheel_header_guilds_link"			"Открыть гильдию"
 
 
 		"dota_chatwheel_header_international2019_casters_korean"	"TI9: корейские комментаторы"
@@ -595,6 +626,13 @@
 		"dota_chatwheel_label_boing"				"Бом"
 		"dota_chatwheel_message_boing"				"Бом"
 
+		"dota_chatwheel_message_Black_Cat"			"Мяу!!"
+		"dota_chatwheel_message_Ghost"				"Бу-у-у-у!"
+		"dota_chatwheel_message_Nightmare"			"[Кошмарные звуки]"
+		"dota_chatwheel_message_Scream"				"Виииизг!!"
+		"dota_chatwheel_message_Laugh"				"Ба-ха-ха-ха-ха!"
+		"dota_chatwheel_message_Stabby"				"[Скрипичные штрихи]"
+
 
 		"DOTA_Item_WillPurchaseAlert"					"%s1Я куплю <font color='%s2'>%s3</font>"
 		"DOTA_Item_WillPurchaseAlert_GoldRemaining"		"%s1Я куплю <font color='%s2'>%s3</font> (не хватает %s4 золота)"
@@ -602,7 +640,7 @@
 		"DOTA_Item_WillPurchaseAlert_Suggestion"		"%s1Я думаю, стоит купить <font color='%s2'>%s3</font>"
 		"DOTA_Item_WillPurchaseAlert_Suggestion_Player"	"%s1Я думаю, %s4 нужно купить <font color='%s2'>%s3</font>"
 		"DOTA_Item_WillPurchaseAlert_Suggestion_DropInFountain"	"%s1Я думаю, %s4 нужно отдать <font color='%s2'>%s3</font> кому-нибудь другому."
-		"DOTA_Item_WillPurchaseAlert_Suggestion_InFountain"		"%s1<font color='%s2'>%s3</font> доступен в нашем магазине"
+		"DOTA_Item_WillPurchaseAlert_Suggestion_InFountain"		"%s1<font color='%s2'>%s3</font> доступен в нашей лавке"
 
 		"DOTA_BuyBackStateAlert_Ready"				"%s1Выкуп готов"
 		"DOTA_BuyBackStateAlert_Gold"				"%s1Не хватает %s2 золота для выкупа"
@@ -689,6 +727,10 @@
 		"DOTA_EmptyTeleport_Alert_Ally_Ready"		"%s2 У <font color='%s3'>%s4</font> союзника нет <font color='#FFFFFF'>Town Portal Scroll</font>"
 		"DOTA_EmptyTeleport_Alert_Ally_OnCooldown"	"%s2 У <font color='%s3'>%s4</font> союзника нет <font color='#FFFFFF'>Town Portal Scroll</font> (перезаряжается ещё %s1 сек.)"
 		"DOTA_EmptyTeleport_Alert_Enemy_Ready"		"%s2 У <font color='%s3'>%s4</font> противника нет <font color='#FFFFFF'>Town Portal Scroll</font>"
+
+		"DOTA_EmptyNeutralItem_Alert_Self"		"У меня нет <font color='#FFFFFF'>нейтрального предмета</font>."
+		"DOTA_EmptyNeutralItem_Alert_Ally"		"%s2 У <font color='%s3'>%s4</font> союзника нет <font color='#FFFFFF'>нейтрального предмета</font>."
+		"DOTA_EmptyNeutralItem_Alert_Enemy"		"%s2 У <font color='%s3'>%s4</font> врага нет <font color='#FFFFFF'>нейтрального предмета</font>."
 
 		"DOTA_HPMana_Percentage"	"%s1%"
 		"DOTA_HPMana_Alert_Self"	"У меня <font color='#00FF00'>%s3 здоровья</font> и <font color='#257FF6'>%s4 маны</font>"
@@ -969,6 +1011,12 @@
 		"DOTA_Chat_RiverPainted6"		"%s1 зачаровывает реку, обращая воду в некое снадобье!"
 		"DOTA_Chat_RiverPainted7"		"%s1 зачаровывает реку, обращая её воды в кровь!"
 		"DOTA_Chat_RoshanWantsCandy"	"Рошан хочет <font color='#7FFF00'>КОНФЕТУ</font> героя %s1!"
+		"DOTA_Chat_CandyObtained2"		"%s1 получает <font color='#E980E9'>очки «Восстания Тьмы»</font> за пролитие первой крови!"
+		"DOTA_Chat_CandyObtained3"		"%s1 получает <font color='#E980E9'>очки «Восстания Тьмы»</font> за убийство Рошана!"
+		"DOTA_Chat_CandyObtained4"		"%s1 получает <font color='#E980E9'>очки «Восстания Тьмы»</font> за первое разрушение башни!"
+		"DOTA_Chat_CandyObtained5"		"%s1 получает <font color='#E980E9'>очки «Восстания Тьмы»</font>, уничтожив припас пугала!"
+		"DOTA_Chat_CandyObtained6"		"%s1 получает <font color='#E980E9'>очки «Восстания Тьмы»</font>, уничтожив конфетный колодец!"
+		"DOTA_Chat_CandyObtained7"		"%s1 получает <font color='#E980E9'>очки «Восстания Тьмы»</font> за украденную тянучку!"
 
 		"DOTA_Chat_ShrineKilled"		"Святыня была разрушена"
 
@@ -1664,9 +1712,6 @@
 		
 		"DOTA_Archronicus_WraithNight_Page4"						"Из записок Азоршоса Костлявого, древнейшего мага, служащего этому неблагодарному негодяю Остариону, которого я должен восхвалять как короля. Я с радостью примкну ко многим, проклинающих себя за свою роль в становлении так называемого Skeleton King на Костяном престоле."
 
-		"DOTA_STANDARD"						""
-		"DOTA_WASD"							""
-		"DOTA_MMO"							""
 		"DOTA_KEYBOARD_CONFIGURATION"		"НАСТРОЙКА КЛАВИАТУРЫ"
 		"keyboard_make_selection"				"СДЕЛАТЬ ВЫБОР"
 
@@ -2095,7 +2140,6 @@
 		
 		// Other Names
 		"ent_dota_halloffame"							"Aegis of Champions"
-		"ent_dota_promo"								""
 		"npc_dota_creep"								"Крип"
 		"npc_dota_creep_lane"							"Крип с линии"
 		"npc_dota_creep_siege"							"Осадная машина"
@@ -2468,7 +2512,7 @@
 		"DOTA_Item_Build_Early_Game"			"Ранняя игра"
 		"DOTA_Item_Build_Early_Game_Secondary"	"Ранняя игра (медведь)"
 		"DOTA_Item_Build_Core_Items"			"Основные предметы"
-		"DOTA_Item_Build_Mid_Items"			"Середина игры"
+		"DOTA_Item_Build_Mid_Items"				"Середина игры"
 		"DOTA_Item_Build_Late_Items"			"Поздняя игра"
 		"DOTA_Item_Build_Other_Items"			"Популярные предметы"
 		"DOTA_Item_Build_UntitledCategory"		"Без названия"
@@ -2582,7 +2626,7 @@
 		"DOTA_Scoreboard_deaths"				"СМЕРТИ"
 		"DOTA_Scoreboard_assists"				"ПОМОЩЬ"
 		"DOTA_Scoreboard_ultimate"				"УЛЬТ"
-		"DOTA_Scoreboard_WKArcana"				"Arcana для WK"
+		"DOTA_Scoreboard_WKArcana"				"Arcana WK"
 
 		"DOTA_Scoreboard_K"						"У"
 		"DOTA_Scoreboard_D"						"С"
@@ -2812,8 +2856,6 @@
 
 		"dota_community_tournaments"		"ТУРНИРЫ"
 		"dota_community_tournaments_manage"	"УПРАВЛЕНИЕ ТУРНИРАМИ"
-		"dota_community_tournaments_misc"	""
-
 		"dota_community_fantasy"			"ФЭНТЕЗИ"
 		"dota_community_fantasy_create"		"СОЗДАТЬ ЛИГУ"
 		"dota_community_fantasy_join"		"ВСТУПИТЬ В ЛИГУ"
@@ -3436,15 +3478,15 @@
 		"DOTA_GuildIntro_FindGuild"							"Найти гильдию"
 		"DOTA_GuildIntro_CreateGuild"						"Создать гильдию"
 		"DOTA_GuildIntro_JoinGuild_Title"					"Вступите в гильдию"
-		"DOTA_GuildIntro_JoinGuild_Description"				"Играйте с друзьями или заводите новые знакомства. Работайте сообща и выполняйте контракты и испытания. Получайте награды и повышайте уровень гильдии."
+		"DOTA_GuildIntro_JoinGuild_Description"				"Играйте с друзьями или заводите новые знакомства. Покорите таблицу лидеров среди гильдий, выполняя контракты и проходя испытания, чтобы получить особые награды."
 		"DOTA_GuildIntro_PlayMatches_Title"					"Играйте как обычно"
-		"DOTA_GuildIntro_PlayMatches_Description"			"Каждая игра приносит вам очки гильдии (ОГ). Чем больше членов гильдии в вашей группе, тем выше множитель ваших очков."
+		"DOTA_GuildIntro_PlayMatches_Description"			"Каждая игра помогает вашей гильдии подняться в таблице лидеров. Чем больше членов гильдии в вашей группе, тем выше множитель ваших очков."
 		"DOTA_GuildIntro_ClaimContracts_Title"				"Выполняйте контракты"
-		"DOTA_GuildIntro_ClaimContracts_Description"		"Каждый день вам даются новые контракты. Побеждайте в играх, выполняя условия контрактов, и вы получите очки гильдии и боевого пропуска."
+		"DOTA_GuildIntro_ClaimContracts_Description"		"Каждый день вам даются новые контракты. Побеждайте в играх, выполняя условия контрактов, и вы получите очки гильдии (ОГ)"
 		"DOTA_GuildIntro_CompleteChallenges_Title"			"Проходите испытания"
 		"DOTA_GuildIntro_CompleteChallenges_Description"	"Соберитесь в группу из хотя бы трёх согильдийцев, чтобы проходить испытания и получать очки гильдии (ОГ)."
 		"DOTA_GuildIntro_UnlockRewards_Title"				"Получайте награды"
-		"DOTA_GuildIntro_UnlockRewards_Description"			"Повышайте уровень гильдии, чтобы получать бонусы для боевого пропуска, смайлики, улучшения знамени гильдии и многое другое."
+		"DOTA_GuildIntro_UnlockRewards_Description"			"Каждую неделю ваша гильдия будет получать награды, зависящие от её места в таблице лидеров. Открывайте смайлики, сообщения для колеса чата, улучшения для знамени гильдии и другое."
 
 		"Team_Create_Header"        "КОМАНДЫ"
 		"Team_Create_Desc1"          "Функция «Команда» разработана для групп из пяти человек, которые хотят сражаться с другими командами в тренировочных лобби или принимать участие в рейтинговом подборе игр, лигах и турнирах."
@@ -3468,7 +3510,6 @@
 		"Team_EnterURL_Desc"		"Укажите ссылку на сайт команды. Посетители смогут открыть её через профиль вашей команды."
 		"Team_EDIT_Details"			"РЕДАКТИРОВАТЬ"
 		"Team_Support"				"Поддержать команду!"
-		"Team_Creation_Disclaimer"	""
 		"Team_Disband_Disclaimer"	"ВНИМАНИЕ! Роспуск команды происходит навсегда, и его невозможно отменить. Вы больше не сможете пересоздать ее или создать другую с этим же именем. Чтобы произвести это действие, в команде не должно быть игроков."
 		"Team_Browse_SponsorLogo"	"Спонсоры команды. Это изображение для отображения спонсоров в профиле команды. Оно будет изменено до 250 x 150 пикселей."
 		"Team_NoTeam"				"В настоящий момент вы не являетесь членом команды."
@@ -3977,6 +4018,7 @@
 		"DOTA_Hero_Selection_CaptainsMode_TheyBan"					"Запрет команды противника"
 		"DOTA_Hero_Selection_RandomDraft_HeroReview"				"Оценка героев"	
 		"DOTA_Hero_Selection_ChooseHero"			"Выберите героя"
+		"DOTA_Hero_Selection_EventGame_BanPhase"					"Запретите героя"
 
 		"DOTA_Hero_Selection_AllDraft_RoundDisplay"					"Раунд {d:all_draft_phase}"
 		"DOTA_Hero_Selection_AllDraft_Waiting"						"Команда противника выбирает героя"
@@ -4315,7 +4357,6 @@
 		"dota_profile_mini_team_party"								"ЧЛЕНЫ КОМАНДЫ"
 		"party_accepted"									"В ГРУППЕ"
 		"party_pending"										"(ЖДЕМ: %s1)"
-		"party_declined"									""
 		"party_pending_tooltip_title"							"ЖДЕМ ОТВЕТА НА ПРИГЛАШЕНИЯ"
 		"dota_profile_mini_2"									"НЕДАВНИЕ ГЕРОИ"
 		"dota_profile_successful_heroes"						"Лучшие герои"
@@ -5234,7 +5275,7 @@
 		"game_mode_4"												"Single Draft"
 		"game_mode_5"												"All Random"
 		"game_mode_6"												"-"
-		"game_mode_7"												"Восстание тьмы"
+		"game_mode_7"												"Восстание Тьмы"
 		"game_mode_8"												"Reverse Captains Mode"
 		"game_mode_9"												"Отморожество"
 		"game_mode_10"												"Обучение"
@@ -6270,8 +6311,6 @@
 		"DOTA_ItemTest_Attachment_AttackPoint2Alt_Desc"	"Когда анимация АЛЬТЕРНАТИВНОЙ АТАКИ используется вместо основной АТАКИ, эта точка атаки будет использоваться для размещения эффектов удара или снарядов."
 
 		"DOTA_Workshop_Attachment_Base"			"Название кости-основы"
-		"DOTA_Workshop_Attachment_Base_Desc"		""
-
 		"DOTA_ItemTest_Attachment_Mouth"		"Название кости рта"
 		"DOTA_ItemTest_Attachment_Mouth_Desc"		"Обозначает место, где располагаются стандартные эффекты частиц, необходимые для рта или анимации укуса. Необходимо прикрепить ко рту или к голове. Разместите на месте рта так, чтобы красная стрелка показывала вперед."
 
@@ -6283,11 +6322,7 @@
 		"DOTA_ItemTest_Attachment_BowBot_Desc"		"Задает место, в котором фиксируется эффект частицы нижнего конца тетивы."
 
 		"DOTA_Workshop_Attachment_Head"			"Название соединительной кости для головы"
-		"DOTA_Workshop_Attachment_Head_Desc"		""
-
 		"DOTA_Workshop_Attachment_Body"			"Название соединительной кости тела"
-		"DOTA_Workshop_Attachment_Body_Desc"		""
-
 		"DOTA_ItemTest_Attachment_LowerStaff"		"Нижняя точка фиксации на посохе Earth Spirit"
 		"DOTA_ItemTest_Attachment_LowerStaff_Desc"	"Указывает, где на модели посоха должен быть прикреплен нижний эффект частиц."
 		"DOTA_ItemTest_Attachment_UpperStaff"		"Верхняя точка фиксации на посохе Earth Spirit"
@@ -6338,6 +6373,7 @@
 		"DOTA_ItemTest_NotInTest_Desc"		"Пожалуйста, запустите основной клиент Dota 2, чтобы воспользоваться мастерской Steam."
 
 		"DOTA_ItemTest_Import"				"Импорт"
+		"DOTA_ItemTest_Items"				"Предметы"
 		"DOTA_ItemTest_Importing"			"ИМПОРТ"
 		"DOTA_ItemTest_Import_Success"		"ИМПОРТ ПРОШЕЛ УСПЕШНО"
 		"DOTA_ItemTest_Import_Failed"		"ОШИБКА ПРИ ИМПОРТЕ"
@@ -6573,7 +6609,7 @@
 		"DOTA_Import_Mat0Title_Generic"		"ФАЙЛЫ ТЕКСТУР"
 		"DOTA_Import_Mat0Desc_Generic"		"Несколько файлов формата .TGA, которые используются в качестве текстур для файлов геометрии. Если файлы названы по стандартам Source 2 и находятся в одной папке, при выборе одного из них остальные будут выбраны автоматически."
 
-		"DOTA_Import_Mat0Title_Dragon_Knight_Dragon"		"Текстура 1 (зеленый дракон)"
+		"DOTA_Import_Mat0Title_Dragon_Knight_Dragon"		"Текстура 1 (зелёный дракон)"
 		"DOTA_Import_Mat1Title_Dragon_Knight_Dragon"		"Текстура 2 (красный дракон)"
 		"DOTA_Import_Mat2Title_Dragon_Knight_Dragon"		"Текстура 3 (синий дракон)"
 		"DOTA_Import_Mat3Title_Dragon_Knight_Dragon"		"Текстура 4 (чёрный дракон)"
@@ -6847,6 +6883,8 @@
 		"Notification_GuildLevelup_WithData"	"{s:guild_name} получает уровень {d:guild_level}"
 		"Notification_GuildPromotion"			"Вас повысили в гильдии"
 		"Notification_GuildPromotion_WithData"	"Вы повышены до роли «{s:guild_role}» в гильдии {g:dota_guild_name:guild_id}"
+		"Notification_PlusFreeTrial_None"		"Вы получили доступ к Dota Plus на 2 месяца."
+		"Notification_PlusFreeTrial_Had"		"Вы получили 2 дополнительных месяца подписки на Dota Plus."
 
 		//-------------------------------------------------------------------------------------------
 		// Economy
@@ -6867,7 +6905,6 @@
 "	    // DEPRECATED
 		"TF_NonUnique_Append_Proper"		"(%s1)"	// DEPRECATED
 
-		"TF_Tag_Category_Misc"	""
 		"TF_Tag_Category_Quality"	"Качество"
 		"TF_Tag_Category_Class"	"Класс"
 		"TF_Tag_Category_Type"	"Тип"
@@ -7017,6 +7054,79 @@
 		"diretide_items"					"Случайный предмет"
 		"diretide_items_cursed"				"Случайный предмет"
 
+		"DOTA_Diretide_Rarity_Crate_Tier1"	"1"
+		"DOTA_Diretide_Rarity_Crate_Tier2"	"2"
+		"DOTA_Diretide_Rarity_Crate_Tier3"	"3"
+		"DOTA_Diretide_Rarity_Crate_Tier4"	"4"
+		"DOTA_Diretide_Rarity_Crate_Tier5"	"5"
+
+		"DOTA_Diretide_RarityName_Crate_Tier0"	"Сундуки"
+		"DOTA_Diretide_RarityName_Crate_Tier1"	"1-й разряд: наборы"
+		"DOTA_Diretide_RarityName_Crate_Tier2"	"2-й разряд: наборы с эффектами"
+		"DOTA_Diretide_RarityName_Crate_Tier3"	"3-й разряд: Immortal-предметы"
+		"DOTA_Diretide_RarityName_Crate_Tier4"	"4-й разряд: Immortal-наборы"
+		"DOTA_Diretide_RarityName_Crate_Tier5"	"5-й разряд: эмблемы"
+
+		"DOTA_Diretide_RarityName_Crate_Tier1_Short"	"1-го"
+		"DOTA_Diretide_RarityName_Crate_Tier2_Short"	"2-го"
+		"DOTA_Diretide_RarityName_Crate_Tier3_Short"	"3-го"
+		"DOTA_Diretide_RarityName_Crate_Tier4_Short"	"4-го"
+		"DOTA_Diretide_RarityName_Crate_Tier5_Short"	"5-го"
+
+		"DOTA_Diretide_RarityDescription_Crate_Tier1"	"Наборы"
+		"DOTA_Diretide_RarityDescription_Crate_Tier2"	"Наборы с эффектами"
+		"DOTA_Diretide_RarityDescription_Crate_Tier3"	"Immortal-предметы"
+		"DOTA_Diretide_RarityDescription_Crate_Tier4"	"Immortal-наборы"
+		"DOTA_Diretide_RarityDescription_Crate_Tier5"	"Эмблемы"
+
+		"DOTA_Treasure_RarityTierInfo"		"Разряды редкости"
+		"DOTA_CrateRecycle_Description"		"Чтобы получить случайный предмет {s:next_tier_name_short} разряда, требуются предметы {s:current_tier_name_short} разряда ({d:required_items} шт.)"
+		"DOTA_CrateRecycle_DescriptionSell"	"Добавьте сюда ненужные предметы и продайте их на Торговой площадке."
+		"DOTA_CrateRecycle_CategoryHeader"	"{s:current_tier_name}"
+		"DOTA_CrateRecycle_CategoryHeaderAmount"	"({d:current_tier_numitems} {s:current_tier_item_p})"
+		"DOTA_CrateRecycle_CategoryHeader_Item:p"		"предмет#|#предмета#|#предметов#|#предметов#|#предмета"
+		"DOTA_CrateRecycle_NotEnoughMarketItems"		"На Торговой площадке недостаточно предметов для замены такого разряда."
+		"DOTA_CrateRecycle_MarketPrice"		"Торговая площадка"
+		"DOTA_CrateRecycle_SelectTier"		"Выберите разряд"
+		"DOTA_CrateRecycle_Owned"			"Есть"
+		"DOTA_CrateRecycle_Your_Listings"	"Ваши лоты"
+		"DOTA_CrateRecycle_NumOwned"		"Доступно: {d:item_amount}"
+		"DOTA_CrateRecycle_AddToList"		"Добавить в список"
+		"DOTA_CrateRecycle_AllAdded"		"Добавлено в список"
+		"DOTA_CrateRecycle_TradeUp"			"СПИСОК ЗАМЕНЫ"
+		"DOTA_CrateTradeUpButton"			"ЗАМЕНА — {d:recycling_ready} из {d:recycling_total}"
+		"DOTA_CrateRecycleNeeded"			"Заполните все ячейки (ещё <span class='RecycleLabelQty'>{d:recycling_needed}</span>)"   
+		"DOTA_CrateRecycleResult_Title"		"Замена предметов"
+		"DOTA_CrateRecycleResult_Fail"		"Не удалось совершить замену. Повторите попытку позже."
+		"DOTA_CrateSellOnMarketButton"		"ПРОДАТЬ"
+		"DOTA_ConfirmCrateRecycle"			"Заменить предметы"
+		"DOTA_ConfirmCrateRecycleCrate"		"Вы уничтожите 10 предметов и получите один предмет {d:new_tier}-го разряда. Продолжить?"
+		"DOTA_CrateRecycleLastItemHeader"	"Последний предмет"
+		"DOTA_CrateRecycleLastItemPopup"	"У вас нет копий этого предмета. Вы точно хотите его заменить?"
+		"DOTA_CrateSellLastItemHeader"		"Последний предмет"
+		"DOTA_CrateSellLastItemPopup"		"У вас нет копий этого предмета. Вы точно хотите его продать?"
+
+		"DOTA_Diretide_Candy_Reason1"	"Сладость или гадость!"
+		"DOTA_Diretide_Candy_Reason2"	"Бонус за победу"
+		"DOTA_Diretide_Candy_Reason3"	"Бонус за первую кровь"
+		"DOTA_Diretide_Candy_Reason4"	"Бонус за первого Рошана"
+		"DOTA_Diretide_Candy_Reason5"	"Уничтожение башни"
+		"DOTA_Diretide_Candy_Reason6"	"Первый уничтоженный припас пугала"
+		"DOTA_Diretide_Candy_Reason7"	"Первый уничтоженный конфетный колодец"
+		"DOTA_Diretide_Candy_Reason8"	"Первая кража конфет"
+		"DOTA_Diretide_Candy_Reason9"	"Первая победа дня в «Восстании Тьмы»"
+		"DOTA_Diretide_Candy_Reason10"	"Бонус за согильдийцев"
+
+		"DOTA_Diretide_Frontpage_Label"	"Восстание Тьмы"
+		"DOTA_Diretide_Frontpage_Title"	"Восстание Тьмы возвращается!"
+		"DOTA_Diretide_Frontpage_Desc"	"Рошан вернулся, и он голоден как никогда! Узнайте больше о радостях и гадостях «Восстания Тьмы» на странице события."
+
+		"DOTA_Diretide_Frontpage_DiretidePoints"  "Очки «Восстания Тьмы»"
+
+		"DOTA_DiretideChest_Frontpage_Label"	"Обновлённая сокровищница"
+		"DOTA_DiretideChest_Frontpage_Title"	"Hallowed Chest of the Diretide"
+		"DOTA_DiretideChest_Frontpage_Desc"		"Этот сундук открывается ключом Hallowed Key и содержит одно из <b>60</b> чудесных творений, разделённых на 5 разрядов."
+
 		"DOTA_SellMarket"				"Продать на Тор. площадке"
 
 		"DOTA_AddFriends_Search"		"Поиск"
@@ -7081,10 +7191,7 @@
 
 		"DOTA_Filter_MaxFilters"			"Поддерживаются только 8 фильтров. Пожалуйста, удалите или отредактируйте существующие фильтры."
 		"DOTA_Filter_MaxRules"				"Поддерживаются только 8 правил. Пожалуйста, удалите или отредактируйте существующие правила."
-
-		// Filter Types
-		"DOTA_Filter_Type_None"				""
-		"DOTA_Filter_Type_And"				"(И)"
+"DOTA_Filter_Type_And"				"(И)"
 		"DOTA_Filter_Type_Or"				"(ИЛИ)"
 
 		// Filter Fields
@@ -7097,6 +7204,7 @@
 		"DOTA_Filter_Field_Equipped"		"Надето"
 
 		"DOTA_Yes"							"Да"
+		"DOTA_No"							"Нет"
 
 		"DOTA_Filter_Is_Equipped"			"Надето"
 		"DOTA_Filter_Is_Not_Equipped"		"Не надето"
@@ -7338,7 +7446,7 @@
 		"completed"						"Completed"
 		"haunted"						"Cursed"		// TF: Haunted
 		"tournament"					"Heroic"		// TF: Tournament
-		"favored"						"Избранное"
+		"favored"						"Favored"
 		"autographed"					"Autographed"
 		"ascendant"						"Ascendant"
 		"legacy"						"Legacy"
@@ -7384,6 +7492,9 @@
 		"diretowers"					"Башни сил Тьмы"
 		"radianttowers"					"Башни сил Света"
 		"versus_screen"					"Экран соперников"
+		"head_effect"					"Эффект головы"
+		"map_effect"					"Эффект карты"
+		"courier_effect"				"Эффект курьера"
 
 
 		// Tool Types
@@ -7447,6 +7558,7 @@
 		"LoadoutSlot_Gloves"								"Перчатки"
 		"LoadoutSlot_Tail"									"Хвост"
 		"LoadoutSlot_Taunt"									"Насмешка"
+		"LoadoutSlot_Costume"								"Костюм"
 		"LoadoutSlot_Emblem"								"Эмблема"
 		"LoadoutSlot_Courier"								"Курьер"
 		"LoadoutSlot_Announcer"								"Комментатор"
@@ -7500,6 +7612,9 @@
 		"LoadoutSlot_Radiant_Towers"						"Башни сил Света"
 		"LoadoutSlot_Dire_Towers"							"Башни сил Тьмы"
 		"LoadoutSlot_Versus_Screen"							"Экран соперников"
+		"LoadoutSlot_Head_Effect"							"Эффект головы"
+		"LoadoutSlot_Map_Effect"							"Эффект карты"
+		"LoadoutSlot_Courier_Effect"						"Эффект курьера"
  		"LoadoutSlot_Persona_Selector"						"Личность"
 		"LoadoutSlot_Head_Invoker_Kid"						"Детская голова"
 		"LoadoutSlot_Shoulder_Invoker_Kid"					"Детские плечи"
@@ -7513,8 +7628,19 @@
 		"LoadoutSlot_Tiny_Body_1"							"Малый"
 		"LoadoutSlot_Tiny_Body_2"							"Средний"
 		"LoadoutSlot_Tiny_Body_3"							"Крупный"
-		
-
+		//PUDGE PERSONA CUTE
+		"npc_dota_hero_pudge_persona1"									"Плюшевый Pudge"
+		"LoadoutSlot_Taunt_Pudge_Persona"								"Насмешка личности"
+		"LoadoutSlot_Weapon_Pudge_Persona"								"Оружие личности"
+		"LoadoutSlot_Offhand_Weapon_Pudge_Persona"							"2-е оружие личности"
+		"LoadoutSlot_Armor_Pudge_Persona"								"Броня личности"
+		"LoadoutSlot_Head_Pudge_Persona"								"Голова личности"
+		//ANTIMAGE PERSONA
+		"LoadoutSlot_Taunt_Antimage_Persona"								"Насмешка личности"
+		"LoadoutSlot_Weapon_Antimage_Persona"								"Оружие личности"
+		"LoadoutSlot_Offhand_Weapon_Antimage_Persona"							"2-е оружие личности"
+		"LoadoutSlot_Armor_Antimage_Persona"								"Броня личности"
+		"LoadoutSlot_Head_Antimage_Persona"								"Голова личности"
 		//Hero Loadoutslots
 		"LoadoutSlot_Alchemist_TinyArmor"					"Малая броня"
 		"LoadoutSlot_Alchemist_Flask"						"Колба"
@@ -7682,11 +7808,8 @@
 		"StoreBanner_Header_Faceless_Clasz"				"Набор «Acolyte of Clasz»"
 		"StoreBanner_Text_Faceless_Clasz"				"Время показать лицо врагам."
 		"StoreBanner_Header_AMD_Premier_2"				"AMD Premier League Season 2"
-		"StoreBanner_Text_AMD_Premier_2"				""
 		"StoreBanner_Header_Corsair_Summer_2013"		"Corsair Gaming Summer Tournament"
-		"StoreBanner_Text_Corsair_Summer_2013"			""
 		"StoreBanner_Header_GEST_June_July"				"Gigabyte E-Sports Tournament June & July"
-		"StoreBanner_Text_GEST_June_July"				""
 		"StoreBanner_Header_El_Gato"					"Курьер Beyond the Summit — «El Gato»"
 		"StoreBanner_Text_El_Gato"						"Приютите этого пушистого друга и наблюдайте за тем, как повышается его уровень, когда вы смотрите Beyond The Summit."
 		"StoreBanner_Header_Defense_Grid"				"Набор «Defense Grid Announcer»"
@@ -7760,7 +7883,7 @@
 		"StoreBanner_Header_Siren_SlithereenKnightSet"			"The Slithereen Knight"
 		"StoreBanner_Text_Siren_SlithereenKnightSet"			"Змееногие не ошибаются."
 		"StoreBanner_Header_Courier_Deathripper"			"Deathripper"
-		"StoreBanner_Text_Courier_Deathripper"			"Страшное сочетание черной магии и неудачных опытов. Deathripper — дебют компании «Privateer Press» на рынке курьерских услуг."
+		"StoreBanner_Text_Courier_Deathripper"			"Страшное сочетание чёрной магии и неудачных опытов. Deathripper — дебют компании Privateer Press на рынке курьерских услуг."
 		"StoreBanner_Header_Courier_Blotto"			"Blotto and Stick"
 		"StoreBanner_Text_Courier_Blotto"			"Бывший картежник и мошенник, ныне вставший на долгий путь исправления. Он взял свою верную трость и стал курьером, чтобы заработать лишнюю монетку."
 		"StoreBanner_Header_Courier_Alphid"			"Alphid of Lecaciida"
@@ -7936,7 +8059,7 @@
 		"StoreBanner_Header_Enchantress_Araceaes_Tribute"		"Enchantress: набор «Araceae's Tribute»"
 		"StoreBanner_Text_Enchantress_Araceaes_Tribute"		"Сокровища с далекого острова."
 		"StoreBanner_Header_Luna_Eternal_Eclipse"		"Luna: набор «Blessings of the Eternal Eclipse»"
-		"StoreBanner_Text_Luna_Eternal_Eclipse"		"Она восстает из темноты."
+		"StoreBanner_Text_Luna_Eternal_Eclipse"		"Она восстаёт из темноты."
 		"StoreBanner_Header_Bristleback_Heavy_Barbed"		"Bristleback: набор «Heavy Barbed Armor»"
 		"StoreBanner_Text_Bristleback_Heavy_Barbed"		"Проткни себе путь к победе!"
 		"StoreBanner_Header_Big_Frostivus_Sale"		"Распродажа в Холодрыжество"
@@ -8491,6 +8614,11 @@
 		"StoreBanner_Header_International2020_BattlePass"				"Боевой пропуск The International 10"
 		"StoreBanner_Text_International2020_BattlePass"		"Боевой пропуск, под завязку набитый сокровищами и наградами, будет вашим верным соратником на протяжении всего летнего сезона."
 
+		"StoreBanner_Header_Diretide_Chest"				"Hallowed Key of the Diretide"
+		"StoreBanner_Text_Diretide_Chest"		"Познайте святые дары «Восстания Тьмы», получив одну из более чем 60 наград сундука Hallowed Chest of the Diretide, который можно открыть этим особым ключом. На Торговой площадке можно купить больше сундуков или определённую награду."
+
+		"StoreBanner_Header_Diretide_Key"				"Hallowed Key of the Diretide"
+		"StoreBanner_Text_Diretide_Key"		"Познайте святые дары «Восстания Тьмы», получив одну из более чем 60 наград сундука Hallowed Chest of the Diretide, который можно открыть этим особым ключом. Сундуки можно получить за очки «Восстания Тьмы» или купить на Торговой площадке."
 //DOTA_STORE_BANNER_END
 
 		"Playtab_Quiz_Title"				"Викторина от торговца лавки"
@@ -8519,6 +8647,7 @@
 		"Attrib_FantasyChallengeTag"				"Фэнтези-турнир Компендиума %s1"
 		"Attrib_InternationalEvent"					"Присуждается за %s1 "
 		"Attrib_UsageLevelRequirement"				"Чтобы использовать это, вы должны быть как минимум уровня %s1."
+		"Attrib_PolycountTag"						"Полигонов"
 		"InternationalEvent_Station0"				"просмотр матча на чемпионате The International"
 		"InternationalEvent_Station1"				"посещение потайной лавки на чемпионате The International"
 		"InternationalEvent_Station2"				"посещение мастерской на чемпионате The International"
@@ -8607,7 +8736,7 @@
 		"Rarity_Ancient"							"Ancient"
 		"Rarity_Immortal"							"Immortal"
 		"Rarity_Arcana"								"Arcana"
-		"Rarity_Seasonal"							"Сезонный предмет"
+		"Rarity_Seasonal"							"Сезонное"
 		"DOTA_FilterRarity"							"Все виды редкости"
 
 		// Type Names
@@ -9520,7 +9649,6 @@
 
 		"reborn_beta_required_title"		"Dota 2 - Новая жизнь"
 		"reborn_beta_required_sub"			"Для запуска пользовательских игр необходимо установить бету обновления «Новая жизнь»"
-		"reborn_beta_required_desc"			" "
 		"reborn_beta_required_learn_more"	"ПОДРОБНЕЕ"
 
 		"reborn_beta_downloading_title"		"Загрузка обновления «Новая жизнь»"
@@ -9950,6 +10078,16 @@
 		"DOTA_Announcer_Preview_Gaben_Killing_Spree_02"	"Чтобы получить ещё больше убийств, нажимайте на убегающих героев."
 		"DOTA_Announcer_Preview_Gaben_Killing_Spree_03"	"Даже сейчас я узнаю что-то новое благодаря нашим клиентам."
 		"DOTA_Announcer_Preview_Gaben_Killing_Spree_04"	"Отправьте письмо по адресу gaben@valvesoftware.com и сообщите мне о своём буйстве."
+		
+		"DOTA_Announcer_Preview_ti10_vog_01"	"Десять игроков сражаются за великую славу."
+		"DOTA_Announcer_Preview_ti10_vog_02"	"Любой миг может зажечь огонь нового величия."
+		"DOTA_Announcer_Preview_ti10_vog_03"	"Кому это испытание окажется по силам?"
+		"DOTA_Announcer_Preview_ti10_vog_04"	"Силы Света против сил Тьмы!"
+		
+		"DOTA_Announcer_Preview_ti10_vog_Killing_Spree_01"	"В горниле бойни рождается история."
+		"DOTA_Announcer_Preview_ti10_vog_Killing_Spree_02"	"Узрите и трепещите!"
+		"DOTA_Announcer_Preview_ti10_vog_Killing_Spree_03"	"Кто сможет восстать из пепла этих стремлений?"
+		"DOTA_Announcer_Preview_ti10_vog_Killing_Spree_04"	"Это не бой. Это — бойня."
 
 		"DOTA_Announcer_Preview_Deus_Ex_01"	"А мне говорили: «Будешь комментировать игры, Адам, это весело!»"
 		"DOTA_Announcer_Preview_Deus_Ex_02"	"Ну что, босс, размялись?"
@@ -10311,7 +10449,6 @@
 		"int2013_east_qualifiers_title"		"ПРОГНОЗ ОТБОРОЧНЫХ ИГР ВОСТОКА"
 		"int2013_east_qualifiers_subtitle"	"С 20 по 23 и с 28 по 30 мая 2013 года. Место проведения: студия «BeyondTheSummit»."
 		"int2013_predict_title"				"Предскажите, какие команды займут первое и второе места!"
-		"int2013_predict_subtitle"			""
 		"int2013_countdown_title"			"ПРИЕМ ПРОГНОЗОВ ЗАКАНЧИВАЕТСЯ ЧЕРЕЗ"
 		"int2013_countdownclosed_title"		"ПРОГНОЗЫ БОЛЬШЕ НЕ ПРИНИМАЮТСЯ!"
 		"int2013_countdown_selection_title"			"ГОЛОСОВАНИЕ ЗАКОНЧИТСЯ ЧЕРЕЗ"
@@ -10322,8 +10459,6 @@
 		"int2013_second_place"				"2-е"
 		"int2013_your_pick"					"ПРОГНОЗ"
 		"int2013_qualifier_results"			"РЕЗУЛЬТАТЫ ОТБОРОЧНЫХ ИГР"
-		"int2013_qualifier_results_subtext"	""
-
 		// Misc Qualifier predictions
 		"DOTA_TIP_MQ_Desc"			"Во время отборочных туров будет сыграно от 33 до 50 игр. Время рассчитывается на основе игрового времени. Волевая победа — игра, в которой команда победила, проигрывая с разницей в 10 000 золота. Соревнуйтесь с вашими друзьями!"
 		"DOTA_TIP_MQ_Score"			"Очки за ваш прогноз:"
@@ -10928,12 +11063,12 @@
 		"Web_StoreCheckout_PurchaseComplete"			"Покупка успешно совершена! Купленные предметы добавлены в инвентарь."
 		"Web_StoreCheckout_PurchaseCompleteNoItems"		"Покупка успешно совершена! Обратите внимание, что в инвентарь не было добавлено новых предметов."
 
-		"Smeevil_Style_Default"		"Зеленый смявол"
+		"Smeevil_Style_Default"		"Зелёный смявол"
 		"Smeevil_Style_Red"			"Красный смявол"
-		"Smeevil_Style_Yellow"		"Желтый смявол"
+		"Smeevil_Style_Yellow"		"Жёлтый смявол"
 		"Smeevil_Style_Purple"		"Фиолетовый смявол"
 		"Smeevil_Style_Red_Mammoth"	"Красный смявол на мамонте"
-		"Smeevil_Style_Yellow_Bird"	"Желтый смявол на птице"
+		"Smeevil_Style_Yellow_Bird"	"Жёлтый смявол на птице"
 		"Smeevil_Style_Purple_Crab" "Фиолетовый смявол на крабе"
 		"Smeevil_Style_Purple_Crab_Painted"	"Фиолетовый смявол на окрашенном крабе"
 
@@ -10978,7 +11113,12 @@
 
 		"DOTA_Style_Bracer_Of_The_Luminar_0"     "Glow of Wisdom"
 		"DOTA_Style_Bracer_Of_The_Luminar_1"     "Spark of Ruin"
+
+		"DOTA_Style_Vampire_Counts_Master_Head_and_Sleeves_0"	"Vampire Counts Head"
+		"DOTA_Style_Vampire_Counts_Master_Head_and_Sleeves_1"	"Vampire Counts Sleeve"
 	
+		"DOTA_Style_Provocation_Of_Ruin"		"Provocation of Ruin"
+
 		"Bearzky_Style_0" 	"Bearzky"
 		"Bearzky_Style_1" 	"Skatestick Bearzky"
 
@@ -11066,23 +11206,23 @@
 		"UnusualBlue"				"Синий"
 		"UnusualPurple"				"Фиолетовый"
 		"UnusualOrange"				"Оранжевый"
-		"UnusualLightGreen"			"Светло-зеленый"
+		"UnusualLightGreen"			"Светло-зелёный"
 		"UnusualDeepBlue"			"Глубокий синий"
-		"UnusualSeaGreen"			"Сине-зеленый"
+		"UnusualSeaGreen"			"Сине-зелёный"
 		"UnusualVerdantGreen"		"Зеленая сосна"
-		"UnusualDeepGreen"			"Глубокий зеленый"
+		"UnusualDeepGreen"			"Глубокий зелёный"
 		"UnusualBrightPurple"		"Ярко-фиолетовый"
-		"UnusualBrightGreen"		"Ярко-зеленый"
+		"UnusualBrightGreen"		"Ярко-зелёный"
 		"UnusualPlacidBlue"			"Спокойный синий"
 		"UnusualSummerWarmth"		"Летнее тепло"
 		"UnusualDefensiveRed"		"Сдержанно-красный"
 		"UnusualCreatorsLight"		"Свет создателя"
 		"UnusualBlossomRed"			"Аленький цветочек"
 		"UnusualCrystallineBlue"	"Синий кристалл"
-		"UnusualCursedBlack"		"Отталкивающий черный"
+		"UnusualCursedBlack"		"Отталкивающий чёрный"
 		"UnusualPlagueGrey"			"Чумной серый"
 		"UnusualInternational2012"	"Чемпионский синий"
-		"UnusualInternational2013"	"Чемпионский зеленый"
+		"UnusualInternational2013"	"Чемпионский зелёный"
 		"UnusualMidasGold"			"Золото Hand of Midas"
 		"UnusualEarthGreen"			"Зеленая планета"
 		"UnusualEmberFlame"			"Тлеющее пламя"
@@ -11590,19 +11730,19 @@
 
 		"DOTA_Item_Gift_of_the_Awakened_Style2"				"Tail of the Awakened"
 
-		"DOTA_Item_Shadow_Calvaria_Style0"				"Shadow Calveria (желтый)"
+		"DOTA_Item_Shadow_Calvaria_Style0"				"Shadow Calveria (жёлтый)"
 		"DOTA_Item_Shadow_Calvaria_Style1"				"Shadow Calvaria (синий)"
 		"DOTA_Item_Shadow_Calvaria_Style2"				"Shadow Calveria (фиолетовый)"
 		"DOTA_Item_Shadow_Calvaria_Style3"				"Shadow Calvaria (красный)"
-		"DOTA_Item_Shadow_Claws_Style0"					"Shadow Claws (желтый)"
+		"DOTA_Item_Shadow_Claws_Style0"					"Shadow Claws (жёлтый)"
 		"DOTA_Item_Shadow_Claws_Style1"					"Shadow Claws (синий)"
 		"DOTA_Item_Shadow_Claws_Style2"					"Shadow Claws (фиолетовый)"
 		"DOTA_Item_Shadow_Claws_Style3"					"Shadow Claws (красный)"
-		"DOTA_Item_Shadow_Spine_Style0"					"Shadow Spine (желтый)"
+		"DOTA_Item_Shadow_Spine_Style0"					"Shadow Spine (жёлтый)"
 		"DOTA_Item_Shadow_Spine_Style1"					"Shadow Spine (синий)"
 		"DOTA_Item_Shadow_Spine_Style2"					"Shadow Spine (фиолетовый)"
 		"DOTA_Item_Shadow_Spine_Style3"					"Shadow Spine (красный)"
-		"DOTA_Item_Shadow_Tracers_Style0"				"Shadow Spine (желтый)"
+		"DOTA_Item_Shadow_Tracers_Style0"				"Shadow Spine (жёлтый)"
 		"DOTA_Item_Shadow_Tracers_Style1"				"Shadow Spine (синий)"
 		"DOTA_Item_Shadow_Tracers_Style2"				"Shadow Spine (фиолетовый)"
 		"DOTA_Item_Shadow_Tracers_Style3"				"Shadow Spine (красный)"
@@ -12152,7 +12292,8 @@
 		"DOTA_Style_Tree_of_Frozen_Stonehenge_0"		"Frostivus"
 		"DOTA_Style_Tree_of_Frozen_Stonehenge_1"		"Winter"
 
-
+		"DOTA_Style_phoenix_immortal_back_0"		"Default"
+		"DOTA_Style_phoenix_immortal_back_1"		"Paradise"
 
 //DOTA_ITEM_STYLES_END
 //DOTA_ITEM_STYLE_END
@@ -12527,7 +12668,6 @@
 		"dota_spring_pract01"				"ТРЕНИРОВОЧНАЯ БИТВА!"
 		"dota_spring_intro_text01"			"СРАЗИТЕСЬ С ГОДНЕМ!"
 		"dota_spring_intro_text02"			"Нанесите Годню максимальный ущерб. Чем больше урона вы причините, тем ценнее будет награда! /n/nВыстрелите в Годня фейерверком, если тот вдруг кого-то схватит!"
-		"dota_spring_intro_text03"			""
 		"dota_spring_intro_text04"			"Все игроки получают ограниченное количество золота."
 		"dota_spring_intro_text05"			"Кусочки Огненной соли"
 		"dota_spring_intro_text06"			"Золотые монеты"
@@ -12548,7 +12688,6 @@
 		"nian_battle_4_gold"				"100000"
 
 		"dota_spring_intro_text02_practice"	"Нанесите Годню как можно больше урона.\n\nЕсли он кого-то схватит — испугайте его фейерверками!"
-		"dota_spring_intro_text03_practice"	""
 		"dota_spring_intro_text04_practice"	"Все игроки получают ограниченное количество золота."
 
 		"dota_redeem_springtext1"			"Кусочки Огненной соли"
@@ -12651,6 +12790,10 @@
  		"dota_tip_customize_guides_desc"	"Нажмите сюда, чтобы изменить текущее руководство, перетаскивая предметы в нём."
  		"dota_tip_suggested_items_title"	"Рекомендуемые предметы"
  		"dota_tip_suggested_items_desc"	"Не знаете, что купить? Нажмите здесь, чтобы попросить совета у союзников."
+ 		"dota_tip_hero_grid_configs_title"	"Настроить сетку героев"
+ 		"dota_tip_hero_grid_configs_desc"	"Сделайте сетку героев удобнее для себя, применив одну из стандартных заготовок или создав свою собственную."
+ 		"dota_tip_dashboard_shards_title"	"Получайте и тратьте осколки"
+ 		"dota_tip_dashboard_shards_desc"	"Вы получаете осколки за победу в 3 играх в неделю, повышение уровня героев, активность в гильдии и многое другое.\n\nЗа осколки вы можете приобрести эксклюзивные предметы для героев и другие полезности.\n\nПодписчики Dota Plus получают больше осколков и имеют доступ к такому эксклюзивному контенту, как звуки для колеса чата."
 
 //INTRODUCTORY LOADSCREEN TIPS		(0 to 25 games played)
 		"dota_tip_introduction_1"		"Старайтесь сражаться с крипами и вражескими героями в пределах атаки союзной башни."
@@ -14118,6 +14261,11 @@
 		"Crate_Extremely_Rare"		"Крайне редкая"
 		"Crate_Ultra_Rare"	"Невероятно редкая"
 		"Crate_Cosmically_Rare"	"Чрезвычайно редкая"
+		"Crate_Tier1"			"1-й разряд"
+		"Crate_Tier2"			"2-й разряд"
+		"Crate_Tier3"			"3-й разряд"
+		"Crate_Tier4"			"4-й разряд"
+		"Crate_Tier5"			"5-й разряд"
 		"Crate_Required_To_Open"	"Требуется для открытия"
 		"Crate_Not_Revealed"	"Содержимое этой сокровищницы пока что неизвестно!"
 		"Crate_Already_Unlocked"	"Уже открыта"
@@ -16596,22 +16744,13 @@
 		"DOTA_ChallengeDesc_FacelessVoid_TimeDilationSlow"				"Замедлите вражеских героев на <font color='#ffffff'>%s1</font> сек. способностью <font color='#ffffff'>Time Dilation</font>."
 
 		"DOTA_Quest_Fall_2016_Halloween_Title"							"Переплетения рока"
-		"DOTA_Quest_Fall_2016_Halloween_Desc"							""
 		"DOTA_Quest_Fall_2016_Halloween_Abaddon_Title"					"ТУМАННОЕ БУДУЩЕЕ"
-		"DOTA_Quest_Fall_2016_Halloween_Abaddon_Lore"					""
 		"DOTA_Quest_Fall_2016_Halloween_Clinkz_Title"					"ГОЛОДНЫЕ ИГРЫ"
-		"DOTA_Quest_Fall_2016_Halloween_Clinkz_Lore"					""
 		"DOTA_Quest_Fall_2016_Halloween_DeathProphet_Title"				"ДУХОВНАЯ СВЯЗЬ"
-		"DOTA_Quest_Fall_2016_Halloween_DeathProphet_Lore"				""
 		"DOTA_Quest_Fall_2016_Halloween_Lich_Title"						"ЖЕРТВЕННЫЙ ХАРАКТЕР"
-		"DOTA_Quest_Fall_2016_Halloween_Lich_Lore"						""
 		"DOTA_Quest_Fall_2016_Halloween_Spectre_Title"					"ПРИЗРАЧНАЯ РЕАЛЬНОСТЬ"
-		"DOTA_Quest_Fall_2016_Halloween_Spectre_Lore"					""
 		"DOTA_Quest_Fall_2016_Halloween_WraithKing_Title"				"НАДЕЖДЫ ПАВШИХ"
-		"DOTA_Quest_Fall_2016_Halloween_WraithKing_Lore"				""
 		"DOTA_Quest_Fall_2016_Halloween_Roshan_Title"					"КАК СЫР В МАСЛЕ"
-		"DOTA_Quest_Fall_2016_Halloween_Roshan_Lore"					""
-
 		"DOTA_ChallengeDesc_KillsDuringBKB_Ranked"						"Поучаствуйте в убийстве <font color='#ffffff'>%s1</font> раз(а), находясь под действием <font color='#ffffff'>Black King Bar</font>."
 		"DOTA_ChallengeStatusText_KillsDuringBKB_Ranked"				"%s2Мне нужно поучаствовать в убийстве, находясь под действием Black King Bar, ещё %s1 раз(а)!"
 
@@ -16854,238 +16993,117 @@
 
 		"DOTA_Quest_Winter_2017_Support_Title"				"Стезя эталона"
 		"DOTA_Quest_Winter_2017_Support_Place_Wards_Desc"		"ПОКРОВИТЕЛЬ ВОЙНЫ"
-		"DOTA_Quest_Winter_2017_Support_Place_Wards_Lore"		""
 		"DOTA_Quest_Winter_2017_Support_DualStuns_Desc"		"ОБЩЕЕ ЗАСЕДАНИЕ"
-		"DOTA_Quest_Winter_2017_Support_DualStuns_Lore"		""
 		"DOTA_Quest_Winter_2017_Support_GetAssists_Desc"		"ВЕРНЫЙ ПОМОЩНИК"
-		"DOTA_Quest_Winter_2017_Support_GetAssists_Lore"		""
 		"DOTA_Quest_Winter_2017_Support_UseUrn_Desc"		"ПРАХ К ПРАХУ"
-		"DOTA_Quest_Winter_2017_Support_UseUrn_Lore"		""
 		"DOTA_Quest_Winter_2017_Support_SilenceEnemies_Desc"		"ВАС НИКТО НЕ СПРАШИВАЛ"
-		"DOTA_Quest_Winter_2017_Support_SilenceEnemies_Lore"		""
 		"DOTA_Quest_Winter_2017_Support_UpgradeBoots_Desc"			"ВРЕМЯ ДЛЯ ОБНОВКИ"
-		"DOTA_Quest_Winter_2017_Support_UpgradeBoots_Lore"			""
 		"DOTA_Quest_Winter_2017_Support_DenyCreeps_Desc"		"ТЯЖЁЛОЕ РАССТАВАНИЕ"
-		"DOTA_Quest_Winter_2017_Support_DenyCreeps_Lore"		""
 		"DOTA_Quest_Winter_2017_Support_SpendSupportGold_Desc"		"ВОЕННЫЙ БЫТ"
-		"DOTA_Quest_Winter_2017_Support_SpendSupportGold_Lore"		""
 		"DOTA_Quest_Winter_2017_Support_KillAfterTeleport_Desc"		"ЖАЖДА ПУТЕШЕСТВИЙ"
-		"DOTA_Quest_Winter_2017_Support_KillAfterTeleport_Lore"		""
 		"DOTA_Quest_Winter_2017_Support_KillAfterCyclone_Desc"		"ВАЛЬС СМЕРТИ"
-		"DOTA_Quest_Winter_2017_Support_KillAfterCyclone_Lore"		""
 		"DOTA_Quest_Winter_2017_Support_CancelRegen_Desc"		"СУХОЙ ЗАКОН"
-		"DOTA_Quest_Winter_2017_Support_CancelRegen_Lore"		""
 		"DOTA_Quest_Winter_2017_Support_TotalHealing_Desc"		"МОЖНО НЕ ЗАЛИЗЫВАТЬ"
-		"DOTA_Quest_Winter_2017_Support_TotalHealing_Lore"		""
 		"DOTA_Quest_Winter_2017_Support_UltimateDamage_Desc"		"РОКОВОЙ УЛЬТИМАТУМ"
-		"DOTA_Quest_Winter_2017_Support_UltimateDamage_Lore"		""
-		"DOTA_Quest_Winter_2017_Support_PreventMagicDamage_Desc"		""
-		"DOTA_Quest_Winter_2017_Support_PreventMagicDamage_Lore"		""
 		"DOTA_Quest_Winter_2017_Support_SlowHeroes_Desc"		"НЕ УВЕРЕН — НЕ ОБГОНЯЙ"
-		"DOTA_Quest_Winter_2017_Support_SlowHeroes_Lore"		""
 		"DOTA_Quest_Winter_2017_Support_TreantHealDebuff_Desc"		"И ЛЕЧИТ, И КАЛЕЧИТ"
-		"DOTA_Quest_Winter_2017_Support_TreantHealDebuff_Lore"		""
-
-
 		"DOTA_Quest_Winter_2017_Utility_Title"				"Стезя инквизитора"
 		"DOTA_Quest_Winter_2017_Utility_Pickup_Bounty_Runes_Desc"		"ОНИ ВЕЗДЕ"
-		"DOTA_Quest_Winter_2017_Utility_Pickup_Bounty_Runes_Lore"		""
 		"DOTA_Quest_Winter_2017_Utility_UseScans_Desc"		"ИСКУССТВО ОБНАРУЖЕНИЯ"
-		"DOTA_Quest_Winter_2017_Utility_UseScans_Lore"		""
 		"DOTA_Quest_Winter_2017_Utility_WinGamesBeforeTime_Desc"		"ЗНАЙ ЦЕНУ ВРЕМЕНИ"
-		"DOTA_Quest_Winter_2017_Utility_WinGamesBeforeTime_Lore"		""
 		"DOTA_Quest_Winter_2017_Utility_InterruptChannels_Desc"		"НУЖНО УМЕТЬ ОСТАНОВИТЬСЯ"
-		"DOTA_Quest_Winter_2017_Utility_InterruptChannels_Lore"		""
 		"DOTA_Quest_Winter_2017_Utility_KillAfterUsingBlink_Desc"		"ВОЕННОЕ ПОЛОЖЕНИЕ"
-		"DOTA_Quest_Winter_2017_Utility_KillAfterUsingBlink_Lore"		""
 		"DOTA_Quest_Winter_2017_Utility_ReachLevel25_Desc"		"КРУПНАЯ РЫБА"
-		"DOTA_Quest_Winter_2017_Utility_ReachLevel25_Lore"		""
 		"DOTA_Quest_Winter_2017_Utility_UseForceStaff_Desc"		"ПОЛНЫЙ ВПЕРЁД"
-		"DOTA_Quest_Winter_2017_Utility_UseForceStaff_Lore"		""
 		"DOTA_Quest_Winter_2017_Utility_UseAtos_Desc"		"КРЕПКИЕ ОКОВЫ"
-		"DOTA_Quest_Winter_2017_Utility_UseAtos_Lore"		""
 		"DOTA_Quest_Winter_2017_Utility_UseVeilOnTwoTargets_Desc"		"ЗАВУАЛИРОВАННАЯ УГРОЗА"
-		"DOTA_Quest_Winter_2017_Utility_UseVeilOnTwoTargets_Lore"		""
 		"DOTA_Quest_Winter_2017_Utility_DealMagicDamage_Desc"		"МАГИЯ РЕАЛЬНА"
-		"DOTA_Quest_Winter_2017_Utility_DealMagicDamage_Lore"		""
 		"DOTA_Quest_Winter_2017_Utility_PurgeDebuffsWithGreaves_Desc"		"МИНУС НА МИНУС"
-		"DOTA_Quest_Winter_2017_Utility_PurgeDebuffsWithGreaves_Lore"		""
 		"DOTA_Quest_Winter_2017_Utility_DestroyTrees_Desc"		"ДРЕВЕСНАЯ НЕТЕРПИМОСТЬ"
-		"DOTA_Quest_Winter_2017_Utility_DestroyTrees_Lore"		""
 		"DOTA_Quest_Winter_2017_Utility_EarnLastHits_Desc"		"КАЖДЫЙ КРИП НА СЧЕТУ"
-		"DOTA_Quest_Winter_2017_Utility_EarnLastHits_Lore"		""
 		"DOTA_Quest_Winter_2017_Utility_ManaBurn_Desc"		"И ЧТОБЫ БЕЗ ФОКУСОВ"
-		"DOTA_Quest_Winter_2017_Utility_ManaBurn_Lore"		""
 		"DOTA_Quest_Winter_2017_Utility_ZeusArcLightning_Desc"		"В ОДНО МЕСТО ДВАЖДЫ"
-		"DOTA_Quest_Winter_2017_Utility_ZeusArcLightning_Lore"		""
-
 		"DOTA_Quest_Winter_2017_Carry_Title"				"Стезя рубаки"
 		"DOTA_Quest_Winter_2017_Carry_Multikill_Desc"		"РЕЦИДИВИСТ"
-		"DOTA_Quest_Winter_2017_Carry_Multikill_Lore"		""
 		"DOTA_Quest_Winter_2017_Carry_LastHits_Desc"		"БУДТО НА ФЕРМЕ"
-		"DOTA_Quest_Winter_2017_Carry_LastHits_Lore"		""
 		"DOTA_Quest_Winter_2017_Carry_KillShrines_Desc"		"НИЧТО НЕ СВЯТО"
-		"DOTA_Quest_Winter_2017_Carry_KillShrines_Lore"		""
 		"DOTA_Quest_Winter_2017_Carry_HeroKills_Desc"		"СОГЛАСНО ОЖИДАНИЯМ"
-		"DOTA_Quest_Winter_2017_Carry_HeroKills_Lore"		""
 		"DOTA_Quest_Winter_2017_Carry_UseEchoSabre_Desc"		"УЙДИ, ЕСЛИ СМОЖЕШЬ"
-		"DOTA_Quest_Winter_2017_Carry_UseEchoSabre_Lore"		""
 		"DOTA_Quest_Winter_2017_Carry_DisjointAttacks_Desc"		"В МОЛОКО"
-		"DOTA_Quest_Winter_2017_Carry_DisjointAttacks_Lore"		""
 		"DOTA_Quest_Winter_2017_Carry_KillHeroesBeforeTime_Desc"		"ЭТО ТОЛЬКО НАЧАЛО"
-		"DOTA_Quest_Winter_2017_Carry_KillHeroesBeforeTime_Lore"		""
 		"DOTA_Quest_Winter_2017_Carry_DamageAfterLeavingInvisibility_Desc"		"ГРОМКИЙ ВЫХОД"
-		"DOTA_Quest_Winter_2017_Carry_DamageAfterLeavingInvisibility_Lore"		""
 		"DOTA_Quest_Winter_2017_Carry_GetDoubleKills_Desc"		"САПОГ САПОГУ ПАРА"
-		"DOTA_Quest_Winter_2017_Carry_GetDoubleKills_Lore"		""
 		"DOTA_Quest_Winter_2017_Carry_DealDamageWithMaelstrom_Desc"		"МОЛНИЕНОСНЫЙ БОЕЦ"
-		"DOTA_Quest_Winter_2017_Carry_DealDamageWithMaelstrom_Lore"		""
 		"DOTA_Quest_Winter_2017_Carry_DealDamageInASingleAttack_Desc"		"КОЛЕНКИ ПОДОГНУЛИСЬ?"
-		"DOTA_Quest_Winter_2017_Carry_DealDamageInASingleAttack_Lore"		""
 		"DOTA_Quest_Winter_2017_Carry_BreakEnemyHeroes_Desc"		"БЕЗ СИЛЫ — В МОГИЛУ"
-		"DOTA_Quest_Winter_2017_Carry_BreakEnemyHeroes_Lore"		""
 		"DOTA_Quest_Winter_2017_Carry_EarnGPM_Desc"		"ПОКУПНАЯ СПОСОБНОСТЬ"
-		"DOTA_Quest_Winter_2017_Carry_EarnGPM_Lore"		""
 		"DOTA_Quest_Winter_2017_Carry_LifestealDamage_Desc"		"СПАСИБО ЗА ЖИЗНЬ"
-		"DOTA_Quest_Winter_2017_Carry_LifestealDamage_Lore"		""
 		"DOTA_Quest_Winter_2017_Carry_ManaVoidHits_Desc"		"КОЛДОВСТВО НАКАЗУЕМО"
-		"DOTA_Quest_Winter_2017_Carry_ManaVoidHits_Lore"		""
-
 		"DOTA_Quest_International_2017_Support_Title"		"Стезя навигатора"
-		"DOTA_Quest_International_2017_Support_Desc"		""
-
 		"DOTA_Quest_Internationl_2017_Support_Win_As_Intellect_Desc"		"МАГИЯ РАЗУМА"
-		"DOTA_Quest_Internationl_2017_Support_Win_As_Intellect_Lore"		""
 		"DOTA_Quest_Internationl_2017_Support_Root_Enemies_Desc"		"НА МЕЛИ"
-		"DOTA_Quest_Internationl_2017_Support_Root_Enemies_Lore"		""
 		"DOTA_Quest_Internationl_2017_Support_Earn_Gold_For_Allies_Desc"		"БОЛЬШОЙ УЛОВ"
-		"DOTA_Quest_Internationl_2017_Support_Earn_Gold_For_Allies_Lore"		""
 		"DOTA_Quest_Internationl_2017_Support_Damage_From_Glimmer_Desc"		"ПОДВОДНЫЕ КАМНИ"
-		"DOTA_Quest_Internationl_2017_Support_Damage_From_Glimmer_Lore"		""
 		"DOTA_Quest_Internationl_2017_Support_Triple_Meks_Desc"		"В КАЖДОЙ БОЧКЕ ЗАТЫЧКА"
-		"DOTA_Quest_Internationl_2017_Support_Triple_Meks_Lore"		""
 		"DOTA_Quest_Internationl_2017_Support_KillsWhileStunned_Desc"		"ГЛУШИТЕЛЬ"
-		"DOTA_Quest_Internationl_2017_Support_KillsWhileStunned_Lore"		""
-
 		"DOTA_Quest_Internationl_2017_Support_Shivas_Slow_Damage_Desc"		"МОРСКАЯ СВЕЖЕСТЬ"
-		"DOTA_Quest_Internationl_2017_Support_Shivas_Slow_Damage_Lore"		""
 		"DOTA_Quest_Internationl_2017_Support_Place_Obs_Wards_Desc"		"ВПЕРЁДСМОТРЯЩИЙ"
-		"DOTA_Quest_Internationl_2017_Support_Place_Obs_Wards_Lore"		""
 		"DOTA_Quest_Internationl_2017_Support_Linkens_Absorb_Desc"		"КАК РЫБА ОБ ЛЁД"
-		"DOTA_Quest_Internationl_2017_Support_Linkens_Absorb_Lore"		""
 		"DOTA_Quest_International_2017_Deal_Pure_Damage_Desc"		"ЧИСТОЙ ВОДЫ МАГИЯ"
-		"DOTA_Quest_International_2017_Deal_Pure_Damage_Lore"		""
 		"DOTA_Quest_Internationl_2017_Blink_Stun_Desc"		"НА ВСЕХ ПАРУСАХ"
-		"DOTA_Quest_Internationl_2017_Blink_Stun_Lore"		""
 		"DOTA_Quest_Internationl_2017_Ethereal_Damage_Desc"		"ОТ ПЕТЛИ НЕ УЙДЁШЬ"
-		"DOTA_Quest_Internationl_2017_Ethereal_Damage_Lore"		""
 		"DOTA_Quest_Internationl_2017_Triple_Man_Nukes_Desc"		"ОКЕАН СЛЁЗ"
-		"DOTA_Quest_Internationl_2017_Triple_Man_Nukes_Lore"		""
 		"DOTA_Quest_Internationl_2017_Ogre_Hit_Multicast_Desc"		"УДАЧА МОРЯКА"
-		"DOTA_Quest_Internationl_2017_Ogre_Hit_Multicast_Lore"		""
-
 		"DOTA_Quest_International_2017_Utility_Title"		"Стезя волнореза"
-		"DOTA_Quest_International_2017_Utility_Desc"		""
-
 		"DOTA_Quest_International_2017_Coop_Quest"          "Командные задания"
 		"DOTA_Quest_International_2017_Coop_Quest_Special_Rules"      "Выполните 12 заданий хотя бы на одну звезду, и вы получите набор предметов.<br />Заработайте 34 звезды, чтобы получить для него стиль-улучшение."
 
 		"DOTA_Quest_International_2017_Kunkka_Quest_Title"	"Открывается на 225 уровне пропуска"
 
 		"DOTA_Quest_International_2017_Utility_Bloodstone_Charges_Desc"		"КРОВАВЫЙ ЗАЛИВ"
-		"DOTA_Quest_International_2017_Utility_Bloodstone_Charges_Lore"		""
 		"DOTA_Quest_International_2017_Utility_Death_Count_Desc"		"В ОГНЕ НЕ ГОРИТ"
-		"DOTA_Quest_International_2017_Utility_Death_Count_Lore"		""
 		"DOTA_Quest_International_2017_Utility_NetWorth_ByTime_Desc"		"КРУПНАЯ РЫБА"
-		"DOTA_Quest_International_2017_Utility_NetWorth_ByTime_Lore"		""
 		"DOTA_Quest_International_2017_Utility_Control_Unit_Damage_Desc"		"СЛОВО КАПИТАНА – ЗАКОН"
-		"DOTA_Quest_International_2017_Utility_Control_Unit_Damage_Lore"		""
 		"DOTA_Quest_International_2017_Utility_Crit_Damage_Desc"		"ДЕВЯТЫЙ ВАЛ"
-		"DOTA_Quest_International_2017_Utility_Crit_Damage_Lore"		""
-		"DOTA_Quest_International_2017_Utility_Tower_Kill_Streak_Desc"		""
-		"DOTA_Quest_International_2017_Utility_Tower_Kill_Streak_Lore"		""
 		"DOTA_Quest_International_2017_Utility_BKB_Kills_Desc"		"МОРЕ ПО КОЛЕНО"
-		"DOTA_Quest_International_2017_Utility_BKB_Kills_Lore"		""
 		"DOTA_Quest_International_2017_Utility_Manta_Debuff_Purge_Desc"		"ТРОЙНОЙ УХОД"
-		"DOTA_Quest_International_2017_Utility_Manta_Debuff_Purge_Lore"		""
 		"DOTA_Quest_International_2017_Utility_Kill_Single_Hero_Desc"		"УЧАСТЬ САЛАГИ"
-		"DOTA_Quest_International_2017_Utility_Kill_Single_Hero_Lore"		""
 		"DOTA_Quest_International_2017_Utility_Use_Moon_Shard_Desc"		"ПОЛНЫЙ ХОД"
-		"DOTA_Quest_International_2017_Utility_Use_Moon_Shard_Lore"		""
 		"DOTA_Quest_Internationl_2017_Utility_Bashes_Desc"		"УДАР ПО ПЕЧЕНИ"
-		"DOTA_Quest_Internationl_2017_Utility_Bashes_Lore"		""
 		"DOTA_Quest_Internationl_2017_Support_Debuff_With_Medallion_Desc"		"У ВАС БРЕШЬ"
-		"DOTA_Quest_Internationl_2017_Support_Debuff_With_Medallion_Lore"		""
 		"DOTA_Quest_International_2017_Tower_Dive_Kills_Desc"		"ХОТЬ ЗА КРАЙ СВЕТА"
-		"DOTA_Quest_International_2017_Tower_Dive_Kills_Lore"		""
-
 		"DOTA_Quest_International_2017_Hex_Enemies_Desc"		"ИЗ КРЕЙСЕРА В ШЛЮПКУ"
-		"DOTA_Quest_International_2017_Hex_Enemies_Lore"		""
 		"DOTA_Quest_International_2017_Luna_Lucent_Beams_Desc"		"НОЧНОЙ ДОЗОР"
-		"DOTA_Quest_International_2017_Luna_Lucent_Beams_Lore"		""
 		"DOTA_Quest_International_2017_Win_As_Agility_Desc"		"АБОРДАЖНИК"
-		"DOTA_Quest_International_2017_Win_As_Agility_Lore"		""
 		"DOTA_Quest_International_2017_Win_As_Strength_Desc"		"ПРОТИВ ЛОМА НЕТ ПРИЁМА"
-		"DOTA_Quest_International_2017_Win_As_Strength_Lore"		""
-
-
 		"DOTA_Quest_International_2017_Carry_Title"		"Стезя вестников бури"
-		"DOTA_Quest_International_2017_Carry_Desc"		""
-
 		"DOTA_Quest_Interntaional_2017_Team_Kills_With_Assists_Desc"		"ПРЕДРАССВЕТНАЯ МИССИЯ"
-		"DOTA_Quest_Interntaional_2017_Team_Kills_With_Assists_Lore"		""
 		"DOTA_Quest_Interntaional_2017_Team_Split_Push_Title"		"ПО ВСЕМ ФРОНТАМ"
-		"DOTA_Quest_Interntaional_2017_Team_Split_Push_Lore"		""
 		"DOTA_Quest_Interntaional_2017_Team_Healing_Title"		"В ЗДОРОВОЙ КОМАНДЕ…"
-		"DOTA_Quest_Interntaional_2017_Team_Healing_Lore"		""
 		"DOTA_Quest_Interntaional_2017_Team_Smoke_Ganks_Title"		"ТУМАН НАСТУПАЕТ"
-		"DOTA_Quest_Interntaional_2017_Team_Smoke_Ganks_Lore"		""
 		"DOTA_Quest_Interntaional_2017_Team_Kills_Before_Time_Title"		"ПЛЕННЫХ НЕ БРАТЬ"
-		"DOTA_Quest_Interntaional_2017_Team_Kills_Before_Time_Lore"		""
 		"DOTA_Quest_Interntaional_2017_Team_First_Kills_Title"		"ПЕРВООТКРЫВАТЕЛИ"
-		"DOTA_Quest_Interntaional_2017_Team_First_Kills_Lore"		""
 		"DOTA_Quest_Interntaional_2017_Team_Captains_Mode_Wins_Title"		"ДЕНЬ У ШТУРВАЛА"
-		"DOTA_Quest_Interntaional_2017_Team_Captains_Mode_Wins_Lore"		""
 		"DOTA_Quest_Interntaional_2017_Team_Battle_Cup_Wins_Title"		"БУКАНЬЕР БОЕВОГО КУБКА"
-		"DOTA_Quest_Interntaional_2017_Team_Battle_Cup_Wins_Lore"		""
 		"DOTA_Quest_Interntaional_2017_Team_Auras_Title"		"АУРА ПОПУТНОГО ВЕТРА"
-		"DOTA_Quest_Interntaional_2017_Team_Auras_Lore"		""
 		"DOTA_Quest_Interntaional_2017_Team_Stuns_Title"		"ОТДАТЬ ШВАРТОВЫ"
-		"DOTA_Quest_Interntaional_2017_Team_Stuns_Lore"		""
 		"DOTA_Quest_Interntaional_2017_Team_Runes_Title"		"РУННАЯ АРМАДА"
-		"DOTA_Quest_Interntaional_2017_Team_Runes_Lore"		""
 		"DOTA_Quest_Interntaional_2017_Team_Assists_Title"		"СВИСТАТЬ ВСЕХ НАВЕРХ"
-		"DOTA_Quest_Interntaional_2017_Team_Assists_Lore"		""
 		"DOTA_Quest_Interntaional_2017_Team_PhysicalDamage_Title"		"ВСЕ НА АБОРДАЖ"
-		"DOTA_Quest_Interntaional_2017_Team_PhysicalDamage_Lore"		""
-
 		"DOTA_Quest_International_2017_Kunkka_Title"		"Стезя морского волка"
-		"DOTA_Quest_International_2017_Kunkka_Desc"		""
-
 		"DOTA_Quest_Interntaional_2017_Kunkka_Tidebringer_Damage_Desc"		"ЗЕЛЁНЫЕ МОРЯ"
-		"DOTA_Quest_Interntaional_2017_Kunkka_Tidebringer_Damage_Lore"		""
 		"DOTA_Quest_Interntaional_2017_Kunkka_Xmarks_Kills_Desc"		"БУРНЫЕ ВОДЫ"
-		"DOTA_Quest_Interntaional_2017_Kunkka_Xmarks_Kills_Lore"		""
 		"DOTA_Quest_Interntaional_2017_Kunkka_Buy_Blink_Or_Shadowblade_Title"		"БЕСШУМНОЕ ТЕЧЕНИЕ"
-		"DOTA_Quest_Interntaional_2017_Kunkka_Buy_Blink_Or_Shadowblade_Lore"		""
 		"DOTA_Quest_Interntaional_2017_Kunkka_Boatbuff_Duration_Title"		"РОМ НУЖНО ЗАСЛУЖИТЬ"
-		"DOTA_Quest_Interntaional_2017_Kunkka_Boatbuff_Duration_Lore"		""
 		"DOTA_Quest_Interntaional_2017_Kunkka_Buy_Aghs_And_Ship_Title"		"БЕДНОСТЬ МОРЯКА"
-		"DOTA_Quest_Interntaional_2017_Kunkka_Buy_Aghs_And_Ship_Lore"		""
 		"DOTA_Quest_Interntaional_2017_Kunkka_Double_Torrents_Title"		"ЖЕСТОКИЙ ПРИБОЙ"
-		"DOTA_Quest_Interntaional_2017_Kunkka_Double_Torrents_Lore"		""
 		"DOTA_Quest_Interntaional_2017_Kunkka_Combo_Title"		"ПРИКАЗ АДМИРАЛА"
-		"DOTA_Quest_Interntaional_2017_Kunkka_Combo_Lore"		""
-
-
 		"DOTA_ChallengeVar_ItemLevel2"					"(уровень 2)"
 		"DOTA_ChallengeVar_ItemLevel3"					"(уровень 3)"
 		"DOTA_ChallengeVar_ItemLevel4"					"(уровень 4)"
 		"DOTA_ChallengeVar_ItemLevel5"					"(уровень 5)"
 
 		"DOTA_ChallengeName_PlaceHolder"				"ИСПЫТАНИЕ"
-		"DOTA_ChallengeLore_PlaceHolder"				""
-
 		"DOTA_ChallengeDesc_Weekly1Preview"				"Вместе со своей командой разрушьте <font color='#75a92e'>15</font> вражеских <font color='#75a92e'>башен</font>."
 		"DOTA_ChallengeDesc_Weekly2Preview"				"Добейте <font color='#75a92e'>500</font> крипов."
 
@@ -17314,102 +17332,52 @@
 
 		"DOTA_Quest_Fall_2016_Support_Title"			"Стезя хранителя"
 		"DOTA_Quest_Fall_2016_Support_SpendGoldOnItems_Title"			"БЕДНОСТЬ ЩЕДРА"
-		"DOTA_Quest_fall_2016_Support_SpendGoldOnItems_Lore"			""
 		"DOTA_Quest_Fall_2016_Support_RestoreHealthToAllies_Title"			"КАК РУКОЙ СНЯЛО"
-		"DOTA_Quest_Fall_2016_Support_RestoreHealthToAllies_Lore"			""
 		"DOTA_Quest_Fall_2016_Support_Deward_Title"			"ПОНИМАЮ ВАШУ БОЛЬ"
-		"DOTA_Quest_Fall_2016_Support_Deward_Lore"			""
 		"DOTA_Quest_Fall_2016_Support_DisableHeroes_Title"			"ВРЕДИТЕЛЬ"
-		"DOTA_Quest_Fall_2016_Support_DisableHeroes_Lore"			""
 		"DOTA_Quest_Fall_2016_Support_StackCamps_Title"			"ПРАЗДНИК ЖАТВЫ"
-		"DOTA_Quest_Fall_2016_Support_StackCamps_Lore"			""
 		"DOTA_Quest_Fall_2016_Support_KillsAfterDusting_Title"			"ПЫЛЬНАЯ РАБОТЕНКА"
-		"DOTA_Quest_Fall_2016_Support_KillsAfterDusting_Lore"			""
 		"DOTA_Quest_Fall_2016_Support_PlaceObserverWards_Title"			"У ХОЛМОВ ЕСТЬ ГЛАЗА"
-		"DOTA_Quest_Fall_2016_Support_PlaceObserverWards_Lore"			""
 		"DOTA_Quest_Fall_2016_Support_InterruptChannels_Title"			"ПОДУМАЙ ЕЩЁ РАЗ"
-		"DOTA_Quest_Fall_2016_Support_InterruptChannels_Lore"			""
 		"DOTA_Quest_Fall_2016_Support_RestoreMana_Title"			"ВОЛШЕБНЫЙ ЭТИКЕТ"
-		"DOTA_Quest_Fall_2016_Support_RestoreMana_Lore"			""
 		"DOTA_Quest_Fall_2016_Support_KillWhileStunning_Title"			"НА ТАРЕЛОЧКЕ"
-		"DOTA_Quest_Fall_2016_Support_KillWhileStunning_Lore"			""
 		"DOTA_Quest_Fall_2016_Support_ScanEnemies_Title"			"СИСТЕМА ОБНАРУЖЕНИЯ"
-		"DOTA_Quest_Fall_2016_Support_ScanEnemies_Lore"			""
 		"DOTA_Quest_Fall_2016_Support_SmokeKills_Title"			"БЫВАЕТ И БЕЗ ОГНЯ"
-		"DOTA_Quest_Fall_2016_Support_SmokeKills_Lore"			""
 		"DOTA_Quest_Fall_2016_Support_HeroesSaved_Title"			"ИГРА С ОГНЕМ"
-		"DOTA_Quest_Fall_2016_Support_HeroesSaved_Lore"			""
 		"DOTA_Quest_Fall_2016_Support_KillAfterMovingEnemy_Title"			"КОРРЕКТИРОВКА"
-		"DOTA_Quest_Fall_2016_Support_KillAfterMovingEnemy_Lore"			""
 		"DOTA_Quest_Fall_2016_Support_KillWhileFiendsGrip_Title"			"НЕИСПРАВИМЫЙ СОНЯ"
-		"DOTA_Quest_Fall_2016_Support_KillWhileFiendsGrip_Lore"			""
-
 		"DOTA_Quest_Fall_2016_Carry_Title"			"Стезя подчинителя"
 		"DOTA_Quest_Fall_2016_Carry_DealPhysicalDamage_Title"			"ТВЕРДОЙ РУКОЙ"
-		"DOTA_Quest_Fall_2016_Carry_DealPhysicalDamage_Lore"			""
 		"DOTA_Quest_Fall_2016_Carry_ClaimAegis_Title"			"РЕШИТЕЛЬНЫЙ ШАГ"
-		"DOTA_Quest_Fall_2016_Carry_ClaimAegis_Lore"			""
 		"DOTA_Quest_Fall_2016_Carry_KillCreepsInTime_Title"			"БЫСТРО И ЧЕТКО"
-		"DOTA_Quest_Fall_2016_Carry_KillCreepsInTime_Lore"			""
 		"DOTA_Quest_Fall_2016_Carry_KillSameEnemy_Title"			"ОСОБОЕ МЕСТО В СЕРДЦЕ"
-		"DOTA_Quest_Fall_2016_Carry_KillSameEnemy_Lore"			""
 		"DOTA_Quest_Fall_2016_Carry_SplitpushTower_Title"			"СВОБОДНЫЙ ОБМЕН"
-		"DOTA_Quest_Fall_2016_Carry_SplitpushTower_Lore"			""
 		"DOTA_Quest_Fall_2016_Carry_KillAfterUsingAbyssal_Title"			"СДЕЛАЙ ПАУЗУ"
-		"DOTA_Quest_Fall_2016_Carry_KillAfterUsingAbyssal_Lore"			""
 		"DOTA_Quest_Fall_2016_Carry_KillAncients_Title"			"ПЕРЕЖИТОК ДРЕВНОСТИ"
-		"DOTA_Quest_Fall_2016_Carry_KillAncients_Lore"			""
 		"DOTA_Quest_Fall_2016_Carry_LastHitsBeforeTime_Title"			"ВРЕМЯ — ДЕНЬГИ"
-		"DOTA_Quest_Fall_2016_Carry_LastHitsBeforeTime_Lore"			""
 		"DOTA_Quest_Fall_2016_Carry_KillingSprees_Title"			"МОГИЛЬНЫЙ РЯД"
-		"DOTA_Quest_Fall_2016_Carry_KillingSprees_Lore"			""
 		"DOTA_Quest_Fall_2016_Carry_GetDoubleKills_Title"			"ЗА ДВУМЯ ПОГОНИШЬСЯ"
-		"DOTA_Quest_Fall_2016_Carry_GetDoubleKills_Lore"			""
 		"DOTA_Quest_Fall_2016_Carry_KillCount_Title"			"ЖАЖДА КРОВИ"
-		"DOTA_Quest_Fall_2016_Carry_KillCount_Lore"			""
 		"DOTA_Quest_Fall_2016_Carry_KillTowers_Title"			"РАЗРУШИТЕЛЬНЫЙ ХАРАКТЕР"
-		"DOTA_Quest_Fall_2016_Carry_KillTowers_Lore"			""
 		"DOTA_Quest_Fall_2016_Carry_SilenceWithOrchidBloodthorne_Title"			"МЕРТВАЯ ТИШИНА"
-		"DOTA_Quest_Fall_2016_Carry_SilenceWithOrchidBloodthorne_Lore"			""
 		"DOTA_Quest_Fall_2016_Carry_EarnTeamGold_Title"			"НАБИРАЯ ОБОРОТЫ"
-		"DOTA_Quest_Fall_2016_Carry_EarnTeamGold_Lore"			""
 		"DOTA_Quest_Fall_2016_Carry_RazorBuildingDamage_Title"			"ПОДАВЛЯЮЩИЙ ТОК"
-		"DOTA_Quest_Fall_2016_Carry_RazorBuildingDamage_Lore"			""
-
-
 		"DOTA_Quest_Fall_2016_Utility_Title"			"Стезя провокатора"
 		"DOTA_Quest_Fall_2016_Utility_PickupRunes_Title"			"РУННЫЙ ДЕНЬ"
-		"DOTA_Quest_Fall_2016_Utility_PickupRunes_Lore"			""
 		"DOTA_Quest_Fall_2016_Utility_GetLevel_Title"			"ЛИЧНЫЙ УЛЬТИМАТУМ"
-		"DOTA_Quest_Fall_2016_Utility_GetLevel_Lore"			""
 		"DOTA_Quest_Fall_2016_Utility_FirstBloodMultiGame_Title"			"НЕ САМАЯ ПЛОХАЯ ПРИВЫЧКА"
-		"DOTA_Quest_Fall_2016_Utility_FirstBloodMultiGame_Lore"			""
 		"DOTA_Quest_Fall_2016_Utility_UrnUse_Title"			"ПЕПЕЛ ВРАГА ТВОЕГО"
-		"DOTA_Quest_Fall_2016_Utility_UrnUse_Lore"			""
 		"DOTA_Quest_Fall_2016_Utility_LongRangeKills_Title"			"ОТНОШЕНИЯ НА РАССТОЯНИИ"
-		"DOTA_Quest_Fall_2016_Utility_LongRangeKills_Lore"			""
 		"DOTA_Quest_Fall_2016_Utility_UseHalberd_Title"			"ПРОСТО СВЯЗАНЫ РУКИ"
-		"DOTA_Quest_Fall_2016_Utility_UseHalberd_Lore"			""
 		"DOTA_Quest_Fall_2016_Utility_KillstreaksEnded_Title"			"ПРОЖОРЛИВОЕ БРЮШКО"
-		"DOTA_Quest_Fall_2016_Utility_KillstreaksEnded_Lore"			""
 		"DOTA_Quest_Fall_2016_Utility_DoubleStuns_Title"			"ДВА САПОГА ПАРА"
-		"DOTA_Quest_Fall_2016_Utility_DoubleStuns_Lore"			""
 		"DOTA_Quest_Fall_2016_Utility_ReflectWithLotus_Title"			"КТО С МАГИЕЙ ПРИДЕТ"
-		"DOTA_Quest_Fall_2016_Utility_ReflectWithLotus_Lore"			""
 		"DOTA_Quest_Fall_2016_Utility_KillCouriers_Title"			"И СМЕХ, И УСПЕХ"
-		"DOTA_Quest_Fall_2016_Utility_KillCouriers_Lore"			""
 		"DOTA_Quest_Fall_2016_Utility_PurgeDebuffs_Title"			"ЧИСТОТА НА СОВЕСТЬ"
-		"DOTA_Quest_Fall_2016_Utility_PurgeDebuffs_Lore"			""
 		"DOTA_Quest_Fall_2016_Utility_TowerDiveKills_Title"			"НИЧЕГО СВЯТОГО"
-		"DOTA_Quest_Fall_2016_Utility_TowerDiveKills_Lore"			""
 		"DOTA_Quest_Fall_2016_Utility_UseRefresher_Title"			"НЕ ЗАБУДЬ ПЕРЕЗАРЯЖАТЬ"
-		"DOTA_Quest_Fall_2016_Utility_UseRefresher_Lore"			""
 		"DOTA_Quest_Fall_2016_Utility_DealMagicDamage_Title"			"КРОВЬ ЗА МАНУ"
-		"DOTA_Quest_Fall_2016_Utility_DealMagicDamage_Lore"			""
 		"DOTA_Quest_Fall_2016_Utility_BountyHunterShuriken_Title"			"НАГРАДНОЙ ПРИЕМ"
-		"DOTA_Quest_Fall_2016_Utility_BountyHunterShuriken_Lore"			""
-
-
 		"DOTA_DB_SeasonPass_Welcome"			"ДОБРО ПОЖАЛОВАТЬ"
 
 		"DOTA_ChallengeVar_MultiKill_2"		"двойное убийство (2)"
@@ -17681,9 +17649,7 @@
 
 		"FrontPage_MovieSeries_Header"			"Эпизод 2"
 		"FrontPage_MovieSeries_Title"				"True Sight"
-		"FrontPage_MovieSeries_Description"		""
-
-        "FrontPage_KievMajor_Header"            "Новое в Dota 2"
+		"FrontPage_KievMajor_Header"            "Новое в Dota 2"
         "FrontPage_KievMajor_Title"             "Киевский мейджор: расписание и билеты"
         "FrontPage_KievMajor_Description"       "Киевский мейджор стремительно приближается, и, чтобы избежать возможные конфликты с другими турнирами, мы перенесли его основной этап на 27–30 апреля. Он пройдёт в Национальном дворце искусств «Украина»."
 
@@ -17741,8 +17707,6 @@
 		"DOTA_Quest_Winter_2016_Solo_Desc"				"Первая скрипка."
 		"DOTA_Quest_Winter_2016_CNY_Title"				"Стезя процветания"
 		"DOTA_Quest_Winter_2016_CNY_SubTitle"			"Новоцвет"
-		"DOTA_Quest_Winter_2016_CNY_Desc"				""
-
 		"DOTA_DB_SeasonPass_NewBloom_Reward" 			"<font color='#CB512A'/>CRIMSON PARCEL</font><br>Каждый такой конверт содержит случайную награду Новоцвета"
 		"DOTA_DB_SeasonPass_NewBloom_Expire"			"Стезя доступна на время Новоцвета (с 5 по 16 февраля 2016 года)"
 		"DOTA_DB_SeasonPass_NewBloom_Home_Expire"		"Стезя доступна с 5 по 16 февраля 2016 года"
@@ -18083,7 +18047,6 @@
 		"dota_finding_match_tourney"				"Поиск соперников по боевому кубку"
 
 		"tourney_node_team_tbd1"					"?"
-		"tourney_node_team_tbd2"					""
 		"tourney_node_team_pending_merge"			"?"
 		"tourney_node_team_finding"					"Поиск..."
 		"tourney_node_team_bye"						"(пропуск)"
@@ -18425,6 +18388,10 @@
 		"DOTA_Chat_Ping_Msg_EnemyWard" "<img class=\"ChatWheelIcon\" src=\"file://{images}/hud/reborn/ping_icon_enemyward.psd\" />У врага обзор: %s1"
 		"DOTA_Chat_Ping_Msg_FriendlyWard" "<img class=\"ChatWheelIcon\" src=\"file://{images}/hud/reborn/ping_icon_friendlyward.psd\" />Нужен обзор: %s1"
 
+		"DOTA_Chat_Ping_Confirmation_Msg_0" "<img class=\"ChatWheelIcon\" src=\"file://{images}/hud/reborn/ping_icon_attack.psd\"/>%s1 союзника атакуют %s3 (%s2 против)"
+		"DOTA_Chat_Ping_Confirmation_Msg_1" "<img class=\"ChatWheelIcon\" src=\"file://{images}/hud/reborn/ping_icon_defend.psd\"/>%s1 союзника защищают %s3 (%s2 против)"
+		"DOTA_Chat_Ping_Confirmation_Msg_2" "<img class=\"ChatWheelIcon\" src=\"file://{images}/hud/reborn/ping_icon_smoke.psd\" />%s3 предлагает использовать Smoke of Deceit (%s1 за, %s2 против)"
+
 		"DOTA_Location_Name_GoodGuys" "сил Света"
 		"DOTA_Location_Name_BadGuys" "сил Тьмы"
 		"DOTA_Location_Name_Neutral" "на ничьей территории"
@@ -18477,7 +18444,6 @@
 		"DOTARankTierName8" "Титан"
 		"DOTARankTierNameLeaderboard" "Ранг: {d:leaderboard_rank}"
 
-		"DOTARankPipsName0" ""
 		"DOTARankPipsName1" " I"
 		"DOTARankPipsName2" " II"
 		"DOTARankPipsName3" " III"
@@ -18507,6 +18473,7 @@
 		"DOTA_ChatWheelPhraseLocked_ShardUnlock"	"Разблокируйте в наградах Dota Plus за {g:dota_shards_value:unlock_point_cost}."
 		"DOTA_ChatWheelPhraseLocked_PlusSubscription"	"Подписчики Dota Plus могут купить это за {g:dota_shards_value:unlock_point_cost}."
 		"DOTA_ChatWheelPhraseLocked_PlusSubscriptionExpired"	"Возобновите подписку на Dota Plus, чтобы вернуть доступ."
+		"DOTA_ChatWheelPhraseLocked_GuildLevel"		"Разряд: {s:required_guild_tier}"
 
 		"DOTA_ChatWheelPurchase_Name"			"Куплено колесо чата"
 		"DOTA_ChatWheelPurchase_Description"	"Куплено сообщение для колеса чата «{s:chat_wheel_label}»"
@@ -18835,6 +18802,12 @@
   		"KillEaterEvent_KillsDuringViperStrike"				"Убито жертв Viper Strike"
    		"KillEaterEvent_SolarCrestKills"					"Убийств после применения Solar Crest"
 		"KillEaterEvent_DamageWhileInvisible"				"Урона во время невидимости"
+
+		"KillEaterEvent_SkeletonKing_ArcanaHeroesKilled_1"	"Убито уникальных героев 1"
+		"KillEaterEvent_SkeletonKing_ArcanaHeroesKilled_2"	"Убито уникальных героев 2"
+		"KillEaterEvent_SkeletonKing_ArcanaHeroesKilled_3"	"Убито уникальных героев 3"
+		"KillEaterEvent_SkeletonKing_ArcanaHeroesKilled_4"	"Убито уникальных героев 4"
+		"KillEaterEvent_SkeletonKing_ArcanaHeroesKilled_5"	"Убито уникальных героев 5"
 
 		"DOTA_ChallengeDesc_SolarCrestKills"	   					"Убейте <font color='#ffffff'>%s1</font> вражеских героев под действием <font color='#ffffff'>Solar Crest</font>."
 		"DOTA_ChallengeStatus_SolarCrestKills" 						"%s2Мне нужно убивать героев под действием Solar Crest! Ещё %s1!"
@@ -19804,6 +19777,8 @@
 	"DOTA_Vote"	"Голосовать"
 	"DOTA_NowAvailable" "Новинка!"
 	"DOTA_Coming_Soon"		"Скоро"
+	"DOTA_Last_Chance"		"Последний шанс"
+	"DOTA_Time_Remaining"		"Осталось"
 	"DOTA_Grant"			"Выдать"
 	"Movie_Playing"			"Воспроизведение"
 	"DOTA_Playtest"      "Тест"
@@ -19906,7 +19881,12 @@
 	"DOTA_TabName_Treasury"			"Сокровищницы"
 	"DOTA_TabName_Browse"			"Каталог"
 	"DOTA_TabName_Plus"				"Награды Dota Plus"
+	"DOTA_TabName_ShardStore"		"Магазин осколков"
 
+	"DOTA_TabName_Chest"			"Купить"
+	"DOTA_TabName_IndividualItems"	"Продать"
+	"DOTA_TabName_Recycle"			"Замена"
+	"DOTA_TabName_About"			"Информация"
 
 	"DOTA_ConfirmQuit"				"Выход"
 	"DOTA_ConfirmQuitDesc"			"Выйти из игры?"
@@ -20080,6 +20060,7 @@
 	"DOTA_Popup_PlusStatus_ExpiredExplanation"	"Срок подписки на Dota Plus истёк {T:s:dota_plus_expiration_date}."
 	"DOTA_Popup_PlusStatus_RenewDescription"	"Без подписки у вас не будет доступа к возможностям Dota Plus. Уровни ваших геройских значков сохранятся, однако без подписки их нельзя будет повысить. Пожалуйста, продлите подписку на Dota Plus, чтобы пользоваться всеми возможностями."
 	"DOTA_Popup_PlusStatus_Renew"	"Продлить"
+
 
 	"DOTA_BadgeLevel"	"{d:badge_level}"
 
@@ -20541,7 +20522,7 @@
 	"DOTA_GameMode_16"		"Captains Draft"
 
 	"DOTA_GameMode_18"		"Ability Draft"
-	"DOTA_GameMode_19"		"Холодрыжество"
+	"DOTA_GameMode_19"		"Восстание Тьмы"
 	"DOTA_GameMode_20"		"All Random Deathmatch"
 	"DOTA_GameMode_21"		"1v1 Mid"
 	"DOTA_GameMode_22"		"All Pick"
@@ -20918,8 +20899,11 @@
 	"DOTA_Chat_SuggestHeroBan"		"предлагает запретить <a class=\"SuggestedHero\" href=\"event:DOTASuggestedHeroActivated( {d:hero_id} )\">[{g:dota_hero_name:hero_id}]</a>."
 	"DOTA_Chat_SuggestHeroRole"		"предлагает выбрать роль: <a class=\"SuggestedHeroRole\" href=\"event:DOTASuggestedHeroRoleActivated( {s:hero_role} )\">[{s:localized_hero_role}]</a>."
 
+	"DOTA_Chat_Ability_Draft_Start" "<font color='#8FA7BB'>Нажмите на способность с зажатой клавишей <font color='#C5D1DC'><b>Alt</b></font>, чтобы сообщить союзникам, что вы хотите её выбрать.<br>Нажмите на способность с зажатой клавишей <font color='#C5D1DC'><b>Ctrl</b></font>, чтобы порекомендовать её союзникам.</font>"
+	"DOTA_Chat_Ability_Draft_Randomed" "%s1 случайно получает <font color='#FAEAC9'><b>[%s2]</b></font>."
 	"DOTA_Chat_RequestAbility"		"хочет выбрать <span class=\"RequestedAbility\" >[{g:dota_ability_name:ability_name}]</span>."
-
+	"DOTA_Chat_SuggestAbility"		"предлагает выбрать <span class=\"RequestedAbility\" >[{g:dota_ability_name:ability_name}]</span>."
+	
 	"DOTA_ChatHelp_Targets"			"Получатели"
 	"DOTA_ChatHelp_Commands"		"Команды"
 	"DOTA_ChatHelp_NameFormat"		"{s:command_name}:"
@@ -21212,6 +21196,7 @@
 	"DOTA_Lobby_Settings_Dota_TV_Delay_2_Minutes"		"2 минуты"
 	"DOTA_Lobby_Settings_Dota_TV_Delay_5_Minutes"		"5 минут"
 	"DOTA_Lobby_Settings_Dota_TV_Delay_10_Seconds"		"10 секунд"
+	"DOTA_Lobby_Settings_Dota_TV_Delay_15_Minutes"		"15 минут"
 
 	"DOTA_Lobby_Settings_Pause"		"ПРИОСТАНОВКА ИГРЫ"
 	"DOTA_Lobby_Settings_Pause_Unlimited"		"Без ограничений"
@@ -21255,8 +21240,6 @@
 	"DOTA_Lobby_Selection_Priority_Choice_SecondPick" "Второй выбор"
 	"DOTA_Lobby_Selection_Priority_Choice_Radiant" "Свет"
 	"DOTA_Lobby_Selection_Priority_Choice_Dire" "Тьма"
-	"DOTA_Lobby_Selection_Priority_Choice_Invalid" ""
-
 	"DOTA_TeamUnsetHeader"	"Команда не выбрана"
 	"DOTA_TeamUnsetMessage"	"Как минимум у одной из команд отсутствует название/логотип. Всё равно начать игру?"
 
@@ -21772,7 +21755,7 @@
     "DOTA_mvp2_accolade_title_kKillEaterEventType_Pudge_UnseenEnemyHeroesHooked"              "Нежданный улов"
     "DOTA_mvp2_accolade_title_kKillEaterEventType_DrowRanger_EnemiesSilenced"                 "Тишина в библиотеке"
     "DOTA_mvp2_accolade_title_kKillEaterEventType_DrowRanger_MultiHeroSilences"               "Тихий бунт"
-    "DOTA_mvp2_accolade_title_kKillEaterEventType_DrowRanger_SilencedKills"                   "Бесшумная убийца"
+    "DOTA_mvp2_accolade_title_kKillEaterEventType_DrowRanger_SilencedKills"                   "Бесшумное убийство"
     "DOTA_mvp2_accolade_title_kKillEaterEventType_DrowRanger_FrostArrowKills"                 "Колючий мороз"
     "DOTA_mvp2_accolade_title_kKillEaterEventType_DragonKnight_KillsInDragonForm"             "Драконовские меры"
     "DOTA_mvp2_accolade_title_kKillEaterEventType_DragonKnight_BreatheFireKills"              "Борец огнём"
@@ -22352,12 +22335,12 @@
 	"DOTAArcanaVote_WinnerTitle"					"Победа"
 	"DOTAArcanaVote_ViewResults"					"Результаты"
 	"DOTAArcanaVote_NotStarted"						"Голосование еще не началось"
-	"DOTAArcanaVote_ResultsHidden"					"Голосование окончено.\nРезультаты будут объявлены на The International."
+	"DOTAArcanaVote_ResultsHidden"					"Голосование завершено.\nРезультаты будут объявлены по окончании действия боевого пропуска."
 	"DOTAArcanaVote_CalibrationTimeRemaining"		"Результаты будут видны через {d:arcana_calibration_time_remaining_day}д {d:arcana_calibration_time_remaining_hour}ч {d:arcana_calibration_time_remaining_minute}м"
 	"DOTAArcanaVote_LeadingInVote"					"Лидер"
 	"DOTAArcanaVote_NewArcanaFeature"				"Новая возможность в голосовании"
 	"DOTAArcanaVote_ViewResultsDescription"			"Теперь вы можете перематывать результаты кнопками в верхней части панели голосования."
-	"DOTAArcanaVote_FinalsResultsHidden"			"Результаты объявят на The International"
+	"DOTAArcanaVote_FinalsResultsHidden"			"Результаты будут объявлены по окончании действия боевого пропуска."
 
 	"DOTAArcanaVote_RoundName1"						"Первый раунд (группа A)"
 	"DOTAArcanaVote_RoundName2"						"Первый раунд (группа B)"
@@ -22434,6 +22417,7 @@
 	"DOTA_BattlePassLog_DevGrant"					"Выдано разработчиком"
 	"DOTA_BattlePassLog_RewardForTreasureOpened"	"За открытие {g:dota_item_name:item_def}"
 	"DOTA_BattlePassLog_ExceededPreviousPrizePool"	"Награда за превышение прошлогоднего призового фонда"
+	"DOTA_BattlePassLog_Exceeded40Million"			"Призовой фонд превысил 40 млн. долларов"
 	"DOTA_BattlePassLog_AllStarGame"				"Выбор для матча всех звёзд: {g:dota_persona:pro_short:b:account_id}"
 	"DOTA_BattlePassLog_GuildContract"				"Выполнение контракта гильдии"
 	"DOTA_BattlePassLog_BountyClaimed"				"Исполнен заказ в игре № <a href=\"event:UIPopupButtonClicked( DOTAShowMatchDetails({u:match_id}) )\">{u:match_id}</a>"
@@ -22681,6 +22665,10 @@
 
 	"DOTAWatchDownloads_DeleteTitle"				"Удалить запись?"
 	"DOTAWatchDownloads_DeleteBody"					"Вы уверены, что хотите удалить эту запись? Возможно, ее нельзя будет загрузить заново."
+
+
+	"DOTA_ChinaSSA_Error"							"Не удалось получить соглашение Steam China. Повторить попытку?"
+	"DOTA_ChinaSSA_NotCompleted"					"Заполните соглашение Steam China, чтобы продолжить."
 
 
 	"DOTA_Replays_Search"							"Поиск по номеру игры"
@@ -23436,6 +23424,7 @@
 	"dota_settings_chat_filter_allow_friendly"	"От близких игроков (друзей и членов группы или гильдии)"
 	"dota_settings_chat_filter_allow_teams"		"От близких игроков и союзников"
 	"dota_settings_chat_filter_allow_all"		"От всех игроков"
+	"dota_settings_steam_text_filter"			"Настройки фильтра текста в Steam"
 
 
 	"DOTA_Keybind_ARROW"	"Стрелочки (по умолчанию)"
@@ -23767,6 +23756,11 @@
 
     "DOTA_HeroGrid_Sort_By"                        "Сетка:"
 
+	"DOTA_HeroGrid_Loading"						"Загрузка сетки героев..."
+	"DOTA_HeroGrid_FailedToLoad"				"Не удалось загрузить сетку героев. Повторите попытку позже."
+	"DOTA_HeroGrid_PlusRestricted_Title"		"Только с Dota Plus"
+	"DOTA_HeroGrid_PlusRestricted_Description"	"Эта сетка героев доступна только подписчикам Dota Plus."
+
 	"DOTA_HeroGrid_OptionCategory_Role"			"Роли:"
 	"DOTA_HeroGrid_OptionCategory_Attributes"	"Характеристики:"
 	"DOTA_HeroGrid_OptionCategory_AttackType"	"Тип атаки:"
@@ -23926,7 +23920,6 @@
 	"join_error_invalid_lobby"		"Указанное лобби больше не существует."
 	"join_error_incorrect_password"	"Неверный пароль."
 	"join_error_access_denied"		"Отказано в доступе."
-	"join_error_generic"			""
 	"join_error_in_team_party"		"Невозможно войти в тренировочное лобби. Вы должны распустить группу вашей команды."
 	"join_error_lobby_full"			"Лобби заполнено."
 	"join_error_timed_out"			"Время запроса истекло."
@@ -24491,8 +24484,8 @@
 
 	"dota_page_match_details_replay_error_not_found"	"Запись не найдена на диске."
 
-	"DOTA_tooltip_econ_item_name"			"{g:dota_filtered_string:item_name}"
-	"DOTA_tooltip_econ_item_description"	"{g:dota_filtered_string:item_description}"
+	"DOTA_tooltip_econ_item_name"			"{s:item_name}"
+	"DOTA_tooltip_econ_item_description"	"{s:item_description}"
 	"DOTA_tooltip_econ_item_set"			"Входит в набор: <font color='#dddddd'>{s:item_set}</font>"
 	"DOTA_tooltip_econ_item_rarity_label"	"Редкость: "
 	"DOTA_tooltip_econ_item_rarity"			"{s:item_rarity}"
@@ -24564,7 +24557,7 @@
 	"DOTA_econ_item_details_autostyle_label"	"Стиль меняется в ходе игры."
 	"DOTA_econ_item_details_gift_label" 	"Подарок от:"
 	"DOTA_econ_item_details_original_item_name"	"{s:original_item_name}"
-	"DOTA_econ_item_details_item_name"			"{g:dota_filtered_string:item_name}"
+	"DOTA_econ_item_details_item_name"			"{s:item_name}"
 	"DOTA_econ_item_details_item_creation_date" 	"Выпущено: {t:l:creation_date}"
 	"DOTA_econ_item_details_set_includes"		"Содержит:"
 	"DOTA_econ_item_details_item_set"			"Часть: <font color='#dddddd'>{s:item_set}</font>"
@@ -25005,6 +24998,9 @@
 	"DOTA_Treasure_HelpHeaderPWZoomedOut"	"Доступный предмет"
 	"DOTA_Treasure_HelpHeaderPWZoomedOutPlural"	"Доступные предметы"
 	"DOTA_Treasure_HelpHeaderGrantsAll"	"Сокровищница содержит все эти предметы"
+	"DOTA_TreasureOdds_Header"			"Шанс получения"
+
+	"DOTA_tooltip_treasure_marketprice_disclaimer"	"Это примерное значение основано на самой низкой цене на предмет, замеченной недавно на торговой площадке Steam. Окончательная цена может отличаться."
 
 	"DOTA_Treasure_RecycleDuplicates"	"Перековать дубликаты наборов"
 
@@ -25042,10 +25038,11 @@
 	"DOTA_Treasure_OpenDupe"			"Каждая сокровищница содержит {d:items_per_treasure} из показанных предметов. При повторном открытии вам может выпасть дубликат. Если повезет, вы также получите один из редких предметов."
 	"DOTA_Treasure_OpenFailed_NoItem"	"В инвентаре нет сокровищницы, которую можно открыть."
 	"DOTA_Treasure_OpenFailed_NoItemsReceived"	"Невозможно получить список предметов, полученных из сокровищницы."
-	"DOTA_Treasure_OpenSuccess"			"Поздравляем! Вы получили:"
+	"DOTA_Treasure_OpenSuccess"			"Вы получили:"
 
 	"DOTA_Treasure_RecyclingTitle"		"Обмен награды"
 	"DOTA_Treasure_RecyclingSubtitle"	"Перекуйте наборы и получите бонусную награду: сокровищницу и осколки."
+	"DOTA_Treasure_RecyclingSubtitle_TreasureOnly"	"Перекуйте наборы в бонусную сокровищницу."
 	"DOTA_Treasure_RecyclingCount"		"{d:inventory_count} шт."
 	"DOTA_Treasure_DisassembleConfirm_Popup_Title"		"Перековка последнего предмета"
 	"DOTA_Treasure_DisassembleConfirm_Popup_Message"	"Это ваша единственная копия этого предмета. Он исчезнет после перековки и им нельзя будет пользоваться. Вы уверены?"
@@ -25061,8 +25058,53 @@
 	"DOTA_OpenTreasureTooltip_ItemName"		"{g:dota_item_name:item_def}"
 	"DOTA_OpenTreasureTooltip_ExtraItems"		"…и еще {d:extra_items_count}!"
 	"DOTA_OpenTreasureTooltip_Recycling"		"Нераспакованных копий этого предмета: {d:inventory_count}. Нажмите сюда, чтобы перековать неиспользованную копию этого предмета в часть бонусной сокровищницы."
-	"DOTA_OpenTreasureTooltip_BonusTreasure"		"Подписчики Dota Plus могут перековать нераспакованные наборы из этой сокровищницы в часть награды, содержащей бонусную сокровищницу и осколки."
+	"DOTA_OpenTreasureTooltip_BonusTreasure"				"Подписчики Dota Plus могут перековать нераспакованные наборы из этой сокровищницы в часть награды, содержащей бонусную сокровищницу и осколки."
+	"DOTA_OpenTreasureTooltip_BonusTreasureOnly"			"Подписчики Dota Plus могут перековать нераспакованные наборы из этой сокровищницы в часть бонусной сокровищницы."
 	"DOTA_OpenTreasureTooltip_BonusTreasure_BattlePass"		"Во время действия боевого пропуска The International 10 вы можете обменять несколько предметов из этой сокровищницы на ещё одну такую же и другие награды."
+
+	"DOTA_Treasure_ViewCrateTier"				"Разряд:"
+	"DOTA_Treasure_BuyChest"					"Купить сундук"
+	"DOTA_Treasure_BuyKey"						"Купить ключ"
+	"DOTA_Treasure_BuyChestQty"					"<span class='PurchaseLabelQty'>{d:treasure_qty}</span> {s:treasure_qty_p}"
+	"DOTA_Treasure_Chest"						"Сундук"
+	"DOTA_Treasure_Chests"						"Сундуки"
+	"DOTA_Treasure_Chest:p"						"СУНДУК#|#СУНДУКА#|#СУНДУКОВ#|#СУНДУКОВ#|#СУНДУКА"
+	"DOTA_Treasure_BuyKeyQty"					"<span class='PurchaseLabelQty'>{d:key_qty}</span> {s:key_qty_p}"
+	"DOTA_Treasure_Key:p"						"КЛЮЧ#|#КЛЮЧА#|#КЛЮЧЕЙ#|#КЛЮЧЕЙ#|#КЛЮЧА"
+	"DOTA_Treasure_CountChestsOwned"			"У ВАС {d:treasure_owned_quantity} {s:treasure_owned_quantity_p}"
+	"DOTA_Treasure_ChestsOwned"					"У вас: {d:treasure_owned_quantity}"
+	"DOTA_Treasure_KeysOwned"					"У вас: {d:keys_owned_count}"
+	"DOTA_Treasure_ItemSlot_Set"				"Набор"
+	"DOTA_Treasure_MarketPrice"					"Торговая площадка"
+	"DOTA_Treasure_UnlockChest"					"Открыть сундук"
+	"DOTA_Treasure_ShowHeroNames"				"Показать имена героев"
+	"DOTA_Treasure_PreviewContents"				"Показать содержимое"
+	"DOTA_Treasure_Skip"						"Пропустить"
+	"DOTA_Treasure_BuyKeyOnly"					"Купить ключ"
+	"DOTA_Treasure_BuyChestOnly"				"Купить сундук"
+	"DOTA_Treasure_BuyChestAndKey"				"Купить ключ и сундук"
+	"DOTA_Treasure_Back"						"Назад"
+	"DOTA_Treasure_Equip"						"Надеть"
+	"DOTA_Treasure_Close"						"Закрыть"
+	"DOTA_Treasure_ListView"					"Показать списком"
+	"DOTA_Treasure_CurrentlyViewing"			"Вы просматриваете:"
+	"DOTA_Treasure_ItemDetails"					"Подробности"
+	"DOTA_Treasure_BuyItem"						"КУПИТЬ"
+	"DOTA_Treasure_SelectedItemOwned"			"У вас: {d:selected_item_owned_count}"
+	"DOTA_Treasure_TierListHeader"				"{d:crate_tier}-й разряд: {s:crate_tier_description}"
+	"DOTA_Treasure_TierListOdds"				"Шанс: {s:crate_tier_percentage}%"
+	"DOTA_Treasure_Tier1Odds"					"{s:crate_tier1_percentage}%"
+	"DOTA_Treasure_Tier2Odds"					"{s:crate_tier2_percentage}%"
+	"DOTA_Treasure_Tier3Odds"					"{s:crate_tier3_percentage}%"
+	"DOTA_Treasure_Tier4Odds"					"{s:crate_tier4_percentage}%"
+	"DOTA_Treasure_Tier5Odds"					"{s:crate_tier5_percentage}%"
+	"DOTA_Treasure_TierListItemName"			"{g:dota_item_name:label_item_def}"
+	"DOTA_Treasure_TierListHeroName"			"{s:hero_name}"
+	"DOTA_Treasure_TierListHeroNameSlot"		"{s:hero_name} ({s:slot_name})"
+	"DOTA_Treasure_ListViewAltDisplayTooltip"	"Переключиться между предметами и героями."
+	"DOTA_Treasure_UnlockChestExplain_None"		"Нужны <font color='#FFFFFF'>сундук и ключ</font>"
+	"DOTA_Treasure_UnlockChestExplain_HasChest"	"Нужен <font color='#FFFFFF'>ключ</font>"
+	"DOTA_Treasure_UnlockChestExplain_HasKey"	"Нужен <font color='#FFFFFF'>сундук</font>"
 
 	"DOTA_AASystem_Green"		"Вы играете без перерыва {s:playtime}. Сейчас никакой угрозы здоровью нет. Наслаждайтесь!"
 	"DOTA_AASystem_Yellow"		"Вы играете без перерыва %s1. Это слишком долго и может навредить вашему здоровью. Пожалуйста, отдохните!"
@@ -25109,7 +25151,7 @@
 
 	"DOTA_Workshop_Model"								"Модель"
 	"DOTA_Workshop_TextureDetails_color"				"Карта цвета"
-	"DOTA_Workshop_TextureDetails_trans"				"Определяет, в каком месте текстура прозрачная (черный цвет означает прозрачность, белый — непрозрачность)"
+	"DOTA_Workshop_TextureDetails_trans"				"Определяет, в каком месте текстура прозрачная (чёрный цвет означает прозрачность, белый — непрозрачность)"
 	"DOTA_Workshop_TextureDetails_normal"				"Карта нормалей"
 	"DOTA_Workshop_TextureDetails_detailmask"			"Определяет видимость карты деталей (если Valve добавили карту в материал). Если вы хотите, чтобы предмет взаимодействовал с эффектами предметов Arcana, окружения или способностей, в этой маске вам нужно будет указать места отображения эффектов."
 	"DOTA_Workshop_TextureDetails_diffusemask"			"Определяет видимость эффекта переливания цветов (если он есть в материале)"
@@ -25787,7 +25829,7 @@
 	"DOTA_Workshop_Imported_S1MaskOverwrite_Text"			"ПРЕДУПРЕЖДЕНИЕ\nВы уверены, что хотите перезаписать следующие файлы?\n%1"
 
 	"DOTA_Workshop_ImportS1Normal"							"Импорт нормалей из Source 1"
-	"DOTA_Workshop_ImportS1Normal_Details"					"Импорт нормалей из Source 1 (инвертирует зеленый канал) и их сохранение в новом файле в той же папке"
+	"DOTA_Workshop_ImportS1Normal_Details"					"Импорт нормалей из Source 1 (инвертирует зелёный канал) и их сохранение в новом файле в той же папке"
 	"DOTA_Workshop_Imported_S1Normal_Title"					"Импорт нормалей из Source 1 завершен"
 	"DOTA_Workshop_Imported_S1Normal_Text"					"Созданы следующие файлы: %1"
 	"DOTA_Workshop_Imported_S1NormalOverwrite_Title"		"Перезаписать файл?"
@@ -26198,6 +26240,7 @@
    	"DOTA_EventName_Frostivus"	    "Холодрыжество"
 	"DOTA_EventName_NewBloom"	    "Новоцвет"
 	"DOTA_EventName_NewBloom2020"	"Новоцвет"
+	"DOTA_EventName_Diretide2020"	"Восстание Тьмы"
 
 	"DOTA_DB_SeasonPass_International_2017" "Боевой пропуск The International 2017"
 	"DOTA_EventName_PlusSubscription" "Dota Plus"
@@ -26729,12 +26772,8 @@
 
 	"FrontPage_Winter2016_Header"						"Представляем боевой пропуск зимы 2016"
 	"FrontPage_Winter2016_Title"						"и компендиум шанхайского мейджора 2016"
-	"FrontPage_Winter2016_Desc"							""
-
 	"FrontPage_TI6_Header"								"Представляем боевой пропуск The International 2016"
 	"FrontPage_TI6_Title"								"Включает компендиум The International 2016"
-	"FrontPage_TI6_Desc"								""
-
 	"FrontPage_Debut_Arc_Warden_Intro" 					"Представляем"
 	"FrontPage_Debut_Arc_Warden_Header" 				"Новый герой"
 	"FrontPage_Debut_Arc_Warden_Title"					"Arc Warden"
@@ -26944,7 +26983,6 @@
 	"Debut_Arcana_Juggernaut_Style1_Name"			"Bladeform Legacy"
 	"Debut_Arcana_Juggernaut_Style2_Name"			"Bladeform Origins"
 
-	"Debut_Arcana_Juggernaut_Style1_Lore"		""
 	"Debut_Arcana_Juggernaut_Style2_Lore"		"Убейте 10 врагов при помощи Omnislash, чтобы открыть стиль <b><i>Bladeform Origins</i></b>."
 
 	"Debut_Arcana_Pudge_Subtitle" 							"предмет для Pudge"
@@ -26979,7 +27017,6 @@
 	"Debut_Arcana_Pudge_Style1_Name"			"Feast of Abscession"
 	"Debut_Arcana_Pudge_Style2_Name"			"Grand Abscession"
 
-	"Debut_Arcana_Pudge_Style1_Lore"		""
 	"Debut_Arcana_Pudge_Style2_Lore"		"Победите против Rubick в 12 играх, чтобы разблокировать стиль <b><i>Grand Abscession</i></b>."
 
 	"Debut_Arcana_Rubick_Subtitle" 							"предмет для Rubick"
@@ -27672,7 +27709,6 @@
 	"DOTA_SeasonPass_Global_MMR_Leaderboard_Name"		"Имя"
 	"DOTA_SeasonPass_Global_MMR_Leaderboard_MMR"		"Рейтинг"
 	"DOTA_SeasonPass_MMR_Leaderboard_Title"				"Лучшие по рейтингу в сезоне"
-	"DOTA_SeasonPass_MMR_Leaderboard_Explanation"		""
 	"DOTA_SeasonPass_Friends_MMR_TBD"					"Нет (игр осталось: {d:games_remaining})"
 
 	"DOTA_SeasonPass_Friends_N_Of"					    "Место по друзьям: {i:friend_rank} / {i:friend_count}"
@@ -28813,7 +28849,6 @@
 
 	"DOTA_Compendium_Wagering_RemainingTokens"		"Фишек осталось"
 	"DOTA_Compendium_Wagering_TokensResetIn"		"До новых фишек"
-	"DOTA_Compendium_Wagering_TokensResetIn_End"	""
 	"DOTA_Compendium_Wagering_PeriodicTokens"		"({i:periodic_coins} фишек)"
 	"DOTA_Compendium_Wagering_TotalPointsWon"		"Очков выиграно"
 	"DOTA_Compendium_Wagering_SuccessRate"			"Процент побед"
@@ -28877,9 +28912,7 @@
 	"DOTA_HeroStatColumn_BestGPM"			"З/М"
 	"DOTA_HeroStatColumn_BestXPM"			"О/М"
 
-	"DOTA_HeroStatColumn_Header_Hero"			" "
 	"DOTA_HeroStatColumn_Header_Games"			"Игр"
-	"DOTA_HeroStatColumn_Header_Ratings"		" "
 	"DOTA_HeroStatColumn_Header_WinStreaks"		"Серии побед"
 	"DOTA_HeroStatColumn_Header_Averages"		"Средние показатели"
 	"DOTA_HeroStatColumn_Header_BestRecords"	"Лучшие показатели"
@@ -29590,7 +29623,7 @@
 	"DOTA_SplashAd_TI10_Weekend_Sale_Title" "Доступно до 28 июня"
 	"DOTA_SplashAd_TI10_Weekend_Sale_Title2" "Доступно до 2 июля"
 	"DOTA_SplashAd_TI10_Weekend_Sale_Purchase_Btn" "Купить комплект"
-	"DOTA_SplashAd_TI10_Weekend_Sale_Purchase_Limit_Expanded" "Каждый может купить не больше <span class='BundleAmount'>двух комплектов</span>"
+	"DOTA_SplashAd_TI10_Weekend_Sale_Purchase_Limit_Expanded" "Можно купить не больше <span class='BundleAmount'>двух комплектов</span>"
 	"DOTA_SplashAd_TI10_Weekend_Sale_75Percent" "Сэкономьте 75%"
 	"DOTA_SplashAd_TI10_Weekend_Sale_Purchase_One" "Купить один"
 	"DOTA_SplashAd_TI10_Weekend_Sale_Purchase_Two" "Купить два"
@@ -29598,6 +29631,29 @@
 	"DOTA_SplashAd_TI10_Weekend_Sale_Purchase_Message1" "Вы можете купить ещё 1 комплект"
 	"DOTA_SplashAd_TI10_Weekend_Sale_Purchase_Message2" "Куплен максимум комплектов"
 
+	"DOTA_SplashAd_TI10_Mini_Weekend_Sale_30Percent" "Распродажа! <span class='Save30'>Экономия 30%</span>"
+	"DOTA_SplashAd_TI10_Mini_Weekend_Sale_30Percent2" "Экономия 30%"
+	"DOTA_SplashAd_TI10_Mini_Weekend_Sale_Date" "Доступно до <span class='BundleDate'>10 октября</span>"
+	"DOTA_SplashAd_TI10_Mini_Weekend_Sale_Headline" "Распродажа"
+	"DOTA_SplashAd_TI10_Mini_Weekend_Battle_Bundle" "Распродажа уровней"
+	"DOTA_SplashAd_TI10_Mini_Weekend_Sale_Levels" "60 уровней"
+	"DOTA_SplashAd_TI10_Weekend_Sale_Buy_One" "Купить один"
+	"DOTA_SplashAd_TI10_Weekend_Sale_Buy_Two" "Купить два"
+
+	"DOTA_FrontPage_TI10_BattlePass_Extended_Label"	"Боевой пропуск продлён"
+	"DOTA_FrontPage_TI10_BattlePass_Extended_Title" "Теперь до 10 октября"
+	"DOTA_FrontPage_TI10_BattlePass_Extended_Desc" "Подробнее в нашем блоге"
+
+	"DOTA_FrontPage_TI10_BattlePass_ArcanaReveal_Title" "Объявлен победитель"
+	"DOTA_FrontPage_TI10_BattlePass_ArcanaReveal_Desc" "Показать результаты"
+
+	"DOTA_FrontPage_TI10_BattlePass_Ended_Title" "Боевой пропуск The International 10 закончился"
+	"DOTA_FrontPage_TI10_BattlePass_Ended_Desc" "Спасибо, что пользовались самым крупным боевым пропуском в истории!"
+
+	"DOTA_FrontPage_DotaPlus_Oct2020_Title" "Осеннее обновление Dota Plus"
+	"DOTA_FrontPage_DotaPlus_Oct2020_Desc" "Новые возможности, сезонная сокровищница и не только! Подробнее в нашем блоге"
+
+	
 
 	"DOTA_SplashAd_TI6_LuckvaseAndCarafe_Autographs_Title" "Доступны подписанные сокровищницы"
 	"DOTA_SplashAd_TI6_LuckvaseAndCarafe_Autographs_Message" "Поддержите ваших любимцев из <a href=\"event:UIPopupButtonClicked( DOTAShowCompManila2016CastersPage() )\">команды освещения The International 2016</a>!"
@@ -29678,10 +29734,6 @@
 
 	"DOTA_CompendiumRecap_OverviewDetails_TI8"	"Открытые отборы: 14–17 июня \nРегиональные отборы: 18–25 июня \n\nГрупповой этап: 15–18 августа \nОсновной этап: 20–25 августа"
 	"DOTA_CompendiumRecap_OverviewVenueDetails_TI8"	"Роджерс-арена — Ванкувер, Канада"
-	"DOTA_CompendiumRecap_OverviewFormatDetails_TI8"	""
-	"DOTA_CompendiumRecap_OverviewFormatDetailsCont_TI8"	""
-	"DOTA_CompendiumRecap_OverviewTeamDetails_TI8"	""
-
 	"DOTA_CompendiumRecap_OverviewDetails_TI9"	"Открытые отборы: 3–6 июля \nРегиональные отборы: 7–14 июля \nГрупповой этап: 15–18 августа"
 
 	"DOTA_CompendiumRecap_OverviewDetails_Boston"	"Групповой этап: 3–4 декабря 2016\nОсновной этап:  7–10 декабря 2016"
@@ -30453,10 +30505,11 @@
     "DOTA_International2017_Champions_Title"    "Поздравляем Team Liquid"
     "DOTA_International2017_Champions_Body"     "Team Liquid впервые в истории The International не отдали соперникам ни единой победы в финале."
 
-	"DOTA_EventPointsPurchaseFailed_Title"				"Не удалось совершить покупку"
-	"DOTA_EventPointsPurchaseFailed_NotEnoughPoints"	"На вашем аккаунте недостаточно очков для покупки."
-	"DOTA_EventPointsPurchaseFailed_NotAllowed"			"Нельзя потратить осколки, не активировав платную подписку на Dota Plus."
-	"DOTA_EventPointsPurchaseFailed_GenericError"		"Покупка не завершена. Повторите попытку через несколько минут. (код ошибки: {d:error_code})"
+	"DOTA_EventPointsPurchaseFailed_Title"					"Не удалось совершить покупку"
+	"DOTA_EventPointsPurchaseFailed_NotEnoughPoints"		"На вашем аккаунте недостаточно очков для покупки."
+	"DOTA_EventPointsPurchaseFailed_NotAllowed"				"Нельзя потратить осколки, не активировав платную подписку на Dota Plus."
+	"DOTA_EventPointsPurchaseFailed_SubscriptionRequired"	"Для покупки необходима подписка на Dota Plus."
+	"DOTA_EventPointsPurchaseFailed_GenericError"			"Покупка не завершена. Повторите попытку через несколько минут. (код ошибки: {d:error_code})"
 
 	"DOTA_CountdownOK" "OK ({d:seconds})"
 
@@ -30681,7 +30734,7 @@
 	"DOTA_Plus_PurchaseDialog_FirstTimeBonus_Line2" "начальных заданий; осколки можно потратить в магазине Dota Plus"
 
 	"DOTA_PlusStore_MyShards"	"Ваши осколки"
-	"DOTA_PlusStore_ExclusiveSets_Title"	"Эксклюзив"
+	"DOTA_PlusStore_ExclusiveSets_Title"	"Премиум"
 	"DOTA_PlusStore_ExclusiveSets_Subtitle"	"Новые наборы"
 	"DOTA_PlusStore_LegacySets_Title"	"Наследие"
 	"DOTA_PlusStore_LegacySets_Subtitle"	"Наборы из прошлого"
@@ -30692,7 +30745,8 @@
 	"DOTA_PlusStore_Tools_Title"	"Инструменты"
 	"DOTA_PlusStore_Tools_Subtitle"	"Измените своё снаряжение"
 	"DOTA_PlusStore_Frostivus_Title"	"Холодрыжество"
-	"DOTA_PlusStore_Event_Subtitle"	"Временное событие"
+	"DOTA_PlusStore_Event_Subtitle"	"Успейте купить"
+	"DOTA_PlusStore_PlusExclusive"	"Только с Dota Plus"
 
 	"DOTA_PlusStore_HeroRelicsOwned"	"по числу реликвий"
 	"DOTA_PlusStore_HeroRelicsOwnedCount"	"{d:owned_relic_count} из {d:total_relic_count}"
@@ -30739,7 +30793,7 @@
 	"DOTA_Plus_XPProgress" 				"{d:current_level_xp} / {d:xp_to_next_level} опыта"
 	"DOTA_Plus_XP" 						"ОПЫТ"
 	"DOTA_Plus_Currency"				"осколков"
-	"DOTA_Plus_HeroBadgeInfo"			"Нельзя повышать уровень геройских значков без действующей подписки на Dota Plus. Продлите её, и вы вновь сможете получать опыт значков."
+	"DOTA_Plus_HeroBadgeInfo"			"Геройские значки нельзя поднимать выше 5 уровня без действующей подписки на Dota Plus. Продлите её, и вы вновь сможете получать опыт значков."
 	"DOTA_Plus_RewardsLog"				"Журнал наград"
 	"DOTA_Plus_Features"				"Особенности"
 	"DOTA_Plus_ShardsBalance"			"Баланс осколков"
@@ -30747,18 +30801,21 @@
 	"DOTA_Plus_HighestLevelHeroes"		"Герои с наивысшим уровнем"
 	"DOTA_Plus_HighestRelics"			"Реликвии с лучшими показателями"
 
+	
 
-	"DOTA_PlusPurchase_HeroProgression"					"Геройские успехи"
-	"DOTA_PlusPurchase_HeroProgression_Description"		"Неважно, нравится вам многообразие героев или пара персонажей, с которыми вы проводите сотни игр, — за каждый матч вы получите опыт для значка вашего героя."
+	"DOTA_PlusPurchase_Features_Label"					"Что внутри:"
+	"DOTA_PlusPurchase_HeroProgression"					"Дальнейшие геройские успехи"
+	"DOTA_PlusPurchase_HeroProgression_Description"		"Неважно, нравится вам многообразие героев или пара персонажей, с которыми вы проводите сотни игр, — за каждый матч вы получите опыт для значка вашего героя. С Dota Plus вы сможете поднять уровень героя вплоть до 25!"
 	"DOTA_PlusPurchase_Assistant"						"Помощник Dota Plus"
 	"DOTA_PlusPurchase_Assistant_Description"			"Советы по предметам и способностям в реальном времени, основанные на миллионах недавних игр различных рангов, не позволят вам отстать от трендов."
 	"DOTA_PlusPurchase_Rewards"							"Награды"
 	"DOTA_PlusPurchase_Rewards_Description"				"Зарабатывайте осколки и тратьте их на различные эксклюзивные награды."
 	"DOTA_PlusPurchase_Perks"							"А также"
-	"DOTA_PlusPurchase_Perks_Description"				"Доступ к еженедельному боевому кубку и многое другое!"
+	"DOTA_PlusPurchase_Perks_Description"				"Бесплатный пропуск на еженедельный боевой кубок, сезонный ландшафт, сезонные задания, за которые даются осколки, и не только!"
+	"DOTA_PlusPurchase_Guilds"							"Бонусы гильдии"
+	"DOTA_PlusPurchase_Guilds_Description"				"Вступить в гильдию может каждый, но только подписчики Dota Plus могут сами создать сообщество единомышленников, чтобы идти к победе с надёжной командой за плечами. Работайте сообща и получайте очки гильдии и еженедельные награды. Вступив в гильдию, вы сможете брать на один контракт больше."
 
-	"DOTA_PlusPurchase_Feature_HeroLeveling"	"Геройские уровни"
-	"DOTA_PlusPurchase_Feature_HeroChatWheel"	"Геройское колесо чата"
+	"DOTA_PlusPurchase_Feature_HeroLeveling"	"Дальнейшие геройские успехи"
 	"DOTA_PlusPurchase_Feature_HeroRelics"		"Геройская статистика"
 	"DOTA_PlusPurchase_Feature_HeroChallenges"	"Геройские испытания"
 
@@ -30770,10 +30827,14 @@
 	"DOTA_PlusPurchase_Feature_Friends_Foes"			"Система «Друзья и враги»"
 	"DOTA_PlusPurchase_Feature_DeathSummary"			"Распределение по линиям"
 	"DOTA_PlusPurchase_Feature_WinProbability"			"Подробная сводка смерти"
+	"DOTA_PlusPurchase_Feature_StackPullTimers"			"Таймеры стаков и отводов"
+	"DOTA_PlusPurchase_Feature_RolesGrid"				"Сетка героев по ролям"
+	"DOTA_PlusPurchase_Feature_HeroTrends"				"Геройские тренды"
+
 
 	"DOTA_PlusPurchase_Feature_ExclusiveHeroSets"	"Эксклюзивные наборы"
 	"DOTA_PlusPurchase_Feature_PurchaseHeroRelics"	"Геройские реликвии"
-	"DOTA_PlusPurchase_Feature_ChatWheelSounds"		"Звуки для колеса чата"
+	"DOTA_PlusPurchase_Feature_HeroChatWheel"		"Геройское колесо чата"
 	"DOTA_PlusPurchase_Feature_LegacyHeroSets"		"Избранные наборы из прошлого"
 	"DOTA_PlusPurchase_Feature_PurchaseTools"		"Инструменты"
 	"DOTA_PlusPurchase_Feature_SeasonalItems"		"Сезонные предметы"
@@ -30794,20 +30855,23 @@
 	"DOTA_PlusNewFeature_SeasonalQuests_Title"			"Сезонные испытания"
 	"DOTA_PlusNewFeature_SeasonalQuests_Desc"			"Теперь подписчикам Dota Plus доступны совершенно новые задания, которые нужно выполнить за третий рейтинговый сезон."
 	"DOTA_PlusNewFeature_DpcApp_Title"					"Компаньон проф. сезона"
+	"DOTA_PlusPurchase_Feature_ChatWheelSounds"			"Звуки для колеса чата"
 
 	"DOTA_PlusPostGame_HeroProgress"		"Прогресс героя"
 	"DOTA_PlusPostGame_LevelProgress"		"Прогресс уровня"
+	"DOTA_PlusPostGame_LevelRestricted"		"Подпишитесь на Dota Plus, чтобы поднимать уровень дальше."
 	"DOTA_PlusPostGame_CurrentLevel"		"Уровень {d:current_level}"
 	"DOTA_PlusPostGame_MatchFinished"		"Завершение матча"
 	"DOTA_PlusPostGame_Win"					"Победа"
 	"DOTA_PlusPostGame_ChallengeCompleted"	"Пройдено испытание"
 	"DOTA_PlusPostGame_Total"				"Всего"
-	"DOTA_PlusPostGame_XPValue"				"{d:xp_value} оп."
+	"DOTA_PlusPostGame_XPValue"				"+{d:xp_value} оп."
 	"DOTA_PlusPostGame_LevelUp"				"Новый уровень!"
 	"DOTA_PlusPostGame_RelicsProgress"		"Прогресс реликвий"
 	"DOTA_PlusPostGame_BattlePassProgress"	"Прогресс боевого пропуска"
 	"DOTA_PlusPostGame_RubickArcanaProgress"	"Прогресс Arcana-предмета"
 	"DOTA_PlusPostGame_ShardValue"			"+{d:shard_value}"
+	"DOTA_PlusPostGame_GuildContracts"		"Контракты гильдии"
 	"DOTA_PlusPostGame_VictoryPrediction"	"Предсказание победы"
 	"DOTA_PlusPostGame_PlayerTips"			"Благодарности"
 	"DOTA_PlusPostGame_CavernCrawlProgress"	"Прогресс катакомб"
@@ -30858,7 +30922,7 @@
 	"DOTA_CoachRatingPostGame_CoachRating"			"Рейтинг тренера"
 
 	"DOTA_PlusUpsell_Title"							"Доступно подписчикам Dota Plus"
-	"DOTA_PlusUpsell_HeroLeveling_Title"			"Геройские уровни"
+	"DOTA_PlusUpsell_HeroLeveling_Title"			"Значки выше 5 уровня"
 	"DOTA_PlusUpsell_HeroLeveling_Description"		"Играйте за любимых героев, чтобы повышать их уровень. Красуйтесь геройскими значками, получайте новые фразы для колеса чата и зарабатывайте ценные осколки."
 	"DOTA_PlusUpsell_HeroChallenges_Title"			"Геройские испытания"
 	"DOTA_PlusUpsell_HeroChallenges_Description"	"Каждый герой может выполнять до 3 достижений раз в две недели и получать за них опыт. Чем больше звёзд испытания вы получите, тем больше вам дадут опыта."
@@ -30885,7 +30949,7 @@
 	"DOTA_Plus_ChallengeComplete"	"ВЫПОЛНЕНО!"
 	"DOTA_Plus_ChallengeObsolete"	"Устаревшее испытание. Изменится при следующем обновлении испытаний."
 
-	"DOTA_Plus_RewardLog_Title"		"ЖУРНАЛ НАГРАД DOTA PLUS"
+	"DOTA_Plus_RewardLog_Title"		"ЖУРНАЛ ОСКОЛКОВ"
 	"DOTA_Plus_RewardLog_TotalShards" "{d:current_balance} ОСКОЛКОВ"
 	"DOTA_Plus_RewardLog_TitleBar_Date" "ДАТА"
 	"DOTA_Plus_RewardLog_TitleBar_Description" "ОПИСАНИЕ"
@@ -30904,6 +30968,7 @@
 	"DOTA_Plus_RewardLog_TipReceived" "Благодарность от {g:dota_persona:dp:account_id}"
 	"DOTA_Plus_RewardLog_TipGiven" "Благодарность игроку {g:dota_persona:dp:account_id}"
 	"DOTA_Plus_RewardLog_BattlePassReward" "Награда за уровень боевого пропуска"
+	"DOTA_Plus_RewardLog_MVP" "Задание лучшего игрока"
 
 	"DOTA_PlusWelcome_Title"	"Начальные задания"
 	"DOTA_PlusWelcome_Description"	"Разберитесь в возможностях Dota Plus и заработайте за эти задания до {g:dota_shards_value:total_reward}"
@@ -30927,7 +30992,7 @@
 	"DOTA_PlusWelcome_PickSuggestedHero_Name"					"Выберите героя по совету «Друзей и врагов»"
 	"DOTA_PlusWelcome_PickSuggestedHero_Description"			"Во время выбора героя последуйте совету системы «Друзья и враги»."
 	"DOTA_PlusWelcome_ViewPostGameAnalytics_Name"				"Посмотрите анализ после игры"
-	"DOTA_PlusWelcome_ViewPostGameAnalytics_Description"		"После матча откройте вкладку «Урон» или «Показатели», чтобы посмотреть свои успехи и сравнить их со средними результатами на вашем ранге."
+	"DOTA_PlusWelcome_ViewPostGameAnalytics_Description"		"После матча откройте вкладку «Подробности», чтобы посмотреть свои успехи и сравнить их со средними результатами на вашем ранге."
 	"DOTA_PlusWelcome_ViewHeroTrends_Name"						"Посмотрите глобальные тренды героя"
 	"DOTA_PlusWelcome_ViewHeroTrends_Description"				"Откройте вкладку «Тренды» на странице любого героя, чтобы увидеть показатели игроков на других рангах."
 	"DOTA_PlusWelcome_EquipSeasonalTerrain_Name"				"Используйте сезонный ландшафт"
@@ -31252,7 +31317,12 @@
 	"DOTA_TI10_Cache_Voting_Title"									"Голосование за Collector's Cache"
 	"DOTA_TI10_Cache_Voting_Desc"									"Голосуйте за понравившиеся наборы, чтобы они попали в сокровищницу этого года."
 	"DOTA_TI10_Cache_Voting_Btn"									"Показать"
+	"DOTA_TI10_Immortal_2_Title"									"Immortal-сокровищница II"
+	"DOTA_TI10_Immortal_2_Desc"										"Взгляните на вторую Immortal-сокровищницу с дарами для Ursa, Jakiro, Witch Doctor и других героев."
+	"DOTA_TI10_Immortal_3_Title"									"Immortal-сокровищница III"
+	"DOTA_TI10_Immortal_3_Desc"										"Ожидание окончено! Узрите последний набор Immortal-предметов для Pugna, Oracle, Lich и других героев."
 	
+
 	"DOTA_SeasonPass_International2020_Rewards_Ended"				"Боевой пропуск The International 10 закончился."
 
 	"DOTA_EventName_International2020"								"Боевой пропуск The International 10"
@@ -31271,7 +31341,7 @@
 
 	"DOTA_TI10BP_purchase_pool_contribution"						"25% от продаж боевых пропусков идут в призовой фонд The International 10."
 	"DOTA_TI10BP_purchase_pool_contribution_levels"					"25% от продаж уровней боевого пропуска идут в призовой фонд The International 10."
-	"DOTA_TI10_BattlePass_EndDate_Purchase"							"Уровни боевого пропуска продаются до 19 сентября 2020"
+	"DOTA_TI10_BattlePass_EndDate_Purchase"							"Уровни боевого пропуска продаются до 10 октября 2020"
 
 	"DOTA_TI10_PortalOutcome_100"									"%s1 призывает 100 боевых очков!"
 	"DOTA_TI10_PortalOutcome_101"									"%s1 призывает 500 боевых очков!"
@@ -31343,7 +31413,7 @@
 	"TI2020_BP_Buy_50_Disc"											"Сэкономьте 5%"
 	"TI2020_BP_Buy_100_Disc"										"Сэкономьте 15%"
 	"TI2020_BP_Buy_Included_Levels"									"на уровнях"
-	"TI2020_BP_Buy_End_Date"										"Действует до <b>19 сентября 2020</b>"
+	"TI2020_BP_Buy_End_Date"										"Действует до <b>10 октября 2020</b>"
 	   
 	"TI2020_BP_Buy_Gifting_Title"									"Дар боевого пропуска"
 	"TI2020_BP_Buy_Gifting_SubTitle"								"Дарите пропуск и получайте за это награды"
@@ -31357,7 +31427,7 @@
 		
 	"DOTA_TI10_BPHOME_NowAvailable"									"Уже доступно"
 	"DOTA_TI10_PostGame_EssenceCollected"							"Эссенции\nсобрано"
-	"DOTA_TI10_DashBox_Guilds_Join"									"Вступить"
+	"DOTA_TI10_DashBox_Guilds_Join"									"Найти"
 
 	"DOTA_TI10_EventGame_Description"								"Скоро"
 	"DOTA_TI10_EVENT_GAME_COMING_SOON"								"ОСОБЫЙ РЕЖИМ — СКОРО"
@@ -31423,7 +31493,6 @@
 	"DOTA_BattlePassRewards_TI10_EventGame_Tier4_reward_tooltip"	"Особый эффект ауры Aghanim's Scepter действует в течение недели после победы над боссом"
 	"DOTA_BattlePassRewards_Emoticons"								"Смайлики"
 
-	"DOTA_UpcomingRewards_Terrain_Label"							""
 	"DOTA_UpcomingRewards_TI10_Terrain_Name"						"Sanctums of the Divine"
 	"DOTA_UpcomingRewards_TI10_Terrain_Desc"						"Ступите на земли божественных существ, где всем правит только сила... и те, кто способен её обуздать."
 	"DOTA_UpcomingRewards_TI10_SkeletonKing_Name"					"The One True King"
@@ -31493,7 +31562,6 @@
 	"DOTA_TI10_UnderDraft_Gold"										"Золото"
 	"DOTA_TI10_UnderDraft_Title"									"Боковая лавка"
 	"DOTA_TI10_UnderDraft_Combine"									"Собирай и властвуй"
-	"DOTA_TI10_UnderDraft_Stars0"									""
 	"DOTA_TI10_UnderDraft_Stars1"									"<span class=\"TierOne\">★</span>"
 	"DOTA_TI10_UnderDraft_Stars2"									"<span class=\"TierTwo\">★★</span>"
 	"DOTA_TI10_UnderDraft_Stars3"									"<span class=\"TierThree\">★★★</span>"
@@ -31507,7 +31575,6 @@
 	"DOTA_TI10_Underdraft_Rewards_Title"							"Магазин наград"
 	"DOTA_TI10_Underdraft_Rewards_Cost"								"{d:reward_cost}"
 	"DOTA_TI10_Underdraft_BonusTreasure_Title"						"Доп. сокровищница"
-	"DOTA_TI10_Underdraft_BonusTreasure_Desc"						""
 	"DOTA_TI10_Underdraft_BonusTreasure_Progress"					"НУЖНО ПОТРАТИТЬ САМОЦВЕТОВ: {d:tickets_until_reward}"
 	"DOTA_TI10_Underdraft_Rewards_Desc"								"Какой смысл быть посредником, если нельзя пользоваться плодами чужого усердного труда? Собирайте самоцветы и используйте их по прямому назначению в этом особом прилавке боковой лавки. Как видите, здесь большой выбор самых замечательных наград."
 	"DOTA_TI10_Underdraft_Rewards_Desc_Plus"						"Меняя самоцветы на награды, подписчики также получают <font color='#ffffff'>1 или 1000 осколков</font> за каждый красный или синий самоцвет соответственно."
@@ -31670,6 +31737,21 @@
 	"LoadoutSlot_Streak_Effect"										"Эффекты серии убийств"
 	"streak_effect"													"Эффект серии убийств"
 
+	//Kill global equip page
+	"DOTA_GlobalItems_KillEffects"									"Эффекты убийства"
+	"DOTA_Armory_Category_KillEffects"								"Эффекты убийства"
+	"LoadoutSlot_Kill_Effect"										"Эффекты убийства"
+	"kill_effect"													"Эффект убийства"
+
+	//Death global equip page
+	"DOTA_GlobalItems_DeathEffects"								"Эффекты смерти"
+	"DOTA_Armory_Category_DeathEffects"							"Эффекты смерти"
+	"LoadoutSlot_Death_Effect"										"Эффекты смерти"
+	"death_effect"													"Эффект смерти"
+
+	//Diretide Cosmetics equip page
+	"DOTA_GlobalItems_Diretide"										"Сезонные эффекты"
+	"DOTA_Armory_Category_Diretide_2020"							"Восстание Тьмы 2020"
 
 	//WRAITH KING ARCANA
 	"Debut_Arcana_Wraith_King_Intro" 								"<font color='#ADE55C'>ARCANA</font>-НАБОР ДЛЯ WRAITH KING" 
@@ -31770,13 +31852,33 @@
 	"Debut_Arcana_QueenOfPain_Feature_3_Desc" 						"Новый портрет героя, а также иконки для способностей и мини-карты."
 
 	"Debut_Arcana_QueenOfPain_Feature_4_Title" 						"<span class='bullettitle'>Более 500 новых эксклюзивных реплик</span>"
-	"Debut_Arcana_QueenOfPain_Feature_4_Desc" 						"Репертуар Акаши пополнился 500 новыми репликами и избранными переработанными высказываниями."
+	"Debut_Arcana_QueenOfPain_Feature_4_Desc" 						"Репертуар Акаши пополнился более чем 500 новыми репликами и избранными переработанными высказываниями."
 
 	"Debut_Arcana_QueenOfPain_Feature_5_Title" 						"<span class='bullettitle'>Новые звуки</span>"
 	"Debut_Arcana_QueenOfPain_Feature_5_Desc" 						"Упивайтесь чужими страданиями с новыми звуками для Sonic Wave, Blink и особой ближней атаки хлыстом."
 
 	"Debut_Arcana_QueenOfPain_Feature_6_Title" 						"<span class='bullettitle'>Разблокируемый стиль</span>"
 	"Debut_Arcana_QueenOfPain_Feature_6_Desc" 						"Измучайте 1000 врагов способностью Sonic Wave в победных играх, чтобы открыть стиль <i>Royal Decree</i>."
+
+	// PUDGE PERSONA
+
+	"Debut_Pudge_Persona_Level"									"Награда 255 уровня боевого пропуска"
+	"Debut_Pudge_Persona_Subtitle"								"Новая личность Pudge"
+
+	"Debut_Pudge_Persona_Lore"									"Больше всего набитые ватой обитатели ящика с игрушками боятся плюшевого мясника. Он непрестанно ищет новых жертв в самых тёмных уголках, и каждая игрушка знает: окажешься на мясницком крюке — прощайся с набивкой и жизнью. Плюшевое чудище радостно вытянет из рваных останков всё до последней нитки, и каждая линия будет увешана клочками его жертв."
+	
+	"Debut_Pudge_Persona_Feature_1_Title" 						"<span class='bullettitle'>Новая модель</span>"
+	"Debut_Pudge_Persona_Feature_1_Desc" 						"Эта личность заменяет оригинальную модель и персонажа Паджа на его плюшевую копию, которая только начинает свой путь в чудесном мире разделки мяса."
+
+	"Debut_Pudge_Persona_Feature_2_Title" 						"<span class='bullettitle'>Особые анимации</span>"
+	"Debut_Pudge_Persona_Feature_2_Desc" 						"Как бы ему ни хотелось владеть телом из мяса, плюшевому мяснику остаётся довольствоваться лишь новыми анимациями."
+
+	"Debut_Pudge_Persona_Feature_3_Title" 						"<span class='bullettitle'>Особые элементы</span>"
+	"Debut_Pudge_Persona_Feature_3_Desc" 						"Новый портрет героя, изображение для верхней панели, а также иконки для способностей и мини-карты."
+
+	"Debut_Pudge_Persona_Feature_4_Title" 						"<span class='bullettitle'>Более 800 новых эксклюзивных реплик</span>"
+	"Debut_Pudge_Persona_Feature_4_Desc" 						"Полностью новая озвучка с более чем 800 репликами."
+
 
 	// ANTI-MAGE PERSONA
 	
@@ -31799,6 +31901,50 @@
 	"Debut_AM_Wei_Persona_Feature_4_Title" 						"<span class='bullettitle'>Более 900 новых эксклюзивных реплик</span>"
 	"Debut_AM_Wei_Persona_Feature_4_Desc" 						"Полностью новая озвучка с более чем 900 репликами."
 
+	// WINDRANGER ARCANA
+	
+	"Debut_WR_Arcana_Level"										"Награда 575 уровня боевого пропуска"
+	"Debut_WR_Arcana_Subtitle"									"Новый Arcana-набор для Windranger"
+
+	"Debut_WR_Arcana_Lore"										"Лиралей и её приёмную семью всегда занимала загадка рождения лучницы. Но чем старше она становилась, чем крепче была её необыкновенная связь с ветром, тем больше Лиралей тревожили мысли о её происхождении. Надеясь сбежать от тягостных дум, она лишь обрекла себя узнать горькую истину: что в ночь праведной расплаты её деревню и кровных родственников уничтожили элементали ветра и что без этой катастрофы Лиралей не стала бы одной из них."
+	"Debut_WR_Arcana_Feature_1_Title" 							"<span class='bullettitle'>Новая модель</span>"
+	"Debut_WR_Arcana_Feature_1_Desc" 							"Модель, предметы и пьедестал Лиралей изменились, чтобы воззвать к силе оберегающего её ветра."
+
+	"Debut_WR_Arcana_Feature_2_Title" 							"<span class='bullettitle'>Особые анимации и эффекты</span>"
+	"Debut_WR_Arcana_Feature_2_Desc" 							"Абсолютно новые анимации, звуки, счётчик урона от Focus Fire, особая шкала прерываемых заклинаний, визуальные эффекты ветра для обоих стилей, дополнительные эффекты обычных и изменённых Immortal-предметами способностей, а также особые анимации смерти как для Windranger, так и для убитых ею героев."
+
+	"Debut_WR_Arcana_Feature_3_Title" 							"<span class='bullettitle'>Особые элементы</span>"
+	"Debut_WR_Arcana_Feature_3_Desc" 							"Новые портрет героя, изображение для верхней панели и иконка мини-карты."
+
+	"Debut_WR_Arcana_Feature_4_Title" 							"<span class='bullettitle'>Более 500 новых эксклюзивных реплик</span>"
+	"Debut_WR_Arcana_Feature_4_Desc" 							"Репертуар Лиралей пополнился более чем 500 новыми репликами и избранными переработанными высказываниями."
+
+	"Debut_WR_Arcana_Feature_Minigame_Title"  					"<span class='bullettitle'>Разблокируемый стиль</span>"
+	"Debut_WR_Arcana_Feature_Minigame_Desc"  					"Убивайте врагов с помощью способности Focus Fire и нанесите ей 2 500 000 урона, чтобы открыть стиль <i>Reflections of the Gale</i>."
+	"Debut_Windrunner_ViewProgress"								"Показать прогресс"
+
+	"DOTA_WindrunnerArcana_ArcanaProgress_Label"					"Прогресс предмета"
+	"DOTA_WindrunnerArcana_ArcanaProgress_Title"					"{g:dota_item_name:arcana_item_def}"	
+
+	"DOTA_WindrunnerArcana_ArcanaProgress_ScoreRemaining"			"{d:score_remaining}"
+	"DOTA_WindrunnerArcana_ArcanaProgress_ScoreRemainingDesc"		"Осталось урона от Focus Fire"
+	"DOTA_WindrunnerArcana_ArcanaProgress_Score"					"{s:current_score}"
+	"DOTA_WindrunnerArcana_ArcanaProgress_DamageDealt"				"Нанесённый урон"
+	"DOTA_WindrunnerArcana_ArcanaProgress_Description"				"Нанесите {d:unlock_value} урона врагам, которые умрут под действием способности Focus Fire."
+	"KillEaterEventType_Windrunner_ArcanaProgress"					"Урона врагам, погибшим под действием Focus Fire."
+
+	"DOTA_WindrunnerArcana_Hud_ProgressLabel"						"Урон от Focus Fire"
+	"DOTA_WindrunnerArcana_Hud_PersonaLabel"						"{g:dota_player_name:nh:nc:nt:target_player_id}"
+	"DOTA_WindrunnerArcana_Hud_DamageDealt"							"Урон от Focus Fire"
+	"DOTA_WindrunnerArcana_Hud_AddedDamage"							"Прибавлено"
+	"DOTA_WindrunnerArcana_Hud_TargetHealth"						"{d:target_hp} здоровья"
+	"DOTA_WindrunnerArcana_Hud_TargetHealthDescription"				"Здоровье цели"
+	"DOTA_WindrunnerArcana_Hud_Success"								"Убийство!"
+	"DOTA_WindrunnerArcana_Hud_Failure"								"Неудача"
+	"DOTA_WindrunnerArcana_Hud_FocusFireTarget"						"Цель Focus Fire"
+
+	"DOTA_Style_Windrunner_Arcana_Style0"		"Compass of the Rising Gale"
+	"DOTA_Style_Windrunner_Arcana_Style1"		"Reflections of the Gale"
 
 	//CAVERN CRAWL SET STYLES
 	
@@ -32689,10 +32835,16 @@
 	"DOTA_PlusSeasonAchievement_WinMatchesInParty_Claim_Name"		"Достижение за победы в группе"
 	"DOTA_PlusSeasonAchievement_WinCoreMatches_Name"				"Победите в {d:achievement_quantity} играх за одну из ролей основы."
 	"DOTA_PlusSeasonAchievement_WinCoreMatches_Description"			"Побеждайте, играя в роли «Сложная», «Центр» или «Лёгкая»."
-	"DOTA_PlusSeasonAchievement_WinCoreMatches_Claim_Name"			"Достижение: побеждайте, играя за одну из ролей основы."
+	"DOTA_PlusSeasonAchievement_WinCoreMatches_Claim_Name"			"Достижение за победы на одной из ролей основы."
+
 	"DOTA_PlusSeasonAchievement_WinSupportMatches_Name"				"Победите в {d:achievement_quantity} играх за одну из ролей поддержки."
 	"DOTA_PlusSeasonAchievement_WinSupportMatches_Description"		"Побеждайте, играя за одну из ролей поддержки."
-	"DOTA_PlusSeasonAchievement_WinSupportMatches_Claim_Name"		"Достижение: побеждайте, играя за одну из ролей поддержки."
+	"DOTA_PlusSeasonAchievement_WinSupportMatches_Claim_Name"		"Достижение за победы на одной из ролей поддержки."
+
+	"DOTA_PlusSeasonAchievement_WinMatchMVP_Once_Name"				"Станьте лучшим игроком один раз"
+	"DOTA_PlusSeasonAchievement_WinMatchMVP_Name"					"Станьте лучшим игроком {d:achievement_quantity} раз"
+	"DOTA_PlusSeasonAchievement_WinMatchMVP_Description"			"Станьте лучшим игроком"
+	"DOTA_PlusSeasonAchievement_WinMatchMVP_Claim_Name"				"Достижение за звания лучшего игрока"
 
 	"DOTA_PlusSeason_Season3_Name" "3 сезон"
 	"DOTA_PlusSeason_Season3_Quests" "Задания 3 сезона"
@@ -32863,7 +33015,6 @@
 	"DOTA_TicketCode_Error"					"Не удалось получить код. Повторите попытку."
 	"DOTA_TicketCode_NotEligible"			"Аккаунт не подходит для получения кода."
 
-	"DOTA_CoachTier_None"		""
 	"DOTA_CoachTier_Bronze"		"Бронзовый разряд"
 	"DOTA_CoachTier_Silver"		"Серебряный разряд"
 	"DOTA_CoachTier_Gold"		"Золотой разряд"
@@ -32996,8 +33147,12 @@
 	"DOTA_TI9_Collectors_Cache2_Title"					"Collector's Cache II 2019"
 	"DOTA_TI9_Collectors_Cache2_Desc"					"16 эксклюзивных наборов, доступных ограниченное время. Открывайте сокровищницы, чтобы получить до 32 уровней пропуска."
 
-	"DOTA_TI10_Collectors_Cache_Title"					"Collector's Cache TI10"
+	"DOTA_TI10_Collectors_Cache_Title"					"Collector's Cache"
 	"DOTA_TI10_Collectors_Cache_Desc"					"18 новых наборов, выбранных сообществом. Открывайте сокровищницы, чтобы получить до 36 уровней пропуска."
+
+	"DOTA_TI10_Collectors_Cache2_Title"					"Collector's Cache II"
+	"DOTA_TI10_Collectors_Cache2_Desc"					"Открывайте сокровищницы и получите до 34 уровней пропуска."
+	"DOTA_TI10_Collectors_Cache_Badge34"					"34"
 
 	"DOTA_Collectors_Cache_Vote_Title"					"Голосование за Collector's Cache"
 	"DOTA_Collectors_Cache_Vote_Desc"					"Голосуйте за понравившиеся наборы, чтобы они попали в коллекцию этого года."
@@ -33040,6 +33195,22 @@
 	"DOTA_TI10_CollectorsCache_Treasure_1"				"Первая"
 	"DOTA_TI10_CollectorsCache_Treasure_2"				"Восьмая"
 	"DOTA_TI10_CollectorsCache_Treasure_3"				"Пятнадцатая"
+
+
+	"DOTA_SplashAd_TI10_CollectorsCache_2_Title" 			"The International 2020: Collector's Cache II"
+	"DOTA_SplashAd_TI10_CollectorsCache_2_Exclusive_Text" 	"Collector's Cache II содержит в себе 14 эксклюзивных наборов и 3 редкие награды. Сокровищница доступна ограниченное время."
+	"DOTA_SplashAd_TI10_CollectorsCache_2_Alt_Header" 		"Получите до 34 уровней пропуска"
+	"DOTA_SplashAd_TI10_CollectorsCache_2_Alt_Text" 			"Откройте первую, седьмую и четырнадцатую сокровищницы, чтобы получить награду."
+
+
+
+	"DOTA_TI10_CollectorsCache_2_HeaderText"				"Получите до 34 уровней пропуска"
+	"DOTA_TI10_CollectorsCache_2_SubText"					"Открывайте сокровищницы и получите до <span class=\"levels\">34 уровней пропуска</span>."
+
+	"DOTA_TI10_CollectorsCache_2_Treasure_1"				"Первая"
+	"DOTA_TI10_CollectorsCache_2_Treasure_2"				"Седьмая"
+	"DOTA_TI10_CollectorsCache_2_Treasure_3"				"Четырнадцатая"
+
 
 	"DOTA_EconItemSet_Tooltip_Exclusive_TI10_Collectors_Cache" 	"Эту сокровищницу можно купить лишь в течение 30 дней после её выхода. После этого предметы из неё нельзя будет приобрести другим способом."
 
@@ -33173,6 +33344,9 @@
 
 	"DOTA_Plus_Autumn_Sets_Title"							"Новые эксклюзивные наборы"
 	"DOTA_Plus_Autumn_Sets_Desc"							"Абсолютно новые наборы предметов для Lion, Slardar и Crystal Maiden в разделе наград Dota Plus."
+
+	"DOTA_Plus_Fall2020_Update_Title"						"Обновление осеннего сезона 2020"
+	"DOTA_Plus_Fall2020_Update_Desc"						"Новый сезон заданий, гильдии, временная сокровищница и другие пополнения в Dota Plus!"	
 
 	"DOTA_Plus_Autumn_Assitant_Title"						"Новые функции помощника"
 	"DOTA_Plus_Autumn_Assitant_Desc"						"Подписчики Dota Plus получили новые функции: избегать игрока, советы по друзьям и врагам, советы по вардам и не только."
@@ -33384,6 +33558,8 @@
 	"DOTA_Guild_Role_Modify_Error_Header"				"Не удалось изменить роль"
 	"DOTA_Guild_Leave_Error_Header"						"Не удалось покинуть гильдию"
 
+	"DOTA_GuildLeaderboard_ClaimError"					"Не удалось получить награды"
+
 	// Guild dialog errors
 	"DOTA_Guild_Result_InternalError"					"Произошла внутренняя ошибка. Повторите попытку позже."
 	"DOTA_Guild_Result_Success"							"Готово"
@@ -33433,10 +33609,12 @@
 	"DOTA_Guild_Result_RegionInvalid"					"Указанный регион гильдии недействителен. Выберите действительный регион и повторите попытку."
 	"DOTA_Guild_Result_ReportFlagsInvalid"				"Выбранная причина жалобы недействительна. Повторите попытку."
 	"DOTA_Guild_Result_ReportSuccess"					"Жалоба отправлена."
-	"DOTA_Guild_Result_Create_DoesNotOwnEvent"			"Чтобы создать гильдию, необходим боевой пропуск."
+	"DOTA_Guild_Result_Create_DoesNotOwnEvent"			"Чтобы создать гильдию, нужна подписка на Dota Plus."
 	"DOTA_Guild_Result_DuplicateContract"				"Вы уже выбрали похожий контракт. Пожалуйста, выберите другой контракт."
 	"DOTA_Guild_Result_TooManyInvites"					"Выдано слишком много приглашений в гильдию."
 	"DOTA_Guild_Result_Blocked"							"Вашему аккаунту запрещено совершать это действие."
+	"DOTA_Guild_Result_RewardsDoesNotQualify"			"Вы вступили в гильдию недавно. Награды таблицы лидеров для вас недоступны."
+	"DOTA_Guild_Result_RewardsAlreadyClaimed"			"Вы уже получили награды этой недели из таблицы лидеров."
 
 	"DOTA_Guild_DemoteSelf_Header"						"Понизить своё звание?"
 	"DOTA_Guild_DemoteSelf_Body"						"Вы уверены, что хотите понизить своё звание? Возможно, вы потеряете возможность пользоваться некоторыми функциями гильдии."
@@ -33453,6 +33631,7 @@
 	"DOTA_Guild_Feed_ContractsComplete"					"Гильдия выполнила {d:percent_as_uint}% ежедневных контрактов."
 	"DOTA_Guild_Feed_ChallengeComplete"					"Гильдия прошла испытание."
 	"DOTA_Guild_Feed_LevelUp"							"Гильдия получает уровень {d:guild_level}."
+	"DOTA_Guild_Feed_WeeklyLeaderboard"					"На этой неделе процентиль гильдии составил {d:percentile}. Разряд: {d:rank}."
 
 	"DOTA_Guild_Context_KickPlayer"						"Выгнать игрока"
 	"DOTA_Guild_Context_LeaveGuild"						"Покинуть гильдию"
@@ -33460,14 +33639,31 @@
 	"DOTA_Guilds_HomePage"								"Главная"
 	"DOTA_Guilds_MembersPage"							"Состав"
 	"DOTA_Guilds_ContractsPage"							"Контракты"
+	"DOTA_Guilds_LeaderboardsPage"						"Таблица лидеров: {s:guild_region_name}"
 	"DOTA_Guilds_RewardsPage"							"Награды"
 	"DOTA_Guilds_DetailsPage"							"Данные"
+
+	"DOTA_Guilds_Tier_Name"								"Разряд: {s:tier_name}"
+	"DOTA_Guilds_Tier_Rewards"							"Награды разряда «%s1»"
+	"DOTA_Guilds_Tier_Percentile"						"ПРОЦЕНТИЛЬ: %s1"
+	"DOTA_Guilds_Tier_DateRange"						"{t:s:start_timestamp} – {t:s:end_timestamp}"
+	"DOTA_Guilds_Tier_CurrentStanding"					"текущая позиция"
+	"DOTA_Guilds_Tier_ViewAllRewards"					"Все награды"
+	"DOTA_Guilds_Tier_LeaderboardTime"					"Разряд наград определяется процентилем гильдии с {t:s:start_timestamp} по {t:s:end_timestamp}"
+	"DOTA_Guilds_Tier_LeaderboardNext"					"Разряд наград в еженедельной таблице лидеров обновится {t:s:end_timestamp}"
+	"DOTA_GuildTier_Formatted"							"%s1"
+	"DOTA_GuildTierRewards_Formatted"					"Награды разряда «%s1»"
+	"DOTA_GuildTierRewards_PercentileRange"				"С {D:o:from_percentile}-ГО ПО {D:o:to_percentile}-Й ПРОЦЕНТИЛЬ"
+
+	"DOTA_GuildLeaderboard_CurrentRegionLeaderboard"	"Таблица лидеров: {s:region}"
+	"DOTA_GuildLeaderboard_LeaderboardDataNotAvailable"				"Нет данных"
+	"DOTA_GuildLeaderboard_NextWeeklyUpdate"						"Следующее обновление: {t:t:s:weekly_refresh_timestamp}"
 
 	"DOTA_Guilds_Tooltip_GuildLeader"					"Лидер гильдии"
 	"DOTA_Guilds_Tooltip_LeaderboardLeader"				"Главный добытчик"
 	"DOTA_Guilds_Tooltip_ReportGuild"					"Пожаловаться на гильдию"
 
-	"DOTA_Guilds_Home_GuildLevel" 						"Уровень гильдии"
+	"DOTA_Guilds_Home_GuildTier" 						"Разряд гильдии"
 	"DOTA_Guilds_Home_NextRewards" 						"След. награда"
 	"DOTA_Guilds_Home_MemberCount"						"Члены {d:member_count} / {d:max_members}"
 	"DOTA_Guilds_Home_MyActiveContracts"				"Мои контракты"
@@ -33477,6 +33673,9 @@
 	"DOTA_Guilds_Home_GuildChallenge_RewardLabelGP"		"Очков гильдии"
 	"DOTA_Guilds_Home_GuildChallenge_RewardLabelSSG"	"Золота лавки"
 	"DOTA_Guilds_Home_GuildChallenge_RequirementLabel"      "Нужно играть в группе из 3+ согильдийцев"
+
+	"DOTA_GuildPoints"									"Очки гильдии"
+	"DOTA_GuildPointsIncrease"							"+{d:guild_points} ОГ"
 
 	"DOTA_Guilds_Countdown_Refreshing"					"Обновление"
 
@@ -33488,8 +33687,16 @@
 	"DOTA_GuildContracts_HelpText"						"Перетаскивайте контракты с доски контрактов в свободные ячейки."
 	"DOTA_GuildContracts_Reward"						"Награда"
 	"DOTA_GuildContracts_SlotUnlockLevel"				"Требуется уровень {d:slot_unlock_level}"
+	"DOTA_GuildContracts_SlotUnlockPlus"				"За подписку на <strong><a class=\"PurchasePlusLink\" href=\"event:DOTAShowPlusPurchasePage()\">Dota Plus</a></strong>"
+	
 	"DOTA_GuildContracts_Info_Header"					"Контракты гильдии"
-	"DOTA_GuildContracts_Info_Description"				"На доске каждый день появляются новые контракты. Они имеют рейтинг от 1 до 3 звёзд в зависимости от сложности.<br><br>Выбрав контракт, вы помещаете его в ячейку вашего аккаунта и блокируете его для других членов гильдии. Контракт в ячейке нельзя сменить до ежедневного сброса.<br><br>За выполнение контрактов ваша гильдия получает очки гильдии, а вы — боевые очки. Прогресс контракта засчитывается только в победных играх. Награды за контракт зависят от его сложности, они перечислены в таблице ниже:"
+	"DOTA_GuildContracts_Info_Description"				"На доске каждый день появляются новые контракты. Они имеют рейтинг от 1 до 3 звёзд в зависимости от сложности.<br><br>Выбрав контракт, вы помещаете его в ячейку вашего аккаунта и блокируете его для других членов гильдии. Контракт в ячейке нельзя сменить до ежедневного сброса.<br><br>За выполнение контрактов ваша гильдия получает очки гильдии, а вы — осколки. Прогресс контракта засчитывается только в победных играх. Награды за контракт зависят от его сложности, они перечислены в таблице ниже:"
+
+	"DOTA_GuildTier_Info_Header"						"Разряд гильдии"
+	"DOTA_GuildTier_Info_Description"					"
+Гильдии получают очки за <span class=\"strong\">игры</span>, <span class=\"strong\">выполненные контракты</span> и <span class=\"strong\">пройденные испытания</span>.<br><br>
+
+У каждого региона есть таблица лидеров, которая постоянно обновляется. По ней в конце недели определяется разряд гильдии, дающий её членам особые награды."
 
 	"DOTA_GuildChallenges_Info_Header"					"Испытания гильдии"
 	"DOTA_GuildChallenges_Info_Description1"			"Каждую неделю вашей гильдии даётся ограниченное число испытаний, за которые даются <span class='GuildPoints'>очки гильдии</span>. <br><br>После пройденного испытания сразу же открывается следующее (если вы не достигли недельного лимита).<br><br>Прогресс испытания засчитывается только в играх группами, где есть хотя бы 3 согильдийца."
@@ -33578,7 +33785,9 @@
 	"DOTA_GuildPerk_UnlockContractSlot"					"Дополнительная ячейка ежедневного контракта"
 	"DOTA_GuildPerk_BonusArcanaVotes"					"+{d:perk_value} голосов за Arcana в неделю"
 	"DOTA_GuildPerk_BannerUpgrade"						"Улучшение знамени гильдии"
+	"DOTA_GuildPerk_GuildTagDecoration"					"Украшение тега гильдии"
 	"DOTA_GuildPerk_Emoticon"							"Смайлик {s:emoticon_text}"
+	"DOTA_GuildPerk_Spray"								"Получить граффити"
 	"DOTA_GuildPerk_ContractQuantityIncrease"			"+{d:perk_value}% ежедневных контрактов"
 	"DOTA_GuildPerk_BonusTips"							"+{d:perk_value} к похвалам в неделю"
 	"DOTA_GuildPerk_BonusChallenges"					"+{d:perk_value} к испытаниям гильдии в неделю"
@@ -33591,6 +33800,7 @@
 
 	"DOTA_Guilds_GuildDetails_Members"					"Состав"
 	"DOTA_Guilds_GuildDetails_GuildLevel"				"Уровень гильдии"
+	"DOTA_Guilds_GuildDetails_GuildTier"				"Разряд гильдии"
 	"DOTA_Guilds_GuildDetails_Guild_Details"		"Данные гильдии"
 	"DOTA_Guilds_GuildDetails_Guild_Name"			"Название гильдии"
 	"DOTA_Guilds_GuildDetails_Guild_Tag"			"Тег гильдии"
@@ -33681,6 +33891,9 @@
 	"TI10_EventGame_Frontpage_Feature3"								"Особое внеигровое древо умений"
 	"TI10_EventGame_Frontpage_Feature4"								"Постепенно повышающаяся сложность"
 	"TI10_EventGame_Frontpage_Button"								"Подробнее"
+	"TI10_EventGame_Frontpage_NewUpdate"								"Обновление Лабиринта Аганима"
+	"TI10_EventGame_Frontpage_Heroes"								"Новые герои"
+	"TI10_EventGame_Frontpage_Tier5"								"Новая сложность"
 
 	"TI10_EventGame_ViewEventDetails"								"Подробности события"
 
@@ -33695,6 +33908,7 @@
 	"TI10_EventGame_AscensionName_1"								"Чародей"
 	"TI10_EventGame_AscensionName_2"								"Заклинатель"
 	"TI10_EventGame_AscensionName_3"								"Великий маг"
+	"TI10_EventGame_AscensionName_4"								"Высший маг"
 	"TI10_EventGame_ChallengeName"									"Режим испытания"
 	"TI10_EventGame_ChallengeName_Title"							"Испытание Аганима"
 	"TI10_EventGame_ChallengeName_Countdown"						"{t:d:t:T:EventGameCountdownTime}"
@@ -33718,6 +33932,8 @@
 	"DOTA_International2020_Achievement_EventGameWinAsc2_Description"		"Победите Аганима на сложности «Заклинатель»"
 	"DOTA_International2020_Achievement_EventGameWinAsc3_Name"				"Гордость Аганима"
 	"DOTA_International2020_Achievement_EventGameWinAsc3_Description"		"Победите Аганима на сложности «Великий маг»"
+	"DOTA_International2020_Achievement_EventGameWinAsc4_Name"				"Высший маг"
+	"DOTA_International2020_Achievement_EventGameWinAsc4_Description"		"Победите Аганима на сложности «Высший маг»"
 
 	"dota_chatwheel_label_ti10eventgame_reward1"		"Давайте сразимся!"
 	"dota_chatwheel_message_ti10eventgame_reward1"		"Друзья, давайте сразимся!"
@@ -33727,6 +33943,8 @@
 	"dota_chatwheel_message_ti10eventgame_reward3"		"А теперь старый добрый фокус-покус!"
 	"dota_chatwheel_label_ti10eventgame_reward4"		"КУД-КУДАХ!"
 	"dota_chatwheel_message_ti10eventgame_reward4"		"КУД-КУДАХ! Только это от вас и слышу!"
+	"dota_chatwheel_label_ti10eventgame_reward5"		"Ха-ха-ха, приступим!"
+	"dota_chatwheel_message_ti10eventgame_reward5"		"Ха-ха-ха, приступим!"
 
 	"dota_page_match_details_ti10_event_game_store"		"Купить дары"
 
@@ -33741,9 +33959,25 @@
 	"dota_chatwheel_header_international2020_event_game_reward"			"TI10: лабиринт Аганима"
 	"dota_chatwheel_header_international2020_event_game_reward_desc"	"Награды за победу над Аганимом в его лабиринте. Эти фразы колеса чата исчезнут вместе с боевым пропуском."
 
+	"dota_chatwheel_header_diretide_sounds"							"Звуки Восстания Тьмы 2020"
+	"dota_chatwheel_header_diretide_sounds_desc"					"Эксклюзивные награды, доступные во время Восстания Тьмы 2020."
+
+	"dota_chatwheel_header_diretide_sprays"							"Граффити Восстания Тьмы 2020"
+	"dota_chatwheel_header_diretide_sprays_desc"					"Эксклюзивные граффити для колеса чата, доступные во время Восстания Тьмы 2020."	
+
+	"dota_chatwheel_header_diretide_announcer_sounds"				"Комментаторы Восстания Тьмы 2020"
+	"dota_chatwheel_header_diretide_announcer_sounds_desc"			"Эксклюзивные звуки для колеса чата, доступные во время Восстания Тьмы 2020."
+
 	"DOTA_TI10_EventGame_CannotAffordBlessing_Error"				"Недостаточно волшебных фрагментов"
 	"DOTA_TI10_EventGame_CannotAffordBlessing_Body"					"Недостаточно волшебных фрагментов для покупки этого дара."
 	"DOTA_TI10_EventGame_BlessingCost"								"{d:blessing_cost}"
+
+	"DOTA_TI10_Frontpage_Immortal_2_Treasure_Name"					"Immortal-сокровищница II"
+	"DOTA_TI10_Frontpage_Immortal_2_Treasure_Desc"					"Выпущена вторая сокровищница<br>с новыми Immortal-предметами"
+
+	"DOTA_TI10_Frontpage_Immortal_3_Treasure_Name"					"Immortal-сокровищница III"
+	"DOTA_TI10_Frontpage_Immortal_3_Treasure_Desc"					"Выпущена третья сокровищница<br>с новыми Immortal-предметами"
+
 
 	"DOTA_TI10_EventGame_ReceiveBlessings"							"Получить дары"
 	"DOTA_TI10_EventGame_BlessingsTitle"							"Дары"
@@ -33860,7 +34094,6 @@
 
 	// TI10 -- don't release until Agh goes live!
 	"DOTA_TI10_EVENTGAME_TITLE"											"Лабиринт Аганима"
-	"DOTA_EventGameName_International2020" 								"Лабиринт Аганима"
 
 	"DOTA_TI10_BattlePass_Level150Reward_Bonus"						"Лабиринт Аганима<br>Максимум очков: 3000"
 	"DOTA_TI10_BattlePass_Level250Reward_Bonus"						"Лабиринт Аганима<br>Максимум очков: 4000"
@@ -34145,7 +34378,7 @@
 
 
 	"DOTA_Tooltip_ability_aghsfort_special_winter_wyvern_splinter_blast_vacuum"					"Cool and Collected"
-	"DOTA_Tooltip_ability_aghsfort_special_winter_wyvern_splinter_blast_vacuum_Description"		"Осколки Splinter Blast притягивают жертв к основной цели."
+	"DOTA_Tooltip_ability_aghsfort_special_winter_wyvern_splinter_blast_vacuum_Description"		"Осколки Splinter Blast притягивают жертв к основной цели и применяют на них эффект способности Arctic Burn текущего уровня."
 
 	"DOTA_Tooltip_ability_aghsfort_special_winter_wyvern_splinter_blast_main_target_hit"					"Chilled To The Bone"
 	"DOTA_Tooltip_ability_aghsfort_special_winter_wyvern_splinter_blast_main_target_hit_Description"		"Когда осколки Splinter Blast достигают своих жертв, они возвращаются к основной цели, нанося %value%%% урона."
@@ -34278,7 +34511,7 @@
 	"DOTA_Tooltip_ability_aghsfort_special_magnataur_skewer_heal_Description"			"Skewer излечивает союзников на %value%%% от урона способности, но не перемещает их."
 
 	"DOTA_Tooltip_Ability_aghsfort_special_magnataur_skewer_shockwave"				"Blast Off"
-	"DOTA_Tooltip_Ability_aghsfort_special_magnataur_skewer_shockwave_Description"	"Добежав до цели Skewer, герой применяет способность Shockwave текущего уровня."
+	"DOTA_Tooltip_Ability_aghsfort_special_magnataur_skewer_shockwave_Description"	"Герой атакует каждого врага, задетого способностью Skewer."
 
 	"DOTA_Tooltip_Ability_aghsfort_special_magnataur_empower_lifesteal"						"Vampower"
 	"DOTA_Tooltip_ability_aghsfort_special_magnataur_empower_lifesteal_Description"			"Empower даёт цели %value%%% вампиризма."
@@ -34301,6 +34534,8 @@
 
 	"DOTA_Tooltip_Ability_aghsfort_special_magnataur_reverse_polarity_steroid"						"Extra Polarity"
 	"DOTA_Tooltip_ability_aghsfort_special_magnataur_reverse_polarity_steroid_Description"			"После применения Reverse Polarity герой получает %move_speed_percent%%% дополнительной скорости передвижения и %attack_speed% дополнительной скорости атаки. Ускорение действует %buff_duration% сек."
+	"DOTA_Tooltip_modifier_aghsfort_magnataur_reverse_polarity_steroid"								"Extra Polarity"
+	"DOTA_Tooltip_modifier_aghsfort_magnataur_reverse_polarity_steroid_Description"					"Скорость атаки и передвижения увеличены после применения Reverse Polarity."
 
 	"aghsfort_magnataur_shockwave_flat_damage"					"+{s:value} к урону от {s:ability_name}"
 	"aghsfort_magnataur_shockwave_pct_damage"					"+{s:value}% к урону от {s:ability_name}"
@@ -34491,7 +34726,10 @@
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_thunder_strike_interval_upgrade_Description"	"Интервал между ударами Thunder Strike уменьшен на %value%%%. Число ударов увеличено на 3."
 
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_thunder_strike_mana_restore"					"Mana Storm"
-   	"DOTA_Tooltip_ability_aghsfort_special_disruptor_thunder_strike_mana_restore_Description"		"Каждый удар Thunder Strike восстанавливает %restore_amount%%% от максимального запаса маны всем союзникам в радиусе %restore_radius% от цели способности."
+   	"DOTA_Tooltip_ability_aghsfort_special_disruptor_thunder_strike_mana_restore_Description"		"Каждый разряд Thunder Strike восстанавливает %restore_amount%%% от максимального запаса маны союзников, находящихся в радиусе %restore_radius% от цели. Также каждый удар на %int_increase_duration% сек. увеличивает интеллект Disruptor на %int_increase_amount%."
+
+   	"DOTA_Tooltip_modifier_aghsfort_special_disruptor_thunder_strike_int_increase_counter"		"Mana Storm"
+   	"DOTA_Tooltip_modifier_aghsfort_special_disruptor_thunder_strike_int_increase_counter_Description"		"Интеллект увеличен на %dMODIFIER_PROPERTY_TOOLTIP%."
 
    	"DOTA_Tooltip_ability_aghsfort_special_disruptor_thunder_strike_crit_chance"					"Critical Strike"
    	"DOTA_Tooltip_ability_aghsfort_special_disruptor_thunder_strike_crit_chance_Description"		"Каждый удар Thunder Strike имеет шанс в %crit_chance%%% нанести %crit_pct%%% урона."
@@ -34608,6 +34846,7 @@
 	"DOTA_Tooltip_ability_aghsfort_snapfire_lil_shredder_damage"		"ФИКСИРОВАННЫЙ УРОН ОТ ВЫСТРЕЛА:"
 	"DOTA_Tooltip_ability_aghsfort_snapfire_lil_shredder_attack_speed_slow_per_stack"	"ЗАМЕДЛЕНИЕ АТАКИ ЗА ЭФФЕКТ:"
 	"DOTA_Tooltip_ability_aghsfort_snapfire_lil_shredder_slow_duration"	"ДЛИТЕЛЬНОСТЬ ЗАМЕДЛЕНИЯ:"
+	"DOTA_Tooltip_ability_aghsfort_snapfire_lil_shredder_buffed_attacks"	"ЧИСЛО АТАК:"
 
 	"DOTA_Tooltip_modifier_aghsfort_snapfire_lil_shredder_buff"				"Lil' Shredder"
 	"DOTA_Tooltip_modifier_aghsfort_snapfire_lil_shredder_buff_Description"	"Скорость атаки увеличена на %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%. Атаки уменьшают скорость атаки жертв."
@@ -34635,7 +34874,6 @@
 
 	"DOTA_Tooltip_ability_aghsfort_snapfire_gobble_up"					"Gobble Up"
 	"DOTA_Tooltip_ability_aghsfort_snapfire_gobble_up_Description"		"Проглатывает крипа или союзного героя, чтобы затем плюнуть им во врагов. Цель может сидеть в животике не более %max_time_in_belly% сек."
-	"DOTA_Tooltip_ability_aghsfort_snapfire_gobble_up_Lore"				""
 	"DOTA_Tooltip_ability_aghsfort_snapfire_gobble_up_Note0"				"Герой получает награду за смерть выплюнутого крипа."
 
 	"DOTA_Tooltip_modifier_aghsfort_snapfire_gobble_up_belly_has_unit"				"Gobble Up"
@@ -34646,7 +34884,6 @@
 
 	"DOTA_Tooltip_ability_aghsfort_snapfire_spit_creep"				"Spit Out"
 	"DOTA_Tooltip_ability_aghsfort_snapfire_spit_creep_Description"	"Выплёвывает сидевшее в животике существо, нанося урон и оглушая противников в большой области. Под существом образуется лужа огненной слюны, которая замедляет врагов и наносит периодический урон."
-	"DOTA_Tooltip_ability_aghsfort_snapfire_spit_creep_Lore"					""
 	"DOTA_Tooltip_ability_aghsfort_snapfire_spit_creep_impact_radius"	"РАДИУС ПОПАДАНИЯ:"
 	"DOTA_Tooltip_ability_aghsfort_snapfire_spit_creep_impact_damage"	"УРОН ОТ ПЛЕВКА:"
 	"DOTA_Tooltip_ability_aghsfort_snapfire_spit_creep_burn_damage"		"УРОН В СЕКУНДУ ОТ ЛУЖИ:"
@@ -34660,7 +34897,7 @@
 	    "DOTA_Tooltip_ability_aghsfort_special_snapfire_scatterblast_double_barrel_Description"	"Перезарядка Scatterblast заменяется %value% зарядами."
 
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_scatterblast_knockback"						"Stopping Power"
-	"DOTA_Tooltip_ability_aghsfort_special_snapfire_scatterblast_knockback_Description"			"Scatterblast отталкивает задетых врагов на расстояние в %value%."
+	"DOTA_Tooltip_ability_aghsfort_special_snapfire_scatterblast_knockback_Description"			"Scatterblast отталкивает задетых врагов на расстояние в %value% и всегда наносит полный урон."
 
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_scatterblast_fullrange_pointblank"				"Longer Barrels"
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_scatterblast_fullrange_pointblank_Description"	"Жертвы Scatterblast всегда получают урон в упор, где бы они ни находились."
@@ -34669,9 +34906,9 @@
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_scatterblast_barrage_Description"	"Помимо основного выстрела Scatterblast, герой делает ещё два таких же в стороны."
 
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_multicookie"						"Baker's Dozen"
-	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_multicookie_Description"		"Герой бросает печеньки всем целям в радиусе %value% от основной. Прыжок вперёд совершает только выбранное существо, а остальные лишь подпрыгивают на месте."
+	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_multicookie_Description"		"Герой бросает печеньки всем целям в радиусе %value% от основной. Прыжок вперёд совершает только выбранное существо, а остальные лишь подпрыгивают на месте. Первая печенька летит на %projectile_speed_pct%%% быстрее."
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_enemytarget"						"Raisin Firesnaps"
-	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_enemytarget_Description"			"Firesnap Cookie можно скормить противнику, заставив его подпрыгнуть на месте и получить урон от способности дважды."
+	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_enemytarget_Description"			"Цели Firesnap Cookie оставляют в месте приземления лужу от способности Mortimer Kisses текущего уровня. Печеньки также можно применять на врагов, чтобы они подпрыгнули на месте."
 
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_allied_buff"						"Freshly Baked"
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_allied_buff_Description"			"Печенька на %buff_duration% сек. даёт союзнику +%bonus_attack_range% к дальности атаки (только для дальнего боя) и +%bonus_attack_damage% к урону от атак."
@@ -34692,7 +34929,7 @@
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_mortimer_kisses_fire_trail"		"Mortimer Kisses Fire Trail"
 	   
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_mortimer_kisses_autoattack"						"Autocannon"
-	"DOTA_Tooltip_ability_aghsfort_special_snapfire_mortimer_kisses_autoattack_Description"			"При применении Mortimer Kisses герой каждые %fire_rate% сек. стреляет во врагов в радиусе %radius% способностью Scatterblast."
+	"DOTA_Tooltip_ability_aghsfort_special_snapfire_mortimer_kisses_autoattack_Description"			"При применении Mortimer Kisses герой каждые %fire_rate% сек. применяет на врагов в радиусе %radius% способность Scatterblast."
 
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_mortimer_kisses_incoming_damage_reduction"		"Safety First"
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_mortimer_kisses_incoming_damage_reduction_Description"		"При применении Mortimer Kisses герой получает на %damage_reduction%%% меньше урона."
@@ -34941,14 +35178,17 @@
 	"DOTA_Tooltip_modifier_aghsfort_ursa_earthshock_deep_invis"					"Concealed"
 	"DOTA_Tooltip_modifier_aghsfort_ursa_earthshock_deep_invis_Description"		"Это существо в невидимости, которая не раскрывается при применении заклинаний или атаках."
 
-	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_apply_fury_swipes"				"Shock and Awe"
-	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_apply_fury_swipes_Description"	"На жертв Earthshock накладывается один эффект Fury Swipes."
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_apply_fury_swipes"				"Digging In"
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_apply_fury_swipes_Description"	"Earthshock накладывает на врагов эффект Fury Swipes и имеет увеличенный этим эффектом урон."
 
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_knockback"				"Cannonball"
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_knockback_Description"	"Earthshock оглушает противников на %value3% сек. и отталкивает на расстояние в %value% единиц."
 
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_miss_chance"				"Blunt Their Claws"
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_miss_chance_Description"	"Жертвы Earthshock промахиваются атаками с шансом в %value%%%."
+
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_overpower_stack"					"Relentless"
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_overpower_stack_Description"		"Когда погибает враг, замедленный способностью Earthshock, Ursa получает +%value% к числу эффектов Overpower."
 
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_overpower_crit"					"Torn to Shreds"
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_overpower_crit_Description"		"Атаки от Overpower наносят %value%%% критического урона."
@@ -34973,6 +35213,15 @@
 
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_fury_swipes_armor_reduction"				"Lacerated Armor"
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_fury_swipes_armor_reduction_Description"	"Каждый эффект Fury Swipes уменьшает броню жертвы на %value%."
+
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_fury_swipes_ursa_minor"					"Ursa Minor"
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_fury_swipes_ursa_minor_Description"		"Fury Swipes становится активной способностью, которая помимо прежних эффектов призывает неуязвимых и неуправляемых медвежат. Они атакуют случайных ближайших врагов, добавляя им эффекты Fury Swipes для себя и для героя, но нанося этой способностью только %cub_swipes_modifier%%% от урона. Число медвежат: %cubs%. Длительность: %duration%. Перезарядка: %cooldown% сек. Расход маны: %mana_cost%."
+
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_enrage_earthshock"					"Rampage"
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_enrage_earthshock_Description"		"Когда Enrage активна, в позиции героя раз в %interval% сек. срабатывает Earthshock текущего уровня."
+
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_fury_swipes_lifesteal"				"Rend"
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_fury_swipes_lifesteal_Description"	"Каждый эффект Fury Swipes даёт герою %value%%% вампиризма и вампиризма способностями."
 
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_enrage_magic_immunity"				"Protect the Cubs"
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_enrage_magic_immunity_Description"	"Enrage даёт невосприимчивость к магии всем союзникам в радиусе %value%."
@@ -35064,9 +35313,9 @@
 	"DOTA_Tooltip_ability_aghsfort_sniper_assassinate_damage"				"УРОН:"
 	"DOTA_Tooltip_ability_aghsfort_sniper_assassinate_projectile_speed"		"СКОРОСТЬ СНАРЯДА:"
 	"DOTA_Tooltip_ability_aghsfort_sniper_assassinate_abilitycastrange"		"ДАЛЬНОСТЬ ПРИМЕНЕНИЯ:"
-	"DOTA_Tooltip_ability_aghsfort_sniper_assassinate_abilitycastpoint"		"ВРЕМЯ ПОДГОТОВКИ:"
 	"DOTA_Tooltip_ability_aghsfort_sniper_assassinate_scepter_stun_duration"	"ДЛИТЕЛЬНОСТЬ ОГЛУШЕНИЯ СО СКИПЕТРОМ:"
 	"DOTA_Tooltip_ability_aghsfort_sniper_assassinate_scepter_cast_point"	"ВРЕМЯ ПОДГОТОВКИ СО СКИПЕТРОМ:"
+	"DOTA_Tooltip_ability_aghsfort_sniper_assassinate_cast_point"			"ВРЕМЯ ПОДГОТОВКИ:"
 		
 	"DOTA_Tooltip_modifier_aghsfort_sniper_shrapnel_charge_counter"				"Зарядов Shrapnel"
 	"DOTA_Tooltip_modifier_aghsfort_sniper_shrapnel_charge_counter_Description"	"Способность Shrapnel можно применить, если есть заряды."
@@ -35125,13 +35374,13 @@
 	"DOTA_Tooltip_ability_aghsfort_special_sniper_assassinate_buckshot_Description"	"Assassinate наносит %value3%%% урона врагам, стоящим позади основной цели. Область поражения имеет форму конуса."
 
 	"DOTA_Tooltip_ability_aghsfort_special_sniper_assassinate_original_scepter"				"Hipfire"
-	"DOTA_Tooltip_ability_aghsfort_special_sniper_assassinate_original_scepter_Description"	"Assassinate применяется быстрее и оглушает жертву."
+	"DOTA_Tooltip_ability_aghsfort_special_sniper_assassinate_original_scepter_Description"	"Assassinate применяется на 50%% быстрее и оглушает жертву."
 
-	"DOTA_Tooltip_ability_aghsfort_special_sniper_assassinate_killshot_buff"				"Big Game Hunter"
-	"DOTA_Tooltip_ability_aghsfort_special_sniper_assassinate_killshot_buff_Description"	"Assassinate наносит чистый урон. Каждое убийство капитана, совершённое ей, увеличивает ловкость героя на %value%."
+	"DOTA_Tooltip_ability_aghsfort_special_sniper_assassinate_killshot"				"Big Game Hunter"
+	"DOTA_Tooltip_ability_aghsfort_special_sniper_assassinate_killshot_Description"	"Assassinate наносит чистый урон. Каждое убийство капитана, совершённое ей, увеличивает урон от этой способности на %value% (но не более %value2% раз за стычку)."
 
-	"DOTA_Tooltip_modifier_aghsfort_special_sniper_assassinate_killshot_buff"				"Big Game Hunter"
-	"DOTA_Tooltip_modifier_aghsfort_special_sniper_assassinate_killshot_buff_Description"	"Дополнительная ловкость, полученная за убийство капитанов способностью Assassinate."
+	"DOTA_Tooltip_modifier_aghsfort_special_sniper_assassinate_killshot"				"Big Game Hunter"
+	"DOTA_Tooltip_modifier_aghsfort_special_sniper_assassinate_killshot_Description"	"Дополнительный урон способности Assassinate, полученный за убийство капитанов этой способностью."
 
 	"aghsfort_sniper_shrapnel_flat_damage"				"+{s:value} к урону в секунду от {s:ability_name}"
 	"aghsfort_sniper_shrapnel_flat_radius"				"+{s:value} к радиусу {s:ability_name}"
@@ -35152,6 +35401,7 @@
 	"aghsfort_sniper_assassinate_percent_mana_cost"		"–{s:value}% расхода маны на {s:ability_name}"
 	"aghsfort_sniper_assassinate_percent_cooldown"		"–{s:value}% перезарядки {s:ability_name}"
 	"aghsfort_sniper_assassinate_projectile_speed"		"+{s:value} к скорости снаряда от {s:ability_name}"
+	"aghsfort_sniper_assassinate_percent_cast_point"	"{s:value}% задержки у {s:ability_name}"
 	//--------------------------------------------------------------------------------------------------------------
 	// SNIPER ABILITIES END
 	//--------------------------------------------------------------------------------------------------------------
@@ -35234,13 +35484,13 @@
 	"DOTA_Tooltip_modifier_aghsfort_special_mars_gods_rebuke_strength_buff"  				"Strong Argument"
 	"DOTA_Tooltip_modifier_aghsfort_special_mars_gods_rebuke_strength_buff_Description"		"Получает дополнительную силу за каждого врага, задетого способностью God's Rebuke."
 
-	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_counter_rebuke"		"Bulwark Counter"
+	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_counter_rebuke"		"Retort"
 	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_healing"		"Bulwark Healing"
 	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_return"		"Bulwark Return"
 	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_spears"		"Bastion"
 	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_soldiers"	"Phalanx"
 
-	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_counter_rebuke_Description"		"Когда героя атакуют спереди, он с шансом в %value%%% может контратаковать способностью God's Rebuke текущего уровня."
+	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_counter_rebuke_Description"		"Когда Bulwark активна, герой имеет шанс в %value%%% контратаковать способностью God's Rebuke, если его атакуют спереди."
 	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_healing_Description"		"Когда Bulwark активна, герой каждую секунду восстанавливает %value%%% от максимального запаса здоровья."
 	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_return_Description"		"Когда Bulwark активна, атакующие героя враги будут получать урон, равный %value%%% урона от его атак."
 	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_spears_Description"		"Когда Bulwark активна, герой каждые %stack_interval% сек. получает по 1 заряду (максимум — %stack_limit%). Выключив способность, герой бросит перед собой по одному копью Spear of Mars текущего уровня за каждый заряд."
@@ -35476,7 +35726,7 @@
 
 	"DOTA_Tooltip_ability_aghsfort_special_weaver_geminate_attack_splitshot_Description"				"Дополнительные атаки от Geminate Attack действуют на %attack_count% доп. целей в радиусе, равном дальности атаки героя + %bonus_range%."
 	"DOTA_Tooltip_ability_aghsfort_special_weaver_geminate_attack_applies_swarm_Description"			"Дополнительные атаки от Geminate Attack цепляют к жертвам жука от способности The Swarm текущего уровня."
-	"DOTA_Tooltip_ability_aghsfort_special_weaver_geminate_attack_lifesteal_Description"				"Дополнительные атаки от Geminate Attack имеют %value%%% вампиризма."
+	"DOTA_Tooltip_ability_aghsfort_special_weaver_geminate_attack_lifesteal_Description"				"Дополнительные атаки от Geminate Attack имеют %value%%% вампиризма и отталкивают жертв на расстояние в %knockback%."
 	"DOTA_Tooltip_ability_aghsfort_special_weaver_geminate_attack_knockback_Description"				"Дополнительные атаки от Geminate Attack отталкивают жертв на расстояние в %value%."
 
 	"DOTA_Tooltip_ability_aghsfort_special_weaver_shukuchi_trail_Description"							"Герой под действием Shukuchi оставляет за собой след, который существует %trail_duration% сек. и наносит %damage_pct%%% от урона способности каждые %burn_interval% сек. Ширина следа: %path_radius%."
@@ -35492,7 +35742,7 @@
 	"aghsfort_weaver_the_swarm_percent_manacost"				"–{s:value}% к расходу маны на {s:ability_name}"
 	"aghsfort_weaver_the_swarm_percent_cooldown"				"–{s:value}% перезарядки {s:ability_name}"
 	"aghsfort_weaver_the_swarm_flat_damage"						"+{s:value} к урону от {s:ability_name}"
-	"aghsfort_weaver_the_swarm_flat_attack_rate"				"–{s:value} сек. к частоте атак жуков от {s:ability_name}"
+	"aghsfort_weaver_the_swarm_flat_attack_rate"				"{s:value}% к частоте атак жуков от {s:ability_name}"
 	"aghsfort_weaver_the_swarm_flat_duration"					"+{s:value} сек. действия {s:ability_name}"
 	"aghsfort_weaver_the_swarm_flat_destroy_attacks"	"+{s:value} к атакам для убийства жука от {s:ability_name}"
 	"aghsfort_weaver_the_swarm_flat_count"				"+{s:value} к числу жуков от {s:ability_name}"
@@ -35512,7 +35762,7 @@
 	// WEAVER ABILITY UPGRADES END
 	//--------------------------------------------------------------------------------------------------------------	
 		
-	"DOTA_Tooltip_Ability_aghsfort_minor_stats_upgrade"					"Upgrade "
+	"DOTA_Tooltip_Ability_aghsfort_minor_stats_upgrade"					"Характеристики "
 	"DOTA_Tooltip_Ability_aghsfort_minor_stats_upgrade_Description"		"Улучшает базовые характеристики вашего героя: здоровье, броню, урон от атак и так далее."
 	//"DOTA_Tooltip_Ability_aghsfort_minor_stats_upgrade_bonus_strength"		"STR:"
 	//"DOTA_Tooltip_Ability_aghsfort_minor_stats_upgrade_bonus_agility"		"AGI:"
@@ -35569,6 +35819,9 @@
 	"DOTA_Tooltip_ability_aghsfort_omniknight_guardian_angel_radius"							"РАДИУС:"
 	"DOTA_Tooltip_ability_aghsfort_omniknight_guardian_angel_hp_regen"				  		  "ВОССТАНОВЛЕНИЕ ЗДОРОВЬЯ:"
 
+	"DOTA_Tooltip_modifier_aghsfort_omniknight_guardian_angel"						"Guardian Angel"
+	"DOTA_Tooltip_modifier_aghsfort_omniknight_guardian_angel_Description"			"Это существо невосприимчиво к физическому урону."
+
 	"DOTA_Tooltip_ability_aghsfort_omniknight_repel"							"Heavenly Grace"
 	"DOTA_Tooltip_ability_aghsfort_omniknight_repel_Description"				"Создаёт вокруг цели божественный щит, который увеличивает её силу и <font color='#70EA72'>сопротивление урону</font>.\n\nТИП РАЗВЕИВАНИЯ: сильное"
 	"DOTA_Tooltip_ability_aghsfort_omniknight_repel_Lore"						"Оказавшись у ямы жертвоприношений, Ревнитель показал свою стойкость к магии."
@@ -35578,7 +35831,7 @@
 	"DOTA_Tooltip_ability_aghsfort_omniknight_repel_hp_regen"					"ВОССТАНОВЛЕНИЕ ЗДОРОВЬЯ:"
 
 	"DOTA_Tooltip_modifier_aghsfort_omniknight_repel"						"Heavenly Grace"
-	"DOTA_Tooltip_modifier_aghsfort_omniknight_repel_Description"			"Сопротивление урону увеличено на %dsMODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE%%%, сила увеличена на %dMODIFIER_PROPERTY_STATS_STRENGTH_BONUS%, восстановление здоровья увеличено на %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT%."
+	"DOTA_Tooltip_modifier_aghsfort_omniknight_repel_Description"			"Сопротивление урону увеличено на %dMODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE%%%, сила увеличена на %dMODIFIER_PROPERTY_STATS_STRENGTH_BONUS%, восстановление здоровья увеличено на %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT%."
 				
 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_repel_procs_purification"		"Heavenly Purification"
 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_repel_procs_purification_Description"		"Применение Heavenly Grace также исцеляет цель способностью Purification текущего уровня."
@@ -35601,6 +35854,8 @@
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_damage_Description"				"Degen Aura каждые %damage_interval% сек. наносит врагам урон, равный %attack_damage_pct%%% от базового урона героя."
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_restoration_Description"			"Каждый раз, когда в радиусе действия Degen Aura погибает враг, Omniknight восстанавливает %value%%% от макс. запаса здоровья и маны."
 
+ 	"DOTA_Tooltip_modifier_aghsfort_omniknight_degen_aura_effect"								"Degen Aura"
+ 	"DOTA_Tooltip_modifier_aghsfort_omniknight_degen_aura_effect_Description"					"Скорость передвижения уменьшена на %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%, скорость атаки уменьшена на %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%."
 
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_guardian_angel_purification"				"Heal Life Angel"
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_guardian_angel_immune_flight"				"Angelic Flight"
@@ -35769,19 +36024,526 @@
 
 	//--------------------------------------------------------------------------------------------------------------
 	// WITCH DOCTOR ABILITY UPGRADES END
-	//--------------------------------------------------------------------------------------------------------------	
+	//--------------------------------------------------------------------------------------------------------------
+
+
+	// AGHANIM'S LABYRINTH - START
+
+	"ascension_embiggen"					"Обжорство"
+	"ascension_embiggen_Description"		"Враги снижают скорость поворота и атаки тех, кто их убил."
+
+
+	"DOTA_Tooltip_modifier_ascension_embiggen_display"				"Обжорство"
+	"DOTA_Tooltip_modifier_ascension_embiggen_display_Description"	"Тот, кто убьёт это существо, будет медленнее поворачиваться и атаковать."
+
+	"DOTA_Tooltip_modifier_ascension_embiggen"				"Обжорство"
+	"DOTA_Tooltip_modifier_ascension_embiggen_Description"	"Скорость поворота и атаки уменьшена."
+
+	"ascension_vengeance"					"Неуклюжесть"
+	"ascension_vengeance_Description"		"Вражеские капитаны при смерти применяют на своих убийц оцепенение."
+
+	"DOTA_Tooltip_modifier_ascension_vengeance_display"				"Неуклюжесть"
+	"DOTA_Tooltip_modifier_ascension_vengeance_display_Description"	"Применит оцепенение на того, кто убьёт это существо."
+
+	"DOTA_Tooltip_modifier_ascension_vengeance_debuff" 				"Неуклюжесть"
+	"DOTA_Tooltip_modifier_ascension_vengeance_debuff_Description"	"Находится в оцепенении после убийства капитана."
+
+	"aghsfort_ascension_invis"					"Мерцание"
+	"aghsfort_ascension_invis_Description"		"Вражеские капитаны время от времени получают эффект невидимости, как от Glimmer Cape."
+
+	"DOTA_Tooltip_modifier_aghsfort_ascension_invis"				"Мерцание"
+	"DOTA_Tooltip_modifier_aghsfort_ascension_invis_Description"	"Это существо под эффектом невидимости, как от Glimmer Cape."
+
+	"ascension_impatient"					"Торопыги"
+	"ascension_impatient_Description"		"Враги постепенно прибавляют в уроне, здоровье и размере."
+	"DOTA_Tooltip_modifier_ascension_impatient"					"Торопыги"
+	"DOTA_Tooltip_modifier_ascension_impatient_Description"		"Это существо постепенно увеличивается в размере и становится всё сильнее."
+
+	"ascension_meteoric"					"Метеориты"
+	"ascension_meteoric_Description"		"Вражеские капитаны время от времени обращаются в метеориты и летят в героев."
+	"DOTA_Tooltip_modifier_ascension_meteoric_display"				"Метеориты"
+	"DOTA_Tooltip_modifier_ascension_meteoric_display_Description"	"Время от времени обращается в метеорит и летит во вражеских героев."
+
+
+	//TEMPLAR ASSASSIN
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_refraction"								"Refraction"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_refraction_Lore"							"Используя свою псионическую вуаль, Ланайя подчиняет законы природы своей воле."
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_refraction_Description"					"Герой становится неуловимым, избегая урона и нанося больше урона атаками. Эти эффекты действуют ограниченное число раз и считаются раздельно. Каждое защитное срабатывание поглощает лишь определённое количество урона, пропуская остальной в героя."
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_refraction_Note0"						"Урон, отнимающий здоровье напрямую, проходит через эту способность (и не уменьшает число её срабатываний)."
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_refraction_Note1"						"Защищает только от источников, наносящих более %damage_threshold% урона."
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_refraction_Note2"						"Враги видят щит на вас."
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_refraction_instances"					"ЧИСЛО ЭФФЕКТОВ:"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_refraction_bonus_damage"				"ДОПОЛНИТЕЛЬНЫЙ УРОН:"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_refraction_duration"					"ДЛИТЕЛЬНОСТЬ:"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_refraction_max_damage_absorb"			"МАКС. ПОГЛОЩЕНИЕ УРОНА:"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_meld"									"Meld"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_meld_Lore"								"Ланайя так же уклончива, как и её договор с Сокрытым храмом."
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_meld_Description"						"Герой становится невидимым до тех пор, пока не сдвинется с места, но не дольше, чем на %meld_duration% сек. Если прервать невидимость атакой по врагу, она нанесёт дополнительный урон и на %abilityduration% сек. уменьшит броню жертвы."
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_meld_Note0"								"Эффект снимается любым действием."
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_meld_Note1"								"Снижение брони не действует на башни."
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_meld_bonus_damage"						"ДОПОЛНИТЕЛЬНЫЙ УРОН:"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_meld_bonus_armor"						"СНИЖЕНИЕ БРОНИ:"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_meld_abilityduration"						"ДЛИТЕЛЬНОСТЬ СНИЖЕНИЯ БРОНИ:"		
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psi_blades"								"Psi Blades"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psi_blades_Lore"							"Её кинжалы пронзают как плоть, так и разум, расширяя её понимание таинства реальности."
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psi_blades_Description"					"Псионические клинки героя насквозь пробивают цель атаки, нанося полный урон тем, кто стоит позади неё. Также способность увеличивает дальность атаки героя."
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psi_blades_Note0"						"Пробивающая атака наносит урон невидимым врагам."
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psi_blades_Note1"						"Эффекты атаки, вроде оглушения от Bash, действуют только на основную цель."
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psi_blades_bonus_attack_range"			"ДОП. ДАЛЬНОСТЬ АТАКИ:"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psi_blades_attack_spill_range"			"ДАЛЬНОСТЬ ПРОБИТИЯ:"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psi_blades_attack_spill_pct"				"%УРОН ОТ ПРОБИТИЯ:"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psionic_trap"							"Psionic Trap"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psionic_trap_Lore"						"Сокрытый храм не даст никому скрыться от ока его стража."
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psionic_trap_Description"				"Герой ставит невидимую ловушку, которая отслеживает передвижение врагов. Через %trap_delay_time% сек. ловушка автоматически срабатывает, замедляя противников в зоне действия на %movement_speed_slow%%%. Во время действия замедления враги получают периодический урон."
+
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psionic_trap_max_traps"					"МАКС. ЛОВУШЕК:"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psionic_trap_trap_delay_time"					"ВРЕМЯ ДО АКТИВАЦИИ:"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psionic_trap_trap_duration_tooltip"					"ДЛИТЕЛЬНОСТЬ ЗАМЕДЛЕНИЯ:"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psionic_trap_movement_speed_slow"					"%ЗАМЕДЛЕНИЕ ПЕРЕДВИЖЕНИЯ:"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psionic_trap_trap_damage"					"УРОН ОТ ЛОВУШЕК:"
+
+
+		"DOTA_Tooltip_modifier_aghsfort_templar_assassin_refraction_damage"				"Refraction — урон"
+		"DOTA_Tooltip_modifier_aghsfort_templar_assassin_refraction_damage_Description"	"Увеличивает урон на %dMODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE%."
+		"DOTA_Tooltip_modifier_aghsfort_templar_assassin_refraction_absorb"				"Refraction — поглощение"
+		"DOTA_Tooltip_modifier_aghsfort_templar_assassin_refraction_absorb_Description"	"Поглощает любой получаемый урон."
+		"DOTA_Tooltip_modifier_aghsfort_templar_assassin_meld"							"Meld"
+		"DOTA_Tooltip_modifier_aghsfort_templar_assassin_meld_Description"				"В невидимости, следующая атака нанесёт дополнительный урон."
+		"DOTA_Tooltip_modifier_aghsfort_templar_assassin_meld_armor"						"Снижение брони от Meld"
+		"DOTA_Tooltip_modifier_aghsfort_templar_assassin_meld_armor_Description"			"Броня снижена на %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%."
+		"DOTA_Tooltip_modifier_aghsfort_templar_assassin_trap_slow"						"Trap"
+		"DOTA_Tooltip_modifier_aghsfort_templar_assassin_trap_slow_Description"			"Скорость передвижения уменьшена на %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%–%dMODIFIER_PROPERTY_TOOLTIP%%%."
+		"DOTA_Tooltip_modifier_aghsfort_templar_assassin_psionic_trap_counter"			"Число ловушек"
+		"DOTA_Tooltip_modifier_aghsfort_templar_assassin_psionic_trap_counter_Description"	"Число ловушек Psionic Trap"
+
+
+  		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_refraction_allies"					"Glass Shield"
+  		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_refraction_kill_refresh"			"Absorption"
+  		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_refraction_counter_attack"			"Refraction Counter"
+  		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_refraction_detonate_trap"			"Smoke and Mirrors"
+		
+  		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_meld_attack_on_activation"			"Vanishing Slice"
+  		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_meld_teleport"						"Celestial Step"
+  		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_meld_refraction_on_kill"			"Latent Charge"
+  		 
+		
+  		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_psi_blades_autoattack"				"Sentient Blade"
+  		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_psi_blades_trap"					"Covert Devices"
+  		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_psi_blades_splash"					"Psychic Burst"
+		
+  		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_psionic_trap_area_attack"			"Veiled Cuts"
+  		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_psionic_trap_damage_heals"			"Resurgence"
+  		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_psionic_trap_multipulse"			"Shaded Echo"
+
+
+
+ 		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_refraction_allies_Description"			"Refraction можно применять на союзников. Дальность применения: %value%."
+ 		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_refraction_kill_refresh_Description"		"Каждый раз, когда вы убиваете существо, используя эффект доп. урона от Refraction, вы получаете 1 эффект поглощения урона."
+ 		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_refraction_counter_attack_Description"			"Refraction Counter"
+ 		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_refraction_detonate_trap_Description"			"При применении Refraction под героем создаётся ловушка от способности Psionic Trap."
+ 		 
+ 		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_meld_attack_on_activation_Description"			"При применении Meld герой атакует всех врагов в радиусе %value%."
+ 		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_meld_teleport_Description"						"Meld становится направленной на точку. Герой мгновенно переносится в выбранную точку в радиусе %value%, после чего становится невидимым."
+ 		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_meld_refraction_on_kill_Description"				"Каждый раз, когда умирает существо с пониженной от Meld бронёй, вы получаете 1 эффект дополнительного урона от способности Refraction."
+ 		 
+
+ 		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_psi_blades_autoattack_Description"				"Герой каждые %fire_rate% сек. автоматически атакует всех врагов в радиусе %radius%."
+ 		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_psi_blades_trap_Description"						"С шансом в %trap_chance%%% под героями, задетыми Psi Blades, может появиться ловушка от способности Psionic Trap."
+ 		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_psi_blades_splash_Description"					"Когда клинок Psi Blades пробивает жертву, урон получают все враги в радиусе %value% вокруг неё."
+
+ 		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_psionic_trap_area_attack_Description"			"Ловушки Psionic Trap при срабатывании наносят каждому врагу по атаке Templar Assassin с эффектом способности Meld."
+ 		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_psionic_trap_damage_heals_Description"			"Ловушки Psionic Trap излечивают всех союзников героя на %value%%% от нанесённого ими урона."
+ 		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_psionic_trap_multipulse_Description"				"Ловушки Psionic Trap остаются на земле и пульсируют, нанося дополнительный урон до %value% раз."
+			
+		 "aghsfort_templar_assassin_meld_bonus_armor"									"{s:value} к броне жертв {s:ability_name}"
+		 "aghsfort_templar_assassin_meld_bonus_damage"									"+{s:value} к доп. урону от {s:ability_name}"
+		 "aghsfort_templar_assassin_meld_meld_duration"									"+{s:value} сек. макс. длительности {s:ability_name}"
+		 "aghsfort_templar_assassin_meld_pct_cooldown"									"–{s:value}% перезарядки {s:ability_name}"
+		 "aghsfort_templar_assassin_psi_blades_attack_spill_pct"						"+{s:value} к урону от пробития {s:ability_name}"
+		 "aghsfort_templar_assassin_psi_blades_attack_spill_range"						"+{s:value} к дальности пробития {s:ability_name}"
+		 "aghsfort_templar_assassin_psi_blades_attack_spill_width"						"+{s:value} к ширине пробития {s:ability_name}"
+		 "aghsfort_templar_assassin_psi_blades_bonus_attack_range"						"+{s:value} к дальности атаки от {s:ability_name}"
+		 "aghsfort_templar_assassin_psionic_trap_max_traps"								"+{s:value} к максимуму ловушек от {s:ability_name}"
+		 "aghsfort_templar_assassin_psionic_trap_slow_duration"							"+{s:value} сек. замедления от {s:ability_name}"
+		 "aghsfort_templar_assassin_psionic_trap_trap_damage"							"+{s:value} к урону от {s:ability_name}"
+		 "aghsfort_templar_assassin_psionic_trap_trap_radius"							"+{s:value} к радиусу {s:ability_name}"
+		 "aghsfort_templar_assassin_refraction_bonus_damage"							"+{s:value} к доп. урону от {s:ability_name}"
+		 "aghsfort_templar_assassin_refraction_instances"								"+{s:value} к числу эффектов от {s:ability_name}"
+		 "aghsfort_templar_assassin_refraction_pct_cooldown"							"–{s:value}% перезарядки {s:ability_name}"
+		 "aghsfort_templar_assassin_refraction_max_damage_absorb"						"+{s:value} к макс. поглощению урона от {s:ability_name}"
+
+
+// SLARK
+		"DOTA_Tooltip_ability_aghsfort_slark_dark_pact"									"Dark Pact"
+		"DOTA_Tooltip_ability_aghsfort_slark_dark_pact_Description"						"После небольшой задержки герой снимает с себя большинство отрицательных эффектов и наносит урон всем врагам поблизости. Сам герой излечивается на долю от урона, нанесённого врагам этой способностью.\n\nТИП РАЗВЕИВАНИЯ: сильное"
+		"DOTA_Tooltip_ability_aghsfort_slark_dark_pact_Lore"								"В смертельной опасности змееногие способны быстро отращивать потерянные конечности."
+		"DOTA_Tooltip_ability_aghsfort_slark_dark_pact_Note0"							"После подготовки в %delay% сек. вы испустите %total_pulses% волн урона, по одной каждые %pulse_interval% сек."
+		"DOTA_Tooltip_ability_aghsfort_slark_dark_pact_Note1"							"Каждая волна снимает с героя отрицательные эффекты."
+		"DOTA_Tooltip_ability_aghsfort_slark_dark_pact_delay"							"ЗАДЕРЖКА:"
+		"DOTA_Tooltip_ability_aghsfort_slark_dark_pact_radius"							"РАДИУС:"
+		"DOTA_Tooltip_ability_aghsfort_slark_dark_pact_total_damage"						"УРОН:"
+		"DOTA_Tooltip_ability_aghsfort_slark_dark_pact_heal_pct"						"%ЛЕЧЕНИЕ ОТ УРОНА:"
+		"DOTA_Tooltip_ability_aghsfort_slark_pounce"										"Pounce"
+		"DOTA_Tooltip_ability_aghsfort_slark_pounce_Description"							"Герой прыгает вперёд, нанося урон каждому врагу на пути и хватая первого попавшегося на пути капитана. Жертва привязана к месту и не может уйти дальше определённого расстояния."
+		"DOTA_Tooltip_ability_aghsfort_slark_pounce_Lore"								"За время, проведённое в Тёмном рифе, узник стал опасным убийцей: агрессивным и бесстрашным."
+		"DOTA_Tooltip_ability_aghsfort_slark_pounce_Note0"								"Герой летит в прыжке со скоростью в %pounce_speed% либо на расстояние в %pounce_distance% единиц, либо до соприкосновения со вражеским капитаном. Все враги на пути получают урон, а привязанный капитан получает в %pounce_damage_multiplier% раз(а) больше урона."
+		"DOTA_Tooltip_ability_aghsfort_slark_pounce_Note1"								"Не привязывает врагов, невосприимчивых к магии."
+		"DOTA_Tooltip_ability_aghsfort_slark_pounce_Note2"								"Разрушает деревья в месте приземления."
+		"DOTA_Tooltip_ability_aghsfort_slark_pounce_pounce_distance"						"ДАЛЬНОСТЬ:"
+		"DOTA_Tooltip_ability_aghsfort_slark_pounce_leash_duration"						"ДЛИТЕЛЬНОСТЬ ПРИВЯЗКИ:"
+		"DOTA_Tooltip_ability_aghsfort_slark_pounce_leash_radius"						"РАДИУС ПРИВЯЗКИ:"
+		"DOTA_Tooltip_ability_aghsfort_slark_pounce_pounce_damage"						"УРОН:"
+
+		"DOTA_Tooltip_ability_aghsfort_slark_essence_shift"								"Essence Shift"
+		"DOTA_Tooltip_ability_aghsfort_slark_essence_shift_Description"					"Герой крадёт жизненную сущность врагов, с каждой атакой уменьшая их урон и получая заряды, пассивно увеличивающие ловкость. Активация способности потратит все заряды и ненадолго даст герою дополнительную ловкость, зависящую от количества зарядов."
+
+		"DOTA_Tooltip_ability_aghsfort_slark_essence_shift_Lore"							"Чем больше бьёшь по врагу, тем больше узнаёшь о его слабостях."
+		
+		"DOTA_Tooltip_ability_aghsfort_slark_essence_shift_passive_agility"					"ЛОВКОСТИ ЗА ЗАРЯД (ПАССИВ.):"
+		"DOTA_Tooltip_ability_aghsfort_slark_essence_shift_agi_gain"						"ЛОВКОСТИ ЗА ЗАРЯД (АКТИВ.):"
+		"DOTA_Tooltip_ability_aghsfort_slark_essence_shift_active_duration"					"ДЛИТЕЛЬНОСТЬ ПРИ АКТИВАЦИИ:"
+		"DOTA_Tooltip_ability_aghsfort_slark_essence_shift_max_stacks"						"МАКСИМУМ ЗАРЯДОВ:"
+		"DOTA_Tooltip_ability_aghsfort_slark_essence_shift_reduction"						"СНИЖЕНИЕ УРОНА ЗА АТАКУ:"
+
+		"DOTA_Tooltip_ability_aghsfort_slark_shadow_dance"								"Shadow Dance"
+		"DOTA_Tooltip_ability_aghsfort_slark_shadow_dance_Description"					"Скрывает героя в облаке теней, делая его невидимым, а также увеличивая его скорость передвижения и восстановление здоровья. Эта невидимость не раскрывается ничем; атаки, использование предметов и применение способностей также не снимают невидимость."
+		
+		"DOTA_Tooltip_ability_aghsfort_slark_shadow_dance_Lore"							"Неизвестный тринадцатый — очень скользкий враг."
+		
+		"DOTA_Tooltip_ability_aghsfort_slark_shadow_dance_duration"						"ДЛИТЕЛЬНОСТЬ:"
+		"DOTA_Tooltip_ability_aghsfort_slark_shadow_dance_bonus_movement_speed"			"%ДОП. СКОРОСТЬ ПЕРЕДВИЖЕНИЯ:"
+		"DOTA_Tooltip_ability_aghsfort_slark_shadow_dance_bonus_regen_pct"				"%ЗДОРОВЬЯ В СЕКУНДУ:"
+
+		"DOTA_Tooltip_modifier_aghsfort_slark_pounce_leash"							"Привязка"
+		"DOTA_Tooltip_modifier_aghsfort_slark_pounce_leash_Description"				"Передвижение ограничено небольшим расстоянием."
+		"DOTA_Tooltip_modifier_aghsfort_slark_essence_shift_counter"							"Essence Shift"				
+		"DOTA_Tooltip_modifier_aghsfort_slark_essence_shift_counter_Description"				"Имеет %dMODIFIER_PROPERTY_STATS_AGILITY_BONUS% дополнительной ловкости."
+		"DOTA_Tooltip_modifier_aghsfort_slark_essence_shift_active"						"Активированная Essence Shift"
+		"DOTA_Tooltip_modifier_aghsfort_slark_essence_shift_active_Description"						"Имеет %dMODIFIER_PROPERTY_STATS_AGILITY_BONUS% дополнительной ловкости."
+		"DOTA_Tooltip_modifier_aghsfort_slark_essence_shift_debuff"						"Essence Shift"
+		"DOTA_Tooltip_modifier_aghsfort_slark_essence_shift_debuff_Description"	"Наносит на %dMODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE%%% меньше урона."
+		"DOTA_Tooltip_modifier_aghsfort_slark_shadow_dance_passive_regen"				"Регенерация от Shadow Dance"
+		"DOTA_Tooltip_modifier_aghsfort_slark_shadow_dance_passive_regen_Description"	"Передвигается на %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% быстрее и ежесекундно восстанавливает %dMODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE%%% от максимального здоровья."
+		"DOTA_Tooltip_modifier_aghsfort_slark_shadow_dance"							"Shadow Dance"
+		"DOTA_Tooltip_modifier_aghsfort_slark_shadow_dance_Description"				"Невидим в облаке дыма."
+		
+		"DOTA_Tooltip_modifier_aghsfort_slark_essence_shift_permanent_buff"	"Постоянная ловкость"
+		"DOTA_Tooltip_modifier_aghsfort_slark_essence_shift_permanent_buff_Description"	"Имеет %dMODIFIER_PROPERTY_STATS_AGILITY_BONUS% постоянного бонуса к ловкости."
+		"DOTA_Tooltip_modifier_aghsfort_slark_essence_shift_permanent_buff_PostGame"		"Полученная навсегда ловкость."
+		
+		"DOTA_Tooltip_modifier_aghsfort_slark_essence_shift_permanent_debuff"	"Потерянная ловкость"
+		"DOTA_Tooltip_modifier_aghsfort_slark_essence_shift_permanent_debuff_Description"	"Имеет на %dMODIFIER_PROPERTY_STATS_AGILITY_BONUS% меньше ловкости."
+
+
+	  	"DOTA_Tooltip_ability_aghsfort_special_slark_dark_pact_essence_shift"					"Broken Contract"
+	  	"DOTA_Tooltip_ability_aghsfort_special_slark_dark_pact_push_stun"						"Smells Fishy"
+	  	"DOTA_Tooltip_ability_aghsfort_special_slark_dark_pact_dispells_allies"					"Brackish Bath"
+	  	"DOTA_Tooltip_ability_aghsfort_special_slark_dark_pact_unit_target"						"Brackish Bath"
+		
+	
+	  	"DOTA_Tooltip_ability_aghsfort_special_slark_dark_pact_essence_shift_Description"						"Герой получает заряд Essence Shift за каждого врага, получившего урон от способности Dark Pact."
+	  	"DOTA_Tooltip_ability_aghsfort_special_slark_dark_pact_push_stun_Description"						"Каждая волна Dark Pact отталкивает врагов, оглушая их на %value% сек."
+	  	"DOTA_Tooltip_ability_aghsfort_special_slark_dark_pact_dispells_allies_Description"						"Dark Pact развеивает отрицательные эффекты с союзников, находящихся в радиусе действия."
+	  	"DOTA_Tooltip_ability_aghsfort_special_slark_dark_pact_unit_target_Description"						"Dark Pact можно применять на существ, будь то враг или союзник, развеивая отрицательные эффекты с союзников вокруг цели."
+
+   		"DOTA_Tooltip_ability_aghsfort_special_slark_pounce_attack_all"									"Gone Fishing"
+   		"DOTA_Tooltip_ability_aghsfort_special_slark_pounce_projectiles"								"Little Skippers"
+   		"DOTA_Tooltip_ability_aghsfort_special_slark_pounce_leashed_bonus"								"Fish Food"
+
+   		"DOTA_Tooltip_ability_aghsfort_special_slark_pounce_attack_all_Description"						"Герой атакует всех врагов, которые получат урон от способности Pounce, в том числе и привязанную жертву."
+   		"DOTA_Tooltip_ability_aghsfort_special_slark_pounce_projectiles_Description"					"Применяя Pounce, герой прыгает вместе с %value% копиями, создавая конус в %cone% градусов. Каждая копия наносит урон и привязывает капитанов."
+   		"DOTA_Tooltip_ability_aghsfort_special_slark_pounce_leashed_bonus_Description"					"Союзники получают +%value% к скорости атаки, когда атакуют привязанную жертву Pounce."
+
+
+  		"DOTA_Tooltip_ability_aghsfort_special_slark_essence_shift_aoe_attack"								"Apex Predator"
+  		"DOTA_Tooltip_ability_aghsfort_special_slark_essence_shift_leash_chance"							"Lucky Catch"
+  		"DOTA_Tooltip_ability_aghsfort_special_slark_essence_shift_allied_buff"								"Sea School"
+
+  		"DOTA_Tooltip_ability_aghsfort_special_slark_essence_shift_aoe_attack_Description"								"При активации Essence Shift герой атакует всех врагов в радиусе %value%."
+  		"DOTA_Tooltip_ability_aghsfort_special_slark_essence_shift_leash_chance_Description"							"Каждая атака с шансом в %leash_chance%%% может применить на жертву способность Pounce."
+  		"DOTA_Tooltip_ability_aghsfort_special_slark_essence_shift_allied_buff_Description"								"При активации Essence Shift все союзники получают бонус к основному атрибуту, равный бонусу к ловкости у Slark."
+
+
+	   "DOTA_Tooltip_ability_aghsfort_special_slark_shadow_dance_essence_shift_bonus"					"Deep Six"
+	   "DOTA_Tooltip_ability_aghsfort_special_slark_shadow_dance_dark_pact_pulses"						"Reef Rage"
+	   "DOTA_Tooltip_ability_aghsfort_special_slark_shadow_dance_leash"									"Hook, Line, and Sinker"
+
+	   "DOTA_Tooltip_ability_aghsfort_special_slark_shadow_dance_essence_shift_bonus_Description"		"При активации Shadow Dance герой активирует и способность Essence Shift, получая бонус в %value% раз больше максимума зарядов."
+	   "DOTA_Tooltip_ability_aghsfort_special_slark_shadow_dance_dark_pact_pulses_Description"						"Во время действия Shadow Dance герой каждые %value% сек. выпускает волну урона от способности Dark Pact."
+	   "DOTA_Tooltip_ability_aghsfort_special_slark_shadow_dance_leash_Description"						"Применение Shadow Dance стягивает к герою всех врагов в радиусе %pull_radius% и привязывает их способностью Pounce текущего уровня."
+
+		
+ 		"aghsfort_slark_dark_pact_cooldown"												"–{s:value}% перезарядки {s:ability_name}"
+ 		"aghsfort_slark_dark_pact_total_damage"											"+{s:value} к урону от {s:ability_name}"
+ 		"aghsfort_slark_dark_pact_heal_pct"												"+{s:value}% к лечению от {s:ability_name}"
+ 		"aghsfort_slark_essence_shift_active_duration"									"+{s:value} сек. действия активной {s:ability_name}"
+ 		"aghsfort_slark_essence_shift_agi_gain"											"+{s:value} к ловкости за заряд при активации {s:ability_name}"
+ 		"aghsfort_slark_essence_shift_cooldown"											"–{s:value}% перезарядки {s:ability_name}"
+ 		"aghsfort_slark_essence_shift_max_stacks"										"+{s:value} к максимуму зарядов {s:ability_name}"
+ 		"aghsfort_slark_pounce_cooldown"												"–{s:value}% перезарядки {s:ability_name}"
+ 		"aghsfort_slark_pounce_damage"													"+{s:value} к урону от {s:ability_name}"
+ 		"aghsfort_slark_pounce_distance"												"+{s:value} к дальности у {s:ability_name}"
+ 		"aghsfort_slark_pounce_leash_duration"											"+{s:value} сек. длительности привязки от {s:ability_name}"
+ 		"aghsfort_slark_shadow_dance_bonus_bonus_regen_pct"								"+{s:value}% к здоровью в секунду от {s:ability_name}"
+ 		"aghsfort_slark_shadow_dance_bonus_movement_speed"								"+{s:value} к скорости передвижения от {s:ability_name}"
+ 		"aghsfort_slark_shadow_dance_cooldown"											"–{s:value}% перезарядки {s:ability_name}"
+ 		"aghsfort_slark_shadow_dance_duration"											"+{s:value} сек. действия {s:ability_name}"
+
+
+		// QOP
+
+
+		// Queen of Pain - START
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_shadow_strike"						"Shadow Strike"
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_shadow_strike_Description"			"Бросает кинжал, который наносит урон при попадании и отравляет цель на %abilityduration% сек. Жертва передвигается медленнее и каждые %damage_interval% сек. получает урон от яда."
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_shadow_strike_Lore"					"Акаша обожает растягивать страдания жертвы, пронзив её отравленным кинжалом."
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_shadow_strike_Note0"					"Враг под воздействием этой способности со временем восстанавливает потерянную скорость."
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_shadow_strike_Note1"					"Если здоровье цели упадёт ниже 25%, её смогут добить её же союзники."
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_shadow_strike_movement_slow"			"%ЗАМЕДЛЕНИЕ ПЕРЕДВИЖЕНИЯ:"
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_shadow_strike_strike_damage"			"УРОН ОТ ПОПАДАНИЯ:"
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_shadow_strike_duration_damage"		"ПЕРИОДИЧЕСКИЙ УРОН:"
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_shadow_strike_abilityduration"		"ДЛИТЕЛЬНОСТЬ:"
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_shadow_strike_abilitycastrange"		"ДАЛЬНОСТЬ ПРИМЕНЕНИЯ:"
+
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_blink"								"Blink"
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_blink_Description"					"Телепортация на короткую дистанцию, позволяющая ворваться в схватку или быстро из неё сбежать."
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_blink_Lore"							"Негласная королева сделала себе имя, не оставляя без боли ни одного подданного."
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_blink_Note0"							"Позволяет сбить с цели многие направленные в героя снаряды."
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_blink_blink_range"					"ДАЛЬНОСТЬ:"
+
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_scream_of_pain"						"Scream Of Pain"
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_scream_of_pain_Description"			"Герой издаёт пронзительный вопль, нанося урон всем врагам поблизости."
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_scream_of_pain_Lore"					"Акаша одурманивает противников своим сладострастным голосом, когда крадёт их души."
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_scream_of_pain_Note0"				"Наносит урон невидимым врагам."
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_scream_of_pain_Note1"				"Снаряд этой способности нельзя сбить с цели."
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_scream_of_pain_area_of_effect"		"РАДИУС:"
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_scream_of_pain_damage"				"УРОН:"
+
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_sonic_wave"							"Sonic Wave"
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_sonic_wave_Description"				"Создаёт перед героем гигантскую звуковую волну, отталкивающую врагов и наносящую им огромный урон."
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_sonic_wave_Lore"						"Самая изысканная пытка Акаши — звуковая волна, добивающая её многострадальных противников."
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_sonic_wave_Note0"					"Задевает существ на расстоянии до 1150 единиц."
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_sonic_wave_final_aoe"				"МАКС. ШИРИНА ВОЛНЫ:"
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_sonic_wave_damage"					"УРОН:"
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_sonic_wave_knockback_distance"		"ДАЛЬНОСТЬ ОТТАЛКИВАНИЯ:"
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_sonic_wave_cooldown_scepter"			"ПЕРЕЗАРЯДКА СО СКИПЕТРОМ:"
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_sonic_wave_damage_scepter"			"УРОН СО СКИПЕТРОМ:"
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_sonic_wave_aghanim_description"		"Увеличивает урон и уменьшает перезарядку."
+
+		"DOTA_Tooltip_modifier_aghsfort_queenofpain_shadow_strike"				"Shadow Strike"					
+		"DOTA_Tooltip_modifier_aghsfort_queenofpain_shadow_strike_Description"	"Получает периодический урон и двигается на %fMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% медленнее."
+		
+		"DOTA_Tooltip_modifier_aghsfort_queenofpain_scream_of_pain_fear"				"Страх"
+		"DOTA_Tooltip_modifier_aghsfort_queenofpain_scream_of_pain_fear_description"	"Страх от способности Scream of Pain."
+
+		"DOTA_Tooltip_Ability_aghsfort_special_queenofpain_shadow_strike_on_attack"				"Stinging Lash"
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_shadow_strike_on_attack_Description"	"Каждая атака с шансом в %proc_chance_pct%%% может применить на жертву способность Shadow Strike."
+
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_shadow_strike_chain"								"Spread the Pain"
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_shadow_strike_chain_Description"	"С каждой атакой Shadow Strike отскакивает по %value% дополнительным целям."
+
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_shadow_strike_scream"								"Delight and Torment"
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_shadow_strike_scream_Description"	"Когда действие яда от Shadow Strike заканчивается, жертва издаёт крик от способности Scream of Pain текущего уровня."
+
+		"DOTA_Tooltip_Ability_aghsfort_special_queenofpain_blink_generates_scream"				"Haunting Echoes"
+		"DOTA_Tooltip_Ability_aghsfort_special_queenofpain_blink_generates_scream_Description"	"При применении Blink герой издаёт крик от способности Scream of Pain в начальной и конечной точках телепортации."
+
+		"DOTA_Tooltip_Ability_aghsfort_special_queenofpain_blink_attack_speed"				"Fervent Assault"
+		"DOTA_Tooltip_Ability_aghsfort_special_queenofpain_blink_attack_speed_Description"	"Применение Blink даёт +%bonus_attack_speed% к скорости атаки на %duration%s сек."
+
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_blink_shadow_strike"								"Hall of Pain"
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_blink_shadow_strike_Description"								"При применении Blink во всех врагов между начальной и конечной точками телепортации бросается кинжал от способности Shadow Strike текущего уровня."
+
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_scream_of_pain_resets_blink"								"Rapturous Cry"
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_scream_of_pain_resets_blink_Description"								"Время перезарядки Blink сбрасывается, когда враг умирает от способности Scream of Pain."
+
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_scream_of_pain_knockback"								"Resounding Wail"
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_scream_of_pain_knockback_Description"					"Scream of Pain отталкивает врагов к краю радиуса действия способности и с каждым задетым врагом уменьшает перезарядку Sonic Wave на %sonic_wave_cd_reduction% сек."
+
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_scream_of_pain_restores_caster"							"Invigorating Shriek"
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_scream_of_pain_restores_caster_Description"							"Каждый враг, задетый способностью Scream of Pain, возвращает Queen of Pain эхо, которое восстанавливает ей здоровье в размере %value%%% от нанесённого урона и ману в размере %value%%% от израсходованной."
+
+
+		"DOTA_Tooltip_modifier_aghsfort_special_queenofpain_blink_attack_speed"				"Fervent Attacks"
+		"DOTA_Tooltip_modifier_aghsfort_special_queenofpain_blink_attack_speed_Description"	"Получает дополнительную скорость атаки."
+
+		"DOTA_Tooltip_Ability_aghsfort_special_queenofpain_sonic_wave_trail"				"Thundering Resonance"
+		"DOTA_Tooltip_Ability_aghsfort_special_queenofpain_sonic_wave_trail_Description"	"Sonic Wave оставляет след, который наносит %damage_pct%%% урона от способности каждые %burn_interval% сек. След остаётся на протяжении %trail_duration% сек."
+
+
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_sonic_wave_circle"				"Sonic Tsunami"
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_sonic_wave_circle_Description"	"Sonic Wave применяется в %value% направлениях вокруг Queen of Pain."
+
+
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_sonic_wave_attack_buff"			"Discordant Force"
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_sonic_wave_attack_buff_Description"			"Увеличивает скорость атаки Queen of Pain на %attack_speed% и урон на %attack_damage% на %buff_duration% сек. за каждого задетого способностью Sonic Wave врага."
+
+		"DOTA_Tooltip_modifier_aghsfort_special_queenofpain_sonic_wave_attack_buff"			"Discordant Force"
+		"DOTA_Tooltip_modifier_aghsfort_special_queenofpain_sonic_wave_attack_buff_Description"			"Урон увеличен на %dMODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE%, скорость атаки увеличена на %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%."
+
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_scream_of_pain_stun"	"{s:value} сек. оглушения от Scream of Pain"
+
+		"aghsfort_queenofpain_shadow_strike_percent_cooldown"		"–{s:value}% перезарядки {s:ability_name}"
+		"aghsfort_queenofpain_shadow_strike_dot_damage"				"+{s:value} к урону в секунду от {s:ability_name}"
+		"aghsfort_queenofpain_blink_percent_cooldown"				"–{s:value}% перезарядки {s:ability_name}"
+		"aghsfort_queenofpain_blink_range"							"+{s:value} к дальности {s:ability_name}"
+		"aghsfort_queenofpain_scream_of_pain_percent_cooldown"		"–{s:value}% перезарядки {s:ability_name}"
+		"aghsfort_queenofpain_scream_of_pain_damage"				"+{s:value} к урону от {s:ability_name}"
+		"aghsfort_queenofpain_scream_of_pain_radius"				"+{s:value} к радиусу {s:ability_name}"
+		"aghsfort_queenofpain_sonic_wave_percent_cooldown"			"–{s:value}% перезарядки {s:ability_name}"
+		"aghsfort_queenofpain_sonic_wave_damage"					"+{s:value} к урону от {s:ability_name}"
+		"aghsfort_queenofpain_shadow_strike_strike_damage"			"+{s:value} к урону от попадания {s:ability_name}"
+
+		"aghsfort_queenofpain_sonic_wave_distance"					"+{s:value} к дальности эффекта от {s:ability_name}"
+		"aghsfort_queenofpain_sonic_wave_knockback_duration"		"+{s:value} сек. к длительности отталкивания у {s:ability_name}"
+
+	// AGHANIM'S LABYRINTH - END
+
 	//--------------------------------------------------------------------------------------------------------------
 	// ABILITY UPGRADE END
 	//--------------------------------------------------------------------------------------------------------------
 	
-	"#DOTA_RP_PLAYING_EVENT_MATCH_2020"	 "В лабиринте: {%param0%}, глубина {%param1%}"
-	"#DOTA_EventGameName_International2020"	"Лабиринт Аганима"
-	"#DOTA_EventGameDifficulty_International2020_0" 	"Ученик"
-	"#DOTA_EventGameDifficulty_International2020_1" 	"Чародей"
-	"#DOTA_EventGameDifficulty_International2020_2" 	"Заклинатель"
-	"#DOTA_EventGameDifficulty_International2020_3" 	"Великий маг"
-	//END TI10 EVENT GAME
+	
+		"dota_rp_playing_event_match_2020"	 "Лабиринт: %s1, глубина %s2"
+		"DOTA_EventGameName_International2020"	"Лабиринт Аганима"
+		"dota_eventgamedifficulty_international2020_0" 	"Ученик"
+		"dota_eventgamedifficulty_international2020_1" 	"Чародей"
+		"dota_eventgamedifficulty_international2020_2" 	"Заклинатель"
+		"dota_eventgamedifficulty_international2020_3" 	"Великий маг"
+		"dota_eventgamedifficulty_international2020_4" 	"Высший маг"
+		//END TI10 EVENT GAME
 
+		// PLUS GUILDS
+		"DOTA_GuildLeaderboardPerk_25_shards"							"Осколки за серебряный разряд гильдии"
+		"DOTA_GuildLeaderboardPerk_50_shards"							"Осколки за золотой разряд гильдии"
+		"DOTA_GuildLeaderboardPerk_75_shards"							"Осколки за платиновый разряд гильдии"
+		"DOTA_Plus_RewardLog_WeeklyGuild"								"Награда за процентиль гильдии ({s:guild_tier_name})"
+		"DOTA_GuildTier_0"												"Бронза"
+		"DOTA_GuildTier_1"												"Серебро"
+		"DOTA_GuildTier_2"												"Золото"
+		"DOTA_GuildTier_3"												"Платина"
+		"DOTA_Guilds_ClaimRewards"										"Получить награду недели"
+
+		"DOTA_Plus_RoleAssistant"			"Помощник по ролям"
+		"DOTA_Plus_RoleAssistant_Tooltip"	"Помощник по ролям Dota Plus отслеживает выбор героев в рейтинговых играх и определяет, кого сообщество выбирает на те или иные роли.<br><br>Сейчас отображаются данные по играм за период с {t:s:roles_start_timestamp} по {t:s:roles_end_timestamp}."  
+		"DOTA_Plus_RoleAssistant_Updated"	"Обновлено {t:s:roles_end_timestamp}"  
+
+		"DOTA_SeasonalTreasure"		"Сезонная сокровищница"
+		"DOTA_PlusSeason_SeasonalQuests"	"Сезонные задания"
+
+		"DOTA_PlusSeason_SeasonFall2020_Quests"					"Задания осени 2020"
+		"DOTA_PlusSeason_SeasonFall2020_Subtitle"				"Осенний сезон 2020 закончится в начале декабря 2020 года."
+		"DOTA_PlusSeason_SeasonFall2020_TreasureDescription"	"Доступно только в осеннем сезоне 2020, который закончится в начале декабря 2020 года."
+
+		"DOTA_MatchRewards"							"Награды за игру"
+		"DOTA_MatchRewards_YourShards"				"Ваши осколки"
+		"DOTA_MatchRewards_TotalShards"				"Всего осколков"
+		"DOTA_MatchRewards_TotalHeroXP"				"Всего опыта героя"
+		"DOTA_MatchRewards_TotalGuildPoints"		"Всего очков гильдии"
+		"DOTA_MatchRewards_GuildSoloMatch"			"Одиночная игра"
+		"DOTA_MatchRewards_GuildMembersInParty:p"	"В группе {d:party_member_count} член гильдии#|#В группе {d:party_member_count} члена гильдии#|#В группе {d:party_member_count} членов гильдии#|#В группе {d:party_member_count} членов гильдии#|#В группе {d:party_member_count} члена гильдии"
+		"DOTA_MatchRewards_ContractsCompleted"		"Выполнение контрактов"
+		"DOTA_MatchRewards_WinGuildPoints"			"Бонус за победу"
+		"DOTA_MatchRewards_GuildChallenge"			"Испытание"
+
+		"DOTA_MMR_Recalibration_Title" 			"Перекалибровка рейтинга"
+		"DOTA_MMR_Recalibration_Info" 			"Начните перекалибровку, и после 10 рейтинговых игр вы получите новый ранг. Ваш рейтинг будет скрыт до окончания калибровки. Перекалибровка доступна один раз и только до конца текущего сезона."
+		"DOTA_MMR_Recalibration_ButtonLabel" 	"Начать перекалибровку"
+		"DOTA_MMR_Recalibration_CountdownLabel"	"Перекалибровка рейтинга доступна через {t:d:t:recalibration_countdown_time}"
+		"DOTA_MMR_Recalibration_Consumed"		"Перекалибровка рейтинга уже использована"
+
+		"DOTA_MMR_Recalibration_Processing_Title"	"Запрос перекалибровки"
+		"DOTA_MMR_Recalibration_Processing_Text"	"Игровые серверы обрабатывают ваш запрос."
+
+		"DOTA_MMR_Recalibration_Error"				"Ошибка перекалибровки"
+		"DOTA_MMR_Recalibration_GenericError"		"Перекалибровка не удалась"
+
+		"DOTA_MMR_Recalibration_Success"			"Перекалибровка пройдена"
+		"DOTA_MMR_Recalibration_OK"					"Перекалибровка завершена"
+
+		"GuildsLeaderboard_LeaderboardColumn_Position"			"Место"
+		"GuildsLeaderboard_LeaderboardColumn_Points"			"Очки"
+		"GuildsLeaderboard_LeaderboardColumn_Percentile"		"Процентиль"
+		"GuildsLeaderboard_LeaderboardColumn_PercentileDelta"	"С прошлой недели"
+
+		"DOTA_UnshownRewardsMore"	"И ЕЩЁ {d:num_unshown_rewards}"
+		"DOTA_Item_Has_Gems"		"Имеет случайные самоцветы эффектов и цвета"
+		"DOTA_LearnViolator_New_Player" "Рекомендуется"
+
+		"DOTA_ManageProInfo_Header"	"Проф. информация и команды"
+		"DOTA_ManageProInfo_Button"	"Изменить проф. информацию и команды"
+
+		"DOTA_Announcer_Preview_Diretide2020_Killing_Spree_01" "Первая кровь!"
+		"DOTA_Announcer_Preview_Diretide2020_Killing_Spree_02" "Луне нет дела до смертей попрошаек."
+		"DOTA_Announcer_Preview_Diretide2020_Killing_Spree_03" "Ты — мрак этого леса."
+		"DOTA_Announcer_Preview_Diretide2020_Killing_Spree_04" "Пятеро вступили в бой. Пятеро не вернулись."
+		"DOTA_Announcer_Preview_Diretide2020_Killing_Spree_05" "Путь твой направлен во мрак."
+		"DOTA_Announcer_Preview_Diretide2020_Killing_Spree_06" "Осколки луны поют свою песнь."
+
+		"DOTA_Diretide2020_Event_Details_Play" "Играйте в сезонный режим"
+		"DOTA_Diretide2020_Event_Details_Battle" "Сражайтесь с командой противника и наберите как можно больше тянучек к концу раунда. Команда, одержавшая верх в трёх раундах, считается победителем."
+		"DOTA_Diretide2020_Event_Details_Treasure_Desc" "Обновлённая сокровищница, которая открывается ключом Diretide 2020 Key и содержит одно из 60 чудесных творений. Более того, каждый предмет можно купить, продать или заменить, не выходя из игры."
+		"DOTA_Diretide2020_Event_Details_EarnPoints" "Получайте очки и награды"
+		"DOTA_Diretide2020_Event_Details_EarnPoints_Desc" "Во время «Восстания Тьмы» игроки зарабатывают очки события как в обычных играх, так и в сезонном режиме. За каждые 100 очков вы получите одну из наград Рошана, включая сундуки Hallowed Chest of the Diretide."
+		"DOTA_Diretide2020_Event_Details_DailyWinBonus" "Ежедневный бонус"
+		"DOTA_Diretide2020_Event_Details_DailyWinBonus_Desc" "Каждый день получайте дополнительные 15 очков «Восстания Тьмы» за первую победу в особом режиме."
+		"DOTA_Diretide2020_Event_Details_ViewRewards" "Показать награды"
+		"DOTA_Diretide2020_Event_Details_LearnMore" "Подробнее на сайте"
+		"DOTA_Diretide2020_Event_Details_Title" "Да придёт Рошан!"
+		"DOTA_Immortal_Movie_Label"     "Эффект способности"
+		"DOTA_Emblem_Movie_Label"     "Эффект эмблемы"
+
+		"DOTA_Diretide_2020_Title"										"Hallowed Chest of the Diretide"
+		"DOTA_Diretide_2020_Title2"										"Сундук со всяким"
+		"DOTA_Diretide_2020_Description"								"Сундук не пустой. Вот это да."
+		"DOTA_Treasure_KeyPurchase"										"Купить ключ:"
+		"DOTA_TreasureKeysOwned"										"Ключей у вас:"
+
+		"DOTA_EventGameName_Diretide2020"								"Восстание Тьмы"
+		"DOTA_Diretide2020_Play_CandyHeader"							"СОБРАНО КОНФЕТ"
+
+		"DOTA_RP_PLAYING_DIRETIDE_MATCH"			"Восстание Тьмы: %s2 (раунд %s1)"
+		"DOTA_RP_PLAYING_DIRETIDE_MATCH_PREGAME"	"Восстание Тьмы: выбор героев"
+
+		// diretide post-game
+		"DOTA_Diretide2020_Title"										"Восстание Тьмы"
+		"dota_page_match_details_legend_candy_scored"					"ЗАСЧИТАНО"
+		"dota_page_match_details_legend_candy_scored_tooltip"			"Засчитано тянучек"
+		"dota_page_match_details_legend_candy_lost"						"ПОТЕРЯНО"
+		"dota_page_match_details_legend_candy_lost_tooltip"				"Потеряно тянучек"
+		
+		"DOTA_Diretide2020_PostGame_CandyScored"						"Засчитано тянучек"
+		"DOTA_Diretide2020_PostGame_ItemAwarded" 						"ПОЛУЧЕН ПРЕДМЕТ"
+		"DOTA_Diretide2020_Watch_Trailer"								"Смотреть трейлер"
+
+		"DOTA_Diretide2020_Cosmetics_Page_Title" 									"Восстание Тьмы: сезонные эффекты"
+		"DOTA_Diretide2020_Cosmetics_Page_Desc" 									"Играйте в обычных режимах или в «Восстание Тьмы», чтобы получить шанс разблокировать эти уникальные сезонные награды."
+		"DOTA_Diretide2020_Cosmetics_Equip_Effect" 									"Использовать"
+		"DOTA_Diretide2020_Cosmetics_Not_Owned" 									"Нет у вас"
+		"DOTA_Diretide2020_Cosmetics_Effect_1_Name" 									"Призрачный эффект курьера"
+		"DOTA_Diretide2020_Cosmetics_Effect_1_Desc" 									"Любой выбранный вами курьер будет иметь эксклюзивный призрачный эффект «Восстания Тьмы»."
+		"DOTA_Diretide2020_Cosmetics_Effect_2_Name" 									"Тыквенная голова"
+		"DOTA_Diretide2020_Cosmetics_Effect_2_Desc" 									"Полностью отдайтесь духу празднества, нацепив тыковку на свою маковку."
+		"DOTA_Diretide2020_Cosmetics_Effect_3_Name" 									"Шейдеры «Восстания Тьмы»"
+		"DOTA_Diretide2020_Cosmetics_Effect_3_Desc" 									"Используйте особый решётчатый шейдер «Восстания Тьмы» в обычных играх."
+
+		"DOTA_MoreInfo_Lore_Intro" "Леса содрогаются, ведь сезонный режим <font color='#F3F1B5'>«Восстание Тьмы»</font> возвращается! Зовите друзей собирать сладости в состязании до трёх побед, но не забывайте кормить Рошана Грявольскими тянучками<font color='#627c15'>™</font>, ведь его аппетит стал ещё чудовищнее."
+
+		// tutorial popup - used both in-game and in the dash
+		"diretide2020_game_info_header_how_to_play"						"ПРАВИЛА"
+		"diretide2020_game_info_brief_description"						"Сражайтесь с командой противника и наберите больше тянучек к концу раунда. Побеждает команда, одержавшая верх в трёх раундах."
+        "diretide2020_game_info_collect_candy_header"					"СОБИРАЙТЕ ТЯНУЧКИ"
+        "diretide2020_game_info_collect_candy"							"Время не ждёт! Убивайте крипов и получайте грявольские тянучки. Герои роняют свои конфеты после смерти, так что торопитесь!"
+        "diretide2020_game_info_score_candy_header"						"НАПОЛНИТЕ ВЕДРО"
+        "diretide2020_game_info_score_candy"							"Сбрасывайте горы тянучек в своё домашнее ведро, но бойтесь хитростей врага. Если они разрушат ваш конфетный колодец, то смогут обобрать вас дочиста!"
+        "diretide2020_game_info_feed_roshan_header"						"КОРМИТЕ ЧУДИЩЕ"
+        "diretide2020_game_info_feed_roshan"							"Не дайте Рошану голодать. Скормите ему тянучку, чтобы ненадолго успокоить, но берегитесь! Оставив Рошана голодным, вы навлечёте на себя смерть, а на союзников — жестокое проклятие."
+		"diretide2020_game_info_dont_show_again"						"Больше не показывать"
+		"diretide2020_game_daily_bonus_earned"							"Бонус дня получен"
+		"diretide2020_game_daily_bonus_timer"							"Сброс через {t:d:t:T:countdown_time}"
+		"diretide2020_game_daily_bonus_available"						"Бонус дня доступен"
+		"diretide2020_show_event_details"								"Подробности события"
+		
 	}
 }
 

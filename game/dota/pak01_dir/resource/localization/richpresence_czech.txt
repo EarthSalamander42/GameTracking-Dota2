@@ -215,5 +215,16 @@
 "#DOTA_Guilds_message_level"	"Guilda dosáhla %param0%. úrovně"
 "#DOTA_Guild_message_promoted"	"%target_persona% byl uživatelem %requester_persona% povýšen na „%guild_role%“"
 "#DOTA_Guild_message_demoted"	"%target_persona% byl uživatelem %requester_persona% degradován na „%guild_role%“"
+"#dota_rp_playing_event_match_2020"	"Labyrint: {%param0%} (hloubka: %param1%)"
+"#DOTA_EventGameName_International2020"	"Aghanimův labyrint"
+"#dota_eventgamedifficulty_international2020_0"	"Učedník"
+"#dota_eventgamedifficulty_international2020_1"	"Praktikant"
+"#dota_eventgamedifficulty_international2020_2"	"Čaroděj"
+"#dota_eventgamedifficulty_international2020_3"	"Velký Magus"
+"#dota_eventgamedifficulty_international2020_4"	"Vrcholný mág"
+"#DOTA_EventGameName_Diretide2020"	"Diretide"
+"#DOTA_RP_PLAYING_DIRETIDE_MATCH"	"Diretide: %param0%. kolo jako {%param1%}"
+"#npc_dota_hero_mars"	"Mars"
+"#DOTA_RP_PLAYING_DIRETIDE_MATCH_PREGAME"	"Diretide: Výběr hrdiny"
 }
 }

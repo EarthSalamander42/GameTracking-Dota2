@@ -161,6 +161,23 @@ function CMapEncounter:SelectAscensionAbilities( )
 	self.ClientData[ "total_difficulty" ] = 0
 
 	if self:GetRoom():GetType() ~= ROOM_TYPE_ENEMY then
+		if self:GetRoom():GetType() == ROOM_TYPE_BOSS then
+			if GameRules.Aghanim.bIsInTournamentMode and #TRIALS_BOSS_ASCENSION_ABILITIES > 0 then
+				for i=1,#TRIALS_BOSS_ASCENSION_ABILITIES do
+					print( "Encounter " .. self.szEncounterName .. " added trial ascension ability " .. TRIALS_BOSS_ASCENSION_ABILITIES[i] )
+					table.insert( self.AscensionAbilities, TRIALS_BOSS_ASCENSION_ABILITIES[i] )
+					self.ClientData[ "ascension_abilities" ][ tostring(i) ] = TRIALS_BOSS_ASCENSION_ABILITIES[i]
+				end
+			else
+
+				if GameRules.Aghanim:GetAscensionLevel() == AGHANIM_ASCENSION_APEX_MAGE then
+					local nIndex = self:RoomRandomInt( 1, #APEX_BOSS_ASCENSION_ABILITIES )
+					print( "Encounter " .. self.szEncounterName .. " added boss ascension ability " .. APEX_BOSS_ASCENSION_ABILITIES[ nIndex ] )
+					table.insert( self.AscensionAbilities, APEX_BOSS_ASCENSION_ABILITIES[ nIndex ] )
+					self.ClientData[ "ascension_abilities" ][ 1 ] = APEX_BOSS_ASCENSION_ABILITIES[ nIndex ]
+				end
+			end
+		end
 		return
 	end
 
@@ -175,42 +192,60 @@ function CMapEncounter:SelectAscensionAbilities( )
 
 	local vecAbilityOptions = {}
 	local vecEliteAbilityOptions = {}
-	for abilityName,hPossibleAbility in pairs( ASCENSION_ABILITIES ) do
-		if hPossibleAbility.vecBlacklistedEncounters ~= nil then
-			for i=1,#hPossibleAbility.vecBlacklistedEncounters do
-				local szBlacklisted = hPossibleAbility.vecBlacklistedEncounters[i]
-				if szBlacklisted == self.szEncounterName then
-					--print( "Encounter " .. self.szEncounterName .. " blacklisted " .. abilityName )
+
+	if GameRules.Aghanim.bIsInTournamentMode and #TRIALS_ASCENSION_ABILITIES > 0 then
+		print( "Using trials forced ascension abilities" )
+		for _,szTrialAbilityName in pairs( TRIALS_ASCENSION_ABILITIES ) do
+			for abilityName,hPossibleAbility in pairs( ASCENSION_ABILITIES ) do
+				if abilityName == szTrialAbilityName then
+					if hPossibleAbility.bEliteOnly == true then
+						table.insert( vecEliteAbilityOptions, abilityName )
+					else
+						table.insert( vecAbilityOptions, abilityName )
+					end
+				end	
+			end
+		end
+	else
+		for abilityName,hPossibleAbility in pairs( ASCENSION_ABILITIES ) do
+			if hPossibleAbility.vecBlacklistedEncounters ~= nil then
+				for i=1,#hPossibleAbility.vecBlacklistedEncounters do
+					local szBlacklisted = hPossibleAbility.vecBlacklistedEncounters[i]
+					if szBlacklisted == self.szEncounterName then
+						--print( "Encounter " .. self.szEncounterName .. " blacklisted " .. abilityName )
+						goto continue
+					end
+				end
+			end
+
+			if hPossibleAbility.nRestrictToAct ~= nil then 
+				if hPossibleAbility.nRestrictToAct ~= self:GetRoom():GetAct() then
+					goto continue
+				end
+
+				if hPossibleAbility.szRequiredBoss ~= nil and hPossibleAbility.szRequiredBoss ~= GameRules.Aghanim:GetBossUnitForAct( hPossibleAbility.nRestrictToAct ) then
 					goto continue
 				end
 			end
-		end
 
-		if hPossibleAbility.nRestrictToAct ~= nil then 
-			if hPossibleAbility.nRestrictToAct ~= self:GetRoom():GetAct() then
+			if hPossibleAbility.nMinAscensionLevel ~= nil and hPossibleAbility.nMinAscensionLevel > nAscensionLevel then
 				goto continue
 			end
 
-			if hPossibleAbility.szRequiredBoss ~= nil and hPossibleAbility.szRequiredBoss ~= GameRules.Aghanim:GetBossUnitForAct( hPossibleAbility.nRestrictToAct ) then
+			if hPossibleAbility.nMaxAscensionLevel ~= nil and hPossibleAbility.nMaxAscensionLevel < nAscensionLevel then
 				goto continue
 			end
-		end
 
-		if hPossibleAbility.nMinAscensionLevel ~= nil and hPossibleAbility.nMinAscensionLevel > nAscensionLevel then
-			goto continue
+			if hPossibleAbility.bEliteOnly == true then
+				table.insert( vecEliteAbilityOptions, abilityName )
+			else
+				table.insert( vecAbilityOptions, abilityName )
+			end
+			::continue::
 		end
-
-		if hPossibleAbility.nMaxAscensionLevel ~= nil and hPossibleAbility.nMaxAscensionLevel < nAscensionLevel then
-			goto continue
-		end
-
-		if hPossibleAbility.bEliteOnly == true then
-			table.insert( vecEliteAbilityOptions, abilityName )
-		else
-			table.insert( vecAbilityOptions, abilityName )
-		end
-		::continue::
 	end
+
+	
 
 	-- Force specific abilities
 	local nStart = 1
@@ -1428,12 +1463,15 @@ function CMapEncounter:AddAscensionAbilities( hEnemyCreature )
 
 		-- Bosses do not use ascension modifiers, but do want general ascension scaling for their minions.
 		if self.hRoom:GetType() == ROOM_TYPE_BOSS then
-			if nAbilityLevel > 0 then
-				hEnemyCreature:CreatureLevelUp( nAbilityLevel )
+			if ( GameRules.Aghanim.bIsInTournamentMode == false or #TRIALS_BOSS_ASCENSION_ABILITIES == 0 ) and GameRules.Aghanim:GetAscensionLevel() < AGHANIM_ASCENSION_APEX_MAGE then
+				if nAbilityLevel > 0 then
+					hEnemyCreature:CreatureLevelUp( nAbilityLevel )
+				end
+				return
 			end
-			return
 		end
 	end
+	
 
 	for i=1,#self.AscensionAbilities do
 
@@ -1456,7 +1494,7 @@ function CMapEncounter:AddAscensionAbilities( hEnemyCreature )
 			goto continue
 		end
 
-		--print( "Ascension adding ability " .. self.AscensionAbilities[i] .. " to unit " .. hEnemyCreature:GetUnitName() )
+		print( "Ascension adding ability " .. self.AscensionAbilities[i] .. " to unit " .. hEnemyCreature:GetUnitName() )
 		hAbility = hEnemyCreature:AddAbility( self.AscensionAbilities[i] )
 		hAbility:UpgradeAbility( true )
 
@@ -2210,7 +2248,22 @@ function CMapEncounter:ResetHeroState()
 			local nFXIndex = ParticleManager:CreateParticle( "particles/items2_fx/refresher.vpcf", PATTACH_CUSTOMORIGIN, hPlayerHero )
 			ParticleManager:SetParticleControlEnt( nFXIndex, 0, hPlayerHero, PATTACH_POINT_FOLLOW, "attach_hitloc", hPlayerHero:GetAbsOrigin(), true )
 			ParticleManager:ReleaseParticleIndex( nFXIndex )
-			
+
+			-- Hack to cap Big Game Hunter gains per encounter
+			if hPlayerHero:GetUnitName() == "npc_dota_hero_sniper" then
+				printf( "Limiter - looking at Sniper hPlayerHero" )
+				local hBigGameHunterAbility = hPlayerHero:FindAbilityByName( "aghsfort_special_sniper_assassinate_killshot" )
+				if hBigGameHunterAbility ~= nil and hBigGameHunterAbility:GetLevel() > 0 then
+					printf( "found Big Game Hunter ability" )
+					local hLimiterBuff = hPlayerHero:FindModifierByName( "modifier_sniper_big_game_hunter_limiter" )
+					if hLimiterBuff == nil then
+						hLimiterBuff = hPlayerHero:AddNewModifier( hPlayerHero, hBigGameHunterAbility, "modifier_sniper_big_game_hunter_limiter", { duration = -1 } )
+					end
+					local nStacks = hBigGameHunterAbility:GetSpecialValueFor( "value2" )
+					--printf( "reset limiter buff to %d stacks," nStacks )
+					hLimiterBuff:SetStackCount( nStacks )
+				end
+			end
 		end	
 	end
 end
@@ -2689,6 +2742,29 @@ function CMapEncounter:SetupBristlebackShop( bRepopulateNeutralItems )
 
 			table.insert( GameRules.Aghanim.BristlebackItems, szItemName )
 			GameRules.Aghanim:MarkNeutralItemAsDropped( szItemName )
+		end
+
+		for nPlayerID = 0, AGHANIM_PLAYERS - 1 do 
+			local hPlayerHero = PlayerResource:GetSelectedHeroEntity( nPlayerID )
+			if hPlayerHero then
+				local PurchasableShards = PURCHASABLE_SHARDS[ hPlayerHero:GetUnitName() ]
+				if PurchasableShards then
+					local PossibleShards = shallowcopy( PurchasableShards )
+					local nRemainingShards = 3
+					while nRemainingShards > 0 do
+						local nShardIndex = self:RoomRandomInt( 1, #PossibleShards )
+						local szShardName = PossibleShards[ nShardIndex ]
+						if szShardName then
+							GameRules:GetGameModeEntity():AddItemToCustomShop( szShardName, "boss_shop", hPlayerHero:GetUnitName() )
+							GameRules:IncreaseItemStock( DOTA_TEAM_GOODGUYS, szShardName, 1, -1 )
+							table.remove( PossibleShards, nShardIndex )
+							table.insert( GameRules.Aghanim.BristlebackItems, szShardName )
+						end
+
+						nRemainingShards = nRemainingShards - 1
+					end
+				end 
+			end
 		end
 	end
 

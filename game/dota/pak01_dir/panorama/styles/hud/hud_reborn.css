@@ -1073,6 +1073,11 @@ DOTAHud.IsBeforeGameplay.HUDFlipped #minimap_container
 	background-image: url("s2r://panorama/images/hud/reborn/streaks/killstreak_style2_portrait_psd.vtex");
 }
 
+.DiretideStreak #PortraitStreakParticleBorder
+{
+	background-image: url("s2r://panorama/images/hud/reborn/streaks/killstreak_style4_portrait_psd.vtex");
+}
+
 .StreakLv1  #PortraitStreakParticleBorder,
 .StreakLv2  #PortraitStreakParticleBorder{
 	opacity: 1;
@@ -2327,6 +2332,11 @@ DOTAHud.IsBeforeGameplay.HUDFlipped #minimap_container
     font-size: 14px;
 }
 
+#SpectatorToastManager.ShopOpen
+{
+	visibility: collapse;
+}
+
 #SpectatorToastManager
 {
 	margin-top: 480px;
@@ -2951,7 +2961,7 @@ DOTAHud.IsBeforeGameplay.HUDFlipped #minimap_container
 	margin-right: 0px;
 	margin-bottom: -6px;
 	text-shadow: 0px 0px 3px 4 #000000;
-    font-family: RadianceM;
+    font-family: monospaceNumbersFont;
 	z-index:2;
 }
 
@@ -2972,7 +2982,7 @@ DOTAHud.IsBeforeGameplay.HUDFlipped #minimap_container
 	margin-right: 0px;
 	margin-bottom: -6px;
 	text-shadow: 0px 0px 3px 4 #000000;
-    font-family: RadianceM;
+    font-family: monospaceNumbersFont;
 	z-index:2;
 }
 

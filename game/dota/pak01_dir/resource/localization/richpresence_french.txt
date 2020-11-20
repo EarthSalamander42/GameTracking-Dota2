@@ -215,5 +215,16 @@
 "#DOTA_Guilds_message_level"	"La guilde a atteint le niveau %param0%"
 "#DOTA_Guild_message_promoted"	"%target_persona% a été promu(e) %guild_role% par %requester_persona%."
 "#DOTA_Guild_message_demoted"	"%target_persona% a été rétrogradé(e) au rang « %guild_role% » par %requester_persona%."
+"#dota_rp_playing_event_match_2020"	"Labyrinthe : {%param0%} (niveau de profondeur : %param1%)"
+"#DOTA_EventGameName_International2020"	"Labyrinthe d'Aghanim"
+"#dota_eventgamedifficulty_international2020_0"	"novice"
+"#dota_eventgamedifficulty_international2020_1"	"mage"
+"#dota_eventgamedifficulty_international2020_2"	"thaumaturge"
+"#dota_eventgamedifficulty_international2020_3"	"chamane"
+"#dota_eventgamedifficulty_international2020_4"	"Mage suprême"
+"#DOTA_EventGameName_Diretide2020"	"Diretide"
+"#DOTA_RP_PLAYING_DIRETIDE_MATCH"	"Diretide : manche %param0% avec {%param1%}"
+"#npc_dota_hero_mars"	"Mars"
+"#DOTA_RP_PLAYING_DIRETIDE_MATCH_PREGAME"	"Diretide : phase de sélection"
 }
 }

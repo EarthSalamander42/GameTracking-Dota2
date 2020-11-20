@@ -591,7 +591,7 @@ DOTAAbilityPanel.Hidden
 	margin-right: 3px;
 	margin-bottom: -3px;
 	text-shadow: 0px 0px 3px 4 #000000;
-    font-family: RadianceM;
+    font-family: monospaceNumbersFont;
 }
 
 .BackpackSlot #ItemCharges
@@ -668,7 +668,7 @@ DOTAAbilityPanel.Hidden
 	horizontal-align: left;
     font-weight: bold;
     margin-left: 3px;
-    font-family: RadianceM;
+    font-family: monospaceNumbersFont;
 }
 
 .show_item_alt_charges #ItemAltCharges
@@ -2636,18 +2636,6 @@ DOTAAbilityPanel.Hidden
 	box-shadow: none;
 	background-color: none;
 	background-image: none;
-}
-
-
-ClientUIDialogPanel .InventoryItem.BackpackSlot #ItemImage
-{
-	margin: 0px;
-}
-
-ClientUIDialogPanel .InventoryItem.BackpackSlot
-{
-	margin: 0px;
-	height: 34px;
 }
 
 .Reborn .TopBarIndicator #AbilityBevel

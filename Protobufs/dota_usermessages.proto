@@ -145,6 +145,10 @@ enum EDotaUserMessages {
 	DOTA_UM_HotPotato_Exploded = 602;
 	DOTA_UM_WK_Arcana_Progress = 603;
 	DOTA_UM_GuildChallenge_Progress = 604;
+	DOTA_UM_WRArcanaProgress = 605;
+	DOTA_UM_WRArcanaSummary = 606;
+	DOTA_UM_EmptyItemSlotAlert = 607;
+	DOTA_UM_PingConfirmation = 608;
 }
 
 enum DOTA_CHAT_MESSAGE {
@@ -249,6 +253,9 @@ enum DOTA_CHAT_MESSAGE {
 	CHAT_MESSAGE_ITEM_PLACED_IN_NEUTRAL_STASH = 107;
 	CHAT_MESSAGE_HERO_CHOICE_INVALID = 108;
 	CHAT_MESSAGE_BOUNTY = 109;
+	CHAT_MESSAGE_ABILITY_DRAFT_START = 110;
+	CHAT_MESSAGE_HERO_FOUND_CANDY = 111;
+	CHAT_MESSAGE_ABILITY_DRAFT_RANDOMED = 112;
 }
 
 enum DOTA_NO_BATTLE_POINTS_REASONS {
@@ -324,6 +331,7 @@ enum DOTA_OVERHEAD_ALERT {
 	OVERHEAD_ALERT_DISABLE_RESIST = 19;
 	OVERHEAD_ALERT_DEATH = 20;
 	OVERHEAD_ALERT_BLOCKED = 21;
+	OVERHEAD_ALERT_ITEM_RECEIVED = 22;
 }
 
 enum DOTA_ROSHAN_PHASE {
@@ -487,6 +495,13 @@ message CDOTAUserMsg_GlobalLightDirection {
 message CDOTAUserMsg_LocationPing {
 	optional uint32 player_id = 1;
 	optional .CDOTAMsg_LocationPing location_ping = 2;
+}
+
+message CDOTAUserMsg_PingConfirmation {
+	optional uint32 player_id_of_original_pinger = 1;
+	optional uint32 entity_index = 2;
+	optional uint32 icon_type = 3;
+	optional .CMsgVector location = 4;
 }
 
 message CDOTAUserMsg_ItemAlert {
@@ -1298,6 +1313,7 @@ message CDOTAUserMsg_HeroRelicProgress {
 message CDOTAUserMsg_AbilityDraftRequestAbility {
 	optional uint32 player_id = 1;
 	optional uint32 requested_ability_id = 2;
+	optional bool ctrl_is_down = 3;
 }
 
 message CDOTAUserMsg_DamageReport {
@@ -1348,6 +1364,7 @@ message CDOTAUserMsg_OMArcanaCombo {
 message CDOTAUserMsg_HighFiveCompleted {
 	optional uint32 player_id_1 = 1;
 	optional uint32 player_id_2 = 2;
+	optional bool special_high_five = 3;
 }
 
 message CDOTAUserMsg_HighFiveLeftHanging {
@@ -1468,4 +1485,32 @@ message CDOTAUserMsg_GuildChallenge_Progress {
 	optional .CDOTAUserMsg_GuildChallenge_Progress.EChallengeType challenge_type = 5 [default = k_EChallengeType_Invalid];
 	optional uint32 challenge_progress_at_start = 7;
 	optional bool complete = 8;
+}
+
+message CDOTAUserMsg_WRArcanaProgress {
+	optional uint32 ehandle = 1;
+	optional uint32 target_ehandle = 2;
+	optional uint32 arrows_landed = 3;
+	optional uint32 damage_dealt = 4;
+	optional uint32 target_hp = 5;
+	optional uint32 target_max_hp = 6;
+	optional uint32 arcana_level = 7;
+}
+
+message CDOTAUserMsg_WRArcanaSummary {
+	optional uint32 ehandle = 1;
+	optional uint32 target_ehandle = 2;
+	optional uint32 arrows_landed = 3;
+	optional uint32 damage_dealt = 4;
+	optional uint32 target_hp = 5;
+	optional uint32 target_max_hp = 6;
+	optional uint32 arcana_level = 7;
+	optional bool success = 8;
+}
+
+message CDOTAUserMsg_EmptyItemSlotAlert {
+	optional int32 source_player_id = 1;
+	optional int32 target_player_id = 2;
+	optional int32 slot_index = 3;
+	optional int32 cooldown_seconds = 4;
 }

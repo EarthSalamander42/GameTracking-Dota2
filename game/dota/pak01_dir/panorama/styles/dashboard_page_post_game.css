@@ -19,6 +19,7 @@
 @import url("file://{resources}/styles/dashboard_page_post_game_underhollow.css");
 @import url("file://{resources}/styles/dashboard_page_post_game_frostivus_2018.css");
 @import url("file://{resources}/styles/dashboard_page_post_game_jungle_spirits_2019.css");
+@import url("file://{resources}/styles/dashboard_page_post_game_diretide_2020.css");
 
 
 DOTAPostGame
@@ -224,12 +225,16 @@ DOTAPostGame.MatchDataLoaded #ContainerLoaded
 	background-position: center;
 	background-repeat: no-repeat;
 
+	transition-property: wash-color, brightness;
+	transition-duration: 0.2s;
+
 	wash-color: #768e8d;
 }
 
 .ProgressScreenButton:hover
 {
-	wash-color: #fff;
+	//wash-color: #ffffff88;
+	brightness: 2.2;
 }
 
 .ProgressScreenButton:active
@@ -237,8 +242,24 @@ DOTAPostGame.MatchDataLoaded #ContainerLoaded
 	wash-color: #ccc;
 }
 
+.ProgressScreenButton.DiretideProgress:hover
+{
+	brightness: 1.8;
+}	
+
+.ProgressScreenButton.DiretideProgress:active
+{
+	wash-color: #b0d465;
+}
+
+.ProgressScreenButton.DiretideProgress
+{
+	wash-color: #b0d465;
+}
+
 .ProgressScreenButton.HeroBadgeProgress		{ background-image: url("s2r://panorama/images/control_icons/hero_progress_icon_png.vtex"); }
 .ProgressScreenButton.HeroRelicsProgress	{ background-image: url("s2r://panorama/images/control_icons/relic_progress_icon_png.vtex"); }
+.ProgressScreenButton.MatchRewardsProgress	{ background-image: url("s2r://panorama/images/control_icons/match_progress_icon_psd.vtex"); }
 .ProgressScreenButton.CavernsProgress		{ background-image: url("s2r://panorama/images/control_icons/bp2019_jungle_icon_png.vtex"); }
 .ProgressScreenButton.MVPProgress		{ background-image: url("s2r://panorama/images/control_icons/bp2019_mvp_icon_png.vtex"); }
 .ProgressScreenButton.BattlePassProgress	{ background-image: url("s2r://panorama/images/control_icons/battlepass_logo_grayscale_small_png.vtex"); }
@@ -252,6 +273,7 @@ DOTAPostGame.MatchDataLoaded #ContainerLoaded
 	background-image: url("s2r://panorama/images/control_icons/bp2020_cavern_icon_png.vtex");
 }
 .ProgressScreenButton.GauntletProgress		{ background-image: url("s2r://panorama/images/control_icons/bp2020_gauntlet_icon_png.vtex"); }
+.ProgressScreenButton.DiretideProgress		{ background-image: url("s2r://panorama/images/events/diretide/2020/icon_pumpkin_psd.vtex"); background-size: 100%; }
 
 
 /* Details Selector (tabs) */
@@ -1677,15 +1699,6 @@ DOTAPostGame.ReplayExistenceRequestedNotification #ReplayExistenceRequestedNotif
 	visibility: collapse;
 }
 .IsWeekendTourneyMatch #WeekendTourneyPanel
-{
-	visibility: visible;
-}
-
-#ReplayVoteForMVP
-{
-	visibility: collapse;
-}
-.MVPEnabled #ReplayVoteForMVP
 {
 	visibility: visible;
 }
@@ -4696,9 +4709,7 @@ DOTAPostGameOverviewHero.CanSuggestInvite .OverviewHeroInviteButton
 
 /* End Plus Per Player Checkboxes */
 
-/* Damage Details Tab */
-
-#DetailsDamage
+#DetailsBreakdowns
 {
 	flow-children: right;
 	width: fit-children;

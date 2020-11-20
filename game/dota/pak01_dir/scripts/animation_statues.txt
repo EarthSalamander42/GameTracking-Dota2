@@ -2363,6 +2363,25 @@
 			"hh_teleport_end_effigy"	"harpoon"
 			"hh_taunt_money_maker"		"shake_moneymaker;harpoon"
 		}
+		"models/heroes/pudge_cute/pudge_cute.vmdl"
+		{
+			"pudge_cute_idle_effigy"	"1"
+			"pudge_cute_debut_effigy"	"1"
+			"pudge_cute_idle_rare_effigy"	"1"
+			"pudge_cute_run_effigy"	"1"
+			"pudge_cute_run_alt_effigy"	"1"
+			"pudge_cute_attack1_effigy"	"1"
+			"pudge_cute_attack2_effigy"	"1"
+			"pudge_cute_attack3_effigy"	"1"
+			"pudge_cute_meathook_start_effigy"	"1"
+			"pudge_cute_cast2_rot_effigy"	"1"
+			"pudge_cute_dismember_effigy"	"1"
+			"pudge_cute_flail_effigy"	"1"
+			"pudge_cute_stun_effigy"	"1"
+			"pudge_cute_generic_channel_effigy"	"1"
+			"pudge_cute_victory_effigy"	"1"
+			"pudge_cute_defeat_effigy"	"1"	
+		}
 		"models/items/pudge/arcana/pudge_arcana_base.vmdl"
 		{
 			"hh_attack01_effigy"	"1"
@@ -2426,6 +2445,24 @@
 			"queenofpain_stun"          "1"
 			"queenofpain_flail"          "1"
 			"spawn"          "1"
+		}
+		"models/items/queenofpain/queenofpain_arcana/queenofpain_arcana.vmdl"
+		{
+			"qop_arc_run_alt_b_effigy"		"arcana"
+			"qop_arc_shadowstrike_effigy"		"arcana"
+			"qop_arc_scream_effigy"			"arcana"
+			"qop_arc_sonicwave_effigy"		"arcana"
+			"qop_arc_forcestaff_end_effigy"		"arcana"
+			"qop_arc_flail_effigy"			"arcana"
+			"qop_arc_disabled_effigy"		"arcana"
+			"qop_arc_generic_channel_effigy"	"arcana"
+			"qop_arc_run_haste_effigy"		"arcana"
+			"qop_arc_idle_rare_effigy"		"arcana"
+			"qop_arc_arcana_celebration_effigy"	"arcana"
+			"qop_arc_teleport_capture_effigy"	"arcana"
+			"qop_arc_attack_effigy"			"arcana"
+			"qop_arc_attack_whip_b_effigy"		"arcana"
+			"qop_arc_attack_whip_c_effigy"		"arcana"
 		}
 		"models/heroes/rattletrap/rattletrap.vmdl"
 		{
@@ -3355,6 +3392,8 @@
 			"overpower_attack5"		"1"
 			"overpower_attack6"		"1"
 			"ti9_ursa_taunt_effigy"		"average_bear"
+			"ti10_loadout_alt_effigy"	"ti10_cub"
+			"ti10_loadout_spawn_effigy"	"ti10_cub"
 		}
 		"models/heroes/vengeful/vengeful.vmdl"
 		{
@@ -3517,6 +3556,24 @@
 			"flail"          "1"
 			"spawn"          "1"
 			"taunt_gesture_blowkiss_effigy"		"blowkiss_gesture"
+		}
+		"models/items/windrunner/windrunner_arcana/wr_arcana_base.vmdl"
+		{
+			"wr_arc_windrun_effigy"		"arcana"
+			"wr_arc_loadout_effigy"		"arcana"
+			"wr_arc_runN_alt_effigy"	"arcana"
+			"wr_arc_cast1_shackleshot_effigy"	"arcana"
+			"wr_arc_cast2_powershot_effigy"		"arcana"
+			"wr_arc_forcestaff_effigy"	"arcana"
+			"wr_arc_teleport_effigy"	"arcana"
+			"wr_arc_attack_effigy"	"arcana"
+			"wr_arc_taunt_gesture_blowkiss_effigy"	"arcana;blowkiss_gesture"
+			"wr_arc_generic_channel_effigy"	"arcana"
+			"wr_arc_stun_effigy"	"arcana"
+			"wr_arc_flail_effigy"	"arcana"
+			"wr_arc_idle_alt_effigy"	"arcana"
+			"wr_arc_victory_effigy"	"arcana"
+			"wr_arc_defeat_effigy"	"arcana"
 		}
 		"models/heroes/winterwyvern/winterwyvern.vmdl"
 		{

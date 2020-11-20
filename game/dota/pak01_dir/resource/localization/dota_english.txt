@@ -375,9 +375,36 @@
 		"dota_chatwheel_label_AnnoyedPenguin"			"Annoyed Penguin"
 		"dota_chatwheel_label_FastPenguin"				"Fast Penguin"
 		"dota_chatwheel_label_newbloom_firecrackers"	"Firecrackers!"
-		"dota_chatwheel_label_Celebratory_Gong"		"Celebratory Gong"
+		"dota_chatwheel_label_Celebratory_Gong"			"Celebratory Gong"
+		"dota_chatwheel_label_Black_Cat"				"Black Cat"
+		"dota_chatwheel_label_Ghost"					"Ghost"
+		"dota_chatwheel_label_Nightmare"				"Nightmare"
+		"dota_chatwheel_label_Scream"					"Scream"
+		"dota_chatwheel_label_Stabby"					"Stabby"
+		"dota_chatwheel_label_Laugh"					"Laugh"
 
+		"dota_chatwheel_label_Candy_From_A_Baby"	"Like Stealing Candy"
+		"dota_chatwheel_message_Candy_From_A_Baby" "Like stealing candy from a baby. A no longer living baby."
+		
+		"dota_chatwheel_label_Moon_Drives_You"	"The Moon Drives You"
+		"dota_chatwheel_message_Moon_Drives_You"	"The moon drives you to delirium!"
+		
+		"dota_chatwheel_label_One_by_One"	"One By One"
+		"dota_chatwheel_message_One_by_One"	"One by one they fall!"
 
+		"dota_chatwheel_label_Celebrate"	"Celebrate!"
+		"dota_chatwheel_message_Celebrate"	"Celebrate in the mad moon light!"
+
+		"dota_chatwheel_label_Something_Dire"	"Something Dire..."
+		"dota_chatwheel_message_Something_Dire"	"Something dire this way comes."
+
+		"dota_chatwheel_label_Woods_Begin"	"The Woods Begin"
+		"dota_chatwheel_message_Woods_Begin"	"The woods begin to stir!"
+
+		"dota_chatwheel_label_Reap_Your_Harvest"	"Reap Your Harvest"
+		"dota_chatwheel_message_Reap_Your_Harvest"	"Reap your harvest and protect your soul!"
+
+		
 		"dota_chatwheel_header_positioning"			"Positioning"
 		"dota_chatwheel_header_status"				"Status"
 		"dota_chatwheel_header_enemy"				"Enemy"
@@ -416,6 +443,10 @@
 		"dota_chatwheel_header_international2019_legacy_2018"		"International 2019 - Reruns"
 		"dota_chatwheel_header_international2019_legacy_2018_desc"	"Enjoy your favorite sounds from The International 2018 Battle Pass! Available exclusively to owners of The International 2019 Battle Pass."
 
+
+		"dota_chatwheel_header_guilds"				"Guilds"
+		"dota_chatwheel_header_guilds_desc"			"Unlocked via the weekly guild leaderboards."
+		"dota_chatwheel_header_guilds_link"			"View Guild"
 
 
 		"dota_chatwheel_header_international2019_casters_korean"	"International 2019 - Korean Casters Pack"
@@ -595,6 +626,13 @@
 		"dota_chatwheel_label_boing"				"Boing"
 		"dota_chatwheel_message_boing"				"Boing"
 
+		"dota_chatwheel_message_Black_Cat"			"Meow!!"
+		"dota_chatwheel_message_Ghost"				"Boooooo!"
+		"dota_chatwheel_message_Nightmare"			"*Nightmare Noises*"
+		"dota_chatwheel_message_Scream"				"Eeeeeeek!!"
+		"dota_chatwheel_message_Laugh"				"Mwahahahaha!"
+		"dota_chatwheel_message_Stabby"				"*Violin Stabs*"
+
 
 		"DOTA_Item_WillPurchaseAlert"					"I will purchase %s1 <font color='%s2'>%s3</font>"
 		"DOTA_Item_WillPurchaseAlert_GoldRemaining"		"I will purchase %s1 <font color='%s2'>%s3</font> ( %s4 gold away )"
@@ -689,6 +727,10 @@
 		"DOTA_EmptyTeleport_Alert_Ally_Ready"		"Ally <font color='%s3'>%s4</font> %s2 Not carrying a <font color='#FFFFFF'>Town Portal Scroll</font>"
 		"DOTA_EmptyTeleport_Alert_Ally_OnCooldown"	"Ally <font color='%s3'>%s4</font> %s2 Not carrying a <font color='#FFFFFF'>Town Portal Scroll</font> ( on cooldown for %s1 seconds )"
 		"DOTA_EmptyTeleport_Alert_Enemy_Ready"		"Enemy <font color='%s3'>%s4</font> %s2 Not carrying a <font color='#FFFFFF'>Town Portal Scroll</font>"
+
+		"DOTA_EmptyNeutralItem_Alert_Self"		"I do not have a <font color='#FFFFFF'>Neutral Item</font> equipped."
+		"DOTA_EmptyNeutralItem_Alert_Ally"		"Ally <font color='%s3'>%s4</font> %s2 does not have a <font color='#FFFFFF'>Neutral Item</font> equipped."
+		"DOTA_EmptyNeutralItem_Alert_Enemy"		"Enemy <font color='%s3'>%s4</font> %s2 does not have a <font color='#FFFFFF'>Neutral Item</font> equipped."
 
 		"DOTA_HPMana_Percentage"	"%s1%"
 		"DOTA_HPMana_Alert_Self"	"I have <font color='#00FF00'>%s3 HP</font> and <font color='#257FF6'>%s4 Mana</font>"
@@ -969,6 +1011,12 @@
 		"DOTA_Chat_RiverPainted6"		"%s1 has painted the river with River vial: Potion!"
 		"DOTA_Chat_RiverPainted7"		"%s1 has painted the river with River vial: Blood!"
 		"DOTA_Chat_RoshanWantsCandy"	"Roshan wants <font color='#7FFF00'>CANDY</font> from %s1!"
+		"DOTA_Chat_CandyObtained2"		"%s1 got some <font color='#E980E9'>Diretide Points</font> for getting First Blood!"
+		"DOTA_Chat_CandyObtained3"		"%s1 got some <font color='#E980E9'>Diretide Points</font> for killing Roshan!"
+		"DOTA_Chat_CandyObtained4"		"%s1 got some <font color='#E980E9'>Diretide Points</font> for destroying the first tower!"
+		"DOTA_Chat_CandyObtained5"		"%s1 got some <font color='#E980E9'>Diretide Points</font> for destroying a Scarecrow Stash!"
+		"DOTA_Chat_CandyObtained6"		"%s1 got some <font color='#E980E9'>Diretide Points</font> for destroying a Candy Well!"
+		"DOTA_Chat_CandyObtained7"		"%s1 got some <font color='#E980E9'>Diretide Points</font> for stealing a piece of Taffy!"
 
 		"DOTA_Chat_ShrineKilled"		"Shrine Killed"
 
@@ -2092,7 +2140,7 @@ As each stone's cultural influence spread, it eventually came in conflict with t
 
 		"random"							"Random"
 		"repick"							"REPICK"
-		"DOTA_Hud_Pregame_Random_Tooltip"	"Randomly picks from a pool of heros you frequently play. Grants a free Faerie Fire and Mango."
+		"DOTA_Hud_Pregame_Random_Tooltip"	"Randomly picks from a pool of heroes you frequently play. Grants a free Faerie Fire and Mango."
 		
 		// Other Names
 		"ent_dota_halloffame"							"Aegis of Champions"
@@ -2469,7 +2517,7 @@ As each stone's cultural influence spread, it eventually came in conflict with t
 		"DOTA_Item_Build_Early_Game"			"Early Game"
 		"DOTA_Item_Build_Early_Game_Secondary"	"Early Game (Bear)"
 		"DOTA_Item_Build_Core_Items"			"Core Items"
-		"DOTA_Item_Build_Mid_Items"			"Mid Game"
+		"DOTA_Item_Build_Mid_Items"				"Mid Game"
 		"DOTA_Item_Build_Late_Items"			"Late Game"
 		"DOTA_Item_Build_Other_Items"			"Popular Items"
 		"DOTA_Item_Build_UntitledCategory"		"Untitled"
@@ -3437,15 +3485,15 @@ As each stone's cultural influence spread, it eventually came in conflict with t
 		"DOTA_GuildIntro_FindGuild"							"Find a Guild"
 		"DOTA_GuildIntro_CreateGuild"						"Create a Guild"
 		"DOTA_GuildIntro_JoinGuild_Title"					"Join a Guild"
-		"DOTA_GuildIntro_JoinGuild_Description"				"Play with friends or make new ones. Work together to complete Contracts and Challenges to unlock rewards and level up your Guild."
+		"DOTA_GuildIntro_JoinGuild_Description"				"Play with friends or make new ones. Dominate the guild leaderboard by completing Contracts and Challenges to unlock special rewards."
 		"DOTA_GuildIntro_PlayMatches_Title"					"Play Matches"
-		"DOTA_GuildIntro_PlayMatches_Description"			"Every matchmaking game you play earns Guild Points (GP) for your guild. The more guild members in your party, the higher multiplier you will earn."
+		"DOTA_GuildIntro_PlayMatches_Description"			"Every matchmaking game you play helps your guild climb the leaderboard. The more guild members in your party, the higher multiplier you will earn."
 		"DOTA_GuildIntro_ClaimContracts_Title"				"Claim Contracts"
-		"DOTA_GuildIntro_ClaimContracts_Description"		"Each day there are new Contracts to complete. Win a match while meeting your Contract objectives to earn Guild Points (GP) and Battle Points (BP)."
+		"DOTA_GuildIntro_ClaimContracts_Description"		"Each day there are new Contracts to complete. Win a match while meeting your Contract objectives to earn Guild Points (GP)"
 		"DOTA_GuildIntro_CompleteChallenges_Title"			"Complete Challenges"
 		"DOTA_GuildIntro_CompleteChallenges_Description"	"Group up with at least 3 guild members in a party to complete Guild Challenges, earning Guild Points (GP)."
 		"DOTA_GuildIntro_UnlockRewards_Title"				"Unlock Rewards"
-		"DOTA_GuildIntro_UnlockRewards_Description"			"Level up your Guild to unlock bonuses for your Battle Pass, Emoticons, upgrades to your Guild Banner, and more."
+		"DOTA_GuildIntro_UnlockRewards_Description"			"Each week your guild will unlock rewards based on their standings in the leaderboard - unlock guild-only Emoticons, chat-wheels, upgrades to your Guild Banner, and more."
 
 		"Team_Create_Header"        "TEAMS"
 		"Team_Create_Desc1"          "The Teams feature is designed for groups of five players who want to compete against other groups of five in practice lobbies and competitive settings such as Ranked Matchmaking, leagues, and tournaments."
@@ -3978,6 +4026,7 @@ As each stone's cultural influence spread, it eventually came in conflict with t
 		"DOTA_Hero_Selection_CaptainsMode_TheyBan"					"Enemy team's turn to ban"
 		"DOTA_Hero_Selection_RandomDraft_HeroReview"				"Hero Review Phase"	
 		"DOTA_Hero_Selection_ChooseHero"			"Choose your Hero"
+		"DOTA_Hero_Selection_EventGame_BanPhase"					"Ban a Hero"
 
 		"DOTA_Hero_Selection_AllDraft_RoundDisplay"					"Round {d:all_draft_phase}"
 		"DOTA_Hero_Selection_AllDraft_Waiting"						"Waiting for the enemy team to choose a hero"
@@ -6338,6 +6387,7 @@ As each stone's cultural influence spread, it eventually came in conflict with t
 		"DOTA_ItemTest_NotInTest_Desc"		"Please use the main Dota 2 client to interact with the Steam Workshop."
 
 		"DOTA_ItemTest_Import"				"Import"
+		"DOTA_ItemTest_Items"				"Items"
 		"DOTA_ItemTest_Importing"			"IMPORTING"
 		"DOTA_ItemTest_Import_Success"		"IMPORT SUCCESSFUL"
 		"DOTA_ItemTest_Import_Failed"		"IMPORT FAILED"
@@ -6847,6 +6897,8 @@ As each stone's cultural influence spread, it eventually came in conflict with t
 		"Notification_GuildLevelup_WithData"	"{s:guild_name} is now level {d:guild_level}"
 		"Notification_GuildPromotion"			"You have been promoted in your guild"
 		"Notification_GuildPromotion_WithData"	"You have been promoted to {s:guild_role} in {g:dota_guild_name:guild_id}"
+		"Notification_PlusFreeTrial_None"		"You now have access to Dota Plus for 2 months."
+		"Notification_PlusFreeTrial_Had"		"You have been granted 2 additional months of Dota Plus."
 
 		//-------------------------------------------------------------------------------------------
 		// Economy
@@ -7014,6 +7066,79 @@ As each stone's cultural influence spread, it eventually came in conflict with t
 		"diretide_items"					"Random Item"
 		"diretide_items_cursed"				"Random Item"
 
+		"DOTA_Diretide_Rarity_Crate_Tier1"	"1"
+		"DOTA_Diretide_Rarity_Crate_Tier2"	"2"
+		"DOTA_Diretide_Rarity_Crate_Tier3"	"3"
+		"DOTA_Diretide_Rarity_Crate_Tier4"	"4"
+		"DOTA_Diretide_Rarity_Crate_Tier5"	"5"
+
+		"DOTA_Diretide_RarityName_Crate_Tier0"	"Chests"
+		"DOTA_Diretide_RarityName_Crate_Tier1"	"Tier 1: Sets "
+		"DOTA_Diretide_RarityName_Crate_Tier2"	"Tier 2: Ambient Sets"
+		"DOTA_Diretide_RarityName_Crate_Tier3"	"Tier 3: Immortals"
+		"DOTA_Diretide_RarityName_Crate_Tier4"	"Tier 4: Immortal Sets"
+		"DOTA_Diretide_RarityName_Crate_Tier5"	"Tier 5: Emblems"
+
+		"DOTA_Diretide_RarityName_Crate_Tier1_Short"	"Tier 1"
+		"DOTA_Diretide_RarityName_Crate_Tier2_Short"	"Tier 2"
+		"DOTA_Diretide_RarityName_Crate_Tier3_Short"	"Tier 3"
+		"DOTA_Diretide_RarityName_Crate_Tier4_Short"	"Tier 4"
+		"DOTA_Diretide_RarityName_Crate_Tier5_Short"	"Tier 5"
+
+		"DOTA_Diretide_RarityDescription_Crate_Tier1"	"Sets"
+		"DOTA_Diretide_RarityDescription_Crate_Tier2"	"Ambient Sets"
+		"DOTA_Diretide_RarityDescription_Crate_Tier3"	"Immortals"
+		"DOTA_Diretide_RarityDescription_Crate_Tier4"	"Immortal Sets"
+		"DOTA_Diretide_RarityDescription_Crate_Tier5"	"Emblems"
+
+		"DOTA_Treasure_RarityTierInfo"		"Tier Rarity"
+		"DOTA_CrateRecycle_Description"		"Add {d:required_items} {s:current_tier_name_short} items to receive 1 random {s:next_tier_name_short} item."
+		"DOTA_CrateRecycle_DescriptionSell"	"Add unwanted items to your listing, then sell on the marketplace."
+		"DOTA_CrateRecycle_CategoryHeader"	"{s:current_tier_name}"
+		"DOTA_CrateRecycle_CategoryHeaderAmount"	"({d:current_tier_numitems} {s:current_tier_item_p})"
+		"DOTA_CrateRecycle_CategoryHeader_Item:p"		"item#|#items"
+		"DOTA_CrateRecycle_NotEnoughMarketItems"		"There currently aren't enough items available on the market to complete a trade-up at this tier."
+		"DOTA_CrateRecycle_MarketPrice"		"Market"
+		"DOTA_CrateRecycle_SelectTier"		"Select Tier"
+		"DOTA_CrateRecycle_Owned"			"Owned"
+		"DOTA_CrateRecycle_Your_Listings"	"Your Listings"
+		"DOTA_CrateRecycle_NumOwned"		"{d:item_amount} available"
+		"DOTA_CrateRecycle_AddToList"		"Add To List"
+		"DOTA_CrateRecycle_AllAdded"		"Added To List"
+		"DOTA_CrateRecycle_TradeUp"			"TRADE UP LIST"
+		"DOTA_CrateTradeUpButton"			"TRADE UP - {d:recycling_ready} of {d:recycling_total}"
+		"DOTA_CrateRecycleNeeded"			"Fill <span class='RecycleLabelQty'>{d:recycling_needed}</span> remaining slots"   
+		"DOTA_CrateRecycleResult_Title"		"Trade up your items"
+		"DOTA_CrateRecycleResult_Fail"		"Could not trade up at this time. Please try again in a few minutes."
+		"DOTA_CrateSellOnMarketButton"		"SELL"
+		"DOTA_ConfirmCrateRecycle"			"Trade items up"
+		"DOTA_ConfirmCrateRecycleCrate"		"Your 10 items will be destroyed and you will get one tier {d:new_tier} item. Are you sure?"
+		"DOTA_CrateRecycleLastItemHeader"	"Trade Up Last Item"
+		"DOTA_CrateRecycleLastItemPopup"	"This is your last item; are you sure you want to trade it?"
+		"DOTA_CrateSellLastItemHeader"		"Sell Last Item"
+		"DOTA_CrateSellLastItemPopup"		"This is your last item; are you sure you want to sell it?"
+
+		"DOTA_Diretide_Candy_Reason1"	"Trick or Treat!"
+		"DOTA_Diretide_Candy_Reason2"	"Victory Bonus"
+		"DOTA_Diretide_Candy_Reason3"	"First Blood Bonus"
+		"DOTA_Diretide_Candy_Reason4"	"First Roshan Kill Bonus"
+		"DOTA_Diretide_Candy_Reason5"	"Tower Destroyed"
+		"DOTA_Diretide_Candy_Reason6"	"First Scarecrow Stash Destroyed"
+		"DOTA_Diretide_Candy_Reason7"	"First Candy Well Destroyed"
+		"DOTA_Diretide_Candy_Reason8"	"First Candy Steal"
+		"DOTA_Diretide_Candy_Reason9"	"First Diretide Win of the Day"
+		"DOTA_Diretide_Candy_Reason10"	"Guild Party Bonus"
+
+		"DOTA_Diretide_Frontpage_Label"	"Diretide"
+		"DOTA_Diretide_Frontpage_Title"	"Diretide Returns!"
+		"DOTA_Diretide_Frontpage_Desc"	"Roshan is back and hungrier than ever! View the Diretide website to learn more about all of the event's tricks and treats."
+
+		"DOTA_Diretide_Frontpage_DiretidePoints"  "Diretide Points"
+
+		"DOTA_DiretideChest_Frontpage_Label"	"Revamped Treasure"
+		"DOTA_DiretideChest_Frontpage_Title"	"Hallowed Chest of the Diretide"
+		"DOTA_DiretideChest_Frontpage_Desc"		"Unlockable with a Hallowed Key, each Chest contains one of over <b>60</b> wondrous creations across 5 tiers."
+
 		"DOTA_SellMarket"				"Sell on the Market"
 
 		"DOTA_AddFriends_Search"		"Search"
@@ -7094,6 +7219,7 @@ As each stone's cultural influence spread, it eventually came in conflict with t
 		"DOTA_Filter_Field_Equipped"		"Is Equipped"
 
 		"DOTA_Yes"							"Yes"
+		"DOTA_No"							"No"
 
 		"DOTA_Filter_Is_Equipped"			"Is Equipped"
 		"DOTA_Filter_Is_Not_Equipped"		"Is Not Equipped"
@@ -7381,6 +7507,9 @@ As each stone's cultural influence spread, it eventually came in conflict with t
 		"diretowers"					"Dire Towers"
 		"radianttowers"					"Radiant Towers"
 		"versus_screen"					"Versus Screen"
+		"head_effect"					"Head Effect"
+		"map_effect"					"Map Effect"
+		"courier_effect"				"Courier Effect"
 
 
 		// Tool Types
@@ -7444,6 +7573,7 @@ As each stone's cultural influence spread, it eventually came in conflict with t
 		"LoadoutSlot_Gloves"								"Gloves"
 		"LoadoutSlot_Tail"									"Tail"
 		"LoadoutSlot_Taunt"									"Taunt"
+		"LoadoutSlot_Costume"								"Costume"
 		"LoadoutSlot_Emblem"								"Emblem"
 		"LoadoutSlot_Courier"								"Courier"
 		"LoadoutSlot_Announcer"								"Announcer"
@@ -7497,6 +7627,9 @@ As each stone's cultural influence spread, it eventually came in conflict with t
 		"LoadoutSlot_Radiant_Towers"						"Radiant Towers"
 		"LoadoutSlot_Dire_Towers"							"Dire Towers"
 		"LoadoutSlot_Versus_Screen"							"Versus Screen"
+		"LoadoutSlot_Head_Effect"							"Head Effect"
+		"LoadoutSlot_Map_Effect"							"Map Effect"
+		"LoadoutSlot_Courier_Effect"						"Courier Effect"
  		"LoadoutSlot_Persona_Selector"						"Persona"
 		"LoadoutSlot_Head_Invoker_Kid"						"Head (Kid)"
 		"LoadoutSlot_Shoulder_Invoker_Kid"					"Shoulder (Kid)"
@@ -7510,8 +7643,19 @@ As each stone's cultural influence spread, it eventually came in conflict with t
 		"LoadoutSlot_Tiny_Body_1"							"Small"
 		"LoadoutSlot_Tiny_Body_2"							"Medium"
 		"LoadoutSlot_Tiny_Body_3"							"Large"
-		
-
+		//PUDGE PERSONA CUTE
+		"npc_dota_hero_pudge_persona1"									"Pudge (Persona)"
+		"LoadoutSlot_Taunt_Pudge_Persona"								"Taunt (Persona)"
+		"LoadoutSlot_Weapon_Pudge_Persona"								"Weapon (Persona)"
+		"LoadoutSlot_Offhand_Weapon_Pudge_Persona"							"Offhand (Persona)"
+		"LoadoutSlot_Armor_Pudge_Persona"								"Armor (Persona)"
+		"LoadoutSlot_Head_Pudge_Persona"								"Head (Persona)"
+		//ANTIMAGE PERSONA
+		"LoadoutSlot_Taunt_Antimage_Persona"								"Taunt (Persona)"
+		"LoadoutSlot_Weapon_Antimage_Persona"								"Weapon (Persona)"
+		"LoadoutSlot_Offhand_Weapon_Antimage_Persona"							"Offhand (Persona)"
+		"LoadoutSlot_Armor_Antimage_Persona"								"Armor (Persona)"
+		"LoadoutSlot_Head_Antimage_Persona"								"Head (Persona)"
 		//Hero Loadoutslots
 		"LoadoutSlot_Alchemist_TinyArmor"					"Tiny Armor"
 		"LoadoutSlot_Alchemist_Flask"						"Flask"
@@ -8477,6 +8621,11 @@ As each stone's cultural influence spread, it eventually came in conflict with t
 		"StoreBanner_Header_International2020_BattlePass"				"The International 10 Battle Pass"
 		"StoreBanner_Text_International2020_BattlePass"		"Overflowing with treasures and rewards The International 10 Battle Pass is your companion for the summer Dota season."
 
+		"StoreBanner_Header_Diretide_Chest"				"Hallowed Key of the Diretide"
+		"StoreBanner_Text_Diretide_Chest"		"Explore the hallowed offerings of Diretide by unlocking one of more than 60 rewards with this special key or visiting the marketplace to find more chests and specific rewards."
+
+		"StoreBanner_Header_Diretide_Key"				"Hallowed Key of the Diretide"
+		"StoreBanner_Text_Diretide_Key"		"Explore the hallowed offerings of Diretide by unlocking one of more than 60 rewards with this special key. Requires Diretide Chest which can be obtained as a Diretide points reward for playing or from the marketplace."
 //DOTA_STORE_BANNER_END
 
 		"Playtab_Quiz_Title"				"The Shopkeeper's Quiz"
@@ -8505,6 +8654,7 @@ As each stone's cultural influence spread, it eventually came in conflict with t
 		"Attrib_FantasyChallengeTag"				"The Compendium Fantasy Challenge %s1"
 		"Attrib_InternationalEvent"					"Granted for %s1 "
 		"Attrib_UsageLevelRequirement"				"Your Dota Profile must be level %s1 to use this item."
+		"Attrib_PolycountTag"						"Poly Count"
 		"InternationalEvent_Station0"				"watching a game at The International"
 		"InternationalEvent_Station1"				"visiting the Secret Shop at The International"
 		"InternationalEvent_Station2"				"visiting the Workshop Station at The International"
@@ -9936,6 +10086,16 @@ As each stone's cultural influence spread, it eventually came in conflict with t
 		"DOTA_Announcer_Preview_Gaben_Killing_Spree_02"	"Try clicking on the running heroes for even more kills."
 		"DOTA_Announcer_Preview_Gaben_Killing_Spree_03"	"Even now I'm learning from our customers."
 		"DOTA_Announcer_Preview_Gaben_Killing_Spree_04"	"Please email me at gabe n at valvesoftware dot com and let me know about your rampage."
+		
+		"DOTA_Announcer_Preview_ti10_vog_01"	"Ten players compete for ultimate glory."
+		"DOTA_Announcer_Preview_ti10_vog_02"	"A single moment can spark the rise to greatness."
+		"DOTA_Announcer_Preview_ti10_vog_03"	"Who will rise to meet this challenge?"
+		"DOTA_Announcer_Preview_ti10_vog_04"	"Radiant VERSUS Dire!"
+		
+		"DOTA_Announcer_Preview_ti10_vog_Killing_Spree_01"	"Amidst the carnage, a legacy is forged."
+		"DOTA_Announcer_Preview_ti10_vog_Killing_Spree_02"	"Bear witness and tremble!"
+		"DOTA_Announcer_Preview_ti10_vog_Killing_Spree_03"	"From the ashes of this endeavor, who will rise again?"
+		"DOTA_Announcer_Preview_ti10_vog_Killing_Spree_04"	"This is not battle, it is slaughter."
 
 		"DOTA_Announcer_Preview_Deus_Ex_01"	"Become a Dota Announcer, they said. 'It'll be fun, Adam!'"
 		"DOTA_Announcer_Preview_Deus_Ex_02"	"Done your warm-up stretches, boss?"
@@ -10948,7 +11108,12 @@ As each stone's cultural influence spread, it eventually came in conflict with t
 
 		"DOTA_Style_Bracer_Of_The_Luminar_0"     "Glow of Wisdom"
 		"DOTA_Style_Bracer_Of_The_Luminar_1"     "Spark of Ruin"
+
+		"DOTA_Style_Vampire_Counts_Master_Head_and_Sleeves_0"	"Vampire Counts Head"
+		"DOTA_Style_Vampire_Counts_Master_Head_and_Sleeves_1"	"Vampire Counts Sleeve"
 	
+		"DOTA_Style_Provocation_Of_Ruin"		"Provocation of Ruin"
+
 		"Bearzky_Style_0" 	"Bearzky"
 		"Bearzky_Style_1" 	"Skatestick Bearzky"
 
@@ -12117,7 +12282,8 @@ As each stone's cultural influence spread, it eventually came in conflict with t
 		"DOTA_Style_Tree_of_Frozen_Stonehenge_0"		"Frostivus"
 		"DOTA_Style_Tree_of_Frozen_Stonehenge_1"		"Winter"
 
-
+		"DOTA_Style_phoenix_immortal_back_0"		"Default"
+		"DOTA_Style_phoenix_immortal_back_1"		"Paradise"
 
 //DOTA_ITEM_STYLES_END
 //DOTA_ITEM_STYLE_END
@@ -12616,6 +12782,10 @@ As each stone's cultural influence spread, it eventually came in conflict with t
  		"dota_tip_customize_guides_desc"	"Click here to make your own custom edits to the current guide. Drag items on and off to make changes."
  		"dota_tip_suggested_items_title"	"Item Suggestions"
  		"dota_tip_suggested_items_desc"	"Not sure what to buy? Click here to automatically ask your teammates for suggestions."
+ 		"dota_tip_hero_grid_configs_title"	"Customize Hero Grid"
+ 		"dota_tip_hero_grid_configs_desc"	"Adjust the hero grid to suit your needs. Use one of the presets, or create your own unique arrangement."
+ 		"dota_tip_dashboard_shards_title"	"Earn and Spend Shards"
+ 		"dota_tip_dashboard_shards_desc"	"Shards are earned by winning 3 matches in a week, leveling up heroes, participating in guilds, and many other ways.\n\nBuy exclusive hero items and other goodies in the Shard Shop.\n\nDota Plus subscribers gain more ways to earn shards, and have access to exclusive content like Chat Wheel Sounds."
 
 //INTRODUCTORY LOADSCREEN TIPS		(0 to 25 games played)
 		"dota_tip_introduction_1"		"Try to fight creeps and enemy Heroes within the attack range of your team's Towers."
@@ -14072,6 +14242,11 @@ As each stone's cultural influence spread, it eventually came in conflict with t
 		"Crate_Extremely_Rare"		"Extremely Rare"
 		"Crate_Ultra_Rare"	"Ultra Rare"
 		"Crate_Cosmically_Rare"	"Cosmically Rare"
+		"Crate_Tier1"			"Tier 1"
+		"Crate_Tier2"			"Tier 2"
+		"Crate_Tier3"			"Tier 3"
+		"Crate_Tier4"			"Tier 4"
+		"Crate_Tier5"			"Tier 5"
 		"Crate_Required_To_Open"	"Required to Open"
 		"Crate_Not_Revealed"	"The contents of this treasure has not been revealed yet!"
 		"Crate_Already_Unlocked"	"Already Unlocked"
@@ -18374,6 +18549,10 @@ Special Techies Taunt"
 		"DOTA_Chat_Ping_Msg_EnemyWard" "<img class=\"ChatWheelIcon\" src=\"file://{images}/hud/reborn/ping_icon_enemyward.psd\" />Enemy Has Vision (%s1)"
 		"DOTA_Chat_Ping_Msg_FriendlyWard" "<img class=\"ChatWheelIcon\" src=\"file://{images}/hud/reborn/ping_icon_friendlyward.psd\" />We Need Vision (%s1)"
 
+		"DOTA_Chat_Ping_Confirmation_Msg_0" "<img class=\"ChatWheelIcon\" src=\"file://{images}/hud/reborn/ping_icon_attack.psd\"/>%s1 Teammates Are Attacking %s3 (%s2 disagree)"
+		"DOTA_Chat_Ping_Confirmation_Msg_1" "<img class=\"ChatWheelIcon\" src=\"file://{images}/hud/reborn/ping_icon_defend.psd\"/>%s1 Teammates Are Defending %s3 (%s2 disagree)"
+		"DOTA_Chat_Ping_Confirmation_Msg_2" "<img class=\"ChatWheelIcon\" src=\"file://{images}/hud/reborn/ping_icon_smoke.psd\" />%s3 Is Calling For Smoke (%s1 Agree, %s2 Disagree)"
+
 		"DOTA_Location_Name_GoodGuys" "Radiant"
 		"DOTA_Location_Name_BadGuys" "Dire"
 		"DOTA_Location_Name_Neutral" "Neutral"
@@ -18456,6 +18635,7 @@ Special Techies Taunt"
 		"DOTA_ChatWheelPhraseLocked_ShardUnlock"	"Unlock in Plus Rewards for {g:dota_shards_value:unlock_point_cost}."
 		"DOTA_ChatWheelPhraseLocked_PlusSubscription"	"Available for purchase for {g:dota_shards_value:unlock_point_cost} by Dota Plus members."
 		"DOTA_ChatWheelPhraseLocked_PlusSubscriptionExpired"	"Renew your Dota Plus subscription to regain access."
+		"DOTA_ChatWheelPhraseLocked_GuildLevel"		"{s:required_guild_tier} Tier"
 
 		"DOTA_ChatWheelPurchase_Name"			"Purchased Chat Wheel"
 		"DOTA_ChatWheelPurchase_Description"	"Purchased a Chat Wheel message '{s:chat_wheel_label}'"
@@ -18784,6 +18964,12 @@ Special Techies Taunt"
   		"KillEaterEvent_KillsDuringViperStrike"				"Kills During Viper Strike"
    		"KillEaterEvent_SolarCrestKills"					"Solar Crests Leading To Kills"
 		"KillEaterEvent_DamageWhileInvisible"				"Damage While Invisible"
+
+		"KillEaterEvent_SkeletonKing_ArcanaHeroesKilled_1"	"Skeleton King Heroes Killed 1"
+		"KillEaterEvent_SkeletonKing_ArcanaHeroesKilled_2"	"Skeleton King Heroes Killed 2"
+		"KillEaterEvent_SkeletonKing_ArcanaHeroesKilled_3"	"Skeleton King Heroes Killed 3"
+		"KillEaterEvent_SkeletonKing_ArcanaHeroesKilled_4"	"Skeleton King Heroes Killed 4"
+		"KillEaterEvent_SkeletonKing_ArcanaHeroesKilled_5"	"Skeleton King Heroes Killed 5"
 
 		"DOTA_ChallengeDesc_SolarCrestKills"	   					"Kill <font color='#ffffff'>%s1</font> enemy heroes under <font color='#ffffff'>Solar Crest</font>."
 		"DOTA_ChallengeStatus_SolarCrestKills" 						"%s2I need to kill %s1 more heroes under Solar Crest!"
@@ -19753,6 +19939,8 @@ Special Techies Taunt"
 	"DOTA_Vote"	"Vote"
 	"DOTA_NowAvailable" "Now Available"
 	"DOTA_Coming_Soon"		"Coming Soon"
+	"DOTA_Last_Chance"		"Last Chance"
+	"DOTA_Time_Remaining"		"Remaining"
 	"DOTA_Grant"			"Grant"
 	"Movie_Playing"			"Movie Playing"
 	"DOTA_Playtest"      "Test"
@@ -19855,7 +20043,12 @@ Special Techies Taunt"
 	"DOTA_TabName_Treasury"			"Treasury"
 	"DOTA_TabName_Browse"			"Browse"
 	"DOTA_TabName_Plus"				"Plus Rewards"
+	"DOTA_TabName_ShardStore"		"Shard Shop"
 
+	"DOTA_TabName_Chest"			"Buy"
+	"DOTA_TabName_IndividualItems"	"Sell"
+	"DOTA_TabName_Recycle"			"Trade Up"
+	"DOTA_TabName_About"			"About"
 
 	"DOTA_ConfirmQuit"				"Confirm Quit"
 	"DOTA_ConfirmQuitDesc"			"Do you really wish to quit Dota 2?"
@@ -20029,6 +20222,7 @@ Special Techies Taunt"
 	"DOTA_Popup_PlusStatus_ExpiredExplanation"	"Your Dota Plus subscription is no longer active as of {T:s:dota_plus_expiration_date}."
 	"DOTA_Popup_PlusStatus_RenewDescription"	"Without an active subscription, Dota Plus features are not available on your account. Your Hero Level progression has been retained, but no further progress will be made while your subscription is inactive. Please renew your subscription to reactivate Dota Plus features."
 	"DOTA_Popup_PlusStatus_Renew"	"Renew"
+
 
 	"DOTA_BadgeLevel"	"{d:badge_level}"
 
@@ -20489,7 +20683,7 @@ Special Techies Taunt"
 	"DOTA_GameMode_16"		"Captains Draft"
 
 	"DOTA_GameMode_18"		"Ability Draft"
-	"DOTA_GameMode_19"		"Frostivus"
+	"DOTA_GameMode_19"		"Diretide"
 	"DOTA_GameMode_20"		"All Random Death Match"
 	"DOTA_GameMode_21"		"1v1 Mid"
 	"DOTA_GameMode_22"		"All Pick"
@@ -20866,8 +21060,11 @@ Special Techies Taunt"
 	"DOTA_Chat_SuggestHeroBan"		"suggests banning <a class=\"SuggestedHero\" href=\"event:DOTASuggestedHeroActivated( {d:hero_id} )\">[{g:dota_hero_name:hero_id}]</a>."
 	"DOTA_Chat_SuggestHeroRole"		"suggests picking a hero with <a class=\"SuggestedHeroRole\" href=\"event:DOTASuggestedHeroRoleActivated( {s:hero_role} )\">[{s:localized_hero_role}]</a>."
 
+	"DOTA_Chat_Ability_Draft_Start" "<font color='#8FA7BB'>Hold <font color='#C5D1DC'><b>Alt</b></font> and click an ability to let your team know your choices.<br>Hold <font color='#C5D1DC'><b>Ctrl</b></font> and click an ability to suggest it to be drafted.</font>"
+	"DOTA_Chat_Ability_Draft_Randomed" "%s1 randomly assigned <font color='#FAEAC9'><b>[%s2]</b></font>."
 	"DOTA_Chat_RequestAbility"		"would like to draft <span class=\"RequestedAbility\" >[{g:dota_ability_name:ability_name}]</span>."
-
+	"DOTA_Chat_SuggestAbility"		"suggests <span class=\"RequestedAbility\" >[{g:dota_ability_name:ability_name}]</span> be drafted."
+	
 	"DOTA_ChatHelp_Targets"			"Targets"
 	"DOTA_ChatHelp_Commands"		"Commands"
 	"DOTA_ChatHelp_NameFormat"		"{s:command_name}:"
@@ -21160,6 +21357,7 @@ Special Techies Taunt"
 	"DOTA_Lobby_Settings_Dota_TV_Delay_2_Minutes"		"2 Minutes"
 	"DOTA_Lobby_Settings_Dota_TV_Delay_5_Minutes"		"5 Minutes"
 	"DOTA_Lobby_Settings_Dota_TV_Delay_10_Seconds"		"10 Seconds"
+	"DOTA_Lobby_Settings_Dota_TV_Delay_15_Minutes"		"15 Minutes"
 
 	"DOTA_Lobby_Settings_Pause"		"PAUSING"
 	"DOTA_Lobby_Settings_Pause_Unlimited"		"Unlimited"
@@ -22294,12 +22492,12 @@ Special Techies Taunt"
 	"DOTAArcanaVote_WinnerTitle"					"Winner"
 	"DOTAArcanaVote_ViewResults"					"View Results"
 	"DOTAArcanaVote_NotStarted"						"Arcana Voting Not Started Yet"
-	"DOTAArcanaVote_ResultsHidden"					"Voting for Arcana is closed.\nResults will be revealed at The International."
+	"DOTAArcanaVote_ResultsHidden"					"Voting for Arcana is closed.\nResults will be revealed at the end of the Battle Pass."
 	"DOTAArcanaVote_CalibrationTimeRemaining"		"Results will become visible in {d:arcana_calibration_time_remaining_day}d {d:arcana_calibration_time_remaining_hour}h {d:arcana_calibration_time_remaining_minute}m"
 	"DOTAArcanaVote_LeadingInVote"					"Leading"
 	"DOTAArcanaVote_NewArcanaFeature"				"New Arcana Vote Feature"
 	"DOTAArcanaVote_ViewResultsDescription"			"You may now view arcana vote results using the Previous Round / Next Round buttons at the top of the voting panel."
-	"DOTAArcanaVote_FinalsResultsHidden"			"Results will be revealed at The International"
+	"DOTAArcanaVote_FinalsResultsHidden"			"Results will be revealed at the end of the Battle Pass"
 
 	"DOTAArcanaVote_RoundName1"						"Group A First Round"
 	"DOTAArcanaVote_RoundName2"						"Group B First Round"
@@ -22376,6 +22574,7 @@ Special Techies Taunt"
 	"DOTA_BattlePassLog_DevGrant"					"Dev Grant"
 	"DOTA_BattlePassLog_RewardForTreasureOpened"	"Opened {g:dota_item_name:item_def}"
 	"DOTA_BattlePassLog_ExceededPreviousPrizePool"	"Reward For Exceeding Previous Year's Prize Pool"
+	"DOTA_BattlePassLog_Exceeded40Million"			"Reward For Exceeding  40,000,000 USD Prize Pool"
 	"DOTA_BattlePassLog_AllStarGame"				"From All Star Pick: {g:dota_persona:pro_short:b:account_id}"
 	"DOTA_BattlePassLog_GuildContract"				"Completed Guild Contract"
 	"DOTA_BattlePassLog_BountyClaimed"				"Claimed Bounty in Match ID <a href=\"event:UIPopupButtonClicked( DOTAShowMatchDetails({u:match_id}) )\">{u:match_id}</a>"
@@ -22623,6 +22822,10 @@ Special Techies Taunt"
 
 	"DOTAWatchDownloads_DeleteTitle"				"Delete Replay?"
 	"DOTAWatchDownloads_DeleteBody"					"Are you sure you want to delete this replay?  You may not be able to re-download it."
+
+
+	"DOTA_ChinaSSA_Error"							"Failed to get Steam China agreement.  Try again?"
+	"DOTA_ChinaSSA_NotCompleted"					"Please complete the Steam China agreement before continuing."
 
 
 	"DOTA_Replays_Search"							"Search for MatchIDs"
@@ -23378,6 +23581,7 @@ Special Techies Taunt"
 	"dota_settings_chat_filter_allow_friendly"	"Friendly players (friends, party members, and guild members)"
 	"dota_settings_chat_filter_allow_teams"		"Friendly players and teammates"
 	"dota_settings_chat_filter_allow_all"		"All players"
+	"dota_settings_steam_text_filter"			"Steam Text Filter Settings"
 
 
 	"DOTA_Keybind_ARROW"	"Arrow (Default)"
@@ -23708,6 +23912,11 @@ Special Techies Taunt"
 	"DOTA_HeroRole_Description_Initiator"	"Good at starting a teamfight."
 
     "DOTA_HeroGrid_Sort_By"                        "Sort By:"
+
+	"DOTA_HeroGrid_Loading"						"Loading hero grid..."
+	"DOTA_HeroGrid_FailedToLoad"				"Unable to load this grid arrangement. Try again later."
+	"DOTA_HeroGrid_PlusRestricted_Title"		"Dota Plus Required"
+	"DOTA_HeroGrid_PlusRestricted_Description"	"This grid arrangement is only available to Dota Plus members."
 
 	"DOTA_HeroGrid_OptionCategory_Role"			"Roles:"
 	"DOTA_HeroGrid_OptionCategory_Attributes"	"Attributes:"
@@ -24433,8 +24642,8 @@ Special Techies Taunt"
 
 	"dota_page_match_details_replay_error_not_found"	"Replay not found on disk."
 
-	"DOTA_tooltip_econ_item_name"			"{g:dota_filtered_string:item_name}"
-	"DOTA_tooltip_econ_item_description"	"{g:dota_filtered_string:item_description}"
+	"DOTA_tooltip_econ_item_name"			"{s:item_name}"
+	"DOTA_tooltip_econ_item_description"	"{s:item_description}"
 	"DOTA_tooltip_econ_item_set"			"Part of: <font color='#dddddd'>{s:item_set}</font>"
 	"DOTA_tooltip_econ_item_rarity_label"	"Rarity: "
 	"DOTA_tooltip_econ_item_rarity"			"{s:item_rarity}"
@@ -24506,7 +24715,7 @@ Special Techies Taunt"
 	"DOTA_econ_item_details_autostyle_label"	"Active style will be determined by gameplay."
 	"DOTA_econ_item_details_gift_label" 	"Gift From:"
 	"DOTA_econ_item_details_original_item_name"	"{s:original_item_name}"
-	"DOTA_econ_item_details_item_name"			"{g:dota_filtered_string:item_name}"
+	"DOTA_econ_item_details_item_name"			"{s:item_name}"
 	"DOTA_econ_item_details_item_creation_date" 	"Released: {t:l:creation_date}"
 	"DOTA_econ_item_details_set_includes"		"Includes the following:"
 	"DOTA_econ_item_details_item_set"			"Part of: <font color='#dddddd'>{s:item_set}</font>"
@@ -24947,6 +25156,10 @@ Special Techies Taunt"
 	"DOTA_Treasure_HelpHeaderPWZoomedOut"	"Item Available"
 	"DOTA_Treasure_HelpHeaderPWZoomedOutPlural"	"Items Available"
 	"DOTA_Treasure_HelpHeaderGrantsAll"	"Each treasure contains all of these items"
+	"DOTA_TreasureOdds_Header"			"Drop Rates"
+
+	"DOTA_tooltip_treasure_marketprice_disclaimer"	"This price estimate is based on a recent sample of the lowest price of the item on the Steam Community Market.  The final transaction price may vary."
+	"DOTA_tooltip_treasure_market_soldout"			"There are currently no market listings for this item."
 
 	"DOTA_Treasure_RecycleDuplicates"	"Recycle Duplicate Bundles"
 
@@ -24984,10 +25197,11 @@ Special Techies Taunt"
 	"DOTA_Treasure_OpenDupe"			"Each treasure you open will contain {d:items_per_treasure} of the normal items shown. You may receive duplicates. If lucky, you may also receive one of the rare items."
 	"DOTA_Treasure_OpenFailed_NoItem"	"Unable to find a treasure to open in your inventory."
 	"DOTA_Treasure_OpenFailed_NoItemsReceived"	"Unable to get the list of items received from the treasure."
-	"DOTA_Treasure_OpenSuccess"			"Congratulations! You received:"
+	"DOTA_Treasure_OpenSuccess"			"You received:"
 
 	"DOTA_Treasure_RecyclingTitle"		"Recycle Reward"
 	"DOTA_Treasure_RecyclingSubtitle"	"Recycle sets to receive a bonus reward containing a treasure and shards."
+	"DOTA_Treasure_RecyclingSubtitle_TreasureOnly"	"Recycle sets to receive a bonus treasure."
 	"DOTA_Treasure_RecyclingCount"		"x{d:inventory_count}"
 	"DOTA_Treasure_DisassembleConfirm_Popup_Title"		"Recycling Last Item"
 	"DOTA_Treasure_DisassembleConfirm_Popup_Message"	"This is your only copy of this set.  After recycling, you will no longer have any of the items in this bundle. Are you sure you want to continue?"
@@ -25003,8 +25217,53 @@ Special Techies Taunt"
 	"DOTA_OpenTreasureTooltip_ItemName"		"{g:dota_item_name:item_def}"
 	"DOTA_OpenTreasureTooltip_ExtraItems"		"... and {d:extra_items_count} more!"
 	"DOTA_OpenTreasureTooltip_Recycling"		"You have {d:inventory_count} unbundled copies of this item.  Click here to recycle an unused copy of this item to advance your progress towards your Bonus Treasure."
-	"DOTA_OpenTreasureTooltip_BonusTreasure"		"Dota Plus subscribers can recycle unopened bundles from this treasure to earn progress toward a reward containing an additional bonus treasure and shards."
+	"DOTA_OpenTreasureTooltip_BonusTreasure"				"Dota Plus subscribers can recycle unopened bundles from this treasure to earn progress toward a reward containing an additional bonus treasure and shards."
+	"DOTA_OpenTreasureTooltip_BonusTreasureOnly"			"Dota Plus subscribers can recycle unopened bundles from this treasure to earn progress toward a reward containing an additional bonus treasure."
 	"DOTA_OpenTreasureTooltip_BonusTreasure_BattlePass"		"During the International 10 Battle Pass, items from this treasure can be recycled to earn progress toward an additional treasure and other bonus rewards."
+
+	"DOTA_Treasure_ViewCrateTier"				"View Tier:"
+	"DOTA_Treasure_BuyChest"					"Buy Chest"
+	"DOTA_Treasure_BuyKey"						"Buy Key"
+	"DOTA_Treasure_BuyChestQty"					"BUY <span class='PurchaseLabelQty'>{d:treasure_qty}</span> {s:treasure_qty_p}"
+	"DOTA_Treasure_Chest"						"Chest"
+	"DOTA_Treasure_Chests"						"Chests"
+	"DOTA_Treasure_Chest:p"						"CHEST#|#CHESTS"
+	"DOTA_Treasure_BuyKeyQty"					"BUY <span class='PurchaseLabelQty'>{d:key_qty}</span> {s:key_qty_p}"
+	"DOTA_Treasure_Key:p"						"KEY#|#KEYS"
+	"DOTA_Treasure_CountChestsOwned"			"{d:treasure_owned_quantity} {s:treasure_owned_quantity_p} OWNED"
+	"DOTA_Treasure_ChestsOwned"					"{d:treasure_owned_quantity} owned"
+	"DOTA_Treasure_KeysOwned"					"{d:keys_owned_count} owned"
+	"DOTA_Treasure_ItemSlot_Set"				"Set"
+	"DOTA_Treasure_MarketPrice"					"Market"
+	"DOTA_Treasure_UnlockChest"					"Unlock Chest"
+	"DOTA_Treasure_ShowHeroNames"				"Show Hero Names"
+	"DOTA_Treasure_PreviewContents"				"Preview Contents"
+	"DOTA_Treasure_Skip"						"Skip"
+	"DOTA_Treasure_BuyKeyOnly"					"Buy Key"
+	"DOTA_Treasure_BuyChestOnly"				"Buy Chest"
+	"DOTA_Treasure_BuyChestAndKey"				"Buy Chest + Key"
+	"DOTA_Treasure_Back"						"Back"
+	"DOTA_Treasure_Equip"						"Equip"
+	"DOTA_Treasure_Close"						"Close"
+	"DOTA_Treasure_ListView"					"List View"
+	"DOTA_Treasure_CurrentlyViewing"			"Currently Viewing:"
+	"DOTA_Treasure_ItemDetails"					"Details"
+	"DOTA_Treasure_BuyItem"						"BUY ITEM"
+	"DOTA_Treasure_SelectedItemOwned"			"{d:selected_item_owned_count} owned"
+	"DOTA_Treasure_TierListHeader"				"Tier {d:crate_tier}: {s:crate_tier_description}"
+	"DOTA_Treasure_TierListOdds"				"{s:crate_tier_percentage}% chance"
+	"DOTA_Treasure_Tier1Odds"					"{s:crate_tier1_percentage}%"
+	"DOTA_Treasure_Tier2Odds"					"{s:crate_tier2_percentage}%"
+	"DOTA_Treasure_Tier3Odds"					"{s:crate_tier3_percentage}%"
+	"DOTA_Treasure_Tier4Odds"					"{s:crate_tier4_percentage}%"
+	"DOTA_Treasure_Tier5Odds"					"{s:crate_tier5_percentage}%"
+	"DOTA_Treasure_TierListItemName"			"{g:dota_item_name:label_item_def}"
+	"DOTA_Treasure_TierListHeroName"			"{s:hero_name}"
+	"DOTA_Treasure_TierListHeroNameSlot"		"{s:hero_name} ({s:slot_name})"
+	"DOTA_Treasure_ListViewAltDisplayTooltip"	"Toggle between Hero and Item names."
+	"DOTA_Treasure_UnlockChestExplain_None"		"Requires <font color='#FFFFFF'>Chest and Key</font> to open"
+	"DOTA_Treasure_UnlockChestExplain_HasChest"	"Requires <font color='#FFFFFF'>Key</font> to open"
+	"DOTA_Treasure_UnlockChestExplain_HasKey"	"Requires <font color='#FFFFFF'>Chest</font> to open"
 
 	"DOTA_AASystem_Green"		"Accumulated online game time: {s:playtime}. You are currently playing within healthy time-limits. Enjoy the game!"
 	"DOTA_AASystem_Yellow"		"Accumulated online game time: {s:playtime}. You have exceeded healthy game time limits. Please take care to rest!"
@@ -26139,6 +26398,7 @@ Special Techies Taunt"
    	"DOTA_EventName_Frostivus"	    "Frostivus"
 	"DOTA_EventName_NewBloom"	    "New Bloom"
 	"DOTA_EventName_NewBloom2020"	"New Bloom"
+	"DOTA_EventName_Diretide2020"	"Diretide"
 
 	"DOTA_DB_SeasonPass_International_2017" "The International 2017 Battle Pass"
 	"DOTA_EventName_PlusSubscription" "Dota Plus"
@@ -29540,6 +29800,29 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_SplashAd_TI10_Weekend_Sale_Purchase_Message1" "You may still purchase 1 more bundle"
 	"DOTA_SplashAd_TI10_Weekend_Sale_Purchase_Message2" "Bundle limit reached"
 
+	"DOTA_SplashAd_TI10_Mini_Weekend_Sale_30Percent" "Level Sale <span class='Save30'>- Save 30%</span>"
+	"DOTA_SplashAd_TI10_Mini_Weekend_Sale_30Percent2" "Save 30%"
+	"DOTA_SplashAd_TI10_Mini_Weekend_Sale_Date" "Available until <span class='BundleDate'>October 9th</span>"
+	"DOTA_SplashAd_TI10_Mini_Weekend_Sale_Headline" "End of Battle Pass Sale"
+	"DOTA_SplashAd_TI10_Mini_Weekend_Battle_Bundle" "Level Sale"
+	"DOTA_SplashAd_TI10_Mini_Weekend_Sale_Levels" "60 Levels"
+	"DOTA_SplashAd_TI10_Weekend_Sale_Buy_One" "Buy One"
+	"DOTA_SplashAd_TI10_Weekend_Sale_Buy_Two" "Buy Two"
+
+	"DOTA_FrontPage_TI10_BattlePass_Extended_Label"	"Battle Pass Extended"
+	"DOTA_FrontPage_TI10_BattlePass_Extended_Title" "Extended to October 9th"
+	"DOTA_FrontPage_TI10_BattlePass_Extended_Desc" "Read more on the Blog"
+
+	"DOTA_FrontPage_TI10_BattlePass_ArcanaReveal_Title" "Winner Announced"
+	"DOTA_FrontPage_TI10_BattlePass_ArcanaReveal_Desc" "View the results now"
+
+	"DOTA_FrontPage_TI10_BattlePass_Ended_Title" "The International 10 Battle Pass has Ended"
+	"DOTA_FrontPage_TI10_BattlePass_Ended_Desc" "Thank you for taking part in the biggest Battle Pass yet!"
+
+	"DOTA_FrontPage_DotaPlus_Oct2020_Title" "Fall Dota Plus Update"
+	"DOTA_FrontPage_DotaPlus_Oct2020_Desc" "New features, a seasonal treasure and more! Read the latest on the blog"
+
+	
 
 	"DOTA_SplashAd_TI6_LuckvaseAndCarafe_Autographs_Title" "Autographed Treasures Now Available"
 	"DOTA_SplashAd_TI6_LuckvaseAndCarafe_Autographs_Message" "Support your favorite <a href=\"event:UIPopupButtonClicked( DOTAShowCompManila2016CastersPage() )\">broadcast talent from The International 2016</a>!"
@@ -30395,10 +30678,11 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
     "DOTA_International2017_Champions_Title"    "Congratulations to Team Liquid"
     "DOTA_International2017_Champions_Body"     "Team Liquid performs the first-ever Grand Finals sweep in The International's history."
 
-	"DOTA_EventPointsPurchaseFailed_Title"				"Purchase Failed"
-	"DOTA_EventPointsPurchaseFailed_NotEnoughPoints"	"Your account does not have enough points to make this purchase."
-	"DOTA_EventPointsPurchaseFailed_NotAllowed"			"You cannot spend Shards without activating a paid Dota Plus membership."
-	"DOTA_EventPointsPurchaseFailed_GenericError"		"Your purchase was not successful at this time. Try again in a few minutes. (Error Code {d:error_code})"
+	"DOTA_EventPointsPurchaseFailed_Title"					"Purchase Failed"
+	"DOTA_EventPointsPurchaseFailed_NotEnoughPoints"		"Your account does not have enough points to make this purchase."
+	"DOTA_EventPointsPurchaseFailed_NotAllowed"				"You cannot spend Shards without activating a paid Dota Plus membership."
+	"DOTA_EventPointsPurchaseFailed_SubscriptionRequired"	"This purchase requires an active Dota Plus membership."
+	"DOTA_EventPointsPurchaseFailed_GenericError"			"Your purchase was not successful at this time. Try again in a few minutes. (Error Code {d:error_code})"
 
 	"DOTA_CountdownOK" "OK ({d:seconds})"
 
@@ -30623,7 +30907,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_Plus_PurchaseDialog_FirstTimeBonus_Line2" "For first time subscribers to purchase Plus Rewards"
 
 	"DOTA_PlusStore_MyShards"	"My Shards"
-	"DOTA_PlusStore_ExclusiveSets_Title"	"Exclusive"
+	"DOTA_PlusStore_ExclusiveSets_Title"	"Premium"
 	"DOTA_PlusStore_ExclusiveSets_Subtitle"	"New Hero Sets"
 	"DOTA_PlusStore_LegacySets_Title"	"Legacy"
 	"DOTA_PlusStore_LegacySets_Subtitle"	"Returning Hero Sets"
@@ -30635,6 +30919,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_PlusStore_Tools_Subtitle"	"Customize Your Gear"
 	"DOTA_PlusStore_Frostivus_Title"	"Frostivus"
 	"DOTA_PlusStore_Event_Subtitle"	"Limited Time Only"
+	"DOTA_PlusStore_PlusExclusive"	"Dota Plus Exclusive"
 
 	"DOTA_PlusStore_HeroRelicsOwned"	"Relics Owned"
 	"DOTA_PlusStore_HeroRelicsOwnedCount"	"{d:owned_relic_count} / {d:total_relic_count} Owned"
@@ -30681,7 +30966,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_Plus_XPProgress" 				"{d:current_level_xp} / {d:xp_to_next_level} XP"
 	"DOTA_Plus_XP" 						"XP"
 	"DOTA_Plus_Currency"				"Shards"
-	"DOTA_Plus_HeroBadgeInfo"			"Hero Leveling is disabled when Dota Plus is not active. If you reactivate your Dota Plus subscription, then your Hero Levels will resume from where they stopped."
+	"DOTA_Plus_HeroBadgeInfo"			"Hero Leveling to level 6 and above is disabled when Dota Plus is not active. If you reactivate your Dota Plus subscription, then your Hero Levels will resume from where they stopped."
 	"DOTA_Plus_RewardsLog"				"Rewards Log"
 	"DOTA_Plus_Features"				"Features"
 	"DOTA_Plus_ShardsBalance"			"Shard Balance"
@@ -30689,18 +30974,21 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_Plus_HighestLevelHeroes"		"Highest Level Heroes"
 	"DOTA_Plus_HighestRelics"			"Highest Level Relics"
 
+	
 
-	"DOTA_PlusPurchase_HeroProgression"					"Hero Progression"
-	"DOTA_PlusPurchase_HeroProgression_Description"		"Whether you enjoy a wide variety of heroes, or play hundreds of games with just one or two, every game earns you XP towards your hero's level progress."
+	"DOTA_PlusPurchase_Features_Label"					"What's Included:"
+	"DOTA_PlusPurchase_HeroProgression"					"Advanced Hero Progression"
+	"DOTA_PlusPurchase_HeroProgression_Description"		"Whether you enjoy a wide variety of heroes, or play hundreds of games with just one or two, every game earns you XP towards your hero's level progress. With Dota Plus, you can advance your hero level all the way up to Level 25!"
 	"DOTA_PlusPurchase_Assistant"						"Plus Assistant"
 	"DOTA_PlusPurchase_Assistant_Description"			"Get real-time item and ability suggestions—generated from data gathered across millions of recent games at each skill bracket—to keep you up-to-date on the latest trends."
 	"DOTA_PlusPurchase_Rewards"							"Plus Rewards"
 	"DOTA_PlusPurchase_Rewards_Description"				"Earn and spend Shards to unlock a variety of exclusive rewards."
 	"DOTA_PlusPurchase_Perks"							"Plus Perks"
-	"DOTA_PlusPurchase_Perks_Description"				"Plus perks include free entry into the weekly Battle Cup and more!"
+	"DOTA_PlusPurchase_Perks_Description"				"Plus perks include free entry into the weekly Battle Cup, seasonal terrain in your games, seasonal quests to earn shards, and more!"
+	"DOTA_PlusPurchase_Guilds"							"Guild Perks"
+	"DOTA_PlusPurchase_Guilds_Description"				"Anyone can join a guild, but only Dota Plus subscribers are able to create a community of like-minded players to ensure that you always have the right team at your back on that road to victory. Work together to earn points for your guild and weekly rewards. As a guild member, you'll also have access to an additional contract slot."
 
-	"DOTA_PlusPurchase_Feature_HeroLeveling"	"Hero Leveling"
-	"DOTA_PlusPurchase_Feature_HeroChatWheel"	"Hero Chat Wheel"
+	"DOTA_PlusPurchase_Feature_HeroLeveling"	"Advanced Hero Leveling"
 	"DOTA_PlusPurchase_Feature_HeroRelics"		"Stat-Tracking Hero Relics"
 	"DOTA_PlusPurchase_Feature_HeroChallenges"	"Hero Specific Challenges"
 
@@ -30712,10 +31000,14 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_PlusPurchase_Feature_Friends_Foes"			"Friends and Foes Calculator"
 	"DOTA_PlusPurchase_Feature_DeathSummary"			"Detailed Death Summary"
 	"DOTA_PlusPurchase_Feature_WinProbability"			"Spectator Win Probability"
+	"DOTA_PlusPurchase_Feature_StackPullTimers"			"Stack & Pull Timers"
+	"DOTA_PlusPurchase_Feature_RolesGrid"				"Roles Hero Grid"
+	"DOTA_PlusPurchase_Feature_HeroTrends"				"Hero Trends"
+
 
 	"DOTA_PlusPurchase_Feature_ExclusiveHeroSets"	"Exclusive Hero Sets"
 	"DOTA_PlusPurchase_Feature_PurchaseHeroRelics"	"Hero Relics"
-	"DOTA_PlusPurchase_Feature_ChatWheelSounds"		"Chat Wheel Sounds"
+	"DOTA_PlusPurchase_Feature_HeroChatWheel"		"Hero Chat Wheel"
 	"DOTA_PlusPurchase_Feature_LegacyHeroSets"		"Legacy Hero Sets"
 	"DOTA_PlusPurchase_Feature_PurchaseTools"		"Purchase Tools"
 	"DOTA_PlusPurchase_Feature_SeasonalItems"		"Seasonal Items"
@@ -30736,20 +31028,23 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_PlusNewFeature_SeasonalQuests_Title"			"Introducing Seasonal Quests"
 	"DOTA_PlusNewFeature_SeasonalQuests_Desc"			"Dota Plus subscribers now have access to a brand new set of quests to complete over the duration of Ranked Season 3."
 	"DOTA_PlusNewFeature_DpcApp_Title"					"New Dota Pro Circuit App"
+	"DOTA_PlusPurchase_Feature_ChatWheelSounds"			"Chat Wheel Sounds"
 
 	"DOTA_PlusPostGame_HeroProgress"		"Hero Progress"
 	"DOTA_PlusPostGame_LevelProgress"		"Level Progress"
+	"DOTA_PlusPostGame_LevelRestricted"		"Subscribe to Dota Plus to continue levelling."
 	"DOTA_PlusPostGame_CurrentLevel"		"Level {d:current_level}"
 	"DOTA_PlusPostGame_MatchFinished"		"Match Finished"
 	"DOTA_PlusPostGame_Win"					"Win"
 	"DOTA_PlusPostGame_ChallengeCompleted"	"Challenge Completed"
 	"DOTA_PlusPostGame_Total"				"Total"
-	"DOTA_PlusPostGame_XPValue"				"{d:xp_value}xp"
+	"DOTA_PlusPostGame_XPValue"				"+{d:xp_value}xp"
 	"DOTA_PlusPostGame_LevelUp"				"Level Up!"
 	"DOTA_PlusPostGame_RelicsProgress"		"Relics Progress"
 	"DOTA_PlusPostGame_BattlePassProgress"	"Battle Pass Progress"
 	"DOTA_PlusPostGame_RubickArcanaProgress"	"Rubick Arcana Progress"
 	"DOTA_PlusPostGame_ShardValue"			"+{d:shard_value}"
+	"DOTA_PlusPostGame_GuildContracts"		"Guild Contracts"
 	"DOTA_PlusPostGame_VictoryPrediction"	"Victory Predicted"
 	"DOTA_PlusPostGame_PlayerTips"			"Player Tips"
 	"DOTA_PlusPostGame_CavernCrawlProgress"	"Cavern Crawl Progress"
@@ -30800,7 +31095,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_CoachRatingPostGame_CoachRating"			"Coach Rating"
 
 	"DOTA_PlusUpsell_Title"							"Available to Dota Plus Subscribers"
-	"DOTA_PlusUpsell_HeroLeveling_Title"			"Hero Leveling"
+	"DOTA_PlusUpsell_HeroLeveling_Title"			"Hero Level 6+"
 	"DOTA_PlusUpsell_HeroLeveling_Description"		"Play Matches as your favorite heroes to earn higher levels. Show off your hero badge, receive new chat wheel lines, and earn Shards to spend on Plus Rewards."
 	"DOTA_PlusUpsell_HeroChallenges_Title"			"Hero Challenges"
 	"DOTA_PlusUpsell_HeroChallenges_Description"	"Each hero can complete up to 3 challenges every two weeks to earn XP. Earn 1-3 stars depending on how well you did, and receive more XP for more stars."
@@ -30827,7 +31122,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_Plus_ChallengeComplete"	"COMPLETE!"
 	"DOTA_Plus_ChallengeObsolete"	"Obsolete Challenge. Will be replaced next time challenges are refreshed."
 
-	"DOTA_Plus_RewardLog_Title"		"DOTA PLUS REWARD LOG"
+	"DOTA_Plus_RewardLog_Title"		"SHARD REWARD LOG"
 	"DOTA_Plus_RewardLog_TotalShards" "{d:current_balance} SHARDS"
 	"DOTA_Plus_RewardLog_TitleBar_Date" "DATE"
 	"DOTA_Plus_RewardLog_TitleBar_Description" "DESCRIPTION"
@@ -30846,6 +31141,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_Plus_RewardLog_TipReceived" "Received Tip From {g:dota_persona:dp:account_id}"
 	"DOTA_Plus_RewardLog_TipGiven" "Gave Tip To {g:dota_persona:dp:account_id}"
 	"DOTA_Plus_RewardLog_BattlePassReward" "Battle Pass Reward Line"
+	"DOTA_Plus_RewardLog_MVP" "Match MVP Quest"
 
 	"DOTA_PlusWelcome_Title"	"Welcome Quests"
 	"DOTA_PlusWelcome_Description"	"Explore Dota Plus and earn {g:dota_shards_value:total_reward} by completing these quests."
@@ -30869,7 +31165,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_PlusWelcome_PickSuggestedHero_Name"					"Pick a Friends and Foes Recommended Hero"
 	"DOTA_PlusWelcome_PickSuggestedHero_Description"			"When selecting a hero, choose one recommended by Friends and Foes."
 	"DOTA_PlusWelcome_ViewPostGameAnalytics_Name"				"View Post-Game Analytics"
-	"DOTA_PlusWelcome_ViewPostGameAnalytics_Description"		"After a match is complete, view the Damage tab to analyze your damage output or the Performance tab to compare your results against averages for your rank."
+	"DOTA_PlusWelcome_ViewPostGameAnalytics_Description"		"After a match is complete, view the Breakdowns tab to analyze your effectiveness or the Performance tab to compare your results against averages for your rank."
 	"DOTA_PlusWelcome_ViewHeroTrends_Name"						"View Hero-Specific Global Rank Trends"
 	"DOTA_PlusWelcome_ViewHeroTrends_Description"				"On any hero's page, view the Trends tab to see how players of different ranks perform."
 	"DOTA_PlusWelcome_EquipSeasonalTerrain_Name"				"Equip the Seasonal Terrain"
@@ -31194,7 +31490,12 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_TI10_Cache_Voting_Title"									"Collector's Cache Voting"
 	"DOTA_TI10_Cache_Voting_Desc"									"Vote on your favorite sets to help choose which entries make it into this year's collection."
 	"DOTA_TI10_Cache_Voting_Btn"									"View Cache"
+	"DOTA_TI10_Immortal_2_Title"									"Immortal Treasure II"
+	"DOTA_TI10_Immortal_2_Desc"										"Check out the second Immortal Treasures—featuring offerings for Ursa, Jakiro, Witch Doctor, and more."
+	"DOTA_TI10_Immortal_3_Title"									"Immortal Treasure III"
+	"DOTA_TI10_Immortal_3_Desc"										"The wait is over for the final set of Immortal Treasures—featuring offerings for Pugna, Oracle, Lich, and more."
 	
+
 	"DOTA_SeasonPass_International2020_Rewards_Ended"				"The International 10 Battle Pass has ended."
 
 	"DOTA_EventName_International2020"								"The International 10 Battle Pass"
@@ -31213,7 +31514,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 
 	"DOTA_TI10BP_purchase_pool_contribution"						"25% of all Battle Pass sales go directly to The International 10 prize pool."
 	"DOTA_TI10BP_purchase_pool_contribution_levels"					"25% of all Battle Pass Level sales go directly to The International 10 prize pool."
-	"DOTA_TI10_BattlePass_EndDate_Purchase"							"Last day to purchase Battle Pass Levels is September 19, 2020"
+	"DOTA_TI10_BattlePass_EndDate_Purchase"							"Last day to purchase Battle Pass Levels is October 9, 2020"
 
 	"DOTA_TI10_PortalOutcome_100"									"%s1 summoned 100 Battle Points!"
 	"DOTA_TI10_PortalOutcome_101"									"%s1 summoned 500 Battle Points!"
@@ -31285,7 +31586,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"TI2020_BP_Buy_50_Disc"											"Save 5%"
 	"TI2020_BP_Buy_100_Disc"										"Save 15%"
 	"TI2020_BP_Buy_Included_Levels"									"On included levels"
-	"TI2020_BP_Buy_End_Date"										"Available until <b>September 19th, 2020</b>"
+	"TI2020_BP_Buy_End_Date"										"Available until <b>October 9th, 2020</b>"
 	   
 	"TI2020_BP_Buy_Gifting_Title"									"The Gift of Battle Pass"
 	"TI2020_BP_Buy_Gifting_SubTitle"								"Gift Battle Passes to Unlock Rewards"
@@ -31612,6 +31913,21 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"LoadoutSlot_Streak_Effect"										"Kill Streak Effects"
 	"streak_effect"													"Kill Streak Effect"
 
+	//Kill global equip page
+	"DOTA_GlobalItems_KillEffects"									"Kill Effects"
+	"DOTA_Armory_Category_KillEffects"								"Kill Effects"
+	"LoadoutSlot_Kill_Effect"										"Kill Effects"
+	"kill_effect"													"Kill Effect"
+
+	//Death global equip page
+	"DOTA_GlobalItems_DeathEffects"								"Death Effects"
+	"DOTA_Armory_Category_DeathEffects"							"Death Effects"
+	"LoadoutSlot_Death_Effect"										"Death Effects"
+	"death_effect"													"Death Effect"
+
+	//Diretide Cosmetics equip page
+	"DOTA_GlobalItems_Diretide"										"Diretide Seasonal Effects"
+	"DOTA_Armory_Category_Diretide_2020"							"Diretide 2020"
 
 	//WRAITH KING ARCANA
 	"Debut_Arcana_Wraith_King_Intro" 								"WRAITH KING <font color='#ADE55C'>ARCANA</font> BUNDLE" 
@@ -31720,6 +32036,26 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"Debut_Arcana_QueenOfPain_Feature_6_Title" 						"<span class='bullettitle'>Unlockable Second Style</span>"
 	"Debut_Arcana_QueenOfPain_Feature_6_Desc" 						"Torment 1000 enemies with Sonic Wave in victories to unlock the <i>Royal Decree</i> alternate style."
 
+	// PUDGE PERSONA
+
+	"Debut_Pudge_Persona_Level"									"Battle Pass Level 255 Reward"
+	"Debut_Pudge_Persona_Subtitle"								"New Persona for Pudge"
+
+	"Debut_Pudge_Persona_Lore"									"Feared most amongst the fluff-stuffed denizens of the toybox, The Toy Butcher stalks the corners and shadows of the bin, always on the hunt for his next kill. Every toy knows that once the butcher gets his hook in you, your stuffing and your life are forfeit—like as not to be left strewn about the lanes as the plushy monster jaunts happily away from your lonely, ragged remains."
+	
+	"Debut_Pudge_Persona_Feature_1_Title" 						"<span class='bullettitle'>All-new Model</span>"
+	"Debut_Pudge_Persona_Feature_1_Desc" 						"This Persona completely replaces the original model and character for Pudge with a fuzzy likeness just taking his first steps into the wonderful world of butchery."
+
+	"Debut_Pudge_Persona_Feature_2_Title" 						"<span class='bullettitle'>Custom Animations</span>"
+	"Debut_Pudge_Persona_Feature_2_Desc" 						"As much as he wishes otherwise, The Toy Butcher isn't made of meat, so he has a completely new set of animations befitting his epic fluff."
+
+	"Debut_Pudge_Persona_Feature_3_Title" 						"<span class='bullettitle'>Custom Hero Assets</span>"
+	"Debut_Pudge_Persona_Feature_3_Desc" 						"Includes an all-new Hero Portrait, Topbar Portrait, Ability Icons, and Minimap Icon."
+
+	"Debut_Pudge_Persona_Feature_4_Title" 						"<span class='bullettitle'>800+ new Persona-exclusive voice lines</span>"
+	"Debut_Pudge_Persona_Feature_4_Desc" 						"The Toy Butcher has a completely new voice performance with over 800 lines of dialogue."
+
+
 	// ANTI-MAGE PERSONA
 	
 	"Debut_AM_Wei_Persona_Level"								"Battle Pass Level 305 Reward"
@@ -31741,6 +32077,50 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"Debut_AM_Wei_Persona_Feature_4_Title" 						"<span class='bullettitle'>900+ new Persona-exclusive voice lines</span>"
 	"Debut_AM_Wei_Persona_Feature_4_Desc" 						"Wei has a completely new voice performance with over 900 lines of dialogue."
 
+	// WINDRANGER ARCANA
+	
+	"Debut_WR_Arcana_Level"										"Battle Pass Level 575 Reward"
+	"Debut_WR_Arcana_Subtitle"									"New Arcana Bundle for Windranger"
+
+	"Debut_WR_Arcana_Lore"										"The mysteries of her birth had always enchanted Lyralei and her adopted family. But as she grew, and her strange connection with the guardian wind became ever stronger, an unease about her origins began to take hold. And though she thought to run from it, her headlong path led only to the discovery of a difficult truth — that her village and blood kin had been destroyed by wind elementals on a night of righteous reckoning, and that such destruction was necessary to reclaim her as one of their own."
+	"Debut_WR_Arcana_Feature_1_Title" 							"<span class='bullettitle'>All-new Model</span>"
+	"Debut_WR_Arcana_Feature_1_Desc" 							"Windranger's entire model, items, and loadout pedestal have transformed to evoke the power of the guardian wind."
+
+	"Debut_WR_Arcana_Feature_2_Title" 							"<span class='bullettitle'>Custom Animations & Effects</span>"
+	"Debut_WR_Arcana_Feature_2_Desc" 							"Features an all-new animation set, sound effects, Focus Fire damage counter, a custom-designed channel bar, new ambient wind effects for both styles, additions to base and Immortal effects for her abilities, and new death effects for both Windranger and enemy heroes she takes down."
+
+	"Debut_WR_Arcana_Feature_3_Title" 							"<span class='bullettitle'>Custom Hero Assets</span>"
+	"Debut_WR_Arcana_Feature_3_Desc" 							"Includes an all-new Hero Portrait, Topbar Portrait, and a Minimap Icon."
+
+	"Debut_WR_Arcana_Feature_4_Title" 							"<span class='bullettitle'>500+ new Arcana-exclusive voice lines</span>"
+	"Debut_WR_Arcana_Feature_4_Desc" 							"Compass of the Rising Gale adds over 500 new voice lines to Lyralei's repertoire, along with new performances of all her old favorites."
+
+	"Debut_WR_Arcana_Feature_Minigame_Title"  					"<span class='bullettitle'>Unlockable Second Style</span>"
+	"Debut_WR_Arcana_Feature_Minigame_Desc"  					"Rack up 2,500,000 damage using Focus Fire to kill enemies and unlock the <i>Reflections of the Gale</i> alternate style."
+	"Debut_Windrunner_ViewProgress"								"View Progress"
+
+	"DOTA_WindrunnerArcana_ArcanaProgress_Label"					"Arcana Progress"
+	"DOTA_WindrunnerArcana_ArcanaProgress_Title"					"{g:dota_item_name:arcana_item_def}"	
+
+	"DOTA_WindrunnerArcana_ArcanaProgress_ScoreRemaining"			"{d:score_remaining}"
+	"DOTA_WindrunnerArcana_ArcanaProgress_ScoreRemainingDesc"		"Focus Fire damage remaining"
+	"DOTA_WindrunnerArcana_ArcanaProgress_Score"					"{s:current_score}"
+	"DOTA_WindrunnerArcana_ArcanaProgress_DamageDealt"				"Damage Dealt"
+	"DOTA_WindrunnerArcana_ArcanaProgress_Description"				"Deal {d:unlock_value} damage to enemies that are killed while under the effect of Focus Fire."
+	"KillEaterEventType_Windrunner_ArcanaProgress"					"Damage dealt to enemies killed during Focus Fire."
+
+	"DOTA_WindrunnerArcana_Hud_ProgressLabel"						"Focus Fire Damage"
+	"DOTA_WindrunnerArcana_Hud_PersonaLabel"						"{g:dota_player_name:nh:nc:nt:target_player_id}"
+	"DOTA_WindrunnerArcana_Hud_DamageDealt"							"Focus Fire Damage"
+	"DOTA_WindrunnerArcana_Hud_AddedDamage"							"Added to Total"
+	"DOTA_WindrunnerArcana_Hud_TargetHealth"						"{d:target_hp} HP"
+	"DOTA_WindrunnerArcana_Hud_TargetHealthDescription"				"Target Health"
+	"DOTA_WindrunnerArcana_Hud_Success"								"Kill Achieved!"
+	"DOTA_WindrunnerArcana_Hud_Failure"								"Failure"
+	"DOTA_WindrunnerArcana_Hud_FocusFireTarget"						"Focus Fire Target"
+
+	"DOTA_Style_Windrunner_Arcana_Style0"		"Compass of the Rising Gale"
+	"DOTA_Style_Windrunner_Arcana_Style1"		"Reflections of the Gale"
 
 	//CAVERN CRAWL SET STYLES
 	
@@ -32632,9 +33012,15 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_PlusSeasonAchievement_WinCoreMatches_Name"				"Win {d:achievement_quantity} Matches as Mid, Offlane, or Safe Lane."
 	"DOTA_PlusSeasonAchievement_WinCoreMatches_Description"			"Win matches as a Mid, Offlane, or Safe Lane."
 	"DOTA_PlusSeasonAchievement_WinCoreMatches_Claim_Name"			"Achievement: Win Matches as Mid, Offlane, or Safe Lane."
+
 	"DOTA_PlusSeasonAchievement_WinSupportMatches_Name"				"Win {d:achievement_quantity} Matches as a Support or Hard Support."
 	"DOTA_PlusSeasonAchievement_WinSupportMatches_Description"		"Win matches as a Support or Hard Support."
 	"DOTA_PlusSeasonAchievement_WinSupportMatches_Claim_Name"		"Achievement: Win Matches as a Support or Hard Support"
+
+	"DOTA_PlusSeasonAchievement_WinMatchMVP_Once_Name"				"Win Match MVP 1 Time"
+	"DOTA_PlusSeasonAchievement_WinMatchMVP_Name"					"Win Match MVP {d:achievement_quantity} Times"
+	"DOTA_PlusSeasonAchievement_WinMatchMVP_Description"			"Win Match MVP"
+	"DOTA_PlusSeasonAchievement_WinMatchMVP_Claim_Name"				"Achievement: Win Match MVP"
 
 	"DOTA_PlusSeason_Season3_Name" "Season 3"
 	"DOTA_PlusSeason_Season3_Quests" "Season 3 Quests"
@@ -32941,6 +33327,10 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_TI10_Collectors_Cache_Title"					"TI10 Collector's Cache"
 	"DOTA_TI10_Collectors_Cache_Desc"					"18 new hero sets as decided by community vote. Open treasures to earn up to 36 Battle Pass levels."
 
+	"DOTA_TI10_Collectors_Cache2_Title"					"TI10 Collector's Cache II"
+	"DOTA_TI10_Collectors_Cache2_Desc"					"Open treasures to earn up to 34 Battle Pass levels."
+	"DOTA_TI10_Collectors_Cache_Badge34"					"34"
+
 	"DOTA_Collectors_Cache_Vote_Title"					"Collector's Cache Vote"
 	"DOTA_Collectors_Cache_Vote_Desc"					"Vote on your favorite sets to help choose which entries make it into this year's collection."
 	"DOTA_Collectors_Cache_Vote_Loading"				"Loading Vote Information..."
@@ -32982,6 +33372,22 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_TI10_CollectorsCache_Treasure_1"				"1 Treasure"
 	"DOTA_TI10_CollectorsCache_Treasure_2"				"8 Treasures"
 	"DOTA_TI10_CollectorsCache_Treasure_3"				"15 Treasures"
+
+
+	"DOTA_SplashAd_TI10_CollectorsCache_2_Title" 			"The International 2020 Collector's Cache 2"
+	"DOTA_SplashAd_TI10_CollectorsCache_2_Exclusive_Text" 	"Available now for a limited time, the Collector's Cache features 14 exclusive item sets and the chance for 3 bonus rare item sets."
+	"DOTA_SplashAd_TI10_CollectorsCache_2_Alt_Header" 		"Earn up to 34 Battle Levels"
+	"DOTA_SplashAd_TI10_CollectorsCache_2_Alt_Text" 			"Open 1, 7, and 14 treasures for bonus rewards."
+
+
+
+	"DOTA_TI10_CollectorsCache_2_HeaderText"				"Earn 34 Bonus Battle Pass Levels"
+	"DOTA_TI10_CollectorsCache_2_SubText"					"Open treasures to earn up to <span class=\"levels\">34 Battle Pass Levels.</span>"
+
+	"DOTA_TI10_CollectorsCache_2_Treasure_1"				"1 Treasure"
+	"DOTA_TI10_CollectorsCache_2_Treasure_2"				"7 Treasures"
+	"DOTA_TI10_CollectorsCache_2_Treasure_3"				"14 Treasures"
+
 
 	"DOTA_EconItemSet_Tooltip_Exclusive_TI10_Collectors_Cache" 	"Cache items are only available for 30 days after initial release, and then will never be available afterwards."
 
@@ -33115,6 +33521,9 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 
 	"DOTA_Plus_Autumn_Sets_Title"							"New Plus Exclusive Sets"
 	"DOTA_Plus_Autumn_Sets_Desc"							"All-new item sets for Lion, Slardar, and Crystal Maiden to the Dota Plus Rewards section"
+
+	"DOTA_Plus_Fall2020_Update_Title"						"Fall 2020 Season Update"
+	"DOTA_Plus_Fall2020_Update_Desc"						"A new season of quests, Guilds, a limited-time Treasure, and more have been added to Dota Plus!"	
 
 	"DOTA_Plus_Autumn_Assitant_Title"						"New Assistant Features"
 	"DOTA_Plus_Autumn_Assitant_Desc"						"Plus subscribers can now use the Avoid Player feature, friends and foes suggestor, Ward Suggestions, and other assistant features."
@@ -33325,6 +33734,8 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_Guild_Role_Modify_Error_Header"				"Could Not Modify the Guild Role"
 	"DOTA_Guild_Leave_Error_Header"						"Could Not Leave the Guild"
 
+	"DOTA_GuildLeaderboard_ClaimError"					"Could Not Claim Rewards"
+
 	// Guild dialog errors
 	"DOTA_Guild_Result_InternalError"					"An internal error has occurred. Please try again later."
 	"DOTA_Guild_Result_Success"							"Success"
@@ -33374,10 +33785,12 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_Guild_Result_RegionInvalid"					"The region specified for the guild is not valid. Please set a valid guild region and try again."
 	"DOTA_Guild_Result_ReportFlagsInvalid"				"The selected report reason is not valid.  Please try again."
 	"DOTA_Guild_Result_ReportSuccess"					"Your report has been submitted."
-	"DOTA_Guild_Result_Create_DoesNotOwnEvent"			"You must own the Battle Pass to create a guild."
+	"DOTA_Guild_Result_Create_DoesNotOwnEvent"			"You must be a Dota Plus subscriber to create a guild."
 	"DOTA_Guild_Result_DuplicateContract"				"You have already selected a similar Contract.  Please select a different Contract."
 	"DOTA_Guild_Result_TooManyInvites"					"Your guild has too many pending invites."
 	"DOTA_Guild_Result_Blocked"							"Your account is prohibited from performing this action."
+	"DOTA_Guild_Result_RewardsDoesNotQualify"			"You joined the guild too recently to qualify for leaderboard rewards."
+	"DOTA_Guild_Result_RewardsAlreadyClaimed"			"You have already claimed the leaderboard rewards for the week."
 
 	"DOTA_Guild_DemoteSelf_Header"						"Demote Yourself?"
 	"DOTA_Guild_DemoteSelf_Body"						"Are you sure you want to demote yourself?  This may cause you to lose the ability to use some guild features."
@@ -33394,6 +33807,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_Guild_Feed_ContractsComplete"					"Guild completed {d:percent_as_uint}% of the daily contracts."
 	"DOTA_Guild_Feed_ChallengeComplete"					"Guild completed a challenge."
 	"DOTA_Guild_Feed_LevelUp"							"Guild is now level {d:guild_level}."
+	"DOTA_Guild_Feed_WeeklyLeaderboard"					"Guild was {d:percentile} percentile with Rank {d:rank} for the week."
 
 	"DOTA_Guild_Context_KickPlayer"						"Kick Player"
 	"DOTA_Guild_Context_LeaveGuild"						"Leave Guild"
@@ -33401,14 +33815,31 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_Guilds_HomePage"								"Home"
 	"DOTA_Guilds_MembersPage"							"Members"
 	"DOTA_Guilds_ContractsPage"							"Contracts"
+	"DOTA_Guilds_LeaderboardsPage"						"{s:guild_region_name} Leaderboard"
 	"DOTA_Guilds_RewardsPage"							"Rewards"
 	"DOTA_Guilds_DetailsPage"							"Details"
+
+	"DOTA_Guilds_Tier_Name"								"{s:tier_name} Tier"
+	"DOTA_Guilds_Tier_Rewards"							"%s1 Tier Rewards"
+	"DOTA_Guilds_Tier_Percentile"						"%s1 PERCENTILE"
+	"DOTA_Guilds_Tier_DateRange"						"{t:s:start_timestamp} - {t:s:end_timestamp}"
+	"DOTA_Guilds_Tier_CurrentStanding"					"current standing"
+	"DOTA_Guilds_Tier_ViewAllRewards"					"View All Rewards"
+	"DOTA_Guilds_Tier_LeaderboardTime"					"Reward Tier is based on your Guild Percentile from {t:s:start_timestamp} to {t:s:end_timestamp}"
+	"DOTA_Guilds_Tier_LeaderboardNext"					"Reward Tier will be updated with the Weekly Leaderboard on {t:s:end_timestamp}"
+	"DOTA_GuildTier_Formatted"							"%s1 Tier"
+	"DOTA_GuildTierRewards_Formatted"					"%s1 Tier Rewards"
+	"DOTA_GuildTierRewards_PercentileRange"				"{D:o:from_percentile} - {D:o:to_percentile} PERCENTILE"
+
+	"DOTA_GuildLeaderboard_CurrentRegionLeaderboard"	"{s:region} Leaderboard"
+	"DOTA_GuildLeaderboard_LeaderboardDataNotAvailable"				"No Data Available"
+	"DOTA_GuildLeaderboard_NextWeeklyUpdate"						"Next Weekly Update: {t:t:s:weekly_refresh_timestamp}"
 
 	"DOTA_Guilds_Tooltip_GuildLeader"					"Guild Leader"
 	"DOTA_Guilds_Tooltip_LeaderboardLeader"				"Top Earner"
 	"DOTA_Guilds_Tooltip_ReportGuild"					"Report Guild"
 
-	"DOTA_Guilds_Home_GuildLevel" 						"Guild Level"
+	"DOTA_Guilds_Home_GuildTier" 						"Guild Tier"
 	"DOTA_Guilds_Home_NextRewards" 						"Next Reward"
 	"DOTA_Guilds_Home_MemberCount"						"Members {d:member_count} / {d:max_members}"
 	"DOTA_Guilds_Home_MyActiveContracts"				"My Contracts"
@@ -33418,6 +33849,9 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_Guilds_Home_GuildChallenge_RewardLabelGP"		"Guild Points"
 	"DOTA_Guilds_Home_GuildChallenge_RewardLabelSSG"	"Sideshop Gold"
 	"DOTA_Guilds_Home_GuildChallenge_RequirementLabel"      "Must party with 3+ guild members"
+
+	"DOTA_GuildPoints"									"Guild Points"
+	"DOTA_GuildPointsIncrease"							"+{d:guild_points}GP"
 
 	"DOTA_Guilds_Countdown_Refreshing"					"Refreshing"
 
@@ -33429,8 +33863,16 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_GuildContracts_HelpText"						"Drag and Drop contracts from the Contract Board to your available slots."
 	"DOTA_GuildContracts_Reward"						"Reward"
 	"DOTA_GuildContracts_SlotUnlockLevel"				"Unlocked at Level {d:slot_unlock_level}"
+	"DOTA_GuildContracts_SlotUnlockPlus"				"Unlocked with <strong><a class=\"PurchasePlusLink\" href=\"event:DOTAShowPlusPurchasePage()\">Dota+</a></strong>"
+	
 	"DOTA_GuildContracts_Info_Header"					"Guild Contracts"
-	"DOTA_GuildContracts_Info_Description"				"The Contract Board refreshes daily with new contracts. Contracts are rated 1-3 stars depending on their difficulty.<br><br> Selecting a contract places it into a slot on your account and locks it on the Contract Board for other guild members.  Once assigned to a slot, contracts can not be changed until the next daily reset. <br><br> Complete contracts to earn Guild Points for your guild and Battle Points for yourself. Contracts can only be completed if you fulfill the requirements and win the match.  Rewards for contracts are based on their star difficulty and are listed in the table below:"
+	"DOTA_GuildContracts_Info_Description"				"The Contract Board refreshes daily with new contracts. Contracts are rated 1-3 stars depending on their difficulty.<br><br> Selecting a contract places it into a slot on your account and locks it on the Contract Board for other guild members.  Once assigned to a slot, contracts can not be changed until the next daily reset. <br><br> Complete contracts to earn Guild Points for your guild and Shards for yourself. Contracts can only be completed if you fulfill the requirements and win the match.  Rewards for contracts are based on their star difficulty and are listed in the table below:"
+
+	"DOTA_GuildTier_Info_Header"						"Guild Tier"
+	"DOTA_GuildTier_Info_Description"					"
+Guilds can earn points by <span class=\"strong\">playing matches</span>, and via <span class=\"strong\">guild contracts</span> and <span class=\"strong\">challenges</span>.<br><br>
+
+Each region has a live leaderboard that will be used to calculate the guild's tier at the end of the week. A guild's tier grants all guild members special rewards."
 
 	"DOTA_GuildChallenges_Info_Header"					"Guild Challenges"
 	"DOTA_GuildChallenges_Info_Description1"			"Every week your guild has a limited number of challenges available which can award <span class='GuildPoints'>Guild Points</span>.<br><br>  Once a Guild Challenge is completed, a new challenge is immediately available until you reach the limit for the week.<br><br>Guild Challenge progress is only awarded when playing in a party of 3 or more guild members."
@@ -33519,7 +33961,9 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_GuildPerk_UnlockContractSlot"					"Unlock a Daily Guild Contract Slot"
 	"DOTA_GuildPerk_BonusArcanaVotes"					"{d:perk_value} Extra Arcana Votes Per Week"
 	"DOTA_GuildPerk_BannerUpgrade"						"Guild Banner Upgrade"
+	"DOTA_GuildPerk_GuildTagDecoration"					"Guild Tag Decoration"
 	"DOTA_GuildPerk_Emoticon"							"Unlock Emoticon {s:emoticon_text}"
+	"DOTA_GuildPerk_Spray"								"Unlock Spray"
 	"DOTA_GuildPerk_ContractQuantityIncrease"			"{d:perk_value}% More Available Contracts Per Day"
 	"DOTA_GuildPerk_BonusTips"							"{d:perk_value} Extra Tips Per Week"
 	"DOTA_GuildPerk_BonusChallenges"					"{d:perk_value} Extra Guild Challenges Per Week"
@@ -33532,6 +33976,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 
 	"DOTA_Guilds_GuildDetails_Members"					"Members"
 	"DOTA_Guilds_GuildDetails_GuildLevel"				"Guild Level"
+	"DOTA_Guilds_GuildDetails_GuildTier"				"Guild Tier"
 	"DOTA_Guilds_GuildDetails_Guild_Details"		"Guild Details"
 	"DOTA_Guilds_GuildDetails_Guild_Name"			"Guild Name"
 	"DOTA_Guilds_GuildDetails_Guild_Tag"			"Guild Tag"
@@ -33622,6 +34067,9 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"TI10_EventGame_Frontpage_Feature3"								"Custom out-of-game skill tree"
 	"TI10_EventGame_Frontpage_Feature4"								"Ascending Difficulties to Unlock"
 	"TI10_EventGame_Frontpage_Button"								"Learn More"
+	"TI10_EventGame_Frontpage_NewUpdate"								"Aghanim's Labyrinth Update"
+	"TI10_EventGame_Frontpage_Heroes"								"New Playable Heroes"
+	"TI10_EventGame_Frontpage_Tier5"								"New Difficulty Level"
 
 	"TI10_EventGame_ViewEventDetails"								"View Event Details"
 
@@ -33636,6 +34084,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"TI10_EventGame_AscensionName_1"								"Magician"
 	"TI10_EventGame_AscensionName_2"								"Sorcerer"
 	"TI10_EventGame_AscensionName_3"								"Grand Magus"
+	"TI10_EventGame_AscensionName_4"								"Apex Mage"
 	"TI10_EventGame_ChallengeName"									"Challenge Mode"
 	"TI10_EventGame_ChallengeName_Title"							"Aghanim's Trial"
 	"TI10_EventGame_ChallengeName_Countdown"						"{t:d:t:T:EventGameCountdownTime}"
@@ -33659,6 +34108,8 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_International2020_Achievement_EventGameWinAsc2_Description"		"Defeat Aghanim in Sorcerer Level Aghanim's Labyrinth"
 	"DOTA_International2020_Achievement_EventGameWinAsc3_Name"				"Aghanim The Proud"
 	"DOTA_International2020_Achievement_EventGameWinAsc3_Description"		"Defeat Aghanim in Grand Magus Level Aghanim's Labyrinth"
+	"DOTA_International2020_Achievement_EventGameWinAsc4_Name"				"The Apex Mage"
+	"DOTA_International2020_Achievement_EventGameWinAsc4_Description"		"Defeat Aghanim in Apex Mage Level Aghanim's Labyrinth"
 
 	"dota_chatwheel_label_ti10eventgame_reward1"		"Let us skirmish!"
 	"dota_chatwheel_message_ti10eventgame_reward1"		"Friends, let us skirmish!"
@@ -33668,6 +34119,8 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"dota_chatwheel_message_ti10eventgame_reward3"		"Now for the ol' razzle-dazzle!"
 	"dota_chatwheel_label_ti10eventgame_reward4"		"BOCK BOCK BOCK!"
 	"dota_chatwheel_message_ti10eventgame_reward4"		"BOCK BOCK BOCK! That is what you sound like!"
+	"dota_chatwheel_label_ti10eventgame_reward5"		"Ahh ha ha ha hoo, let's do this!"
+	"dota_chatwheel_message_ti10eventgame_reward5"		"Ahhhh ha ha ha ha ha ha ha ha hoo, let's do this!"
 
 	"dota_page_match_details_ti10_event_game_store"		"Purchase Blessings"
 
@@ -33682,9 +34135,25 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"dota_chatwheel_header_international2020_event_game_reward"			"The International 10 - Aghanim's Labyrinth"
 	"dota_chatwheel_header_international2020_event_game_reward_desc"	"Rewards granted for defeating Aghanim in his Labyrinth. These chat lines expire at the end of the Battle Pass."
 
+	"dota_chatwheel_header_diretide_sounds"							"Diretide 2020 Sounds"
+	"dota_chatwheel_header_diretide_sounds_desc"					"These are exclusive rewards for the duration of Diretide 2020."
+
+	"dota_chatwheel_header_diretide_sprays"							"Diretide 2020 Sprays"
+	"dota_chatwheel_header_diretide_sprays_desc"					"These are exclusive sprays for the duration of Diretide 2020."	
+
+	"dota_chatwheel_header_diretide_announcer_sounds"				"Diretide 2020 Announcer Sounds"
+	"dota_chatwheel_header_diretide_announcer_sounds_desc"			"These are exclusive Chat wheel sounds for the duration of Diretide 2020."
+
 	"DOTA_TI10_EventGame_CannotAffordBlessing_Error"				"Not Enough Arcane Fragments"
 	"DOTA_TI10_EventGame_CannotAffordBlessing_Body"					"You do not have enough Arcane Fragments to purchase this blessing."
 	"DOTA_TI10_EventGame_BlessingCost"								"{d:blessing_cost}"
+
+	"DOTA_TI10_Frontpage_Immortal_2_Treasure_Name"					"TI10 Immortal Treasure II"
+	"DOTA_TI10_Frontpage_Immortal_2_Treasure_Desc"					"New Immortal items available now with <br> The TI10 Immortal Treasure II"
+
+	"DOTA_TI10_Frontpage_Immortal_3_Treasure_Name"					"TI10 Immortal Treasure III"
+	"DOTA_TI10_Frontpage_Immortal_3_Treasure_Desc"					"New Immortal items available now with <br> The TI10 Immortal Treasure III"
+
 
 	"DOTA_TI10_EventGame_ReceiveBlessings"							"Receive Blessings"
 	"DOTA_TI10_EventGame_BlessingsTitle"							"Blessings"
@@ -33801,7 +34270,6 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 
 	// TI10 -- don't release until Agh goes live!
 	"DOTA_TI10_EVENTGAME_TITLE"											"Aghanim's Labyrinth"
-	"DOTA_EventGameName_International2020" 								"Aghanim's Labyrinth"
 
 	"DOTA_TI10_BattlePass_Level150Reward_Bonus"						"Aghanim's Labyrinth:<br>Point Cap Raised to 3000"
 	"DOTA_TI10_BattlePass_Level250Reward_Bonus"						"Aghanim's Labyrinth:<br>Point Cap Raised to 4000"
@@ -34086,7 +34554,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 
 
 	"DOTA_Tooltip_ability_aghsfort_special_winter_wyvern_splinter_blast_vacuum"					"Cool and Collected"
-	"DOTA_Tooltip_ability_aghsfort_special_winter_wyvern_splinter_blast_vacuum_Description"		"Splinter Blast pulls secondary targets towards the initial target."
+	"DOTA_Tooltip_ability_aghsfort_special_winter_wyvern_splinter_blast_vacuum_Description"		"Splinter Blast pulls secondary targets towards the initial target and applies the current level of Arctic Burn debuff."
 
 	"DOTA_Tooltip_ability_aghsfort_special_winter_wyvern_splinter_blast_main_target_hit"					"Chilled To The Bone"
 	"DOTA_Tooltip_ability_aghsfort_special_winter_wyvern_splinter_blast_main_target_hit_Description"		"After the secondary targets are hit, the main target is struck by returning splinters from each target for %value%%% of Splinter Blast's damage."
@@ -34219,7 +34687,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_Tooltip_ability_aghsfort_special_magnataur_skewer_heal_Description"			"Magnus heals allies hit for %value%%% of skewer's damage. The allies are not moved."
 
 	"DOTA_Tooltip_Ability_aghsfort_special_magnataur_skewer_shockwave"				"Blast Off"
-	"DOTA_Tooltip_Ability_aghsfort_special_magnataur_skewer_shockwave_Description"	"Magnus sends out the current level of Shockwave when he arrives at his skewer destination."
+	"DOTA_Tooltip_Ability_aghsfort_special_magnataur_skewer_shockwave_Description"	"Magnus attacks each enemy as he Skewers them."
 
 	"DOTA_Tooltip_Ability_aghsfort_special_magnataur_empower_lifesteal"						"Vampower"
 	"DOTA_Tooltip_ability_aghsfort_special_magnataur_empower_lifesteal_Description"			"Empowered attacks now have %value%%% lifesteal."
@@ -34242,6 +34710,8 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 
 	"DOTA_Tooltip_Ability_aghsfort_special_magnataur_reverse_polarity_steroid"						"Extra Polarity"
 	"DOTA_Tooltip_ability_aghsfort_special_magnataur_reverse_polarity_steroid_Description"			"After casting Reverse Polarity, Magnus's movement speed is increased by %move_speed_percent%%% and his attack speed is increased by %attack_speed% for %buff_duration% seconds."
+	"DOTA_Tooltip_modifier_aghsfort_magnataur_reverse_polarity_steroid"								"Extra Polarity"
+	"DOTA_Tooltip_modifier_aghsfort_magnataur_reverse_polarity_steroid_Description"					"Gaining bonus move and attack speed after using Reverse Polarity."
 
 	"aghsfort_magnataur_shockwave_flat_damage"					"+{s:value} {s:ability_name} Damage"
 	"aghsfort_magnataur_shockwave_pct_damage"					"+{s:value}% {s:ability_name} Damage"
@@ -34340,7 +34810,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_Tooltip_ability_aghsfort_special_phantom_assassin_phantom_strike_mastery" "Phantom Strike Mastery"
 	"DOTA_Tooltip_ability_aghsfort_special_phantom_assassin_phantom_strike_damage_reduction" "Phantom Strike Damage Reduction"
 
-	"DOTA_Tooltip_ability_aghsfort_special_phantom_assassin_phantom_strike_buff_allies_Description" "When Phantom Assassing strikes to an ally, she grants them all Phantom Strike bonuses"
+	"DOTA_Tooltip_ability_aghsfort_special_phantom_assassin_phantom_strike_buff_allies_Description" "When Phantom Assassin strikes to an ally, she grants them all Phantom Strike bonuses"
 	"DOTA_Tooltip_ability_aghsfort_special_phantom_assassin_phantom_strike_mastery_Description" "Phantom Strike is immediate, buff duration increased by %bonus_duration% seconds, and cast range increased by %bonus_range%, evasion increased by %bonus_evasion%."
 	"DOTA_Tooltip_ability_aghsfort_special_phantom_assassin_phantom_strike_damage_reduction_Description" "Enemies hit by Phantom Strike deal %damage_reduction_pct%%% less damage."
 
@@ -34432,7 +34902,10 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_thunder_strike_interval_upgrade_Description"	"Interval between strikes reduced by %value%%%. Amount of strikes increased by 3."
 
 	"DOTA_Tooltip_ability_aghsfort_special_disruptor_thunder_strike_mana_restore"					"Mana Storm"
-   	"DOTA_Tooltip_ability_aghsfort_special_disruptor_thunder_strike_mana_restore_Description"		"Every strike restores %restore_amount%%% of max Mana to allies in a %restore_radius% radius around the target."
+   	"DOTA_Tooltip_ability_aghsfort_special_disruptor_thunder_strike_mana_restore_Description"		"Every strike restores %restore_amount%%% of max Mana to allies in a %restore_radius% radius around the target. Each strike also increases Disruptor's Intelligence by %int_increase_amount% for %int_increase_duration% seconds"
+
+   	"DOTA_Tooltip_modifier_aghsfort_special_disruptor_thunder_strike_int_increase_counter"		"Mana Storm"
+   	"DOTA_Tooltip_modifier_aghsfort_special_disruptor_thunder_strike_int_increase_counter_Description"		"Intelligence increased by %dMODIFIER_PROPERTY_TOOLTIP%."
 
    	"DOTA_Tooltip_ability_aghsfort_special_disruptor_thunder_strike_crit_chance"					"Critical Strike"
    	"DOTA_Tooltip_ability_aghsfort_special_disruptor_thunder_strike_crit_chance_Description"		"Every strike has a %crit_chance%%% chance to crit, dealing %crit_pct%%% damage."
@@ -34549,6 +35022,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_Tooltip_ability_aghsfort_snapfire_lil_shredder_damage"		"FIXED DAMAGE PER SHOT:"
 	"DOTA_Tooltip_ability_aghsfort_snapfire_lil_shredder_attack_speed_slow_per_stack"	"ATTACK SLOW PER STACK:"
 	"DOTA_Tooltip_ability_aghsfort_snapfire_lil_shredder_slow_duration"	"ATTACK SLOW DURATION:"
+	"DOTA_Tooltip_ability_aghsfort_snapfire_lil_shredder_buffed_attacks"	"ATTACK COUNT:"
 
 	"DOTA_Tooltip_modifier_aghsfort_snapfire_lil_shredder_buff"				"Lil' Shredder"
 	"DOTA_Tooltip_modifier_aghsfort_snapfire_lil_shredder_buff_Description"	"Attack speed increased by %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT% and applying attack speed reduction to the target on hit."
@@ -34601,7 +35075,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	    "DOTA_Tooltip_ability_aghsfort_special_snapfire_scatterblast_double_barrel_Description"	"Scatterblast has %value% charges."
 
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_scatterblast_knockback"						"Stopping Power"
-	"DOTA_Tooltip_ability_aghsfort_special_snapfire_scatterblast_knockback_Description"			"Scatterblast knocks enemies hit %value% units back."
+	"DOTA_Tooltip_ability_aghsfort_special_snapfire_scatterblast_knockback_Description"			"Scatterblast knocks enemies hit %value% units back, and always deals its point blank damage to all enemies."
 
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_scatterblast_fullrange_pointblank"				"Longer Barrels"
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_scatterblast_fullrange_pointblank_Description"	"Scatterblast does it's point blank damage to all enemies hit, regardless of distance."
@@ -34610,9 +35084,9 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_scatterblast_barrage_Description"	"Along with the main blast, Snapfire fires two additional volleys of Scatterblast to her sides."
 
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_multicookie"						"Baker's Dozen"
-	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_multicookie_Description"		"Snapfire gives Firesnaps to all targets in a %value% area around her main target. Only the main target hops forward, secondary targets hop in place."
+	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_multicookie_Description"		"Snapfire gives Firesnaps to all targets in a %value% area around her main target. Only the main target hops forward, secondary targets hop in place.  The initial cookie flies %projectile_speed_pct%%% faster."
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_enemytarget"						"Raisin Firesnaps"
-	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_enemytarget_Description"			"Firesnaps can now be given to enemies, launching them in the air and damaging them. The enemy that ate the cookie gets damaged twice."
+	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_enemytarget_Description"			"Firesnaps now cause the current level of Mortimer Kiss to be created at the landing destination, and can be fed to enemies, causing them to jump in place."
 
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_allied_buff"						"Freshly Baked"
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_firesnap_cookie_allied_buff_Description"			"Firesnaps give allies %bonus_attack_range% Bonus Attack Range (ranged only) and %bonus_attack_damage% Attack Damage for %buff_duration% seconds."
@@ -34633,7 +35107,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_mortimer_kisses_fire_trail"		"Mortimer Kisses Fire Trail"
 	   
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_mortimer_kisses_autoattack"						"Autocannon"
-	"DOTA_Tooltip_ability_aghsfort_special_snapfire_mortimer_kisses_autoattack_Description"			"When Mortimers Kisses are active, Snapfire blasts enemies within %radius% range with Scatterblast every %fire_rate% seconds."
+	"DOTA_Tooltip_ability_aghsfort_special_snapfire_mortimer_kisses_autoattack_Description"			"When Mortimers Kisses are active, Snapfire blasts enemies within %radius% range with Scatterblast every %fire_rate% second(s)."
 
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_mortimer_kisses_incoming_damage_reduction"		"Safety First"
 	"DOTA_Tooltip_ability_aghsfort_special_snapfire_mortimer_kisses_incoming_damage_reduction_Description"		"When Mortimer Kisses are active, Snapfire takes %damage_reduction%%% less damage"
@@ -34882,14 +35356,17 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_Tooltip_modifier_aghsfort_ursa_earthshock_deep_invis"					"Concealed"
 	"DOTA_Tooltip_modifier_aghsfort_ursa_earthshock_deep_invis_Description"		"This unit is an invisibility state that is not removed by spells and attacks."
 
-	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_apply_fury_swipes"				"Shock and Awe"
-	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_apply_fury_swipes_Description"	"Earthshock applies Fury Swipes to all enemies hit."
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_apply_fury_swipes"				"Digging In"
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_apply_fury_swipes_Description"	"Earthshock applies and has its damage increased by Fury Swipes."
 
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_knockback"				"Cannonball"
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_knockback_Description"	"Earthshock applies %value% knockback and stuns for %value3% seconds."
 
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_miss_chance"				"Blunt Their Claws"
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_miss_chance_Description"	"Earthshock applies %value%%% miss chance."
+
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_overpower_stack"					"Relentless"
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_earthshock_overpower_stack_Description"		"Enemies that die under the Earthshock debuff give Ursa %value% stack(s) of Overpower."
 
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_overpower_crit"					"Torn to Shreds"
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_overpower_crit_Description"		"Overpower attacks do %value%%% critical hits."
@@ -34914,6 +35391,15 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_fury_swipes_armor_reduction"				"Lacerated Armor"
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_fury_swipes_armor_reduction_Description"	"Fury Swipes apply %value% armor reduction per stack."
+
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_fury_swipes_ursa_minor"					"Ursa Minor"
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_fury_swipes_ursa_minor_Description"		"Fury Swipes gains an active component that summons %cubs% invulnerable, uncontrollable Ursa Cubs.  The cubs deal will randomly attack and apply Fury Swipes for Ursa and themselves on nearby enemies, but the cubs receive only %cub_swipes_modifier%%% of the Fury Swipes bonus damage.  Duration: %duration%, Cooldown: %cooldown%, Mana Cost: %mana_cost%."
+
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_enrage_earthshock"					"Rampage"
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_enrage_earthshock_Description"		"An Earthshock is triggered at Ursa's position every %interval% second(s) while Enrage is active."
+
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_fury_swipes_lifesteal"				"Rend"
+	"DOTA_Tooltip_ability_aghsfort_special_ursa_fury_swipes_lifesteal_Description"	"Fury Swipes give Ursa %value%%% Lifesteal / Spell Lifesteal per stack."
 
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_enrage_magic_immunity"				"Protect the Cubs"
 	"DOTA_Tooltip_ability_aghsfort_special_ursa_enrage_magic_immunity_Description"	"Enrage provides magic immunity to allies within %value% radius."
@@ -35005,9 +35491,9 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_Tooltip_ability_aghsfort_sniper_assassinate_damage"				"DAMAGE:"
 	"DOTA_Tooltip_ability_aghsfort_sniper_assassinate_projectile_speed"		"PROJECTILE SPEED:"
 	"DOTA_Tooltip_ability_aghsfort_sniper_assassinate_abilitycastrange"		"CAST RANGE:"
-	"DOTA_Tooltip_ability_aghsfort_sniper_assassinate_abilitycastpoint"		"AIM DURATION:"
 	"DOTA_Tooltip_ability_aghsfort_sniper_assassinate_scepter_stun_duration"	"SCEPTER STUN DURATION:"
 	"DOTA_Tooltip_ability_aghsfort_sniper_assassinate_scepter_cast_point"	"SCEPTER AIM DURATION:"
+	"DOTA_Tooltip_ability_aghsfort_sniper_assassinate_cast_point"			"AIM DURATION:"
 		
 	"DOTA_Tooltip_modifier_aghsfort_sniper_shrapnel_charge_counter"				"Shrapnel Charges"
 	"DOTA_Tooltip_modifier_aghsfort_sniper_shrapnel_charge_counter_Description"	"You may cast Shrapnel whenever there is a charge available."
@@ -35066,13 +35552,13 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_Tooltip_ability_aghsfort_special_sniper_assassinate_buckshot_Description"	"Assassinate hits enemies in a cone behind the main target for %value3%%% of Assassinate's damage."
 
 	"DOTA_Tooltip_ability_aghsfort_special_sniper_assassinate_original_scepter"				"Hipfire"
-	"DOTA_Tooltip_ability_aghsfort_special_sniper_assassinate_original_scepter_Description"	"Reduces Assassinate's aim duration and applies stun to the primary target."
+	"DOTA_Tooltip_ability_aghsfort_special_sniper_assassinate_original_scepter_Description"	"Reduces Assassinate's aim duration by 50%% and applies stun to the target."
 
-	"DOTA_Tooltip_ability_aghsfort_special_sniper_assassinate_killshot_buff"				"Big Game Hunter"
-	"DOTA_Tooltip_ability_aghsfort_special_sniper_assassinate_killshot_buff_Description"	"For each Captain killed with Assassinate, Sniper gains %value% permanent agility. Changes Assassinate's damage type to Pure."
+	"DOTA_Tooltip_ability_aghsfort_special_sniper_assassinate_killshot"				"Big Game Hunter"
+	"DOTA_Tooltip_ability_aghsfort_special_sniper_assassinate_killshot_Description"	"For each Captain killed with Assassinate, Sniper permanently gains %value% Assassinate damage (up to %value2% time(s) per encounter). Changes Assassinate's damage type to Pure."
 
-	"DOTA_Tooltip_modifier_aghsfort_special_sniper_assassinate_killshot_buff"				"Big Game Hunter"
-	"DOTA_Tooltip_modifier_aghsfort_special_sniper_assassinate_killshot_buff_Description"	"Agility gained from killing Captains with Assassinate."
+	"DOTA_Tooltip_modifier_aghsfort_special_sniper_assassinate_killshot"				"Big Game Hunter"
+	"DOTA_Tooltip_modifier_aghsfort_special_sniper_assassinate_killshot_Description"	"Bonus Assassinate damage, earned from killing Captains with Assassinate."
 
 	"aghsfort_sniper_shrapnel_flat_damage"				"+{s:value} {s:ability_name} Damage Per Second"
 	"aghsfort_sniper_shrapnel_flat_radius"				"+{s:value} {s:ability_name} Radius"
@@ -35093,6 +35579,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"aghsfort_sniper_assassinate_percent_mana_cost"		"-{s:value}% {s:ability_name} Mana Cost"
 	"aghsfort_sniper_assassinate_percent_cooldown"		"-{s:value}% {s:ability_name} Cooldown"
 	"aghsfort_sniper_assassinate_projectile_speed"		"+{s:value} {s:ability_name} Projectile Speed"
+	"aghsfort_sniper_assassinate_percent_cast_point"	"{s:value}% {s:ability_name} Aim Duration"
 	//--------------------------------------------------------------------------------------------------------------
 	// SNIPER ABILITIES END
 	//--------------------------------------------------------------------------------------------------------------
@@ -35175,16 +35662,16 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_Tooltip_modifier_aghsfort_special_mars_gods_rebuke_strength_buff"  				"Strong Argument"
 	"DOTA_Tooltip_modifier_aghsfort_special_mars_gods_rebuke_strength_buff_Description"		"Gaining strength for each enemy affected by God's Rebuke."
 
-	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_counter_rebuke"		"Bulwark Counter"
+	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_counter_rebuke"		"Retort"
 	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_healing"		"Bulwark Healing"
 	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_return"		"Bulwark Return"
 	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_spears"		"Bastion"
 	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_soldiers"	"Phalanx"
 
-	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_counter_rebuke_Description"		"A %value%%% chance to counter an attack with the current level of God's Rebuke when attacked from the front"
+	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_counter_rebuke_Description"		"During Active Bulwark, Mars has a %value%%% chance to counter attack with God's Rebuke if attacked from the front."
 	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_healing_Description"		"During active Bulwark, Mars regenerates %value%%% of his Max Health per second."
 	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_return_Description"		"During active Bulwark, Mars deals %value%%% of his attack damage to enemies that are attacking him."
-	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_spears_Description"		"Every %stack_interval% seconds of Bulwark being active, Mars gets an additional charge, up to %stack_limit% total. When Bulwark is turned of, Mars releases a Spear for each charge, in a semi-circle in front of him."
+	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_spears_Description"		"Every %stack_interval% seconds of Bulwark being active, Mars gets an additional charge, up to %stack_limit% total. When Bulwark is turned off, Mars releases a Spear for each charge, in a semi-circle in front of him."
 	"DOTA_Tooltip_ability_aghsfort_special_mars_bulwark_soldiers_Description"	"When activating Bulwark, Mars summons %soldier_count% invulnerable and unmovable soldiers next to him. Soldiers have an attack range of %attack_range_tooltip%, and deal %attack_damage_tooltip% + %bonus_damage_pct%%% of Mars's Base Attack Damage with each hit. Soldiers last for the full duration of Bulwark."
 
 	"DOTA_Tooltip_ability_aghsfort_special_mars_arena_of_blood_fear"		"Arena of Fear"
@@ -35417,7 +35904,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 
 	"DOTA_Tooltip_ability_aghsfort_special_weaver_geminate_attack_splitshot_Description"				"Weaver's additional attack hits an additional %attack_count% targets in Weaver's attack range + %bonus_range%."
 	"DOTA_Tooltip_ability_aghsfort_special_weaver_geminate_attack_applies_swarm_Description"			"Weaver's additional attack attaches the current level of The Swarm to the target."
-	"DOTA_Tooltip_ability_aghsfort_special_weaver_geminate_attack_lifesteal_Description"				"Weaver's additional attack lifesteals %value%%% of the attack."
+	"DOTA_Tooltip_ability_aghsfort_special_weaver_geminate_attack_lifesteal_Description"				"Weaver's additional attack lifesteals %value%%% of the attack, and knocks back the target by %knockback% range."
 	"DOTA_Tooltip_ability_aghsfort_special_weaver_geminate_attack_knockback_Description"				"Weaver's additional attack knocks back the target by %value% range."
 
 	"DOTA_Tooltip_ability_aghsfort_special_weaver_shukuchi_trail_Description"							"Shukuchi leaves a trail behind Weaver that lasts %trail_duration% seconds and deals %damage_pct% of Shukuchi's damage every %burn_interval% seconds. Path radius is %path_radius%."
@@ -35433,7 +35920,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"aghsfort_weaver_the_swarm_percent_manacost"				"-{s:value}% {s:ability_name} Mana Cost"
 	"aghsfort_weaver_the_swarm_percent_cooldown"				"-{s:value}% {s:ability_name} Cooldown"
 	"aghsfort_weaver_the_swarm_flat_damage"						"+{s:value} {s:ability_name} Damage"
-	"aghsfort_weaver_the_swarm_flat_attack_rate"				"{s:value} {s:ability_name} Faster Beetle Attack Rate"
+	"aghsfort_weaver_the_swarm_flat_attack_rate"				"{s:value}% {s:ability_name} Faster Beetle Attack Rate"
 	"aghsfort_weaver_the_swarm_flat_duration"					"+{s:value} {s:ability_name} Duration"
 	"aghsfort_weaver_the_swarm_flat_destroy_attacks"	"+{s:value} {s:ability_name} Attacks to Destroy"
 	"aghsfort_weaver_the_swarm_flat_count"				"+{s:value} {s:ability_name} Swarm Beetles"
@@ -35510,6 +35997,9 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_Tooltip_ability_aghsfort_omniknight_guardian_angel_radius"							"RADIUS:"
 	"DOTA_Tooltip_ability_aghsfort_omniknight_guardian_angel_hp_regen"				  		  "HP REGEN:"
 
+	"DOTA_Tooltip_modifier_aghsfort_omniknight_guardian_angel"						"Guardian Angel"
+	"DOTA_Tooltip_modifier_aghsfort_omniknight_guardian_angel_Description"			"Immune to physical damage."
+
 	"DOTA_Tooltip_ability_aghsfort_omniknight_repel"							"Heavenly Grace"
 	"DOTA_Tooltip_ability_aghsfort_omniknight_repel_Description"				"Creates a divine barrier around an ally <font color='#70EA72'>which grants them increased Damage Resistance</font> and Strength \n\nDISPEL TYPE: Strong Dispel"
 	"DOTA_Tooltip_ability_aghsfort_omniknight_repel_Lore"						"When faced with the pit of sacrifice, Purist's resilience to magic was tested and affirmed."
@@ -35519,7 +36009,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_Tooltip_ability_aghsfort_omniknight_repel_hp_regen"					"HP REGEN:"
 
 	"DOTA_Tooltip_modifier_aghsfort_omniknight_repel"						"Heavenly Grace"
-	"DOTA_Tooltip_modifier_aghsfort_omniknight_repel_Description"			"Damage Resistance increased by %dsMODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE%%% , Strength increased by %dMODIFIER_PROPERTY_STATS_STRENGTH_BONUS%, Health Regen increased by %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT%."
+	"DOTA_Tooltip_modifier_aghsfort_omniknight_repel_Description"			"Damage Resistance increased by %dMODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE%%%, Strength increased by %dMODIFIER_PROPERTY_STATS_STRENGTH_BONUS%, Health Regen increased by %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT%."
 				
 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_repel_procs_purification"		"Heavenly Purification"
 	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_repel_procs_purification_Description"		"Heals the target with the current level of Purification when Heavenly Grace is cast."
@@ -35542,6 +36032,8 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_damage_Description"				"Degen Aura damages enemies in its area of effect for %attack_damage_pct%%% of Omniknight's base attack damage every %damage_interval% seconds."
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_degen_aura_restoration_Description"			"Enemy units that die within Degen Aura's area of effect restore %value%%% of Omniknight's max Health and Mana."
 
+ 	"DOTA_Tooltip_modifier_aghsfort_omniknight_degen_aura_effect"								"Degen Aura"
+ 	"DOTA_Tooltip_modifier_aghsfort_omniknight_degen_aura_effect_Description"					"Movement speed reduced by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%, attack speed reduced by %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%."
 
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_guardian_angel_purification"				"Heal Life Angel"
  	"DOTA_Tooltip_Ability_aghsfort_special_omniknight_guardian_angel_immune_flight"				"Angelic Flight"
@@ -35710,19 +36202,528 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 
 	//--------------------------------------------------------------------------------------------------------------
 	// WITCH DOCTOR ABILITY UPGRADES END
-	//--------------------------------------------------------------------------------------------------------------	
+	//--------------------------------------------------------------------------------------------------------------
+
+
+	// AGHANIM'S LABYRINTH - START
+
+	"ascension_embiggen"					"Glutton"
+	"ascension_embiggen_Description"		"All enemies debuff the turn rate and attack speed of their killers"
+
+
+	"DOTA_Tooltip_modifier_ascension_embiggen_display"				"Glutton"
+	"DOTA_Tooltip_modifier_ascension_embiggen_display_Description"	"When dying, slows its killer's turn rate and attack speed."
+
+	"DOTA_Tooltip_modifier_ascension_embiggen"				"Glutton"
+	"DOTA_Tooltip_modifier_ascension_embiggen_Description"	"Slower turn rate and attack speed."
+
+	"ascension_vengeance"					"Clumsy"
+	"ascension_vengeance_Description"		"Enemy Captains root their killers upon death."
+
+	"DOTA_Tooltip_modifier_ascension_vengeance_display"				"Clumsy"
+	"DOTA_Tooltip_modifier_ascension_vengeance_display_Description"	"When dying, casts Root on its killer."
+
+	"DOTA_Tooltip_modifier_ascension_vengeance_debuff" 				"Clumsy"
+	"DOTA_Tooltip_modifier_ascension_vengeance_debuff_Description"	"Rooted by a dying Captain"
+
+	"aghsfort_ascension_invis"					"Glimmer"
+	"aghsfort_ascension_invis_Description"		"Enemy Captains occasionally gain persistent invisibility."
+
+	"DOTA_Tooltip_modifier_aghsfort_ascension_invis"				"Glimmer"
+	"DOTA_Tooltip_modifier_aghsfort_ascension_invis_Description"	"This unit has persistent invisibility."
+
+	"ascension_impatient"					"Impatient"
+	"ascension_impatient_Description"		"Enemies gradually gain size, damage, and health."
+	"DOTA_Tooltip_modifier_ascension_impatient"					"Impatient"
+	"DOTA_Tooltip_modifier_ascension_impatient_Description"		"This unit is gaining size and strength over time."
+
+	"ascension_meteoric"					"Meteoric"
+	"ascension_meteoric_Description"		"Enemy Captains sometimes become meteors and launch themselves at Heroes."
+	"DOTA_Tooltip_modifier_ascension_meteoric_display"				"Meteoric"
+	"DOTA_Tooltip_modifier_ascension_meteoric_display_Description"	"Occasionally becomes a meteor and strikes at enemy Heroes."
+
+
+	//TEMPLAR ASSASSIN
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_refraction"								"Refraction"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_refraction_Lore"							"Manipulating her psionic veil, Lanaya bends nature's law to her will."
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_refraction_Description"					"Templar Assassin becomes highly elusive, avoiding damage and gaining a bonus to her damage.  The damage and avoidance effects are separate, and have a limited number of instances. Each instance of refraction absorbs a limited amount of damage before being consumed, letting the rest of the damage through."
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_refraction_Note0"						"Damage as HP Removal bypasses Refraction (it won't reduce the charges)."
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_refraction_Note1"						"Only instances of %damage_threshold% or more damage will trigger Refraction."
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_refraction_Note2"						"Refraction is visible to enemies."
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_refraction_instances"					"INSTANCES:"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_refraction_bonus_damage"				"BONUS DAMAGE:"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_refraction_duration"					"DURATION:"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_refraction_max_damage_absorb"			"MAX DAMAGE ABSORBED:"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_meld"									"Meld"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_meld_Lore"								"Lanaya is as elusive as her covenant with the Hidden Temple."
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_meld_Description"						"Templar Assassin conceals herself, becoming invisible for up to %meld_duration% seconds, as long as she remains still.  If Meld's invisibility is broken by attacking an enemy, Lanaya will deal bonus damage to the enemy and reduce their armor for %abilityduration% seconds."
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_meld_Note0"								"Meld is broken by any action other than staying in position."
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_meld_Note1"								"Meld's armor reduction does not work against towers."
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_meld_bonus_damage"						"BONUS DAMAGE:"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_meld_bonus_armor"						"ARMOR REDUCTION:"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_meld_abilityduration"						"ARMOR REDUCTION DURATION:"		
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psi_blades"								"Psi Blades"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psi_blades_Lore"							"Her blades pierce the skin as much as the mind, furthering her understanding of the mystery that is reality."
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psi_blades_Description"					"Templar Assassin's psi blades slice through the attacked unit, splitting and damaging enemy units directly behind it, while gaining bonus attack range."
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psi_blades_Note0"						"Split damage hits invisible units."
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psi_blades_Note1"						"Attack effects like Bash will only be applied to the main target."
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psi_blades_bonus_attack_range"			"BONUS ATTACK RANGE:"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psi_blades_attack_spill_range"			"SPLIT RANGE:"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psi_blades_attack_spill_pct"				"%SPLIT AMOUNT:"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psionic_trap"							"Psionic Trap"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psionic_trap_Lore"						"Calling upon the reach of the Hidden Temple, none escape the eye of the Templar."
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psionic_trap_Description"				"Templar Assassin places mystical traps that invisibly monitor enemy movement. When sprung automatically after %trap_delay_time% seconds, they exert a slowing influence of %movement_speed_slow%%% in the area. Traps deal damage over the duration of the slow."
+
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psionic_trap_max_traps"					"MAX TRAPS:"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psionic_trap_trap_delay_time"					"ACTIVATION TIME:"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psionic_trap_trap_duration_tooltip"					"SLOW DURATION:"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psionic_trap_movement_speed_slow"					"%MOVEMENT SLOW:"
+		"DOTA_Tooltip_ability_aghsfort_templar_assassin_psionic_trap_trap_damage"					"TRAP DAMAGE:"
+
+
+		"DOTA_Tooltip_modifier_aghsfort_templar_assassin_refraction_damage"				"Refraction - Damage"
+		"DOTA_Tooltip_modifier_aghsfort_templar_assassin_refraction_damage_Description"	"Increasing attack damage by %dMODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE%."
+		"DOTA_Tooltip_modifier_aghsfort_templar_assassin_refraction_absorb"				"Refraction - Absorb"
+		"DOTA_Tooltip_modifier_aghsfort_templar_assassin_refraction_absorb_Description"	"Absorbs any incoming damage."
+		"DOTA_Tooltip_modifier_aghsfort_templar_assassin_meld"							"Meld"
+		"DOTA_Tooltip_modifier_aghsfort_templar_assassin_meld_Description"				"Invisible, bonus damage on attack."
+		"DOTA_Tooltip_modifier_aghsfort_templar_assassin_meld_armor"						"Meld Armor Reduction"
+		"DOTA_Tooltip_modifier_aghsfort_templar_assassin_meld_armor_Description"			"Armor reduced by %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%."
+		"DOTA_Tooltip_modifier_aghsfort_templar_assassin_trap_slow"						"Trap"
+		"DOTA_Tooltip_modifier_aghsfort_templar_assassin_trap_slow_Description"			"Movement speed decreased by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% up to %dMODIFIER_PROPERTY_TOOLTIP%%%."
+		"DOTA_Tooltip_modifier_aghsfort_templar_assassin_psionic_trap_counter"			"Psionic Trap Count"
+		"DOTA_Tooltip_modifier_aghsfort_templar_assassin_psionic_trap_counter_Description"	"Psionic Trap Count"
+
+
+  		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_refraction_allies"					"Glass Shield"
+  		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_refraction_kill_refresh"			"Absorption"
+  		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_refraction_counter_attack"			"Refraction Counter"
+  		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_refraction_detonate_trap"			"Smoke and Mirrors"
+		
+  		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_meld_attack_on_activation"			"Vanishing Slice"
+  		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_meld_teleport"						"Celestial Step"
+  		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_meld_refraction_on_kill"			"Latent Charge"
+  		 
+		
+  		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_psi_blades_autoattack"				"Sentient Blade"
+  		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_psi_blades_trap"					"Covert Devices"
+  		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_psi_blades_splash"					"Psychic Burst"
+		
+  		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_psionic_trap_area_attack"			"Veiled Cuts"
+  		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_psionic_trap_damage_heals"			"Resurgence"
+  		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_psionic_trap_multipulse"			"Shaded Echo"
+
+
+
+ 		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_refraction_allies_Description"			"Refraction can be cast on allies. Cast range is %value%."
+ 		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_refraction_kill_refresh_Description"		"Every time an enemy is killed with Refraction Damage active, gain 1 stack of Refraction Damage Absorb."
+ 		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_refraction_counter_attack_Description"			"Refraction Counter"
+ 		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_refraction_detonate_trap_Description"			"When Refraction is activated, a Psionic Trap is placed where Templar Assassin is standing."
+ 		 
+ 		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_meld_attack_on_activation_Description"			"Templar Assassin attacks all enemies in a %value% area of effect when activating Meld."
+ 		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_meld_teleport_Description"						"Meld becomes a ground targeted skill with a cast range of %value%. Templar Assassin instantly teleports to the selected location and goes into Meld."
+ 		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_meld_refraction_on_kill_Description"				"Every time an enemy is killed while debuffed by Meld Strike, Templar Assassin gains a charge of Refraction Damage"
+ 		 
+
+ 		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_psi_blades_autoattack_Description"				"Templar Assassin automatically attacks any enemy within %radius% units every %fire_rate% seconds"
+ 		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_psi_blades_trap_Description"						"Templar Assassin has a %trap_chance% chance to create a Psionic Trap under a target hit by the Psi Blades spill."
+ 		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_psi_blades_splash_Description"					"Psi Blades deal damage in a %value% Area of Effect around the spill target."
+
+ 		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_psionic_trap_area_attack_Description"			"Psionic Traps also launch a Meld attack onto each enemy when they detonate."
+ 		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_psionic_trap_damage_heals_Description"			"Psionic Traps heal all Templar Assassin's allies for %value%%% of the damage they deal."
+ 		 "DOTA_Tooltip_ability_aghsfort_special_templar_assassin_psionic_trap_multipulse_Description"				"Psionic Traps stay on the ground and pulse, dealing additional damage, up to %value% times."
+			
+		 "aghsfort_templar_assassin_meld_bonus_armor"									"{s:value} {s:ability_name} Armor"
+		 "aghsfort_templar_assassin_meld_bonus_damage"									"+{s:value} {s:ability_name} Damage"
+		 "aghsfort_templar_assassin_meld_meld_duration"									"+{s:value} {s:ability_name} Max Duration"
+		 "aghsfort_templar_assassin_meld_pct_cooldown"									"-{s:value}% {s:ability_name} Cooldown"
+		 "aghsfort_templar_assassin_psi_blades_attack_spill_pct"						"+{s:value} {s:ability_name} Spill Damage"
+		 "aghsfort_templar_assassin_psi_blades_attack_spill_range"						"+{s:value} {s:ability_name} Spill Range"
+		 "aghsfort_templar_assassin_psi_blades_attack_spill_width"						"+{s:value} {s:ability_name} Spill Width"
+		 "aghsfort_templar_assassin_psi_blades_bonus_attack_range"						"+{s:value} {s:ability_name} Attack Range"
+		 "aghsfort_templar_assassin_psionic_trap_max_traps"								"+{s:value} {s:ability_name} Max Traps"
+		 "aghsfort_templar_assassin_psionic_trap_slow_duration"							"+{s:value} {s:ability_name} Slow Duration"
+		 "aghsfort_templar_assassin_psionic_trap_trap_damage"							"+{s:value} {s:ability_name} Damage"
+		 "aghsfort_templar_assassin_psionic_trap_trap_radius"							"+{s:value} {s:ability_name} Radius"
+		 "aghsfort_templar_assassin_refraction_bonus_damage"							"+{s:value} {s:ability_name} Bonus Damage"
+		 "aghsfort_templar_assassin_refraction_instances"								"+{s:value} {s:ability_name} Instances"
+		 "aghsfort_templar_assassin_refraction_pct_cooldown"							"-{s:value}% {s:ability_name} Cooldown"
+		 "aghsfort_templar_assassin_refraction_max_damage_absorb"						"+{s:value} {s:ability_name} Max Damage Absorbed"
+
+
+// SLARK
+		"DOTA_Tooltip_ability_aghsfort_slark_dark_pact"									"Dark Pact"
+		"DOTA_Tooltip_ability_aghsfort_slark_dark_pact_Description"						"After a short delay, Slark purges most negative debuffs and deals damage to enemy units around him, healing Slark for a percentage of the damage dealt to each enemy. \n\nDISPEL TYPE: Strong Dispel"
+		"DOTA_Tooltip_ability_aghsfort_slark_dark_pact_Lore"								"Slithereen are capable of quickly regrowing appendages, in case of critical injury, to save their own lives."
+		"DOTA_Tooltip_ability_aghsfort_slark_dark_pact_Note0"							"%delay% seconds after cast, a series of %total_pulses% pulses separated by %pulse_interval% seconds deal the damage."
+		"DOTA_Tooltip_ability_aghsfort_slark_dark_pact_Note1"							"Each pulse also removes debuffs from Slark."
+		"DOTA_Tooltip_ability_aghsfort_slark_dark_pact_delay"							"DELAY:"
+		"DOTA_Tooltip_ability_aghsfort_slark_dark_pact_radius"							"RADIUS:"
+		"DOTA_Tooltip_ability_aghsfort_slark_dark_pact_total_damage"						"DAMAGE:"
+		"DOTA_Tooltip_ability_aghsfort_slark_dark_pact_heal_pct"						"%HEAL PERCENT:"
+		"DOTA_Tooltip_ability_aghsfort_slark_pounce"										"Pounce"
+		"DOTA_Tooltip_ability_aghsfort_slark_pounce_Description"							"Slark leaps forward, dealing damage to every enemy he comes in contact with and grabbing the first Captain he connects with.  That unit is leashed, and can only move a limited distance away from Slark's landing position."
+		"DOTA_Tooltip_ability_aghsfort_slark_pounce_Lore"								"Time in the Dark Reef made Slark a dangerous assassin; aggressive and fearless."
+		"DOTA_Tooltip_ability_aghsfort_slark_pounce_Note0"								"On cast, Slark leaps forward at a speed of %pounce_speed%, stopping when he latches onto an enemy Captain or has traveled %pounce_distance% distance, damaging all enemies he pounces over and dealing %pounce_damage_multiplier%x damage to the enemy he leashes."
+		"DOTA_Tooltip_ability_aghsfort_slark_pounce_Note1"								"Spell Immune units cannot be leashed."
+		"DOTA_Tooltip_ability_aghsfort_slark_pounce_Note2"								"Trees will be destroyed around Slark's landing location."
+		"DOTA_Tooltip_ability_aghsfort_slark_pounce_pounce_distance"						"DISTANCE:"
+		"DOTA_Tooltip_ability_aghsfort_slark_pounce_leash_duration"						"LEASH DURATION:"
+		"DOTA_Tooltip_ability_aghsfort_slark_pounce_leash_radius"						"LEASH RADIUS:"
+		"DOTA_Tooltip_ability_aghsfort_slark_pounce_pounce_damage"						"DAMAGE:"
+
+		"DOTA_Tooltip_ability_aghsfort_slark_essence_shift"								"Essence Shift"
+		"DOTA_Tooltip_ability_aghsfort_slark_essence_shift_Description"					"Slark steals the life essence of enemy heroes with his attacks, decreasing their outgoing damage and converting them to bonus Agility. When Activated, the stacks are converted to bonus Agility for a short duration and the stacks are reset."
+
+		"DOTA_Tooltip_ability_aghsfort_slark_essence_shift_Lore"							"With each strike at his adversaries, Slark's knowledge of their weaknesses improves."
+		
+		"DOTA_Tooltip_ability_aghsfort_slark_essence_shift_passive_agility"					"PASSIVE AGILITY PER STACK:"
+		"DOTA_Tooltip_ability_aghsfort_slark_essence_shift_agi_gain"						"ACTIVE AGILITY PER STACK:"
+		"DOTA_Tooltip_ability_aghsfort_slark_essence_shift_active_duration"					"ACTIVE DURATION:"
+		"DOTA_Tooltip_ability_aghsfort_slark_essence_shift_max_stacks"						"MAX STACKS:"
+		"DOTA_Tooltip_ability_aghsfort_slark_essence_shift_reduction"						"DAMAGE REDUCTION PER STACK:"
+
+		"DOTA_Tooltip_ability_aghsfort_slark_shadow_dance"								"Shadow Dance"
+		"DOTA_Tooltip_ability_aghsfort_slark_shadow_dance_Description"					"When used, Slark hides himself in a cloud of shadows, becoming immune to detection. Attacking, casting spells, and using items will not reveal Slark.  When activated, Slark gains bonus movement speed and health regeneration."
+		
+		"DOTA_Tooltip_ability_aghsfort_slark_shadow_dance_Lore"							"The hidden Thirteenth is a slippery foe."
+		
+		"DOTA_Tooltip_ability_aghsfort_slark_shadow_dance_duration"						"DURATION:"
+		"DOTA_Tooltip_ability_aghsfort_slark_shadow_dance_bonus_movement_speed"			"%BONUS MOVEMENT SPEED:"
+		"DOTA_Tooltip_ability_aghsfort_slark_shadow_dance_bonus_regen_pct"				"%HEALTH GAINED PER SECOND:"
+
+		"DOTA_Tooltip_modifier_aghsfort_slark_pounce_leash"							"Leashed"
+		"DOTA_Tooltip_modifier_aghsfort_slark_pounce_leash_Description"				"Leashed to Slark, can only move a limited distance away."
+		"DOTA_Tooltip_modifier_aghsfort_slark_essence_shift_counter"							"Essence Shift"				
+		"DOTA_Tooltip_modifier_aghsfort_slark_essence_shift_counter_Description"				"Gaining %dMODIFIER_PROPERTY_STATS_AGILITY_BONUS% agility."
+		"DOTA_Tooltip_modifier_aghsfort_slark_essence_shift_active"						"Essence Shift Active"
+		"DOTA_Tooltip_modifier_aghsfort_slark_essence_shift_active_Description"						"Gaining %dMODIFIER_PROPERTY_STATS_AGILITY_BONUS% agility."
+		"DOTA_Tooltip_modifier_aghsfort_slark_essence_shift_debuff"						"Essence Shift"
+		"DOTA_Tooltip_modifier_aghsfort_slark_essence_shift_debuff_Description"	"Losing %dMODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE%%% outgoing damage."
+		"DOTA_Tooltip_modifier_aghsfort_slark_shadow_dance_passive_regen"				"Shadow Dance Regen"
+		"DOTA_Tooltip_modifier_aghsfort_slark_shadow_dance_passive_regen_Description"	"Gaining %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% bonus movement speed and regenerating %dMODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE%%% of max HP per second."
+		"DOTA_Tooltip_modifier_aghsfort_slark_shadow_dance"							"Shadow Dance"
+		"DOTA_Tooltip_modifier_aghsfort_slark_shadow_dance_Description"				"Invisible within your cloud of smoke."
+		
+		"DOTA_Tooltip_modifier_aghsfort_slark_essence_shift_permanent_buff"	"Permanent Agility"
+		"DOTA_Tooltip_modifier_aghsfort_slark_essence_shift_permanent_buff_Description"	"Gained %dMODIFIER_PROPERTY_STATS_AGILITY_BONUS% permanent Agility."
+		"DOTA_Tooltip_modifier_aghsfort_slark_essence_shift_permanent_buff_PostGame"		"Gained permanent Agility."
+		
+		"DOTA_Tooltip_modifier_aghsfort_slark_essence_shift_permanent_debuff"	"Agility Lost"
+		"DOTA_Tooltip_modifier_aghsfort_slark_essence_shift_permanent_debuff_Description"	"Permanently missing %dMODIFIER_PROPERTY_STATS_AGILITY_BONUS% Agility."
+
+
+	  	"DOTA_Tooltip_ability_aghsfort_special_slark_dark_pact_essence_shift"					"Broken Contract"
+	  	"DOTA_Tooltip_ability_aghsfort_special_slark_dark_pact_push_stun"						"Smells Fishy"
+	  	"DOTA_Tooltip_ability_aghsfort_special_slark_dark_pact_dispells_allies"					"Brackish Bath"
+	  	"DOTA_Tooltip_ability_aghsfort_special_slark_dark_pact_unit_target"						"Brackish Bath"
+		
+	
+	  	"DOTA_Tooltip_ability_aghsfort_special_slark_dark_pact_essence_shift_Description"						"Dark Pact adds Essence Shift stacks for each target hit."
+	  	"DOTA_Tooltip_ability_aghsfort_special_slark_dark_pact_push_stun_Description"						"Dark Pact Push pushes away enemies with each pulse, stunning them for %value% seconds."
+	  	"DOTA_Tooltip_ability_aghsfort_special_slark_dark_pact_dispells_allies_Description"						"Dark Pact dispells all allies in its area of effect."
+	  	"DOTA_Tooltip_ability_aghsfort_special_slark_dark_pact_unit_target_Description"						"Dark Pact can target units, friendly or enemy, and purges all allies around the target."
+
+   		"DOTA_Tooltip_ability_aghsfort_special_slark_pounce_attack_all"									"Gone Fishing"
+   		"DOTA_Tooltip_ability_aghsfort_special_slark_pounce_projectiles"								"Little Skippers"
+   		"DOTA_Tooltip_ability_aghsfort_special_slark_pounce_leashed_bonus"								"Fish Food"
+
+   		"DOTA_Tooltip_ability_aghsfort_special_slark_pounce_attack_all_Description"						"Slark also attacks all targets he jumps through, including the leashed enemy."
+   		"DOTA_Tooltip_ability_aghsfort_special_slark_pounce_projectiles_Description"					"Creates %value% copies of Slark that jump in different directions in a %cone% degree cone, damaging and leashing enemy units."
+   		"DOTA_Tooltip_ability_aghsfort_special_slark_pounce_leashed_bonus_Description"					"Allies attacking a leashed unit get bonus %value% attack speed."
+
+
+  		"DOTA_Tooltip_ability_aghsfort_special_slark_essence_shift_aoe_attack"								"Apex Predator"
+  		"DOTA_Tooltip_ability_aghsfort_special_slark_essence_shift_leash_chance"							"Lucky Catch"
+  		"DOTA_Tooltip_ability_aghsfort_special_slark_essence_shift_allied_buff"								"Sea School"
+
+  		"DOTA_Tooltip_ability_aghsfort_special_slark_essence_shift_aoe_attack_Description"								"When Essence Shift is activated, Slark attacks everyone in a %value% radius."
+  		"DOTA_Tooltip_ability_aghsfort_special_slark_essence_shift_leash_chance_Description"							"With each attack, Slark has a %leash_chance%%% chance to apply Pounce on the attacked target."
+  		"DOTA_Tooltip_ability_aghsfort_special_slark_essence_shift_allied_buff_Description"								"When activated, increases the primary stat of all allies by the same amount Slark increases his agility."
+
+
+	   "DOTA_Tooltip_ability_aghsfort_special_slark_shadow_dance_essence_shift_bonus"					"Deep Six"
+	   "DOTA_Tooltip_ability_aghsfort_special_slark_shadow_dance_dark_pact_pulses"						"Reef Rage"
+	   "DOTA_Tooltip_ability_aghsfort_special_slark_shadow_dance_leash"									"Hook, Line, and Sinker"
+
+	   "DOTA_Tooltip_ability_aghsfort_special_slark_shadow_dance_essence_shift_bonus_Description"		"When Shadow Dance is activated, Slark also activates his Essence Shift active, with %value%x the amount of Essence Shift's max stacks."
+	   "DOTA_Tooltip_ability_aghsfort_special_slark_shadow_dance_dark_pact_pulses_Description"						"While in Shadow Dance, every %value% seconds, Slark emits a Dark Pact pulse."
+	   "DOTA_Tooltip_ability_aghsfort_special_slark_shadow_dance_leash_Description"						"When Shadow Dance is activated, pulls all enemies in a %pull_radius% area of effect towards slark and leashes them with the current level of Pounce."
+
+		
+ 		"aghsfort_slark_dark_pact_cooldown"												"-{s:value}% {s:ability_name} Cooldown"
+ 		"aghsfort_slark_dark_pact_total_damage"											"+{s:value} {s:ability_name} Total Damage"
+ 		"aghsfort_slark_dark_pact_heal_pct"												"+{s:value}% {s:ability_name} Healing"
+ 		"aghsfort_slark_essence_shift_active_duration"									"+{s:value} {s:ability_name} Active Duration"
+ 		"aghsfort_slark_essence_shift_agi_gain"											"+{s:value} {s:ability_name} Active Agi Gain"
+ 		"aghsfort_slark_essence_shift_cooldown"											"-{s:value}% {s:ability_name} Cooldown"
+ 		"aghsfort_slark_essence_shift_max_stacks"										"+{s:value} {s:ability_name} Max Stacks"
+ 		"aghsfort_slark_pounce_cooldown"												"-{s:value}% {s:ability_name} Cooldown"
+ 		"aghsfort_slark_pounce_damage"													"+{s:value} {s:ability_name} Damage"
+ 		"aghsfort_slark_pounce_distance"												"+{s:value} {s:ability_name} Distance"
+ 		"aghsfort_slark_pounce_leash_duration"											"+{s:value} {s:ability_name} Leash Duration"
+ 		"aghsfort_slark_shadow_dance_bonus_bonus_regen_pct"								"+{s:value}% {s:ability_name} Bonus Regen"
+ 		"aghsfort_slark_shadow_dance_bonus_movement_speed"								"+{s:value} {s:ability_name} Bonus Movement Speed"
+ 		"aghsfort_slark_shadow_dance_cooldown"											"-{s:value}% {s:ability_name} Cooldown"
+ 		"aghsfort_slark_shadow_dance_duration"											"+{s:value} {s:ability_name} Duration"
+
+
+		// QOP
+
+
+		// Queen of Pain - START
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_shadow_strike"						"Shadow Strike"
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_shadow_strike_Description"			"Hurls a poisoned dagger which deals large initial damage, and then deals damage over time. The poisoned unit has its movement speed slowed for %abilityduration% seconds.  An instance of damage is dealt every %damage_interval% seconds."
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_shadow_strike_Lore"					"Akasha's envenomed dagger allows her to delight in the drawn out suffering of her victims."
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_shadow_strike_Note0"					"The affected unit slowly regains its original movement speed every second during the duration."
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_shadow_strike_Note1"					"Units afflicted by Shadow Strike can be denied by their allies when their HP drops below 25% of their maximum health."
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_shadow_strike_movement_slow"			"%MOVEMENT SLOW:"
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_shadow_strike_strike_damage"			"INITIAL DAMAGE:"
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_shadow_strike_duration_damage"		"DAMAGE PER TICK:"
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_shadow_strike_abilityduration"		"DURATION:"
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_shadow_strike_abilitycastrange"		"CAST RANGE:"
+
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_blink"								"Blink"
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_blink_Description"					"Short distance teleportation that allows Queen of Pain to move in and out of combat."
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_blink_Lore"							"The Secret Queen lives up to her title, making her pain impossible to escape."
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_blink_Note0"							"You can use Blink to dodge incoming projectiles."
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_blink_blink_range"					"RANGE:"
+
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_scream_of_pain"						"Scream Of Pain"
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_scream_of_pain_Description"			"The Queen of Pain lets loose a piercing scream around her, damaging nearby enemies."
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_scream_of_pain_Lore"					"The sultry voice of Akasha beckons her opponents while stealing their souls."
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_scream_of_pain_Note0"				"Scream Of Pain will hit invisible units."
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_scream_of_pain_Note1"				"Scream Of Pain cannot be disjointed."
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_scream_of_pain_area_of_effect"		"RADIUS:"
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_scream_of_pain_damage"				"DAMAGE:"
+
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_sonic_wave"							"Sonic Wave"
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_sonic_wave_Description"				"Creates a gigantic wave of sound in front of Queen of Pain, dealing heavy damage to all enemy units in its wake and pushing them back."
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_sonic_wave_Lore"						"Her most exquisite of all of torments, Akasha's Sonic Wave puts her poor foes out of their misery."
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_sonic_wave_Note0"					"Sonic Wave can hit units up to 1150 units away."
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_sonic_wave_final_aoe"				"WAVE MAX RADIUS:"
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_sonic_wave_damage"					"DAMAGE:"
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_sonic_wave_knockback_distance"		"KNOCKBACK DISTANCE:"
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_sonic_wave_cooldown_scepter"			"SCEPTER COOLDOWN:"
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_sonic_wave_damage_scepter"			"SCEPTER DAMAGE:"
+		"DOTA_Tooltip_ability_aghsfort_queenofpain_sonic_wave_aghanim_description"		"Increases damage and decreases cooldown."
+
+		"DOTA_Tooltip_modifier_aghsfort_queenofpain_shadow_strike"				"Shadow Strike"					
+		"DOTA_Tooltip_modifier_aghsfort_queenofpain_shadow_strike_Description"	"Taking periodic damage and moving %fMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% slower."
+		
+		"DOTA_Tooltip_modifier_aghsfort_queenofpain_scream_of_pain_fear"				"Fear"
+		"DOTA_Tooltip_modifier_aghsfort_queenofpain_scream_of_pain_fear_description"	"Feared by Scream of Pain."
+
+		"DOTA_Tooltip_Ability_aghsfort_special_queenofpain_shadow_strike_on_attack"				"Stinging Lash"
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_shadow_strike_on_attack_Description"	"Each attack has a %proc_chance_pct%%% chance to apply Shadow Strike to the target."
+
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_shadow_strike_chain"								"Spread the Pain"
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_shadow_strike_chain_Description"	"Each attack Shadow Strike bounces to up %value% additional targets."
+
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_shadow_strike_scream"								"Delight and Torment"
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_shadow_strike_scream_Description"	"When the debuff effect of Shadow Strike ends, that unit emits a Scream of Pain."
+
+		"DOTA_Tooltip_Ability_aghsfort_special_queenofpain_blink_generates_scream"				"Haunting Echoes"
+		"DOTA_Tooltip_Ability_aghsfort_special_queenofpain_blink_generates_scream_Description"	"Blink generates a Scream of Pain at its start and end positions."
+
+		"DOTA_Tooltip_Ability_aghsfort_special_queenofpain_blink_attack_speed"				"Fervent Assault"
+		"DOTA_Tooltip_Ability_aghsfort_special_queenofpain_blink_attack_speed_Description"	"Blink provides %bonus_attack_speed% bonus attack speed for %duration%s."
+
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_blink_shadow_strike"								"Hall of Pain"
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_blink_shadow_strike_Description"								"Enemies that are between the start and end points of Queen of Pain's Blink get hit by her current level of Shadow Strike."
+
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_scream_of_pain_resets_blink"								"Rapturous Cry"
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_scream_of_pain_resets_blink_Description"								"When an enemy is killed by Scream of Pain, Queen of Pain's Blink cooldown is reset."
+
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_scream_of_pain_knockback"								"Resounding Wail"
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_scream_of_pain_knockback_Description"					"Knocks back every enemy hit by Scream to the max distance of Scream's area of effect. Every hit reduces the cooldown of Sonic Wave by %sonic_wave_cd_reduction%s."
+
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_scream_of_pain_restores_caster"							"Invigorating Shriek"
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_scream_of_pain_restores_caster_Description"							"Every enemy hit by Scream of Pain sends back an echo to Queen of Pain, healing her for %value%%% of the damage dealt and restoring %value%%% of Scream's mana cost."
+
+
+		"DOTA_Tooltip_modifier_aghsfort_special_queenofpain_blink_attack_speed"				"Fervent Attacks"
+		"DOTA_Tooltip_modifier_aghsfort_special_queenofpain_blink_attack_speed_Description"	"Has bonus attack speed."
+
+		"DOTA_Tooltip_Ability_aghsfort_special_queenofpain_sonic_wave_trail"				"Thundering Resonance"
+		"DOTA_Tooltip_Ability_aghsfort_special_queenofpain_sonic_wave_trail_Description"	"Sonic Wave leaves a trail that applies %damage_pct%%% damage of Sonic Wave's damage every %burn_interval% seconds. The trail lasts %trail_duration% seconds."
+
+
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_sonic_wave_circle"				"Sonic Tsunami"
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_sonic_wave_circle_Description"	"When Sonic Wave is cast, it is emited in %value% directions around Queen of Pain."
+
+
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_sonic_wave_attack_buff"			"Discordant Force"
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_sonic_wave_attack_buff_Description"			"Increases Queen of Pain's Attack Speed by %attack_speed%, Attack Damage by %attack_damage% for %buff_duration% seconds for each enemy hit with Sonic Wave."
+
+		"DOTA_Tooltip_modifier_aghsfort_special_queenofpain_sonic_wave_attack_buff"			"Discordant Force"
+		"DOTA_Tooltip_modifier_aghsfort_special_queenofpain_sonic_wave_attack_buff_Description"			"Damage increased by %dMODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE%, attack speed increased by %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%"
+
+		"DOTA_Tooltip_ability_aghsfort_special_queenofpain_scream_of_pain_stun"	"Scream of Pain {s:value}s Stun"
+
+		"aghsfort_queenofpain_shadow_strike_percent_cooldown"		"-{s:value}% {s:ability_name} Cooldown"
+		"aghsfort_queenofpain_shadow_strike_dot_damage"				"+{s:value} {s:ability_name} Tick Damage"
+		"aghsfort_queenofpain_blink_percent_cooldown"				"-{s:value}% {s:ability_name} Cooldown"
+		"aghsfort_queenofpain_blink_range"							"+{s:value} {s:ability_name} Range"
+		"aghsfort_queenofpain_scream_of_pain_percent_cooldown"		"-{s:value}% {s:ability_name} Cooldown"
+		"aghsfort_queenofpain_scream_of_pain_damage"				"+{s:value} {s:ability_name} Damage"
+		"aghsfort_queenofpain_scream_of_pain_radius"				"+{s:value} {s:ability_name} Radius"
+		"aghsfort_queenofpain_sonic_wave_percent_cooldown"			"-{s:value}% {s:ability_name} Cooldown"
+		"aghsfort_queenofpain_sonic_wave_damage"					"+{s:value} {s:ability_name} Damage"
+		"aghsfort_queenofpain_shadow_strike_strike_damage"			"+{s:value} {s:ability_name} Hit Damage"
+
+		"aghsfort_queenofpain_sonic_wave_distance"					"+{s:value} {s:ability_name} Effect Distance"
+		"aghsfort_queenofpain_sonic_wave_knockback_duration"		"+{s:value} {s:ability_name} Knockback Duration"
+
+	// AGHANIM'S LABYRINTH - END
+
 	//--------------------------------------------------------------------------------------------------------------
 	// ABILITY UPGRADE END
 	//--------------------------------------------------------------------------------------------------------------
 	
-	"#DOTA_RP_PLAYING_EVENT_MATCH_2020"	 "In the Labyrinth - {%param0%} Depth {%param1%}"
-	"#DOTA_EventGameName_International2020"	"Aghanim's Labyrinth"
-	"#DOTA_EventGameDifficulty_International2020_0" 	"Apprentice"
-	"#DOTA_EventGameDifficulty_International2020_1" 	"Magician"
-	"#DOTA_EventGameDifficulty_International2020_2" 	"Sorcerer"
-	"#DOTA_EventGameDifficulty_International2020_3" 	"Grand Magnus"
-	//END TI10 EVENT GAME
+	
+		"dota_rp_playing_event_match_2020"	 "Labyrinth: %s1 Depth %s2"
+		"DOTA_EventGameName_International2020"	"Aghanim's Labyrinth"
+		"dota_eventgamedifficulty_international2020_0" 	"Apprentice"
+		"dota_eventgamedifficulty_international2020_1" 	"Magician"
+		"dota_eventgamedifficulty_international2020_2" 	"Sorcerer"
+		"dota_eventgamedifficulty_international2020_3" 	"Grand Magus"
+		"dota_eventgamedifficulty_international2020_4" 	"Apex Mage"
+		//END TI10 EVENT GAME
 
+		// PLUS GUILDS
+		"DOTA_GuildLeaderboardPerk_25_shards"							"Silver Guild Shard Reward"
+		"DOTA_GuildLeaderboardPerk_50_shards"							"Gold Guild Shard Reward"
+		"DOTA_GuildLeaderboardPerk_75_shards"							"Platinum Guild Shard Reward"
+		"DOTA_Plus_RewardLog_WeeklyGuild"								"{s:guild_tier_name} Percentile Guild Reward"
+		"DOTA_GuildTier_0"												"Bronze"
+		"DOTA_GuildTier_1"												"Silver"
+		"DOTA_GuildTier_2"												"Gold"
+		"DOTA_GuildTier_3"												"Platinum"
+		"DOTA_Guilds_ClaimRewards"										"Claim Weekly Rewards"
+
+		"DOTA_Plus_RoleAssistant"			"Role Assistant"
+		"DOTA_Plus_RoleAssistant_Tooltip"	"The Dota Plus Role Assistant tracks hero picks from all Ranked Roles matches to determine what roles the community most chooses for heroes.<br><br>Currently showing data from matches between {t:s:roles_start_timestamp} and {t:s:roles_end_timestamp}."  
+		"DOTA_Plus_RoleAssistant_Updated"	"Updated: {t:s:roles_end_timestamp}"  
+
+		"DOTA_SeasonalTreasure"		"Seasonal Treasure"
+		"DOTA_PlusSeason_SeasonalQuests"	"Seasonal Quests"
+
+		"DOTA_PlusSeason_SeasonFall2020_Quests"					"Fall 2020 Quests"
+		"DOTA_PlusSeason_SeasonFall2020_Subtitle"				"The Fall 2020 Season will end early December 2020."
+		"DOTA_PlusSeason_SeasonFall2020_TreasureDescription"	"Available exclusively until the end of the Fall 2020 season in early December 2020."
+
+		"DOTA_MatchRewards"							"Match Rewards"
+		"DOTA_MatchRewards_YourShards"				"Your Shards"
+		"DOTA_MatchRewards_TotalShards"				"Total Shards"
+		"DOTA_MatchRewards_TotalHeroXP"				"Total Hero XP"
+		"DOTA_MatchRewards_TotalGuildPoints"		"Total Guild Points"
+		"DOTA_MatchRewards_GuildSoloMatch"			"Solo Match"
+		"DOTA_MatchRewards_GuildMembersInParty:p"	"{d:party_member_count} Guild Member in Party#|#{d:party_member_count} Guild Members in Party"
+		"DOTA_MatchRewards_ContractsCompleted"		"Contracts Completed"
+		"DOTA_MatchRewards_WinGuildPoints"			"Win Bonus"
+		"DOTA_MatchRewards_GuildChallenge"			"Challenge"
+
+		"DOTA_MMR_Recalibration_Title" 			"MMR Recalibration"
+		"DOTA_MMR_Recalibration_Info" 			"Activate rank calibration for the next 10 ranked games to adjust your rank. Your rank will be hidden until calibration is completed. You may only do this once, and only until the season is over."
+		"DOTA_MMR_Recalibration_ButtonLabel" 	"Activate Recalibration"
+		"DOTA_MMR_Recalibration_CountdownLabel"	"MMR Recalibration Available in {t:d:t:recalibration_countdown_time}"
+		"DOTA_MMR_Recalibration_Consumed"		"MMR Recalibration Has Already Been Activated"
+
+		"DOTA_MMR_Recalibration_Processing_Title"	"Requesting Recalibration"
+		"DOTA_MMR_Recalibration_Processing_Text"	"Game servers are processing the request."
+
+		"DOTA_MMR_Recalibration_Error"				"Recalibration Error"
+		"DOTA_MMR_Recalibration_GenericError"		"Recalibration Failed"
+
+		"DOTA_MMR_Recalibration_Success"			"Recalibration Succeeded"
+		"DOTA_MMR_Recalibration_OK"					"Recalibration Complete"
+
+		"GuildsLeaderboard_LeaderboardColumn_Position"			"Position"
+		"GuildsLeaderboard_LeaderboardColumn_Points"			"Points"
+		"GuildsLeaderboard_LeaderboardColumn_Percentile"		"Percentile"
+		"GuildsLeaderboard_LeaderboardColumn_PercentileDelta"	"Since Last Week"
+
+		"DOTA_UnshownRewardsMore"	"+{d:num_unshown_rewards} MORE"
+		"DOTA_Item_Has_Gems"		"Comes with Random Effect and Color Gems"
+		"DOTA_LearnViolator_New_Player" "Recommended"
+
+		"DOTA_ManageProInfo_Header"	"Pro Info and Teams"
+		"DOTA_ManageProInfo_Button"	"Manage Pro Info and Teams"
+
+		"DOTA_Announcer_Preview_Diretide2020_Killing_Spree_01" "First blood!"
+		"DOTA_Announcer_Preview_Diretide2020_Killing_Spree_02" "When beggars die, the moon doesn't care."
+		"DOTA_Announcer_Preview_Diretide2020_Killing_Spree_03" "You are the darkness in the woods."
+		"DOTA_Announcer_Preview_Diretide2020_Killing_Spree_04" "Five went into battle; and five did not return."
+		"DOTA_Announcer_Preview_Diretide2020_Killing_Spree_05" "This one walks towards the dark."
+		"DOTA_Announcer_Preview_Diretide2020_Killing_Spree_06" "The slivers of the moon sing their song."
+
+		"DOTA_Diretide2020_Event_Details_Play" "Play the Seasonal Game Mode"
+		"DOTA_Diretide2020_Event_Details_Battle" "Battle the enemy team to collect the most taffy in each round before time runs out. The first team to win three rounds claims victory."
+		"DOTA_Diretide2020_Event_Details_Treasure_Desc" "A revamped treasure unlockable with a Diretide 2020 Key, contains one of 60 wondrous creations. Plus, now you can buy, sell, and trade-up items directly in game."
+		"DOTA_Diretide2020_Event_Details_EarnPoints" "Earn Diretide Points and Rewards"
+		"DOTA_Diretide2020_Event_Details_EarnPoints_Desc" "Throughout the Diretide season, players will earn Diretide points by playing regular Dota matches, as well as the Diretide game mode. Every 100 Diretide Points will earn you one of Roshan's many rewards including Hallowed Chests."
+		"DOTA_Diretide2020_Event_Details_DailyWinBonus" "Daily Win bonus"
+		"DOTA_Diretide2020_Event_Details_DailyWinBonus_Desc" "Earn an additional 15 Diretide Points for your first Diretide Game Mode win each day."
+		"DOTA_Diretide2020_Event_Details_ViewRewards" "View Rewards"
+		"DOTA_Diretide2020_Event_Details_LearnMore" "Visit the website to learn more"
+		"DOTA_Diretide2020_Event_Details_Title" "Roshan hath returned!"
+		"DOTA_Diretide2020_Event_Details_" ""
+
+		"DOTA_Immortal_Movie_Label"     "Immortal Ability Effect"
+		"DOTA_Emblem_Movie_Label"     "Emblem Effect"
+
+		"DOTA_Diretide_2020_Title"										"Hallowed Chest of the Diretide"
+		"DOTA_Diretide_2020_Title2"										"The treasure with some stuff"
+		"DOTA_Diretide_2020_Description"								"This treasure has a bunch of stuff.  Isn't that cool?"
+		"DOTA_Treasure_KeyPurchase"										"Purchase Key:"
+		"DOTA_TreasureKeysOwned"										"Keys Owned:"
+
+		"DOTA_EventGameName_Diretide2020"								"Diretide"
+		"DOTA_Diretide2020_Play_CandyHeader"							"CANDY COLLECTED"
+
+		"DOTA_RP_PLAYING_DIRETIDE_MATCH"			"Diretide: Round %s1 as %s2"
+		"DOTA_RP_PLAYING_DIRETIDE_MATCH_PREGAME"	"Diretide: Hero Selection"
+
+		// diretide post-game
+		"DOTA_Diretide2020_Title"										"Diretide"
+		"dota_page_match_details_legend_candy_scored"					"SCORED"
+		"dota_page_match_details_legend_candy_scored_tooltip"			"Taffy Scored"
+		"dota_page_match_details_legend_candy_lost"						"LOST"
+		"dota_page_match_details_legend_candy_lost_tooltip"				"Taffy Lost"
+		
+		"DOTA_Diretide2020_PostGame_CandyScored"						"Taffy Scored"
+		"DOTA_Diretide2020_PostGame_ItemAwarded" 						"ITEM AWARDED"
+		"DOTA_Diretide2020_Watch_Trailer"								"Watch the trailer"
+
+		"DOTA_Diretide2020_Cosmetics_Page_Title" 									"Diretide Seasonal Effects"
+		"DOTA_Diretide2020_Cosmetics_Page_Desc" 									"Play either regular Dota 2 matches or the Diretide game mode to get a chance to unlock these unique seasonal rewards."
+		"DOTA_Diretide2020_Cosmetics_Equip_Effect" 									"Equip Effect"
+		"DOTA_Diretide2020_Cosmetics_Not_Owned" 									"Not Owned"
+		"DOTA_Diretide2020_Cosmetics_Effect_1_Name" 									"Ghostly Courier Effect"
+		"DOTA_Diretide2020_Cosmetics_Effect_1_Desc" 									"Any courier you have equipped will take on a ghostly Diretide exclusive effect."
+		"DOTA_Diretide2020_Cosmetics_Effect_2_Name" 									"Pumpkin Head"
+		"DOTA_Diretide2020_Cosmetics_Effect_2_Desc" 									"Fully commit to the spirit of Diretide and throw a pumpkin on your noggin."
+		"DOTA_Diretide2020_Cosmetics_Effect_3_Name" 									"Diretide Shader Effect"
+		"DOTA_Diretide2020_Cosmetics_Effect_3_Desc" 									"Apply the Diretide crosshatch shader from the event mode to your regular Dota matches."
+
+		"DOTA_MoreInfo_Lore_Intro" "The woods tremble as the seasonal game mode <font color='#F3F1B5'>Diretide</font> returns! Gather your team and harvest your sweets in a best-of-five showdown, but be warned of the beast, for Roshan's craving for Greevil Taffy<font color='#627c15'>™</font> has only intensified."
+
+		// tutorial popup - used both in-game and in the dash
+		"diretide2020_game_info_header_how_to_play"						"HOW TO PLAY"
+		"diretide2020_game_info_brief_description"						"Battle the enemy team to collect more taffy in each round before time runs out. The first team to win three rounds claims victory."
+        "diretide2020_game_info_collect_candy_header"					"COLLECT TAFFY"
+        "diretide2020_game_info_collect_candy"							"The clock is ticking! Cut down those creeps and secure their Greevil Taffy. Heroes also drop their candy when defeated so harvest with haste!"
+        "diretide2020_game_info_score_candy_header"						"FILL YOUR BUCKET"
+        "diretide2020_game_info_score_candy"							"Heap piles of taffy into your trove but beware your enemy's thievery and tricks. After one of your Candy Wells is destroyed your opponents can rob you blind!"
+        "diretide2020_game_info_feed_roshan_header"						"SATIATE THE BEAST"
+        "diretide2020_game_info_feed_roshan"							"Roshan's hunger is not to be ignored. Feed taffy to Roshan to briefly satisfy him, but beware! Failure to feed him will result in your death and a brutal team-wide curse."
+		"diretide2020_game_info_dont_show_again"						"Don't Show Again"
+		"diretide2020_game_daily_bonus_earned"							"Daily Win Bonus Earned"
+		"diretide2020_game_daily_bonus_timer"							"Resets in {t:d:t:T:countdown_time}"
+		"diretide2020_game_daily_bonus_available"						"Daily Win Bonus Available"
+		"diretide2020_show_event_details"								"Show event details"
+		
 	}
 }
 

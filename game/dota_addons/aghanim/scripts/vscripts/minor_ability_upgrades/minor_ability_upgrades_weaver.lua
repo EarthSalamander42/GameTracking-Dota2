@@ -17,13 +17,13 @@ local Weaver =
 		 value = 12,
 	},
 
-	{
-		 description = "aghsfort_weaver_the_swarm_flat_attack_rate",
-		 ability_name = "aghsfort_weaver_the_swarm",
-		 special_value_name = "attack_rate",
-		 operator = MINOR_ABILITY_UPGRADE_OP_ADD,
-		 value = -0.15,
-	},
+	-- {
+	-- 	 description = "aghsfort_weaver_the_swarm_flat_attack_rate",
+	-- 	 ability_name = "aghsfort_weaver_the_swarm",
+	-- 	 special_value_name = "attack_rate",
+	-- 	 operator = MINOR_ABILITY_UPGRADE_OP_MUL,
+	-- 	 value = -15,
+	-- },
 
 	{
 		 description = "aghsfort_weaver_the_swarm_flat_count",
@@ -53,13 +53,13 @@ local Weaver =
 		 operator = MINOR_ABILITY_UPGRADE_OP_ADD,
 		 value = 1,
 	},
-	{
-		 description = "aghsfort_weaver_shukuchi_percent_manacost",
-		 ability_name = "aghsfort_weaver_shukuchi",
-		 special_value_name = "mana_cost",
-		 operator = MINOR_ABILITY_UPGRADE_OP_MUL,
-		 value = 15,
-	},
+	-- {
+	-- 	 description = "aghsfort_weaver_shukuchi_percent_manacost",
+	-- 	 ability_name = "aghsfort_weaver_shukuchi",
+	-- 	 special_value_name = "mana_cost",
+	-- 	 operator = MINOR_ABILITY_UPGRADE_OP_MUL,
+	-- 	 value = 15,
+	-- },
 
 	{
 		 description = "aghsfort_weaver_shukuchi_percent_cooldown",
@@ -114,13 +114,13 @@ local Weaver =
 		 value = 20,
 	},
 
-	{
-		 description = "aghsfort_weaver_time_lapse_percent_manacost",
-		 ability_name = "aghsfort_weaver_time_lapse",
-		 special_value_name = "mana_cost",
-		 operator = MINOR_ABILITY_UPGRADE_OP_MUL,
-		 value = 15,
-	},
+	-- {
+	-- 	 description = "aghsfort_weaver_time_lapse_percent_manacost",
+	-- 	 ability_name = "aghsfort_weaver_time_lapse",
+	-- 	 special_value_name = "mana_cost",
+	-- 	 operator = MINOR_ABILITY_UPGRADE_OP_MUL,
+	-- 	 value = 15,
+	-- },
 	{
 		 description = "aghsfort_weaver_time_lapse_cooldown",
 		 ability_name = "aghsfort_weaver_time_lapse",

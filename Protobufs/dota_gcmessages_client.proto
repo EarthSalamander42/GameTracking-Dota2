@@ -4,6 +4,7 @@ import "dota_gcmessages_common.proto";
 import "gcsdk_gcmessages.proto";
 import "dota_gcmessages_common_match_management.proto";
 import "base_gcmessages.proto";
+import "econ_gcmessages.proto";
 
 option optimize_for = SPEED;
 option cc_generic_services = false;
@@ -444,6 +445,7 @@ message CMsgDOTAWelcome {
 	optional .CMsgGCToClientPartySearchInvites party_search_friend_invites = 31;
 	optional int32 remaining_playtime = 32 [default = -1];
 	optional bool disable_guild_persona_info = 33;
+	repeated .CExtraMsgBlock extra_message_blocks = 34;
 }
 
 message CSODOTAGameHeroFavorites {
@@ -757,6 +759,28 @@ message CMsgGCGetHeroTimedStatsResponse {
 
 	optional uint32 hero_id = 1;
 	repeated .CMsgGCGetHeroTimedStatsResponse.RankChunkedStats rank_chunked_stats = 2;
+}
+
+message CMsgHeroRoleStats {
+	optional uint32 lane_selection_flags = 1;
+	optional uint32 match_count = 2;
+	optional uint32 win_count = 3;
+}
+
+message CMsgHeroRoleHeroStats {
+	optional uint32 hero_id = 1;
+	repeated .CMsgHeroRoleStats role_stats = 2;
+}
+
+message CMsgHeroRoleRankStats {
+	optional uint32 rank_tier = 1;
+	repeated .CMsgHeroRoleHeroStats hero_stats = 2;
+}
+
+message CMsgHeroRoleAllRanksStats {
+	optional uint32 start_timestamp = 1;
+	optional uint32 end_timestamp = 2;
+	repeated .CMsgHeroRoleRankStats rank_stats = 3;
 }
 
 message CMsgGCItemEditorReservationsRequest {
@@ -2348,6 +2372,7 @@ message CMsgPurchaseItemWithEventPointsResponse {
 		NOT_ALLOWED = 10;
 		CANCELLED = 11;
 		CLIENT_ERROR = 12;
+		SUBSCRIPTION_REQUIRED = 13;
 	}
 
 	optional .CMsgPurchaseItemWithEventPointsResponse.Result result = 1 [default = SUCCESS];
@@ -3424,4 +3449,86 @@ message CMsgDraftTriviaVoteCount {
 }
 
 message CMsgClientToGCApplyGauntletTicket {
+}
+
+message CMsgClientToGCRecalibrateMMR {
+}
+
+message CMsgClientToGCRecalibrateMMRResponse {
+	enum EResponse {
+		k_eInternalError = 0;
+		k_eSuccess = 1;
+		k_eTimeout = 2;
+		k_eTooBusy = 3;
+		k_eNotPermitted = 4;
+	}
+
+	optional .CMsgClientToGCRecalibrateMMRResponse.EResponse result = 1 [default = k_eInternalError];
+}
+
+message CMsgDOTAPostGameItemAwardNotification {
+	optional uint32 receiver_account_id = 1;
+	repeated uint32 item_def_index = 2;
+	optional uint32 action_id = 3;
+}
+
+message CMsgClientToGCGetOWMatchDetails {
+}
+
+message CMsgClientToGCGetOWMatchDetailsResponse {
+	message Marker {
+		optional uint32 game_time_s = 1;
+		optional .EDOTAReportMarkerType marker_type = 2 [default = k_EDOTAReportMarkerType_Unknown];
+	}
+
+	enum EResponse {
+		k_eInternalError = 0;
+		k_eSuccess = 1;
+		k_eTimeout = 2;
+		k_eTooBusy = 3;
+		k_eNotPermitted = 4;
+		k_eNoCaseAvailable = 5;
+	}
+
+	optional .CMsgClientToGCGetOWMatchDetailsResponse.EResponse result = 1 [default = k_eInternalError];
+	optional uint64 overwatch_replay_id = 2;
+	optional uint64 decryption_key = 3;
+	optional uint32 cluster = 4;
+	optional uint32 overwatch_salt = 5;
+	optional uint32 target_player_slot = 6;
+	repeated .CMsgClientToGCGetOWMatchDetailsResponse.Marker markers = 7;
+}
+
+message CMsgClientToGCSubmitOWConviction {
+	optional uint64 overwatch_replay_id = 1;
+	optional .EOverwatchConviction conviction = 2 [default = k_EOverwatchConviction_None];
+}
+
+message CMsgClientToGCSubmitOWConvictionResponse {
+	enum EResponse {
+		k_eInternalError = 0;
+		k_eSuccess = 1;
+		k_eTimeout = 2;
+		k_eTooBusy = 3;
+		k_eNotPermitted = 4;
+		k_eInvalidReplayID = 5;
+		k_eInvalidConviction = 6;
+	}
+
+	optional .CMsgClientToGCSubmitOWConvictionResponse.EResponse result = 1 [default = k_eInternalError];
+	optional uint64 overwatch_replay_id = 2;
+}
+
+message CMsgClientToGCChinaSSAURLRequest {
+}
+
+message CMsgClientToGCChinaSSAURLResponse {
+	optional string agreement_url = 1;
+}
+
+message CMsgClientToGCChinaSSAAcceptedRequest {
+}
+
+message CMsgClientToGCChinaSSAAcceptedResponse {
+	optional bool agreement_accepted = 1;
 }

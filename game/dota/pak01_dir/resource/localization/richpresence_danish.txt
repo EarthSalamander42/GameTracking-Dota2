@@ -212,7 +212,18 @@
 "#npc_dota_hero_snapfire"	"Snapfire"
 "#npc_dota_hero_void_spirit"	"Void Spirit"
 "#DOTA_Guilds_message_motd"	"Dagens meddelelse: %param0%"
+"#DOTA_Guilds_message_level"	"Guilden har nået level %param0%"
 "#DOTA_Guild_message_promoted"	"%target_persona% blev forfremmet til %guild_role% af %requester_persona%"
 "#DOTA_Guild_message_demoted"	"%target_persona% blev degraderet til %guild_role% af %requester_persona%"
+"#dota_rp_playing_event_match_2020"	"Labyrint: {%param0%} (dybde %param1%)"
+"#dota_eventgamedifficulty_international2020_0"	"Lærling"
+"#dota_eventgamedifficulty_international2020_1"	"Magiker"
+"#dota_eventgamedifficulty_international2020_2"	"Troldmand"
+"#dota_eventgamedifficulty_international2020_3"	"Stormagiker"
+"#dota_eventgamedifficulty_international2020_4"	"Mægtigste magiker"
+"#DOTA_EventGameName_Diretide2020"	"Diretide"
+"#DOTA_RP_PLAYING_DIRETIDE_MATCH"	"Diretide: Runde %param0% som {%param1%}"
+"#npc_dota_hero_mars"	"Mars"
+"#DOTA_RP_PLAYING_DIRETIDE_MATCH_PREGAME"	"Diretide: Heltevalg"
 }
 }

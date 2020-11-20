@@ -3902,7 +3902,7 @@ Bu paket Riki için oluşturulan Tahlin Gözcüsü'nün Asil Hançerlerinin ana 
 "DOTA_Item_Desc_Subtle_Demon_Set"	"Riki için \"Kurnaz İblis\" setinin bütün eşyalarını içerir:"
 "DOTA_Item_Thousand_Faces_Set"	"Bin Yüz Seti"
 "DOTA_Item_Desc_Thousand_Faces_Set"	"Juggernaut'ın \"Bin Yüz\" setinin tüm eşyalarını içerir:"
-"DOTA_Item_Captain_Bamboo"	"Bambu Reis"
+"DOTA_Item_Captain_Bamboo"	"Kaptan Bambu"
 "DOTA_Item_Desc_Captain_Bamboo"	"Sadece bir Panda değil, o bir Reis!"
 "DOTA_Item_Inky_the_Hexapus"	"Ahtapos Inky"
 "DOTA_Item_Desc_Inky_the_Hexapus"	"Hexapus Inky Horn of Despair sularında yakalandı ve korsanların hizmetinde, gemiler arası mesaj iletmekte kullanıldı."
@@ -6959,7 +6959,7 @@ These items were created in partnership with G-Ligi, who receives a portion of e
 "DOTA_Item_Desc_Mantle_of_the_Crystalline_Queen"	" &nbsp;"
 "DOTA_Item_Desc_Master_Artificers_Hammer"	"Prizmatik ve Ruhani taşları çıkarmak için kullanılan bir çekiç. Usta Zanaatkâr'ın Çekicini kullanmak üzerinde kullanıldığı öğeyi yok edecektir
 
-Bu araç, Cehpanelikteki öğeye çift tıklayarak ya da öğeye sağ tıklayıp Öğe Detaylarına erişilerek kullanılabilir.
+Bu araç, Cephanelikteki öğeye çift tıklayarak ya da öğeye sağ tıklayıp Öğe Detaylarına erişilerek kullanılabilir.
 
 Bu araç kullanıldığında tüketilir."
 "DOTA_Item_Desc_Master_Weaver_Set"	"Weaver için \"Usta Dokumacı\" setindeki tüm eşyaları içerir."
@@ -7360,7 +7360,7 @@ Bu araç kullanıldığında tüketilir."
 "DOTA_Item_Desc_Aerocool_Dota_2_Gaming_Challenge_Brazil__ADMIN"	"Üst 8 Brezilyalı takım Aerocool bir R $ 1,000 ödül havuzu ve oyun donanımları için yarışacak!"
 "DOTA_Item_Desc_Artificers_Hammer"	"Öğelere yuvalanmış taşları sökmek için kullanılan bir çekiç. Olağandışı kuryeler üzerinde kullanılamaz.
 
-Bu araç, Cehpanelikteki öğeye çift tıklayarak ya da öğeye sağ tıklayıp Öğe Detaylarına erişilerek kullanılabilir.
+Bu araç, Cephanelikteki öğeye çift tıklayarak ya da öğeye sağ tıklayıp Öğe Detaylarına erişilerek kullanılabilir.
 
 Bu aracın birden fazla şarjı vardır."
 "DOTA_Item_Desc_Copy_of_Bonus_Gift"	"Harika bir hediye! Ödülü almak için açın."
@@ -8899,7 +8899,7 @@ This ticket only gives you access to view games in the Netolic Amateur League Se
 "DOTA_Item_Cuffs_of_Divine_Ascension"	"İlahi Yükselmenin Manşetleri"
 "DOTA_Item_Curse_of_the_Malignant_Corruption_Set"	"Kötücül Yozlaşmanın Laneti Seti"
 "DOTA_Item_Desc_Antiquity"	"Kadimler anlaşmazlıklar diyarının medeniyetleridir ve çok derinlerde onları savaşa sürükleyen bölünmeler yer alır."
-"DOTA_Item_Desc_Beneath_the_War_Moon"	"A tribute 1.400.000 $ dengede asılı üzerinde 2013 içinde International'ın Büyük Finalleri 5. oyun."
+"DOTA_Item_Desc_Beneath_the_War_Moon"	"A tribute $1.400.000 dengede asılı üzerinde 2013 içinde International'ın Büyük Finalleri 5. oyun."
 "DOTA_Item_Desc_Carapace_of_Bukivak_the_Corrupted"	"Uzaktaki Batıl Şehirlerin altında ve Cehennemi Kovukların içinde, Yozlaşmış Buki'vak ikamet ederek yozlaştırmasını bütün deniz boyunca yayar. Onun gücünü duyan Lion, taze bir demonoplasti yapmak için Buki'vak'ın uzuvlarını toplamayı arzu etti. Lion uzun bir savaşın ardından Buki'vak'ı yendi ve ödül olarak istediği eli alabildi lakin bunun bazı yan etkileri de vardı. Tıpkı bir önceki elinin onu dönüştürdüğü gibi bu da onu dönüştürdü. Kötücül Yozlaşmadan mustarip bir duruma geldi ve bu, Lion'ın vücudunun çeşitli yerlerinde Obsidyandan parçaların büyümesine sebep olarak biçimsizleşmesine ve dolayısıyla da orijinal formundan daha da tanınmaz bir şekle bürünmesine sebep oldu."
 "DOTA_Item_Desc_Cowl_of_the_Malignant_Corruption"	"Uzaktaki Batıl Şehirlerin altında ve Cehennemi Kovukların içinde, Yozlaşmış Buki'vak ikamet ederek yozlaştırmasını bütün deniz boyunca yayar. Onun gücünü duyan Lion, taze bir demonoplasti yapmak için Buki'vak'ın uzuvlarını toplamayı arzu etti. Lion uzun bir savaşın ardından Buki'vak'ı yendi ve ödül olarak istediği eli alabildi lakin bunun bazı yan etkileri de vardı. Tıpkı bir önceki elinin onu dönüştürdüğü gibi bu da onu dönüştürdü. Kötücül Yozlaşmadan mustarip bir duruma geldi ve bu, Lion'ın vücudunun çeşitli yerlerinde Obsidyandan parçaların büyümesine sebep olarak biçimsizleşmesine ve dolayısıyla da orijinal formundan daha da tanınmaz bir şekle bürünmesine sebep oldu."
 "DOTA_Item_Desc_Crystallized_Mana"	"Büyünü işe koşmanın vakti geldi."
@@ -17361,14 +17361,14 @@ Com mais de 50 equipes da Amrica do Sul a competir por um premio de 1.500,00 + P
 "DOTA_Item_Dancer_of_the_Spiteful_Eye_Loading_Screen"	"Hain Bakışın Dansçısı Yükleme Ekranı"
 "DOTA_Item_Desc_Algid_Legacy"	"Hediye Yükseltme Çantası kullanılarak çevre parçacık efekt kilidi bu eşya üstünde kullanarak açılabilir - 2015 Sonbahar Sezonu."
 "DOTA_Item_Desc_Armor_of_the_Fearful_Aria"	"Hediye Yükseltme Çantası kullanılarak çevre parçacık efekt kilidi bu eşya üstünde kullanarak açılabilir - 2015 Sonbahar Sezonu. Her alımdan bir pay alacak olan EternaLEnVy ile ortaklaşa oluşturulmuştur."
-"DOTA_Item_Desc_Artificers_Chisel"	"Büyülü bir keski öğeler yuva eklemek için kullanılır.  Bu keski yaygın yuvalar oluşturur.
-Bu araç, Cehpanelikteki öğeye çift tıklayarak ya da öğeye sağ tıklayıp Öğe Detaylarına erişilerek kullanılabilir.
+"DOTA_Item_Desc_Artificers_Chisel"	"Büyülü bir keski öğeler yuva eklemek için kullanılır. Bu keski yaygın yuvalar oluşturur.
+Bu araç, Cephanelikteki öğeye çift tıklayarak ya da öğeye sağ tıklayıp Öğe Detaylarına erişilerek kullanılabilir.
 Bu araç kullanıldığında tüketilir."
 "DOTA_Item_Desc_Blade_of_Flightless_Fury"	"Hediye Yükseltme Çantası kullanılarak çevre parçacık efekt kilidi bu eşya üstünde kullanarak açılabilir - 2015 Sonbahar Sezonu."
 "DOTA_Item_Desc_Burning_Jack_Bomber"	"Yükleme Ekranı da dahil olmak üzere 'Ateşli Bombacı Jack' için bütün set öğelerini içerir."
 "DOTA_Item_Desc_Dancer_of_the_Spiteful_Eye"	"Yükleme Ekranı da dahil olmak üzere Shadow Shaman için 'Hain Bakışın Dansçısı' setinindeki bütün öğeleri içerir."
 "DOTA_Item_Desc_Description_Tag"	"Bu aleti kullanarak bir öğeye özel bir açıklama yazın.
-Bu araç, Cehpanelikteki öğeye çift tıklayarak ya da öğeye sağ tıklayıp Öğe Detaylarına erişilerek kullanılabilir.
+Bu araç, Cephanelikteki öğeye çift tıklayarak ya da öğeye sağ tıklayıp Öğe Detaylarına erişilerek kullanılabilir.
 Bu araç kullanıldığında tüketilir. Özel açıklamalar bir İsim Etiketi kullanılmadan kaldırılabilir."
 "DOTA_Item_Desc_Erupting_Wrath"	"Yükleme Ekranı da dahil olmak üzere Magnus için 'Taşan Öfke' setindeki bütün öğeleri içerir."
 "DOTA_Item_Desc_Ferocious_Toxicant"	"Yükleme Ekranına ek olarak 'Kudurmuş Toksit' setinin bütün öğelerini içerir."
@@ -24593,9 +24593,11 @@ Zaten kilidi açıldığı için bu hazineyi açmak için mühür ya da anahtar 
 "DOTA_Item_Desc_Copy_of_Unbroken_Fealty"	"Ostarion'un tebaası sonsuz yaşama sahip olmasa da, ebedi kralın kara büyüsü onların sadakatini sağlar."
 "DOTA_Item_Desc_Crux_of_Perplex"	"Rubick'in bildiği kadarıyla, büyük Aghanim bile kendi dünyasındaki olayları etkileyebilecek şekilde dört boyutlu zamanı bükebilecek basit numarayı bilmiyordu."
 "DOTA_Item_Desc_Cult_of_Aktok"	"Zorla kazanılan zaferin ardından Venomancer, topraktaki boşluktan içeri dalarak gücünü yeniden toplamak için etrafını toprakla sardı. Ancak dinlenmek için seçtiği yer çok daha eski bir amaca hizmet ediyordu. Bir gün tüm dünyayı yutacağına inanılan kadim yılan tanrı Aktok'a tapınanlar, Aktok'a kurban sunmak için her mevsim burada toplanırlardı. Venomancer, tanrılarının elçisi olduğunu sananların doğrudan kendine adak sunmasından mutluluk duydu...gücünü tekrar topladığında, şamanları köylerine kadar takip edip çok daha büyük bir ziyafet çekebilirdi."
+"DOTA_Item_Desc_Gimlek_Decanter"	"Eğer Grod'un demircisi, mistik sanatlar ile dövüş sanatlarının en iyi harmanlanmasının, Grod'un kralına bir kutsal vergi olarak sunulan ve Grod'un kralının asil mührünü taşıyan uzak bir günde pis bir devin eline düşeceğini bilseydi... Muhtemelen yapmakla uğraşmazdı bile."
 "DOTA_Item_Desc_Golden_Mandate_of_the_Stormborn"	"Bazıları Raijin Thunderkeg'in aniden artan gücünün, kendi gücünü harcamasının doğal bir sonucu olduğuna inanır. Ancak çaba göstermeden hiçbir güç elde edilmez. Bu Celestial'lar için de geçerlidir. Her ne kadar yeteneği yaptıklarını kolay gösterse de, Rajin yeteneklerini her kullandığında kendisine akın eden yoğun gücü tamamen iradesi ile dizginler."
 "DOTA_Item_Desc_Mandate_of_the_Stormborn"	"Bazıları Raijin Thunderkeg'in aniden artan gücünün, kendi gücünü harcamasının doğal bir sonucu olduğuna inanır. Ancak çaba göstermeden hiçbir güç elde edilmez. Bu Celestial'lar için de geçerlidir. Her ne kadar yeteneği yaptıklarını kolay gösterse de, Rajin yeteneklerini her kullandığında kendisine akın eden yoğun gücü tamamen iradesi ile dizginler."
 "DOTA_Item_Desc_Pin_The_International_2018_Attendee"	"Steam profilinizde sergileyebileceğiniz bir koleksiyoncu rozeti."
+"DOTA_Item_Desc_The_Spoils_of_Dezun"	"Dezun'un Tarikatı'nda sadece birkaç kişi Noth Diyarı'na gidebilmek için kullanılan malzemelerin gerçek kaynağını bilir. Ancak yeniden canlandırılmasından sonra Huskar hiçbir kıdemli tarikat üyesinin bilemeyeceği ve amaçlarına ulaşmak için kullanacağı gizemlere sahip oldu."
 "DOTA_Item_Desc_Trove_Carafe_2018_Autographed_by_2018_Chu_Shadow_Zeyu"	"Bu hazine en sevdiğiniz Dota 2 sunucusu tarafından imzalanacak olan eşyaları içeren Trove Carafe 2018 ile aynı öğeleri içerir."
 "DOTA_Item_Desc_Trove_Carafe_2018_Autographed_by_2018_Li_AA_Qiming"	"Bu hazine en sevdiğiniz Dota 2 sunucusu tarafından imzalanacak olan eşyaları içeren Trove Carafe 2018 ile aynı öğeleri içerir."
 "DOTA_Item_Desc_Trove_Carafe_2018_Autographed_by_2018_Marcus_djWHEAT_Graham"	"Bu hazine en sevdiğiniz Dota 2 sunucusu tarafından imzalanacak olan eşyaları içeren Trove Carafe 2018 ile aynı öğeleri içerir."
@@ -24670,6 +24672,8 @@ Zaten kilidi açıldığı için bu hazineyi açmak için mühür ya da anahtar 
 "DOTA_Item_Desc_Trove_Carafe_2018_Autographed_by_Zhang_Dove_Tiange"	"Bu hazine en sevdiğiniz Dota 2 sunucusu tarafından imzalanacak olan eşyaları içeren Trove Carafe 2018 ile aynı öğeleri içerir."
 "DOTA_Item_Gimlek_Decanter"	"Gimlek Sürahisi"
 "DOTA_Item_Glaive_of_Oscilla"	"Oscilla'nın Kılıcı"
+"DOTA_Item_Golden_Mandate_of_the_Stormborn"	"Fırtınadoğanın Altın Emri"
+"DOTA_Item_Mandate_of_the_Stormborn"	"Fırtınadoğanın Emri"
 "DOTA_Item_Mask_of_the_Confidant"	"Sırdaşın Maskesi"
 "DOTA_Item_Orb_of_Deliverance"	"Hüküm Küresi"
 "DOTA_Item_Pin_The_International_2018_Attendee"	"Rozet: The International 2018 Katılımcısı"
@@ -25820,8 +25824,10 @@ Bu öğe hiçbir zaman takas edilebilir veya pazarda satın alınabilir olmayaca
 Bu öğe hiçbir zaman takas edilebilir veya pazarda satın alınabilir olmayacaktır."
 "DOTA_Item_Desc_Faithful_Followers"	"Aralarında sıklıkla rekabet olan toplumların ortaklaşa çalışması, denileni yapmaya meraklı bu iki gözü ortaya çıkardı.
 Bu öğe hiçbir zaman takas edilebilir veya pazarda satın alınabilir olmayacaktır."
+"DOTA_Item_Desc_Immortal_Treasure_III_2020"	"Ölümsüz öğeler The International 11'e kadar takas edilemez veya pazara konamaz, sadece bir kez hediye edilebilirdir."
 "DOTA_Item_Desc_recycling_immortal_treasure_i_2020"	"Recycle immortal treasures for additional treasures and a wheelspin."
 "DOTA_Item_Faithful_Followers"	"Sadık Takipçiler"
+"DOTA_Item_Sanctums_of_the_Divine"	"Kutsal Mabetler"
 "DOTA_WearableType_Gauntlet_Ticket"	"Savaş Maratonu Bileti"
 "DOTA_Item_AA_FrozenBerserker_Arms"	"AA FrozenBerserker Arms"
 "DOTA_Item_AA_FrozenBerserker_Head"	"AA FrozenBerserker Head"
@@ -26895,5 +26901,18 @@ Bu öğe hiçbir zaman takas edilebilir veya pazarda satın alınabilir olmayaca
 "DOTA_Set_Wings_of_Colorful_IceCrystals"	"Wings of Colorful IceCrystals"
 "DOTA_Set_Zeus_Emperor_of_the_Clergy"	"Zeus Emperor of the Clergy"
 "DOTA_Set_little_witch"	"little witch"
+"DOTA_Item_Armor_of_the_Rising_Gale"	"Yükselen Fırtınanın Zırhı"
+"DOTA_Item_Cape_of_the_Rising_Gale"	"Yükselen Fırtınanın Pelerini"
+"DOTA_Item_Compass_of_the_Rising_Gale"	"Yükselen Fırtınanın Pusulası"
+"DOTA_Item_Compass_of_the_Rising_Gale_Bundle"	"Yükselen Fırtınanın Pusulası Paketi"
+"DOTA_Item_Compass_of_the_Rising_Gale_Loading_Screen"	"Yükselen Fırtınanın Pusulası Yükleme Ekranı"
+"DOTA_Item_Desc_Windranger_Arcana_Gem"	"Düşmanı öldürmek için atılan Focus Fire oklarının sayısı."
+"DOTA_Item_Longbow_of_the_Rising_Gale"	"Yükselen Fırtınanın Uzun Yayı"
+"DOTA_Item_Quiver_of_the_Rising_Gale"	"Yükselen Fırtınanın Ok Kılıfı"
+"DOTA_Item_Windranger_Arcana_Gem"	"Windranger Gizemli Taşı"
+"DOTA_Set_Compass_of_the_Rising_Gale_Bundle"	"Yükselen Fırtınanın Pusulası Paketi"
+"DOTA_Item_BUSTER"	"B.A.S.T.I.R"
+"DOTA_Item_Autumnal_Treasure_2020"	"Sonbahar Hazinesi 2020"
+"DOTA_Item_Blazing_Hatchling"	"Yanan Yavru"
 }
 }

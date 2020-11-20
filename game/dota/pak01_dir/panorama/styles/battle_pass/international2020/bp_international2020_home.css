@@ -113,7 +113,7 @@
 
 #BottomWideSection.ImmortalBackground
 {
-	background-image: url("s2r://panorama/images/compendium/international2020/compendium/immortal-1_png.vtex");
+	background-image: url("s2r://panorama/images/compendium/international2020/compendium/bp_immortal_treasure_3_png.vtex");
 }
 
 #BottomWideSection.GuildsBackground
@@ -139,6 +139,11 @@
 #BottomWideSection.CacheVotingBackground
 {
 	background-image: url("s2r://panorama/images/compendium/international2020/compendium/cache1_bg_png.vtex");
+}
+
+#BottomWideSection.CCBackground
+{
+	background-image: url("s2r://panorama/images/compendium/international2020/compendium/bp_cc_treasure_2_psd.vtex");
 }
 
 #BottomSection

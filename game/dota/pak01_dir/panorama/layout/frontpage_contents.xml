@@ -10,66 +10,75 @@
 	<!-- TI10 CONTENT -->
 
 		
-		<!-- QoPG ARCANA -->
-		<Panel id="SKBackgroundGlow"/>
-		<DOTAScenePanel id="SKBackgroundScene" map="backgrounds/hero_frontpage_antimage_persona" renderdeferred="false" light="light_hero"  camera="herocamera" particleonly="false" antialias="true" />
-		<!-- <DOTAScenePanel id="PlanetfallBackgroundScene" map="backgrounds/hero_showcase_wraith_king_arcana" renderdeferred="false" light="light_hero" camera="herocamera" particleonly="false" /> -->
+		<!-- ARCANA -->
+		<!-- <Panel id="SKBackgroundGlow"/>
+		<DOTAScenePanel id="SKBackgroundScene" map="backgrounds/hero_frontpage_windranger_arcana" renderdeferred="true" light="light_hero"  camera="herocamera" particleonly="false" antialias="true" />
 		<CustomLayoutPanel id="SKFrontpageCell" class="FrontpageCell"
-			layout="file://{resources}/layout/banners/front_page_debut_female_antimage.xml" />
-
-
-		
+			layout="file://{resources}/layout/banners/front_page_debut_wr_arcana.xml" /> -->
 		
 
 
-		<!-- WEBSITE LINK -->
-		<!-- <DOTAFrontpageDefaultButton	class="FrontpageCell TopLeftCell TI10FrontpageCell VisibleWhenBattlePassOwned"
-			cellheader="#DOTA_LearnMore"
-			celltitle="#DOTA_TI10_FrontPage_Website_Title"
-			celltext="#DOTA_TI10_FrontPage_Website_Desc"
-			onactivate="ExternalBrowserGoToURL( 'http://www.dota2.com/international/battlepass' )">
+	
+
+		<!-- DIRETIDE CHEST -->
+		<DOTAFrontpageDefaultButton	class="FrontpageCell BottomLeftCell BelowTrailer DiretideFrontpageCell"
+			cellheader="#DOTA_DiretideChest_Frontpage_Label"
+			celltitle="#DOTA_DiretideChest_Frontpage_Title"
+			celltext="#DOTA_DiretideChest_Frontpage_Desc"
+			onactivate="DOTAShowItemDefPage( 13562 )">
 			
-			<MoviePanel class="FrontpageCellImage" src="file://{resources}/videos/ti10_aegis_frontpage_sm.webm" repeat="true" autoplay="onload"  />
-		</DOTAFrontpageDefaultButton> -->
+			<MoviePanel class="FrontpageCellImage HideForPerfectWorld" src="file://{resources}/videos/diretide2020/diretide_chest_frontpage.webm" repeat="true" autoplay="onload"  />
+			<MoviePanel class="FrontpageCellImage ShowOnlyForPerfectWorld" src="file://{resources}/videos/diretide2020/diretide_chest_frontpage_pw.webm" repeat="true" autoplay="onload"  />
+		</DOTAFrontpageDefaultButton>
 
 
 		<!-- NO BATTLEPASS UPSELL - LEAVE AT BOTTOM -->
 		<!-- <CustomLayoutPanel class="FrontpageCell TopLeftCell TI10FrontpageCell TallCell WideCell HideWhenBattlePassOwned"
 							layout="file://{resources}/layout/banners/front_page_battlepass_ti10.xml" /> -->
-		
-		
-		
-		<CustomLayoutPanel class="FrontpageCell TopLeftCell TI10FrontpageCell TallCell WideCell"
-							layout="file://{resources}/layout/banners/front_page_ti10_aghanim_launch.xml" />
-		
-		
-		
 
 
-		<!-- UPCOMING REWARDS CAROUSEL -->
-		<!-- <DOTAFrontpageInternational2020UpcomingRewards id="UpcomingRewards" class="FrontpageCell TallCell TopLeftCell TI10FrontpageCell" /> -->
+
+		<!-- DIRETIDE WEBSITE -->
+		<DOTAFrontpageDefaultButton	class="FrontpageCell TopLeftCell TallCell DiretideFrontpageCell"
+						cellimage="s2r://panorama/images/front_page/diretide2020_launch_psd.vtex"
+						cellheader="#DOTA_Diretide_Frontpage_Label"
+						celltitle="#DOTA_Diretide_Frontpage_Title"
+						celltext="#DOTA_Diretide_Frontpage_Desc"
+						onactivate="ExternalBrowserGoToURL( 'http://www.dota2.com/diretide' )"
+		/>
+
+		<Label class="ReplayTrailerButton" text="#DOTA_Diretide2020_Watch_Trailer" onactivate="DOTAShowSplashAdMovie( diretide2020_movie )" />
+
 		
-		<!-- COLLECTOR'S CACHE -->
-		<!-- <CustomLayoutPanel id="CollectorsCache" class="FrontpageCell TallCell TopMiddleCell TI10FrontpageCell" onactivate="DOTAShowItemDefPage( 14947 )" layout="file://{resources}/layout/banners/front_page_battlepass_ti10_collectors_cache.xml" /> -->
 
+		<!-- ARCANA VOTE -->
+		<!--<DOTAFrontpageDefaultButton id="ArcanaVoteCell"	class="FrontpageCell TopLeftCell TI10FrontpageCell"
+						cellheader="#DOTAArcanaVote_TitleResults"
+						celltitle="#DOTA_FrontPage_TI10_BattlePass_ArcanaReveal_Title"
+						celltext="#DOTA_FrontPage_TI10_BattlePass_ArcanaReveal_Desc"
+						onactivate="DOTAShowBPInternational2020ArcanaVotePage()" >
+			<Panel id="ArcanaVoteContents">
+				<DOTAHeroMovie id="SpectreMovie" heroid="67" />
+				<Label text="#dota_vs" />
+				<DOTAHeroMovie id="FacelessVoidMovie" heroid="41" />
+			</Panel>
+		</DOTAFrontpageDefaultButton>-->
+		
 
-		<!-- !!! Don't comment out DOTAFrontpageLastMatch, just make it not visible in the css !!! -->
 		<!-- LastMatch and BattleCup swap visibility based on if there's an upcoming/active Battle Cup -->
-		<DOTAFrontpageLastMatch id="LastMatch" class="FrontpageCell TopLeftCell" />
-		<FrontpageWeekendTourneyButton id="BattleCup" class="FrontpageCell TopLeftCell" />
+		<!--<DOTAFrontpageLastMatch id="LastMatch" class="FrontpageCell BottomRightCell" />
+		<FrontpageWeekendTourneyButton id="BattleCup" class="FrontpageCell BottomRightCell" />-->
 
 		<!-- <DOTAFrontpageDefaultButton id="Blog" class="FrontpageCell TopLeftCell" cellheader="#DOTA_Blog" /> -->
 
 
 
 		<!-- SPECTATOR CAROUSEL -->
-		<!-- <DOTAFrontpageCarousel id="SpectatorCarousel" class="FrontpageCell TopMiddleCell">
+		<!-- <DOTAFrontpageCarousel id="SpectatorCarousel" class="FrontpageCell BottomLeftCell">
 			<DOTAFrontpageProCircuit id="FrontpageProCircuit" />
 			<DOTAFrontpageProPlaying id="FrontpageProPlaying"  />
 			<DOTAFrontpageTopLive id="FrontpageTopLive" />
-		</DOTAFrontpageCarousel> -->
-
-
+		</DOTAFrontpageCarousel>  -->
 
 		<!-- GAMEPLAY PATCH -->
 		<!-- <DOTAFrontpageGameplayPatch id="GameplayPatch" class="FrontpageCell BottomLeftCell"
@@ -86,11 +95,16 @@
 
 
 
+	
+		<!-- LAST CHANCE BATTLE PASS -->
+		<!-- <CustomLayoutPanel class="FrontpageCell TI10FrontpageCell TopLeftCell "
+							layout="file://{resources}/layout/banners/front_page_international_2020_last_chance.xml" /> -->
 
-		<!-- TRIVIA - DO NOT HIDE, MAKE SURE THIS IS COMPATIBLE WITH CURRENT LAYOUT -->
-		<DOTATriviaGame id="TriviaGame" class="FrontpageCell TopRightCell TallCell" />
+
+
+		<!-- BP TRIVIA - DO NOT HIDE, MAKE SURE THIS IS COMPATIBLE WITH CURRENT LAYOUT -->
+		<!-- <DOTATriviaGame id="TriviaGame" class="FrontpageCell TopMiddleCell TallCell" /> -->
 		
-
 
 		<!-- FEATURED TOURNAMENT -->
 		<!-- <DOTAFrontpageCarousel id="FeaturedTournament" class="FrontpageCell BottomLeftCell" autoscroll-delay="6s, 1.5s">
@@ -100,13 +114,7 @@
 
 		
 		<!-- TOP CUSTOM GAME -->
-		<!-- <DOTAFrontpageDefaultButton id="TopCustomGame" class="FrontpageCell BottomRightCell" cellheader="#DOTA_Custom_Game_Of_The_Day" /> -->
-
-		
-
-
-
-
+		<!--<DOTAFrontpageDefaultButton id="TopCustomGame" class="FrontpageCell BottomLeftCell" cellheader="#DOTA_Custom_Game_Of_The_Day" />-->
 		
 
 		<!-- itemdef for the spotlight sale is set through code -->
@@ -125,18 +133,7 @@
 			<DOTAFrontpageTopLive id="FrontpageTopLive" />
 		</DOTAFrontpageCarousel>-->
 
-		<!-- 
-		<DOTATriviaGame id="TriviaGame" class="FrontpageCell TopRightCell TallCell" />
-
-					<DOTAFrontpageDefaultButton	class="FrontpageCell BottomRightCell"
-										   cellheader="#DOTA_TI9_FrontPage_Watch_Label"
-										   celltitle="#DOTA_TI9_FrontPage_Watch_Title"
-										   celltext="#DOTA_TI9_FrontPage_Watch_Desc"
-										   cellimage="s2r://panorama/images/front_page/ti9-replays_jpg.vtex"
-										   onactivate="DOTAShowWatchTournamentsPage()">
-	
-			</DOTAFrontpageDefaultButton>
-			 -->
+		
 
 		<!-- =-=-=-=-=-=-=-=  PREVIOUS NON-COMMON XML STUFF BELOW,  SAVED FOR FUTURE REFERENCE AND COPY PASTA  =-=-=-=-=-=-=-= -->
 

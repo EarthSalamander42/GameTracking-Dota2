@@ -56,6 +56,9 @@
 		<Panel id="ItemPreviewTempContainer" />
 		
 		<Panel id="TreasureControls">
+			<Panel id="TreasureGemsPanel" >
+				<Label text="#DOTA_Item_Has_Gems"/>
+			</Panel>
 			<Panel hittest="false">
 				<Panel id="ModifiersList" class="ModifierContainer" hittest="false">
 					<Panel id="activity" class="ModifierIcon activity" onmouseover="UIShowTextTooltip( #DOTA_tooltip_econ_item_modifier_animation )" onmouseout="UIHideTextTooltip()" />
@@ -196,8 +199,7 @@
 		</Panel>
 
 		<Panel id="TreasureRecycling">
-			<Panel id="RecyclingInfoIcon" class="TreasureRecyclingInfoIcon InfoIcon HideForBattlePass" onmouseover="UIShowTextTooltip( #DOTA_OpenTreasureTooltip_BonusTreasure )" onmouseout="UIHideTextTooltip()" />
-			<Panel id="BPRecyclingInfoIcon" class="TreasureRecyclingInfoIcon InfoIcon ShowForBattlePass" onmouseover="UIShowTextTooltip( #DOTA_OpenTreasureTooltip_BonusTreasure_BattlePass )" onmouseout="UIHideTextTooltip()" />
+			<Panel id="RecyclingInfoIcon" class="InfoIcon" />
 			<Panel id="TreasureRecyclingTop" class="TopBottomFlow">
 				<DOTAScenePanel id="RecyclingRewardBackground" map="scenes/rank_tier_ambient" renderdeferred="false" rendershadows="false" camera="camera_1" hittest="false" particleonly="true" />	
 
@@ -205,18 +207,17 @@
 					<Panel id="DotaPlusIcon" class="DotaPlusIconSmall"/>
 					<Label class="TreasureRecyclingTitle" text="#DOTA_Treasure_RecyclingTitle" />
 				</Panel>
-				<Label class="TreasureRecyclingSubtitle HideForBattlePass" text="#DOTA_Treasure_RecyclingSubtitle" />
-
 				<Panel id="TreasureRecyclingHeader_BattlePass" class="ShowForBattlePass LeftRightFlow">
 					<Panel class="BPFeatureIcon"/>
 					<Label class="TreasureRecyclingTitle BattlePassTitle" text="#DOTA_Treasure_RecyclingTitle" />
 				</Panel>
-				<Label id="BPTreasureRecyclingSubtitle" class="TreasureRecyclingSubtitle ShowForBattlePass" text="#DOTA_Treasure_RecyclingSubtitle_BattlePass" />
+				<Label class="TreasureRecyclingSubtitle" text="{s:recycling_description}" />
 		
 				<Panel id="RecyclingRewardProgress">					
 					<DOTAPunchCard id="RecyclingPunchCard" maxstamps="6" currentstamps="0" />
 					<Panel id="RecyclingRewardContainer" class="TopBottomFlow">
 						<Panel id="RecyclingReward" class="LeftRightFlow">
+							<Panel class="RecyclingRewardContents">
 								<EconItemImage id="RecyclingTreasureImage" />
 								<Label id="RecyclingRewardSeparator" text="+"/>
 								<Panel id="RecyclingBattlePassReward" class="ShowForBattlePass"/>
@@ -224,6 +225,7 @@
 									<Panel id="RecyclingShardRewardIcon" class="CardHeaderSmallButton DotaPlusCurrencyIcon" />
 									<Label id="RecyclingShardRewardLabel" text="{d:recycling_shard_reward}"/>
 								</Panel>
+							</Panel>
 						</Panel>
 						<Button id="RecyclingRewardButton" class="DotaPlusBrightButton">
 							<Label id="RecyclingRewardClaimLabel" text="#DOTA_Frontpage_TimedEvent_ClaimButtonLabel"/>
@@ -311,6 +313,23 @@
 					
 				</Panel>
 
+				<Panel id="ShardPurchaseRow" class="TreasureDetailsRow">
+					<Button id="ShardPurchaseButton" class="PurchaseButton ColoredButton" onactivate="DOTAPurchaseSelectedTreasureForShards()" 
+							onmouseover="DOTAShowSelectedOpenTreasureTooltip();" onmouseout="DOTAHideOpenTreasureTooltip();">
+						<Panel id="PurchaseButtonContents">
+							<Label id="ShardPurchaseLabel" text="#DOTA_Treasure_Purchase" />
+							<Label id="ShardPriceLabel" text="{d:shard_price}" />
+							<Panel id="ShardPriceIcon" />
+						</Panel>
+					</Button>
+					
+					<DropDown id="TreasureShardQuantityDropDown" class="ColoredButton QuantityDropDown">
+						<!-- Filled in dynamically -->
+					</DropDown>
+					
+				</Panel>
+
+					
 				<Panel id="MarketPurchaseRow" class="TreasureDetailsRow">
 					<Button id="MarketPurchaseButton" class="PurchaseButton ColoredButton" onactivate="DOTAPurchaseSelectedTreasureOnMarket()"
 							onmouseover="DOTAShowSelectedOpenTreasureTooltip(); AddStyle( Hover ); AddStyle( MarketPriceButton, Hover );"
@@ -354,6 +373,23 @@
 				<Panel id="InfusersOwnedRow" class="TreasureDetailsRow">
 					<Label id="InfusersOwnedLabel" text="#DOTA_Treasure_InfusersOwned" />
 					<Label id="InfusersOwnedCount" text="{d:infusers_owned_count}" />
+				</Panel>
+
+				<Panel id="KeyPurchaseRow" class="TreasureDetailsRow">
+					<Button id="KeyPurchaseButton" class="PurchaseButton ColoredButton" onactivate="DOTAPurchaseCrateKey()">
+						<Panel id="KeyButtonContents" >
+							<Label text="#DOTA_Treasure_KeyPurchase" />
+							<Label id="InfuserButtonPrice" text="{s:key_price}" />
+						</Panel>
+					</Button>
+					<DropDown id="KeyQuantityDropDown" class="ColoredButton QuantityDropDown">
+						<!-- Filled in dynamically -->
+					</DropDown>					
+				</Panel>
+
+				<Panel id="KeysOwnedRow" class="TreasureDetailsRow">
+					<Label id="KeysOwnedLabel" text="#DOTA_TreasureKeysOwned" />
+					<Label id="KeysOwnedCount" text="{d:keys_owned_count}" />
 				</Panel>
 			</Panel>
 			

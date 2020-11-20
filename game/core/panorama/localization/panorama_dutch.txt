@@ -137,7 +137,7 @@
 	"Panorama_Lang_Footer_Ukrainian"			"OEKRAÏENS"
 	
 	"Panorama_MoviePlaybackError"		"Fout bij afspelen"
-	"Panorama_MovieToggleCaptions"		"Toggle Captions"
+	"Panorama_MovieToggleCaptions"		"Ondertiteling aan/uit"
 
 	"Debugger_PaintInfo"				"Verfinformatie weergeven"
 	"Debugger_Style"				"Stijl"

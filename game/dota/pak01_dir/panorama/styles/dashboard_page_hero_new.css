@@ -74,11 +74,11 @@ DOTAHeroPageNew
 
 #NextHero .Arrow
 {
-    background-image: url("s2r://panorama/images/control_icons/icon_hero_next_arrow_png.vtex");
+	background-image: url("s2r://panorama/images/control_icons/icon_hero_next_arrow_png.vtex");
 	background-repeat: no-repeat;
-    background-size: 50px 46px;
-    width: 50px;
-    height: 46px;
+	background-size: 50px 46px;
+	width: 50px;
+	height: 46px;
 }
 
 #PreviousHero:hover, #NextHero:hover
@@ -104,6 +104,10 @@ DOTAHeroPageNew
 	height: 100%;
 }
 
+.Marketing .HeroPageContent
+{
+	background-image: url("s2r://panorama/images/backgrounds/reward_screencap_background_fall20_psd.vtex");
+}
 #LargeModelPreview, #LargeModelOverlay
 {
 	width: 60%;
@@ -443,7 +447,6 @@ DOTAHeroPageNew
     margin: 0px 16px;
     font-size: 19px;
     color: #8e9795;
-    vertical-align: bottom;
 }
 
 .HeroPageSubTab
@@ -798,7 +801,7 @@ DOTAHeroPageNew
 	margin-top: 70px;
 }
 
-DOTADashboard:not(.PlusSubscriber) #HeroBadge
+.MaxHeroLevelWithoutSubscription #HeroBadge
 {
 	saturation: 0.0;
 	wash-color: #999;
@@ -820,7 +823,7 @@ DOTADashboard:not(.PlusSubscriber) #HeroBadge
 	visibility: collapse;
 }
 
-DOTADashboard:not(.PlusSubscriber) #HeroBadgeTooltip
+.MaxHeroLevelWithoutSubscription #HeroBadgeTooltip
 {
 	visibility: visible;
 }
