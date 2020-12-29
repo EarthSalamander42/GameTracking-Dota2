@@ -4,52 +4,46 @@
 		<include src="s2r://panorama/styles/frontpage_shared.vcss_c" />
 		<include src="s2r://panorama/styles/frontpage_contents.vcss_c" />
 	</styles>
+	
+	<scripts>
+		<include src="s2r://panorama/scripts/util.vjs_c" />
+		<include src="s2r://panorama/scripts/sequence_actions.vjs_c" />
+		<include src="s2r://panorama/scripts/dota_sequence_actions.vjs_c" />
+	</scripts>
+
 
 	<DOTAFrontpageContents>
 
-	<!-- TI10 CONTENT -->
-
-		
-		<!-- ARCANA -->
-		<!-- <Panel id="SKBackgroundGlow"/>
-		<DOTAScenePanel id="SKBackgroundScene" map="backgrounds/hero_frontpage_windranger_arcana" renderdeferred="true" light="light_hero"  camera="herocamera" particleonly="false" antialias="true" />
-		<CustomLayoutPanel id="SKFrontpageCell" class="FrontpageCell"
-			layout="file://{resources}/layout/banners/front_page_debut_wr_arcana.xml" /> -->
-		
-
-
-	
-
 		<!-- DIRETIDE CHEST -->
-		<DOTAFrontpageDefaultButton	class="FrontpageCell BottomLeftCell BelowTrailer DiretideFrontpageCell"
+		<!-- <DOTAFrontpageDefaultButton	class="FrontpageCell BottomLeftCell DiretideFrontpageCell"
 			cellheader="#DOTA_DiretideChest_Frontpage_Label"
 			celltitle="#DOTA_DiretideChest_Frontpage_Title"
 			celltext="#DOTA_DiretideChest_Frontpage_Desc"
 			onactivate="DOTAShowItemDefPage( 13562 )">
+			cellimage="s2r://panorama/images/front_page/dota_plus_update_winter_2020_psd.vtex"
+
 			
 			<MoviePanel class="FrontpageCellImage HideForPerfectWorld" src="file://{resources}/videos/diretide2020/diretide_chest_frontpage.webm" repeat="true" autoplay="onload"  />
 			<MoviePanel class="FrontpageCellImage ShowOnlyForPerfectWorld" src="file://{resources}/videos/diretide2020/diretide_chest_frontpage_pw.webm" repeat="true" autoplay="onload"  />
+		</DOTAFrontpageDefaultButton> -->
+
+
+
+		<DOTAFrontpageDefaultButton	class="FrontpageCell MiddleLeftCell"
+				cellheader="#DOTA_PatchNotes_Header"
+				celltitle="#Frontpage_Mistwoods_Intro"
+				celltext="#Frontpage_Mistwoods_Sub"
+				onactivate="DOTAShowPatchVersion( 7.28 )">
+
+				<Image class="FrontpageCellImage ShowEN" src="s2r://panorama/images/events/mistwoods_en_png.vtex"/>
+				<Image class="FrontpageCellImage ShowCN" src="s2r://panorama/images/events/mistwoods_cn_png.vtex"/>
+				<Image class="FrontpageCellImage ShowRU" src="s2r://panorama/images/events/mistwoods_ru_png.vtex"/>
+				<MoviePanel class="FrontpageCellImage" src="file://{resources}/videos/mistwoods_%language%.webm" repeat="true" autoplay="onload"  />
 		</DOTAFrontpageDefaultButton>
 
-
-		<!-- NO BATTLEPASS UPSELL - LEAVE AT BOTTOM -->
-		<!-- <CustomLayoutPanel class="FrontpageCell TopLeftCell TI10FrontpageCell TallCell WideCell HideWhenBattlePassOwned"
-							layout="file://{resources}/layout/banners/front_page_battlepass_ti10.xml" /> -->
-
-
-
-		<!-- DIRETIDE WEBSITE -->
-		<DOTAFrontpageDefaultButton	class="FrontpageCell TopLeftCell TallCell DiretideFrontpageCell"
-						cellimage="s2r://panorama/images/front_page/diretide2020_launch_psd.vtex"
-						cellheader="#DOTA_Diretide_Frontpage_Label"
-						celltitle="#DOTA_Diretide_Frontpage_Title"
-						celltext="#DOTA_Diretide_Frontpage_Desc"
-						onactivate="ExternalBrowserGoToURL( 'http://www.dota2.com/diretide' )"
-		/>
-
-		<Label class="ReplayTrailerButton" text="#DOTA_Diretide2020_Watch_Trailer" onactivate="DOTAShowSplashAdMovie( diretide2020_movie )" />
-
 		
+		
+		<!--<Label class="ReplayTrailerButton" text="#DOTA_Diretide2020_Watch_Trailer" onactivate="DOTAShowSplashAdMovie( diretide2020_movie )" />-->
 
 		<!-- ARCANA VOTE -->
 		<!--<DOTAFrontpageDefaultButton id="ArcanaVoteCell"	class="FrontpageCell TopLeftCell TI10FrontpageCell"
@@ -66,19 +60,19 @@
 		
 
 		<!-- LastMatch and BattleCup swap visibility based on if there's an upcoming/active Battle Cup -->
-		<!--<DOTAFrontpageLastMatch id="LastMatch" class="FrontpageCell BottomRightCell" />
-		<FrontpageWeekendTourneyButton id="BattleCup" class="FrontpageCell BottomRightCell" />-->
+		<DOTAFrontpageLastMatch id="LastMatch" class="FrontpageCell TopLeftCell" />
+		<FrontpageWeekendTourneyButton id="BattleCup" class="FrontpageCell TopLeftCell" />
 
 		<!-- <DOTAFrontpageDefaultButton id="Blog" class="FrontpageCell TopLeftCell" cellheader="#DOTA_Blog" /> -->
 
 
 
 		<!-- SPECTATOR CAROUSEL -->
-		<!-- <DOTAFrontpageCarousel id="SpectatorCarousel" class="FrontpageCell BottomLeftCell">
+		<DOTAFrontpageCarousel id="SpectatorCarousel" class="FrontpageCell BottomLeftCell">
 			<DOTAFrontpageProCircuit id="FrontpageProCircuit" />
 			<DOTAFrontpageProPlaying id="FrontpageProPlaying"  />
 			<DOTAFrontpageTopLive id="FrontpageTopLive" />
-		</DOTAFrontpageCarousel>  -->
+		</DOTAFrontpageCarousel>
 
 		<!-- GAMEPLAY PATCH -->
 		<!-- <DOTAFrontpageGameplayPatch id="GameplayPatch" class="FrontpageCell BottomLeftCell"

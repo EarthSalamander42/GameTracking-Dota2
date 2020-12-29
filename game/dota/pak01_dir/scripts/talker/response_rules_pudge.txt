@@ -890,11 +890,6 @@ Response pudge_Kill
 	scene "scenes/pudge/pudge_pud_laugh_05.vcd" nodelay noscene 
 	scene "scenes/pudge/pudge_pud_laugh_06.vcd" nodelay noscene 
 	scene "scenes/pudge/pudge_toy_pug_wheel_deny_02.vcd" nodelay noscene 
-	scene "scenes/pudge/pudge_toy_pug_wheel_deny_03_02.vcd" nodelay noscene 
-	scene "scenes/pudge/pudge_toy_pug_wheel_all_01.vcd" nodelay noscene 
-	scene "scenes/pudge/pudge_toy_pug_wheel_all_03.vcd" nodelay noscene 
-	scene "scenes/pudge/pudge_toy_pug_wheel_all_06.vcd" nodelay noscene 
-	scene "scenes/pudge/pudge_toy_pug_wheel_all_07.vcd" nodelay noscene 
 }
 
 Rule pudge_Kill_Rule
@@ -2083,6 +2078,11 @@ Response pudge_KillIsPudgeToy
 	scene "scenes/pudge/pudge_toy_pug_laugh_09.vcd" nodelay noscene 
 	scene "scenes/pudge/pudge_toy_pug_laugh_10.vcd" nodelay noscene 
 	scene "scenes/pudge/pudge_toy_pug_move_05_02.vcd" nodelay noscene 
+	scene "scenes/pudge/pudge_toy_pug_wheel_deny_03_02.vcd" nodelay noscene 
+	scene "scenes/pudge/pudge_toy_pug_wheel_all_01.vcd" nodelay noscene 
+	scene "scenes/pudge/pudge_toy_pug_wheel_all_03.vcd" nodelay noscene 
+	scene "scenes/pudge/pudge_toy_pug_wheel_all_06.vcd" nodelay noscene 
+	scene "scenes/pudge/pudge_toy_pug_wheel_all_07.vcd" nodelay noscene 
 }
 
 Rule pudge_KillIsPudgeToy_Rule
@@ -3367,6 +3367,17 @@ Rule pudge_KillIsPudgeToyIsEnemyZuusChance_25%_Rule
 {
 	criteria Kill Ispudge IsPudgeToy IsEnemyZuus Chance_25%
 	response pudge_KillIsPudgeToyIsEnemyZuusChance_25%
+}
+
+Response pudge_KillIsPudgeToyIsEnemyHoodwinkChance_35%
+{
+	scene "scenes/pudge/pudge_toy_pug_rival_304.vcd" nodelay noscene speakonce
+}
+
+Rule pudge_KillIsPudgeToyIsEnemyHoodwinkChance_35%_Rule
+{
+	criteria Kill Ispudge IsPudgeToy IsEnemyHoodwink Chance_35%
+	response pudge_KillIsPudgeToyIsEnemyHoodwinkChance_35%
 }
 
 Response pudge_Move
@@ -10744,6 +10755,17 @@ Rule pudge_AllyNearIsPudgeToyIsAllyZuusEarlygameChance_30%_Rule
 {
 	criteria AllyNear Ispudge IsPudgeToy IsAllyZuus Earlygame Chance_30%
 	response pudge_AllyNearIsPudgeToyIsAllyZuusEarlygameChance_30%
+}
+
+Response pudge_AllyNearIsPudgeToyIsAllyHoodwinkEarlyGameChance_35%
+{
+	scene "scenes/pudge/pudge_toy_pug_ally_304.vcd" nodelay noscene speakonce
+}
+
+Rule pudge_AllyNearIsPudgeToyIsAllyHoodwinkEarlyGameChance_35%_Rule
+{
+	criteria AllyNear Ispudge IsPudgeToy IsAllyHoodwink EarlyGame Chance_35%
+	response pudge_AllyNearIsPudgeToyIsAllyHoodwinkEarlyGameChance_35%
 }
 
 Response pudge_EnemyNearIsPudgeChainIsEnemyAxeEarlyMidGameChance_25%

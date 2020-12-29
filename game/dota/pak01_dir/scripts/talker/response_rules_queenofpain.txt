@@ -2093,6 +2093,17 @@ Rule queenofpain_KillIsRistulArcIsEnemyZuusChance_25%_Rule
 	response queenofpain_KillIsRistulArcIsEnemyZuusChance_25%
 }
 
+Response queenofpain_KillIsRistulArcIsEnemyHoodwinkChance_35%
+{
+	scene "scenes/queenofpain/queenofpain_qop_arc_rival_204.vcd" nodelay noscene speakonce
+}
+
+Rule queenofpain_KillIsRistulArcIsEnemyHoodwinkChance_35%_Rule
+{
+	criteria Kill Isqueenofpain IsRistulArc IsEnemyHoodwink Chance_35%
+	response queenofpain_KillIsRistulArcIsEnemyHoodwinkChance_35%
+}
+
 Response queenofpain_KillIsRistulArcIsEnemyNight_StalkerChance_20%
 {
 	scene "scenes/queenofpain/queenofpain_qop_arc_lvo_rival_01.vcd" nodelay noscene 
@@ -4547,8 +4558,8 @@ Rule queenofpain_CooldownIsRistulArcSuperNag_Rule
 Response queenofpain_NoManaLittleNag
 {
 	scene "scenes/queenofpain/queenofpain_pain_nomana_01.vcd" nodelay noscene 
-	scene "scenes/queenofpain/queenofpain_pain_nomana_02.vcd" nodelay noscene 
-	scene "scenes/queenofpain/queenofpain_pain_nomana_03.vcd" nodelay noscene 
+	scene "scenes/queenofpain/queenofpain_pain_nomana_04.vcd" nodelay noscene 
+	scene "scenes/queenofpain/queenofpain_pain_nomana_07.vcd" nodelay noscene 
 }
 
 Rule queenofpain_NoManaLittleNag_Rule
@@ -4559,9 +4570,9 @@ Rule queenofpain_NoManaLittleNag_Rule
 
 Response queenofpain_NoManaMediumNag
 {
-	scene "scenes/queenofpain/queenofpain_pain_nomana_04.vcd" nodelay noscene 
+	scene "scenes/queenofpain/queenofpain_pain_nomana_02.vcd" nodelay noscene 
 	scene "scenes/queenofpain/queenofpain_pain_nomana_05.vcd" nodelay noscene 
-	scene "scenes/queenofpain/queenofpain_pain_nomana_06.vcd" nodelay noscene 
+	scene "scenes/queenofpain/queenofpain_pain_nomana_08.vcd" nodelay noscene 
 }
 
 Rule queenofpain_NoManaMediumNag_Rule
@@ -4572,8 +4583,8 @@ Rule queenofpain_NoManaMediumNag_Rule
 
 Response queenofpain_NoManaSuperNag
 {
-	scene "scenes/queenofpain/queenofpain_pain_nomana_07.vcd" nodelay noscene 
-	scene "scenes/queenofpain/queenofpain_pain_nomana_08.vcd" nodelay noscene 
+	scene "scenes/queenofpain/queenofpain_pain_nomana_03.vcd" nodelay noscene 
+	scene "scenes/queenofpain/queenofpain_pain_nomana_06.vcd" nodelay noscene 
 	scene "scenes/queenofpain/queenofpain_pain_nomana_09.vcd" nodelay noscene 
 }
 
@@ -5227,5 +5238,16 @@ Rule queenofpain_AllyNearIsRistulArcIsAllyZuusEarlygameChance_30%_Rule
 {
 	criteria AllyNear Isqueenofpain IsRistulArc IsAllyZuus Earlygame Chance_30%
 	response queenofpain_AllyNearIsRistulArcIsAllyZuusEarlygameChance_30%
+}
+
+Response queenofpain_AllyNearIsRistulArcIsAllyHoodwinkEarlyGameChance_35%
+{
+	scene "scenes/queenofpain/queenofpain_qop_arc_ally_204.vcd" nodelay noscene speakonce
+}
+
+Rule queenofpain_AllyNearIsRistulArcIsAllyHoodwinkEarlyGameChance_35%_Rule
+{
+	criteria AllyNear Isqueenofpain IsRistulArc IsAllyHoodwink EarlyGame Chance_35%
+	response queenofpain_AllyNearIsRistulArcIsAllyHoodwinkEarlyGameChance_35%
 }
 

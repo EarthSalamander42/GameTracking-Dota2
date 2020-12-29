@@ -367,4 +367,37 @@
 		]
 		vsnd_duration = 2.436757
 	}
+	Hero_Lich.IceSpire = 
+	{
+		type = "dota_update_default"
+		volume = 1.000000
+		pitch = 0.500000
+		pitch_rand_min = -0.050000
+		pitch_rand_max = 0.050000
+		soundlevel = 81.000000
+		mixgroup = "Weapons"
+		spread_radius = 600.000000
+		volume_fade_in = 1.000000
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/lich/ice_age_target.vsnd",
+		]
+		vsnd_duration = 3.424943
+	}
+	Hero_Lich.IceSpire.Destroy = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.000000
+		pitch = 1.000000
+		pitch_rand_min = -0.050000
+		pitch_rand_max = 0.050000
+		soundlevel = 81.000000
+		mixgroup = "Weapons"
+		distance_max = 2500.000000
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/lich/ice_spire_destroy.vsnd",
+		]
+		vsnd_duration = 2.904422
+	}
 }
