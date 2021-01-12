@@ -4727,8 +4727,8 @@ $tK
 *N5GCSDK17GCClientJobLambdaIZN23CDOTA_DB_Page_StorePlus23EventPurchaseCavernItemE6EEventjEUlvE_EE
 *N5GCSDK17GCClientJobLambdaIZN23CDOTA_DB_Page_StorePlus24EventPurchaseRandomRelicEvEUlvE_EE
 *N5GCSDK17GCClientJobLambdaIZN23CDOTA_DB_Page_StorePlus26EventPurchaseSpecificRelicE18kill_eater_event_tEUlvE_EE
-*N5GCSDK17GCClientJobLambdaIZN23CDOTA_DB_Popup_ChinaSSA13OnTryChinaSSAEfEUlvE_EE
 *N5GCSDK17GCClientJobLambdaIZN23CDOTA_DB_Popup_ChinaSSA18OnContinueChinaSSAEvEUlvE_EE
+*N5GCSDK17GCClientJobLambdaIZN23CDOTA_DB_Popup_ChinaSSA19OpenOverlayChinaSSAEvEUlvE_EE
 *N5GCSDK17GCClientJobLambdaIZN23CDOTA_UI_CavernCrawlMap20DisplayAllMapChangesEvEUlvE_EE
 *N5GCSDK17GCClientJobLambdaIZN23CDOTA_UI_FactHeroPicker15EventSelectHeroEvEUlvE_EE
 *N5GCSDK17GCClientJobLambdaIZN23CDOTA_UI_PurchaseButton14EventActivatedERKN8panorama9CPanelPtrINS2_8IUIPanelEEENS2_19EPanelEventSource_tEEUlvE_EE
@@ -6120,6 +6120,7 @@ $tK
 13CNetMessagePBILi388E33CDOTAClientMsg_EmptyItemSlotAlertL13SignonGroup_t14EL19NetChannelBufType_t1ELb1EE
 13CNetMessagePBILi389E24CDOTAClientMsg_AddMarkerL13SignonGroup_t14EL19NetChannelBufType_t1ELb1EE
 13CNetMessagePBILi390E30CDOTAClientMsg_AghsStatusAlertL13SignonGroup_t14EL19NetChannelBufType_t1ELb1EE
+13CNetMessagePBILi391E25CDOTAClientMsg_PerfReportL13SignonGroup_t14EL19NetChannelBufType_t1ELb1EE
 13CNetMessagePBILi400E20CMsgTEEffectDispatchL13SignonGroup_t5EL19NetChannelBufType_t0ELb1EE
 13CNetMessagePBILi401E19CMsgTEArmorRicochetL13SignonGroup_t5EL19NetChannelBufType_t0ELb1EE
 13CNetMessagePBILi402E18CMsgTEBeamEntPointL13SignonGroup_t5EL19NetChannelBufType_t0ELb1EE
@@ -6881,6 +6882,7 @@ $tK
 16CClientMessagePBILi388E33CDOTAClientMsg_EmptyItemSlotAlertL19NetChannelBufType_t1EE
 16CClientMessagePBILi389E24CDOTAClientMsg_AddMarkerL19NetChannelBufType_t1EE
 16CClientMessagePBILi390E30CDOTAClientMsg_AghsStatusAlertL19NetChannelBufType_t1EE
+16CClientMessagePBILi391E25CDOTAClientMsg_PerfReportL19NetChannelBufType_t1EE
 16CClientThinkList
 16CCourierModifier
 16CDOTABannedWords
@@ -11677,6 +11679,7 @@ $tK
 25CDOTAClientMsg_FlipCoin_t
 25CDOTAClientMsg_GlyphAlert
 25CDOTAClientMsg_KillMyHero
+25CDOTAClientMsg_PerfReport
 25CDOTAClientMsg_RadarAlert
 25CDOTAClientMsg_RecordVote
 25CDOTAClientMsg_RollDice_t
@@ -12349,6 +12352,7 @@ $tK
 27CDOTAChannelTypeChatCommand
 27CDOTAClientMsg_DamageReport
 27CDOTAClientMsg_GlyphAlert_t
+27CDOTAClientMsg_PerfReport_t
 27CDOTAClientMsg_PlayerBounty
 27CDOTAClientMsg_RadarAlert_t
 27CDOTAClientMsg_SalutePlayer
@@ -13402,6 +13406,7 @@ $tK
 3.5
 30.0f
 300.0
+3000
 3000.0
 300000
 30CBidirMsg_RebroadcastGameEvent
@@ -14772,6 +14777,7 @@ $tK
 33CMsgClientToGCUnlockCrateResponse
 33CMsgDOTAAnchorPhoneNumberResponse
 33CMsgDOTAChatRegionsEnabled_Region
+33CMsgDOTADPCSeasonResults_Standing
 33CMsgDOTAFantasyLeagueFindResponse
 33CMsgDOTAFantasyLeagueInfoResponse
 33CMsgDOTAFantasyLeaveLeagueRequest
@@ -16423,6 +16429,7 @@ $tK
 38CMsgClientToGCUnderDraftRerollResponse
 38CMsgClientToGCUnlockCrateResponse_Item
 38CMsgDOTAChatGetUserListResponse_Member
+38CMsgDOTADPCSeasonResults_StandingEntry
 38CMsgDOTAFantasyPlayerStandingsResponse
 38CMsgDOTAFantasyScheduledMatchesRequest
 38CMsgDOTAFantasyTeamTradeCancelResponse
@@ -18217,6 +18224,7 @@ $tK
 45CDOTA_Modifier_DeathProphet_SpiritSiphon_Buff
 45CDOTA_Modifier_DeathProphet_SpiritSiphon_Slow
 45CDOTA_Modifier_Disruptor_Thunder_Strike_Speed
+45CDOTA_Modifier_DoomBringer_Devour_Hero_Debuff
 45CDOTA_Modifier_DoomBringer_InfernalBlade_Burn
 45CDOTA_Modifier_Earthshaker_Arcana_Kill_Effect
 45CDOTA_Modifier_Elder_Titan_NaturalOrder_Armor
@@ -19301,6 +19309,7 @@ $tK
 50C_DOTA_Ability_Special_Bonus_Attack_Base_Damage_20
 50C_DOTA_Ability_Special_Bonus_Attack_Base_Damage_25
 50C_DOTA_Ability_Special_Bonus_Attack_Base_Damage_30
+50C_DOTA_Ability_Special_Bonus_Attack_Base_Damage_40
 50C_DOTA_Ability_Special_Bonus_Attack_Base_Damage_45
 50C_DOTA_Ability_Special_Bonus_Attack_Base_Damage_50
 50C_DOTA_Ability_Special_Bonus_Cooldown_Reduction_10
@@ -22041,6 +22050,7 @@ ACT_ZOMBIE_TRIP
 ADAbilityIcon%d
 ADAbilityIcon3
 ADAbilityTooltip
+ADBear
 ADD_AND_REMOVE_ANIMATION_LAYERS
 ADJACENCY
 AED
@@ -22590,6 +22600,7 @@ Adding animation group resource in replace animations: %s
 Adding custom entry at depth %d for %s::%s
 Adding listener %s
 Adding prereq
+AdditionItemsHeroImage
 Additional interpolation ticks to use when interpolating with threaded engine mode set.
 Additional mouse sensitivity scale factor applied when FOV is zoomed in.
 AdditionalDropInTreasure
@@ -23968,6 +23979,7 @@ CDOTAClientMsg_MatchMetadata_t
 CDOTAClientMsg_ModifierAlert_t
 CDOTAClientMsg_PauseGameOrder_t
 CDOTAClientMsg_Pause_t
+CDOTAClientMsg_PerfReport_t
 CDOTAClientMsg_PingConfirm_t
 CDOTAClientMsg_PlayerBountyCancel_t
 CDOTAClientMsg_PlayerBounty_t
@@ -25519,6 +25531,7 @@ CDOTA_DB_PopupSettings::EventDOTARecalibrateMMR
 CDOTA_DB_PopupSettings::PopulateHotKeysTemplates
 CDOTA_DB_PopupSettings::PopulateResolutionDropDown
 CDOTA_DB_Popup_BotSelection::RequestItemList
+CDOTA_DB_Popup_ChinaSSA
 CDOTA_DB_Popup_GiftRestrictions::SetupPopup
 CDOTA_DB_Popup_PlayerCardPack
 CDOTA_DB_Popup_PlayerCardSpecific::EventPurchaseSpecificCard
@@ -28211,6 +28224,7 @@ C_DOTA_Ability_Special_Bonus_Attack_Base_Damage_15
 C_DOTA_Ability_Special_Bonus_Attack_Base_Damage_20
 C_DOTA_Ability_Special_Bonus_Attack_Base_Damage_25
 C_DOTA_Ability_Special_Bonus_Attack_Base_Damage_30
+C_DOTA_Ability_Special_Bonus_Attack_Base_Damage_40
 C_DOTA_Ability_Special_Bonus_Attack_Base_Damage_45
 C_DOTA_Ability_Special_Bonus_Attack_Base_Damage_50
 C_DOTA_Ability_Special_Bonus_Attack_Damage_10
@@ -33224,6 +33238,7 @@ DOTAOpenLobbySelector
 DOTAOpenMatchmakingLanguage
 DOTAOpenMatchmakingRegion
 DOTAOpenMicSettingChanged
+DOTAOpenOverlayChinaSSA
 DOTAOpenPlayTab
 DOTAOpenPlayerCardPack
 DOTAOpenSelectedTreasure
@@ -33657,7 +33672,6 @@ DOTARequestTrade
 DOTAResetGemInSocket
 DOTAResetHelpTips
 DOTAResetViewedNotifications
-DOTARetryChinaSSA
 DOTAReturnToGame
 DOTAReturnToPostGame
 DOTAReviewOverwatch
@@ -40101,6 +40115,8 @@ Hero_Juggernaut.HealingWard.Loop
 Hero_Kunkaa.Tidebringer
 Hero_Kunkka.Tidebringer.Attack
 Hero_Leshrac.Diabolic_Edict_lp
+Hero_Leshrac.Nihilism.Cast
+Hero_Leshrac.Nihilism.Target
 Hero_Leshrac.Pulse_Nova
 Hero_Lion.ManaDrain
 Hero_LoneDruid.TrueForm
@@ -41503,6 +41519,9 @@ Javanese
 Jeff Hill
 JiggleData
 Job %s detected and cleaned up leak of %d lock(s):
+Job %s has EXCEEDED TIMEOUT THRESHOLD exclusive time: %ums >= %ums
+Job %s has EXCEEDED TIMEOUT THRESHOLD yield time: %ums >= %ums
+Job %s has spent %2.3fms without yielding: %2.3fms
 Job %s received a malformed message as a response while waiting for an expected message of %u
 Job %s trying to release lock %s at %s(%d) though the lock is held by %s
 Job %s was waiting for a response and expected msg %u but received %u
@@ -43420,6 +43439,7 @@ N13CNetMessagePBILi387E26CDOTAClientMsg_PingConfirmL13SignonGroup_t14EL19NetChan
 N13CNetMessagePBILi388E33CDOTAClientMsg_EmptyItemSlotAlertL13SignonGroup_t14EL19NetChannelBufType_t1ELb1EE16CProtobufBindingE
 N13CNetMessagePBILi389E24CDOTAClientMsg_AddMarkerL13SignonGroup_t14EL19NetChannelBufType_t1ELb1EE16CProtobufBindingE
 N13CNetMessagePBILi390E30CDOTAClientMsg_AghsStatusAlertL13SignonGroup_t14EL19NetChannelBufType_t1ELb1EE16CProtobufBindingE
+N13CNetMessagePBILi391E25CDOTAClientMsg_PerfReportL13SignonGroup_t14EL19NetChannelBufType_t1ELb1EE16CProtobufBindingE
 N13CNetMessagePBILi400E20CMsgTEEffectDispatchL13SignonGroup_t5EL19NetChannelBufType_t0ELb1EE16CProtobufBindingE
 N13CNetMessagePBILi401E19CMsgTEArmorRicochetL13SignonGroup_t5EL19NetChannelBufType_t0ELb1EE16CProtobufBindingE
 N13CNetMessagePBILi402E18CMsgTEBeamEntPointL13SignonGroup_t5EL19NetChannelBufType_t0ELb1EE16CProtobufBindingE
@@ -49783,7 +49803,6 @@ ShowEconItem
 ShowEconItemContainer
 ShowEconItemsSearch
 ShowEffects
-ShowError
 ShowErrorMsg
 ShowEscalatingChancesPopup
 ShowEventLevelPreview
@@ -51670,7 +51689,6 @@ TurnOffActiveController
 Turns on the absbox for all active physics objects.  0 : un-highlight.
 Turns on turbo physics
 Turstarkuri
-Tw
 Tweak this parameter to adjust Free Camera mouse rotation.
 Tweak this parameter to adjust Free Camera movement acceleration.
 Tweak this parameter to adjust Free Camera movement max speed.
@@ -52903,6 +52921,7 @@ White Quad
 WideMode
 Width is too large for libpng to process pixels
 Wilbur Bot
+Will spew if a job takes longer than the specified number of microseconds
 Win a game with a 3-streak wager
 WinChangeAsc
 WinChangeDesc
@@ -53327,7 +53346,6 @@ Zs
 ^
 ^$\.*+?()[]{}|
 ^([\da-z\.-]+)\.([a-z\.]{2,6})(:[\d]{1,5})?(([\/\w\.-]*)*)(\?[^\s]*)?(#[^\s]*)?
-^@
 ^oEZ
 _
 _$gender
@@ -56402,6 +56420,7 @@ coil_slow
 coil_stun_duration
 coins_remaining
 cojob.cpp
+cojob_max_no_yield_time_us
 cojobmgr.cpp
 cold_duration
 cold_slow_melee
@@ -59284,7 +59303,6 @@ end %f %f %f
 end-angle
 end-time
 endLerpTo
-endTime
 end_days
 end_drag_sound
 end_game_stats
@@ -64665,6 +64683,7 @@ m_bSimpleProjection
 m_bSimulate
 m_bSimulatedEveryTick
 m_bSimulationTimeChanged
+m_bSkipRangeCheck
 m_bSlowMovement
 m_bSpawnBackgroundModels
 m_bSpeakAlly
@@ -65002,6 +65021,7 @@ m_flAttenuation2
 m_flAutoExposureMax
 m_flAutoExposureMin
 m_flAveWindSpeed
+m_flAvgFrameTime
 m_flAwakeTime
 m_flBakeLightIndexScale
 m_flBaseAttackTime
@@ -65212,6 +65232,7 @@ m_flFov
 m_flFrame
 m_flFrameMax
 m_flFrameRate
+m_flFrameSampleCount
 m_flFrameTime
 m_flFreezeFrameDistance
 m_flFreezeFrameStartTime
@@ -65298,6 +65319,7 @@ m_flLastHit
 m_flLastHurtTime
 m_flLastMessageTime
 m_flLastOriginChangeTime
+m_flLastPerfSampleSendTime
 m_flLastPhysicsInfluenceTime
 m_flLastRareLinePlayTime
 m_flLastRotTime
@@ -65350,6 +65372,7 @@ m_flMaxExposure
 m_flMaxEyeLeftRight
 m_flMaxEyeUpDown
 m_flMaxFrame
+m_flMaxFrameTime
 m_flMaxGust
 m_flMaxGustDelay
 m_flMaxLogExposure
@@ -75603,6 +75626,7 @@ special_bonus_attack_base_damage_15
 special_bonus_attack_base_damage_20
 special_bonus_attack_base_damage_25
 special_bonus_attack_base_damage_30
+special_bonus_attack_base_damage_40
 special_bonus_attack_base_damage_45
 special_bonus_attack_base_damage_50
 special_bonus_attack_damage_10

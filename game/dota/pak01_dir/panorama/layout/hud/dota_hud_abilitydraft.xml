@@ -465,6 +465,7 @@
 					<Panel class="PlayerNameAvatar LeftRightFlow">
 						<DOTAAvatarImage id="PlayerAvatarImage" class="AvatarImage"/>
 						<Label id="PlayerName" class="PlayerName" text="{g:dota_filtered_string:player_name}"/>
+						<Label id="GuildTag" class="PlayerName" text="{g:dota_filtered_string:guild_tag}"/>
 					</Panel>
 					<Label class="PickingNext" text="DOTAAbilityDraft_Picking_Next"/>
 				</Panel>
@@ -493,7 +494,7 @@
 
 	<DOTAAbilityDraft hittest="true" acceptsfocus="true">
 		<Panel id="MainContainer" onload="AsyncEvent( 0.1, RemoveStyle( AbilitiesScene, Dark ) ); AsyncEvent( 0.1, AddStyle( UIElements, MakeVisible ) );">	
-			<DOTAScenePanel id="AbilitiesScene" class="Dark" map="scenes/hud/ability_draft_picker_ad" camera="camera_0" light="ad_light" particleonly="false" antialias="true" hittest="false" renderdeferred="true" panoramasurfacexml="file://{resources}/layout/hud/dota_hud_ad_texture_sheet.xml" panoramasurfacewidth="1024" panoramasurfaceheight="1024" pin-fov="vertical"/>
+			<DOTAScenePanel id="AbilitiesScene" class="Dark" map="scenes/hud/ability_draft_picker" camera="camera_0" light="ad_light" particleonly="false" antialias="true" hittest="false" renderdeferred="true" panoramasurfacexml="file://{resources}/layout/hud/dota_hud_ad_texture_sheet.xml" panoramasurfacewidth="1024" panoramasurfaceheight="1024" pin-fov="vertical"/>
 			<Panel id="AbilityDraftUltimatesHitbox">
 				<Panel class="AbilitiesSet TopLeftSet">
 					<Panel class="Row LeftRightFlow"> 
@@ -633,11 +634,28 @@
 					</Panel>
 				</Panel>
 			</Panel>
-			<Label id="ADTitle" text="#DOTA_GameMode_AbilityDraft"  onmouseout="UIHideTextTooltip();" onmouseover="UIShowTextTooltip( #DOTA_AbilityDraft_Explanation );"/>			
+			<Panel id="TopRightContainer" class="TopBottomFlow">
+				<Label id="ADTitle" text="#DOTA_GameMode_AbilityDraft"  onmouseout="UIHideTextTooltip();" onmouseover="UIShowTextTooltip( #DOTA_AbilityDraft_Explanation );"/>			
+				<Label id="ADLog" text="#DOTA_GameMode_AbilityDraft_ChangeLog_Title" onmouseout="UIHideTextTooltip();" onmouseover="UIShowTextTooltip( #DOTA_GameMode_AbilityDraft_ChangeLog_Tooltip );" onactivate="ToggleStyle(ChangeLogContainer, Show)"/>			
+			</Panel>
 		</Panel>
 		<Panel id="LoadingContainer" class="TopBottomFlow">
 			<Label id="ADLoadingTitle" text="#DOTA_GameMode_AbilityDraft" />
 			<Panel class="LeftRightFlow CenterAlign"><Label id="ADLoading" text="#DOTA_LoadingPlayerLoading" /><Panel class="Spinner"/></Panel>
+		</Panel>
+		<Panel id="ChangeLogContainer">
+			<Panel class="Layout">
+			    <Panel class="AbilityDraftUpgradeHeader">
+          			<Panel class="AbilityDraftIcon"/>
+          			<Label class="ChangeLogTitle" text="#DOTA_GameMode_AbilityDraft_ChangeLog_Title"/>
+        		</Panel>
+				<Panel id="ChangelogDetails">
+					<Panel id="ChangelogDetailsScroll">
+						<Label class="ChangeLogText" html="true" text="#DOTA_GameMode_AbilityDraft_ChangeLog" />
+					</Panel>
+				</Panel>
+			</Panel>
+			<Panel class="CloseButton" onactivate="ToggleStyle(ChangeLogContainer, Show)"/>
 		</Panel>
 	</DOTAAbilityDraft>
 </root>

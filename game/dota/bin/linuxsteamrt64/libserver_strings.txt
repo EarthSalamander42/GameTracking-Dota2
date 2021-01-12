@@ -611,6 +611,7 @@ $tK
 %def
 %f %f %f %f %f %f %f
 %f %f %f, %f %f %f
+%f IN_PROGRESS_LONG_FRAME TOOK %.3fms DURING GAMEPLAY.
 %f is before m_SimulationState[%d].m_flSimulationTime %f
 %f%%
 %f,%s,%s
@@ -6595,6 +6596,7 @@ $tK
 24CGameMessageDelegateHookI26CDOTAClientMsg_RankWager_tE
 24CGameMessageDelegateHookI26CDOTAClientMsg_WorldLine_tE
 24CGameMessageDelegateHookI27CDOTAClientMsg_GlyphAlert_tE
+24CGameMessageDelegateHookI27CDOTAClientMsg_PerfReport_tE
 24CGameMessageDelegateHookI27CDOTAClientMsg_RadarAlert_tE
 24CGameMessageDelegateHookI27CDOTAClientMsg_SwapAccept_tE
 24CGameMessageDelegateHookI28CDOTAClientMsg_AspectRatio_tE
@@ -6825,6 +6827,7 @@ $tK
 25CDOTABehaviorNeutralAggro
 25CDOTAClientMsg_GlyphAlert
 25CDOTAClientMsg_KillMyHero
+25CDOTAClientMsg_PerfReport
 25CDOTAClientMsg_RadarAlert
 25CDOTAClientMsg_RecordVote
 25CDOTAClientMsg_SwapAccept
@@ -7811,6 +7814,7 @@ $tK
 28CMsgGCToRelayConnectResponse
 28CMsgGCToServerConsoleCommand
 28CMsgGCUpdateSubGCSessionInfo
+28CMsgGameMatchSignOutPerfData
 28CMsgGameMatchSignoutResponse
 28CMsgGameServerSaveGameResult
 28CMsgGameServerUploadSaveGame
@@ -9285,6 +9289,7 @@ $tK
 33CMsgBotWorldState_Action_SellItem
 33CMsgClientToGCRemoveItemAttribute
 33CMsgClientToGCUnlockCrateResponse
+33CMsgDOTADPCSeasonResults_Standing
 33CMsgDOTAFrostivusTimeElapsed_User
 33CMsgDOTAGenerateDiretidePrizeList
 33CMsgDOTALeagueAvailableLobbyNodes
@@ -10620,6 +10625,7 @@ $tK
 38CGCToGCMsgMasterStartupComplete_GCInfo
 38CMsgClientToGCSetItemInventoryCategory
 38CMsgClientToGCUnlockCrateResponse_Item
+38CMsgDOTADPCSeasonResults_StandingEntry
 38CMsgDOTADiretidePrizesRewardedResponse
 38CMsgDOTARealtimeGameStats_MatchDetails
 38CMsgDOTARequestPlayerResourcesResponse
@@ -12956,6 +12962,7 @@ $tK
 49CDOTA_Ability_Special_Bonus_Attack_Base_Damage_20
 49CDOTA_Ability_Special_Bonus_Attack_Base_Damage_25
 49CDOTA_Ability_Special_Bonus_Attack_Base_Damage_30
+49CDOTA_Ability_Special_Bonus_Attack_Base_Damage_40
 49CDOTA_Ability_Special_Bonus_Attack_Base_Damage_45
 49CDOTA_Ability_Special_Bonus_Attack_Base_Damage_50
 49CDOTA_Ability_Special_Bonus_Cooldown_Reduction_10
@@ -16858,6 +16865,7 @@ CDOTAClientMsg_MatchMetadata_t
 CDOTAClientMsg_ModifierAlert_t
 CDOTAClientMsg_PauseGameOrder_t
 CDOTAClientMsg_Pause_t
+CDOTAClientMsg_PerfReport_t
 CDOTAClientMsg_PingConfirm_t
 CDOTAClientMsg_PlayerBountyCancel_t
 CDOTAClientMsg_PlayerBounty_t
@@ -18303,6 +18311,7 @@ CDOTA_Ability_Special_Bonus_Attack_Base_Damage_15
 CDOTA_Ability_Special_Bonus_Attack_Base_Damage_20
 CDOTA_Ability_Special_Bonus_Attack_Base_Damage_25
 CDOTA_Ability_Special_Bonus_Attack_Base_Damage_30
+CDOTA_Ability_Special_Bonus_Attack_Base_Damage_40
 CDOTA_Ability_Special_Bonus_Attack_Base_Damage_45
 CDOTA_Ability_Special_Bonus_Attack_Base_Damage_50
 CDOTA_Ability_Special_Bonus_Attack_Damage_10
@@ -21789,6 +21798,7 @@ CUtlBinaryBlock::Set(void const*, int)
 CUtlBinaryBlock::SetLength(int)
 CUtlBinaryBlock::operator=(CUtlBinaryBlock const&)
 CUtlBlockMemory overflow!
+CUtlBuffer::AccessGet(int)
 CUtlBuffer::AccessPut(int)
 CUtlBuffer::AddNullTermination()
 CUtlBuffer::CUtlBuffer(int, int, int)
@@ -27108,7 +27118,7 @@ Hero_Meepo.Petrify.End
 Hero_Meepo.Poof.Channel
 Hero_Meepo.Poof.Damage
 Hero_Meepo.Poof.End0%d
-Hero_Meepo.Ransack.Target
+Hero_Meepo.Ransack
 Hero_Melee.Miss
 Hero_Mirana.ArrowCast
 Hero_Mirana.ArrowImpact
@@ -27151,6 +27161,7 @@ Hero_Nevermore.Shadowraze
 Hero_Nightstalker.CripplingFear.Aura
 Hero_Nightstalker.Darkness
 Hero_Nightstalker.Darkness.Team
+Hero_Nightstalker.Hunter.Target
 Hero_Nightstalker.Trickling_Fear
 Hero_Nightstalker.Trickling_Fear_end
 Hero_Nightstalker.Void
@@ -27527,6 +27538,7 @@ Hero_Treant.NaturesGuise.Root
 Hero_Treant.Overgrowth.Cast
 Hero_Treant.Overgrowth.Target
 Hero_TrollWarlord.BattleTrance.Cast
+Hero_TrollWarlord.BattleTrance.Cast.Team
 Hero_TrollWarlord.BerserkersRage.Toggle
 Hero_TrollWarlord.ProjectileImpact
 Hero_TrollWarlord.WhirlingAxes.Melee
@@ -27655,7 +27667,6 @@ Hero_Zuus.GodsWrath.Target
 Hero_Zuus.LightningBolt
 Hero_Zuus.LightningBolt.Cast
 Hero_Zuus.LightningBolt.Cloud
-Hero_razor.UnstableCurrent
 Hero_razor.lightning
 Heroes Losers
 Heroes nearer than this distance will poll for the TLK_ALLY_NEARBY concept.
@@ -27690,6 +27701,7 @@ HotKeyOverride
 Hours
 How hard physics objects are pushed away from the players on the server.
 How hard the player is pushed away from physics objects (falls off with inverse square of distance).
+How long a frame must stall before we make a log message.
 How long a high five stays up after being initiated.
 How long a player has to choose their hero before being marked as AFK.
 How long a player needs to be disconnected before he counts as a leaver and gets punished.
@@ -28908,6 +28920,9 @@ Jacques Bot
 Jan
 JiggleData
 Job %s detected and cleaned up leak of %d lock(s):
+Job %s has EXCEEDED TIMEOUT THRESHOLD exclusive time: %ums >= %ums
+Job %s has EXCEEDED TIMEOUT THRESHOLD yield time: %ums >= %ums
+Job %s has spent %2.3fms without yielding: %2.3fms
 Job %s trying to release lock %s at %s(%d) though the lock is held by %s
 Job Avg
 Job debugging disabled
@@ -30157,6 +30172,7 @@ N13CNetMessagePBILi387E26CDOTAClientMsg_PingConfirmL13SignonGroup_t14EL19NetChan
 N13CNetMessagePBILi388E33CDOTAClientMsg_EmptyItemSlotAlertL13SignonGroup_t14EL19NetChannelBufType_t1ELb1EE16CProtobufBindingE
 N13CNetMessagePBILi389E24CDOTAClientMsg_AddMarkerL13SignonGroup_t14EL19NetChannelBufType_t1ELb1EE16CProtobufBindingE
 N13CNetMessagePBILi390E30CDOTAClientMsg_AghsStatusAlertL13SignonGroup_t14EL19NetChannelBufType_t1ELb1EE16CProtobufBindingE
+N13CNetMessagePBILi391E25CDOTAClientMsg_PerfReportL13SignonGroup_t14EL19NetChannelBufType_t1ELb1EE16CProtobufBindingE
 N13CNetMessagePBILi400E20CMsgTEEffectDispatchL13SignonGroup_t5EL19NetChannelBufType_t0ELb1EE16CProtobufBindingE
 N13CNetMessagePBILi401E19CMsgTEArmorRicochetL13SignonGroup_t5EL19NetChannelBufType_t0ELb1EE16CProtobufBindingE
 N13CNetMessagePBILi402E18CMsgTEBeamEntPointL13SignonGroup_t5EL19NetChannelBufType_t0ELb1EE16CProtobufBindingE
@@ -36183,6 +36199,7 @@ Which 'row' to display this weapon in the HUD
 Which rumble effect to use when fired? (xbox)
 WhoSelectedHero
 Wilbur Bot
+Will spew if a job takes longer than the specified number of microseconds
 Will transmit all entities to client, regardless of PVS conditions (will still skip based on transmit flags, however).
 Will using an item break invisibiilty?
 WillReincarnate
@@ -38538,6 +38555,7 @@ coil_stun_duration
 coil_stun_duration_scepter
 coins
 cojob.cpp
+cojob_max_no_yield_time_us
 cojobmgr.cpp
 cold_duration
 cold_slow_melee
@@ -39802,6 +39820,7 @@ dota_send_courier_killed
 dota_server_allow_custom_games
 dota_server_allow_mvp
 dota_server_lobby_debug
+dota_server_long_frame_threshold_ms
 dota_server_projection_fow_check
 dota_server_projection_spectator_only
 dota_server_side_animation_heroesonly
@@ -44738,6 +44757,7 @@ m_bSimpleProjection
 m_bSimulatedEveryTick
 m_bSingleLerpObject
 m_bSinglePlayerGameEnding
+m_bSkipRangeCheck
 m_bSlowMovement
 m_bSnapToGoal
 m_bSolidBsp
@@ -45225,6 +45245,7 @@ m_flAutomationTime
 m_flAvailableLaneGold
 m_flAveWindSpeed
 m_flAverageSpeedAcrossFrame
+m_flAvgFrameTime
 m_flAvgInterval
 m_flAwakeTime
 m_flBakeLightIndexScale
@@ -45463,6 +45484,7 @@ m_flFountainPercentageHealthRegen
 m_flFountainPercentageManaRegen
 m_flFrame
 m_flFrameRate
+m_flFrameSampleCount
 m_flFrameTime
 m_flFrequency
 m_flFriction
@@ -45622,6 +45644,7 @@ m_flMaxAngularImpulseZ
 m_flMaxDamage
 m_flMaxExposure
 m_flMaxFrame
+m_flMaxFrameTime
 m_flMaxGustDelay
 m_flMaxLinearImpulseX
 m_flMaxLinearImpulseY
@@ -57079,6 +57102,7 @@ special_bonus_attack_base_damage_15
 special_bonus_attack_base_damage_20
 special_bonus_attack_base_damage_25
 special_bonus_attack_base_damage_30
+special_bonus_attack_base_damage_40
 special_bonus_attack_base_damage_45
 special_bonus_attack_base_damage_50
 special_bonus_attack_damage_10

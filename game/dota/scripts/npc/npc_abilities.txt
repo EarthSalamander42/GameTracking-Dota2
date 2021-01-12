@@ -244,7 +244,7 @@
 		"ID"					"5004"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
 
-        "HasScepterUpgrade"             "1"
+        "HasScepterUpgrade"             "0"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -374,6 +374,7 @@
 		"FightRecapLevel"				"2"
 		"AbilitySound"					"Hero_Antimage.ManaVoid"
 		"HasScepterUpgrade"			"1"
+		"AbilityDraftUltScepterAbility"		"antimage_mana_overload"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -3265,7 +3266,7 @@
 		"FightRecapLevel"				"1"
 		"AbilitySound"					"Ability.Starfall"
 
-		"HasScepterUpgrade"			"1"
+		"HasScepterUpgrade"			"0"
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -4701,7 +4702,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"70 65 60"
+		"AbilityCooldown"				"80 75 70"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -4976,7 +4977,7 @@
 		"FightRecapLevel"				"2"
 
 		"HasShardUpgrade"			"1"
-		"AbilityDraftUltScepterAbility"		"pudge_eject"
+		"AbilityDraftPreAbility"		"pudge_eject"
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -5688,7 +5689,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"50 60 70 80"
+		"AbilityManaCost"				"65 70 75 80"
 
 		"AbilitySpecial"
 		{
@@ -5787,7 +5788,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"160"
+		"AbilityManaCost"				"180"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -6838,16 +6839,11 @@
 			}
 			"03"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"AbilityDuration"		"20 25 30 35"
-			}
-			"04"
-			{
 				"var_type"				"FIELD_INTEGER"
 				"sand_storm_damage"		"20 45 70 95"
 				"LinkedSpecialBonus"	"special_bonus_unique_sand_king_2"
 			}
-			"05"
+			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
 				"fade_delay"			"0.7"
@@ -9742,7 +9738,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"aura_radius"				"500"
+				"aura_radius"				"600"
 			}
 			"03"
 			{
@@ -10108,11 +10104,11 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"15"
+		"AbilityCooldown"				"12"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"125"
+		"AbilityManaCost"				"85"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -10126,7 +10122,7 @@
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"movement_slow"		"25"
+				"movement_slow"		"30"
 			}
 			"03"
 			{
@@ -11084,11 +11080,11 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"20"
+		"AbilityCooldown"				"16"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"75"
+		"AbilityManaCost"				"50"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -15068,7 +15064,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"150"
+		"AbilityManaCost"				"100"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -15821,11 +15817,11 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"25"
+		"AbilityCooldown"				"20"
 		
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"150"
+		"AbilityManaCost"				"75"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -15834,7 +15830,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"bonus_speed"		"15"
+				"bonus_speed"		"22"
 			}
 			"02"
 			{	
@@ -16421,7 +16417,6 @@
 		"HasScepterUpgrade"				"1"
 		"MaxLevel"						"1"
 		"IsGrantedByScepter"			"1"
-		"HasScepterUpgrade"				"1"
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -16482,6 +16477,7 @@
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"FightRecapLevel"				"1"
 
+		"AbilityDraftUltScepterAbility" "leshrac_greater_lightning_storm"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -16849,7 +16845,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"hp_leech_percent"		"1.6 2.2 2.8 3.4"
+				"hp_leech_percent"		"1.8 2.4 3.0 3.6"
 				"LinkedSpecialBonus"	"special_bonus_unique_lifestealer_3"
 			}
 		}
@@ -17274,7 +17270,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"max_stun"					"2.0"
+				"max_stun"					"2.25"
 			}
 			"02"
 			{
@@ -19265,7 +19261,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"2.0"
+				"duration"				"2.5"
 			}
 			"02"
 			{
@@ -20116,6 +20112,7 @@
 		"AbilitySound"					"Hero_Jakiro.Macropyre.Cast"
 
 		"HasScepterUpgrade"   			"1"
+		"AbilityDraftUltShardAbility"		"jakiro_liquid_ice"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -22587,7 +22584,7 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"45"
+		"AbilityCooldown"				"35"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -24446,6 +24443,7 @@
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"FightRecapLevel"				"1"
 		"AbilitySound"					"Hero_Invoker.IceWall.Cast"
+		"HasShardUpgrade" "1"
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -24927,7 +24925,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"		"120 190 260 330"
+				"damage"		"120 200 280 360"
 				"LinkedSpecialBonus"	"special_bonus_unique_outworld_devourer_3"
 			}
 			"03"
@@ -24951,7 +24949,7 @@
 			"06"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"mana_capacity_steal"	"14 16 18 20"
+				"mana_capacity_steal"	"16 18 20 22"
 			}
 			"07"
 			{
@@ -25041,7 +25039,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"proc_chance"		"25"
+				"proc_chance"		"30"
 			}
 			"02"
 			{
@@ -25095,7 +25093,7 @@
 			"01"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"base_damage"				"200 275 350"
+				"base_damage"				"200 300 400"
 			}
 			"02"
 			{
@@ -25318,7 +25316,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"14 26 38 50"
+				"bonus_damage"			"12 22 32 42"
 				"LinkedSpecialBonus"	"special_bonus_unique_lycan_4"
 			}
 			"02"
@@ -27950,7 +27948,7 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
 		"FightRecapLevel"				"1"
-		"HasScepterUpgrade"				"1"
+		"HasScepterUpgrade"				"0"
 		"AbilitySound"					"Hero_OgreMagi.Fireblast.Cast"
 
 		// Casting
@@ -28021,11 +28019,11 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"18"
+		"AbilityCooldown"				"16"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"125"
+		"AbilityManaCost"				"75"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -28170,7 +28168,7 @@
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"burn_damage"		"26 34 42 50"
+				"burn_damage"		"20 30 40 50"
 				"LinkedSpecialBonus"	"special_bonus_unique_ogre_magi_4"
 			}		
 
@@ -29507,7 +29505,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"160 220 280"
+		"AbilityManaCost"				"180 240 300"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -30376,6 +30374,7 @@
 		"AbilitySound"					"Hero_KeeperOfTheLight.SpiritForm"
  		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_6"
 
+		"AbilityDraftPreAbility"		"keeper_of_the_light_blinding_light"
 		"AbilityDraftUltScepterAbility"		"keeper_of_the_light_will_o_wisp"
 
 		// Time		
@@ -30808,7 +30807,7 @@
 		"ID"							"5482"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"HasShardUpgrade"             "1"
-		
+		"AbilityDraftPreAbility"		"visage_summon_familiars_stone_form"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -30860,6 +30859,9 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"HasScepterUpgrade"			"1"
+
+		"AbilityDraftUltScepterAbility"		"visage_silent_as_the_grave"
+
 		"AbilitySound"					"Hero_Visage.SummonFamiliars.Cast"
 
 		// Casting
@@ -31436,7 +31438,7 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"12"
+		"AbilityCooldown"				"9"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -31459,7 +31461,7 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"attack_speed"				"50"
+				"attack_speed"				"75"
 			}
 		}
 	}
@@ -32716,7 +32718,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"damage"		"150"
+				"damage"		"200"
 			}
 			"02"
 			{
@@ -32983,7 +32985,7 @@
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"FightRecapLevel"				"1"
 		"AbilitySound"					"Hero_Magnataur.Skewer.Cast"
-		"HasScepterUpgrade"			"1"
+		"HasScepterUpgrade"			"0"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -33204,7 +33206,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"70"		
+		"AbilityManaCost"				"80"		
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -34127,12 +34129,12 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"move_slow"					"30"
+				"move_slow"					"35"
 			}
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"attack_slow"				"30"
+				"attack_slow"				"35"
 			}
 
 		}
@@ -34825,7 +34827,7 @@
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"FightRecapLevel"				"2"
 		"AbilitySound"					"Hero_Abaddon.BorrowedTime"
-		"HasShardUpgrade"				"1"
+		"HasShardUpgrade"				"0"
 		"HasScepterUpgrade"				"1"
 
 		// Casting
@@ -36950,7 +36952,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"melee_bonus"				"50"
+				"melee_bonus"				"100"
 			}
 			"04"
 			{
@@ -36960,7 +36962,7 @@
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"health_cost_pct"				"25"
+				"health_cost_pct"				"20"
 			}
 		}
 	}
@@ -38181,7 +38183,7 @@
 			"14"
 			{
 				"var_type"							"FIELD_FLOAT"
-				"scepter_spawn_interval"			"3.5"
+				"scepter_spawn_interval"			"4"
 				"RequiresScepter"	"1"
 			}
 			"15"
@@ -39365,7 +39367,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
 		"AbilityCastGestureSlot"		"DEFAULT"
-		"AbilityCastRange"				"700"
+		"AbilityCastRange"				"950"
 		"AbilityCastPoint"				"0.0"
 
 		// Time		
@@ -39390,7 +39392,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"total_damage"		"240"
+				"total_damage"		"320"
 			}			
 			"03"
 			{
@@ -39400,7 +39402,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"move_speed"		"20"
+				"move_speed"		"25"
 			}				
 		}
 	}
@@ -41669,6 +41671,7 @@
 			{
 				"var_type"						"FIELD_INTEGER"
 				"value"							"2"
+				"ad_linked_ability"			"hoodwink_acorn_shot"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -41690,6 +41693,7 @@
 			{
 				"var_type"						"FIELD_FLOAT"
 				"fade_time"						"1.2"
+				"ad_linked_ability"			"hoodwink_scurry"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -41711,6 +41715,7 @@
 			{
 				"var_type"						"FIELD_FLOAT"
 				"value"							"-0.75"  // used for tooltip only
+				"ad_linked_ability"			"hoodwink_sharpshooter"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 			"02"
 			{
@@ -41733,6 +41738,12 @@
 
 		"AbilitySpecial"
 		{
+			"01"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"value"							"0"
+				"ad_linked_ability"				"hoodwink_sharpshooter"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
 		}
 	}
 
@@ -41754,6 +41765,7 @@
 			{
 				"var_type"						"FIELD_FLOAT"
 				"value"							"3"
+				"ad_linked_ability"			"hoodwink_bushwhack"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -54989,6 +55001,29 @@
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
+	"special_bonus_attack_base_damage_40"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"706"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"40"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
 	"special_bonus_attack_base_damage_45"
 	{
 		// General
@@ -57646,7 +57681,7 @@
 			{
 				"var_type"					"FIELD_FLOAT"
 				"value"				"2"
-				"ad_linked_ability"			"omniknight_repel"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+				"ad_linked_ability"			"omniknight_purification"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -63558,7 +63593,7 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"value"				"6"
-				"ad_linked_ability"			"skeleton_king_mortal_strike"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+				"ad_linked_ability"			"skeleton_king_vampiric_aura"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -63630,7 +63665,7 @@
 			{
 				"var_type"					"FIELD_FLOAT"
 				"value"				"80"
-				"ad_linked_ability"			"skeleton_king_mortal_strike"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+				"ad_linked_ability"			"skeleton_king_vampiric_aura"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -63966,7 +64001,7 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"value"				"4"
-				"ad_linked_ability"			"invoker_forge_spirit"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+				"ad_linked_ability"			"invoker_forge_spirit_ad"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -63990,7 +64025,7 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"value"				"0"
-				"ad_linked_ability"			"invoker_deafening_blast"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+				"ad_linked_ability"			"invoker_deafening_blast_ad"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -64014,7 +64049,7 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"value"				"10"
-				"ad_linked_ability"			"invoker_tornado"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+				"ad_linked_ability"			"invoker_tornado_ad"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -64038,7 +64073,7 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"value"				"2"
-				"ad_linked_ability"			"invoker_sunstrike"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+				"ad_linked_ability"			"invoker_sunstrike_ad"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 			"02"
 			{
@@ -64077,7 +64112,7 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"value"				"35"
-				"ad_linked_ability"			"invoker_alacrity"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+				"ad_linked_ability"			"invoker_alacrity_ad"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -64101,13 +64136,13 @@
 			{
 				"var_type"					"FIELD_FLOAT"
 				"value"				"1.4"
-				"ad_linked_ability"			"invoker_chaos_meteor"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+				"ad_linked_ability"			"invoker_chaos_meteor_ad"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
 				"value_tooltip"				"40"
-				"ad_linked_ability"			"invoker_chaos_meteor"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+				"ad_linked_ability"			"invoker_chaos_meteor_ad"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -64131,7 +64166,7 @@
 			{
 				"var_type"					"FIELD_FLOAT"
 				"value"				"2.5"
-				"ad_linked_ability"			"invoker_cold_snap"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+				"ad_linked_ability"			"invoker_cold_snap_ad"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -64155,7 +64190,7 @@
 			{
 				"var_type"					"FIELD_FLOAT"
 				"value"				"1.25"
-				"ad_linked_ability"			"invoker_tornado"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+				"ad_linked_ability"			"invoker_tornado_ad"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -64179,7 +64214,7 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"value"				"8"
-				"ad_linked_ability"			"invoker_cold_snap"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+				"ad_linked_ability"			"invoker_cold_snap_ad"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -64203,7 +64238,7 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"value"				"24"
-				"ad_linked_ability"			"invoker_ghost_walk"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+				"ad_linked_ability"			"invoker_ghost_walk_ad"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -64227,7 +64262,7 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"value"				"2"
-				"ad_linked_ability"			"invoker_forge_spirit"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+				"ad_linked_ability"			"invoker_forge_spirit_ad"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -64251,7 +64286,7 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"value"				"1200"
-				"ad_linked_ability"			"invoker_ice_wall"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+				"ad_linked_ability"			"invoker_ice_wall_ad"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -64275,7 +64310,7 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"value"				"40"
-				"ad_linked_ability"			"invoker_ice_wall"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+				"ad_linked_ability"			"invoker_ice_wall_ad"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -64827,7 +64862,7 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"bonus_hp"				"350"
-				"ad_linked_ability"			"beastmaster_inner_beast"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+				"ad_linked_ability"			"beastmaster_call_of_the_wild_boar"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -72317,7 +72352,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"1.6"
+				"value"				"2"
 				"ad_linked_ability"			"obsidian_destroyer_arcane_orb"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -72389,7 +72424,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"0.1"
+				"value"				"0.15"
 				"ad_linked_ability"			"obsidian_destroyer_sanity_eclipse"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -72845,7 +72880,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"7"
+				"value"				"6"
 				"ad_linked_ability"			"puck_waning_rift"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}

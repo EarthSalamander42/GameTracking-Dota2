@@ -480,6 +480,13 @@ message CMsgGameMatchSignOutEventGameData {
 	optional uint32 start_time = 5;
 }
 
+message CMsgGameMatchSignOutPerfData {
+	repeated float average_frame_time = 1;
+	repeated float max_frame_time = 2;
+	optional float server_average_frame_time = 3;
+	optional float server_max_frame_time = 4;
+}
+
 message CMsgDOTALiveScoreboardUpdate {
 	message Team {
 		message Player {
