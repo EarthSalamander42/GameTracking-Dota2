@@ -42,6 +42,7 @@
 #LOC_Date_Format_DayOfWeek_Month_Day_Year_Hour_Minute_Second_12
 #LOC_Date_Format_DayOfWeek_Month_Day_Year_Hour_Minute_Second_24
 #LOC_Date_Format_Day_Month
+#LOC_Date_Format_Day_Month_Numeric
 #LOC_Date_Format_Day_Month_Year
 #LOC_Date_Format_Day_Month_Year_Hour_Minute_12
 #LOC_Date_Format_Day_Month_Year_Hour_Minute_24
@@ -134,9 +135,9 @@ $U
 -language
 -textlanguage
 -textsublanguage
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/ordered_constructor.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/tier0/utlblockmemory.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/tier0/utlsymboltable.h
+../public/ordered_constructor.h
+../public/tier0/utlblockmemory.h
+../public/tier0/utlsymboltable.h
 /resource/valve_
 04
 10ConCommand
@@ -179,6 +180,7 @@ ARS$
 Access of unconnected ConVarRef
 Access of unconnected SplitScreenConVarRef
 Add
+AddTokenMiss
 AnimGraphEditorUtils001
 AnimationSystemUtils_001
 AnimationSystem_001
@@ -262,6 +264,7 @@ ConnectInterfaceSingletons
 CreateInterface
 DH
 DebugTextureInfo001
+DemoUpconverterVersion001
 DotaCardGameClient_001
 DuplicateTokensAssert
 DuplicateTokensFail
@@ -331,6 +334,7 @@ LOCFAIL %s: Value for '%s' must have all language-defined gender variants
 LOCFAIL %s: Value for '%s' must have the same gender for each variant
 LOCFAIL %s: Value for '%s' uses a gender not valid for the value language
 LOCFAIL: Ignoring unsupported encoding in localization file '%s'
+LOCFAIL: Tried to add a loc token with '#' starting the token name ('%s')
 LOCFAIL: Tried to add empty loc token
 LOCWARN %s: value of '%s' matches English, possible unlocalized token
 LOC_Date_Today
@@ -522,9 +526,9 @@ V_atofloat64
 V_atoi
 V_atoi64
 V_atoui64
-V_fpclassify
-V_isnan
-V_pow
+V_fpclassifyd
+V_isnand
+V_powd
 V_qsort_s
 V_snprintf
 V_sscanf
@@ -570,6 +574,7 @@ binary
 binary_auto
 binary_bc
 binary_lz4
+binary_zstd
 brazilian
 bulgarian
 cheat
@@ -635,7 +640,6 @@ libstdc++.so.6
 libtier0.so
 localize
 localize_imp.cpp
-ma
 max. %f
 memcmp
 memcpy
@@ -660,6 +664,7 @@ operator new(unsigned long)
 operator new(unsigned long, std::nothrow_t const&)
 operator new[](unsigned long)
 operator new[](unsigned long, std::nothrow_t const&)
+panorama
 pl
 pl_PL
 plurals
@@ -676,7 +681,9 @@ pthread_mutexattr_init
 pthread_mutexattr_settype
 rb
 replicated
+resource
 resource/valve_%language%.txt
+resource_name
 ro
 ro_RO
 romanian
@@ -688,6 +695,7 @@ schinese
 server_can_execute
 singleplayer
 singletons.cpp
+soundevent
 spanish
 ss_added
 strchr
@@ -697,6 +705,7 @@ string data: %s bytes (%s bytes of padding) in %s blocks
 strlen
 strrchr
 strstr
+subclass
 sv
 sv_SE
 swedish

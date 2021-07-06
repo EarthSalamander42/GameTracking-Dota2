@@ -5,10 +5,10 @@
 		<include src="s2r://panorama/styles/dashboard_page_home.vcss_c" />
 		<include src="s2r://panorama/styles/friend_menu.vcss_c" />
 		<include src="s2r://panorama/styles/friend_menu_home.vcss_c" />
+		<include src="s2r://panorama/styles/frontpage_shared.vcss_c" />
 	</styles>
 
 	<DOTAHomePage class="DashboardPage" hittest="false" onnavigatedto="DOTASetFriendsMenuVisible( true )" onnavigatedaway="DOTASetFriendsMenuVisible( false )" dashboardclass="OnHomePage">
-
 		<Panel id="StatLine" class="LeftRightFlow">
 			<DOTAAntiAddictionBadge class="StatLineContainer" />
 			<!--<Panel id="MonthlyPlayersContainer" class="StatLineContainer">

@@ -19,7 +19,6 @@ $ORIGIN
 %i %i %i %i
 %lld
 %llu
-%s
 %s #%d: '%s'/'%s': %d != %d
 %s #%d: '%s'/'%s': '%s' != '%s'
 %s %s bindings with metadata (out of %s); %s total metadata items; %s unique metadata names
@@ -54,25 +53,21 @@ $ORIGIN
 (detailed layout)
 (dump)
 (layout)
+*
 ***!        ENTERING THE DANGER ZONE         !***
 ***! Disregarding mismatched schema bindings !***
 *************************************************
-*NoSchemaClass*
 +
+,
 ----------------------------------------------------------------------------------------------------------
 -DANGER_MODE_ignore_schema_mismatches
 -avx
--no_bundle_module
--no_tier2_bundle
--no_tier3_bundle
 -sse2
 -sse3
 -sse4
--use_tier2_bundle
--use_tier3_bundle
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/ordered_constructor.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/tier0/utlrbtree.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/tier0/utltshash.h
+../public/ordered_constructor.h
+../public/tier0/utlrbtree.h
+../public/tier0/utltshash.h
 10ConCommand
 10IAppSystem
 11CSchemaType
@@ -101,8 +96,11 @@ $ORIGIN
 22ISchemaSystemTypeScope
 23IConCommandBaseAccessor
 24CSchemaType_DeclaredEnum
-24CSchemaType_NoschemaType
 25CConCommandMemberAccessorI13CSchemaSystemE
+25CKV3TransferDefaultHelperI31CExampleSchemaVData_MonomorphicE
+25CKV3TransferDefaultHelperI35CExampleSchemaVData_PolymorphicBaseE
+25CKV3TransferDefaultHelperI39CExampleSchemaVData_PolymorphicDerivedAE
+25CKV3TransferDefaultHelperI39CExampleSchemaVData_PolymorphicDerivedBE
 25CSchemaType_DeclaredClass
 26ICommandCompletionCallback
 29CSchemaRegistration_schemalib
@@ -115,12 +113,17 @@ $ORIGIN
 6ConVar
 7IConVar
 ::
+<
+<%s : %u>
+<%s, cat %d>
 <No schema binary for binding>
 <No schemasystem>
+<invalid>
 <no deferred ref found>
 <no failure reason set>
 <null>
 <unconnected>
+<unknown: %d>
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!
 Access of unconnected ConVarRef
 Access of unconnected SplitScreenConVarRef
@@ -140,8 +143,11 @@ BenchmarkService001
 Binary
 BinaryProperties_GetValue
 Binding for '%s' is not a class
+CAnimVariant
 CBitVec
+CBitVecEnum
 CBufferString
+CBufferString::AppendFormat(char const*, ...)
 CBufferString::AppendFormatV(char const*, __va_list_tag*)
 CBufferString::Format(char const*, ...)
 CBufferString::Insert(int, char const*, int, bool)
@@ -172,6 +178,7 @@ CResourceString
 CResourceToKV3 encountered a non-array char... (%s)
 CSchemaSystemInternalRegistration
 CSchemaType
+CSoundEventName
 CSplitScreenSlot
 CSplitString::Construct(char const*, char const**, int)
 CThreadFastMutex::Lock(char const*, int, unsigned long long, unsigned int) volatile
@@ -185,27 +192,30 @@ CUtlBuffer::CUtlBuffer(int, int, int)
 CUtlBuffer::CUtlBuffer(void const*, int, int)
 CUtlBuffer::ParseToken(characterset_t const*, char*, int, bool)
 CUtlIncrementalVector
+CUtlMap
 CUtlMemoryBlockAllocator::AllocCopy(char const*, unsigned int)
 CUtlMemoryBlockAllocator::CUtlMemoryBlockAllocator(int, unsigned int)
 CUtlMemoryBlockAllocator::~CUtlMemoryBlockAllocator()
 CUtlMemoryPoolBase::Alloc()
-CUtlMemoryPoolBase::CUtlMemoryPoolBase(int, int, int, MemoryPoolGrowType_t, char const*)
+CUtlMemoryPoolBase::CUtlMemoryPoolBase(int, int, int, MemoryPoolGrowType_t, char const*, MemAllocAttribute_t)
 CUtlMemoryPoolBase::Clear()
 CUtlMemoryPoolBase::Free(void*)
 CUtlMemoryPoolBase::~CUtlMemoryPoolBase()
+CUtlOrderedMap
+CUtlPair
 CUtlRBTree overflow with %u elements!
 CUtlReference
 CUtlScratchMemoryPool::AllocAligned(int, int)
 CUtlString::Append(char const*)
 CUtlString::Format(char const*, ...)
 CUtlString::FreeMemoryBlock()
-CUtlString::GetForModify()
 CUtlString::IsEqual_CaseSensitive(char const*) const
 CUtlString::Set(char const*)
 CUtlString::SetDirect(char const*, int)
 CUtlString::operator+(char const*) const
 CUtlString::operator+=(char const*)
-CUtlStringToken
+CUtlStringTokenWithStorage
+CUtlSymbolLarge
 CUtlSymbolTable::AddString(char const*)
 CUtlSymbolTable::CUtlSymbolTable(int, int, bool)
 CUtlSymbolTable::Find(char const*) const
@@ -220,7 +230,6 @@ Cannot copy abstract class
 Cannot deallocate abstract class
 Cannot deduce for class
 Cannot destruct abstract class
-ChangeCallbackOnChange
 CharacterSetBuild
 Class
 Class '%s
@@ -239,6 +248,7 @@ ConvertOldIntrospectedResourceDataToKV3 - No root struct
 ConvertOldIntrospectedResourceDataToKV3 - Out-of-date source introspection dictionary
 CreateInterface
 DebugTextureInfo001
+DemoUpconverterVersion001
 DotaCardGameClient_001
 Double-save to Member '%s'
 ERROR: CResourceToKV3 failed to DeduceDerivedTypeFromDisk
@@ -259,7 +269,6 @@ EarlyInit_Tier0
 EconItemToolModel_001
 EngineServiceMgr001
 EntityKeyValueData_t
-Enum
 Enum '%s' (binary '%s' project '%s')
 Enum Name
 Enum name collision: '%s' and '%s' (%d)
@@ -267,9 +276,12 @@ Enum: %3d enumerators
 Enumerator Name
 Enumerator Value
 EventSystem001
+Exiting due to fatal schema validation errors, see log output
 ExternalReference
 FATAL ERROR: unable to register all schema data: %s
 FCVAR_NEVER_AS_STRING
+FIELD_AI_SCHEDULE_BITS
+FIELD_AMMO_INDEX
 FIELD_ATTACHMENT_HANDLE
 FIELD_BOOLEAN
 FIELD_CHARACTER
@@ -277,6 +289,7 @@ FIELD_CLASSPTR
 FIELD_CMOTIONTRANSFORM
 FIELD_CMOTIONTRANSFORM_WORLDSPACE
 FIELD_COLOR32
+FIELD_CONDITION_ID
 FIELD_CSTRING
 FIELD_CTRANSFORM
 FIELD_CTRANSFORM_WORLDSPACE
@@ -302,6 +315,7 @@ FIELD_INT64
 FIELD_INTERVAL
 FIELD_MATRIX3X4
 FIELD_MATRIX3X4_WORLDSPACE
+FIELD_MODIFIER_HANDLE
 FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_POSITION_VECTOR
 FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_VECTOR
 FIELD_NETWORK_QUANTIZED_FLOAT
@@ -338,6 +352,7 @@ FIELD_VECTOR4D
 FIELD_VMATRIX
 FIELD_VMATRIX_WORLDSPACE
 FIELD_VOID
+Failed to save unsupported class
 Fatal error: class '%s' has whitespace in its registration macro.
 FeEdgeDesc_t
 FeSimdAnimStrayRadius_t
@@ -375,6 +390,7 @@ HostStateMgr001
 IQuickTime001
 Ignorable Indirection
 Info
+InfoForResourceTypeCResourceManifestInternal
 InputService_001
 InputStackSystemVersion001
 InputSystemVersion001
@@ -385,8 +401,10 @@ InstallChangeCallback ignoring duplicate change callback!!!
 InstallSchemaBindings
 InstallSchemaClassBinding
 Intentionally vague touch behavior for %p
+Invalid
 Invalid access of deferred ConVarRef for '%s'
 Is Polymorphic: %s
+KV3 save transfer failed: %s
 KeyValueCache001
 KeyValues3
 LOG_GENERAL
@@ -399,17 +417,10 @@ LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ..
 LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, char const*, ...)
 LoggingSystem_RegisterLoggingChannel
 MATCHFRAMEWORK_001
-MClassHasCustomAlignedNewDelete
 MFieldVerificationName
-MNetworkBitCount
-MNetworkChangeCallback
-MNetworkEncoder
-MNetworkOverride_Invalid
-MNetworkPriority
-MNetworkRemoveAll
+MGetKV3ClassDefaults
+MIsBoxedIntegerType
 MNetworkSerializeAs
-MNetworkSerializer
-MNetworkUserGroup
 MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MResourceTypeForInfoType
@@ -427,10 +438,6 @@ Multiple instances of schema system are initialized. %p != %p
 MurmurHash2
 MurmurHash2LowerCase(char const*, int, unsigned int)
 MurmurHash2LowerCase(char const*, unsigned int)
-N24CFieldPathHuffmanEncoder12InternalNodeE
-N24CFieldPathHuffmanEncoder5INodeE
-N24CFieldPathHuffmanEncoder8LeafNodeE
-NETWORK_FIELD_LOWEST_PRIORITY
 NetworkClientService_001
 NetworkMessagesVersion001
 NetworkP2PService_001
@@ -455,7 +462,6 @@ PhysicsBuilderMgr001
 Plat_DebugPrint
 Plat_ExitProcess
 Plat_GetModuleProcAddress
-Plat_HasEnv
 Plat_IsInDebugSession
 Plat_LoadModule
 Plat_SetDenormalsAreZero
@@ -482,14 +488,12 @@ RenderHardwareConfig002
 RenderService_001
 RenderSystemSurface001
 RenderUtils_001
+ReportClassError
 ResourceBinding_t
 ResourceCompilerSystem001
 ResourceHandleUtils001
-ResourceId_t
 ResourceManifestRegistry001
 ResourceSystem013
-SOURCE2_NO_BUNDLES
-SOURCE2_USE_BUNDLES
 SSE and SSE2 are required.
 SceneSystem_002
 SceneUtils_001
@@ -518,6 +522,7 @@ Source2GameEntities001
 Source2Host001
 Source2Server001
 Source2ServerSerializers002
+Stack depth limit hit (%d)
 Static Metadata Count
 StatsService_001
 SteamAudio001
@@ -583,7 +588,7 @@ VScriptManager010
 VStringTokenSystem001
 VTable?
 V_PrettifyNum
-V_acos
+V_acosd
 V_acosf
 V_asinf
 V_atan2f
@@ -595,31 +600,30 @@ V_atoi
 V_atoi64
 V_atoui64
 V_containsWhitespace
-V_cos
+V_cosd
 V_cosf
 V_expf
 V_fmodf
-V_fpclassify
-V_isnan
+V_fpclassifyd
+V_isnand
 V_logf
-V_pow
+V_powd
 V_powf
 V_qsort
 V_qsort_s
-V_sin
 V_sincosf
+V_sind
 V_sinf
 V_snprintf
 V_sscanf
 V_stricmp_fast
 V_stristr_fast(char const*, char const*)
 V_strnlen
-V_strtok
 V_tanf
 V_uuid_t
 V_vsnprintf
 ValidateAtomicType
-ValidateModuleLocalTypeScope
+ValidateClasses
 VerifySchemaBindingConsistency
 VisBuilder_001
 WARNING: SchemaSystem tried to load schema data for module '%s' but InstallSchemaBindings returned false.
@@ -632,6 +636,8 @@ WorldRendererMgr001
 Y@UnknownSchemaType
 Yes
 [%.3f server clamped to %.3f]
+[%u]
+[]
 _ITM_deregisterTMCloneTable
 _ITM_registerTMCloneTable
 _Jv_RegisterClasses
@@ -653,14 +659,15 @@ _edata
 _end
 _fini
 _init
+_multibase
 _not_pickable
 all-scopes
-animationsystem
 archive
 binary
 binary_auto
 binary_bc
 binary_lz4
+binary_zstd
 bitfield:%d
 bool
 cheat
@@ -677,23 +684,18 @@ float64
 floor
 floorf
 fltx4
-g_BitBuf_BitWriteMasks
-g_BitBuf_ExtraMasks
 g_bUpdateStringTokenDatabase
 g_pMemAlloc
 game
 generic
 generic_data_type
 global scope
-imemanager
-inputsystem
 libc.so.6
 libm.so.6
 libpthread.so.0
 libschemasystem.so
 libstdc++.so.6
 libtier0.so
-localize
 m_CTransform
 m_CUtlBinaryBlock
 m_CUtlString
@@ -716,26 +718,24 @@ m_frameData
 m_keyValuesData
 m_matrix3x4_t
 m_matrix3x4a_t
+m_nBoxedTypeSafeInt
 m_nDerivedA
 m_nDerivedB
 m_nExample1
 m_nExample2
 m_pKeyValues
 m_stringToken
+m_stringTokenWithStorage
 m_value
-materialsystem2
 mathlib.cpp
 max. %f
 memcmp
 memcpy
 memmove
 memset
-meshsystem
 min. %f
 nNode
 nSide
-networksystem
-none
 notconnected
 notify
 operator delete(void*)
@@ -744,13 +744,10 @@ operator new(unsigned long)
 operator new(unsigned long, std::nothrow_t const&)
 operator new[](unsigned long)
 operator new[](unsigned long, std::nothrow_t const&)
-particles
-renderingpipelines
+panorama
 replicated
-resourcesystem
-rnd_down
-rnd_up
-scenesystem
+resource
+resource_name
 schema_all_list_bindings
 schema_all_list_bindings <substring> - List all scopes registered schema bindings (classes & enums). If no substring, list them all.
 schema_detailed_class_layout
@@ -775,7 +772,7 @@ schematype.cpp
 server_can_execute
 singleplayer
 singletons.cpp
-soundsystem
+soundevent
 sqrt
 sqrtf
 ss_added
@@ -784,6 +781,7 @@ strcmp
 strcpy
 strlen
 strstr
+subclass
 time
 true
 uint
@@ -797,5 +795,3 @@ void
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
-worldrenderer
-zero

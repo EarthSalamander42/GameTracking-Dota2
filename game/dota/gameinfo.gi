@@ -90,7 +90,7 @@
 		"UsesBink" "0"
         "MaxNetworkableEntities" "10000"
         "MaxNonNetworkableEntities" "10000"
-        "DefaultDXVersion" "9"
+        "DefaultDXVersion" "11"
         // The shader binary cache on Linux can be over 100MB so
         // we have to allow very large allocations.
 		"AllocWarnMB_linuxsteamrt64" "200"
@@ -105,7 +105,8 @@
 		// bypass this limit so we can be fairly conservative.
 		"ReserveWarnMB" "64"
 
-		"SupportsVulkanParticleOptimizations" "1"
+		"DefaultRenderSystem"					"-vulkan" [ $LINUX || $OSX ] // macOS/Linux default to Vulkan
+		"SupportsVulkanParticleOptimizations"	"1"
 
 		"RenderingPipeline"
 		{
@@ -134,11 +135,12 @@
 	{
 		"SunLightManagerCount" "0"
 		"TransformTextureRowCount" "256"
-		"CMTAtlasWidth" "512"
+		"CMTAtlasWidth" "1024"
 		"CMTAtlasHeight" "512"
 		"CMTAtlasChunkSize" "128"
 		"DrawParticleChildrenSeparateFromParents" "1"
 		"MaxAutoPartitions" "8"
+		"LayerBatchThreshold" "512" [ $OSX && $CPU_EMULATED ] // Apple M1 - increase sc_layer_batch_threshold from 128 -> 512. Reduces TBDR memory bandwidth.
 	}
 	
 	SoundSystem
@@ -164,7 +166,6 @@
 		"DefaultTextureScale"		"0.250000"
 		"DefaultSolidEntity"		"trigger_dota"
 		"DefaultPointEntity"		"info_player_start_dota"
-		"DefaultPathEntity"			"path_particle_rope"
 		"NavMarkupEntity"			"func_nav_markup"
 		"EnableDotaTools"			"1"
 		"DefaultGridTileSet"		"/maps/tilesets/radiant_basic.vmap"
@@ -227,5 +228,17 @@
 	Particles
 	{
 		"GameSupportsLegacyShaders"	"1"
+	}
+
+	Panorama
+	{
+		"UsesSvg" "1"
+	}
+
+	RenderSystem
+	{
+		SwapChainSampleableDepth 1
+		"VulkanUseSecondaryCommandBuffers"	"1" // Use secondary command buffers for more efficiency on tiled based renderers. All platforms to limit configurations.
+		"VulkanSteamShaderCache"			"1"
 	}
 }

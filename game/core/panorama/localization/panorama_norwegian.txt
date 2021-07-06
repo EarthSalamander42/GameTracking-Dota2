@@ -28,7 +28,7 @@
 	"UI_Back_Footer" "TILBAKE"
 	"UI_Alert"		"Varsel"
 
-	"UI_Backspace"	"RETTETAST"
+	"UI_Backspace"	"TILBAKETAST"
 	"UI_Spacebar"	"MELLOMROM"
 	"UI_MoveCaret"	"FLYTT MUSEPEKER"
 	"UI_MoveCaretLeft"	"« MUSEPEKER"
@@ -53,12 +53,16 @@
 	"UI_UnknownTime"	"Ukjent"
 
 	"UI_Label_CopySelected"	"Kopier merket tekst"
+	"UI_Label_SelectAll"	"Velg alle"
 	"UI_Label_OpenLinkInBrowser" "Åpne URL i nettleser"
 	"UI_Label_CopyURLToClipboard" "Kopier URL til utklippstavle"
 		
 	"UI_TextEntry_CutToClipboard"	"Klipp ut"
 	"UI_TextEntry_CopyToClipboard"	"Kopier"
 	"UI_TextEntry_PasteClipboard"	"Lim inn"
+
+	"UI_Console_SaveToLog"				"Lagre til logg"
+	"UI_Console_FileFilter_LogFiles"	"Loggfiler (*.log)"
 
 	"UI_Agreements"					"Avtaler"
 	"UI_ViewAgreements"				"VIS STEAMS ABONNEMENTSAVTALE OG RETNINGSLINJER FOR PERSONVERN"
@@ -80,7 +84,7 @@
 	"UI_Continue"	"Fortsett"
 	"UI_Age_Gate_Continue" "FORTSETT"
 
-	"Panorama_Lang_English"			"English (engelsk)"
+	"Panorama_Lang_English"			"Engelsk"
 	"Panorama_Lang_Spanish"			"Spansk"
 	"Panorama_Lang_French"			"Fransk"
 	"Panorama_Lang_Italian"			"Italiensk"
@@ -117,12 +121,12 @@
 	"Panorama_Lang_Footer_Greek"				"GRESK"
 	"Panorama_Lang_Footer_Korean"			"KOREANSK"
 	"Panorama_Lang_Footer_Simplified_Chinese"	"FORENKLET KINESISK"
-	"Panorama_Lang_Footer_Traditional_Chinese"	"TRAD KINESISK"
+	"Panorama_Lang_Footer_Traditional_Chinese"	"TRADISJONELL KINESISK"
 	"Panorama_Lang_Footer_Russian"		"RUSSISK"
 	"Panorama_Lang_Footer_Thai"			"THAI"
 	"Panorama_Lang_Footer_Japanese"		"JAPANSK"
 	"Panorama_Lang_Footer_Portuguese"	"PORTUGISISK"
-	"Panorama_Lang_Footer_Brazilian"	 	"PORTUGISISK-B"
+	"Panorama_Lang_Footer_Brazilian"	 	"PORTUGISISK (BR.)"
 	"Panorama_Lang_Footer_Polish"		"POLSK"
 	"Panorama_Lang_Footer_Danish"		"DANSK"
 	"Panorama_Lang_Footer_Dutch"			"NEDERLANDSK"
@@ -156,4 +160,7 @@
 	"Debugger_DevInfo"				"Vis utviklerinfo"
 	"Debugger_Search"				"Søk:"
 	"Debugger_Search_Index"			"Viser resultat {d:search_index} av {d:num_search_results}"
+	"Debugger_Smaller"				"▼ Mindre"
+	"Debugger_Larger"				"▲ Større"
+	"Debugger_ResetSize"			"Tilbakestill størrelse"
 }

@@ -514,6 +514,22 @@
 				"css",
 			]
 			m_CompilerIdentifier = "CompilePanorama"
+			m_bShouldCompileErrorFallbackToDisk = true
+			m_Blocks =
+			[
+				{
+					m_BlockID = "DATA"
+					m_Encoding = "RESOURCE_ENCODING_RAW_BYTES"
+				},
+				{
+					m_BlockID = "StCo"
+					m_Encoding = "RESOURCE_ENCODING_KV3"
+				},
+				{
+					m_BlockID = "SrMa"
+					m_Encoding = "RESOURCE_ENCODING_KV3"
+				},
+			]
 		},
 		{
 			_class = "CResourceAssetTypeInfo"
@@ -527,6 +543,7 @@
 				"xml",
 			]
 			m_CompilerIdentifier = "CompilePanorama"
+			m_bShouldCompileErrorFallbackToDisk = true
 		},
 		{
 			_class = "CResourceAssetTypeInfo"

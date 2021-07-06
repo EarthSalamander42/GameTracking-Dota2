@@ -1,5 +1,12 @@
 
 !
+!  always test dictionary efficiency on real samples
+!  consider increasing dictionary size, or produce denser dictionary (-s%u)
+!  consider increasing selectivity to produce larger dictionary (-s%u)
+!  consider increasing the number of samples (total size : %u MB)
+!  note : calculated dictionary significantly larger than requested (%u > %u)
+!  note : larger dictionaries are not necessarily better, test its efficiency on samples
+!  warning : selected content significantly smaller than requested (%u < %u)
 "
 """
 "%f"
@@ -42,14 +49,15 @@ $ORIGIN
 %0*llx bytes at %0*llx is the largest open user-space VA region%s
 %0*llx bytes of %s at %0*llx%s
 %0*llx: address after highest user-space virtual region
-%02d: %u:0x%llx
 %08x %s size %08x
 %12.3f %12.2f
 %14.3f %12.2f
 %14s %10s
 %2d.%03d
-%2u - proc %2u (grp %u:%-2u / phy %u / cor %u / smt %u): max freq %llu
+%3u:%3u bytes at pos %8u, savings %7u bytes |
+%4.2f %%
 %52.52s%12d%12.3f%12.3f%7.2f%12.3f%7.2f%12.3f%12.3f%12.3f%12.3f
+%70s
 %8.4f / %9.2f:  %s
 %8.4f / %9.2f:  Writing profile data to '%s'
 %8.8x-%4.4x-%4.4x-%2.2x%2.2x-%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x
@@ -80,7 +88,6 @@ $ORIGIN
 %p::%p:%d
 %s %c%s
 %s %d
-%s %d: proc %d (group %u:%u)
 %s %i %s
 %s %s
 %s %s %s %s
@@ -88,6 +95,7 @@ $ORIGIN
 %s '%s'
 %s (%d) : %s
 %s (%i) : %s
+%s (before "%s")
 %s allocation count overflow
 %s allocation count overflow( %llu > %llu )
 %s bytes used out of %s bytes available (%.2f%%)
@@ -98,7 +106,6 @@ $ORIGIN
 %s not expected here.  Missing ':'?
 %s not expected here; expected string for key name or '}'
 %s not expected here; missing value?
-%s slot %d combined mask %u:0x%llx
 %s specified, allocating %d MB%s
 %s test: multithread interleaved push/pop, %s
 %s test: multithread push, multithread pop, %s
@@ -147,6 +154,9 @@ $ORIGIN
 %s: unable to find %s in '%s'
 %s: unable to load '%s', error %d
 %u - %u
+%u segments found, of total size %u
+%u%%
+%u_%u_%u
 %zu %zu %zu %zu %zu %zu %zu
 &
 &#039;
@@ -274,7 +284,6 @@ $ORIGIN
 (Missing)
 (None)
 (Unaccounted)
-(forced)
 (including user space up to 63 bits)
 (main)
 (no name set)
@@ -291,6 +300,7 @@ $ORIGIN
 +inf
 ,
 ,%03d
+-
 - %s
 -- Hierarchical Call Graph --
 -- Profile scopes sorted by average time (including children) --
@@ -364,6 +374,18 @@ $ORIGIN
 .%c
 ............|
 ../
+../public/ordered_constructor.h
+../public/tier0/globallist.h
+../public/tier0/memstack.h
+../public/tier0/quantizedfloatencoder.h
+../public/tier0/threadtools.h
+../public/tier0/tslist.h
+../public/tier0/utlblockmemory.h
+../public/tier0/utlfixedmemory.h
+../public/tier0/utlleanvector.h
+../public/tier0/utllinkedlist.h
+../public/tier0/utlrbtree.h
+../public/tier0/utltshash.h
 .\
 /
 //
@@ -380,18 +402,6 @@ $ORIGIN
 /etc/slackware-release
 /etc/yellowdog-release
 /game/
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/ordered_constructor.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/tier0/globallist.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/tier0/memstack.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/tier0/quantizedfloatencoder.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/tier0/threadtools.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/tier0/tslist.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/tier0/utlblockmemory.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/tier0/utlfixedmemory.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/tier0/utlleanvector.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/tier0/utllinkedlist.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/tier0/utlrbtree.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/tier0/utltshash.h
 /proc/cpuinfo
 /proc/self/cmdline
 /proc/self/exe
@@ -405,6 +415,7 @@ $ORIGIN
 /tmp
 /tmp/.steam-sem-names
 0
+00000000-0000-0000-0000-000000000000
 0123456789ABCDEF
 0123456789abcdef
 0@
@@ -412,7 +423,7 @@ $ORIGIN
 0x%08X
 0x%p
 1
-1.4.5
+1.5.0
 10CJobThread
 10CTestSuite
 10ConCommand
@@ -504,7 +515,6 @@ $ORIGIN
 22ILoggingResponsePolicy
 23CSplitScreenAddedConVar
 23IConCommandBaseAccessor
-24BasicStatStructFieldDesc
 24IAsyncScheduledFunctions
 2500
 25CColorizedLoggingListener
@@ -520,7 +530,6 @@ $ORIGIN
 27IKeyValuesDumpContextAsText
 28CStdMemAlloc_Data_StackStatsI9MemConfigILb0ELb0E27DefaultAdditionalPropertiesELb0EE
 28CStdMemAlloc_Data_StackStatsI9MemConfigILb0ELb0E27RuntimeAdditionalPropertiesELb0EE
-28CallStackStatStructDescFuncs
 29CDefaultLoggingResponsePolicy
 29CKeyValuesDumpContextAsDevMsg
 3
@@ -625,7 +634,6 @@ $ORIGIN
 @X@
 A
 A->B
-ACCESSIBLE_FROM_THREADS
 AE_ACTION_SET_TURN_RATE_SCALE
 AE_BLIND_ZOMBIE_SNIFF
 AE_CL_ADD_PARTICLE_EFFECT_CP
@@ -667,20 +675,6 @@ Access of unconnected ConVarRef
 Access of unconnected SplitScreenConVarRef
 AddCompletionCallback
 AddRef
-Affinity preferences: %d logical processors, limiting to %d
-Affinity preferences: %d speeds, preference split at sort index %d
-Affinity preferences: '%s' thread assigned to all-procs mask %u:0x%llx
-Affinity preferences: '%s' thread assigned to proc mask %u:0x%llx (index %d)%s, next proc mask %u:0x%llx (index %d)
-Affinity preferences: all-procs gather crossed group boundary
-Affinity preferences: disabled (%u physical procs, %u logical)
-Affinity preferences: explicitly disabled
-Affinity preferences: no logical processor speed variation
-Affinity preferences: no logical processor split fit
-Affinity preferences: no per-logical-processor information
-Affinity preferences: no preferences, skipping assignment
-Affinity preferences: no-pref all-procs does not set affinity
-Affinity preferences: only one logical processor
-Affinity preferences: turned off for internal reason
 AllocInternal
 AllocUnlocked
 AllocateEvent
@@ -778,13 +772,12 @@ Bad header format (malformed UUID)
 Bad header format (no closing marker)
 Bad header: invalid compression header
 Bad header: unrecognized encoding id
-Bad keyname
+Bad keyname: '%s'
 Bad node link detected
 Bad value
 BakedLODBuilderMgr001
 BaseIKRig
 BasePhysicsShape
-BasicStatStructFieldDesc::DescribeField(unsigned char*, unsigned long)
 BenchmarkService001
 BentNormalData
 BinaryProperties_GetValue
@@ -795,7 +788,9 @@ Break
 BreakCommand
 BreakPieceEmbedded
 BreakPieceExternal
+Breaking content into %u epochs of size %u
 BroadcastAssertionMiniDumpContext_t
+Building dictionary
 BuiltDebug
 C
 C->D
@@ -810,6 +805,8 @@ CAnimState
 CAnimationGraph
 CAuthPhysBody
 CAuthPhysJoint
+CBlend2DAnimNode
+CBlend2DItem
 CBlendAnimNode
 CBlockCompress::FastCompress(unsigned char const*, unsigned int, unsigned char*, unsigned int)
 CBlockCompress::FastDecompress(unsigned char const*, unsigned int, unsigned char*, unsigned int)
@@ -845,6 +842,7 @@ CBufferString::GetReplacePtr(int, int, int, bool, int*)
 CBufferString::GrowByChunks(int, int)
 CBufferString::Insert(int, char const*, int, bool)
 CBufferString::MakeAbsolutePath(char const*, char const*)
+CBufferString::MakeFixedAbsolutePath(char const*, char const*, char)
 CBufferString::MakeRelativePath(char const*, char const*)
 CBufferString::MoveFrom(CBufferString&)
 CBufferString::Purge(int)
@@ -1123,7 +1121,7 @@ CMiniDumpComment encountered an error while generating the comment
 CMiniDumpComment::AppendComment(char const*)
 CMiniDumpComment::AppendFormattedComment(char const*, ...)
 CMiniDumpComment::AppendOSComment()
-CMiniDumpComment::CMiniDumpComment(int)
+CMiniDumpComment::CMiniDumpComment(int, MemAllocAttribute_t)
 CMiniDumpComment::EnsureOSDescription()
 CMiniDumpComment::GetAvailableBufferSize() const
 CMiniDumpComment::GetCurrentPointer()
@@ -1170,6 +1168,7 @@ CSHA1::Reset()
 CSHA1::Transform(unsigned int*, unsigned char const*)
 CSHA1::Update(void const*, unsigned int)
 CSelectorAnimNode
+CSequenceBlend2DItem
 CSetFacingAnimNode
 CSingleAppInstance::CSingleAppInstance(char const*, bool, bool)
 CSingleAppInstance::CheckForOtherRunningInstances(bool, bool)
@@ -1178,15 +1177,11 @@ CSingleAppInstance::ShutdownInstance()
 CSingleAppInstance::~CSingleAppInstance()
 CSlowDownOnSlopesAnimNode
 CSolveIKChainAnimNode
-CSparseMatrix::AdjustAllRowIndicesAfter(int, int)
-CSparseMatrix::AppendElement(int, int, float)
-CSparseMatrix::FinishedAppending()
-CSparseMatrix::SetDimensions(int, int)
-CSparseMatrix::SetElement(int, int, float)
 CSpeedScaleAnimNode
 CSplitString::Construct(char const*, char const**, int)
 CStableSymbolTable::GetId(char const*, bool*)
 CStableSymbolTable::Insert(int, char const*)
+CStackStatsStructInfo::WriteStructDescription(unsigned char*, unsigned long)
 CStackTop_Base::CStackTop_Base()
 CStackTop_Base::ChangeMarker(CCallStackMarkerBase const&)
 CStackTop_Base::GetCurrentTop(bool)
@@ -1338,8 +1333,8 @@ CThreadSpinRWLock::UnlockRead(char const*, int)
 CThreadSpinRWLock::UnlockRead_LockForWrite(char const*, int)
 CThreadSpinRWLock::UnlockWrite(char const*, int)
 CThreadSpinRWLock::UnlockWrite_LockForRead(char const*, int)
-CThreadSwapContext::CThreadSwapContext(CThreadSwapTarget*)
-CThreadSwapContext::~CThreadSwapContext()
+CThreadSwapContext_Base::CThreadSwapContext_Base(CThreadSwapTarget*, void*, unsigned long)
+CThreadSwapContext_Base::~CThreadSwapContext_Base()
 CThreadSwapTarget::CThreadSwapTarget()
 CThreadSwapTarget::OwnerThreadRun()
 CThreadSwapTarget::ReleaseOwnerThread()
@@ -1480,19 +1475,18 @@ CUtlMemoryBlockAllocator::MemUsage() const
 CUtlMemoryBlockAllocator::Purge()
 CUtlMemoryBlockAllocator::SetPageSize(unsigned int)
 CUtlMemoryBlockAllocator::~CUtlMemoryBlockAllocator()
-CUtlMemoryPoolBase
 CUtlMemoryPoolBase: Cannot specify 0 elements to grow each time!
 CUtlMemoryPoolBase::AddNewBlob()
 CUtlMemoryPoolBase::Alloc()
 CUtlMemoryPoolBase::AllocZero()
-CUtlMemoryPoolBase::CUtlMemoryPoolBase(int, int, int, MemoryPoolGrowType_t, char const*)
+CUtlMemoryPoolBase::CUtlMemoryPoolBase(int, int, int, MemoryPoolGrowType_t, char const*, MemAllocAttribute_t)
 CUtlMemoryPoolBase::Clear()
 CUtlMemoryPoolBase::ClearDestruct(void (*)(void*))
 CUtlMemoryPoolBase::Free(void*)
+CUtlMemoryPoolBase::Init(int, int, int, MemoryPoolGrowType_t, char const*, MemAllocAttribute_t)
 CUtlMemoryPoolBase::InternalClear(CUtlMemoryPoolBase::CBlob*, CUtlMemoryPoolBase::FreeList_t*)
 CUtlMemoryPoolBase::IsAllocationWithinPool(void*) const
 CUtlMemoryPoolBase::ResetAllocationCounts()
-CUtlMemoryPoolBase::SetErrorReportFunc(void (*)(char const*, ...))
 CUtlMemoryPoolBase::~CUtlMemoryPoolBase()
 CUtlRBTree overflow with %u elements!
 CUtlScratchMemoryPool::AddNewBlock(int)
@@ -1686,6 +1680,7 @@ C_INIT_CreateInEpitrochoid
 C_INIT_CreateOnModel
 C_INIT_CreateOnModelAtHeight
 C_INIT_CreateSequentialPath
+C_INIT_CreateWithinBox
 C_INIT_CreateWithinSphere
 C_INIT_DistanceToCPInit
 C_INIT_GlobalScale
@@ -1729,6 +1724,7 @@ C_INIT_VelocityFromNormal
 C_INIT_VelocityRadialRandom
 C_INIT_VelocityRandom
 C_OP_AttractToControlPoint
+C_OP_ConstrainDistance
 C_OP_ContinuousEmitter
 C_OP_CurlNoiseForce
 C_OP_DistanceBetweenCPsToCP
@@ -1739,6 +1735,7 @@ C_OP_InheritFromParentParticles
 C_OP_InitSetSnapshotOnCP
 C_OP_InstantaneousEmitter
 C_OP_LockToSavedSequentialPath
+C_OP_MovementPlaceOnGround
 C_OP_NoiseEmitter
 C_OP_RampCPLinearRandom
 C_OP_RemapAverageScalarValuetoCP
@@ -1804,6 +1801,7 @@ CommandProcedure
 CommandProcedureList
 Comment unavailable. CMiniDumpComment encountered an error while generating the comment
 ComputeTimestampedDataContainerBufferSize
+Computing frequencies
 ConColorMsg(Color const&, char const*, ...)
 ConCommand %s has conflicting %s flags (child: %s%s, parent: %s%s, parent wins)
 ConDMsg
@@ -1814,6 +1812,8 @@ Conditional Error: %s
 ConfigAttachedModel
 ConfigurationSystem_001
 ConnectInterfaceSingletons
+Constructed dictionary of size %u
+Constructing partial suffix array
 Context should be init first
 Convar %s has conflicting %s flags (child: %s%s, parent: %s%s, parent wins)
 Convars/CCvar::FindCommandBase
@@ -1838,6 +1838,8 @@ Could not execute the command:   %sOS error message:   "%s"
 Couldn't open '%s' for writing!
 Couldn't window icon! %s
 Count
+Cover must have at least one input file
+Cover parameters incorrect
 CrackSmokingCompiler
 CreateCommandLine
 CreateInterface
@@ -1861,6 +1863,7 @@ Decompression failure
 Default
 DefaultConditionalErrorProc
 DefaultConditionalSymbolProc
+DemoUpconverterVersion001
 Destination buffer is too small
 Destination buffer is wrong
 DestroyThreadPool
@@ -1945,14 +1948,31 @@ F
 FAIL: !IsEmpty()
 FAIL: !Validate()
 FAIL: Not all items popped
+FASTCOVER must have at least one input file
+FASTCOVER parameters incorrect
+FATAL ERROR: unable to create temp directory under '%s'
+FATAL ERROR: unable to create temp file under '%s'
 FCVAR_ARCHIVE
 FCVAR_CHEAT
 FCVAR_DONTRECORD
 FCVAR_NEVER_AS_STRING
 FCVAR_REPLICATED
 FRENCH
+FSE_normalizeCount error with litLengthCount
+FSE_normalizeCount error with matchLengthCount
+FSE_normalizeCount error with offcodeCount
+FSE_writeNCount error with litlengthNCount
+FSE_writeNCount error with matchLengthNCount
+FSE_writeNCount error with offcodeNCount
+Failed to allocate buffers: out of memory
+Failed to allocate dmer map: out of memory
+Failed to allocate frequency table
+Failed to allocate parameters
+Failed to allocate scratch buffers
 Failed to assign bool literal value
 Failed to convert KV3 to string; error: %s
+Failed to initialize context
+Failed to select dictionary
 Fatal Error
 Field %s has inverted min/max values![%f->%f]
 Field %s tried to quantize an out-of-range value (%f, range is %f->%f) clamping.
@@ -1983,6 +2003,7 @@ FioGetBaseFileInfo(char const*, FioBaseFileInfo_t*, unsigned int)
 FioGetFileCRC32(char const*, unsigned int*, int)
 FioGetFileCRC32Buffer(char const*, unsigned int*, unsigned char*, int)
 FioGetFileIdentity(int, unsigned long long*, unsigned long long*)
+FioGetFileType
 FioGetSectorSize(char const*, int*)
 FioGetSize(int, unsigned long long*)
 FioIsDotDir(char const*)
@@ -2004,6 +2025,7 @@ FlushBuffer
 FontManager_001
 FormatV
 Found Application AutoArgs file '%s'
+Found a '%s' token implying the start of a conditional.  KV3 doesn't support this - use bIgnoreConditionals or modify the source file.
 Frame Boundary
 Frame index is too large
 Frame requires too much memory for decoding
@@ -2036,6 +2058,7 @@ GameResourceServiceServerV001
 GameUIService_001
 General
 GenericGameData
+Generic_x86
 GenuineIntel
 GetAddressTranslationData
 GetCPUFrequencyResults
@@ -2087,6 +2110,8 @@ HEAP WARNING: memory pointer %p is invalid
 HH:MM:SS.z
 HIGHDPI
 HOME
+HUF_buildCTable error
+HUF_writeCTable error
 HammerMapLoader001
 HangWatchdog
 HangWatchdogInternal_BeginScope
@@ -2129,6 +2154,10 @@ Ignore This File
 Illegal char string format specifier '%c' (%d) in '%s'
 Illegal wchar_t string format specifier '%c' (%d) in '%s'
 Import_GetICVarFactory
+Incorrect accel
+Incorrect k
+Incorrect parameters
+Incorrect splitPoint
 Indicate to a test script that a checkpoint has been reached
 Init
 InitFromCommandLine
@@ -2142,6 +2171,7 @@ InstallChangeCallback ignoring duplicate change callback!!!
 InstallProgressReportHandler
 InstallUniformRandomStream
 Intentionally vague touch behavior for %p
+InternalInit
 Interpolation
 Invalid access of deferred ConVarRef for '%s'
 Invalid code point \u%04x
@@ -2242,7 +2272,6 @@ KeyValues::RecursiveSaveToFile(CUtlBuffer&, int, bool, bool)
 KeyValues::RecursiveSaveToLocalizationFile(IBaseFileSystem*, void*, int, bool)
 KeyValues::RemoveSubKey(KeyValues*, bool, bool)
 KeyValues::SaveToFile(IBaseFileSystem*, char const*, char const*, bool)
-KeyValues::SaveToFile: couldn't open file "%s" in path "%s".
 KeyValues::SetColor(char const*, Color)
 KeyValues::SetFloat(char const*, float)
 KeyValues::SetFromString(char const*, CKeyValues_Data::types_t, char const*)
@@ -2315,8 +2344,8 @@ LoadKV3FromFile(KeyValues3*, CUtlString*, char const*, char const*, KV3ID_t cons
 LoadKV3FromJSON(KeyValues3*, CUtlString*, char const*, char const*)
 LoadKV3FromJSONFile(KeyValues3*, CUtlString*, char const*, char const*)
 LoadKV3FromKV1File(KeyValues3*, CUtlString*, char const*, char const*, KV1TextEscapeBehavior_t)
-LoadKV3FromKV1Text(KeyValues3*, CUtlString*, char const*, KV1TextEscapeBehavior_t, char const*)
-LoadKV3FromKV1Text_Translated(KeyValues3*, CUtlString*, char const*, KV1TextEscapeBehavior_t, KV1ToKV3Translation_t const*, int, char const*)
+LoadKV3FromKV1Text(KeyValues3*, CUtlString*, char const*, KV1TextEscapeBehavior_t, char const*, bool)
+LoadKV3FromKV1Text_Translated(KeyValues3*, CUtlString*, char const*, KV1TextEscapeBehavior_t, KV1ToKV3Translation_t const*, int, char const*, bool)
 LoadKV3FromKV3OrKV1(KeyValues3*, CUtlString*, CUtlBuffer*, KV3ID_t const&, char const*)
 LoadKV3FromOldSchemaText(KeyValues3*, CUtlString*, CUtlBuffer*, KV3ID_t const&, char const*)
 LoadKV3Text_NoHeader(KeyValues3*, CUtlString*, char const*, KV3ID_t const&, char const*)
@@ -2388,6 +2417,8 @@ MD5Value_t::IsZero() const
 MD5_Print
 MD5_ProcessSingleBuffer
 MD5_PseudoRandom
+MENUBAR_ITEM
+MOBILE
 MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 Mac OS
@@ -2410,14 +2441,15 @@ MacOS 10.8
 MacOS 10.9
 MapListService_001
 MaterialUtils_001
-MatrixMath::TransposeMatrix(CSparseMatrix const&, CSparseMatrix*)
 Max committed memory: %u KB out of %d KB
 MemAllocScratch
 MemAlloc_AllocFunc
 MemAlloc_CallocFunc
 MemAlloc_FreeFunc
+MemAlloc_GetAllocAttributesFunc
 MemAlloc_GetSizeFunc
 MemAlloc_ReallocFunc
+MemAlloc_SetAllocAttributesFunc
 MemAlloc_StrDupWrapperFunc
 MemFreeScratch
 MemZeroMemory
@@ -2474,6 +2506,7 @@ No error detected
 No samples
 No valid format conversion from '%s' to '%s'
 NoPoseControl
+Not enough memory
 NoteAlloc
 Number contains invalid character 0x%02x
 Number contains invalid character 0x%02x ('%c')
@@ -2498,6 +2531,8 @@ PARTICLE_DIR_NOISE_CURL
 PARTICLE_ENDCAP_ALWAYS_ON
 PARTICLE_ENDCAP_ENDCAP_OFF
 PARTICLE_ENDCAP_ENDCAP_ON
+PARTICLE_FOG_ENABLED
+PARTICLE_FOG_GAME_DEFAULT
 PARTICLE_LIGHT_TYPE_FX
 PARTICLE_LIGHT_TYPE_POINT
 PARTICLE_LIGHT_TYPE_SPOT
@@ -2516,10 +2551,13 @@ PARTICLE_SET_SCALE_CURRENT_VALUE
 PARTICLE_SET_SCALE_INITIAL_VALUE
 PARTICLE_SORTING_CREATION_TIME
 PARTICLE_SORTING_NEAREST
+PARTICLE_TRACE_MISS_BEHAVIOR_KILL
+PARTICLE_TRACE_MISS_BEHAVIOR_TRACE_END
 PARTICLE_VRHAND_CP
 PARTICLE_VRHAND_CP_OBJECT
 PARTICLE_VRHAND_LEFT
 PARTICLE_VRHAND_RIGHT
+PC
 PF_BIAS_TYPE_EXPONENTIAL
 PF_MAP_TYPE_MULT
 PF_MAP_TYPE_REMAP
@@ -2567,6 +2605,7 @@ PhysicsShapeCapsule
 PhysicsShapeHull
 PhysicsShapeMesh
 PhysicsShapeSphere
+PlatC_ReadFileToMemory
 Plat_AlertUser
 Plat_AlertUser(PlatWindow_t__*, wchar_t const*, wchar_t const*)
 Plat_AppendMiniDumpErrorString
@@ -2580,7 +2619,11 @@ Plat_ClearMiniDumpErrorString
 Plat_CollectMiniDumpsForFatalErrors
 Plat_ConvertToLocalTime
 Plat_CreateDirectory
+Plat_CreateDirectoryTree
+Plat_CreateDirectoryTreeForFile
 Plat_CreateGameInstanceMutex
+Plat_CreateOpenTempFile
+Plat_CreateTempDirectory
 Plat_CreateUUIDImpl
 Plat_CreateWindow
 Plat_CreateWindow:  Could not create SDL window: %s
@@ -2594,6 +2637,7 @@ Plat_DisableIOBuffering
 Plat_EnableCustomerMachineMode
 Plat_EnableHeadlessMode
 Plat_EndWatchdogTimer
+Plat_EnsureDirectory
 Plat_ExitProcess
 Plat_FastVerifyHardwareKey
 Plat_FileExists
@@ -2651,6 +2695,7 @@ Plat_GetProcAddresses
 Plat_GetRawCallStack
 Plat_GetShellWindow
 Plat_GetSteamLoginWithAccessCode
+Plat_GetTempDirectory
 Plat_GetThreadIndex
 Plat_GetTime
 Plat_GetTimeString
@@ -2680,6 +2725,7 @@ Plat_InitializeCOM
 Plat_InstallControlCHandler
 Plat_InstallUrlHandler
 Plat_Is64BitOS
+Plat_IsCPUEmulated
 Plat_IsConsoleApplication
 Plat_IsDirectory
 Plat_IsFile
@@ -2767,6 +2813,7 @@ Plat_SetupFPUControlWord
 Plat_ShouldCollectMiniDumpsForFatalErrors
 Plat_ShowWindow
 Plat_ShutdownCOM
+Plat_SupportsMetalGraphicsAPI
 Plat_TickDiffMicroSec
 Plat_TickDiffMicroSecF
 Plat_TickDiffMilliSec
@@ -3072,6 +3119,7 @@ Scrubber is not enabled in tier0
 SecureRandomBytes
 SecureRandomDouble
 SecureRandomInt
+Selected dict at position %u, of length %u : saves %u (ratio: %.2f)
 SendActionToAssertDialog
 SequenceMarkup
 SequenceMarkupList
@@ -3113,6 +3161,7 @@ SoundOpSystemEdit001
 SoundOperators
 SoundService_001
 SoundSystem001
+Source buffer is wrong
 Source2Client002
 Source2ClientPrediction001
 Source2ClientUI001
@@ -3161,10 +3210,13 @@ String %d: ref:%d %s
 Sum (%s)
 T
 TCHINESE
+TEMP
 TESTSCRIPT: CheckPoint -> '%s'.
 TESTSCRIPT: waiting for checkpoint '%s'%s
+TMP
 TMPDIR
 TSList cannot hold more that %d nodes
+TSPointerList Nodes
 Tags
 Test bucket %d has an invalid value %d
 TestFormatA
@@ -3202,6 +3254,7 @@ Test_Wait: requires seconds parameter.
 Test_WaitForCheckPoint
 Test_WaitForCheckPoint <checkpoint name> [once]: requires checkpoint name.
 Testing %d threads:
+Testing on %u samples of total size %u
 Tests done, purging test memory...
 TextLayout_001
 Thread failed to initialize
@@ -3225,6 +3278,7 @@ ThreadMultiWait
 ThreadMultiWaitObjectSetCreate
 ThreadMultiWaitObjectSetCreate(pollfd const*, ThreadMultiWaitExtra_t const*, int)
 ThreadMultiWaitObjectSetDestroy
+ThreadMultiWaitObjectSetGetCount
 ThreadNanoSleep
 ThreadPoolTest:         %d threads -- %d (%d) jobs processed in %fms, %fms to suspend (%f/%f)
 ThreadPoolTest:         Testing with %d jobs! Sleep %d, interleave %d, prioritized %d
@@ -3273,15 +3327,21 @@ ToolSceneNodeFactory_001
 ToolService_001
 Tools
 Total committed memory: %d KB
+Total number of testing samples is %u and is invalid.
+Total number of training samples is %u and is invalid
+Total number of training samples is %u and is invalid.
+Total samples size is too large (%u MB), maximum size is %u MB
 Total used memory:      %d KB
 Total virtual bytes: %s
 TracerPid:
+Training on %u samples of total size %u
 TransferMemory
 TranslateStackInfo
 Tried to install the same listener on the same event id + queue twice!
 TrimRight
 TruncateAt
 Truncated data
+Trying %u different sets of parameters
 Tst
 Two Bone
 Two KV3 format GUIDs with the same human-friendly name ('%s')
@@ -3403,6 +3463,7 @@ V_GetErrno
 V_GetFileExtension
 V_GetFileExtensionSafe
 V_GetPathOriginLength
+V_GetProcessUtils
 V_GetUTF8BytesNeeded(char const*, int)
 V_GetUTF8BytesNeeded(unsigned short const*, int)
 V_GetUTF8BytesNeeded(wchar_t const*, int)
@@ -3436,6 +3497,7 @@ V_LZ4_resetStream_fast
 V_LogMultiline
 V_LogMultilineToArray
 V_MakeAbsolutePathBuffer
+V_MakeAbsolutePathBufferUnfixed
 V_MakeAbsoluteVPKPathName
 V_MakeAbsoluteVPKPathNameBuffer
 V_MakeRelativePathBuffer
@@ -3530,6 +3592,13 @@ V_UnicodeValidate(char const*)
 V_UnicodeValidate(unsigned short const*)
 V_UnicodeValidate(wchar_t const*)
 V_UnqualifiedFileName
+V_XXH64
+V_XXH64_copyState
+V_XXH64_createState
+V_XXH64_digest
+V_XXH64_freeState
+V_XXH64_reset
+V_XXH64_update
 V_ZSTD_compress
 V_ZSTD_compressBound
 V_ZSTD_compress_usingCDict
@@ -3545,13 +3614,13 @@ V_ZSTD_getDictID_fromDDict
 V_ZSTD_getDictID_fromFrame
 V_ZSTD_getFrameContentSize
 V_abort
-V_acos
+V_acosd
 V_acosf
-V_asin
+V_asind
 V_asinf
-V_atan
-V_atan2
+V_atan2d
 V_atan2f
+V_atand
 V_atanf
 V_atof
 V_atofloat32
@@ -3561,13 +3630,13 @@ V_atoi64
 V_atoui64
 V_clearerr
 V_containsWhitespace
-V_cos
+V_cosd
 V_cosf
-V_cosh
+V_coshd
 V_coshf
-V_exp
-V_exp2
+V_exp2d
 V_exp2f
+V_expd
 V_expf
 V_fclose
 V_fdopen
@@ -3577,17 +3646,17 @@ V_fflush
 V_fgetc
 V_fgets
 V_fileno
-V_fmod
+V_fmodd
 V_fmodf
 V_fopen
 V_fopenUTF8
-V_fpclassify
+V_fpclassifyd
 V_fprintf
 V_fputc
 V_fputs
 V_fread
 V_freopen
-V_frexp
+V_frexpd
 V_frexpf
 V_fscanf
 V_fseek
@@ -3595,14 +3664,14 @@ V_fseeki64
 V_ftell
 V_ftelli64
 V_fwrite
-V_hypot
+V_hypotd
 V_hypotf
 V_isalnum_str
 V_isalpha_str
 V_isbreakablewspace
 V_isbreakablewspace32
 V_isdigit_str
-V_isnan
+V_isnand
 V_isstrlower_fast
 V_isvalidhex
 V_iswalnum
@@ -3612,39 +3681,39 @@ V_iswdigit
 V_iswlower
 V_iswspace
 V_iswupper
-V_ldexp
+V_ldexpd
 V_ldexpf
 V_localeconv
-V_log
-V_log10
+V_log10d
 V_log10f
-V_log2
 V_log2_uint
+V_log2d
 V_log2f
+V_logd
 V_logf
 V_longjmp
 V_mkostemps
 V_mkstemps
-V_modf
+V_modfd
 V_modff
 V_normalizeFloatString
 V_normalizeFloatWString
-V_pow
+V_powd
 V_powf
 V_qsort
 V_qsort_s
-V_remainder
+V_remainderd
 V_remainderf
 V_rewind
-V_round
+V_roundd
 V_roundf
 V_setjmp
 V_setvbuf
-V_sin
-V_sincos
+V_sincosd
 V_sincosf
+V_sind
 V_sinf
-V_sinh
+V_sinhd
 V_sinhf
 V_snprintf
 V_snprintfNoSecurityDoNotUse
@@ -3669,16 +3738,16 @@ V_strtok
 V_strtoui64
 V_strupper_fast
 V_swscanf
-V_tan
+V_tand
 V_tanf
-V_tanh
+V_tanhd
 V_tanhf
-V_tier0_ceil
+V_tier0_ceild
 V_tier0_ceilf
 V_tier0_crc32
-V_tier0_fabs
+V_tier0_fabsd
 V_tier0_fabsf
-V_tier0_floor
+V_tier0_floord
 V_tier0_floorf
 V_tier0_isgraph
 V_tier0_ispunct
@@ -3686,19 +3755,22 @@ V_tier0_memcmp
 V_tier0_memcpy
 V_tier0_memmove
 V_tier0_memset
-V_tier0_sqrt
+V_tier0_sqrtd
 V_tier0_sqrtf
 V_tier0_strchr
 V_tier0_strcmp
 V_tier0_strcpy
+V_tier0_strcpy32
 V_tier0_strlen
+V_tier0_strlen16
+V_tier0_strlen32
 V_tier0_strrchr
 V_tier0_strstr
 V_tier0_strtok_ts
 V_tier0_wcschr
 V_tier0_wcscmp
 V_tier0_wcscpy
-V_tmpnam
+V_tier0_wcslen
 V_towlower
 V_towlower32
 V_towupper
@@ -3725,6 +3797,7 @@ Version not supported
 Virtual Memory %s Report for PID %u
 Virtual memory regions sorted by size:
 VisBuilder_001
+VisibilityInputs
 VmHWM
 VmPeak
 VmRSS
@@ -3736,6 +3809,7 @@ WARNING: Command buffer full... ignoring!%s
 WARNING: Command too long... ignoring!%s
 WARNING: Large alloc of %llu bytes of memory (limit %llu)
 WARNING: Large virtual reservation of %llu bytes of memory (limit %llu)
+WARNING: The maximum dictionary size %u is too large compared to the source size %u! size(source)/size(dictionary) = %f, but it should be >= 10! This may lead to a subpar dictionary! We recommend training on sources at least 10x, and preferably 100x the size of the dictionary!
 WARNING: Unable to initialize verifier allocator
 WARNING: there were errors during information capture, this report may be incomplete
 WARNING: total wall clock time was %.2f seconds, results may be invalid
@@ -3782,6 +3856,19 @@ X360WIDE
 Y
 Y@-2GB
 YieldWait
+Z
+ZDICT_addEntropyTablesFromBuffer
+ZDICT_finalizeDictionary
+ZDICT_getDictHeaderSize
+ZDICT_getDictID
+ZDICT_getErrorName
+ZDICT_isError
+ZDICT_optimizeTrainFromBuffer_cover
+ZDICT_optimizeTrainFromBuffer_fastCover
+ZDICT_trainFromBuffer
+ZDICT_trainFromBuffer_cover
+ZDICT_trainFromBuffer_fastCover
+ZDICT_trainFromBuffer_legacy
 ZN26CParallelProcessorAbstractI18CParallelProcessorIi27CMemberFuncJobItemProcessorIi10CCallQueueS2_ELi1EEE3RunEvE13CStackFunctor
 ZSTD_CCtxParams_getParameter
 ZSTD_CCtxParams_init
@@ -3795,12 +3882,14 @@ ZSTD_CCtx_loadDictionary_byReference
 ZSTD_CCtx_refCDict
 ZSTD_CCtx_refPrefix
 ZSTD_CCtx_refPrefix_advanced
+ZSTD_CCtx_refThreadPool
 ZSTD_CCtx_reset
 ZSTD_CCtx_setParameter
 ZSTD_CCtx_setParametersUsingCCtxParams
 ZSTD_CCtx_setPledgedSrcSize
 ZSTD_CStreamInSize
 ZSTD_CStreamOutSize
+ZSTD_DCtx_getParameter
 ZSTD_DCtx_loadDictionary
 ZSTD_DCtx_loadDictionary_advanced
 ZSTD_DCtx_loadDictionary_byReference
@@ -3826,6 +3915,7 @@ ZSTD_compressBlock
 ZSTD_compressCCtx
 ZSTD_compressContinue
 ZSTD_compressEnd
+ZSTD_compressSequences
 ZSTD_compressStream
 ZSTD_compressStream2
 ZSTD_compressStream2_simpleArgs
@@ -3838,6 +3928,7 @@ ZSTD_createCCtxParams
 ZSTD_createCCtx_advanced
 ZSTD_createCDict
 ZSTD_createCDict_advanced
+ZSTD_createCDict_advanced2
 ZSTD_createCStream
 ZSTD_createCStream_advanced
 ZSTD_createDCtx_advanced
@@ -3845,6 +3936,7 @@ ZSTD_createDDict
 ZSTD_createDDict_advanced
 ZSTD_createDStream
 ZSTD_createDStream_advanced
+ZSTD_createThreadPool
 ZSTD_dParam_getBounds
 ZSTD_decodingBufferSize_min
 ZSTD_decompressBegin
@@ -3857,6 +3949,7 @@ ZSTD_decompressDCtx
 ZSTD_decompressStream
 ZSTD_decompressStream_simpleArgs
 ZSTD_decompress_usingDict
+ZSTD_defaultCLevel
 ZSTD_endStream
 ZSTD_estimateCCtxSize
 ZSTD_estimateCCtxSize_usingCCtxParams
@@ -3879,9 +3972,12 @@ ZSTD_freeCDict
 ZSTD_freeCStream
 ZSTD_freeDDict
 ZSTD_freeDStream
+ZSTD_freeThreadPool
+ZSTD_generateSequences
 ZSTD_getBlockSize
 ZSTD_getCParams
 ZSTD_getDecompressedSize
+ZSTD_getDictID_fromCDict
 ZSTD_getDictID_fromDict
 ZSTD_getErrorCode
 ZSTD_getErrorName
@@ -3890,7 +3986,6 @@ ZSTD_getFrameHeader
 ZSTD_getFrameHeader_advanced
 ZSTD_getFrameProgression
 ZSTD_getParams
-ZSTD_getSequences
 ZSTD_initCStream
 ZSTD_initCStream_advanced
 ZSTD_initCStream_srcSize
@@ -3910,6 +4005,7 @@ ZSTD_insertBlock
 ZSTD_isError
 ZSTD_isFrame
 ZSTD_maxCLevel
+ZSTD_mergeBlockDelimiters
 ZSTD_minCLevel
 ZSTD_nextInputType
 ZSTD_nextSrcSizeToDecompress
@@ -3924,6 +4020,7 @@ ZSTD_sizeof_DStream
 ZSTD_toFlushNow
 ZSTD_versionNumber
 ZSTD_versionString
+ZSTD_writeSkippableFrame
 [
 [   func+child         func ]
 [   func+child       func ]
@@ -3975,8 +4072,6 @@ _AssertValidWritePtr
 _CCallStackStatsGatherer_GetSharedGlobalInstance
 _CCallStackStatsGatherer_Internal_DumpStatsToFile
 _CCallStackStatsGatherer_ReleaseSharedGlobalInstance
-_CCallStackStatsGatherer_Write_EmbeddedScript
-_CCallStackStatsGatherer_Write_FieldDescriptions
 _Error_AlwaysSpewCallStack_Enable
 _Error_AlwaysSpewCallStack_Length
 _GetCallStack
@@ -4029,11 +4124,11 @@ __cxa_pure_virtual
 __environ
 __errno_location
 __fpclassify
+__fprintf_chk
 __fxstat64
 __gmon_start__
 __isnan
 __lxstat64
-__memcpy_chk
 __oldschema_object_name
 __pthread_key_create
 __stack_chk_fail
@@ -4047,6 +4142,7 @@ _root_keyname
 _test_conversion_counter
 `
 a
+acos
 ai_model_info
 alarm
 allowstatic
@@ -4059,13 +4155,18 @@ anim_name_b
 animgraph0
 animgraph1
 animgraph2
+animgraph3
+animgraph4
 app
 appears in lower database
 application
 archive
 asctime
 asctime_r
+asin
 at+
+atan
+atan2
 attach_point
 attachment
 attachment_offset
@@ -4082,6 +4183,7 @@ binary
 binary_auto
 binary_bc
 binary_lz4
+binary_zstd
 blendamount
 blockLOS
 body_type
@@ -4106,6 +4208,7 @@ c
 cable
 calloc
 cantdie
+ceil
 center
 cfg/configdefaults.linux.vcfg
 cfg/configschema.vcfg
@@ -4115,6 +4218,7 @@ cl
 cl_language
 client
 clientcmd_can_execute
+clock
 clock_gettime
 closedir
 cloth_collide
@@ -4132,12 +4236,14 @@ consoleonly
 control_point
 core id
 corrupted entry
+cosh
 cpu.cpp
 create_particle
 cvar list--------------
 cvarlist
 cvarlist:  [log logfile] [ partial ]
 d
+d=%u
 dbg.cpp
 default
 defaultValue
@@ -4147,6 +4253,7 @@ demo
 detailed
 developer
 devonly
+dictBufferCapacity must be at least %u
 diff buff needs increase
 diff buffer overrun
 diff.cpp
@@ -4188,6 +4295,7 @@ execlp
 execute_per_tick
 execvpe
 exitprocess_%d
+exp2
 explosion_behavior
 explosion_buildup
 explosion_delay
@@ -4208,17 +4316,24 @@ fibertools.cpp
 filenamesymboltable.cpp
 find
 findflags
+finding patterns ...
+flMaxDistance
+flMinDistance
 float( %f )
 float32
+floor
+fmod
 fopen64
 force
 forced dump
 fork
 format
+found %3u matches of length >= %i at pos %7u
 frame
 frame_end
 free
 freopen64
+frexp
 friction
 fseeko64
 ftello64
@@ -4285,9 +4400,9 @@ help
 help text
 help:  no cvar or command named %s
 hibernate.cpp
-higher
 hurt_me
 hurt_them
+hypot
 i
 iOS
 ignored_assertions.txt
@@ -4298,10 +4413,10 @@ int( %d = 0x%X )
 int:transient:1
 invert_orientation
 is_debris
-isspace
 j
 jobthread.cpp
 k
+k=%u
 keyvaluessystem.cpp
 kv3
 kv3format_manager.cpp
@@ -4309,6 +4424,7 @@ l
 last_sniff
 launch
 ld-linux-x86-64.so.2
+ldexp
 length
 lib
 libc.so.6
@@ -4321,9 +4437,12 @@ libtier0.so
 libuuid.so.1
 linked
 linux
+list %u best segments
 localhost
 localtime_r
 lockRotationAlpha
+log10
+log2
 log_color
 log_dumpchannels
 log_flags
@@ -4336,7 +4455,6 @@ loop_break_on_flashlight
 loop_in_action
 loopback
 looping
-lower
 lseek64
 m
 m_Bone
@@ -4385,8 +4503,10 @@ m_bDisableChild
 m_bDisableOperator
 m_bDoBonesOrientAlongPositiveX
 m_bFitCycleToLifetime
+m_bFogParticles
 m_bForceLoopingAnimation
 m_bInitFromKilledParentParticles
+m_bKill
 m_bLightenMode
 m_bLocalSpace
 m_bMaxLuminanceBlendingSequence1
@@ -4414,6 +4534,8 @@ m_children
 m_fForceAmount
 m_fForceAmountMin
 m_fLifespanScaleExp
+m_fMaxDistance
+m_fMinDistance
 m_fRadiusMax
 m_fRadiusMin
 m_fSpeedMax
@@ -4447,13 +4569,17 @@ m_flInput0
 m_flInput1
 m_flLiteralValue
 m_flMultFactor
+m_flOffset
 m_flOpStrength
 m_flOpStrengthMaxScale
 m_flOpStrengthMinScale
 m_flOutput0
 m_flOutput1
 m_flPitch
+m_flRadius1
+m_flRadius2
 m_flRadiusScale
+m_flRadiusScaleFOVBase
 m_flRadiusTaper
 m_flRandomMax
 m_flRandomMin
@@ -4481,12 +4607,15 @@ m_id
 m_inputConnection
 m_inputConnection1
 m_inputConnection2
+m_items
+m_modelName
 m_nAnimationType
 m_nAttributeToWrite
 m_nBehaviorVersion
 m_nBiasType
 m_nCP
 m_nCPField
+m_nCPin
 m_nClusterSizeMax
 m_nClusterSizeMin
 m_nCollisionMode
@@ -4494,6 +4623,7 @@ m_nControlPoint
 m_nControlPointNumber
 m_nFeatheringMode
 m_nFirstMultipleOverride_BackwardCompat
+m_nFogType
 m_nHand
 m_nIncrement
 m_nLightType
@@ -4519,6 +4649,7 @@ m_nSetMethod
 m_nSortMethod
 m_nTextureChannels
 m_nTextureType
+m_nTraceMissBehavior
 m_nType
 m_nVectorComponent
 m_nodeID
@@ -4529,6 +4660,7 @@ m_pBody
 m_pJointConstraintData
 m_pMovementManager
 m_pParent
+m_previewModels
 m_pszSnapshotName
 m_snapshotName
 m_subtractChildID
@@ -4539,6 +4671,8 @@ m_vEndTrailTintFactor
 m_vLiteralValue
 m_vecColorScale
 m_vecHitBoxScale
+m_vecMax
+m_vecMin
 m_vecTailColorScale
 m_vecTexturesInput
 macos
@@ -4554,11 +4688,13 @@ max_angle
 mempool.cpp
 memstats_%d.txt
 memstd.cpp
+menubar_item
 mesh
 meshes
 message
 min. %f
 min_angle
+minimum ratio : %u
 mkdir
 mkostemps64
 mmap64
@@ -4637,6 +4773,7 @@ no results
 nolog
 nopref-all
 norecord
+not enough space to write RepOffsets
 notconnected
 notify
 notify-send
@@ -4688,6 +4825,7 @@ pose_control
 pose_control_type
 posix_fadvise64
 posix_memalign
+pow
 prctl
 pre
 pread64
@@ -4723,6 +4861,7 @@ pthread_setspecific
 pthread_yield
 ptr( 0x%p )
 pwrite64
+q
 qangle
 qsort_r
 queue force advance
@@ -4739,13 +4878,17 @@ realloc
 recenter_on_parent_bone
 relative_angles
 relative_origin
+remainder
 rename
 rep
 replicated
 resource
+resource_name
 rmdir
+round
 s
 s_dev_urandom_fd >= 0
+sample set too large : reduced to %u MB ...
 scandir64
 sched_setaffinity
 schema
@@ -4763,17 +4906,23 @@ sigaction
 sigaddset
 sigemptyset
 sigprocmask
+sincos
 singleplayer
 singletons.cpp
+sinh
 size
+sorting %u files of total size %u MB ...
+soundevent
 source_filename
 sp
 spawn_motion_disabled
 speed
 sprintf
+sqrt
 srand
 ss_added
 stacktools.cpp
+statistics ...
 std::_Rb_tree<char const*, std::pair<char const* const, unsigned long long>, std::_Select1st<std::pair<char const* const, unsigned long long> >, std::less<char const*>, std::allocator<std::pair<char const* const, unsigned long long> > >::_M_erase(std::_Rb_tree_node<std::pair<char const* const, unsigned long long> >*)
 std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
 std::_Rb_tree_increment(std::_Rb_tree_node_base*)
@@ -4808,6 +4957,7 @@ strtok_r
 strtol
 strtoll
 strtoull
+subclass
 suppress
 surface_prop
 sysconf
@@ -4815,12 +4965,12 @@ sysinfo
 system
 t
 tableLog requires too much memory : unsupported
+tanh
 test string
 test_angles_relative
 testscript_debug
 testscriptmgr.cpp
 texturescale
-threadsafe
 threadtools.cpp
 tier0
 tier0_strtools.cpp
@@ -4828,7 +4978,6 @@ timestamped.log
 true
 tsc
 turn_rate
-typeinfo for BasicStatStructFieldDesc
 typeinfo for CKeyValuesDumpContextAsDevMsg
 typeinfo for CKeyValuesDumpContextToBufferString
 typeinfo for CKeyValuesDumpContextToLoggingChannel
@@ -4842,9 +4991,7 @@ typeinfo for CThreadSyncObject
 typeinfo for CUniformRandomStream
 typeinfo for CUtlCharConversion
 typeinfo for CVProfReporter
-typeinfo for CallStackStatStructDescFuncs
 typeinfo for IKeyValuesDumpContextAsText
-typeinfo name for BasicStatStructFieldDesc
 typeinfo name for CKeyValuesDumpContextAsDevMsg
 typeinfo name for CKeyValuesDumpContextToBufferString
 typeinfo name for CKeyValuesDumpContextToLoggingChannel
@@ -4858,7 +5005,6 @@ typeinfo name for CThreadSyncObject
 typeinfo name for CUniformRandomStream
 typeinfo name for CUtlCharConversion
 typeinfo name for CVProfReporter
-typeinfo name for CallStackStatStructDescFuncs
 typeinfo name for IKeyValuesDumpContextAsText
 u
 u64( %lld = 0x%llX )
@@ -4918,6 +5064,10 @@ vpcf29
 vpcf3
 vpcf30
 vpcf31
+vpcf32
+vpcf33
+vpcf34
+vpcf35
 vpcf4
 vpcf5
 vpcf6
@@ -4931,7 +5081,6 @@ vsnap
 vsscanf
 vswprintf
 vswscanf
-vtable for BasicStatStructFieldDesc
 vtable for CKeyValuesDumpContextAsDevMsg
 vtable for CKeyValuesDumpContextToBufferString
 vtable for CKeyValuesDumpContextToLoggingChannel
@@ -4954,10 +5103,12 @@ w
 wait
 waitpid
 warning
+warning : ZSTD_compressBegin_usingCDict failed
+warning : could not compress sample size %u
+warning : pathological dataset : literals are not compressible : samples are noisy or too regular
 wb
 wb+
 wcscoll
-wcslen
 wcsncat
 wcsncpy
 wcstoll
@@ -4967,10 +5118,12 @@ windows
 without
 workSpace buffer is not large enough
 wt
+x
 y
 yaw
 yaw_end
 yaw_start
+z
 zD
 {
 {%d %d %d %d}

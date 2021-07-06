@@ -53,12 +53,16 @@
 	"UI_UnknownTime"	"Onbekend"
 
 	"UI_Label_CopySelected"	"Geselecteerde tekst kopiëren"
+	"UI_Label_SelectAll"	"Alles selecteren"
 	"UI_Label_OpenLinkInBrowser" "URL in browser openen"
 	"UI_Label_CopyURLToClipboard" "URL naar klembord kopiëren"
 		
 	"UI_TextEntry_CutToClipboard"	"Knippen"
 	"UI_TextEntry_CopyToClipboard"	"Kopiëren"
 	"UI_TextEntry_PasteClipboard"	"Plakken"
+
+	"UI_Console_SaveToLog"				"In logboek opslaan"
+	"UI_Console_FileFilter_LogFiles"	"Logboekbestanden (*.log)"
 
 	"UI_Agreements"					"Overeenkomsten"
 	"UI_ViewAgreements"				"SSA EN PRIVACYBELEID WEERGEVEN"
@@ -142,7 +146,7 @@
 	"Debugger_PaintInfo"				"Verfinformatie weergeven"
 	"Debugger_Style"				"Stijl"
 	"Debugger_Computed"				"Berekend"
-	"Debugger_Measurements"			"Metingen:"
+	"Debugger_Measurements"			"Afmetingen:"
 	"Debugger_Misc"					"Diversen:"
 	"Debugger_Properties"			"Eigenschappen:"
 	"Debugger_StyleFileLink"		"{s:stylefile}"
@@ -156,4 +160,7 @@
 	"Debugger_DevInfo"				"Ontwikkelaarsinfo weergeven"
 	"Debugger_Search"				"Zoeken:"
 	"Debugger_Search_Index"			"Geeft resultaat {d:search_index} van {d:num_search_results} weer"
+	"Debugger_Smaller"				"▼ Kleiner"
+	"Debugger_Larger"				"▲ Groter"
+	"Debugger_ResetSize"			"Grootte herstellen"
 }

@@ -51,6 +51,11 @@ AnimateHeroBadgeXPIncreaseAction.prototype.start = function ()
 			row.SetDialogVariable( 'challenge_name', this.progress.challenge_description );
 			row.SwitchClass( 'challenge_stars', "StarsEarned_" + this.progress.challenge_stars );
 		}
+		else if( this.progress.xp_type == HERO_BADGE_XP_TYPE_RELIC_LEVELS )
+		{
+			row.BLoadLayoutSnippet( 'MatchRewardsHeroXPRow' );
+			row.SetDialogVariable( 'xp_type', $.Localize( '#DOTA_PlusPostGame_RelicLevels' ) );
+		}
 		else
 		{
 			$.Msg( "Unknown XP type: " + this.progress.xp_type );
@@ -198,6 +203,7 @@ AnimateMatchRewardsScreenAction.prototype.start = function ()
 
 	// Setup the sequence of actions to animate the screen
 	this.seq = new RunSequentialActions();
+	this.seq.actions.push( new RunFunctionAction( function () { $.DispatchEvent( 'DOTASetDashboardBackgroundVisible', false ); } ) );
 	this.seq.actions.push( new AddClassAction( panel, 'ShowScreen' ) );
 	this.seq.actions.push( new AddScreenLinkAction( panel, 'MatchRewardsProgress', '#DOTA_MatchRewards' ) );
 	this.seq.actions.push( new WaitAction( 0.5 ) );
@@ -575,6 +581,7 @@ AnimateMatchRewardsScreenAction.prototype.start = function ()
 	this.seq.actions.push( new SkippableAction( new WaitAction( 1.0 ) ) );
 	this.seq.actions.push( new SwitchClassAction( panel, 'current_screen', '' ) );
 	this.seq.actions.push( new SkippableAction( new WaitAction( 0.5 ) ) );
+	this.seq.actions.push( new RunFunctionAction( function () { $.DispatchEvent( 'DOTASetDashboardBackgroundVisible', true ); } ) );
 
 	this.seq.start();
 }
@@ -612,6 +619,10 @@ function TestAnimateMatchRewards()
 			{
 			    xp_type: HERO_BADGE_XP_TYPE_MATCH_WON,
 			    xp_amount: 50
+			},
+			{
+			    xp_type: HERO_BADGE_XP_TYPE_RELIC_LEVELS,
+			    xp_amount: 20
 			},
 			{
 			    xp_type: HERO_BADGE_XP_TYPE_CHALLENGE_COMPLETED,

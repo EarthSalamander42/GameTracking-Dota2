@@ -52,13 +52,17 @@
 	"UI_Second"	"saniye"
 	"UI_UnknownTime"	"Bilinmiyor"
 
-	"UI_Label_CopySelected"	"Metni kopyala"
-	"UI_Label_OpenLinkInBrowser" "Bağlantıyı tarayıcıda aç"
-	"UI_Label_CopyURLToClipboard" "Adresi panoya kopyala"
+	"UI_Label_CopySelected"	"Seçili Metni Kopyala"
+	"UI_Label_SelectAll"	"Tümünü Seç"
+	"UI_Label_OpenLinkInBrowser" "URL'i Tarayıcıda Aç"
+	"UI_Label_CopyURLToClipboard" "URL'i Panoya Kopyala"
 		
 	"UI_TextEntry_CutToClipboard"	"Kes"
 	"UI_TextEntry_CopyToClipboard"	"Kopyala"
 	"UI_TextEntry_PasteClipboard"	"Yapıştır"
+
+	"UI_Console_SaveToLog"				"Kayıt Dosyasına Kaydet"
+	"UI_Console_FileFilter_LogFiles"	"Kayıt Dosyaları (*.log)"
 
 	"UI_Agreements"					"Kurallar"
 	"UI_ViewAgreements"				"SAS VE GİZLİLİK POLİTİKASINI GÖRÜNTÜLE"
@@ -137,6 +141,8 @@
 	"Panorama_Lang_Footer_Ukrainian"			"UKRAYNACA"
 	
 	"Panorama_MoviePlaybackError"		"Çalma sırasında bir hata meydana geldi"
+	"Panorama_MovieToggleCaptions"		"CC Aç/Kapat"
+
 	"Debugger_PaintInfo"				"Boya Bilgisini Göster"
 	"Debugger_Style"				"Tarz"
 	"Debugger_Computed"				"Hesaplanmış"
@@ -154,4 +160,7 @@
 	"Debugger_DevInfo"				"Geliştirici Bilgisi"
 	"Debugger_Search"				"Ara:"
 	"Debugger_Search_Index"			"{d:num_search_results} sonuçtan {d:search_index} eşleşme gösteriliyor"
+	"Debugger_Smaller"				"▼ Daha Küçük"
+	"Debugger_Larger"				"▲ Daha Büyük"
+	"Debugger_ResetSize"			"Boyutu Sıfırla"
 }

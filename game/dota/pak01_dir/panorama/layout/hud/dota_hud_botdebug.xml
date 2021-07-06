@@ -45,7 +45,7 @@
 					</Panel>
 				</Panel>
 				<Panel id="ActionContainer">
-					<Label id="ActiveActionLabel" text="{s:action}"/>
+					<Label id="ActiveActionLabel" text="{s:action_type} - {s:action_target}"/>
 				</Panel>
 			</Panel>
 		</snippet>
@@ -90,20 +90,16 @@
 
 		<Panel id="Runes">
 			<Panel class="LeftRightFlow HorizontalCenter">
-				<Label text="#DOTA_Bot_RunePowerup1" html="true"/>
-				<Label text="#DOTA_Bot_RunePowerup2" html="true"/>
-			</Panel>
-			<Panel class="LeftRightFlow HorizontalCenter">
-				<Label text="#DOTA_Bot_RuneBounty1" html="true"/>
-				<Label text="#DOTA_Bot_RuneBounty2" html="true"/>
-				<Label text="#DOTA_Bot_RuneBounty3" html="true"/>
-				<Label text="#DOTA_Bot_RuneBounty4" html="true"/>
+				<Label text="#DOTA_Bot_RuneTop" html="true"/>
+				<Label text="#DOTA_Bot_RuneBot" html="true"/>
+				<Label text="#DOTA_Bot_RuneRadiantTop" html="true"/>
+				<Label text="#DOTA_Bot_RuneDireBot" html="true"/>
 			</Panel>
 		</Panel>
 
 		<Panel id="BotContainer">
 			<!-- Dynamically filled with BotSnippets -->
-		</Panel>"
+		</Panel>
 
 
 	</DOTAHudBotDebug>

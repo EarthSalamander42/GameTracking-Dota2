@@ -16,9 +16,9 @@ $ORIGIN
 -sse2
 -sse3
 -sse4
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/ordered_constructor.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/scenesystem/vertexformat.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/tier0/utlleanvector.h
+../public/ordered_constructor.h
+../public/scenesystem/vertexformat.h
+../public/tier0/utlleanvector.h
 0=Off, 1=All AlphaTested, 2=only AlphaTested with PrepassAlphaTest enabled
 0=Off, 1=DebugWireframe, 2=DebugSolidBlink
 1 = bloom output, 2 = quarter res downsample
@@ -73,7 +73,7 @@ $ORIGIN
 3DSkybox Depth Prepass
 3DSkybox Translucent Forward
 3DSkyboxForward
-3DSkyboxLightBinnerVr
+3DSkyboxLightBinnerSetup
 41CVrClearQuadOverdrawVisualizationTextures
 42CTemplateSceneViewFactory_RenderVRMonitors
 4C
@@ -101,6 +101,7 @@ After3DGeo
 AfterTranslucent3D
 AlbedoOrReflectivity
 Allow bloom on scene monitors
+AlphaTest
 Ambient Occlusion Proxies
 Ambient Occlusion Proxies Downsample Depth
 Ambient Occlusion Proxies: Texture Barrier
@@ -108,6 +109,7 @@ AmbientOcclusionDepth
 AnimGraphEditorUtils001
 AnimationSystemUtils_001
 AnimationSystem_001
+AoProxy
 AoProxyDebug
 ApplyFog
 Assert_ConditionFailed(_AssertCompileTimeConstantStruct_t const&, char const*, ...)
@@ -209,7 +211,6 @@ D_ENABLE_VOLUMETRIC_FOG is set, but cannot find CVolumetricFog via "VolumetricFo
 DebugDrawObjects
 DebugTextureInfo001
 DebugVisualizerMgr
-DebugVrStencilLeftEye
 DecalNormals_0.vtex
 DecalVisualisation
 Decals (Static and Dynamic)
@@ -218,6 +219,7 @@ DeferredMod2x
 DeferredShadingAndLighting
 DeferredShadingAndTransmissiveLighting
 DeferredStaticDecals
+DemoUpconverterVersion001
 Depth Prepass AlphaTested
 Depth Prepass Large
 Depth Prepass Small
@@ -299,6 +301,7 @@ HDRColorBufferCopy
 HDRPostProcess
 HammerMapLoader001
 HelpSystem_001
+Hologram
 Hologram Depth
 Hologram Fast Fresnel
 Hologram Wireframe
@@ -327,9 +330,6 @@ KeyValues::GetName() const
 KeyValues::GetNextKey() const
 KeyValues::GetNextValue() const
 KeyValues::GetString(char const*, char const*, char*, unsigned long)
-Kick Dependent Views
-Kick Dependent Views View
-Kicks off creation of dependent views early in the frame
 LE_BGRA8888
 LE_BGRX8888
 LINEAR_ABGR8888
@@ -381,13 +381,14 @@ No-Wipe Opaque Forward
 NoDecalGBuffer
 Not Depth Pre-passed
 OcclusionQueryIssueLayer
+Opaque Fade
 OpaqueForward
 OuterSky
 Overtop Menu Procedural
 OvertopMenu
 OvertopMenu Translucent Forward
 OvertopMenuForward
-OvertopMenuLightBinnerVr
+OvertopMenuLightBinnerSetup
 OvertopMenuRender
 OvertopMenuRendererTemplate
 P8
@@ -413,6 +414,7 @@ Plat_GetThreadIndex
 Plat_IsInDebugSession
 Plat_SetDenormalsAreZero
 Plat_ShouldCollectMiniDumpsForFatalErrors
+Post
 PostDecalForwardDynamic
 PostDecalForwardNoDecals
 PostDecalPrepassDynamic
@@ -514,6 +516,7 @@ ScreenSpaceReflectionsRenderer
 ScreenSpaceTranslucent
 SerializedEntitiesVersion001
 ServerUploadGameStats001
+Shadow
 ShadowMap Texture Barrier
 ShadowTemplate
 ShadowVisLayer
@@ -645,6 +648,7 @@ ViewModelGBuffer
 ViewModelTranslucent
 VisBuilder_001
 VisualizeQuads
+VolumeFog
 VolumeFogComputeSignalGraphics
 VolumeFogComputeSignaledLeft
 VolumeFogComputeSignaledRight
@@ -654,7 +658,6 @@ VolumeFogGraphicsSignaledLeft
 VolumeFogGraphicsSignaledRight
 VolumetricFog
 VolumetricFogManifest
-VrPerfHUD
 VrQuadLayout
 VrTeleportPathRendering
 VrWriteStencilMaskLeftEye
@@ -846,6 +849,7 @@ strlen
 text
 textures/dev/albedo_chart.vtex
 textures/dev/blue_noise_256.vtex
+textures/dev/brdf_lut.vtex
 textures/dev/ggx_integrate_brdf_lut.vtex
 textures/dev/ggx_integrate_brdf_lut_schlick.vtex
 textures/dev/reflectivity_scale.vtex
@@ -870,7 +874,6 @@ vr_enable_translucent_screen_space
 vr_enable_volume_fog
 vr_expand_cull_frustum
 vr_fast_hologram
-vr_kick_dependent_views_early
 vr_monitor_bloom
 vr_postprocess_enable
 vr_readonly_depth_stencil_enable

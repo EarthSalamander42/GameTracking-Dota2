@@ -1380,7 +1380,6 @@
 		[
 			"sounds/ui/null.vsnd",
 		]
-		vsnd_duration = 0.000000
 	}
 	versus_screen.top = 
 	{
@@ -1546,6 +1545,29 @@
 			"sounds/ui/ui_message_popup_fast_01.vsnd",
 		]
 		vsnd_duration = 1.807211
+	}
+	WeeklyQuest.StarGranted = 
+	{
+		type = "dota_src1_2d"
+		volume = 0.600000
+		pitch = 0.900000
+		limiter_on = 1.000000
+		vsnd_files = 
+		[
+			"sounds/ui/tutorial_ui_ding_01.vsnd",
+		]
+		vsnd_duration = 2.069138
+	}
+	WeeklyQuest.ClaimReward = 
+	{
+		type = "dota_src1_2d"
+		pitch = 1.000000
+		volume = 0.800000
+		vsnd_files = 
+		[
+			"sounds/ui/menu/trophy_new.vsnd",
+		]
+		vsnd_duration = 3.550839
 	}
 	Shards.Count = 
 	{
@@ -1884,7 +1906,6 @@
 		[
 			"/ui/stingers/enc/outlanders_takeover.vsnd",
 		]
-		vsnd_duration = 0.000000
 	}
 	void_spirit_takeover_vo = 
 	{
@@ -2466,6 +2487,151 @@
 		[
 			"sounds/vo/hoodwink/hoodwink_intro_16_03.vsnd",
 		]
-		vsnd_duration = 2.035979
+		vsnd_duration = 1.996042
+	}
+	dawnbreaker_debut_vo = 
+	{
+		type = "dota_src1_2d"
+		volume = 1.000000
+		mixgroup = "Stingers"
+		delay = 1.000000
+		limiter_match_entity = 0.000000
+		vsnd_files = 
+		[
+			"sounds/vo/dawnbreaker/valora_intro_07_03.vsnd",
+		]
+		vsnd_duration = 3.475941
+	}
+	dawnbreaker_debut_vo_02 = 
+	{
+		type = "dota_src1_2d"
+		volume = 1.000000
+		mixgroup = "Debut_VO"
+		limiter_match_entity = 0.000000
+		vsnd_files = 
+		[
+			"sounds/vo/dawnbreaker/valora_intro_01_02.vsnd",
+		]
+		vsnd_duration = 2.919750
+	}
+	dawnbreaker_debut_stinger = 
+	{
+		type = "dota_src1_2d"
+		volume = 0.700000
+		mixgroup = "Stingers"
+		delay = 0.000000
+		volume_fade_out = 1.000000
+		vsnd_files = 
+		[
+			"sounds/ui/stingers/enc/dawnbreaker_debut_stinger.vsnd",
+		]
+		vsnd_duration = 19.974195
+	}
+	dawnbreaker_debut_sfx = 
+	{
+		type = "dota_src1_2d"
+		volume = 1.000000
+		mixgroup = "Stingers"
+		delay = 0.600000
+		volume_fade_out = 1.000000
+		vsnd_files = 
+		[
+			"sounds/ui/stingers/enc/dawnbreaker_debut_sfx.vsnd",
+		]
+		vsnd_duration = 16.464422
+	}
+	spectre_arc_debut_vo = 
+	{
+		type = "dota_src1_2d"
+		volume = 1.000000
+		mixgroup = "Stingers"
+		vsnd_files = 
+		[
+			"sounds/vo/spectre/fs_spectre_wwa_debut_01.vsnd",
+		]
+		vsnd_duration = 5.494150
+	}
+	spectre_arc_debut_sfx1 = 
+	{
+		type = "dota_src1_2d"
+		volume = 0.500000
+		mixgroup = "Stingers"
+		vsnd_files = 
+		[
+			"sounds/ui/stingers/enc/spectre_arc_sfx01.vsnd",
+		]
+		vsnd_duration = 1.580204
+	}
+	spectre_arc_debut_sfx2 = 
+	{
+		type = "dota_src1_2d"
+		volume = 1.000000
+		mixgroup = "Stingers"
+		delay = "0.0"
+		vsnd_files = 
+		[
+			"sounds/ui/stingers/enc/spectre_arc_sfx02.vsnd",
+		]
+		vsnd_duration = 4.015578
+	}
+	spectre_arc_debut_stinger = 
+	{
+		type = "dota_src1_2d"
+		volume = 1.000000
+		mixgroup = "Stingers"
+		volume_fade_out = 1.500000
+		vsnd_files = 
+		[
+			"sounds/ui/stingers/enc/spectre_arc_debut.vsnd",
+		]
+		vsnd_duration = 29.461882
+	}
+	dragon_knight_persona_debut_vo = 
+	{
+		type = "dota_src1_2d"
+		volume = 0.800000
+		mixgroup = "Debut_VO"
+		limiter_match_entity = 0.000000
+		vsnd_files = 
+		[
+			"sounds/vo/dragon_knight/dk_slyrak_debut_08.vsnd",
+		]
+		vsnd_duration = 2.201791
+	}
+	dragon_knight_persona_debut_vo_02 = 
+	{
+		type = "dota_src1_2d"
+		volume = 0.900000
+		mixgroup = "Stingers"
+		limiter_match_entity = 0.000000
+		volume_fade_out = 1.000000
+		vsnd_files = 
+		[
+			"sounds/vo/dragon_knight/dk_davion_attack_03.vsnd",
+		]
+		vsnd_duration = 1.828821
+	}
+	dk_persona_debut_stinger = 
+	{
+		type = "dota_src1_2d"
+		volume = 0.900000
+		mixgroup = "Stingers"
+		volume_fade_out = 1.500000
+		vsnd_files = 
+		[
+			"sounds/ui/stingers/enc/davion_debut.vsnd",
+		]
+		vsnd_duration = 29.968935
+	}
+	dk_persona_debut_sfx1 = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.300000
+		mixgroup = "Stingers"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/dragon_knight/debut_sfx.vsnd",
+		]
+		vsnd_duration = 1.658167
 	}
 }

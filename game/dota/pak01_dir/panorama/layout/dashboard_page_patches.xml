@@ -20,7 +20,7 @@
 		<snippet name="PatchSubSection">
 			<Panel class="PatchSubSection">
 				<Panel class="PatchSubSectionNameContainer">
-					<Label class="PatchSubSectionName" text="{s:patch_sub_section_name}" />
+          <!--Label class="PatchSubSectionName" text="{s:patch_sub_section_name}" /-->
 				</Panel>
 				<Panel id="PatchSubSectionContents">
 					<!-- dynamic -->
@@ -104,7 +104,7 @@
 	<DOTAPatchesPage class="DashboardPage">
 
 		<Image id="BackgroundImage" scaling="stretch-to-fit-y-preserve-aspect" />
-		
+
 		<Panel class="PatchContainer">
 			<Panel id="Header">
 				<Panel class="HeaderControls" >

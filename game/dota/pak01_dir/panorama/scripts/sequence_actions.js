@@ -368,7 +368,8 @@ function AddClassAction( panel, panelClass )
 AddClassAction.prototype = new BaseAction();
 AddClassAction.prototype.update = function ()
 {
-	this.panel.AddClass( this.panelClass );
+	if ( this != null && this.panel != null )
+		this.panel.AddClass( this.panelClass );
 	return false;
 }
 
@@ -399,6 +400,21 @@ SwitchClassAction.prototype.update = function ()
 	return false;
 }
 
+
+// Action to trigger a class on a panel
+function TriggerClassAction( panel, panelClass )
+{
+	this.panel = panel;
+	this.panelClass = panelClass;
+}
+TriggerClassAction.prototype = new BaseAction();
+TriggerClassAction.prototype.update = function ()
+{
+	this.panel.TriggerClass( this.panelClass );
+	return false;
+}
+
+
 // Action to wait for a class to appear on a panel
 function WaitForClassAction( panel, panelClass )
 {
@@ -408,7 +424,7 @@ function WaitForClassAction( panel, panelClass )
 WaitForClassAction.prototype = new BaseAction();
 WaitForClassAction.prototype.update = function ()
 {
-	return !this.panel.BHasClass( this.panelClass );
+	return !this || !this.panel || !this.panel.BHasClass( this.panelClass );
 }
 
 
@@ -456,6 +472,21 @@ AnimateDialogVariableIntAction.prototype.update = function ()
 AnimateDialogVariableIntAction.prototype.finish = function ()
 {
 	this.panel.SetDialogVariableInt( this.dialogVariable, this.endValue );
+}
+
+
+// Action to set a string dialog variable
+function SetDialogVariableStringAction( panel, dialogVariable, value )
+{
+	this.panel = panel;
+	this.dialogVariable = dialogVariable;
+	this.value = value;
+}
+SetDialogVariableStringAction.prototype = new BaseAction();
+SetDialogVariableStringAction.prototype.update = function ()
+{
+	this.panel.SetDialogVariable( this.dialogVariable, this.value );
+	return false;
 }
 
 

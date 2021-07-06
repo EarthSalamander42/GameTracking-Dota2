@@ -18,11 +18,13 @@
 !expected_len || s->s3->previous_client_finished_len
 !expected_len || s->s3->previous_server_finished_len
 !g*
+!is_large()
 !m_bNeedsSort
 "
 " because it is missing required fields:
 " conflicts with field "
 " conflicts with the existing symbol "
+" contains null character.
 " for field "
 " for option "
 " has no field named "
@@ -54,25 +56,21 @@
 " seems to be defined in "
 " stored in google.protobuf.Any has missing required fields
 " stored in google.protobuf.Any.
-" unknown.
+" unknown. Ensure that your proto
 " uses the same enum value as "
 " was already set.
 " was listed twice.
 " was not found or had errors.
 " which is a proto3 message type.
+" which is not defined or is not an extension of "
 " which is.
 "$0" does not declare $1 as an extension number.
 "$0",
 "%s"
 "%s" = "%s"
 "%s":
-"%s":%.3f
 "%s":%d
-"%s":%f
-"%s":%lld
-"%s":%llu
 "%s":%s
-"%s":%u
 "%s":[
 "'
 "(
@@ -85,7 +83,6 @@
 ", found "
 ", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., ".
 ", which is not imported by "
-".
 ".  To use it here, please add the necessary import.
 ". If this is intended, set 'option allow_alias = true;' to the enum definition.
 ". This appears to be a value from a sibling type.
@@ -106,8 +103,16 @@
 "MapEnd"
 "MapSize"
 "MutableRawRepeatedField"
+"channels" attribute not found in the header.
+"compression" attribute not found in the header.
+"dataWindow" attribute not found in the header or invalid.
+"displayWindow" attribute not found in the header.
 "e" must be followed by exponent.
 "g*
+"lineOrder" attribute not found in the header.
+"pixelAspectRatio" attribute not found in the header.
+"screenWindowCenter" attribute not found in the header.
+"screenWindowWidth" attribute not found in the header.
 #
 # of channels is zero.
 #%02X%02X%02X%02X
@@ -118,6 +123,7 @@
 #GameUI_Language_Czech
 #GameUI_Language_Danish
 #GameUI_Language_Dutch
+#GameUI_Language_English
 #GameUI_Language_Finnish
 #GameUI_Language_French
 #GameUI_Language_German
@@ -182,6 +188,7 @@ $0  extensions $1 to $2;
 $0  reserved
 $0  }
 $0 to $1,
+$0 to max,
 $0$1 = $2
 $0$1$2 $3 = $4
 $0,
@@ -192,7 +199,7 @@ $0oneof $1 {
 $0option $1;
 $0rpc $1($4.$2) returns ($5.$3)
 $0}
-$@
+$@stack.c
 $ORIGIN
 $g*
 $tI
@@ -278,19 +285,15 @@ $tI
 %8sIssuer Unique ID:
 %8sSubject Unique ID:
 %8sVersion: %lu (0x%lx)
-%c
-%d
 %d %s
 %d %s %d %02d:%02d:%02d +0000
 %d JS File(s)
 %d Layout(s)
 %d Style(s)
-%d.%d.%d
 %d.%d.%d.%d/%d.%d.%d.%d
 %g
 %g*
 %i %i %i %i
-%ld
 %ld bytes leaked in %d chunks
 %ld%c
 %lld
@@ -301,7 +304,6 @@ $tI
 %llu content composition layers used (%.2f pf), %llu reused from cache, %llu internal composition layers used (%llu for blurs)
 %llu layers from free list, %llu allocated
 %llu render callbacks (%.1f pf)
-%lu
 %lu:%s:%s:%d:%s
 %p
 %s
@@ -355,29 +357,30 @@ $tI
 %stemp%d.tga
 %sweb%s%s
 %sweb/shared/public/%s
-%u
 &
+&amp;
+&apos;
 &g*
+&lt;
 &lt;Needs a description&gt;
 &p^?CSI
+&quot;
 '
-'%s'
 '()+,-./:=?
 ')
 ','
 'g*
-'out_location' must not be NULL
 (
 ( def. "%s" )
 (%ld unused bits)
 ((long)msg_hdr->msg_len) > 0
-(.
 (>q
 (INVALID PSS PARAMETERS)
 (NONE)
 (Negative)
 (_Assert)
 (cannot determine missing fields for lite message)
+(derived from %s)
 (down)
 (g*
 (merge
@@ -388,7 +391,6 @@ $tI
 (up)
 )
 )", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
-), this value label conflicts with
 ).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 )g*
 *
@@ -404,7 +406,7 @@ $tI
 **** Panel %s has fill-parent-flow for width, but isn't in a flowing right layout
 **** Unable to localize '#%s' on panel '%s'
 **** Unable to localize '#%s' on panel descendant of '%s'
-***** Parsing error on %s(%u):
+***** Parsing %s on %s(%u):  %s
 *0"Z
 *N6google8protobuf12_GLOBAL__N_123AggregateErrorCollectorE
 *N6google8protobuf12_GLOBAL__N_123GeneratedMessageFactoryE
@@ -426,6 +428,7 @@ $tI
 , %sdeg )
 , '%s'
 , Type=
+, but was
 , channels =
 , from:
 , height =
@@ -476,7 +479,7 @@ $tI
 -use_panel_id_in_rt_name
 .
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
-. This will make the proto fail to compile for some languages, such as C#.
+. Difference of
 .#:
 .%lu
 .%s
@@ -484,23 +487,31 @@ $tI
 ....................
 ...<truncated>...
 ../common/protobuf_helpers.cpp
-./google/protobuf/arena.h
+../public/ordered_constructor.h
+../public/panorama/layout/fillbrush.h
+../public/tier0/memstack.h
+../public/tier0/tslist.h
+../public/tier0/utlleanvector.h
+../public/tier0/utllinkedlist.h
+../public/tier0/utlrbtree.h
+../public/tier0/utlsortvector.h
+../public/tier0/utlsymboltable.h
+./google/protobuf/arena_impl.h
 ./google/protobuf/arenastring.h
 ./google/protobuf/descriptor.pb.h
-./google/protobuf/dynamic_message.h
+./google/protobuf/extension_set.h
+./google/protobuf/extension_set_inl.h
 ./google/protobuf/generated_message_reflection.h
-./google/protobuf/io/coded_stream_inl.h
-./google/protobuf/map_field.h
-./google/protobuf/map_field_inl.h
+./google/protobuf/io/coded_stream.h
+./google/protobuf/map.h
 ./google/protobuf/message_lite.h
+./google/protobuf/metadata_lite.h
+./google/protobuf/parse_context.h
+./google/protobuf/reflection.h
 ./google/protobuf/reflection_internal.h
 ./google/protobuf/repeated_field.h
-./google/protobuf/stubs/casts.h
-./google/protobuf/stubs/logging.h
-./google/protobuf/stubs/scoped_ptr.h
 ./google/protobuf/stubs/stringpiece.h
 ./google/protobuf/unknown_field_set.h
-./google/protobuf/wire_format_lite_inl.h
 .7
 .:
 .PLACEHOLDER_VALUE
@@ -536,15 +547,6 @@ $tI
 /etc/egd-pool
 /etc/entropy
 /g*
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/ordered_constructor.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/panorama/layout/fillbrush.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/tier0/memstack.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/tier0/tslist.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/tier0/utlleanvector.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/tier0/utllinkedlist.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/tier0/utlrbtree.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/tier0/utlsortvector.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/tier0/utlsymboltable.h
 /materials/
 /scripts
 /store/
@@ -569,11 +571,9 @@ $tI
 0.5
 0.75
 0.8.3
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789
 0123456789ABCDEF
 0123456789abcdef
-02:55:31
 0g*
 1
 1.0
@@ -588,9 +588,11 @@ $tI
 10IAppSystem
 10IIMEUIView
 11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
+11IRefCounted
 120.0f
 12CRefCounted1I12IVideoPlayer20CRefCountServiceBaseILb1E6CRefMTEE
 12CRefCounted1IN8panorama10IUITextureE20CRefCountServiceBaseILb1E6CRefMTEE
+12CRefCounted1IN8panorama15IUIStyleFileSetE20CRefCountServiceBaseILb1E6CRefMTEE
 12CRefCounted1IN8panorama24IUIDoubleBufferedTextureE20CRefCountServiceBaseILb1E6CRefMTEE
 12CRefCounted1IN8panorama26IUIPanelImageSourceTextureE20CRefCountServiceBaseILb1E6CRefMTEE
 12CRefCounted1IN8panorama30IUIDoubleBufferedYUV420TextureE20CRefCountServiceBaseILb1E6CRefMTEE
@@ -610,9 +612,11 @@ $tI
 15CTier2AppSystemI17IPanoramaUIEngineLx0EE
 15CTier3AppSystemI17IPanoramaUIEngineLx0EE
 16CDefaultAccessor
+17CContentSourceMap
 17CPanoramaUIEngine
 17EVideoPlayerEvent
 17IPanoramaUIEngine
+18:16:56
 18CPlaceholderConVar
 18CValidatableThread
 19CDragStartCallbacks
@@ -667,14 +671,13 @@ $tI
 7IConVar
 7g*
 8
+8J
 8b  16-May-2010
 8g*
 9
 9.1.15
 9g*
 :
-: "
-: Protocol message serialized to a size different from what was originally expected.  Perhaps it was modified by another thread during serialization?
 : Tried to copy from a message with a different type. to:
 : Tried to merge from a message with a different type.  to:
 : [
@@ -682,12 +685,6 @@ $tI
 :%X
 :(
 :1X:
-::google::protobuf::FieldDescriptorProto_Label_IsValid(value)
-::google::protobuf::FieldDescriptorProto_Type_IsValid(value)
-::google::protobuf::FieldOptions_CType_IsValid(value)
-::google::protobuf::FieldOptions_JSType_IsValid(value)
-::google::protobuf::FileOptions_OptimizeMode_IsValid(value)
-::google::protobuf::MethodOptions_IdempotencyLevel_IsValid(value)
 :BAD OBJECT
 :EXTERNAL TYPE %s
 :X1:
@@ -702,6 +699,7 @@ $tI
 <!--
 <![CDATA[
 </Panel></root>
+</pre>
 </script>
 <<ERROR>>
 <ABSENT>
@@ -713,6 +711,8 @@ $tI
 <ASN1 29>
 <INVALID>
 <NULL>
+<b>%s</b>
+<b>%s</b> (from %s)<br /><br />
 <g*
 <invalid ID 0x%llx>
 <no deferred ref found>
@@ -724,7 +724,6 @@ $tI
 <unknown>
 =
 = { <proto text format> }". To set fields within it, use syntax like "
-=.=
 ===== Mem stats of all css properties =====
 ==========================================
 => %s
@@ -747,6 +746,7 @@ $tI
 @@
 @@dual ec drbg disabled
 @ABCDEFGHIJKLMNOPQRSTUVWXYZ[\
+@B
 @L
 @define missing colon
 @define missing semicolon
@@ -768,6 +768,7 @@ $tI
 @panorama_debug_fast_box_shadow
 @panorama_debug_overlay_opacity
 @panorama_debug_ready_for_display
+@panorama_defer_backbuffer_commands
 @panorama_disable_blur
 @panorama_disable_box_shadow
 @panorama_disable_descendant_filtering
@@ -791,6 +792,7 @@ $tI
 @panorama_fbo_alloc_batch
 @panorama_force_text_shadow_strength
 @panorama_frame_limit_microseconds
+@panorama_generate_layout_xsd
 @panorama_highlight_bad_opacity_masks
 @panorama_highlight_composition_layers
 @panorama_highlight_slow_operations
@@ -809,6 +811,7 @@ $tI
 @panorama_max_text_shadow_strength
 @panorama_might_scroll_no_comp_layer
 @panorama_min_comp_layer_cache_cost
+@panorama_new_box_shadow
 @panorama_print_cache_status
 @panorama_print_svg_stats
 @panorama_reload_animations
@@ -821,6 +824,7 @@ $tI
 @panorama_steampad_button_repeat_interval_start
 @panorama_style_flag_force_invalidate
 @panorama_suspend_paint
+@panorama_temp_comp_layer_min_dimension
 @panorama_track_render_commands
 @panorama_transform_parents_no_layer_for_perspective
 @panorama_transforms_no_comp_layer
@@ -842,7 +846,7 @@ A8
 A:
 AA Compromise
 AACompromise
-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 ABORTED
 ACCESS_DESCRIPTION
 ACPT_STATE
@@ -1025,9 +1029,9 @@ Add a CSS class to all children of this panel.
 Add a class for a specified duration, with optional pre-delay; clears existing timers when called with same class.
 AddAllocatedMessage
 AddBool
+AddCleared() can only be used on a RepeatedPtrField not on an arena.
 AddDouble
 AddEnum
-AddEnumValue accepts only valid integer values: value
 AddFloat
 AddInt32
 AddInt64
@@ -1065,6 +1069,7 @@ Application must supply a known background gamma
 Application transferred too few scanlines
 Application transferred too many scanlines
 Applies an image as an opacity mask that stretches to the panel bounds and fades out it's content based on the alpha channel. The second float value is an optional opacity value for the mask itself, the image won't interpolate/cross-fade, but you can animate the opacity to fade the mask in/out. The -scroll-up, -scroll-down, and -scroll-up-down varients override the mask and apply only when the various vertical scroll scenarios affect the panel based on the overflow property.<br><br><b>Examples:</b><pre>opacity-mask: url( "file://{images}/upper_row_mask.tga" );opacity-mask: url( "file://{images}/upper_row_mask.tga" ) 0.5;opacity-mask-scroll-up: url( "file://{images}/upper_row_mask_up.tga" ) 0.5;opacity-mask-scroll-down: url( "file://{images}/upper_row_mask_down.tga" ) 0.5;opacity-mask-scroll-up-down: url( "file://{images}/upper_row_mask_up_down.tga" ) 0.5;</pre>
+ApplyMippedGaussianBlur
 Apr
 Argument %i to %s for event %s could not be converted to a string for parsing
 Arial
@@ -1087,7 +1092,6 @@ AsyncWebRequest requires steam to be running
 At marker 0x%02x, recovery action %d
 Attempt to set buffer size beyond max ignored
 Aug
-AuthenticAMD
 Authority Information Access
 AutoReloadFailedLayoutReloads
 Average %s commands per frame: %u, %u bytes
@@ -1209,7 +1213,6 @@ BN_rshift
 BN_to_ASN1_ENUMERATED
 BN_to_ASN1_INTEGER
 BN_usub
-BOOL
 BOOL ABSENT
 BResizeImageRGBA
 BUF lib
@@ -1256,14 +1259,6 @@ Buffer passed to JPEG library is too small
 Buffer too small
 Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of
 C
-C& google::protobuf::internal::scoped_array<C>::operator[](std::ptrdiff_t) const [with C = unsigned int, std::ptrdiff_t = long int]
-C& google::protobuf::internal::scoped_ptr<C>::operator*() const [with C = google::protobuf::Message]
-C& google::protobuf::internal::scoped_ptr<C>::operator*() const [with C = google::protobuf::UnknownFieldSet]
-C* google::protobuf::internal::scoped_ptr<C>::operator->() const [with C = const google::protobuf::TextFormat::FieldValuePrinter]
-C* google::protobuf::internal::scoped_ptr<C>::operator->() const [with C = google::protobuf::DescriptorPool::Tables]
-C* google::protobuf::internal::scoped_ptr<C>::operator->() const [with C = google::protobuf::DynamicMessageFactory::PrototypeMap]
-C* google::protobuf::internal::scoped_ptr<C>::operator->() const [with C = google::protobuf::Message]
-C* google::protobuf::internal::scoped_ptr<C>::operator->() const [with C = google::protobuf::UnknownFieldSet]
 CA Compromise
 CA Issuers
 CA Repository
@@ -1297,6 +1292,7 @@ CAST5-CBC
 CAST5-CFB
 CAST5-ECB
 CAST5-OFB
+CAnimationParticleSystem::RunSystem
 CAnimationParticleSystem::SerializeParticles
 CBufferString::AppendConcat(int, char const* const*, int const*, bool)
 CBufferString::AppendFormat(char const*, ...)
@@ -1317,6 +1313,7 @@ CBufferString::MoveFrom(CBufferString&)
 CBufferString::RemoveAt(int, int)
 CBufferString::RemoveDotSlashes(char)
 CBufferString::RemoveFirstDir(CBufferString*)
+CBufferString::Replace(char const*, char const*, bool)
 CBufferString::SetExtension(char const*)
 CBufferString::SetLength(int, bool, int*)
 CBufferString::SetPtr(char*, int, int, bool, bool)
@@ -1340,67 +1337,47 @@ CERTIFICATEPOLICIES
 CFiber::ReachedZeroReferences()
 CFormatNumber_DontUseDirectly_UseFormatNumberMacro::FormatNumberInternal64(long long)
 CGamepadController::RunFrame
+CHECK failed: !InRealOneof(field):
+CHECK failed: !IsDefault(default_value):
 CHECK failed: !TableEntryIsTree(b) && !TableEntryIsTree(b ^ 1):
-CHECK failed: !aggregate_value_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()):
 CHECK failed: !checkpoints_.empty():
-CHECK failed: !coded_out.HadError():
-CHECK failed: !csharp_namespace_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()):
-CHECK failed: !default_value_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()):
 CHECK failed: !descriptor_:
-CHECK failed: !extendee_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()):
+CHECK failed: !ext->is_repeated:
 CHECK failed: !extension->is_repeated:
 CHECK failed: !failed_:
-CHECK failed: !field->containing_oneof():
 CHECK failed: !field->options().weak():
+CHECK failed: !fields_.empty():
 CHECK failed: !file->finished_building_:
 CHECK failed: !file_:
-CHECK failed: !go_package_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()):
-CHECK failed: !identifier_value_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()):
-CHECK failed: !input_type_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()):
+CHECK failed: !had_error_:
 CHECK failed: !is_closed_:
-CHECK failed: !iter->second.is_repeated:
-CHECK failed: !java_outer_classname_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()):
-CHECK failed: !java_package_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()):
-CHECK failed: !json_name_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()):
-CHECK failed: !leading_comments_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()):
-CHECK failed: !name_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()):
 CHECK failed: !name_:
-CHECK failed: !name_part_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()):
-CHECK failed: !objc_class_prefix_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()):
 CHECK failed: !once_:
+CHECK failed: !oneof_descriptor->is_synthetic():
 CHECK failed: !out.HadError():
-CHECK failed: !output_type_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()):
-CHECK failed: !package_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()):
-CHECK failed: !php_class_prefix_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()):
-CHECK failed: !php_namespace_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()):
-CHECK failed: !source_file_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()):
-CHECK failed: !string_value_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()):
-CHECK failed: !swift_prefix_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()):
-CHECK failed: !syntax_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()):
-CHECK failed: !trailing_comments_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()):
+CHECK failed: !schema_.InRealOneof(field) || HasOneofField(message, field):
+CHECK failed: !tagged_ptr_.IsTagged():
 CHECK failed: !tree->empty():
-CHECK failed: !type_name_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()):
+CHECK failed: !value || options_ != nullptr:
+CHECK failed: !value || source_code_info_ != nullptr:
 CHECK failed: (&from) != (this):
 CHECK failed: (&from) != (to):
 CHECK failed: (&other) != (this):
 CHECK failed: ((*extension).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_OPTIONAL):
 CHECK failed: ((*extension).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_REPEATED):
-CHECK failed: ((*extension).is_repeated ? REPEATED : OPTIONAL) == (OPTIONAL):
-CHECK failed: ((*extension).is_repeated ? REPEATED : OPTIONAL) == (REPEATED):
-CHECK failed: ((iter->second).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_OPTIONAL):
-CHECK failed: ((iter->second).is_repeated ? REPEATED : OPTIONAL) == (OPTIONAL):
-CHECK failed: ((iter->second).is_repeated ? REPEATED : OPTIONAL) == (REPEATED):
+CHECK failed: ((*extension).is_repeated ? REPEATED_FIELD : OPTIONAL_FIELD) == (OPTIONAL_FIELD):
+CHECK failed: ((*extension).is_repeated ? REPEATED_FIELD : OPTIONAL_FIELD) == (REPEATED_FIELD):
 CHECK failed: (*buffer) == (first_byte):
 CHECK failed: (0) != (n):
 CHECK failed: (0) <= (pos):
 CHECK failed: (0) == (BufferSize()):
 CHECK failed: (FieldDescriptor::TypeToCppType(field->type())) == (value.type()):
 CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
-CHECK failed: (b->avail()) >= (n):
 CHECK failed: (backup_bytes_) == (0):
-CHECK failed: (bucket_index_ % 2) == (0):
-CHECK failed: (bucket_index_ & 1) == (0):
+CHECK failed: (bucket_index_ & 1) == (0u):
+CHECK failed: (buffer[0]) >= (128):
 CHECK failed: (buffer_size) >= (0):
+CHECK failed: (buffer_used_) == (0):
 CHECK failed: (buffer_used_) == (buffer_size_):
 CHECK failed: (byte_size_before_serialization) == (byte_size_after_serialization):
 CHECK failed: (bytes_produced_by_serialization) == (byte_size_before_serialization):
@@ -1408,7 +1385,6 @@ CHECK failed: (calc_escaped_size) == (escaped_len):
 CHECK failed: (count) <= (buffer_used_):
 CHECK failed: (count) <= (kMaxLength):
 CHECK failed: (count) <= (last_returned_size_):
-CHECK failed: (count) <= (target_->size()):
 CHECK failed: (count) == (tree->size()):
 CHECK failed: (count) >= (0):
 CHECK failed: (cpp_type((*extension).type)) == (FieldDescriptor::CPPTYPE_MESSAGE):
@@ -1422,17 +1398,6 @@ CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_MESSAGE)
 CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_STRING):
 CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_UINT32):
 CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_UINT64):
-CHECK failed: (cpp_type((iter->second).type)) == (FieldDescriptor::CPPTYPE_MESSAGE):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_BOOL):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_DOUBLE):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_ENUM):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_FLOAT):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_INT32):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_INT64):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_MESSAGE):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_STRING):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_UINT32):
-CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_UINT64):
 CHECK failed: (cpp_type(extension->type)) == (FieldDescriptor::CPPTYPE_MESSAGE):
 CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_BOOL):
 CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_DOUBLE):
@@ -1446,15 +1411,16 @@ CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT32):
 CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT64):
 CHECK failed: (current_size_) < (total_size_):
 CHECK failed: (current_size_) > (0):
+CHECK failed: (descriptor->field(field_count - 1)) == (end - 1):
 CHECK failed: (descriptor->file()->pool()) == (DescriptorPool::generated_pool()):
 CHECK failed: (digits) < (100):
-CHECK failed: (end - target) == (size):
 CHECK failed: (extension->is_packed) == (other_extension.is_packed):
 CHECK failed: (extension->is_packed) == (packed):
 CHECK failed: (extension->type) == (other_extension.type):
 CHECK failed: (field->message_type()) == (desc):
 CHECK failed: (field->options().ctype()) == (ctype):
 CHECK failed: (field->type()) == (FieldDescriptor::TYPE_BYTES):
+CHECK failed: (field_count()) == (2):
 CHECK failed: (final_byte_count) < (target_byte_count):
 CHECK failed: (first_byte & 0x80) == (0x80):
 CHECK failed: (first_byte_or_zero) != (0):
@@ -1463,38 +1429,48 @@ CHECK failed: (from.GetDescriptor()) == (descriptor):
 CHECK failed: (has_bit_index) != (~0u):
 CHECK failed: (index) < (current_size_):
 CHECK failed: (index) >= (0):
-CHECK failed: (internal::AlignUpTo8(b->pos)) == (b->pos):
 CHECK failed: (internal::AlignUpTo8(n)) == (n):
 CHECK failed: (it.m_) == (this):
+CHECK failed: (kBlockHeaderSize + ThreadSafeArena::kSerialArenaSize) <= (mem.size):
 CHECK failed: (last_returned_size_) > (0):
 CHECK failed: (len) <= (dest_len):
 CHECK failed: (len) >= (0):
+CHECK failed: (limit_) >= (ptr_):
 CHECK failed: (message1->GetReflection()) == (this):
 CHECK failed: (message2->GetReflection()) == (this):
 CHECK failed: (message_type) == (field->message_type()):
-CHECK failed: (min_bytes) <= (std::numeric_limits<size_t>::max() - kHeaderSize):
+CHECK failed: (min_bytes) <= (std::numeric_limits<size_t>::max() - SerialArena::kBlockHeaderSize):
 CHECK failed: (n & (n - 1)) == (0):
-CHECK failed: (n) > (0):
 CHECK failed: (n) >= (0):
 CHECK failed: (new_num_buckets) >= (kMinTableSize):
-CHECK failed: (new_size) <= ((std::numeric_limits<size_t>::max() - kRepHeaderSize) / sizeof(old_rep->elements[0])):
-CHECK failed: (num_elements) <= (std::numeric_limits<size_t>::max() / sizeof(T)):
+CHECK failed: (new_size) <= (current_size_):
+CHECK failed: (new_size) >= (0):
+CHECK failed: (num) >= (0):
 CHECK failed: (option_field->type()) == (FieldDescriptor::TYPE_GROUP):
 CHECK failed: (out) == (begin + result->size()):
 CHECK failed: (out) == (begin + result.size()):
+CHECK failed: (overrun) <= (kSlopBytes):
 CHECK failed: (pos) <= (x.length_):
 CHECK failed: (recursion_budget_) < (recursion_limit_):
+CHECK failed: (reinterpret_cast<uintptr_t>(mem) & 7) == (0u):
+CHECK failed: (rep_->allocated_size) > (current_size_):
 CHECK failed: (result.bucket_index_) == (b & ~static_cast<size_type>(1)):
-CHECK failed: (result.size()) == (i):
 CHECK failed: (size) <= (6):
 CHECK failed: (size) <= (static_cast<size_t>(2147483647)):
+CHECK failed: (size) > (0):
+CHECK failed: (start + num) <= (size()):
+CHECK failed: (start + num) <= (this->current_size_):
+CHECK failed: (start) >= (0):
+CHECK failed: (static_cast<size_t>(count)) <= (target_->size()):
 CHECK failed: (static_cast<size_t>(new_size)) <= ((std::numeric_limits<size_t>::max() - kRepHeaderSize) / sizeof(Element)):
 CHECK failed: (str.size()) <= (kuint32max):
 CHECK failed: (table_[b]) == (table_[b ^ 1]):
 CHECK failed: (target - output->data()) == (output->size()):
 CHECK failed: (temp[0]) == ('1'):
-CHECK failed: (temp[size-1]) == ('5'):
+CHECK failed: (temp[size - 1]) == ('5'):
 CHECK failed: (to->GetDescriptor()) == (descriptor):
+CHECK failed: (total_size_ - current_size_) >= (n):
+CHECK failed: (total_size_) > (0):
 CHECK failed: (type) != (WireFormatLite::TYPE_ENUM):
 CHECK failed: (type) != (WireFormatLite::TYPE_GROUP):
 CHECK failed: (type) != (WireFormatLite::TYPE_MESSAGE):
@@ -1504,81 +1480,108 @@ CHECK failed: (uintptr_t((b).data() - (*result).data())) > (uintptr_t((*result).
 CHECK failed: (uintptr_t((c).data() - (*result).data())) > (uintptr_t((*result).size())):
 CHECK failed: (uintptr_t((d).data() - (*result).data())) > (uintptr_t((*result).size())):
 CHECK failed: (v.size()) <= (kStringPrintfVectorMaxArgs):
-CHECK failed: (value.size()) <= (kint32max):
-CHECK failed: FindThreadInfo(b->owner) == NULL:
-CHECK failed: GetArenaNoVirtual() == NULL:
-CHECK failed: GetArenaNoVirtual() == other->GetArenaNoVirtual():
+CHECK failed: (value.size()) <= (static_cast<size_t>(kint32max)):
+CHECK failed: *ptr:
+CHECK failed: GeneratedDatabase()->Add(encoded_file_descriptor, size):
+CHECK failed: GetArena() == NULL:
+CHECK failed: GetArena() == nullptr:
+CHECK failed: GetArena() == other->GetArena():
 CHECK failed: HasExtensionSet():
 CHECK failed: HasHasbits():
-CHECK failed: InternalGetTable():
-CHECK failed: IsHeadSurrogate(head_surrogate):
+CHECK failed: IsDefault(default_value):
 CHECK failed: IsInitialized():
-CHECK failed: IsTrailSurrogate(trail_surrogate):
+CHECK failed: IsMapValid() && other.IsMapValid():
 CHECK failed: TableEntryIsNonEmptyList(b):
 CHECK failed: TableEntryIsTree(b):
-CHECK failed: allow_unknown_field_ || reserved_field:
+CHECK failed: a.type() == b.type():
+CHECK failed: allow_unknown_field_ || allow_unknown_extension_ || reserved_field:
+CHECK failed: arena != nullptr:
 CHECK failed: backup_bytes_ == 0 && buffer_.get() != NULL:
 CHECK failed: builder_:
 CHECK failed: checkpoints_.empty():
 CHECK failed: cpp_type(extension->type) == WireFormatLite::CPPTYPE_MESSAGE:
-CHECK failed: dynamic.get() != NULL:
+CHECK failed: ctx.LastTag() != 1:
+CHECK failed: cur_:
+CHECK failed: desc_proto.has_name():
+CHECK failed: descriptor:
+CHECK failed: dest:
+CHECK failed: dynamic.get() != nullptr:
+CHECK failed: end >= ptr:
 CHECK failed: enum_type_->value_count():
-CHECK failed: errors == NULL:
+CHECK failed: errors == nullptr:
+CHECK failed: extension != NULL:
 CHECK failed: extension->is_repeated:
-CHECK failed: fallback_database_ == NULL:
-CHECK failed: field != NULL:
+CHECK failed: fallback_database_ == nullptr:
+CHECK failed: field != nullptr:
 CHECK failed: field->cpp_type() == cpp_type || (field->cpp_type() == FieldDescriptor::CPPTYPE_ENUM && cpp_type == FieldDescriptor::CPPTYPE_INT32):
 CHECK failed: field->is_repeated() || (index == -1):
 CHECK failed: field->is_repeated():
-CHECK failed: fields_ != NULL && fields_->size() > 0:
-CHECK failed: fields_ != NULL:
-CHECK failed: file != NULL:
+CHECK failed: file != nullptr:
 CHECK failed: file && file->pool_:
 CHECK failed: file()->finished_building_ == true:
 CHECK failed: file->pool_->lazily_build_dependencies_:
 CHECK failed: file_->finished_building_:
-CHECK failed: find(*KeyPtrFromNodePtr(node)) == end():
+CHECK failed: find(node->kv.first) == end():
 CHECK failed: finished_building_ == true:
-CHECK failed: generated_database_->Add(encoded_file_descriptor, size):
+CHECK failed: had_errors_ || recursion_limit_ == initial_recursion_limit_:
 CHECK failed: has_default_value():
 CHECK failed: i >= 0:
-CHECK failed: index_of_first_non_null_ == num_buckets_ || table_[index_of_first_non_null_] != NULL:
-CHECK failed: info != NULL:
-CHECK failed: initial_value != NULL:
-CHECK failed: iter != extensions_.end():
-CHECK failed: iter == extensions_.end():
-CHECK failed: m_->index_of_first_non_null_ == m_->num_buckets_ || m_->table_[m_->index_of_first_non_null_] != NULL:
-CHECK failed: map_iter->iter_ != NULL:
+CHECK failed: index_of_first_non_null_ == num_buckets_ || table_[index_of_first_non_null_] != nullptr:
+CHECK failed: is_prototype():
+CHECK failed: is_repeated:
+CHECK failed: limit >= 0 && limit <= INT_MAX - kSlopBytes:
+CHECK failed: limit_ > 0:
+CHECK failed: limit_ > kSlopBytes:
+CHECK failed: limit_end_ == buffer_end_ + (std::min)(0, limit_):
+CHECK failed: limit_end_ == buffer_end_:
+CHECK failed: m1->GetArena() != m2_arena:
+CHECK failed: m_->index_of_first_non_null_ == m_->num_buckets_ || m_->table_[m_->index_of_first_non_null_] != nullptr:
 CHECK failed: message_arena != submessage_arena:
-CHECK failed: mutex_ == NULL:
+CHECK failed: mutex_ == nullptr:
+CHECK failed: n <= size:
 CHECK failed: n >= kMinTableSize:
-CHECK failed: node_ != NULL && m_ != NULL:
-CHECK failed: options->AppendPartialToString(&buf):
-CHECK failed: options->ParsePartialFromString(buf):
-CHECK failed: options_ != NULL:
+CHECK failed: node_ != nullptr && m_ != nullptr:
+CHECK failed: options_ != nullptr:
 CHECK failed: options_descriptor:
-CHECK failed: original_uninterpreted_options_field != NULL:
-CHECK failed: other->GetArenaNoVirtual() != GetArenaNoVirtual():
-CHECK failed: output->message_prototype != NULL:
+CHECK failed: original_uninterpreted_options_field != nullptr:
+CHECK failed: other->GetArena() != GetArena():
+CHECK failed: out_location != nullptr:
+CHECK failed: output->message_info.prototype != nullptr:
 CHECK failed: output:
+CHECK failed: overrun != limit_:
+CHECK failed: overrun < limit_:
+CHECK failed: overrun <= kSlopBytes:
+CHECK failed: overrun >= 0 && overrun <= kSlopBytes:
+CHECK failed: overrun >= 0:
+CHECK failed: owning_arena == nullptr:
 CHECK failed: prototype != NULL:
-CHECK failed: rep_:
-CHECK failed: result != NULL:
-CHECK failed: s != NULL:
+CHECK failed: ptr < end_:
+CHECK failed: ptr <= buffer_end_ + kSlopBytes:
+CHECK failed: ptr <= end_ + kSlopBytes:
+CHECK failed: reflection:
+CHECK failed: rep_ != NULL:
+CHECK failed: result != nullptr:
+CHECK failed: s != nullptr:
+CHECK failed: s >= 0:
 CHECK failed: schema_.HasHasbits():
+CHECK failed: size > 0:
+CHECK failed: size > chunk_size:
+CHECK failed: size_ == 0:
+CHECK failed: size_ > kSlopBytes:
 CHECK failed: snprintf_result > 0 && snprintf_result < kDoubleToBufferSize:
 CHECK failed: snprintf_result > 0 && snprintf_result < kFloatToBufferSize:
-CHECK failed: source_code_info_ != NULL:
+CHECK failed: source_code_info_ != nullptr:
+CHECK failed: submessage->GetArena() == submessage_arena:
 CHECK failed: table_[b] == table_[b + 1] && (b & 1) == 0:
+CHECK failed: tagged_ptr_.UnsafeGet() != nullptr:
+CHECK failed: target + size == res:
 CHECK failed: target_ != NULL:
 CHECK failed: this != other:
 CHECK failed: this == other_mutator:
-CHECK failed: trees:
 CHECK failed: type == WireFormatLite::TYPE_MESSAGE || type == WireFormatLite::TYPE_GROUP:
-CHECK failed: type > 0 && type <= FieldDescriptor::MAX_TYPE:
 CHECK failed: type > 0 && type <= WireFormatLite::MAX_FIELD_TYPE:
-CHECK failed: uninterpreted_options_field != NULL:
-CHECK failed: value != NULL:
+CHECK failed: uninterpreted_options_field != nullptr:
+CHECK failed: value != nullptr:
 CHECK failed: z.first != NULL:
 CHECK_BITLEN_DSA
 CHECK_BITLEN_RSA
@@ -1610,7 +1613,6 @@ CLIENT_CERTIFICATE
 CLNT
 CLayoutFile::BLoadFromBuffer
 CLayoutFileXMLParser::BAddPanel
-CLocalization::CheckPanelNeedsLocUpdate
 CLocalization::OnPanelDeleted
 CLocalization::PanelLocEntry_t CUtlMemoryPool
 CLocalization::PchFindLongestStringForToken
@@ -1750,7 +1752,6 @@ CPPTYPE_ENUM
 CPPTYPE_FLOAT
 CPPTYPE_INT32
 CPPTYPE_INT64
-CPPTYPE_MESSAGE
 CPPTYPE_STRING
 CPPTYPE_UINT32
 CPPTYPE_UINT64
@@ -1780,12 +1781,10 @@ CSHA1::GetHashHex(char*, int)
 CSHA1::Reset()
 CSHA1::Update(void const*, unsigned int)
 CSPName
-CSS selector with no class / type / id - ignored!
 CSource2Surface::BCreateDeviceResources()
 CSource2Surface::DrawFancyQuad() GetMode == NULL? Can't Render
 CSource2Surface::DrawFancyQuad() Mode passes != 1? Can't Render
-CSparseMatrix::SetDimensions(int, int)
-CSparseMatrix::SetElement(int, int, float)
+CSplitString::Construct(char const*, char const**, int)
 CSteamGameController::GotWindowFocus
 CSteamGameController::RunFrame
 CStyleFile::BLoadFromBuffer
@@ -1881,6 +1880,7 @@ CUIRenderEngine::EndFrame
 CUIWindowInput::ProcessMouseTrackingResults
 CUIWindowInput::ProcessMouseTrackingResults - Recalculate handles
 CUIWindowInput::SetInputFocus
+CUtlBinaryBlock::SetLength(int)
 CUtlBlockMemory overflow!
 CUtlBuffer::AddNullTermination()
 CUtlBuffer::AssumeMemory(void*, int, int, int)
@@ -1900,6 +1900,7 @@ CUtlBuffer::ParseToken(characterset_t const*, char*, int, bool)
 CUtlBuffer::PeekGet(int, int)
 CUtlBuffer::Printf(char const*, ...)
 CUtlBuffer::Put(void const*, int)
+CUtlBuffer::PutString(char const*)
 CUtlBuffer::SeekGet(CUtlBuffer::SeekType_t, int)
 CUtlBuffer::SeekPut(CUtlBuffer::SeekType_t, int)
 CUtlBuffer::SetBigEndian(bool)
@@ -1910,8 +1911,11 @@ CUtlBuffer::Swap(CUtlBuffer&)
 CUtlBuffer::Swap(CUtlMemory<unsigned char, int>&)
 CUtlLinkedList overflow! (exhausted index range)
 CUtlLinkedList overflow! (exhausted memory allocator)
+CUtlMemoryBlockAllocator::AllocCopy(char const*, unsigned int)
+CUtlMemoryBlockAllocator::CUtlMemoryBlockAllocator(int, unsigned int)
+CUtlMemoryBlockAllocator::~CUtlMemoryBlockAllocator()
 CUtlMemoryPoolBase::Alloc()
-CUtlMemoryPoolBase::CUtlMemoryPoolBase(int, int, int, MemoryPoolGrowType_t, char const*)
+CUtlMemoryPoolBase::CUtlMemoryPoolBase(int, int, int, MemoryPoolGrowType_t, char const*, MemAllocAttribute_t)
 CUtlMemoryPoolBase::ClearDestruct(void (*)(void*))
 CUtlMemoryPoolBase::Free(void*)
 CUtlMemoryPoolBase::~CUtlMemoryPoolBase()
@@ -1958,6 +1962,7 @@ CVariableBitStringBase::FreeInts()
 CVariableBitStringBase::Resize(int)
 CXXABI_1.3
 CXXABI_1.3.3
+CXXABI_1.3.5
 Cache-Control
 CacheMaterialInformation
 Call a function on each given item
@@ -1973,12 +1978,14 @@ Can't back up over more bytes than were returned by the last call to Next().
 Can't discard critical data on CRC error
 Can't get here.
 Can't get here: failed to get default value as string
+Can't happen
+Can't print proto content: proto type
+Can't reach
 Can't set both read_data_fn and write_data_fn in the same structure
 CancelScheduled
 CancelScheduled() must be called with 1 argument
 Cancelled
 Cancelse a scheduled function
-Cannot allocate buffer larger than kint32max for
 Cannot call BuildFile on a DescriptorPool that uses a DescriptorDatabase.  You must instead find a way to get your file into the underlying database.
 Cannot copy json_name to a proto of a different size.
 Cannot get here
@@ -1987,7 +1994,9 @@ Cannot quantize to fewer than %d colors
 Cannot quantize to more than %d colors
 Cannot read a file
 Cannot read file
+Cannot reconstruct lineOffset table in DecodeEXRImage.
 Cannot set a property alias to undefined, only a base property, we don't support unset of alias alone
+Cannot skip field value, unexpected token:
 Cannot transcode due to multiple use of quantization table %d
 Cannot write a file
 Caution: quantization tables are too coarse for baseline JPEG
@@ -1998,7 +2007,9 @@ Cessation Of Operation
 Cg*
 ChangeUser
 Char=
+CharacterSetBuild
 CheckChildrenScrolledIntoView
+ClearField
 ClearPanelEvent
 ClearPanelEvents
 Clip-path not supported unless element string table supplied
@@ -2035,7 +2046,7 @@ Continue
 Controls blending mode for the panel.  See CSS mix-blend-mode docs on web, except normal for us is with alpha blending.<br><br><b>Examples:</b><pre>-s2-mix-blend-mode: normal;-s2-mix-blend-mode: multiply;-s2-mix-blend-mode: screen;</pre>
 Controls if the background should be repeated in the horizontal and vertical directions.<br><br>Possible values per direction:<br>"repeat" - (default) Repeated in the specified direction until it fills the panel<br>"space" - Repeated as many times as required to fill the panel w/o being clipped. Space is added between images to to align first and last image with panel edges.<br>"round" - Repeated as many times as required to fill the panel w/o being clipped. The image is resized to align first and last image with panel edges.<br>"no-repeat" - Not repeated<br><br>Possible single values:<br>"repeat-x" - equals "repeat no-repeat"<br>"repeat-y" - equals "no-repeat repeat"<br><br><b>Examples:</b><pre>background-repeat: repeat; // equals "repeat repeat" (default)background-repeat: repeat space; // repeats horizontally, spaces vertically background-repeat: no-repeat round; // 1 column of images, scaled to fit evenly</pre>
 Controls if the panel is visible and is included in panel layout. Possible values:<br>"visible" - panel is visible and included in layout (default)<br>"collapse" - panel is invisible and not included in layout
-Controls texture sampling mode for the panel. Set to alpha-only to use the textures alpha data across all 3 color channels.<br><br><b>Examples:</b><pre>texture-sampling: normal;texture-sampling: alpha-only;</pre>
+Controls texture sampling mode for the panel. Set to alpha-only to use the textures alpha data across all 3 color channels, or point for point sampling.<br><br><b>Examples:</b><pre>texture-sampling: normal;texture-sampling: alpha-only;texture-sampling: point;</pre>
 Controls the horizontal and vertical placement of the background image, with the format: &lt;left|center|right&gt; &lt;horizontal length&gt; &lt;top|center|bottom&gt; &lt;vertical length&gt;<br><br>If length is a percent, the specified location within the image is positioned over that same specified position in the background. If the length is pixels, the top left corner is placed relative to the provided alignment keywords (left, bottom, etc.). See examples for more details.<br><br>If 1 value is specified, the other value is assumed to be center. If 2 values are specified, the first value must be for horizontal placement and the second for vertical.<br><br><b>Examples:</b><pre>// aligns the top left corner of the image with the top left corner of the panel (default)background-position: 0% 0%;// centers the image within the background (same as "center center")background-position: center;// aligns the bottom right corner of the image with the bottom right corner of the panel (same as "100% 100%")background-position: right bottom;// the top left corner of the image is placed 10px to the right of, 40px below the top left corner of the panelbackground-position: left 10px top 40px;</pre>
 Controls truncation of text that doesn't fit in a panel.  "clip" means to simply truncate (on char boundaries), "ellipsis" means to end with '...', and "shrink" means lower the font size to fit.  "noclip" allows the text to overflow based on the "overflow" style.We default to ellipsis, which is contrary to the normal CSS spec.<br><br><b>Examples:</b><pre>text-overflow: ellipsis;text-overflow: clip;text-overflow: shrink;text-overflow: noclip;</pre>
 Controls white-space wrapping on rendered text.  "normal" means wrap on whitespace, "nowrap" means do no wrapping at all.<br><br><b>Examples:</b><pre>white-space: normal;white-space: nowrap;</pre>
@@ -2097,7 +2108,6 @@ D2I_PKEY
 D2I_RSA_NET_2
 D2I_X509
 D2I_X509_CINF
-D32
 D32FS8
 DATA_LOSS
 DC
@@ -2198,6 +2208,7 @@ DL_MERGER
 DL_NAME_CONVERTER
 DL_UNLOAD
 DNS:%s
+DO NOT PARSE: fields may be stripped and missing.
 DOD
 DO_B2I
 DO_B2I_BIO
@@ -2285,7 +2296,6 @@ Data:
 DbgIsReloadingScript
 DebugTextureInfo001
 Dec
-Dec 24 2020
 Decipher Only
 DeclareCurrentThreadIsMainThread
 Decompression Error
@@ -2297,6 +2307,7 @@ Define Quantization Table %d  precision %d
 Define Restart Interval %u
 DeleteVideoPlayer
 Deliver async event '%s' (at %.2f, scheduled for %.2f) for '%s' ( 0x%p )
+DemoUpconverterVersion001
 DevMsg(char const*, ...)
 DevWarning(char const*, ...)
 Dg*
@@ -2326,6 +2337,7 @@ Don't support path segment type %d
 Don't yet support elliptical arc rendering
 Don't yet support quadratic bezier rendering
 DotaCardGameClient_001
+Double-save to Member '%s'
 DragCallbacks
 DragDrop
 DragEnd
@@ -2509,7 +2521,6 @@ EDIPARTYNAME
 ENCRYPTED
 ENCRYPTED PRIVATE KEY
 ENGINE lib
-ENUM
 EOC
 EOF on memory BIO
 ERROR
@@ -2581,6 +2592,7 @@ EXPORT
 EXPORT40
 EXPORT56
 EXPORTSYSTEM_INTERFACE_VERSION_001
+EXRHeader variable is not initialized.
 EXTERNAL
 Each
 Each requires 2 parameters, an object or array and a function to call on each element
@@ -2593,6 +2605,7 @@ Email address mismatch
 Empty JPEG image (DNL not supported)
 Empty input file
 Encipher Only
+EncodeBC7Blocks
 Encoding error
 EncodingDecl
 End Of Image
@@ -2604,15 +2617,15 @@ EnsureCapacity
 Enter PEM pass phrase:
 Enterprises
 Entry
+Enum name
 Enum type "
 Enum value "$0" is reserved multiple times.
 Enum value "$0" is reserved.
 Enum value "$0" uses reserved number $1.
 Enum value in map must define 0 as the first value.
-EnumOptions
-EnumValueOptions
 Enums must contain at least one value.
 Eric Young's PKCS#1 RSA
+Error (problem that prevents task success)
 Error in encoding
 Error loading %s: Addons can only add layouts in the %s subdirectory.
 Error parsing @define
@@ -2642,7 +2655,6 @@ Error: Failed to add sibling element
 Error: Transform index exceeds valid range
 Event arguments could not be parsed for %s of %s
 EventSystem001
-Exceeded maximum protobuf size of 2GB:
 Exceeded size limit while expanding chunk
 Excluded
 ExecuteSteamURL
@@ -2686,6 +2698,7 @@ Extensions of MessageSets must be optional messages.
 Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend a non-lite type to contain a lite type, but the reverse is allowed.
 Extra compressed data
 Extra compression data
+ExtractSubrange() when arena is non-NULL is only supported when
 F
 FAILED_PRECONDITION
 FALSE
@@ -2705,21 +2718,24 @@ FIPS_MD_CTX_COPY
 FIPS_mode_set
 FORM
 FORMAT
+Failed to compute channel layout.
 Failed to create temporary file %s
 Failed to load image data from %s
 Failed to normalize @import url '%s'
 Failed to parse EXR version
 Failed to parse attribute
 Failed to parse channel info
+Failed to parse channel info.
 Failed to parse properties for keyframe: %s
 Failed to parse property value
 Failed to parse selector
 Failed to parse style value for %s
 Failed to read attribute.
-Failed to save the following file:%s
+Failed to serialize KV3 block: %s
 Failed to set property value (property=%s)(value=%s)
 False
 FastHexToBuffer() wants non-negative integers, not
+Fatal V8 Error: %s - %s
 Fatal error (code: %d)
 Feb
 Feel free to add support for more if you need it.
@@ -2727,6 +2743,7 @@ Fg*
 Field       :
 Field "
 Field "$0" uses reserved number $1.
+Field =
 Field Type: %s
 Field does not match message type.
 Field is not a map field.
@@ -2747,20 +2764,20 @@ FieldDescriptorProto.extendee not set for extension field.
 FieldDescriptorProto.extendee set for non-extension field.
 FieldDescriptorProto.oneof_index $0 is out of range for type "$1".
 FieldDescriptorProto.oneof_index should not be set for extensions.
-FieldOptions
 FieldSize
 Fields in the same oneof must be defined consecutively. "$0" cannot be defined before the completion of the "$1" oneof definition.
 Fields of oneofs must themselves have label LABEL_OPTIONAL.
+Fields with proto3_optional set must be a member of a one-field oneof
 File already exists in database:
 File appears to be in generated pool but wasn't registered:
 File changed in memory and on disk
 File is already registered:
+File not found in database (unexpected):
 File recursively imports itself:
 File size is zero :
 File size too short
-FileOptions
 Files that do not use optimize_for = LITE_RUNTIME cannot import files which do use this option.  This file is not lite, but it imports "
-Files with optimize_for = LITE_RUNTIME cannot define services unless you set both options cc_generic_services and java_generic_sevices to false.
+Files with optimize_for = LITE_RUNTIME cannot define services unless you set both options cc_generic_services and java_generic_services to false.
 FillAttr
 FilterFrom
 Find
@@ -2789,6 +2806,7 @@ FixupResourceName: Illegal full path passed in ("%s")!
 FixupResourceName: Illegal path, missing extension passed in ("%s")!
 FlattenedSerializersVersion001
 FloatBitMap::QuarterSize
+Follow user preference
 FontManager_001
 Forbidden
 Force style invalidation of the entire panel subtree when adding / removing classes.
@@ -2830,10 +2848,10 @@ GET_SERVER_FINISHED
 GET_SERVER_STATIC_DH_KEY
 GET_SERVER_VERIFY
 GLIBCXX_3.4
-GLIBCXX_3.4.10
 GLIBCXX_3.4.11
 GLIBCXX_3.4.14
 GLIBCXX_3.4.15
+GLIBCXX_3.4.18
 GLIBCXX_3.4.19
 GLIBCXX_3.4.20
 GLIBCXX_3.4.5
@@ -2845,6 +2863,7 @@ GLIBC_2.3
 GLIBC_2.3.4
 GLIBC_2.4
 GLIBC_2.7
+GLIBC_2.8
 GLOBAL_LOOKUP_FUNC
 GMT
 GNAMES_FROM_SECTNAME
@@ -2882,6 +2901,7 @@ GamepadInserted
 GamepadRemoved
 Gateway Time-out
 GeneralString
+Generate the Layout XML Schema Definition for the current run-time (types are dependent on which game DLL is running).
 GenerateDistanceField
 GenerateResourceNameFromFileName: Invalid extension specified in file name "%s"!
 Generator (compressed):
@@ -2893,7 +2913,6 @@ GetBool
 GetCPUInformation
 GetContextPanel
 GetDouble
-GetEnumValue
 GetFillColor
 GetFloat
 GetHeight
@@ -2951,6 +2970,7 @@ HashString
 HelpSystem_001
 Hex and octal numbers must be integers.
 Hg*
+Hide unless error/warning occurs
 Hold Instruction Call Issuer
 Hold Instruction Code
 Hold Instruction None
@@ -2978,8 +2998,6 @@ IDEA-ECB
 IDEA-OFB
 IMP
 IMPLICIT
-INFO
-INTERNAL
 INT_CTX_NEW
 INT_DUP_EX_DATA
 INT_FREE_EX_DATA
@@ -3017,6 +3035,7 @@ Ignoring attempt to set cHRM RGB triangle with zero area
 Ignoring attempt to set negative chromaticity value
 Ignoring bad adaptive filter type
 Ignoring cHRM chunk with negative chromaticities
+Ignoring extension "
 Ignoring extra png_read_update_info() call; row buffer not reallocated
 Ignoring extra png_start_read_image() call; row buffer not reallocated
 Ignoring gAMA chunk with out of range gamma
@@ -3028,6 +3047,7 @@ IiGM
 Illegal character
 Illegal jstype for int64, uint64, sint64, fixed64 or sfixed64 field:
 Image '%s' too large, %d x %d
+Image data size is zero or too large: width =
 Image height exceeds user limit in IHDR
 Image height is zero in IHDR
 Image is too high to process with png_read_png()
@@ -3042,7 +3062,6 @@ Import
 Import "
 Improper call to JPEG library in state %d
 InMemoryFileUpdate
-InMemoryFilesSaved
 Incomplete compressed datastream in %s chunk
 Inconsistent progression sequence for component %d coefficient %d
 Incorrect IEND chunk length
@@ -3067,6 +3086,7 @@ Inhibit Policy Mapping
 Inline scripts can't be included in partial layout files
 Inline scripts can't be included in snippets
 Input file read error
+Input size too large:
 InputFocusLost
 InputFocusSet
 InputFocusTopLevelChanged
@@ -3079,7 +3099,10 @@ InstallChangeCallback called with NULL callback, ignoring!!!
 InstallChangeCallback ignoring duplicate change callback!!!
 InstallSchemaBindings
 Insufficient data length.
+Insufficient data size for attributes.
+Insufficient data size in offset table.
 Insufficient data size.
+Insufficient header/data size.
 Insufficient memory (case %d)
 Insufficient memory for hIST chunk data
 Insufficient memory for pCAL parameter
@@ -3113,7 +3136,22 @@ Invalid JPEG file structure: two SOI markers
 Invalid Key Bind
 Invalid PLTE after IDAT
 Invalid SOS parameters for sequential JPEG
+Invalid `part number' in EXR header chunks.
 Invalid access of deferred ConVarRef for '%s'
+Invalid argument for DecodeEXRImage().
+Invalid argument for LoadDeepEXR
+Invalid argument for LoadEXR()
+Invalid argument for LoadEXRFromMemory
+Invalid argument for LoadEXRImageFromFile
+Invalid argument for LoadEXRImageFromMemory
+Invalid argument for LoadEXRMultipartImageFromFile
+Invalid argument for LoadEXRMultipartImageFromMemory()
+Invalid argument for ParseEXRHeaderFromFile
+Invalid argument for ParseEXRMultipartHeaderFromFile()
+Invalid argument for ParseEXRMultipartHeaderFromMemory
+Invalid argument for SaveEXRImageToFile
+Invalid argument for SaveEXRImageToMemory
+Invalid argument. `memory` or `exr_header` argument is null in ParseEXRHeaderFromMemory()
 Invalid at the top level of the document
 Invalid attempt to read row data
 Invalid bKGD after IDAT
@@ -3138,8 +3176,11 @@ Invalid content wrap row size (flChildWrapRowSize = %f) calculated during child 
 Invalid control characters encountered in text.
 Invalid crop request
 Invalid data found at end of file: %s
+Invalid data found when decoding pixels.
 Invalid data height value
+Invalid data width or data height:
 Invalid data width value
+Invalid descriptor
 Invalid escape sequence in string literal.
 Invalid event name to %s
 Invalid event name to DispatchEvent ('%s')
@@ -3162,11 +3203,14 @@ Invalid message set extension.
 Invalid name
 Invalid number of arguments for event in %s for %s
 Invalid oFFs after IDAT
+Invalid offset size in EXR header chunks.
+Invalid offset value in DecodeEXRImage.
 Invalid pCAL after IDAT
 Invalid pCAL data
 Invalid pCAL equation type
 Invalid pCAL parameters for equation type
 Invalid pHYs after IDAT
+Invalid package name:
 Invalid palette chunk
 Invalid palette length
 Invalid palette size, hIST allocation skipped
@@ -3233,6 +3277,7 @@ JSScheduledFunction
 Jan
 Jg*
 Jul
+Jul  2 2021
 Jun
 K
 K-163
@@ -3297,6 +3342,7 @@ LV_ESSENTIAL
 LV_MAXIMUM
 Latam_Spanish
 Layout FPS:
+Layout XSD contents copied to clipboard.
 Leftpad up fired %d repeats
 Length Required
 Lg*
@@ -3310,9 +3356,11 @@ Load certs from files in a directory
 Load file into cache
 LoadAsyncComplete
 LoadFileIntoBuffer
+LoadKV3(CKeyValues3Context*, CUtlString*, CUtlBuffer*, KV3ID_t const&, char const*)
 LoadLayoutFileAsync
 LoadLayoutFromBase64XMLStringAsync
 LoadLayoutFromXMLStringAsync
+Loading multipart or DeepImage is not supported  in LoadEXR() API
 LocalKeySet
 LocalizationChanged
 Localize
@@ -3376,22 +3424,33 @@ MapKey::GetUInt32Value
 MapKey::GetUInt64Value
 MapKey::type MapKey is not initialized.
 MapListService_001
-MapValueRef::GetBoolValue
-MapValueRef::GetDoubleValue
-MapValueRef::GetEnumValue
-MapValueRef::GetFloatValue
-MapValueRef::GetInt32Value
-MapValueRef::GetInt64Value
-MapValueRef::GetMessageValue
-MapValueRef::GetStringValue
-MapValueRef::GetUInt32Value
-MapValueRef::GetUInt64Value
-MapValueRef::type MapValueRef is not initialized.
+MapValueConstRef::GetBoolValue
+MapValueConstRef::GetDoubleValue
+MapValueConstRef::GetEnumValue
+MapValueConstRef::GetFloatValue
+MapValueConstRef::GetInt32Value
+MapValueConstRef::GetInt64Value
+MapValueConstRef::GetMessageValue
+MapValueConstRef::GetStringValue
+MapValueConstRef::GetUInt32Value
+MapValueConstRef::GetUInt64Value
+MapValueConstRef::type MapValueConstRef is not initialized.
+MapValueRef::MutableMessageValue
+MapValueRef::SetBoolValue
+MapValueRef::SetDoubleValue
+MapValueRef::SetEnumValue
+MapValueRef::SetFloatValue
+MapValueRef::SetInt32Value
+MapValueRef::SetInt64Value
+MapValueRef::SetStringValue
+MapValueRef::SetUInt32Value
+MapValueRef::SetUInt64Value
 Mar
 Mask Algorithm:
 MaterialUtils_001
 Maximum supported image dimension is %u pixels
 May
+MaybeAllocateAligned cannot fail here.
 MediaNextTrack
 MediaPlayPause
 MediaPrevTrack
@@ -3405,18 +3464,18 @@ Memory allocation failed while processing sCAL
 MeshSystem001
 MeshUtils001
 Message class "
-Message extensions cannot have required fields.
+Message does not support reflection (type
+Message is too deep, the parser exceeded the configured recursion limit of
 Message missing required fields:
 Message of type "
 Message type "
 Message type:
-MessageOptions
+MessageLite at 0x
 MessageSet is not supported in proto3.
 MessageSets cannot have fields, only extensions.
 Messages can't have default values!
 Messages can't have default values.
 Method Not Allowed
-MethodOptions
 Mg*
 Microsoft CSP Name
 Microsoft Commercial Code Signing
@@ -3486,14 +3545,13 @@ Multiple Choices
 Multiple extension registrations for type "
 Multiplier for flick velocity off of actual measured velocity
 MurmurHash2
+MurmurHash2LowerCase(char const*, int, unsigned int)
 MurmurHash64
 MutableMessage
 MutableRawRepeatedField
 MutableRepeatedMessage
 N
 N2v811ArrayBuffer9AllocatorE
-N6google8protobuf10ReflectionE
-N6google8protobuf10TextFormat17BaseTextGeneratorE
 N6google8protobuf10TextFormat17FieldValuePrinterE
 N6google8protobuf10TextFormat21FastFieldValuePrinterE
 N6google8protobuf10TextFormat6FinderE
@@ -3505,13 +3563,6 @@ N6google8protobuf11MessageLiteE
 N6google8protobuf12FieldOptionsE
 N6google8protobuf12OneofOptionsE
 N6google8protobuf13MethodOptionsE
-N6google8protobuf13RepeatedFieldIbEE
-N6google8protobuf13RepeatedFieldIdEE
-N6google8protobuf13RepeatedFieldIfEE
-N6google8protobuf13RepeatedFieldIiEE
-N6google8protobuf13RepeatedFieldIjEE
-N6google8protobuf13RepeatedFieldIlEE
-N6google8protobuf13RepeatedFieldImEE
 N6google8protobuf14DescriptorPool14ErrorCollectorE
 N6google8protobuf14DynamicMessageE
 N6google8protobuf14FatalExceptionE
@@ -3521,9 +3572,6 @@ N6google8protobuf14ServiceOptionsE
 N6google8protobuf14SourceCodeInfoE
 N6google8protobuf15DescriptorProtoE
 N6google8protobuf16EnumValueOptionsE
-N6google8protobuf16RepeatedPtrFieldINS0_11MessageLiteEEE
-N6google8protobuf16RepeatedPtrFieldINS0_7MessageEEE
-N6google8protobuf16RepeatedPtrFieldISsEE
 N6google8protobuf17DescriptorBuilder17OptionInterpreter21AggregateOptionFinderE
 N6google8protobuf17FileDescriptorSetE
 N6google8protobuf17GeneratedCodeInfoE
@@ -3542,6 +3590,7 @@ N6google8protobuf23SourceCodeInfo_LocationE
 N6google8protobuf24EnumValueDescriptorProtoE
 N6google8protobuf24MergedDescriptorDatabaseE
 N6google8protobuf24SimpleDescriptorDatabaseE
+N6google8protobuf24ZeroCopyCodedInputStreamE
 N6google8protobuf25EncodedDescriptorDatabaseE
 N6google8protobuf28GeneratedCodeInfo_AnnotationE
 N6google8protobuf28UninterpretedOption_NamePartE
@@ -3568,21 +3617,14 @@ N6google8protobuf2io25CopyingInputStreamAdaptorE
 N6google8protobuf2io26CopyingOutputStreamAdaptorE
 N6google8protobuf30DescriptorProto_ExtensionRangeE
 N6google8protobuf37EnumDescriptorProto_EnumReservedRangeE
-N6google8protobuf3MapINS0_6MapKeyENS0_11MapValueRefEE8InnerMapE
-N6google8protobuf4hashINS0_6MapKeyEEE
 N6google8protobuf7ClosureE
 N6google8protobuf7MessageE
 N6google8protobuf8internal12FieldSkipperE
 N6google8protobuf8internal12MapFieldBaseE
 N6google8protobuf8internal15DynamicMapFieldE
 N6google8protobuf8internal15ExtensionFinderE
-N6google8protobuf8internal16FunctionClosure0E
-N6google8protobuf8internal16FunctionClosure1IPKNS0_14FileDescriptorEEE
-N6google8protobuf8internal16FunctionClosure1IPKNS0_15FieldDescriptorEEE
-N6google8protobuf8internal16FunctionClosure1IPKNS0_20FileDescriptorTablesEEE
-N6google8protobuf8internal16FunctionClosure1IPNS1_14LazyDescriptorEEE
-N6google8protobuf8internal16FunctionClosure1IPSt4pairIPKNS0_20FileDescriptorTablesEPKNS0_14SourceCodeInfoEEEE
 N6google8protobuf8internal16MapFieldAccessorE
+N6google8protobuf8internal19ImplicitWeakMessageE
 N6google8protobuf8internal20RepeatedFieldWrapperIbEE
 N6google8protobuf8internal20RepeatedFieldWrapperIdEE
 N6google8protobuf8internal20RepeatedFieldWrapperIfEE
@@ -3590,18 +3632,15 @@ N6google8protobuf8internal20RepeatedFieldWrapperIiEE
 N6google8protobuf8internal20RepeatedFieldWrapperIjEE
 N6google8protobuf8internal20RepeatedFieldWrapperIlEE
 N6google8protobuf8internal20RepeatedFieldWrapperImEE
-N6google8protobuf8internal20RepeatedPtrFieldBaseE
 N6google8protobuf8internal21RepeatedFieldAccessorE
 N6google8protobuf8internal22MessageSetFieldSkipperE
 N6google8protobuf8internal23RepeatedPtrFieldWrapperINS0_7MessageEEE
 N6google8protobuf8internal23RepeatedPtrFieldWrapperISsEE
 N6google8protobuf8internal23TypeDefinedMapFieldBaseINS0_6MapKeyENS0_11MapValueRefEEE
 N6google8protobuf8internal24GeneratedExtensionFinderE
-N6google8protobuf8internal26GeneratedMessageReflectionE
 N6google8protobuf8internal27UnknownFieldSetFieldSkipperE
 N6google8protobuf8internal29CodedOutputStreamFieldSkipperE
 N6google8protobuf8internal29DescriptorPoolExtensionFinderE
-N6google8protobuf8internal29InternalMetadataWithArenaBaseINS0_15UnknownFieldSetENS1_25InternalMetadataWithArenaEE9ContainerE
 N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIbEE
 N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIdEE
 N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIfEE
@@ -3626,34 +3665,13 @@ N8panorama12CUIEventBaseE
 N8panorama12IImageSourceE
 N8panorama12IUI3DSurfaceE
 N8panorama13CLocalizationE
+N8panorama13CStyleFileSetE
 N8panorama13IUIFileSystemE
 N8panorama13IUILayoutFileE
 N8panorama13IUIPanelStyleE
 N8panorama14CLayoutManagerE
 N8panorama14CStylePropertyE
 N8panorama14CUIInputEngineE
-N8panorama14CUIPanelEvent0E
-N8panorama14CUIPanelEvent1INS_12CStyleSymbolEEE
-N8panorama14CUIPanelEvent1INS_15CPanoramaSymbolEEE
-N8panorama14CUIPanelEvent1INS_19EPanelEventSource_tEEE
-N8panorama14CUIPanelEvent1INS_9CPanelPtrINS_8IUIPanelEEEEE
-N8panorama14CUIPanelEvent1IPKcEE
-N8panorama14CUIPanelEvent1IPNS_12IImageSourceEEE
-N8panorama14CUIPanelEvent1IPNS_19IDragStartCallbacksEEE
-N8panorama14CUIPanelEvent1IbEE
-N8panorama14CUIPanelEvent1IiEE
-N8panorama14CUIPanelEvent2INS_16ScrollBehavior_tEbEE
-N8panorama14CUIPanelEvent2IP9KeyValuesPvEE
-N8panorama14CUIPanelEvent2IPKNS_19ILocalizationStringEiEE
-N8panorama14CUIPanelEvent2IPKcPNS_8IUIEventEEE
-N8panorama14CUIPanelEvent2IPKcS2_EE
-N8panorama14CUIPanelEvent2IPKcbEE
-N8panorama14CUIPanelEvent2IPKcfEE
-N8panorama14CUIPanelEvent2IbPKcEE
-N8panorama14CUIPanelEvent3IPKcffEE
-N8panorama14CUIPanelEvent3IbNS_23ELoadLayoutAsyncDetailsEbEE
-N8panorama14CUIPanelEvent4IiiffEE
-N8panorama14CUIPanelEvent4IiiiiEE
 N8panorama14CUISoundSystemE
 N8panorama14CUIWindowInputE
 N8panorama14IUIPanelClientE
@@ -3670,9 +3688,11 @@ N8panorama15IUILocalizationE
 N8panorama15IUIRenderDeviceE
 N8panorama15IUIRenderEngineE
 N8panorama15IUIStyleFactoryE
+N8panorama15IUIStyleFileSetE
 N8panorama16CImageLoaderTaskE
 N8panorama16CLoadFileURLTaskE
 N8panorama16CLoadFromSvgTaskE
+N8panorama16CTransformSkew3DE
 N8panorama16CUIEngineSource2E
 N8panorama16IUILayoutManagerE
 N8panorama17CImageProxySourceE
@@ -3680,6 +3700,7 @@ N8panorama17CLoadFromVTexTaskE
 N8panorama17CPanelImageSourceE
 N8panorama17CSource2UITextureE
 N8panorama17CTransformScale3DE
+N8panorama17IContentSourceMapE
 N8panorama18CImageDecodeThreadE
 N8panorama18CJSAsyncWebRequestE
 N8panorama18CLoadFileLocalTaskE
@@ -3732,6 +3753,7 @@ N8panorama23CStylePropertyMaxHeightE
 N8panorama23CStylePropertyMinHeightE
 N8panorama23CStylePropertyTextAlignE
 N8panorama23CStylePropertyWashColorE
+N8panorama23CStylePropertyWorldBlurE
 N8panorama23ELoadLayoutAsyncDetailsE
 N8panorama24CStylePropertyBrightnessE
 N8panorama24CStylePropertyLineHeightE
@@ -3750,6 +3772,7 @@ N8panorama25CVideoPlayerVideoRendererE
 N8panorama26CStylePropertyBorderRadiusE
 N8panorama26CStylePropertyFlowChildrenE
 N8panorama26CStylePropertyMixBlendModeE
+N8panorama26CStylePropertyOpacityBrushE
 N8panorama26CStylePropertyTextOverflowE
 N8panorama26IUIPanelImageSourceTextureE
 N8panorama27CStylePropertyEntranceSoundE
@@ -3779,6 +3802,7 @@ N8panorama33CStylePropertyContextMenuPositionE
 N8panorama33CStylePropertyTextDecorationStyleE
 N8panorama33CStylePropertyTooltipBodyPositionE
 N8panorama34CLocalizationStringDialogVariablesE
+N8panorama34CStylePropertyBackgroundImgOpacityE
 N8panorama34CStylePropertyTooltipArrowPositionE
 N8panorama34CStylePropertyTransitionPropertiesE
 N8panorama35CSource2DoubleBufferedYUV420TextureE
@@ -3789,33 +3813,56 @@ N8panorama38CStylePropertyContextMenuArrowPositionE
 N8panorama40CStylePropertyContextUIComponentPositionE
 N8panorama41CLocalizationStringDialogVariablesDerivedE
 N8panorama7CJSFileE
+N8panorama8CUIEventILb0EJEEE
+N8panorama8CUIEventILb0EJNS_10ESoundTypeEfEEE
+N8panorama8CUIEventILb0EJNS_11GamePadCodeEEEE
+N8panorama8CUIEventILb0EJNS_15CPanoramaSymbolEEEE
+N8panorama8CUIEventILb0EJNS_15CPanoramaSymbolEjjjEEE
+N8panorama8CUIEventILb0EJNS_21EActiveControllerTypeEEEE
+N8panorama8CUIEventILb0EJNS_9CPanelPtrINS_8IUIPanelEEEEEE
+N8panorama8CUIEventILb0EJNS_9CPanelPtrINS_8IUIPanelEEEPKcEEE
+N8panorama8CUIEventILb0EJNS_9CPanelPtrINS_8IUIPanelEEEPN2v810PersistentINS4_8FunctionENS4_27NonCopyablePersistentTraitsIS6_EEEENS_15CPanoramaSymbolEijEEE
+N8panorama8CUIEventILb0EJP12IVideoPlayerEEE
+N8panorama8CUIEventILb0EJPKcEEE
+N8panorama8CUIEventILb0EJPNS_16CReloadStyleFileEEEE
+N8panorama8CUIEventILb0EJPNS_17CImageProxySourceEEEE
+N8panorama8CUIEventILb0EJPNS_25CVideoPlayerAudioRendererEEEE
+N8panorama8CUIEventILb0EJPNS_25CVideoPlayerAudioRendererEiiEEE
+N8panorama8CUIEventILb0EJPNS_27CVideoPlayerEventDispatcherE17EVideoPlayerEventEEE
+N8panorama8CUIEventILb0EJPNS_9IUIWindowEEEE
+N8panorama8CUIEventILb0EJPvEEE
+N8panorama8CUIEventILb0EJRKSt8functionIFvvEEEEE
+N8panorama8CUIEventILb0EJbEEE
+N8panorama8CUIEventILb0EJfPNS_8IUIEventEEEE
+N8panorama8CUIEventILb0EJiEEE
+N8panorama8CUIEventILb1EJEEE
+N8panorama8CUIEventILb1EJNS_12CStyleSymbolEEEE
+N8panorama8CUIEventILb1EJNS_15CPanoramaSymbolEEEE
+N8panorama8CUIEventILb1EJNS_16ScrollBehavior_tEbEEE
+N8panorama8CUIEventILb1EJNS_19EPanelEventSource_tEEEE
+N8panorama8CUIEventILb1EJNS_9CPanelPtrINS_8IUIPanelEEEEEE
+N8panorama8CUIEventILb1EJP9KeyValuesPvEEE
+N8panorama8CUIEventILb1EJPKNS_19ILocalizationStringEiEEE
+N8panorama8CUIEventILb1EJPKcEEE
+N8panorama8CUIEventILb1EJPKcPNS_8IUIEventEEEE
+N8panorama8CUIEventILb1EJPKcS2_EEE
+N8panorama8CUIEventILb1EJPKcbEEE
+N8panorama8CUIEventILb1EJPKcfEEE
+N8panorama8CUIEventILb1EJPKcffEEE
+N8panorama8CUIEventILb1EJPNS_12IImageSourceEEEE
+N8panorama8CUIEventILb1EJPNS_19IDragStartCallbacksEEEE
+N8panorama8CUIEventILb1EJbEEE
+N8panorama8CUIEventILb1EJbNS_23ELoadLayoutAsyncDetailsEbEEE
+N8panorama8CUIEventILb1EJbPKcEEE
+N8panorama8CUIEventILb1EJiEEE
+N8panorama8CUIEventILb1EJiiffEEE
+N8panorama8CUIEventILb1EJiiiiEEE
 N8panorama8CUIPanelE
 N8panorama8IUIEventE
 N8panorama8IUIInputE
 N8panorama8IUIPanelE
 N8panorama9CPanelPtrINS_8IUIPanelEEE
 N8panorama9CUIEngineE
-N8panorama9CUIEvent0E
-N8panorama9CUIEvent1INS_11GamePadCodeEEE
-N8panorama9CUIEvent1INS_15CPanoramaSymbolEEE
-N8panorama9CUIEvent1INS_21EActiveControllerTypeEEE
-N8panorama9CUIEvent1INS_9CPanelPtrINS_8IUIPanelEEEEE
-N8panorama9CUIEvent1IP12IVideoPlayerEE
-N8panorama9CUIEvent1IPKcEE
-N8panorama9CUIEvent1IPNS_16CReloadStyleFileEEE
-N8panorama9CUIEvent1IPNS_17CImageProxySourceEEE
-N8panorama9CUIEvent1IPNS_25CVideoPlayerAudioRendererEEE
-N8panorama9CUIEvent1IPNS_9IUIWindowEEE
-N8panorama9CUIEvent1IPvEE
-N8panorama9CUIEvent1IbEE
-N8panorama9CUIEvent1IiEE
-N8panorama9CUIEvent2INS_10ESoundTypeEfEE
-N8panorama9CUIEvent2INS_9CPanelPtrINS_8IUIPanelEEEPKcEE
-N8panorama9CUIEvent2IPNS_27CVideoPlayerEventDispatcherE17EVideoPlayerEventEE
-N8panorama9CUIEvent2IfPNS_8IUIEventEEE
-N8panorama9CUIEvent3IPNS_25CVideoPlayerAudioRendererEiiEE
-N8panorama9CUIEvent4INS_15CPanoramaSymbolEjjjEE
-N8panorama9CUIEvent5INS_9CPanelPtrINS_8IUIPanelEEEPN2v810PersistentINS4_8FunctionENS4_27NonCopyablePersistentTraitsIS6_EEEENS_15CPanoramaSymbolEijEE
 N8panorama9IUIEngineE
 N8panorama9IUIWindowE
 NCONF_dump_bio
@@ -3855,7 +3902,6 @@ NOT_FOUND
 NREF_NOS
 NSt13__future_base19_Async_state_commonE
 NULL
-NULL output boolean given.
 NULL row buffer for row %ld, pass %d
 NULL shared library method
 NULL-MD5
@@ -3913,6 +3959,7 @@ No space in chunk cache for zTXt
 Non Critical
 Non Repudiation
 Non-Authoritative Information
+Non-primitive types can't be packed.
 Non-repeated Any specified multiple times.
 Non-repeated field "
 Not Acceptable
@@ -3932,7 +3979,7 @@ Not enough memory to process text chunk
 Not enough memory to process zTXt chunk
 Not implemented field number
 Not implemented yet
-Not implemented.
+Not supported.
 Not time for lefpad up repeat
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 Nov
@@ -4026,7 +4073,6 @@ OculusDK2Present
 OculusTouchControllerPresent
 Og*
 Oneof must have at least one field.
-OneofOptions
 Only Some Reasons
 Only one top level element is allowed
 OpenSSL 1.0.2j  26 Sep 2016
@@ -4048,7 +4094,6 @@ Option "
 Option field "
 Option must have a name.
 Option must not use reserved name "uninterpreted_option".
-Options could not be fully parsed using the proto descriptors compiled into this binary. Missing required fields:
 Order:
 Out of memory
 Out of memory processing zTXt chunk
@@ -4076,7 +4121,9 @@ P12IVideoPlayer
 P8
 P9KeyValues
 P:
+P:%s
 P@
+PARALLEL_PROCESS tinyexr_impl.cpp:163
 PARSE_BAG
 PARSE_BAGS
 PARSE_HTTP_LINE1
@@ -4242,7 +4289,6 @@ PKEY_SET_TYPE
 PKEY_USAGE_PERIOD
 PKIX
 PKN8panorama19ILocalizationStringE
-PLACEHOLDER_VALUE
 PN2v810PersistentINS_8FunctionENS_27NonCopyablePersistentTraitsIS1_EEEE
 PN8panorama12IImageSourceE
 PN8panorama14InputMessage_tE
@@ -4297,6 +4343,7 @@ Panorama context panel stack overflow. Increase PANEL_STACK_SIZE in uiengine.cpp
 Panorama requires a full rendersystem, please check your launch options
 Panorama texture %s not already loaded/invalid.  Resource should have already loaded before this call.
 PanoramaBasicQuad
+PanoramaBlurOutputTexture%dx%d
 PanoramaFancyQuad
 PanoramaScript
 PanoramaTextServices001
@@ -4306,6 +4353,7 @@ Parameter to BackUp() can't be negative.
 ParseFromString failed
 ParseTokenFromCharString
 Parsing aborted
+Parsing attempt:
 Partial Content
 ParticleSystemMgr003
 Payment Required
@@ -4334,7 +4382,6 @@ Plat_IsInTestMode
 Plat_IsScreenKeyboardShown
 Plat_IsWindowFocused
 Plat_LoadModule
-Plat_LoadModuleRaw
 Plat_NeedsLowFragmentation
 Plat_RelativeTicks
 Plat_RemoveFile
@@ -4381,7 +4428,6 @@ Property setter for CPanelStyle called with invalid css property name (%s)
 PropertyEditorSystem_001
 PropertyTransitionEnd
 Proto file starts with 0xEF but not UTF-8 BOM. Only UTF-8 is accepted for proto file.
-Proto type
 ProtoBufHelper::DebugParseBinary: Couldn't find descriptor pool
 ProtoBufHelper::DebugParseBinary: Couldn't find message factory
 ProtoBufHelper::DebugParseBinary: Couldn't find message type '%s'
@@ -4400,8 +4446,6 @@ ProtoBufHelper::ParseJSON: received callback with no current message field!
 Protobuf: %s(%d): %s
 Protocol Buffer map usage error:
 Protocol Buffer reflection usage error:  Method      : google::protobuf::Reflection::
-Protocol message could not be serialized.
-Protocol message serialized itself in invalid fashion.
 Proxy Authentication Required
 Proxy Certificate Information
 Public Key
@@ -4414,7 +4458,6 @@ Q
 Q:
 QC,A
 Qg*
-QuadCoords_t CUtlMemoryPoolMT
 Quantization table 0x%02x was not defined
 Quantizing to %d = %d*%d*%d colors
 Quantizing to %d colors
@@ -4494,6 +4537,7 @@ RGBA16161616F_EXPAND_EDRAM_RGBA1010102F
 RGBA16161616_EDRAM
 RGBA16161616_EDRAM_RGBA16161616
 RGBA32323232F
+RGBA32323232_UINT
 RGBA8888_LINEAR
 RGBX555
 RGBX8888
@@ -4586,6 +4630,7 @@ Read failed on temporary file
 Read from EMS failed
 Read from XMS failed
 ReadyForDisplay
+Recursion limit at end of parse should be
 Recursive reference in entity '%s'
 Reference to undefined entity '%s'
 Refresh
@@ -4602,8 +4647,11 @@ RegisterForUnhandledEvent called outside panel context, can't register on a pane
 RegisterKeyBind
 RegisterKeyBind failed, key %s to bind was probably invalid
 RegisterKeyBind requires at least 3 params, panel or input context to bind on (optionally empty string for global bindings), key to bind (can be , delimited list), and binding event name or JS callback function
+RegisterStringToken
 Registered ID
 Release
+ReleaseCleared() can only be used on a RepeatedPtrField not on
+ReleaseLast
 ReleaseLast() called on a RepeatedPtrField that is on an arena,
 ReleaseMessage
 ReloadChangedUIFiles
@@ -4615,6 +4663,7 @@ Remove a CSS class from all children of this panel.
 Remove an unhandled event handler
 Remove then immediately add back a CSS class from a panel. Useful to re-trigger events like animations or sound effects.
 RemoveExpiredTimedStyles
+RemoveLast
 RemoveStyle
 RemoveStyleAfterDelay
 RemoveStyleFromEachChild
@@ -4872,6 +4921,7 @@ SXNET_get_id_ulong
 SXNetID
 Salt Length: 0x
 Sampling factors too large for interleaved scan
+SaveKV3(KV3ID_t const&, KV3ID_t const&, KeyValues3 const*, CUtlString*, CUtlBuffer*)
 Scan script does not transmit all data
 SceneSystem_002
 SceneUtils_001
@@ -4928,7 +4978,6 @@ Serial Number:
 SerializedEntitiesVersion001
 ServerUploadGameStats001
 Service Unavailable
-ServiceOptions
 Set focus to this panel.
 Set whether any child panels are :selected.
 Set whether this panel is :selected.
@@ -4938,8 +4987,6 @@ SetBool
 SetChildPanelsSelected
 SetDouble
 SetEnum
-SetEnumValue
-SetEnumValue accepts only valid integer values: value
 SetFloat
 SetInt32
 SetInt64
@@ -4952,7 +4999,6 @@ SetPanelSelected
 SetRepeatedBool
 SetRepeatedDouble
 SetRepeatedEnum
-SetRepeatedEnumValue accepts only valid integer values:
 SetRepeatedFloat
 SetRepeatedInt32
 SetRepeatedInt64
@@ -4964,10 +5010,13 @@ SetUInt32
 SetUInt64
 Sets 2 dimensional X/Y scale factors that apply to the quad for this panel prior to 3 dimensional transforms. This scaling applies without perspective and leaves the panel centered at the same spot as it started. Default of 1.0 means no scaling, 0.5 would be half size.<br><br><b>Examples:</b><pre>pre-transform-scale2d: 0.8pre-transform-scale2d: 0.4, 0.6</pre>
 Sets 2 dimensional rotation degrees that apply to the quad for this panel prior to 3 dimensional transforms. This rotation applies without perspective and leaves the panel centered at the same spot as it started.<br><br><b>Example:</b><pre>pre-transform-rotate2d: 45deg;</pre>
+Sets an opacity brush to apply to the panel and all it's children during composition.<br><br><b>Example:</b><pre>opacity-brush: gradient( linear, 0% 0%, 0% 100%, from( #ffffffff ), to( #ffffff00 ) );</pre>
 Sets how the panel is positioned relative to its parent. "static" means position in the default way. "fixed" means position in the default way, but ignoring the parent's scroll offset.<br><br><b>Example:</b><pre>layout-position: fixed;</pre>
 Sets letter-spacing for text in a string. Possible values:<br>normal - no manual spacing<br>&lt;pixels&gt; - Any fixed pixel value (ex: "1px")
+Sets the Opacity of background-image<br><br><b>Examples:</b><pre>background-img-opacity: 0.5;</pre>
 Sets the amount of blur to apply to the contents behind this panel during composition.  Default is no blur, for now Gaussian is the only blur type and takes a horizontal standard deviation, vertical standard deviation, and number of passes.  Good std deviation values are around 0-10, if 10 is still not intense enough consider more passes, but more than one pass is bad for perf.  As shorthand you can specify with just one value, which will be used for the standard deviation in both directions and 1 pass will be set.<br><br><b>Examples:</b><pre>background-blur: gaussian( 2.5 );background-blur: gaussian( 6, 6, 1 );</pre>
-Sets the amount of blur to apply to the panel and all it's children during composition.  Default is no blur, for now Gaussian is the only blur type and takes a horizontal standard deviation, vertical standard deviation, and number of passes.  Good std deviation values are around 0-10, if 10 is still not intense enough consider more passes, but more than one pass is bad for perf.  As shorthand you can specify with just one value, which will be used for the standard deviation in both directions and 1 pass will be set.<br><br><b>Examples:</b><pre>blur: gaussian( 2.5 );blur: gaussian( 6, 6, 1 );</pre>
+Sets the amount of blur to apply to the panel and all it's children during composition.  Default is no blur, for now Gaussian is the only blur type and takes a horizontal standard deviation, vertical standard deviation, and number of passes.  Good std deviation values are around 0-10, if 10 is still not intense enough consider more passes, but more than one pass is bad for perf.  As shorthand you can specify with just one value, which will be used for the standard deviation in both directions and 1 pass will be set.<br><br><b>Examples:</b><pre>blur: gaussian( 2.5 );blur: gaussian( 6, 6, 1 );
+Sets the amount of blur to apply to the world / backbuffer before drawing.<br><br><b>Examples:</b><pre>world-blur: gaussian( 2.5 );world-blur: gaussian( 6, 6, 1 );world-blur: mipmapgaussian( 6, 6, 4 );  In this version each gaussian pass is preceded by a quarter area downsample.</pre>
 Sets the amount of saturation to apply to the panel and all it's children during composition.  Default of 1.0 means no adjustment, 0.0 means fully desaturated to gray scale, greater than 1.0 means over-saturation.<br><br><b>Example:</b><pre>saturation: 0.4;</pre>
 Sets the background color opacity for a panel (does nothing on its own, but when merged with a full background-color it overrides the opacity).<br><br><b>Examples:</b><pre>background-color-opacity: 0.5;</pre>
 Sets the background fill color/gradient/combination for a panel.<br><br><b>Examples:</b><pre>background-color: #FFFFFFFF;background-color: gradient( linear, 0% 0%, 0% 100%, from( #fbfbfbff ), to( #c0c0c0c0 ) );background-color: gradient( linear, 0% 0%, 0% 100%, from( #fbfbfbff ), color-stop( 0.3, #ebebebff ), to( #c0c0c0c0 ) );background-color: gradient( radial, 50% 50%, 0% 0%, 80% 80%, from( #00ff00ff ), to( #0000ffff ) );background-color: #0d1c22ff, gradient( radial, 100% -0%, 100px -40px, 320% 270%, from( #3a464bff ), color-stop( 0.23, #0d1c22ff ), to( #0d1c22ff ) );</pre>
@@ -4995,6 +5044,7 @@ Shorthand for setting the top panel border. Specify width, style, and color.  Su
 Shorthand to set border radius for all corners at once.  Border radius rounds off corners of the panel, adjusting the border to smoothly round and also clipping background image/color and contents to the specified elliptical or circular values.  In this shorthand version you may specify a single value for all raddi, or horizontal / vertical separated by the '/' character.  For both horizontal and vertical you may specify 1 to 4 values in pixels or %, they will be taken in order as top-left, top-right, bottom-right, bottom-left radii values.<br><br><b>Examples:</b><pre>// 2 px circular corners on all sidesborder-radius: 2px;// Perfect circular or elliptical panel (circular if box was square)border-radius: 50% / 50%;// 2 px horizontal radii 4px vertical elliptical corners on all sidesborder-radius: 2px / 4px;// All corners fully specified border-radius: 2px 3px 4px 2px / 2px 3px 3px 2px;</pre>
 Should not pass empty string for FindChildInContext()/$()
 Should not reach here.
+Show regardless of user setting
 ShowPanelZoo
 ShowQuitDialog
 ShowTooltip
@@ -5010,6 +5060,7 @@ Snippets can't be included in partial layout files
 Snippets must be declared first before any child panels
 Snippets must be declared in root
 SoftwareKeyboardVisibilityChanged
+Some options could not be correctly parsed using the proto descriptors compiled into this binary.Unparsed options:
 SoundFinished
 SoundMuteChanged
 SoundOpSystem001
@@ -5029,6 +5080,7 @@ Source2GameEntities001
 Source2Host001
 Source2Server001
 Source2ServerSerializers002
+SourceByteRangeToDestByteRange
 Specifies a 'wash' color, which means a color that will be blended over the panel and all it's children at composition time, tinting them.  The alpha value of the color determines the intensity of the tinting.<br><br><b>Example:</b><pre>wash-color: #39b0d325;</pre>
 Specifies a clip region within the panel, where contents will be clipped at render time. This clipping has no impact on layout, and is fast and supported for transitions/animations. Radial clip mode takes a center point, start angle and angular width of the revealed sector.<br><br><b>Example:</b><pre>clip: rect( 10%, 90%, 90%, 10% );clip: radial( 50% %50, 0deg, 90deg );</pre>
 Specifies a scale to apply to this panel's layout and all descendants. This scale happens at the layout level ratherthan the bitmap level, so things like text will increase their font size rather than just bitmap scaling. <br><br><b>Examples:</b><pre>ui-scale: 150%; // 150% scaling for X, Y, and Z.ui-scale: 50% 100% 150%; // 50% scaling for X, 100% for Y. 150% for Z.</pre>
@@ -5079,8 +5131,8 @@ Specifies where to position the body of a context menu relative to this panel. T
 Specifies where to position the body of a tooltip relative to this panel. The first value controls how the body is aligned horizontally when the tooltip is to the top or bottom of the panel, and the second value controls how the body is aligned vertically when the tooltip is to the left or right of the panel. 0% means left/top aligned, 50% means center/middle aligned, and 100% means right/bottom aligned. Default is '0% 0%'.<br><br><b>Example:</b><pre>tooltip-body-position: 50% 100%;</pre>
 Specifies which properties should transition smoothly to new values if a class/pseudo class changes the styles.  Also specifies duration, timing function, and delay.  Valid timing functions are: ease, ease-in, ease-out, ease-in-out, linear.<br><br><b>Example:</b><pre>transition: position 2.0s ease-in-out 0.0s, perspective-origin 1.2s ease-in-out 0.8s;</pre>
 Specifies which properties should transition smoothly to new values if a class/pseudo class changes the styles.<br><br><b>Examples:</b><pre>transition: position, transform, background-color;</pre>
-Ss
 Ss=%d, Se=%d, Ah=%d, Al=%d
+St11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE
 St16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE
 St8functionIFvvEE
 Stack part of OpenSSL 1.0.2j  26 Sep 2016
@@ -5122,7 +5174,6 @@ Streaming Gamepad
 String field
 String literals cannot cross line boundaries.
 String too long from $.HTMLEscape
-StringOutputStream.
 StringPrintfVector currently only supports up to
 Strong Extranet ID
 StyleClassesChanged
@@ -5134,6 +5185,7 @@ Subject Information Access
 Subject OCSP hash:
 Subject Public Key Info:
 Subject:%c
+Success
 Suite B: cannot sign P-384 with P-256
 Suite B: certificate version invalid
 Suite B: curve not allowed for this LOS
@@ -5150,6 +5202,7 @@ Switch which class the panel has for a given attribute slot. Allows easily chang
 SwitchStyle
 Switching Protocols
 Symbol name "
+Synthetic oneofs must be after all other oneofs
 SystemInputLanguageChanged
 T
 T61
@@ -5215,6 +5268,8 @@ TYPE=
 TabBackward
 TabForward
 Tag '%s' was not closed
+Temp1%dx%d
+Temp2%dx%d
 Temporary Redirect
 TestFormatA
 TestFormatB
@@ -5225,11 +5280,12 @@ TestScriptMgr001
 TextEntryFocusChange(): Cleared for %s
 TextEntryFocusChange(): Set for %s
 TextEntryInvalid(): Cleared for %s
-TextFormat::Parser for Any supports only type.googleapis.com and type.googleprod.com, but found "
 TextInputFinished
 TextInputHandlerStateChange
 TextLayout_001
 The JSON camel-case name of field "
+The [proto3_optional=true] option may only be set on proto3fields, not
+The extension
 The first enum value must be zero in proto3.
 The following file has been changed on disk but is also edited in memory. Would you like to throw out in memory changes?File:%s
 The type parameter T in RepeatedFieldRef<T> API doesn't match
@@ -5252,10 +5308,8 @@ ThreadMultiWait
 ThreadSetAffinityPreference
 ThreadSleep
 Time Stamp signing
+Time: %f
 TimeoutFastScrollSound
-To google::protobuf::internal::down_cast(From*) [with To = const google::protobuf::Message*, From = const google::protobuf::MessageLite]
-To google::protobuf::internal::down_cast(From*) [with To = const google::protobuf::UninterpretedOption*, From = const google::protobuf::Message]
-To google::protobuf::internal::down_cast(From*) [with To = google::protobuf::Message*, From = google::protobuf::MessageLite]
 Toggle whether a panel has the given CSS class.
 Toggle whether this panel is :selected.
 ToggleConsole
@@ -5340,19 +5394,19 @@ Unable to load layout from string
 Unable to load snippet %s
 Unable to parse SVG '%s': %s
 Unable to read file %s
-Unable to save file
-Unable to save the following file, because it has changed on disk.File:%s
 Unable to traverse to child '%s' in panel '%s'
 Unauthorized
 Undefined namespace prefix '%s'
 Underlying object is deleted!
+Unexpected end of string.
 Unexpected failure while serializing option submessage
 Unexpected marker 0x%02x
 Unexpected parsing error - popping last remaining panel off stack, but not root element: line %d, col %d
 Unexpected parsing error - popping panel off empty stack: line %d, col %d
 Unexpected parsing error: line %d, col %d
 Unexpected transform type
-Unimplemented Map Reflection API.
+Unimplemented type:
+Uninterpreted option is missing name or value.
 Unknown
 Unknown APP0 marker (not JFIF), length %u
 Unknown APP14 marker (not Adobe), length %u
@@ -5388,9 +5442,13 @@ Unsupported JPEG process: SOF type 0x%02x
 Unsupported Media Type
 Unsupported color conversion request
 Unsupported combinator in selector: %c
+Unsupported component value :
+Unsupported compression format
+Unsupported compression type :
 Unsupported encoding '%s'
 Unsupported extension feature
 Unsupported marker type 0x%02x
+Unsupported version or scanline
 Unsupported: type mismatch
 Unused
 Use Proxy
@@ -5454,6 +5512,8 @@ VMS_MERGER
 VMS_UNLOAD
 VMaterialSystem2_001
 VMediaFoundation001
+VNotify
+VNotify Abandoned (Not enabled)
 VP4003
 VPhysics2_Handle_Interface_001
 VPhysics2_Interface_001
@@ -5461,6 +5521,7 @@ VProcessUtils002
 VProfService_001
 VR_001
 VRenderDeviceSetupV001
+VScript
 VScriptDbg
 VScriptManager010
 VStringTokenSystem001
@@ -5488,7 +5549,7 @@ V_UnicodeLength(char const*)
 V_UnicodeLength(unsigned short const*)
 V_UnicodeLength(wchar_t const*)
 V_UnqualifiedFileName
-V_acos
+V_acosd
 V_acosf
 V_asinf
 V_atan2f
@@ -5499,36 +5560,39 @@ V_atofloat64
 V_atoi
 V_atoi64
 V_atoui64
-V_cos
+V_cosd
 V_cosf
 V_expf
 V_fclose
 V_fmodf
 V_fopenUTF8
+V_fpclassifyd
 V_fprintf
 V_fputc
 V_fread
 V_fwrite
+V_isnand
 V_isstrlower_fast
 V_isvalidhex
 V_localeconv
 V_logf
 V_longjmp
 V_modff
-V_pow
+V_powd
 V_powf
 V_qsort
 V_qsort_s
 V_roundf
 V_setjmp
-V_sin
 V_sincosf
+V_sind
 V_sinf
 V_snprintf
 V_sscanf
 V_stricmp_fast
 V_stristr_fast(char const*, char const*)
 V_strlower_fast
+V_strnlen
 V_strtod
 V_strtoi64
 V_strtoui64
@@ -5590,12 +5654,12 @@ WTLS curve over a 113 bit binary field
 WTLS curve over a 160 bit prime field
 WTLS curvs over a 224 bit prime field
 Warning
+Warning (problem that doesn't prevent forward progress)
 Warning parsing text-format
 Warning:  %s = '%s' is infinite, clamping value.
 Warning: thumbnail image size does not match data length %u
 Warning: unknown JFIF revision number %d.%02d
 Warning: unknown gradient type
-When enum name is stripped and label is PascalCased (
 Whitespace not allowed here
 Whitespace required
 Width is too large for libpng to process pixels
@@ -5773,6 +5837,8 @@ You need to read the OpenSSL FAQ, http://www.openssl.org/support/faq.html
 Z
 Z"0*
 ZEo^
+ZFP compression is not supported in this build
+ZFP compression is not supported.
 ZLIB
 ZLONG
 Zero length tRNS chunk
@@ -5784,11 +5850,13 @@ Zero length tRNS chunk
 [%.3f server clamped to %.3f]
 [%02d:%02d:%02d]
 [%s] %s=%s
+[Default] General information
 [HEX DUMP]:
 [[%s]]
 [default = $0
 [lazy = true] can only be specified for submessage fields.
 [libprotobuf %s %s:%d] %s
+[object@%p]
 [packed = true] can only be specified for repeated primitive fields.
 \
 \"
@@ -5836,7 +5904,6 @@ __ctype_toupper_loc
 __cxa_allocate_exception
 __cxa_atexit
 __cxa_begin_catch
-__cxa_call_unexpected
 __cxa_end_catch
 __cxa_finalize
 __cxa_free_exception
@@ -5849,6 +5916,7 @@ __cxa_throw
 __dynamic_cast
 __errno_location
 __fprintf_chk
+__fread_chk
 __fxstat
 __gmon_start__
 __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > > std::vector<unsigned char, std::allocator<unsigned char> >::insert<__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, void>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >)
@@ -5861,10 +5929,13 @@ __memset_chk
 __once_proxy
 __printf_chk
 __pthread_key_create
+__snprintf_chk
+__sprintf_chk
 __stack_chk_fail
 __strcat_chk
 __strcpy_chk
 __tls_get_addr
+__vasprintf_chk
 __vfprintf_chk
 __vsnprintf_chk
 __xstat
@@ -5875,6 +5946,8 @@ _k_EBeginFrame
 _z0
 `
 `'
+`chunkCount' attribute is not found in the header.
+`fread' error. file may be corrupted.
 `jG
 a
 a null shared library handle was used
@@ -5925,6 +5998,7 @@ accept error
 acceptableResponses
 acceptsfocus
 acceptsinput
+accessor_ == other.accessor_
 account
 activation_change_fail
 activationdisabled
@@ -5979,7 +6053,6 @@ after solve err=%f
 akid mismatch
 algorithm mismatch
 aliceblue
-allowed in proto3.
 alternate
 alternate-reverse
 always
@@ -6013,7 +6086,6 @@ archive
 archiveCutoff
 args were given.  Full format string was: "
 arguments.
-array_ != __null
 asn1
 asn1 encoding routines
 asn1 length mismatch
@@ -6047,6 +6119,7 @@ background-blur
 background-color
 background-color-opacity
 background-image
+background-img-opacity
 background-position
 background-repeat
 background-size
@@ -6151,6 +6224,7 @@ binary
 binary_auto
 binary_bc
 binary_lz4
+binary_zstd
 bind
 bio write failure
 bio_asn1.c
@@ -6192,13 +6266,7 @@ bn_rand.c
 bn_recp.c
 bn_shift.c
 bn_sqrt.c
-bool
-bool google::protobuf::safe_parse_negative_int(const string&, IntType*) [with IntType = int, std::string = std::basic_string<char>]
-bool google::protobuf::safe_parse_negative_int(const string&, IntType*) [with IntType = long int, std::string = std::basic_string<char>]
-bool google::protobuf::safe_parse_positive_int(std::string, IntType*) [with IntType = int, std::string = std::basic_string<char>]
-bool google::protobuf::safe_parse_positive_int(std::string, IntType*) [with IntType = long int, std::string = std::basic_string<char>]
-bool google::protobuf::safe_parse_positive_int(std::string, IntType*) [with IntType = long unsigned int, std::string = std::basic_string<char>]
-bool google::protobuf::safe_parse_positive_int(std::string, IntType*) [with IntType = unsigned int, std::string = std::basic_string<char>]
+bool google::protobuf::internal::RepeatedFieldRefIterator<T>::operator!=(const google::protobuf::internal::RepeatedFieldRefIterator<T>&) const [with T = google::protobuf::Message]
 boolean is wrong length
 border
 border-bottom
@@ -6257,11 +6325,10 @@ buildingName
 bulgarian
 burlywood
 businessCategory
-but not used.
 by_dir.c
 by_file.c
 bytes
-bytes).  To increase the limit (or to disable these warnings), see CodedInputStream::SetTotalBytesLimit() in google/protobuf/io/coded_stream.h.
+bytes).  To increase the limit (or to disable these warnings), see CodedInputStream::SetTotalBytesLimit() in third_party/protobuf/src/google/protobuf/io/coded_stream.h.
 bytes.
 c
 c2i_ASN1_BIT_STRING
@@ -6304,7 +6371,7 @@ ca dn too long
 caIssuers
 caRepository
 cadetblue
-cairo.so
+cairo
 cairo_append_path
 cairo_arc
 cairo_arc_negative
@@ -6658,6 +6725,7 @@ camellia192
 camellia256
 can't find SRP server param
 can't reach here.
+cannot be required.
 cannot find free function
 cant check dh key
 cant pack structure
@@ -6702,6 +6770,7 @@ challenge is different
 challengePassword
 channels
 char google::protobuf::StringPiece::operator[](google::protobuf::stringpiece_ssize_type) const
+char* std::string::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)
 characteristic-two-field
 chartreuse
 cheat
@@ -6724,6 +6793,7 @@ class, duration, pre-delay
 class, eventToFire
 class, pre-delay
 cleanup method function failed
+clear_group
 clearance
 cleartext track 2
 client finished
@@ -6802,6 +6872,9 @@ connection id is different
 connection type not set
 console_history_size
 const google::protobuf::UnknownFieldSet& google::protobuf::UnknownField::group() const
+const google::protobuf::internal::ExtensionSet::Extension* google::protobuf::internal::ExtensionSet::FindOrNullInLargeMap(int) const
+const google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_begin() const
+const google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_end() const
 const string& google::protobuf::UnknownField::length_delimited() const
 cont [ %d ]
 contain
@@ -6820,7 +6893,6 @@ contentEncryptionAlgorithm
 contentType
 content_type
 contentidentifier mismatch
-contents
 context not initialised
 context-menu-arrow-position
 context-menu-body-position
@@ -6991,12 +7063,15 @@ data too large for modulus
 data too small
 data too small for key size
 data value for AsyncWebRequest settings must be an object with named key->value request params if set
+data width or data height is negative.
 data width too large.
 data/imageloader.cpp
 dataEncipherment
 dataWindow
+data_ == other.data_
 data_height =
 data_plus_mac_plus_padding_size < 1024 * 1024
+data_with or data_height too large. data_width:
 dcObject
 dcobject
 de_DE
@@ -7009,6 +7084,7 @@ deeppink
 deepskyblue
 defaultfocus
 defaultfocus=%s not found within layout file for %s
+definition file imports the proto which defines the option.
 defs
 delay, eventToFire
 deltaCRL
@@ -7084,6 +7160,7 @@ digitalSignature
 dimgray
 dimgrey
 dinfo
+dir=%d %d %d, err=%f
 dirName
 directory services (X.500)
 directory services - algorithms
@@ -7295,6 +7372,7 @@ encryptedContentInfo
 encryptedKey
 encryption ctrl failure
 encryption not supported for this key type
+end_group
 engine routines
 english
 enhancedSearchGuide
@@ -7352,6 +7430,7 @@ evp_pbe.c
 evp_pkey
 evp_pkey.c
 ex_data.c
+exceeded maximum protobuf size of 2GB:
 excessive message size
 excluded
 excluded subtree violation
@@ -7393,7 +7472,6 @@ extension value error
 external
 extra data in message
 f
-f == __null || dynamic_cast<To>(f) != __null
 f_int.c
 f_string.c
 facsimileTelephoneNumber
@@ -7404,6 +7482,7 @@ fatal
 favouriteDrink
 feof
 ferror
+fesetround
 fff?fff?fff?fff?
 fflush
 fgets
@@ -7438,8 +7517,6 @@ first octet invalid
 fit-children
 fixed
 fixed point overflow ignored
-fixed32
-fixed64
 float
 floatbitmap.cpp
 floor
@@ -7487,6 +7564,7 @@ g
 g*
 g_Mathlib_GammaToLinearByteTable
 g_VProfCurrentProfile
+g_bUpdateStringTokenDatabase
 g_iStylePropertyIndexNextFree < 255
 g_pMemAlloc
 g_pThreadPool
@@ -7494,8 +7572,6 @@ gainsboro
 game
 gamepad
 gamma = (%d/100000)
-gaussian
-gaussian(
 gc^A
 generate cryptogram
 generationQualifier
@@ -7518,19 +7594,25 @@ gmtime_r
 gold
 google.protobuf.
 google.protobuf.Any
+google.protobuf.BoolValue
+google.protobuf.BytesValue
 google.protobuf.DescriptorProto.name
 google.protobuf.DescriptorProto.reserved_name
+google.protobuf.DoubleValue
+google.protobuf.Duration
 google.protobuf.Empty
 google.protobuf.EnumDescriptorProto.name
 google.protobuf.EnumDescriptorProto.reserved_name
 google.protobuf.EnumOptions
 google.protobuf.EnumValueDescriptorProto.name
 google.protobuf.EnumValueOptions
+google.protobuf.ExtensionRangeOptions
 google.protobuf.FieldDescriptorProto.default_value
 google.protobuf.FieldDescriptorProto.extendee
 google.protobuf.FieldDescriptorProto.json_name
 google.protobuf.FieldDescriptorProto.name
 google.protobuf.FieldDescriptorProto.type_name
+google.protobuf.FieldMask
 google.protobuf.FieldOptions
 google.protobuf.FileDescriptorProto.dependency
 google.protobuf.FileDescriptorProto.name
@@ -7543,57 +7625,76 @@ google.protobuf.FileOptions.java_outer_classname
 google.protobuf.FileOptions.java_package
 google.protobuf.FileOptions.objc_class_prefix
 google.protobuf.FileOptions.php_class_prefix
+google.protobuf.FileOptions.php_metadata_namespace
 google.protobuf.FileOptions.php_namespace
+google.protobuf.FileOptions.ruby_package
 google.protobuf.FileOptions.swift_prefix
+google.protobuf.FloatValue
 google.protobuf.GeneratedCodeInfo.Annotation.source_file
+google.protobuf.Int32Value
+google.protobuf.Int64Value
+google.protobuf.ListValue
 google.protobuf.MessageOptions
 google.protobuf.MethodDescriptorProto.input_type
 google.protobuf.MethodDescriptorProto.name
 google.protobuf.MethodDescriptorProto.output_type
 google.protobuf.MethodOptions
 google.protobuf.OneofDescriptorProto.name
+google.protobuf.OneofOptions
 google.protobuf.ServiceDescriptorProto.name
 google.protobuf.ServiceOptions
 google.protobuf.SourceCodeInfo.Location.leading_comments
 google.protobuf.SourceCodeInfo.Location.leading_detached_comments
 google.protobuf.SourceCodeInfo.Location.trailing_comments
-google.protobuf.StreamOptions
+google.protobuf.StringValue
+google.protobuf.Struct
+google.protobuf.Timestamp
+google.protobuf.UInt32Value
+google.protobuf.UInt64Value
 google.protobuf.UninterpretedOption.NamePart.name_part
 google.protobuf.UninterpretedOption.aggregate_value
 google.protobuf.UninterpretedOption.identifier_value
+google.protobuf.Value
+google.protobuf.bridge.MessageSet
 google/protobuf/arena.cc
+google/protobuf/arenastring.cc
 google/protobuf/descriptor.cc
 google/protobuf/descriptor.pb.cc
 google/protobuf/descriptor.proto
-google/protobuf/descriptor_database.cc
-google/protobuf/dynamic_message.cc
-google/protobuf/extension_set.cc
 google/protobuf/extension_set_heavy.cc
 google/protobuf/generated_message_reflection.cc
 google/protobuf/generated_message_util.cc
 google/protobuf/io/coded_stream.cc
-google/protobuf/io/strtod.cc
 google/protobuf/io/tokenizer.cc
-google/protobuf/io/zero_copy_stream.cc
 google/protobuf/io/zero_copy_stream_impl.cc
 google/protobuf/io/zero_copy_stream_impl_lite.cc
 google/protobuf/map_field.cc
 google/protobuf/message.cc
 google/protobuf/message_lite.cc
+google/protobuf/parse_context.cc
 google/protobuf/reflection_ops.cc
-google/protobuf/repeated_field.cc
 google/protobuf/stubs/common.cc
+google/protobuf/stubs/int128.cc
 google/protobuf/stubs/stringpiece.cc
-google/protobuf/stubs/stringprintf.cc
 google/protobuf/stubs/strutil.cc
 google/protobuf/stubs/substitute.cc
 google/protobuf/text_format.cc
 google/protobuf/unknown_field_set.cc
+google/protobuf/wire_format.cc
 google/protobuf/wire_format_lite.cc
+google::protobuf::FieldDescriptorProto_Label_IsValid(value)
+google::protobuf::FieldDescriptorProto_Type_IsValid(value)
+google::protobuf::FieldOptions_CType_IsValid(value)
+google::protobuf::FieldOptions_JSType_IsValid(value)
+google::protobuf::FileOptions_OptimizeMode_IsValid(value)
+google::protobuf::MethodOptions_IdempotencyLevel_IsValid(value)
 google::protobuf::StringPiece::StringPiece(const char*, google::protobuf::stringpiece_ssize_type)
+google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_begin()
+google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_end()
 google::protobuf::uint32 google::protobuf::UnknownField::fixed32() const
 google::protobuf::uint64 google::protobuf::UnknownField::fixed64() const
 google::protobuf::uint64 google::protobuf::UnknownField::varint() const
+google::protobuf::uint8* google::protobuf::internal::ExtensionSet::_InternalSerialize(int, int, google::protobuf::uint8*, google::protobuf::io::EpsCopyOutputStream*) const
 gost-mac
 gost2001
 gost2001cc
@@ -7610,11 +7711,12 @@ gravity-acceleration
 gravity-acceleration-particle-variance
 greek
 greenyellow
-group
 group2pkparameters failure
 group=
+group_title
 gx=%d, gy=%d, bx=%d, by=%d
 h
+has the same name as
 hashAlgorithm
 hashFunc
 hd=<
@@ -7674,7 +7776,6 @@ i
 i < length_
 i <= EVP_MAX_MD_SIZE
 i <= n
-i >= 0
 i2b_PVK_bio
 i2d ecpkparameters failure
 i2d_ASN1_SET
@@ -7943,6 +8044,7 @@ identified-organization
 idp mismatch
 ids
 idx
+if you ignore case and strip out the enum name prefix (if any). This is error-prone and can lead to undefined behavior. Please avoid doing this. If you are using allow_alias, please assign the same numeric value to both enums.
 if1R
 ignoring out of range rgb_to_gray coefficients
 illegal Suite B digest
@@ -7982,15 +8084,12 @@ incorrect gamma=(%d/100000)
 incorrect header check
 incorrect length check
 incorrect policy syntax tag
-index < 10
 index too large
 index too small
 indianred
 indigo
 indirectCRL
-inf
 infinite
-infinity
 inhibitAnyPolicy
 inhibitPolicyMapping
 initials
@@ -8002,8 +8101,6 @@ inset
 inset box-shadow
 inspect
 int google::protobuf::CalculateBase64EscapedLen(int, bool)
-int32
-int64
 int_dhvparams
 int_dhx942_dh
 int_err_get (err.c)
@@ -8127,6 +8224,7 @@ ipsecTunnel
 ipsecUser
 iqmp
 iqmp not inverse of q
+is unused.
 iso
 issuer capabilities
 issuer decode error
@@ -8180,6 +8278,7 @@ kRSA
 kSRP
 k_EBeginPaintBackground
 k_EBeginPaintLast
+k_EBlurRectangle
 k_EClearBackBuffer
 k_ECmdDrawTexturedRect
 k_ECmdFreeCompositingLayer
@@ -8191,6 +8290,7 @@ k_EDrawTextRegion
 k_EEndFrame
 k_EEndPaintBackground
 k_EEndPaintLast
+k_ELoadRectangleIntoTexture
 k_ENestedCommand
 k_ENestedCommandList
 k_EPopAnimationAndTransformContext
@@ -8198,15 +8298,16 @@ k_EPopClipLayer
 k_EPopCompositingLayer
 k_EPopPanelContextInLayer
 k_EPushAnimationAndTransformContext
+k_EPushBlurPanels
 k_EPushClipLayer
 k_EPushCompositingLayer
 k_EPushPanelContextInLayer
 k_ERequestRenderCallback
+k_EWorldBlur
 kdf parameter error
 keepalive
 keepscrolltobottom
 kekid
-key
 key arg too long
 key expansion
 key gen error
@@ -8449,6 +8550,7 @@ localityName
 localtime
 location
 locator
+loud
 lowercase
 lseek
 m
@@ -8523,7 +8625,6 @@ memory buffer
 memory buffer routines
 memset
 merchant initiated auth
-message
 message digest is null
 message extensions
 message imprint mismatch
@@ -8550,6 +8651,8 @@ min. %f
 minimum
 minsize=
 mintcream
+mipmapgaussian
+mipmapgaussian(
 missing asn1 eos
 missing ceripend info
 missing close square bracket
@@ -8616,7 +8719,6 @@ mstring wrong tag
 multipart/signed
 multiple sgc restarts
 n
-n >= 0
 n does not equal p q
 nSRecord
 nTries < 10000000
@@ -8762,7 +8864,6 @@ not basic response
 not dek info
 not encrypted
 not enough data
-not found
 not kek
 not key agreement
 not key transport
@@ -8794,6 +8895,7 @@ null before block missing
 null is wrong length
 null ssl ctx
 null ssl method passed
+nullptr output boolean given.
 number=%d, address=%08lX
 o
 o2i_ECPublicKey
@@ -8856,6 +8958,7 @@ onscrolledtorightedge
 onselect
 ontabbackward
 ontabforward
+opacity-brush
 opacity-mask
 opacity-mask-scroll-down
 opacity-mask-scroll-up
@@ -8877,6 +8980,7 @@ operator new(unsigned long, std::nothrow_t const&)
 operator new[](unsigned long)
 operator new[](unsigned long, std::nothrow_t const&)
 operator==
+option json_name is not allowed on extension fields.
 optional
 optionalSignature
 orangered
@@ -8900,7 +9004,7 @@ othername error
 othername:<unsupported>
 out of memory
 outer box-shadow
-output specified is NULL
+output specified is nullptr
 overscroll-x
 overscroll-y
 owner
@@ -8924,6 +9028,7 @@ p5_crpt2.c
 p5_pbe.c
 p5_pbev2.c
 pB
+pEngine
 pSourceFunc
 pSpecified
 p_verify.c
@@ -8960,6 +9065,7 @@ panorama RenderCommand_t memory stack
 panorama/layout/custom_game/
 panorama/localization/panorama_%language%.txt
 panorama/panorama.vrman
+panorama_GenerateLayoutXSD
 panorama_fancyquad_gradienttexture.vtex
 panorama_fancyquad_vertexlayout
 panorama_rt_%s.vtex
@@ -8975,7 +9081,6 @@ papayawhip
 parameter encoding error
 parent-relative
 parentdisabled
-parse
 parse tlsext
 parsing
 particle-end-color
@@ -9044,6 +9149,7 @@ pem_pkey.c
 permitted
 permitted subtree violation
 permittedSubtrees
+persist_group
 personalSignature
 personalTitle
 perspective
@@ -9133,6 +9239,7 @@ portuguese
 postOfficeBox
 postalAddress
 postalCode
+pow
 powderblue
 pqualid
 pqueue.c
@@ -9155,6 +9262,7 @@ prime256v1
 prime2:
 prime:
 print panorama event types and their documentation
+priority
 priv [ %d ]
 priv:
 priv_key
@@ -9171,7 +9279,6 @@ problems getting password
 problems mapping cipher functions
 producedAt
 program
-proto
 proto2
 proto3
 protocol is shutdown
@@ -9189,17 +9296,13 @@ psk no server cb
 pss
 pt_BR
 pt_PT
-pthread_cancel
 pthread_mutex_destroy
 pthread_mutex_init
 pthread_mutex_lock
-pthread_mutex_lock:
 pthread_mutex_unlock
-pthread_mutex_unlock:
 pthread_mutexattr_init
 pthread_mutexattr_settype
 pthread_once
-ptr_ != __null
 pub:
 pub_key
 pubkey
@@ -9221,6 +9324,7 @@ q>(
 qcStatements
 qualifiers
 qualityLabelledData
+quiet
 r
 r+
 r:
@@ -9266,7 +9370,7 @@ record length mismatch
 record too large
 record too small
 rect(
-registered:
+recursion_budget_ < recursion_limit_
 registeredAddress
 registerforreadyevents
 reject
@@ -9289,10 +9393,11 @@ requestList
 requestorName
 require-composition-layer
 requireExplicitPolicy
-required
 required cipher missing
 required compresssion algorithm missing
 reserved
+resource
+resource_name
 responderId
 response contains no revocation data
 response setup error
@@ -9407,7 +9512,6 @@ scale3d(
 scalex
 scaley
 scalez
-sched_yield
 schemabindings.cpp
 schinese
 screenWindowCenter
@@ -9669,6 +9773,7 @@ signing not supported for this key type
 signingTime
 silver
 simpleSecurityObject
+sin
 singleExtensions
 singleLevelQuality
 singleRequestExtensions
@@ -9678,8 +9783,11 @@ sint32
 sint64
 size too big:
 size_t to int conversion
+skew(
 skewX
 skewY
+skewx
+skewy
 slot full
 slot, class
 smb://
@@ -9698,12 +9806,13 @@ socket
 solid
 sound
 sound-out
+soundevent
 source2/renderer/source2surface.cpp
 source2/uienginesource2.cpp
 source2/uirenderdevicesource2.cpp
+source_line
 spanish
 spkac
-sprintf
 sqrt
 sqrtf
 squish
@@ -9853,13 +9962,14 @@ sslv3 alert no certificate
 sslv3 alert unexpected message
 sslv3 alert unsupported certificate
 sslv3 rollback attack
-stack.c
+stack frames not accounted for stack unwind.
 stateOrProvinceName
 static
 status expired
 status not yet valid
 status too old
 statusText
+std::_Hash_bytes(void const*, unsigned long, unsigned long)
 std::_Rb_tree_decrement(std::_Rb_tree_node_base const*)
 std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
 std::_Rb_tree_increment(std::_Rb_tree_node_base const*)
@@ -9868,6 +9978,8 @@ std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree
 std::_Rb_tree_rebalance_for_erase(std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_destroy()
 std::_Sp_counted_ptr<decltype(nullptr), (__gnu_cxx::_Lock_policy)2>::_M_dispose()
+std::__detail::_Prime_rehash_policy::_M_need_rehash(unsigned long, unsigned long, unsigned long) const
+std::__detail::_Prime_rehash_policy::_M_next_bkt(unsigned long) const
 std::__exception_ptr::exception_ptr::exception_ptr(std::__exception_ptr::exception_ptr const&)
 std::__exception_ptr::exception_ptr::swap(std::__exception_ptr::exception_ptr&)
 std::__exception_ptr::exception_ptr::~exception_ptr()
@@ -9885,26 +9997,20 @@ std::__throw_length_error(char const*)
 std::__throw_logic_error(char const*)
 std::__throw_out_of_range_fmt(char const*, ...)
 std::__throw_system_error(int)
-std::allocator<char>::allocator()
-std::allocator<char>::~allocator()
-std::basic_ios<char, std::char_traits<char> >::eof() const
-std::basic_ios<char, std::char_traits<char> >::fail() const
 std::basic_ios<char, std::char_traits<char> >::fill() const
-std::basic_ios<char, std::char_traits<char> >::good() const
 std::basic_ios<char, std::char_traits<char> >::init(std::basic_streambuf<char, std::char_traits<char> >*)
 std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
 std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setfill<char>)
 std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setw)
 std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char>, std::allocator<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
 std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >::basic_ostringstream(std::_Ios_Openmode)
-std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >::str() const
 std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >::~basic_ostringstream()
-std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()
 std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)
 std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, unsigned long, std::allocator<char> const&)
 std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&)
 std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(unsigned long, char, std::allocator<char> const&)
 std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()
+std::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >::str() const
 std::chrono::_V2::steady_clock::now()
 std::condition_variable::condition_variable()
 std::condition_variable::notify_all()
@@ -9917,7 +10023,6 @@ std::ios_base::Init::Init()
 std::ios_base::Init::~Init()
 std::ios_base::ios_base()
 std::ios_base::~ios_base()
-std::istream::gcount() const
 std::istream::read(char*, long)
 std::locale::locale()
 std::locale::~locale()
@@ -9929,16 +10034,14 @@ std::ostream::operator<<(unsigned long)
 std::ostream::put(char)
 std::ostream::write(char const*, long)
 std::rethrow_exception(std::__exception_ptr::exception_ptr)
-std::string::_Alloc_hider::_Alloc_hider(char*, std::allocator<char> const&)
 std::string::_M_iend() const
+std::string::_M_leak()
 std::string::_M_leak_hard()
 std::string::_Rep::_M_destroy(std::allocator<char> const&)
-std::string::_Rep::_M_refdata()
 std::string::_Rep::_M_set_length_and_sharable(unsigned long)
 std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&)
 std::string::_Rep::_S_empty_rep_storage
 std::string::_S_copy_chars(char*, char*, char*)
-std::string::_S_empty_rep()
 std::string::append(char const*)
 std::string::append(char const*, unsigned long)
 std::string::append(std::string const&)
@@ -9949,15 +10052,9 @@ std::string::assign(std::string const&)
 std::string::at(unsigned long)
 std::string::at(unsigned long) const
 std::string::begin()
-std::string::begin() const
-std::string::c_str() const
-std::string::capacity() const
 std::string::clear()
 std::string::compare(char const*) const
 std::string::compare(std::string const&) const
-std::string::compare(unsigned long, unsigned long, std::string const&) const
-std::string::data() const
-std::string::empty() const
 std::string::end()
 std::string::end() const
 std::string::erase(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>)
@@ -9965,21 +10062,14 @@ std::string::erase(unsigned long, unsigned long)
 std::string::find(char const*, unsigned long, unsigned long) const
 std::string::find(char, unsigned long) const
 std::string::find(std::string const&, unsigned long) const
-std::string::find_first_not_of(char const*, unsigned long) const
-std::string::find_first_of(char const*, unsigned long) const
-std::string::find_first_of(char, unsigned long) const
-std::string::find_last_of(char const*, unsigned long) const
-std::string::find_last_of(char, unsigned long) const
+std::string::insert(unsigned long, char const*)
 std::string::insert(unsigned long, char const*, unsigned long)
+std::string::insert(unsigned long, std::string const&)
 std::string::insert(unsigned long, unsigned long, char)
-std::string::length() const
 std::string::operator+=(char const*)
-std::string::operator+=(char)
 std::string::operator+=(std::string const&)
 std::string::operator=(char const*)
 std::string::operator=(std::string const&)
-std::string::operator[](unsigned long)
-std::string::operator[](unsigned long) const
 std::string::push_back(char)
 std::string::replace(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char const*, std::string>, __gnu_cxx::__normal_iterator<char const*, std::string>)
 std::string::replace(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, char const*, char const*)
@@ -9987,13 +10077,12 @@ std::string::replace(unsigned long, unsigned long, char const*)
 std::string::replace(unsigned long, unsigned long, char const*, unsigned long)
 std::string::reserve(unsigned long)
 std::string::resize(unsigned long)
-std::string::size() const
+std::string::rfind(char, unsigned long) const
 std::string::substr(unsigned long, unsigned long) const
 std::string::swap(std::string&)
 std::terminate()
 std::thread::_M_start_thread(std::shared_ptr<std::thread::_Impl_base>)
 std::thread::join()
-std::tr1::__detail::__prime_list
 std::vector<float, std::allocator<float> >::_M_default_append(unsigned long)
 std::vector<unsigned char, std::allocator<unsigned char> >::_M_default_append(unsigned long)
 std::vector<unsigned char, std::allocator<unsigned char> >::vector(unsigned long, std::allocator<unsigned char> const&)
@@ -10051,17 +10140,14 @@ streaming not supported
 street
 streetAddress
 strerror
-string
 string too long
 string too short
 string=
 string_to_hex
 stringify
-strings::Substitute format string invalid: asked for "$
 strlen
 strlen(objstr) + 23 + 2 * enc->iv_len + 13 <= sizeof buf
 strncasecmp
-strnlen
 stroke-linecap
 stroke-linejoin
 stroke-opacity
@@ -10075,6 +10161,7 @@ strtoll
 strtoul
 strtoull
 sub%dx%d.tga
+subclass
 subgroup factor:
 subgroup order:
 subject
@@ -10144,6 +10231,7 @@ textshadow_blur
 texture-sampling
 th_TH
 thai
+the Element type supplies a MergeFrom() operation to make copies.
 the actual field type (for enums T should be the generated enum
 the asn1 object identifier is not known for this md
 the global scope
@@ -10160,7 +10248,6 @@ time stamp routines
 time syscall error
 timeStamping
 timestampsign
-title
 tls client cert req with anon cipher
 tls illegal exporter label
 tls invalid ecpointformat list
@@ -10192,7 +10279,6 @@ tlsv1 bad certificate status response
 tlsv1 certificate unobtainable
 tlsv1 unrecognized name
 tlsv1 unsupported extension
-to
 token not present
 token present
 tomato
@@ -10243,15 +10329,12 @@ type() == TYPE_LENGTH_DELIMITED
 type() == TYPE_VARINT
 type.googleapis.com/
 type.googleprod.com/
-type:
 type_id
 typeinfo for CThread
 typeinfo for CThreadSyncObject
-typeinfo for char
 typeinfo for std::__future_base::_Result_base
 typeinfo for std::__future_base::_State_base
 typeinfo for std::exception
-typeinfo for unsigned char
 typeinfo for void*
 typeinfo name for EVideoPlayerEvent
 typeinfo name for panorama::EActiveControllerType
@@ -10269,7 +10352,6 @@ ui-scale-z
 ui_lib.c
 ui_openssl.c
 uiengine.cpp
-uint32
 uint64
 uk
 uk_UA
@@ -10315,7 +10397,6 @@ undefined generator
 undefined order
 underline
 unexpected eoc
-unexpected for field
 unexpected message
 unexpected record
 unhandled critical CRL extension
@@ -10324,7 +10405,6 @@ uninitialized
 uninterpreted_option
 uniqueMember
 universalstring is wrong length
-unknown
 unknown alert type
 unknown algorithm type
 unknown bit string argument
@@ -10569,7 +10649,6 @@ v8::Value::Uint32Value() const
 v8::platform::CreateDefaultPlatform(int)
 v=
 vQO+
-value
 value missing
 value.bag
 value.byKey
@@ -10597,8 +10676,8 @@ vcss
 vcss_c
 vector::_M_default_append
 vector::_M_emplace_back_aux
-vector::_M_fill_insert
 vector::_M_insert_aux
+vector::_M_range_check: __n (which is %zu) >= this->size() (which is %zu)
 vector::_M_range_insert
 vector::reserve
 verification failure
@@ -10611,18 +10690,13 @@ viewBox
 visibility
 visible
 vjs
-vmax > 0
-vmax >= base
-vmin < 0
-vmin <= 0 - base
-void google::protobuf::FieldDescriptorProto::set_label(google::protobuf::FieldDescriptorProto_Label)
-void google::protobuf::FieldDescriptorProto::set_type(google::protobuf::FieldDescriptorProto_Type)
-void google::protobuf::FieldOptions::set_ctype(google::protobuf::FieldOptions_CType)
-void google::protobuf::FieldOptions::set_jstype(google::protobuf::FieldOptions_JSType)
-void google::protobuf::FileOptions::set_optimize_for(google::protobuf::FileOptions_OptimizeMode)
-void google::protobuf::MethodOptions::set_idempotency_level(google::protobuf::MethodOptions_IdempotencyLevel)
-void google::protobuf::StringPiece::remove_prefix(google::protobuf::stringpiece_ssize_type)
-void google::protobuf::strings::SubstituteAndAppend(std::string*, const char*, const google::protobuf::strings::internal::SubstituteArg&, const google::protobuf::strings::internal::SubstituteArg&, const google::protobuf::strings::internal::SubstituteArg&, const google::protobuf::strings::internal::SubstituteArg&, const google::protobuf::strings::internal::SubstituteArg&, const google::protobuf::strings::internal::SubstituteArg&, const google::protobuf::strings::internal::SubstituteArg&, const google::protobuf::strings::internal::SubstituteArg&, const google::protobuf::strings::internal::SubstituteArg&, const google::protobuf::strings::internal::SubstituteArg&)
+void google::protobuf::FieldDescriptorProto::_internal_set_label(google::protobuf::FieldDescriptorProto_Label)
+void google::protobuf::FieldDescriptorProto::_internal_set_type(google::protobuf::FieldDescriptorProto_Type)
+void google::protobuf::FieldOptions::_internal_set_ctype(google::protobuf::FieldOptions_CType)
+void google::protobuf::FieldOptions::_internal_set_jstype(google::protobuf::FieldOptions_JSType)
+void google::protobuf::FileOptions::_internal_set_optimize_for(google::protobuf::FileOptions_OptimizeMode)
+void google::protobuf::MethodOptions::_internal_set_idempotency_level(google::protobuf::MethodOptions_IdempotencyLevel)
+void google::protobuf::io::CodedInputStream::UnsafeDecrementRecursionDepth()
 void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int const&>(int const&)
 void std::vector<std::vector<unsigned long, std::allocator<unsigned long> >, std::allocator<std::vector<unsigned long, std::allocator<unsigned long> > > >::_M_emplace_back_aux<std::vector<unsigned long, std::allocator<unsigned long> > const&>(std::vector<unsigned long, std::allocator<unsigned long> > const&)
 void std::vector<unsigned char, std::allocator<unsigned char> >::_M_emplace_back_aux<unsigned char const&>(unsigned char const&)
@@ -10654,7 +10728,6 @@ vtable for std::basic_ios<char, std::char_traits<char> >
 vtable for std::basic_streambuf<char, std::char_traits<char> >
 vtable for std::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >
 vtable for std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >
-vtable for std::exception
 vtex_dll
 vtf
 vv == NULL
@@ -10662,7 +10735,7 @@ vxml
 vxml_c
 w
 w3(?
-wap
+waiting_group
 wap-wsg
 wap-wsg-idm-ecid-wtls1
 wap-wsg-idm-ecid-wtls10
@@ -10675,6 +10748,8 @@ wap-wsg-idm-ecid-wtls6
 wap-wsg-idm-ecid-wtls7
 wap-wsg-idm-ecid-wtls8
 wap-wsg-idm-ecid-wtls9
+warn
+warning
 was modified concurrently during serialization.
 wash-color
 wb
@@ -10689,6 +10764,7 @@ with
 with %d x %d thumbnail image
 with a type that does not implement MergeFrom. This is unsafe;
 with type
+world-blur
 wrap mode not allowed
 write bio not set
 write to read only BIO
@@ -10776,6 +10852,7 @@ zlib version error
 |-
 |}
 }
+} from:
 }O-+`Zt
 ~
 ~4ecp_nistp521.c

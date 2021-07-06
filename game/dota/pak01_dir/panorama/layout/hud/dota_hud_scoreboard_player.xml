@@ -17,6 +17,7 @@
 		<Panel id="PlayerAndHeroNameContainer" class="TopBottomFlow">
 			<Panel id="PlayerNameAndIconRow" class="LeftRightFlow">
 				<Panel id="PlayerIconPanel" />
+				<DOTAEventCrestImage id="TeamCrest"/>
 				<Label id="PlayerNameLabel" class="PlayerNameLabel" text="{g:dota_player_name:nc:nh:player_id}" html="true" />
 			</Panel>
 			<Label id="HeroNameLabel" class="HeroNameLabel" text=""/>			
@@ -37,12 +38,14 @@
             <Panel id="UltIcon" class="ScoreboardUltIndicator UltNotLearned"/>
 		</Panel>
 		<Panel id="ScoreboardMuteButtons" class="LeftRightFlow">
-			<ToggleButton id="VoiceMute" class="ScoreboardMuteButton Voice" onactivate="DOTAPlayerMuteChanged()" />
-			<ToggleButton id="TextMute" class="ScoreboardMuteButton Text" onactivate="DOTAPlayerMuteChanged()" />
+			<ToggleButton id="VoiceMute" class="ScoreboardMuteButton Voice" onactivate="DOTAPlayerMuteChanged()" onmouseover="UIShowTextTooltip( DOTA_UserMenu_Mute_Voice )" onmouseout="UIHideTextTooltip()" />
+			<ToggleButton id="TextMute" class="ScoreboardMuteButton Text" onactivate="DOTAPlayerMuteChanged()" onmouseover="UIShowTextTooltip( DOTA_UserMenu_Mute_Text )" onmouseout="UIHideTextTooltip()" />
+			<Button id="OverwatchReportButton" class="ScoreboardMuteButton" onactivate="DOTAPlayerOverwatchReport()" onmouseover="UIShowTextTooltip( dota_popup_report_player_title )" onmouseout="UIHideTextTooltip()" />
 		</Panel>
 		<Panel id="ArcanaContent">
-			<Panel class="Background" onmouseover="UIShowTextTooltip( #DOTA_HUD_Scoreboard_WKArcanaNeeded )"  onmouseout="UIHideTextTooltip()"/>
-			<Panel class="Foreground" onmouseover="UIShowTextTooltip( #DOTA_HUD_Scoreboard_WKArcanaKilled )"  onmouseout="UIHideTextTooltip()" />
+			<Panel id="ArcanaContentForeground" class="Background" onmouseout="UIHideTextTooltip()"/>
+			<Panel id="ArcanaContentBackground" class="Foreground" onmouseout="UIHideTextTooltip()" />
+			<Label id="ArcanaContentLabel" html="true"/>
 		</Panel>
 		<Panel id="TipControls">
 			<Label id="TipsAvailable" text="#DOTA_Scoreboard_TipsAvailable" />

@@ -28,7 +28,7 @@
 		  0 : "None"
 
 		  2: "World: Window"
-		 12: "World: Act Busy Hint"
+//		 12: "World: Act Busy Hint"
 		 13: "World: Visually Interesting"
 		 14: "World: Visually Interesting (Don't aim at)"
 		 15: "World: Inhibit Combine Mines within 15 feet"
@@ -38,9 +38,9 @@
 
 		100: "Tactical: Crouch Cover Medium"
 		101: "Tactical: Crouch Cover Low"
-//		102: "Waste Scanner Spawn"
+		102: "Tactical: Hide"
 		103: "Tactical: Entrance / Exit Pinch"
-//		104: "Guard Point"
+		104: "Tactical: Sentry"
 		105: "Tactical: Enemy Disadvantage Point"
 //		106: "Health Kit"
 		107: "Tactical: High Ground"
@@ -84,11 +84,18 @@
 		1205: "Ep3 Blob Spawn Regenerator Position"
 
 		1300: "Aperture: Nest"
+
+		1400: "Combine: Fallback"
+		1401: "Combine: Signal"
 	]
 	
 	generictype(string) : "Generic Hint" : "" : "String identifying what the hint type is, if generic."
 
-	hintactivity(string) : "Hint Activity" : "" : "Activity associated with this hint node. Various parts of the NPC AI play this activity at times. i.e. Actbusy nodes will play this activity when an NPC acts busy on the node."
+	animgraph_entry_cmd(string) : "Animgraph Entry Command" : "" : "Animgraph command that NPCs using this hint should apply to their animgraph when they start using it."
+	animgraph_entry_tag(string) : "Animgraph Entry Finish Tag" : "" : "The name of the Animgraph tag that will be fired when the NPC has finished playing the animgraph entry."
+	animgraph_exit_cmd(string) : "Animgraph Exit Command" : "" : "Animgraph command that NPCs using this hint should apply to their animgraph when they want to stop using it."
+	animgraph_exit_tag(string) : "Animgraph Exit Finish Tag" : "" : "The name of the Animgraph tag that will be fired when the NPC has finished playing the animgraph exit."
+	animgraph_navlink_target(target_destination) : "Navlink Target" : "" : "The name of an info_target entity that specifies the location that the animgraph's 'v_navlink_target' parameter should be set to when an NPC uses this node."
 
 	nodeFOV(choices) : "Node FOV" : 180 : "Imagine this node requires that an NPC be in the node's field of view in order to use this hint." =
 	[
@@ -103,8 +110,6 @@
 	StartHintDisabled(boolean) : "Start Hint Disabled" : 0
 
 	Group(string) : "Hint Group" : "" : "If specified, gives the hint a specific group name.  Useful for hint nodes that need to be logically grouped together. NPCs may also refuse to use hint nodes that don't match their hint group."
-
-	TargetNode(node_dest) : "Target node" : -1 : "The node ID of an associated target node, if any."
 
 	radius(integer) : "Radius" : 0 : "How close an NPC must be to consider this hint. 0 means infinite."
 	IgnoreFacing(choices) : "Ignore Facing" : 2 : "Don't pay attention to the facing of the node. May not apply to a given hint type." =
@@ -201,31 +206,6 @@
 	input TurnOn(void) : "Turn the link on, enabling travel between the nodes."
 	input TurnOff(void) : "Turn the link off, disabling travel between the nodes."
 ]
-
-@PointClass base(Targetname, BaseNodeLink,HullFlags) color(220 180 0) size(-8 -8 -8, 8 8 8) line(255 255 255, nodeid, StartNode, nodeid, EndNode) = info_node_link :
-	"A dynamic connection between two navigation nodes. You specify the node IDs of the start and end nodes, and then you can use entity I/O " +
-	"to turn on and off the connection. This could be used to create or destroy a connection in the nodegraph because of some event in your map " +
-	"(a bridge being created/destroyed, etc)."
-[
-	StartNode(node_dest) : "Start node ID" : : "The node ID of one end of the node connection."
-	EndNode(node_dest) : "End node ID" : : "The node ID of one end of the node connection."
-
-	linktype(choices) : "Type of Connection" : 1 =
-	[
-		1 : "Ground"
-		2 : "Jump"
-		4 : "Fly"
-		8 : "Climb"
-		16 : "Crawl"
-	]
-	preciseMovement(boolean) : "Precise Movement" : 0 : "Movement through this link must be precise. Used for NPCs " +
-		"that have sloppy movement characteristics to move through things like doors or windows"
-
-	// Inputs
-	input TurnOn(void) : "Turn the link on."
-	input TurnOff(void) : "Turn the link off."
-]
-
 
 @PointClass wirebox(mins, maxs) base(Targetname, BaseNodeLink) = info_node_link_controller :
 	"An entity that controls all connections between nodes that intersect the controller's volume. "+
@@ -330,6 +310,8 @@
 	output OnDenyCommanderUse(void) : "Fired when this NPC has refused to join the player's squad."
 	output OnSleep(void) : "Fired when this NPC enters a sleep state."
 	output OnWake(void) : "Fired when this NPC comes out of a sleep state."
+	output OnPlayerUse(void) : "Fired when a player +Uses this npc."
+	output OnUse(void) : "Fired when ANYTHING calls Use on this npc (such as other NPCs)."
 
 	// Inputs
 	input OverrideHealth(integer) : "Overrides this entity's health, ignoring max health constraints. This is for prototyping only and all uses of this input should be audited before shipping! Values <=0 are ignored."
@@ -493,7 +475,7 @@
 		16 : "Fade Corpse" : 0
 	]
 
-	NPCType(npcclass) : "Class name of spawned NPC"
+	NPCType( vdata_choice:scripts/npc_units.vdata ) : "Subclass name of spawned NPC"
 	NPCTargetname(string) : "Childrens' Name"
 	NPCSquadname(string) : "Childrens' Squad Name"
 	NPCHintGroup(string) : "Childrens' Hint Group"
@@ -1369,11 +1351,6 @@
 	input SetAnimationTarget(string) : "Set the animation target to use. An empty string will disable the puppet."
 ]
 
-@PointClass base(Targetname) = ai_point_of_interest
+@PointClass base(Targetname, EnableDisable) = ai_point_of_interest
 [
-	StartDisabled(boolean) : "Start Disabled" : 0
-
-	// Inputs 
-	input Enable(void) : "Enable"
-	input Disable(void) : "Disable"
 ]

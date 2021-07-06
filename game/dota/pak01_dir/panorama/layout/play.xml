@@ -68,6 +68,26 @@
 				</Panel>				
 			</Panel>
 		</snippet>
+
+		<snippet name="Season_Spring2021_CustomGamePlaySection">
+			<Panel class="Spring2021CustomGamePlaySection">
+        <Panel class="NemesticeLogo" >
+          <DOTAScenePanel class="NemesticeLogoFX" camera="shot_cameraA" map="scenes/events/nemestice/nemestice_logo_fx" particleonly="true"/>
+        </Panel>
+        <Label class="NemesticeBrief" text="#DOTA_Nemestice_Brief" />
+        <Panel id="NemesticeInfoButton" onactivate="UIShowCustomLayoutPopup( ReplayPendingPopup, file://{resources}/layout/events/spring_2021_play_details.xml )">
+          <Label text="#DOTA_Nemestice_HowToPlay" />
+        </Panel>
+        <Panel class="NemesticePointSection LeftRightFlow">
+        	<Label class="NemesticePointsLabel" text="#DOTA_EventNemestice_EventGamePointsCap"/>
+        	<Panel class="NemesticeInfoIcon" onmouseover="UIShowTextTooltip( #DOTA_TI8_EventGame_RefreshTime )" onmouseout="UIHideTextTooltip()"/>
+        </Panel>
+        
+        <ProgressBar id="PointsProgressBar" class="NemesticePointsProgressBar"/>
+        <Label class="NemesticePointsLabel" text="{d:event_game_points_earned} / {d:event_game_point_cap}"/>
+      </Panel>
+		</snippet>
+
 	</snippets>
 
 	<DOTAPlay hittest="false" 
@@ -392,6 +412,7 @@
 								<RadioButton id="BotDifficulty_2" class="PlayTabRadio" group="BotDifficultyGroup" text="#DOTA_Lobby_BotDifficulty_medium" onactivate="DOTABotDifficultyRadioChecked(2)" />
 								<RadioButton id="BotDifficulty_3" class="PlayTabRadio" group="BotDifficultyGroup" text="#DOTA_Lobby_BotDifficulty_hard" onactivate="DOTABotDifficultyRadioChecked(3)" />
 								<RadioButton id="BotDifficulty_4" class="PlayTabRadio" group="BotDifficultyGroup" text="#DOTA_Lobby_BotDifficulty_unfair" onactivate="DOTABotDifficultyRadioChecked(4)" />
+                <RadioButton id="BotDifficulty_5" class="PlayTabRadio" group="BotDifficultyGroup" text="#DOTA_Lobby_BotDifficulty_npx" onactivate="DOTABotDifficultyRadioChecked(9)" />
 							</Panel>
 
 							<Panel id="PracticeBotsTeam" class="BotSectionColumn TopBottomFlow">
@@ -405,7 +426,7 @@
 					</Panel>
 				</Panel>
 
-				<Panel id="CustomGamesSection" class="PlayTabSection Diretide2020">
+				<Panel id="CustomGamesSection" class="PlayTabSection Spring2021">
 					<Panel class="CustomGamesSectionMain">
 						<RadioButton id="GameStyle_CustomGames" class="GameStyle LeftRightFlow" group="GameStyleTabGroup" onactivate="DOTAPlaySectionRadioChecked( PLAY_TAB_SECTION_CUSTOM_GAMES );">
 							<Panel class="CustomGameBackgroundImage" />
@@ -626,11 +647,6 @@
 									<ToggleButton class="CheckBox GameModeCheckBox" id="GameMode_Ranked_RandomDraft" text="#game_mode_3" onmouseover="UIShowTextTooltipStyled( #game_mode_3_desc, GameModeTooltip )" onactivate="DOTAGameModeToggled( true )" onmouseout="UIHideTextTooltip()" />
 								</Panel>
 							</Panel>
-							
-							<Button class="RankedGameRemovePhone" onactivate="DOTAUnanchorPhone()">
-								<Panel class="RankedGameRemovePhoneIcon" />
-								<Label class="RankedGameRemovePhoneText" text="#ranked_phone_status_anchored_label" />
-							</Button>
 						</Panel>
 					</Panel>
 				</Panel>
@@ -649,6 +665,27 @@
 						</Panel>
 					</Panel>
 				</Panel>
+				
+				<Panel id="NewPlayerGameModeSection" class="PlayTabSection NewPlayerGameMode">
+					<Panel class="CustomGamesSectionMain">
+						<RadioButton id="GameStyle_NewPlayerMode" 
+									 class="GameStyle LeftRightFlow" 
+									 group="GameStyleTabGroup" 
+									 onactivate="DOTAPlaySectionRadioChecked( PLAY_TAB_SECTION_NEW_PLAYER_MODE );"
+									 >
+							<Panel class="CustomGameBackgroundImage" />
+							<Label class="CustomGameName" text="#game_mode_13"/>
+						</RadioButton>
+						<Panel id="NewPlayerContent">
+							<Panel id="NewPlayerMode_BGImage"/>
+							<Panel id="NewPlayerMode_Image"/>
+							<Panel id="NewPlayerMode_Content">
+								<Label id="NewPlayerMode_CaptionIntro" text="#DOTA_PlayMenu_NewPlayerTextIntro"/>
+								<Label id="NewPlayerMode_Caption" html="true" text="#DOTA_PlayMenu_NewPlayerText"/>
+							</Panel>
+						</Panel>
+					</Panel>
+				</Panel>
 
 				<Panel id="RegionLanguageSection">
 					<Button id="LanguageButton" class="LeftRightFlow" onactivate="DOTAOpenMatchmakingLanguage()">
@@ -659,6 +696,7 @@
 						<Label text="#dota_matchmaking_regions_button" />
 					</Button>
 				</Panel>
+				
 				<Panel id="LowPrioritySection" class="PlayTabSection TopBottomFlow">
 					<Label id="MatchDeniedReason_AccountDisabled" 			text="#matchmaking_account_disabled" class="SectionHeaderLabel" />
 					<Label id="MatchDeniedReason_MatchDisabledParty" 		text="#matchmaking_match_disabled_party" class="SectionHeaderLabel" />
@@ -667,6 +705,7 @@
 					<Label id="MatchDeniedReason_MatchDisabledPermanent" 	text="#matchmaking_match_disabled_permanent" class="SectionHeaderLabel" />
 					<Label id="MatchDeniedReason_LowPriorityParty" 			text="#matchmaking_low_priority_party" class="SectionHeaderLabel" />
 					<Label id="MatchDeniedReason_LowPriorityLocal" 			text="#matchmaking_low_priority_local" class="SectionHeaderLabel" />
+					<Label id="MatchDeniedReason_MatchDisabledRanked" 		text="#matchmaking_match_disabled_ranked_long" class="SectionHeaderLabel" />
 					<Panel class="Divider" />
 				</Panel>
 			</Panel>

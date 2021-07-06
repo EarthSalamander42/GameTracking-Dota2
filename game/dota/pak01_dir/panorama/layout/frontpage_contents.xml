@@ -14,6 +14,34 @@
 
 	<DOTAFrontpageContents>
 
+		<!-- <CustomLayoutPanel class="FrontpageCell TopLeftCell TallCell"
+							layout="file://{resources}/layout/frontpage_supporters_club.xml" /> -->
+
+		<DOTAFrontpageDefaultButton	class="FrontpageCell TallCell TopLeftCell"
+			cellheader="Battle Pass"
+			celltitle=""
+			celltext=""
+			cellimage=""
+			onactivate="" >
+        </DOTAFrontpageDefaultButton>
+
+        <DOTAFrontpageNemesticeUpcomingRewards id="UpcomingRewards" class="FrontpageCell TallCell NemesticeCell" />
+
+		<DOTAFrontpageDefaultButton	 class="FrontpageCell NemesticeCell BottomLeftCell"
+			cellheader="#DOTA_Nemestice_Promo_Label"
+			celltitle="#DOTA_Nemestice_Promo_Title"
+			celltext="#DOTA_Nemestice_Promo_Desc"
+			cellimage="s2r://panorama/images/front_page/nemestice_custom_game_psd.vtex"
+			onactivate="UIShowCustomLayoutPopup( ReplayPendingPopup, file://{resources}/layout/events/spring_2021_play_details.xml )" >
+		</DOTAFrontpageDefaultButton>
+
+		<!-- SPECTATOR CAROUSEL -->
+		<!--<DOTAFrontpageCarousel id="SpectatorCarousel" class="FrontpageCell BottomLeftCell">
+			<DOTAFrontpageDPCLive id="FrontpageDPCLive" />
+			<DOTAFrontpageProPlaying id="FrontpageProPlaying"  />
+			<DOTAFrontpageTopLive id="FrontpageTopLive" />
+		</DOTAFrontpageCarousel>-->
+
 		<!-- DIRETIDE CHEST -->
 		<!-- <DOTAFrontpageDefaultButton	class="FrontpageCell BottomLeftCell DiretideFrontpageCell"
 			cellheader="#DOTA_DiretideChest_Frontpage_Label"
@@ -21,28 +49,28 @@
 			celltext="#DOTA_DiretideChest_Frontpage_Desc"
 			onactivate="DOTAShowItemDefPage( 13562 )">
 			cellimage="s2r://panorama/images/front_page/dota_plus_update_winter_2020_psd.vtex"
-
-			
-			<MoviePanel class="FrontpageCellImage HideForPerfectWorld" src="file://{resources}/videos/diretide2020/diretide_chest_frontpage.webm" repeat="true" autoplay="onload"  />
-			<MoviePanel class="FrontpageCellImage ShowOnlyForPerfectWorld" src="file://{resources}/videos/diretide2020/diretide_chest_frontpage_pw.webm" repeat="true" autoplay="onload"  />
+			<MoviePanel class="FrontpageCellImage HideForSteamChina" src="file://{resources}/videos/diretide2020/diretide_chest_frontpage.webm" repeat="true" autoplay="onload"  />
+			<MoviePanel class="FrontpageCellImage ShowOnlyForSteamChina" src="file://{resources}/videos/diretide2020/diretide_chest_frontpage_pw.webm" repeat="true" autoplay="onload"  />
 		</DOTAFrontpageDefaultButton> -->
-
-
-
-		<DOTAFrontpageDefaultButton	class="FrontpageCell MiddleLeftCell"
-				cellheader="#DOTA_PatchNotes_Header"
-				celltitle="#Frontpage_Mistwoods_Intro"
-				celltext="#Frontpage_Mistwoods_Sub"
-				onactivate="DOTAShowPatchVersion( 7.28 )">
-
-				<Image class="FrontpageCellImage ShowEN" src="s2r://panorama/images/events/mistwoods_en_png.vtex"/>
-				<Image class="FrontpageCellImage ShowCN" src="s2r://panorama/images/events/mistwoods_cn_png.vtex"/>
-				<Image class="FrontpageCellImage ShowRU" src="s2r://panorama/images/events/mistwoods_ru_png.vtex"/>
-				<MoviePanel class="FrontpageCellImage" src="file://{resources}/videos/mistwoods_%language%.webm" repeat="true" autoplay="onload"  />
-		</DOTAFrontpageDefaultButton>
-
 		
-		
+		<!--<DOTAFrontpageDefaultButton	class="FrontpageCell TopLeftCell TallCell HideForSteamChina"
+				cellheader="#DOTA_DDB_Promo_ReleasePost"
+				celltitle="#DOTA_DDB_Promo_ReleasePostTitle"
+				celltext="#DOTA_DDB_Promo_ReleasePostDesc"
+				cellimage=""
+				onactivate="DOTAShowDDBPromoPage()" >
+				<Panel id="InvokerBG">
+                    <Image id="InvokerBGImg" src="s2r://panorama/images/leaf_pages/ddb_s1_promo/column_invoker_bg_psd.vtex"/>
+				</Panel>
+                <DOTAParticleScenePanel id="InvokerSceneBGWex" class="InvokerSceneOrb" particleonly="true" squarePixels="true" particleName="particles/units/heroes/hero_invoker/invoker_soft_wex_sphere.vpcf" cameraOrigin="0 -120 0" lookAt="0 90 0" fov="30" hittest="false"/>
+                <DOTAParticleScenePanel id="InvokerSceneBGQuas" class="InvokerSceneOrb" particleonly="true" squarePixels="true" particleName="particles/units/heroes/hero_invoker/invoker_quas_sphere.vpcf" cameraOrigin="0 -120 0" lookAt="0 90 0" fov="30" hittest="false"/>
+				 <Panel id="InvokerContainer">
+                    <Image id="InvokerFGImg" src="s2r://panorama/images/leaf_pages/ddb_s1_promo/invokerfg_psd.vtex"/>
+				</Panel>
+                <DOTAParticleScenePanel id="InvokerSceneFGExort" class="InvokerSceneOrb" particleonly="true" squarePixels="true" particleName="particles/units/heroes/hero_invoker/invoker_soft_exort_sphere.vpcf" cameraOrigin="0 -120 0" lookAt="0 90 0" fov="30" hittest="false"/>
+				<Panel id="NF_LogoShort"/>
+		</DOTAFrontpageDefaultButton>-->
+  
 		<!--<Label class="ReplayTrailerButton" text="#DOTA_Diretide2020_Watch_Trailer" onactivate="DOTAShowSplashAdMovie( diretide2020_movie )" />-->
 
 		<!-- ARCANA VOTE -->
@@ -57,38 +85,88 @@
 				<DOTAHeroMovie id="FacelessVoidMovie" heroid="41" />
 			</Panel>
 		</DOTAFrontpageDefaultButton>-->
-		
+
+		<!--<DOTAFrontpageDefaultButton id="NPXAnnouncement" class="FrontpageCell TopLeftCell ShowOnlyForSteamChina"
+						cellheader="#DOTA_Frontpage_NPX_CellTitle"
+						celltitle="#DOTA_Frontpage_NPX_NewSet"
+						celltext="#DOTA_Frontpage_NPX_Description"
+						onactivate="ExternalBrowserGoToURL( 'https://www.dota2.com/newsentry/2995430596679058277' )" >
+						<Label id="NPXTitle" text="#DOTA_Frontpage_NPX_NewFeatures"/>
+						<Panel id="NPX_BGImg"/>
+						<Panel id="CrummyWizard"/>
+		</DOTAFrontpageDefaultButton>-->
+
+		<!-- <DOTAFrontpageDefaultButton id="DDBPromoCell_Announce" class="FrontpageCell TopLeftCell DDBPromoCell HideForSteamChina"
+						cellheader="#DOTA_DDB_Promo_Announcement"
+						 onactivate="DOTAShowDDBPromoPage()" >
+						 <Panel id="DavBG">
+						 	<Image id="SlyBGImg" src="s2r://panorama/images/leaf_pages/ddb_s1_promo/column_slyrak_bg_psd.vtex"/>
+						</Panel>
+						<DOTAParticleScenePanel id="EmbersScene" particleonly="true" squarePixels="true" particleName="particles/ui/ui_fire_embers.vpcf" cameraOrigin="400 0 -110" lookAt="180 0 0" fov="20" hittest="false"/>
+						 <Panel id="SlyrakContainer">
+							<Image id="DavBGImg" src="s2r://panorama/images/leaf_pages/ddb_s1_promo/column_slyrak_fg_psd.vtex"/>
+							<Image id="SlyFGImgEye" src="s2r://panorama/images/leaf_pages/ddb_s1_promo/slyrak_eyeref_psd.vtex"/>
+						</Panel>
+						<DOTAParticleScenePanel id="FGEmbersScene" particleonly="true" squarePixels="true" particleName="particles/ui/ui_fire_embers_fg.vpcf" cameraOrigin="400 0 -110" lookAt="180 0 0" fov="10" hittest="false"/>
+						 <Panel id="DDBOverlay">
+							<Panel id="NFOriginal"/>
+						</Panel>
+						 <Panel id="DDB_LogoBlack"/>
+						 <Panel id="NF_LogoShort"/>
+		</DOTAFrontpageDefaultButton> -->
+
+		<!-- <DOTAFrontpageDefaultButton id="DDBPromoCell" class="FrontpageCell TopLeftCell DDBPromoCell HideForSteamChina"
+						cellheader="#DOTA_DDB_Promo_Teaser"
+						 onactivate="DOTAShowDDBPromoPage()">
+						<Panel id="DavBG">
+						 	<Image id="DavBGImg" src="s2r://panorama/images/leaf_pages/ddb_s1_promo/column_davion_bg_psd.vtex"/>
+						</Panel>
+						<Panel id="DavContainer">
+							<Panel id="DDB_DavFG"/>
+							<AnimatedImageStrip id="DDB_DavFGCape" src="s2r://panorama/images/leaf_pages/ddb_s1_promo/capesheet_psd.vtex" framewidth="604px" frametime="150ms" defaultframe="1" />
+						</Panel>
+						<DOTAParticleScenePanel id="DavionScene" particleonly="true" particleName="particles/ui\ddb_davrays.vpcf" cameraOrigin="0 -400 -400" lookAt="200 0 0" fov="30" hittest="false"/>
+						<Panel id="DDBOverlay">
+							<Label text="#DOTA_DDB_Promo_Call_Teaser"/>
+						</Panel>
+						 <Panel id="DDB_LogoWhite"/>
+						 <Panel id="NF_LogoShort"/>
+		</DOTAFrontpageDefaultButton> -->
+
+		<!-- <DOTAFrontpageDefaultButton id="DDBPromoCell_Trailer" class="FrontpageCell TopLeftCell DDBPromoCell HideForSteamChina"
+				cellheader="Full Trailer Released"
+					onactivate="DOTAShowDDBPromoPage()">
+				<Panel id="MiranaBG">
+                    <Image id="DavBGImg" src="s2r://panorama/images/leaf_pages/ddb_s1_promo/column_mirana_bg_psd.vtex"/>
+				</Panel>
+                <DOTAParticleScenePanel id="MiranaSceneBG" particleonly="true" squarePixels="true" particleName="particles/ui/ui_snow_strong_bg.vpcf" cameraOrigin="0 0 0" lookAt="0 90 0" fov="60" hittest="false"/>
+				 <Panel id="MiranaContainer">
+                    <AnimatedImageStrip id="DDB_MiranaFGSheet" src="s2r://panorama/images/leaf_pages/ddb_s1_promo/miranasheet_psd.vtex" framewidth="438px" frametime="100ms" defaultframe="1" />
+				 </Panel>
+                <DOTAParticleScenePanel id="MiranaScene" particleonly="true" squarePixels="true" particleName="particles/ui/ui_snow_strong_fg.vpcf" cameraOrigin="0 0 0" lookAt="0 90 0" fov="60" hittest="false"/>
+				<Label id="WatchMoreCell" text="#DOTA_DDB_Promo_Takeover_CellCall"/>
+				<Panel id="NF_LogoShort"/>
+		</DOTAFrontpageDefaultButton> -->
 
 		<!-- LastMatch and BattleCup swap visibility based on if there's an upcoming/active Battle Cup -->
-		<DOTAFrontpageLastMatch id="LastMatch" class="FrontpageCell TopLeftCell" />
-		<FrontpageWeekendTourneyButton id="BattleCup" class="FrontpageCell TopLeftCell" />
+		<!-- <DOTAFrontpageLastMatch id="LastMatch" class="FrontpageCell TopLeftCell" /> -->
+		<!--<FrontpageWeekendTourneyButton id="BattleCup" class="FrontpageCell TopLeftCell ShowOnlyForSteamChina DDBPromoActive" />-->
 
 		<!-- <DOTAFrontpageDefaultButton id="Blog" class="FrontpageCell TopLeftCell" cellheader="#DOTA_Blog" /> -->
 
 
-
-		<!-- SPECTATOR CAROUSEL -->
-		<DOTAFrontpageCarousel id="SpectatorCarousel" class="FrontpageCell BottomLeftCell">
-			<DOTAFrontpageProCircuit id="FrontpageProCircuit" />
-			<DOTAFrontpageProPlaying id="FrontpageProPlaying"  />
-			<DOTAFrontpageTopLive id="FrontpageTopLive" />
-		</DOTAFrontpageCarousel>
-
 		<!-- GAMEPLAY PATCH -->
 		<!-- <DOTAFrontpageGameplayPatch id="GameplayPatch" class="FrontpageCell BottomLeftCell"
-					patchlink="DOTAShowPatchVersion( 7.27 )">
+					patchlink="DOTAShowPatchVersion( 7.29 )">
 			<Panel id="NumberImageContainer" class="color4">
 				<Panel id="GamePlayPatchNumberContainer">
 					<Panel id="Slot1"  class="7 PatchNumber"/>
 					<Panel id="Period" class="PatchNumber"/>
 					<Panel id="Slot2"  class="2 PatchNumber"/>
-					<Panel id="Slot3"  class="7 PatchNumber"/>
+					<Panel id="Slot3"  class="9 PatchNumber"/>
 				</Panel>
 			</Panel>
 		</DOTAFrontpageGameplayPatch> -->
-
-
-
 	
 		<!-- LAST CHANCE BATTLE PASS -->
 		<!-- <CustomLayoutPanel class="FrontpageCell TI10FrontpageCell TopLeftCell "
@@ -97,20 +175,17 @@
 
 
 		<!-- BP TRIVIA - DO NOT HIDE, MAKE SURE THIS IS COMPATIBLE WITH CURRENT LAYOUT -->
-		<!-- <DOTATriviaGame id="TriviaGame" class="FrontpageCell TopMiddleCell TallCell" /> -->
+		<DOTATriviaGame id="TriviaGame" class="FrontpageCell TopMiddleCell TallCell" />
 		
 
 		<!-- FEATURED TOURNAMENT -->
 		<!-- <DOTAFrontpageCarousel id="FeaturedTournament" class="FrontpageCell BottomLeftCell" autoscroll-delay="6s, 1.5s">
 			<CustomLayoutPanel class="FrontpageCell" layout="file://{resources}/layout/banners/front_page_featured_tournament.xml" />
 		</DOTAFrontpageCarousel> -->
-
-
 		
 		<!-- TOP CUSTOM GAME -->
 		<!--<DOTAFrontpageDefaultButton id="TopCustomGame" class="FrontpageCell BottomLeftCell" cellheader="#DOTA_Custom_Game_Of_The_Day" />-->
-		
-
+	
 		<!-- itemdef for the spotlight sale is set through code -->
 		<!--<DOTAFrontpageStoreItem id="SpotlightSale" class="FrontpageCell BottomMiddleCell" cellheader="#DOTA_Store_SpotlightSale" /> -->
 
@@ -120,13 +195,6 @@
 								celltitle="#FrontPage_Treasure_Of_Twilight_Procession_Name"
 								celltext="#FrontPage_Treasure_Of_Twilight_Procession_Desc"
 								onactivate="DOTAShowItemDefPage( 10416 )" />-->
-
-		<!--<DOTAFrontpageCarousel id="SpectatorCarousel" class="FrontpageCell BottomRightCell">
-			<DOTAFrontpageProCircuit id="FrontpageProCircuit" />
-			<DOTAFrontpageProPlaying id="FrontpageProPlaying"  />
-			<DOTAFrontpageTopLive id="FrontpageTopLive" />
-		</DOTAFrontpageCarousel>-->
-
 		
 
 		<!-- =-=-=-=-=-=-=-=  PREVIOUS NON-COMMON XML STUFF BELOW,  SAVED FOR FUTURE REFERENCE AND COPY PASTA  =-=-=-=-=-=-=-= -->

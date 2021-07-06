@@ -103,7 +103,7 @@
 "PlayerTracker"	"好友"
 
 "Valve_Hostname"	"主機名稱"
-"Valve_Max_Players"	"最多 玩家"
+"Valve_Max_Players"	"最多玩家數"
 "Valve_Server_Password"	"伺服器密碼"
 
 "Valve_Close"		"關閉"
@@ -564,7 +564,7 @@
 "LOC_Date_DayShorter1"				"一"
 "LOC_Date_DayShorter2"				"二"
 "LOC_Date_DayShorter3"				"三"
-"LOC_Date_DayShorter4"				"<none>"
+"LOC_Date_DayShorter4"				"四"
 "LOC_Date_DayShorter5"				"五"
 "LOC_Date_DayShorter6"				"六"
 "LOC_Date_Today"					"今天"
@@ -585,7 +585,8 @@
 // For non-prefixed numbers use "1".
 "LOC_Date_HourNumFormat"			"02"
 "LOC_Date_Format_Day_Month_Year_Numeric"								"%s3/%s1/%s2"					// 18/4/2014
-// 4/18/2014
+"LOC_Date_Format_Day_Month_Numeric"										"%s2 %s1"						// 18/4
+"LOC_Date_Format_Day_Month_Numeric_[US]"								"%s2/%s1"						// 4/18
 "LOC_Date_Format_DayOfWeek_Month_Day_Year"								"%s4 %s2 %s1 %s3"				// Wednesday, April 18, 2014
 "LOC_Date_Format_Day_Month"												"%s2 %s1"						// 18 April
 "LOC_Date_Format_Day_Month_Year"										"%s3 %s2 %s1"					// 18 April 2014

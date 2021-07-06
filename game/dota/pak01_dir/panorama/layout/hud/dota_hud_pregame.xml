@@ -63,6 +63,7 @@
 		<Panel id="PreGameBackgroundImage"/>
 		<Panel id="PregameBGStatic" />		
 		<DOTAScenePanel id="PregameBG" camera="shot_cameraA" map="backgrounds/pregame_phase" hittest="false" particleonly="false" />
+		<Panel id="NemesticeBG" />
 		<Panel id="ConnectionFailed" class="TopBottomFlow">
 			<Panel id="ConnectionErrorIcon"/>
 			<Label text="#DOTA_Hero_Selection_ConnectionFailure"/>
@@ -188,9 +189,12 @@
 						<Label id="CoachName" text="#DOTA_Hero_Selection_Coach" />
 						<Panel id="SelectedHeroAbilities" />
 					</Panel>
-					<Panel id="SelectedHeroPrimaryAttribute" />
+					<DOTAHeroRelicsThumbnail id="StrategyHeroRelicsThumbnail" class="HeroRelicsThumbnail" />
+					<DOTAHeroBadge id="StrategyHeroBadge" />
 					<DOTALargeModelPreview id="HeroModel" />
 					<DOTAHeroModelOverlay id="HeroModelOverlay" />
+					<DOTAHeroRelicsThumbnail id="StrategyHeroRelicsThumbnailTooltips" class="HeroRelicsThumbnail TooltipsOnly" />
+					<Panel id="HeroRelicsContainer" />
 
 					<!-- These hit targets are not visible, but are above the hero model in z-order so
 					 that we can accept hover events and redirect them to the real ability panels. -->
@@ -285,7 +289,6 @@
 											<Panel class="FillWidth" />
 										</Panel>
 										<DOTAHeroPickingTeamComposition class="OneColumn" id="StrategyTeamComposition" />
-										<DOTAHeroPickingMatchDuration class="OneColumn" id="StrategyMatchDuration" />
 									</Panel>
 
 									<DOTAFriendsAndFoes id="StrategyFriendsAndFoes" class="VerticalStyle"/>
@@ -508,6 +511,9 @@
 					<Panel id="PickModeSubtitle">
 						<Panel class="LeftRightFlow HorizontalCenter">
 							<Label id="GameModeLabel" text="{s:game_mode}" />
+							<Panel class="NemesticeLogo" >	
+								<DOTAScenePanel class="NemesticeLogoFX" camera="shot_cameraA" map="scenes/events/nemestice/nemestice_logo_fx" particleonly="true"/>
+							</Panel>
 							<Panel id="MutationInfo" onmouseover="DOTAShowMutationInfoTooltip()" onmouseout="DOTAHideMutationInfoTooltip()">
 								<Panel class="InfoIcon"/>
 								<Label text="Details" />
@@ -577,12 +583,11 @@
 				</Panel>
 			</Panel>
 
-			<Panel id="BottomPanels" hittest="false">
-			
-				<!--<DOTAFriendsAndFoes id="FriendsAndFoes"/>-->
-				<DOTAHeroPickingTeamComposition class="TwoColumn" id="HeroPickTeamComposition" />
-				<DOTAHeroPickingMatchDuration class="TwoColumn" id="HeroPickMatchDuration" />
 				
+			<Panel id="BottomPanels" hittest="false">
+				
+				<DOTAFriendsAndFoes id="FriendsAndFoes"/>
+				<DOTAHeroPickingTeamComposition class="TwoColumn" id="HeroPickTeamComposition" />				
 				<DOTAChat id="Chat" class="PreGameChat" chatstyle="hudpregame" oncancel="SetInputFocus( HeroGrid )" />
 				<Panel id="BattlePassContainer" class="PlusNoBattlePass">
 

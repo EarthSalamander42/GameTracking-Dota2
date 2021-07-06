@@ -53,12 +53,16 @@
 	"UI_UnknownTime"	"Necunoscută"
 
 	"UI_Label_CopySelected"	"Copiază textul selectat"
+	"UI_Label_SelectAll"	"Selectează tot"
 	"UI_Label_OpenLinkInBrowser" "Deschide URL-ul în browser"
 	"UI_Label_CopyURLToClipboard" "Copiază URL-ul în clipboard"
 		
 	"UI_TextEntry_CutToClipboard"	"Taie"
 	"UI_TextEntry_CopyToClipboard"	"Copiază"
 	"UI_TextEntry_PasteClipboard"	"Lipește"
+
+	"UI_Console_SaveToLog"				"Salvează în jurnal"
+	"UI_Console_FileFilter_LogFiles"	"Fișiere jurnal (*.log)"
 
 	"UI_Agreements"					"Acorduri"
 	"UI_ViewAgreements"				"VEZI ACORDUL PENTRU ABONAȚII STEAM ȘI POLITICA DE CONFIDENȚIALITATE"
@@ -137,6 +141,8 @@
 	"Panorama_Lang_Footer_Ukrainian"			"UCRAINEANĂ"
 	
 	"Panorama_MoviePlaybackError"		"A apărut o eroare în timpul redării"
+	"Panorama_MovieToggleCaptions"		"Activează/dezactivează subtitrările"
+
 	"Debugger_PaintInfo"				"Afișează informații despre vopsea"
 	"Debugger_Style"				"Stil"
 	"Debugger_Computed"				"Calculat"
@@ -154,4 +160,4 @@
 	"Debugger_DevInfo"				"Arată informațiile dezvoltatorului"
 	"Debugger_Search"				"Caută:"
 	"Debugger_Search_Index"			"Se afișează rezultatul {d:search_index} din {d:num_search_results}"
-}
+	}

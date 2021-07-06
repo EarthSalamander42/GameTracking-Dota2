@@ -71,6 +71,7 @@ $ORIGIN
 -sse2
 -sse3
 -sse4
+../public/ordered_constructor.h
 ./?.lua;/usr/local/share/luajit-2.0.4/?.lua;/usr/local/share/lua/5.1/?.lua;/usr/local/share/lua/5.1/?/init.lua
 ./?.so;/usr/local/lib/lua/5.1/?.so;/usr/local/lib/lua/5.1/loadall.so
 .local
@@ -78,7 +79,6 @@ $ORIGIN
 .steam
 /;?!-
 />
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/ordered_constructor.h
 0123456789abcdef
 0@signal
 1.0
@@ -137,6 +137,7 @@ $ORIGIN
 @
 @%s
 @@
+@B
 @configvalue.cpp
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!
 Access of unconnected ConVarRef
@@ -158,7 +159,6 @@ BitwiseNot
 BitwiseOr
 BitwiseXor
 Breakpoint type (%s) not supported.
-C
 C++ exception
 CBufferString::AppendFormatV(char const*, __va_list_tag*)
 CBufferString::Insert(int, char const*, int, bool)
@@ -218,10 +218,11 @@ ConfigurationSystem_001
 ConnectInterfaceSingletons
 Constructor called without a class constructor - internal error?
 CreateInterface
-CreateNonBlockingSocket
+CreateSocket
 Cross
 DebugTextureInfo001
 Debugger
+DemoUpconverterVersion001
 DevMsg(char const*, ...)
 Dot
 DotaCardGameClient_001
@@ -464,6 +465,11 @@ Source2ServerSerializers002
 StatsService_001
 SteamAudio001
 Success
+TestFormatA
+TestFormatB
+TestFormatC
+TestFormatD
+TestFormatE
 TestScriptMgr001
 TextLayout_001
 The function %s requires too many parameters.
@@ -521,7 +527,7 @@ VStringTokenSystem001
 V_FixSlashes
 V_IsAbsolutePath
 V_PrettifyNum
-V_acos
+V_acosd
 V_acosf
 V_asinf
 V_atan2f
@@ -529,16 +535,16 @@ V_atanf
 V_atof
 V_atofloat64
 V_atoi
-V_cos
+V_cosd
 V_cosf
 V_expf
 V_fmodf
 V_logf
-V_pow
+V_powd
 V_powf
 V_qsort_s
-V_sin
 V_sincosf
+V_sind
 V_sinf
 V_snprintf
 V_sscanf
@@ -682,6 +688,11 @@ bad light userdata pointer
 base out of range
 base64_decode
 base64_encode
+binary
+binary_auto
+binary_bc
+binary_lz4
+binary_zstd
 bind
 bit
 bool
@@ -802,6 +813,7 @@ fwrite
 g_bUpdateStringTokenDatabase
 g_pMemAlloc
 game
+generic
 get length of
 getenv
 gethostbyname
@@ -850,7 +862,6 @@ js_value
 kv
 l
 language
-languages/lua/vlua/vlua.cpp
 lastlinedefined
 ld-linux-x86-64.so.2
 ldexp

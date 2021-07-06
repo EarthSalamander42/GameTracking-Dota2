@@ -561,6 +561,14 @@
 			"y"		"352"
 			"width"		"32"
 			"height"	"32"
+		}
+		"minimap_rune_water"
+		{
+			"file"		"materials/vgui/hud/minimap_sheet.vmat"
+			"x"		"480"
+			"y"		"448"
+			"width"		"32"
+			"height"	"32"
 		}		
 		"minimap_rune_unknown"
 		{
@@ -1778,6 +1786,38 @@
 			"width"		"32"
 			"height"	"32"
 		}
+		"minimap_heroicon_npc_dota_hero_dawnbreaker"
+		{
+			"file"		"materials/vgui/hud/minimap_hero_sheet.vmat"
+			"x"		"160"
+			"y"		"288"
+			"width"		"32"
+			"height"	"32"
+		}
+		"minimap_heroicon_npc_dota_hero_spectre_alt1"
+		{
+			"file"		"materials/vgui/hud/minimap_hero_sheet.vmat"
+			"x"		"192"
+			"y"		"288"
+			"width"		"32"
+			"height"	"32"
+		}
+		"minimap_heroicon_npc_dota_hero_spectre_alt2"
+		{
+			"file"		"materials/vgui/hud/minimap_hero_sheet.vmat"
+			"x"		"224"
+			"y"		"288"
+			"width"		"32"
+			"height"	"32"
+		}
+		"minimap_heroicon_npc_dota_hero_dragon_knight_persona1"
+		{
+			"file"		"materials/vgui/hud/minimap_hero_sheet.vmat"
+			"x"		"256"
+			"y"		"288"
+			"width"		"32"
+			"height"	"32"
+		}
 		"minimap_0"
 		{
 			"file" "materials/vgui/hud/minimap_sheet.vmat"
@@ -1857,6 +1897,70 @@
 			"y" "480"
 			"width" "32"
 			"height" "32"
+		}
+		"minimap_ping_clown"
+		{
+			"file"		"materials/vgui/hud/minimap_sheet.vmat"
+			"x"			"512"
+			"y"			"0"
+			"width"		"64"
+			"height"	"64"
+		}
+		"minimap_ping_axe"
+		{
+			"file"		"materials/vgui/hud/minimap_sheet.vmat"
+			"x"			"576"
+			"y"			"0"
+			"width"		"64"
+			"height"	"64"
+		}
+		"minimap_ping_farm"
+		{
+			"file"		"materials/vgui/hud/minimap_sheet.vmat"
+			"x"			"512"
+			"y"			"64"
+			"width"		"64"
+			"height"	"64"
+		}
+		"minimap_ping_fire"
+		{
+			"file"		"materials/vgui/hud/minimap_sheet.vmat"
+			"x"			"576"
+			"y"			"64"
+			"width"		"64"
+			"height"	"64"
+		}
+		"minimap_ping_heartbreak"
+		{
+			"file"		"materials/vgui/hud/minimap_sheet.vmat"
+			"x"			"512"
+			"y"			"128"
+			"width"		"64"
+			"height"	"64"
+		}
+		"minimap_ping_heart"
+		{
+			"file"		"materials/vgui/hud/minimap_sheet.vmat"
+			"x"			"576"
+			"y"			"128"
+			"width"		"64"
+			"height"	"64"
+		}
+		"minimap_ping_skullbones"
+		{
+			"file"		"materials/vgui/hud/minimap_sheet.vmat"
+			"x"			"512"
+			"y"			"192"
+			"width"		"64"
+			"height"	"64"
+		}
+		"minimap_ping_why"
+		{
+			"file"		"materials/vgui/hud/minimap_sheet.vmat"
+			"x"			"576"
+			"y"			"192"
+			"width"		"64"
+			"height"	"64"
 		}
 	}
 }

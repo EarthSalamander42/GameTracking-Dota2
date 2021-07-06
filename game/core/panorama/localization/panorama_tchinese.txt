@@ -53,6 +53,7 @@
 	"UI_UnknownTime"	"未知"
 
 	"UI_Label_CopySelected"	"複製已選取的文字"
+	"UI_Label_SelectAll"	"選擇全部"
 	"UI_Label_OpenLinkInBrowser" "於瀏覽器中開啟網址"
 	"UI_Label_CopyURLToClipboard" "複製網址至剪貼簿"
 		
@@ -60,20 +61,23 @@
 	"UI_TextEntry_CopyToClipboard"	"複製"
 	"UI_TextEntry_PasteClipboard"	"貼上"
 
+	"UI_Console_SaveToLog"				"儲存至紀錄檔"
+	"UI_Console_FileFilter_LogFiles"	"記錄檔（*.log）"
+
 	"UI_Agreements"					"協議"
 	"UI_ViewAgreements"				"檢視 Steam 訂戶協議和隱私權條款"
 	"UI_I_Agree"					"我同意"
 	
 	"Month_January"					"1 月"
 	"Month_February"				"2 月"
-	"Month_March"					"3月"
-	"Month_April"					"4月"
+	"Month_March"					"3 月"
+	"Month_April"					"4 月"
 	"Month_May"						"5 月"
 	"Month_June"					"6月"
 	"Month_July"					"7 月"
-	"Month_August"					"8月"
-	"Month_September"				"9月"
-	"Month_October"					"10月"
+	"Month_August"					"8 月"
+	"Month_September"				"9 月"
+	"Month_October"					"10 月"
 	"Month_November"				"11 月"
 	"Month_December"				"12 月"
 
@@ -137,6 +141,8 @@
 	"Panorama_Lang_Footer_Ukrainian"			"烏克蘭文"
 	
 	"Panorama_MoviePlaybackError"		"播放時發生錯誤"
+	"Panorama_MovieToggleCaptions"		"切換字幕"
+
 	"Debugger_PaintInfo"				"顯示上色資訊"
 	"Debugger_Style"				"樣式"
 	"Debugger_Computed"				"已計算"
@@ -154,4 +160,4 @@
 	"Debugger_DevInfo"				"顯示開發者資訊"
 	"Debugger_Search"				"搜尋："
 	"Debugger_Search_Index"			"顯示 {d:num_search_results} 中的 {d:search_index} 項符合結果"
-}
+	}

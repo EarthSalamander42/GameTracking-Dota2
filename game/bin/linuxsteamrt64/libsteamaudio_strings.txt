@@ -16,12 +16,12 @@ $ORIGIN
 -sse2
 -sse3
 -sse4
+../../public/ordered_constructor.h
 .sapaths
 .sareverb
 .vmap
 /content/
 /game/
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/ordered_constructor.h
 0.1
 1.0
 10ConCommand
@@ -68,6 +68,7 @@ $ORIGIN
 <unconnected>
 >
 ?
+@B
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!
 Access of unconnected ConVarRef
 Access of unconnected SplitScreenConVarRef
@@ -145,6 +146,7 @@ Controls what phase is used when mix = 0. 0 = no phase, 1 = sphere ITD, 2 = full
 CreateInterface
 D,G
 DebugTextureInfo001
+DemoUpconverterVersion001
 Distance (in meters) that the listener must move before reverb is updated, if caching is enabled.
 DotaCardGameClient_001
 EXPORTSYSTEM_INTERFACE_VERSION_001
@@ -279,6 +281,7 @@ Pathing: Unable to read from baked data file (%s). Pathing disabled.
 PhysicsBuilderMgr001
 Plat_DebugPrint
 Plat_ExitProcess
+Plat_FloatTime
 Plat_IsInDebugSession
 Plat_SetDenormalsAreZero
 Plat_ShouldCollectMiniDumpsForFatalErrors
@@ -428,7 +431,7 @@ VScript
 VScriptDbg
 VScriptManager010
 VStringTokenSystem001
-V_acos
+V_acosd
 V_acosf
 V_asinf
 V_atan2f
@@ -439,19 +442,19 @@ V_atofloat64
 V_atoi
 V_atoi64
 V_atoui64
-V_cos
+V_cosd
 V_cosf
 V_expf
 V_fmodf
-V_fpclassify
-V_isnan
+V_fpclassifyd
+V_isnand
 V_log10f
 V_logf
-V_pow
+V_powd
 V_powf
 V_qsort_s
-V_sin
 V_sincosf
+V_sind
 V_sinf
 V_snprintf
 V_sscanf
@@ -490,6 +493,7 @@ binary
 binary_auto
 binary_bc
 binary_lz4
+binary_zstd
 ceilf
 cheat
 client
@@ -607,6 +611,7 @@ operator new(unsigned long)
 operator new(unsigned long, std::nothrow_t const&)
 operator new[](unsigned long)
 operator new[](unsigned long, std::nothrow_t const&)
+panorama
 pthread_mutex_destroy
 pthread_mutex_init
 pthread_mutex_lock
@@ -614,6 +619,8 @@ pthread_mutex_unlock
 pthread_mutexattr_init
 pthread_mutexattr_settype
 replicated
+resource
+resource_name
 rnd_down
 rnd_up
 scattering
@@ -660,9 +667,9 @@ snd_steamaudio_reverb_override_scale
 snd_steamaudio_reverb_simtype
 snd_steamaudio_reverb_update_rate
 snd_steamaudio_use_hybrid_reverb
+soundevent
 sqrt
 sqrtf
-ss
 ss_added
 std::__throw_length_error(char const*)
 std::vector<unsigned short, std::allocator<unsigned short> >::_M_default_append(unsigned long)
@@ -672,6 +679,7 @@ strchr
 strcmp
 strcpy
 strlen
+subclass
 surfacePropertyName
 table
 text

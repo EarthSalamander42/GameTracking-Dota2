@@ -20,8 +20,8 @@
 				<Label id="DeathsLabel" class="SubheaderDesc KDALabel" text="#DOTA_Scoreboard_D"/>
 				<Label id="AssistsLabel" class="SubheaderDesc KDALabel" text="#DOTA_Scoreboard_A"/>
 				<Label id="UltLabel" class="SubheaderDesc" text="#DOTA_Scoreboard_Ult"/>
-				<Label id="MuteLabel" class="SubheaderDesc" text="#DOTA_Scoreboard_Mute"/>
-				<Label id="WKArcanaLabel" class="SubheaderDesc" text="#DOTA_Scoreboard_WKArcana"/>
+				<Label id="MuteLabel" class="SubheaderDesc" text="#DOTA_Scoreboard_Header_PLAYER"/>
+				<Label id="WKArcanaLabel" class="SubheaderDesc" text="#DOTA_Scoreboard_Arcana"/>
 				<Label id="TippingLabel" class="SubheaderDesc" text="#DOTA_Scoreboard_Tipping"/>
 				<Label id="BountyLabel" class="SubheaderDesc" text="#DOTA_Scoreboard_Bounties"/>
 				<Label id="AllStarLabel" class="SubheaderDesc" text="#DOTA_Scoreboard_AllStar"/>
@@ -38,7 +38,6 @@
 					<DOTASettingsCheckbox convar="dota_mute_other_coaches" text="#DOTA_Scoreboard_MuteOtherCoaches" />
 				</Panel>
 				<Panel id="NestContainer">
-					<Button id="OverwatchReportButton" onactivate="DOTAHUDOverwatchReport();" onmouseover="UIShowTextTooltip( #DOTA_HUD_OverwatchReport )"  onmouseout="UIHideTextTooltip()"/>
 					<Button id="CoachesButton" onactivate="DOTAHUDToggleScoreboardCoaches();" onmouseover="UIShowTextTooltip( #DOTA_HUD_Coaches )"  onmouseout="UIHideTextTooltip()"/>
 					<Button id="CombatLogButton" onactivate="DOTAHUDToggleCombatLog();" onmouseover="UIShowTextTooltip( #DOTA_HUD_CombatLog )"  onmouseout="UIHideTextTooltip()"/>
 					<Button id="SharedContentButton" onactivate="DOTAHUDToggleSharedContent();" onmouseover="UIShowTextTooltip( #DOTA_HUD_SharedContent )"  onmouseout="UIHideTextTooltip()" />

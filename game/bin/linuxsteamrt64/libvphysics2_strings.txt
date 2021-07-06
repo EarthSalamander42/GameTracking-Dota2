@@ -17,7 +17,7 @@
 #f %d %d %d, original mesh: %d %d %d
 #ifdef DBGFLAG_ASSERT
 $ORIGIN
-$tIVScript
+$tI<No schemasystem>
 %%%s
 %+.2f*%.1f in
 %-120s
@@ -27,7 +27,11 @@ $tIVScript
 %.3f behind, %d nodes, FeModel %s bytes, %s
 %14s %-30s[%u]%s
 %6.2f %s
+%8.3f
 %d "%s"
+%d "No animation data"
+%d %s. %llu casts, %.1f ticks/cast
+%d %s. No Calls
 %d bones found and initialized
 %d hitboxes, %d casts
 %d tests / %d recorded traces
@@ -42,7 +46,6 @@ $tIVScript
 %llx
 %llx:
 %p
-%p: %s
 %s ! %s:%u:%u:%u
 %s %g %g %g %g %g %g %g %g %g
 %s %s
@@ -58,6 +61,7 @@ $tIVScript
 %s / %s
 %s : %s [%d hitboxes]
 %s F=%d V=%d hE=%d
+%s Schema Type: %s
 %s [%d]
 %s [%u valid / %u bones]
 %s a1 :{r=%.1f,a=%.1f}
@@ -70,7 +74,6 @@ $tIVScript
 %s+--
 %s+-- Schema Class: %s
 %s/%s
-%s: %llu casts, %.1f ticks/cast
 %s: %s
 %s:%s needs base %s:%s to be registered
 %s:%s:%s
@@ -157,19 +160,19 @@ $tIVScript
 -unittest
 -ut
 -validate
+../public/ordered_constructor.h
+../public/scenesystem/vertexformat.h
+../public/tier0/tslist.h
+../public/tier0/utlblockmemory.h
+../public/tier0/utllinkedlist.h
+../public/tier0/utlrbtree.h
+../public/tier0/utlsortvector.h
 .vmdl
 /%u.rnsave
 /*const char *g_ReflFieldNames[ %d ] ={
 // %d. possible regions:
 // Skipped due to deduction
 // only one region left, because
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/ordered_constructor.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/scenesystem/vertexformat.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/tier0/tslist.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/tier0/utlblockmemory.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/tier0/utllinkedlist.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/tier0/utlrbtree.h
-/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/src/public/tier0/utlsortvector.h
 0.0
 0.02
 0.04
@@ -180,12 +183,10 @@ $tIVScript
 0x%08X
 0x%08X %s,
 1 (true)
-1 1 1
 1 << %u
 1.0
 1.0f
 1.2
-1000
 10ConCommand
 11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
 11CRenderMesh
@@ -197,7 +198,6 @@ $tIVScript
 14CEmptySequence
 14ConCommandBase
 15CBaseConstraint
-15CFeAgglomerator
 15CResourceStream
 16CDefaultAccessor
 16CMorphConstraint
@@ -214,7 +214,7 @@ $tIVScript
 19CSchemaRegistration
 2
 2000
-2020-10-01 21:45:45.749000
+2021-05-26 04:44:03.101000
 20CMutableRefCountBaseILb1E6CRefMTE
 20CPostConnectCallback
 20CRefCountServiceBaseILb1E6CRefMTE
@@ -223,78 +223,93 @@ $tIVScript
 20IResourceTypeManager
 21CDualHullAgglomerator
 22CSchemaInstallCallback
+22CTier2ShutdownCallback
 23IConCommandBaseAccessor
 24CResourceStreamUnaligned
+25CKV3TransferDefaultHelperI10CAnimCycleE
+25CKV3TransferDefaultHelperI10CCycleBaseE
+25CKV3TransferDefaultHelperI10CFootCycleE
+25CKV3TransferDefaultHelperI10CHitBoxSetE
+25CKV3TransferDefaultHelperI10CMorphDataE
+25CKV3TransferDefaultHelperI10CWristBoneE
+25CKV3TransferDefaultHelperI11CAttachmentE
+25CKV3TransferDefaultHelperI11CFingerBoneE
+25CKV3TransferDefaultHelperI11CFootMotionE
+25CKV3TransferDefaultHelperI11CFootStrideE
+25CKV3TransferDefaultHelperI11CRenderMeshE
+25CKV3TransferDefaultHelperI12CFingerChainE
+25CKV3TransferDefaultHelperI12CModelConfigE
+25CKV3TransferDefaultHelperI13CAnimSkeletonE
+25CKV3TransferDefaultHelperI13CFingerSourceE
+25CKV3TransferDefaultHelperI13CMorphSetDataE
+25CKV3TransferDefaultHelperI13VPhysXJoint_tE
+25CKV3TransferDefaultHelperI13VPhysXRange_tE
+25CKV3TransferDefaultHelperI14CAimConstraintE
+25CKV3TransferDefaultHelperI14CHitBoxSetListE
+25CKV3TransferDefaultHelperI14CMorphRectDataE
+25CKV3TransferDefaultHelperI15CFlexControllerE
+25CKV3TransferDefaultHelperI15CFootDefinitionE
+25CKV3TransferDefaultHelperI15CFootTrajectoryE
+25CKV3TransferDefaultHelperI15CRenderSkeletonE
+25CKV3TransferDefaultHelperI15MaterialGroup_tE
+25CKV3TransferDefaultHelperI15PermModelData_tE
+25CKV3TransferDefaultHelperI15PermModelInfo_tE
+25CKV3TransferDefaultHelperI16CConstraintSlaveE
+25CKV3TransferDefaultHelperI16CDrawCullingDataE
+25CKV3TransferDefaultHelperI16CModelConfigListE
+25CKV3TransferDefaultHelperI16CMorphBundleDataE
+25CKV3TransferDefaultHelperI16CMorphConstraintE
+25CKV3TransferDefaultHelperI16CPointConstraintE
+25CKV3TransferDefaultHelperI16CSceneObjectDataE
+25CKV3TransferDefaultHelperI16CTwistConstraintE
+25CKV3TransferDefaultHelperI16VPhysXBodyPart_tE
+25CKV3TransferDefaultHelperI17CConstraintTargetE
+25CKV3TransferDefaultHelperI17CFootTrajectoriesE
+25CKV3TransferDefaultHelperI17COrientConstraintE
+25CKV3TransferDefaultHelperI17CParentConstraintE
+25CKV3TransferDefaultHelperI18PermModelExtPart_tE
+25CKV3TransferDefaultHelperI18PhysSoftbodyDesc_tE
+25CKV3TransferDefaultHelperI19ModelSkeletonData_tE
+25CKV3TransferDefaultHelperI19VPhysXConstraint2_tE
+25CKV3TransferDefaultHelperI19VPhysics2ShapeDef_tE
+25CKV3TransferDefaultHelperI20CFootCycleDefinitionE
+25CKV3TransferDefaultHelperI20CRenderBufferBindingE
+25CKV3TransferDefaultHelperI20CTiltTwistConstraintE
+25CKV3TransferDefaultHelperI20RenderSkeletonBone_tE
+25CKV3TransferDefaultHelperI20SkeletonBoneBounds_tE
+25CKV3TransferDefaultHelperI21ModelBoneFlexDriver_tE
+25CKV3TransferDefaultHelperI21VPhysXAggregateData_tE
+25CKV3TransferDefaultHelperI22CPhysSurfacePropertiesE
+25CKV3TransferDefaultHelperI23CMaterialDrawDescriptorE
+25CKV3TransferDefaultHelperI24CVrSkeletalInputSettingsE
+25CKV3TransferDefaultHelperI24VPhysXConstraintParams_tE
+25CKV3TransferDefaultHelperI27CModelConfigElement_CommandE
+25CKV3TransferDefaultHelperI27CPhysSurfacePropertiesAudioE
+25CKV3TransferDefaultHelperI27VPhysXCollisionAttributes_tE
+25CKV3TransferDefaultHelperI28CBoneConstraintPoseSpaceBoneE
+25CKV3TransferDefaultHelperI28CModelConfigElement_UserPickE
+25CKV3TransferDefaultHelperI28CVPhysXSurfacePropertiesListE
+25CKV3TransferDefaultHelperI28ModelBoneFlexDriverControl_tE
+25CKV3TransferDefaultHelperI29CBoneConstraintPoseSpaceMorphE
+25CKV3TransferDefaultHelperI30CModelConfigElement_RandomPickE
+25CKV3TransferDefaultHelperI31CModelConfigElement_RandomColorE
+25CKV3TransferDefaultHelperI32CModelConfigElement_SetBodygroupE
+25CKV3TransferDefaultHelperI32CPhysSurfacePropertiesSoundNamesE
+25CKV3TransferDefaultHelperI33CModelConfigElement_AttachedModelE
+25CKV3TransferDefaultHelperI34CModelConfigElement_SetRenderColorE
+25CKV3TransferDefaultHelperI36CModelConfigElement_SetMaterialGroupE
+25CKV3TransferDefaultHelperI40PermModelDataAnimatedMaterialAttribute_tE
+25CKV3TransferDefaultHelperI7CFlexOpE
+25CKV3TransferDefaultHelperI7CHitBoxE
+25CKV3TransferDefaultHelperI9CAnimFootE
+25CKV3TransferDefaultHelperI9CFlexDescE
+25CKV3TransferDefaultHelperI9CFlexRuleE
 25IAsyncProcessedDataResult
 25IVPhysicsLegacyKeyHandler
 27CModelConfigElement_Command
-27CSchemaUtlVectorManipulatorI10CUtlVectorI10CHitBoxSet10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI10CMorphData10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI10CTransform10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI10CUtlString10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI10CWristBone10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI10Quaternion10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI11CFingerBone10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI11CFootStride10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI12CFingerChain10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI12RnHullDesc_t10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI12RnMeshDesc_t10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI12matrix3x4a_t10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI13CFingerSource10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI13CStrongHandleI25InfoForResourceTypeCModelE10CUtlMemoryIS3_iEES3_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI13CStrongHandleI29InfoForResourceTypeIMaterial2E10CUtlMemoryIS3_iEES3_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI13CStrongHandleI30InfoForResourceTypeCRenderMeshE10CUtlMemoryIS3_iEES3_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI13CStrongHandleI34InfoForResourceTypeCAnimationGroupE10CUtlMemoryIS3_iEES3_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI13CStrongHandleI37InfoForResourceTypeCPhysAggregateDataE10CUtlMemoryIS3_iEES3_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI13CStrongHandleI37InfoForResourceTypeCSequenceGroupDataE10CUtlMemoryIS3_iEES3_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI13VPhysXJoint_t10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI14CMorphRectData10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI14RnSphereDesc_t10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI15CFlexController10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI15CFootTrajectory10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI15MaterialGroup_t10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI15RnCapsuleDesc_t10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI16CConstraintSlave10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI16CDrawCullingData10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI16CMorphBundleData10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI16VPhysXBodyPart_t10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI17CConstraintTarget10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI17MorphBundleType_t10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI18PermModelExtPart_t10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI18RnSoftbodySpring_t10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI19RnSoftbodyCapsule_t10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI19VPhysXConstraint2_t10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI20RenderSkeletonBone_t10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI20RnSoftbodyParticle_t10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI21ModelBoneFlexDriver_t10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI23CMaterialDrawDescriptor10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI27VPhysXCollisionAttributes_t10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI28ModelBoneFlexDriverControl_t10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI6Vector10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI7CFlexOp10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI7CHitBox10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI9CAnimFoot10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI9CFlexDesc10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorI9CFlexRule10CUtlMemoryIS1_iEES1_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorIN28CBoneConstraintPoseSpaceBone7Input_tE10CUtlMemoryIS2_iEES2_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorIN29CBoneConstraintPoseSpaceMorph7Input_tE10CUtlMemoryIS2_iEES2_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorIP12CModelConfig10CUtlMemoryIS2_iEES2_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorIP15CBaseConstraint10CUtlMemoryIS2_iEES2_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorIP19CModelConfigElement10CUtlMemoryIS2_iEES2_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorIP22CPhysSurfaceProperties10CUtlMemoryIS2_iEES2_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorIS0_Ii10CUtlMemoryIiiEES1_IS3_iEES3_E
-27CSchemaUtlVectorManipulatorI10CUtlVectorIf10CUtlMemoryIfiEEfE
-27CSchemaUtlVectorManipulatorI10CUtlVectorIh10CUtlMemoryIhiEEhE
-27CSchemaUtlVectorManipulatorI10CUtlVectorIi10CUtlMemoryIiiEEiE
-27CSchemaUtlVectorManipulatorI10CUtlVectorIj10CUtlMemoryIjiEEjE
-27CSchemaUtlVectorManipulatorI10CUtlVectorIs10CUtlMemoryIsiEEsE
-27CSchemaUtlVectorManipulatorI10CUtlVectorIt10CUtlMemoryItiEEtE
-27CSchemaUtlVectorManipulatorI10CUtlVectorIy10CUtlMemoryIyiEEyE
-27CSchemaUtlVectorManipulatorI23CUtlVectorFixedGrowableI16CSceneObjectDataLm1EES1_E
 28CBoneConstraintPoseSpaceBone
 28CModelConfigElement_UserPick
 28CSchemaRegistration_modellib
-28ISchemaCollectionManipulator
 29CBoneConstraintPoseSpaceMorph
 2Way_0( %s )
 2Way_1( %s )
@@ -324,7 +339,10 @@ $tIVScript
 ; tris:
 ;"><b>Trigger</b> Touch
 <
+< %d >
 < FLT_EPSILON
+<%s : %u>
+<%s, cat %d>
 </div>
 </li>
 </pre>
@@ -335,7 +353,6 @@ $tIVScript
 <INVALID EXPRESSION>
 <INVALID_RBF_TYPE>
 <NO EXPRESSION>
-<No schemasystem>
 <div align=center style="padding:3px;font-size:15px;text-align:center;background-color:#
 <div align=center style="padding:3px;font-size:15px;text-align:center;background-color:#ff9966;">
 <font color = "red">as</font>-<font color="blue">with</font>:
@@ -346,6 +363,7 @@ $tIVScript
 <font color="red">Face is connected to itself, cannot dissolve</font>
 <font color="red">Query</font>(
 <font color="red">with</font>-<font color="blue">as</font>:
+<invalid>
 <li> - because <font color="red">Query</font> interacts with %u <font color="blue">shape</font>'s layer%s:
 <li> - because shape interacts with %u <font color="red">Query</font>'s layer%s:
 <no deferred ref found>
@@ -398,6 +416,7 @@ $tIVScript
 <tr><td>SurfaceProp</td><td>%s</td></tr>
 <ul>
 <unconnected>
+<unknown: %d>
 <unknown>
 =
 > -FLT_EPSILON
@@ -407,6 +426,9 @@ $tIVScript
 @ %.2f, %.2f, %.2f
 @?
 @@
+@@fff?fff?fff?fff?
+@A
+@B
 @spawn
 A
 AABB_t
@@ -462,11 +484,13 @@ AnimVrFinger_Index
 AnimVrFinger_Middle
 AnimVrFinger_Pinky
 AnimVrFinger_Ring
+AnimVrFinger_Thumb
 Animated
 Animated Position, Dynamic Rotation
 AnimationSystemUtils_001
 AnimationSystem_001
 AppendDebugMeshInfo
+ApplyNewState %d at %f
 Asleep
 Assert(
 Assert_ConditionFailed(_AssertCompileTimeConstantStruct_t const&)
@@ -476,6 +500,7 @@ AssetPreviewSystem_001
 AssetSystem001
 AssetSystemTest001
 Assuming parameter -sdk
+AttachObject called on motion controller with this object already attached.
 Attempting to get the Skeletal Input settings from model %s, which doesn't have any.  Please add a Skeletal Input Settings node to the model in ModelDoc
 Attempting to get the movement settings from model %s, for which movement settings have not been set.  Please add a MovementSettings node to the model in ModelDoc
 Attempting to restore from invalid version %u
@@ -487,6 +512,7 @@ Available debug layers:
 Awake
 AxialEdgeCount
 BEVEL_GEAR_FAST_JOINT
+BLEND_PREALIGNED
 BODY_DYNAMIC
 BODY_KEYFRAMED
 BODY_STATIC
@@ -531,6 +557,7 @@ CAnimRetargetData
 CAnimRetargetElementData
 CAnimSkeleton
 CAnimUser
+CAnimVariant
 CAnimationGroup
 CAssociateResourceBlockLoader::BlockingLoadResourceFileData: Trying to load an illegal resource name %s!
 CAttachment
@@ -579,11 +606,12 @@ CConstraintTarget
 CContactArray
 CCycleBase
 CDrawCullingData
+CDualHullAgglomerator: Degenerate topology, %d faces removed
 CEntIndexPair
 CEntIndexPair RnStartTouchEventRefl_t::m_Entities
 CEntPairTouchTracker
+CEntityIndex
 CFeIndexedJiggleBone
-CFeJiggleBone
 CFeModel
 CFeModelOverlay
 CFeMorphLayer
@@ -632,6 +660,7 @@ CMorphConstraint
 CMorphData
 CMorphRectData
 CMorphSetData
+CMotionTransform
 CNameIndex
 COLORCORRECTION_VERSION_1
 CONICAL_JOINT
@@ -668,6 +697,7 @@ CPhysicsBody::SetLinearVelocity
 CPhysicsBody::UpdateShadow
 CPhysicsShadowController::SetMaxSpeed
 CPhysicsShadowController::SetTargetPosition
+CPlayerSlot
 CPointConstraint
 CPool<>
 CPool<> Free Node
@@ -686,6 +716,7 @@ CResourceArray< CTransformUnaligned > RnSoftbodyDescRefl_t::m_InitPoseArray
 CResourceArray< CUtlPair< uint32, uint > > NameIndexRefl_t::m_NameToIndex
 CResourceArray< CUtlPair< uint64, RecordedEntityClassDescRefl_t > > WorldDebugPayloadContainerRefl_t::m_EntityClassDesc
 CResourceArray< CUtlPair< uint64, RecordedHitboxDescRefl_t > > WorldDebugPayloadContainerRefl_t::m_HitboxDesc
+CResourceArray< CubicBezierCurve > CubicBezierSplineRefl_t::m_Curves
 CResourceArray< FeAabb_t > RnSoftbodyRefl_t::m_AabbArray
 CResourceArray< FeAnimStrayRadius_t > FeModelRefl_t::m_AnimStrayRadiiArray
 CResourceArray< FeAxialEdgeBend_t > FeModelRefl_t::m_AxialEdgesArray
@@ -878,6 +909,7 @@ CRnSoftbodyDesc
 CRnSolverJoint
 CRnSphereShape
 CRnSphericalJoint
+CRnSplineJoint
 CRnSpringJoint
 CRnWeldJoint
 CRnWorld
@@ -891,6 +923,7 @@ CSoftbodyEffectProperty
 CSoftbodyEffectSkinnedCollider
 CSoftbodyEffectSpeedup
 CSoftbodyEffectWind
+CSplitScreenSlot
 CSplitString::Construct(char const*, char const**, int)
 CStableSymbolTable::GetId(char const*, bool*)
 CStableSymbolTable::Insert(int, char const*)
@@ -908,6 +941,7 @@ CUniformRandomStream::CUniformRandomStream()
 CUniformRandomStream::RandomFloat(float, float)
 CUniformRandomStream::RandomInt(int, int)
 CUniformRandomStream::SetSeed(int)
+CUtlBinaryBlock
 CUtlBinaryBlock::Set(void const*, int)
 CUtlBinaryBlock::SetLength(int)
 CUtlBinaryBlock::operator=(CUtlBinaryBlock const&)
@@ -941,6 +975,8 @@ CUtlMemoryBlockAllocator::CUtlMemoryBlockAllocator(int, unsigned int)
 CUtlMemoryBlockAllocator::~CUtlMemoryBlockAllocator()
 CUtlRBTree overflow with %u elements!
 CUtlScratchMemoryPool::AllocAligned(int, int)
+CUtlScratchMemoryPool::CUtlScratchMemoryPool(unsigned int, unsigned int, void*, bool)
+CUtlScratchMemoryPool::~CUtlScratchMemoryPool()
 CUtlSharedArray
 CUtlString
 CUtlString::Acquire(CBufferString*, bool)
@@ -965,12 +1001,13 @@ CUtlString::operator=(CBufferString const&)
 CUtlString::operator==(CUtlString const&) const
 CUtlStringToken
 CUtlStringToken RnFrictionNotificationRefl_t::m_MaterialIndex[ 2 ]
+CUtlSymbol
+CUtlSymbolLarge
 CUtlSymbolTable::AddString(char const*)
 CUtlSymbolTable::CUtlSymbolTable(int, int, bool)
 CUtlSymbolTable::Find(char const*) const
 CUtlSymbolTable::String(CUtlSymbol) const
 CUtlSymbolTable::~CUtlSymbolTable()
-CUtlVector
 CUtlVector< CFeMorphLayer >
 CUtlVector< CRnBody* >
 CUtlVector< CRnContact* >
@@ -1023,13 +1060,17 @@ Cannot create exact hull because of runtime limits
 Cannot deallocate abstract class
 Cannot deduce for class
 Cannot destruct abstract class
+Cannot save Mesh @%p: %s
 Cannot save file %s
 Cannot save file %s, stopping snapshot dumping
+Cannot save hull @%p: %s
 Cannot serialize contact type %d
 Cannot serialize joint type %d
 Cannot serialize shape type %d
 Cannot serialize softbody effect of invalid type %d
 Cannot start streaming to physics debugger: please connect to VConsole2 first
+Cannot unserialize Mesh buffer (%d bytes) : %s
+Cannot unserialize hull buffer (%d bytes) : %s
 Cannot unserialize joint type %d
 Capsule Shape[%d]
 Capsule r=%g, h=%g
@@ -1053,13 +1094,12 @@ CastSphereTriangle
 Casts
 Change global friction factor
 Change global restitution factor
-ChangeCallbackOnChange
-ChangeCallbackOnChangeOrCreate
 ChangeSize
 CharacterSetBuild
 Child1
 Child2
 Choppiness
+ClearHistory
 Cloth:
 ClothScale
 CollGroup=%d;
@@ -1109,7 +1149,12 @@ CreateInterface
 CreateNewThreadPool
 CtrlCount
 Cubic
+CubicBezierCurve
+CubicBezierSpline
+CubicBezierSplineRefl_t
+CubicBezierSplineRefl_t RnSplineJointRefl_t::m_Spline
 Currently allocated agg data: {
+Curves
 DISCRETE_SIM
 Damping %.2f linear, %.2f angular
 DampingMultiplier
@@ -1129,6 +1174,7 @@ DebugShapeSerial
 DebugStart( %d );
 DebugTextureInfo001
 Default
+DegreeEuler
 DelayedAttrQueue
 DelayedBuildMassBodies
 DelayedDeleteBodies
@@ -1140,6 +1186,7 @@ DelayedDeleteJointsReady
 DelayedDeleteShapes
 DelayedDeleteShapesReady
 DelayedDeletions
+DemoUpconverterVersion001
 DestroyDebugSceneObject: pSceneObject ( %p ) has already been deleted!
 DestroyThreadPool
 DevMsg
@@ -1195,6 +1242,55 @@ Excluded flags: No interaction allowed because
 ExtraFlags
 FATAL ERROR: unable to register all schema data: %s
 FCVAR_NEVER_AS_STRING
+FLAG0_SHIFT_BREAKABLE_FORCE
+FLAG0_SHIFT_BREAKABLE_TORQUE
+FLAG0_SHIFT_CONSTRAIN
+FLAG0_SHIFT_INTERPENETRATE
+FLAG_ALL_BONE_FLAGS
+FLAG_ALWAYS_DYNAMIC_ON_CLIENT
+FLAG_ANIMATION
+FLAG_ANIMATION_DRIVEN_FLEXES
+FLAG_ATTACHMENT
+FLAG_BONEFLEXDRIVER
+FLAG_BONE_MERGE_READ
+FLAG_BONE_MERGE_WRITE
+FLAG_BONE_USED_BY_VERTEX_LOD0
+FLAG_BONE_USED_BY_VERTEX_LOD1
+FLAG_BONE_USED_BY_VERTEX_LOD2
+FLAG_BONE_USED_BY_VERTEX_LOD3
+FLAG_BONE_USED_BY_VERTEX_LOD4
+FLAG_BONE_USED_BY_VERTEX_LOD5
+FLAG_BONE_USED_BY_VERTEX_LOD6
+FLAG_BONE_USED_BY_VERTEX_LOD7
+FLAG_CLOTH
+FLAG_DO_NOT_CAST_SHADOWS
+FLAG_FORCE_PHONEME_CROSSFADE
+FLAG_HAS_SKINNED_MESHES
+FLAG_HITBOX
+FLAG_IGNORE_SCALE_OBSOLETE_DO_NOT_USE
+FLAG_IMPLICIT_BIND_POSE_SEQUENCE
+FLAG_IS_POLYSOUP_GEOMETRY
+FLAG_JOINT
+FLAG_KINEMATIC
+FLAG_LEVEL_COLLISION
+FLAG_MASS
+FLAG_MESH
+FLAG_MODEL_DOC
+FLAG_MODEL_IS_RUNTIME_COMBINED
+FLAG_MODEL_PART_CHILD
+FLAG_NAV_GEN_HULL
+FLAG_NAV_GEN_NONE
+FLAG_NO_ANIM_EVENTS
+FLAG_NO_BONE_FLAGS
+FLAG_NO_FORCED_FADE
+FLAG_PHYSICS
+FLAG_PROCEDURAL
+FLAG_RETARGET_SRC
+FLAG_RIGIDLENGTH
+FLAG_SOURCE1_IMPORT
+FLAG_STATIC
+FLAG_TRANSLUCENT
+FLAG_TRANSLUCENT_TWO_PASS
 FLEX_OP_2WAY_0
 FLEX_OP_2WAY_1
 FLEX_OP_ABS
@@ -1338,9 +1434,7 @@ GroupIndex
 H7
 HB
 HELPER_BONE
-HMDAvatar
 HammerMapLoader001
-HandAttachment
 Has Collision;
 HasOverrideAttributes
 HashString
@@ -1376,6 +1470,7 @@ HullCastRay
 HullCastSphere
 HullMassEdges
 IBphys
+IPhysicsPlayerController
 IQuickTime001
 IReflectedValueSetter
 ISoftbodyEffect
@@ -1385,13 +1480,11 @@ If enabled, surfaces with default material are highlighted in physics debug geom
 Ignore Entity 0x%X
 Inactive
 Inconsistent collision attribute index array of size %d, expected %d (number of shapes)
-InfoForResourceTypeCAnimData
 InfoForResourceTypeCAnimationGroup
 InfoForResourceTypeCModel
 InfoForResourceTypeCPhysAggregateData
 InfoForResourceTypeCRenderMesh
 InfoForResourceTypeCSequenceGroupData
-InfoForResourceTypeCTextureBase
 InfoForResourceTypeIMaterial2
 Inner convex is degenerate, cannot test
 InputService_001
@@ -1414,7 +1507,11 @@ InteractsWith
 IntersectHulls
 IntersectSegmentTriangle
 IntersectSphereHull
+IntersectSweptBoxWithTriangle
+IntersectSweptBoxWithTriangle_SIMD
+IntersectSweptSphereWithTriangle
 IntersectionDictionaryRefl_t
+Invalid
 Invalid RecordedHitboxState_t
 Invalid access of deferred ConVarRef for '%s'
 Invalid bone and flex counts for model %s, %d meshes but %d counts
@@ -1446,6 +1543,8 @@ JOINT_AXIS_X
 JOINT_AXIS_Y
 JOINT_AXIS_Z
 JOINT_COUNT
+JOINT_FLAGS_BODY1_FIXED
+JOINT_FLAGS_NONE
 JOINT_MOTION_COUNT
 JOINT_MOTION_FREE
 JOINT_MOTION_LOCKED
@@ -1459,7 +1558,6 @@ JOINT_STATE_LIMIT_ENABLED
 JOINT_STATE_LINEAR_CONSTRAINT_DISABLED
 JOINT_STATE_MOTOR_ENABLED
 JiggleBoneCount
-Joint changed type from %d to %d, skipping!
 JointAxis_t
 JointIndexInWorld
 JointList
@@ -1467,6 +1565,7 @@ JointMotion_t
 Joints: %d
 K
 KV3 load transfer failed: %s
+KV3 save transfer failed: %s
 KeepInBounds
 KelagerBend %d
 KelagerBendCount
@@ -1490,7 +1589,6 @@ LOOKUP_TYPE_VERTEX_ID
 LastTimestep
 LayerIndex
 Left Hand
-LeftHand
 Length;
 Level0
 Level1
@@ -1506,6 +1604,8 @@ LinearLambda2
 LinearLambdas
 LoadKV3(CKeyValues3Context*, CUtlString*, CUtlBuffer*, KV3ID_t const&, char const*)
 LoadKV3(KeyValues3*, CUtlString*, CUtlBuffer*, KV3ID_t const&, char const*)
+LoadKV3(KeyValues3*, CUtlString*, char const*, KV3ID_t const&, char const*)
+LoadKV3Object error: %s
 LoadKV3ObjectInPlace error: %s
 LoadKV3Text_NoHeader(KeyValues3*, CUtlString*, char const*, KV3ID_t const&, char const*)
 LoadPhysicsDebugMaterials
@@ -1527,13 +1627,12 @@ LowerTwistLambda
 MASS_PRIORITY_DEFAULT
 MASS_PRIORITY_TRIGGER
 MATCHFRAMEWORK_001
-MClassHasCustomAlignedNewDelete
 MD5Final
 MD5Init
 MD5Update
-MDefaultString
 MESH_DRAW_FLAGS_CAN_BATCH_WITH_DYNAMIC_SHADER_CONSTANTS
 MESH_DRAW_FLAGS_DRAW_LAST
+MESH_DRAW_FLAGS_NONE
 MESH_DRAW_FLAGS_USE_COMPRESSED_NORMAL_TANGENT
 MESH_DRAW_FLAGS_USE_COMPRESSED_PER_VERTEX_LIGHTING
 MESH_DRAW_FLAGS_USE_SHADOW_FAST_PATH
@@ -1542,14 +1641,9 @@ MESH_DRAW_INPUT_LAYOUT_IS_NOT_MATCHED_TO_MATERIAL
 MESH_TRANSLUCENCY_FULLY_ALPHA_BLENDED
 MESH_TRANSLUCENCY_FULLY_OPAQUE
 MESH_TRANSLUCENCY_PARTIALLY_ALPHA_BLENDED
-MNetworkBitCount
-MNetworkChangeCallback
-MNetworkEncoder
-MNetworkOverride_Invalid
-MNetworkPriority
-MNetworkRemoveAll
-MNetworkSerializer
-MNetworkUserGroup
+MGetKV3ClassDefaults
+MIsBoxedIntegerType
+MKV3TransferName
 MODEL_BONE_FLEX_INVALID
 MODEL_BONE_FLEX_TX
 MODEL_BONE_FLEX_TY
@@ -1625,6 +1719,7 @@ MeshCastSphere
 MeshClipRay
 MeshCollide
 MeshCollideCacheMiss
+MeshDrawPrimitiveFlags_t
 MeshSystem001
 MeshTranslucencyType_t
 MeshUtils001
@@ -1642,30 +1737,7 @@ ModelConfigAttachmentType_t
 ModelDocUtils001
 ModelScale
 ModelSkeletonData_t
-ModelSkeletonData_t::BLEND_PREALIGNED
 ModelSkeletonData_t::BoneFlags_t
-ModelSkeletonData_t::FLAG_ALL_BONE_FLAGS
-ModelSkeletonData_t::FLAG_ANIMATION
-ModelSkeletonData_t::FLAG_ATTACHMENT
-ModelSkeletonData_t::FLAG_BONEFLEXDRIVER
-ModelSkeletonData_t::FLAG_BONE_MERGE_READ
-ModelSkeletonData_t::FLAG_BONE_MERGE_WRITE
-ModelSkeletonData_t::FLAG_BONE_USED_BY_VERTEX_LOD0
-ModelSkeletonData_t::FLAG_BONE_USED_BY_VERTEX_LOD1
-ModelSkeletonData_t::FLAG_BONE_USED_BY_VERTEX_LOD2
-ModelSkeletonData_t::FLAG_BONE_USED_BY_VERTEX_LOD3
-ModelSkeletonData_t::FLAG_BONE_USED_BY_VERTEX_LOD4
-ModelSkeletonData_t::FLAG_BONE_USED_BY_VERTEX_LOD5
-ModelSkeletonData_t::FLAG_BONE_USED_BY_VERTEX_LOD6
-ModelSkeletonData_t::FLAG_BONE_USED_BY_VERTEX_LOD7
-ModelSkeletonData_t::FLAG_CLOTH
-ModelSkeletonData_t::FLAG_HITBOX
-ModelSkeletonData_t::FLAG_MESH
-ModelSkeletonData_t::FLAG_NO_BONE_FLAGS
-ModelSkeletonData_t::FLAG_PHYSICS
-ModelSkeletonData_t::FLAG_PROCEDURAL
-ModelSkeletonData_t::FLAG_RETARGET_SRC
-ModelSkeletonData_t::FLAG_RIGIDLENGTH
 MorphBundleType_t
 MorphEncodingType_t
 MorphFlexControllerRemapType_t
@@ -1675,26 +1747,13 @@ MoveBuffer
 MoveProxies
 MovementSettings
 Multiply air drag
+Multiply water drag for buoyancy
 Multithreaded test:
 MurmurHash2
 MurmurHash2LowerCase(char const*, int, unsigned int)
 MurmurHash2LowerCase(char const*, unsigned int)
 MurmurHash64
-N24CFieldPathHuffmanEncoder12InternalNodeE
-N24CFieldPathHuffmanEncoder5INodeE
-N24CFieldPathHuffmanEncoder8LeafNodeE
 N33CBaseIntrospectedToKV3TypeManager18AsyncProcessResultE
-NETWORK_FIELD_CHANGED_ARRAY_WITH_VALUE
-NETWORK_FIELD_CHANGED_NO_VALUE
-NETWORK_FIELD_CHANGED_NO_VALUE_NO_CONTEXT
-NETWORK_FIELD_CHANGED_TYPE_NONE
-NETWORK_FIELD_CHANGED_WITH_VALUE
-NETWORK_FIELD_CHANGES_OFTEN_PRIORITY
-NETWORK_FIELD_CHANGES_OFTEN_PRIORITY_TOPOOGICAL
-NETWORK_FIELD_CHANGES_OFTEN_PRIORITY_TOPOOGICAL_SORTLOWER
-NETWORK_FIELD_DEFAULT_PRIORITY
-NETWORK_FIELD_HIGHEST_PRIORITY
-NETWORK_FIELD_LOWEST_PRIORITY
 NULL_JOINT
 NWay(
 NameIndex:AcquireName( %x ) without name string
@@ -1746,10 +1805,10 @@ Notify Persist
 NullJoints
 ORIENT
 Object Set Mask
-Old
 OldFeEdge_t
 On Touch Found or Lost:
 One of the collision groups is Conditionally Solid - No interaction allowed
+Org(%.3f,%.3f,%.3f) Ang(%.3f,%.3f,%.3f)
 Out of %d unit test hulls, %d failed to build, %d were ultra-thin
 Overlap in reporting by type: %.1f%%, %s unique pointers / %s total = %.1f
 OverrideCollisionGroup
@@ -1803,23 +1862,10 @@ ParticleSystemMgr003
 PeakIntensityAdj
 PeakTime
 PerVertexLighting
+PermModelDataAnimatedMaterialAttribute_t
 PermModelData_t
 PermModelExtPart_t
 PermModelInfo_t
-PermModelInfo_t::FLAG_ANIMATION_DRIVEN_FLEXES
-PermModelInfo_t::FLAG_DO_NOT_CAST_SHADOWS
-PermModelInfo_t::FLAG_FORCE_PHONEME_CROSSFADE
-PermModelInfo_t::FLAG_HAS_SKINNED_MESHES
-PermModelInfo_t::FLAG_IMPLICIT_BIND_POSE_SEQUENCE
-PermModelInfo_t::FLAG_MODEL_DOC
-PermModelInfo_t::FLAG_MODEL_IS_RUNTIME_COMBINED
-PermModelInfo_t::FLAG_MODEL_PART_CHILD
-PermModelInfo_t::FLAG_NAV_GEN_HULL
-PermModelInfo_t::FLAG_NAV_GEN_NONE
-PermModelInfo_t::FLAG_NO_ANIM_EVENTS
-PermModelInfo_t::FLAG_NO_FORCED_FADE
-PermModelInfo_t::FLAG_SOURCE1_IMPORT
-PermModelInfo_t::FLAG_TRANSLUCENT_TWO_PASS
 PermModelInfo_t::FlagEnum
 PersistTouchEvents
 PersistTouchEventsReportedThisStep
@@ -1899,6 +1945,7 @@ Primal
 ProcessUpdaterStatusChanges
 Project
 Projectile
+ProjectionTime
 PropWorldOrigin
 PropertyEditorSystem_001
 Proxies: %d
@@ -1923,6 +1970,8 @@ Quaternion RnJointRefl_t::m_qLocalFrame2
 Quaternion RnPrismaticJointRefl_t::m_RelQ0
 Quaternion RnShadowControllerRefl_t::m_qTargetOrientation
 Quaternion RnSphericalJointRefl_t::m_qMotorTargetOrientation
+Quaternion RnSplineJointRefl_t::m_RelQ0
+QuaternionAligned
 Query and shape in hierarchy id=%d
 QueryBounds
 QueuedLoaderVersion001
@@ -2004,6 +2053,7 @@ RN_WORLD_SNOOP_OK
 RN_WORLD_SNOOP_TIMEOUT
 RN_WORLD_SNOOP_UNCHANGED
 ROTATION
+RadianEuler
 RandomFloat
 RandomInt
 RandomSeed
@@ -2105,7 +2155,6 @@ RetargetSrc.%s.%s
 ReturnJobManualEventToPool
 ReverseOffsetCount
 Right Hand
-RightHand
 Rigid;
 RnBlendVertex_t
 RnBlockWeldJointRefl_t
@@ -2207,6 +2256,7 @@ RnSphereShapeRefl_t
 RnSphere_t
 RnSphere_t RnSphereShapeRefl_t::m_Sphere
 RnSphericalJointRefl_t
+RnSplineJointRefl_t
 RnSpringJointRefl_t
 RnStartTouchEventRefl_t
 RnStartTouchEvent_t
@@ -2303,6 +2353,7 @@ SOFTBODY_SIM_WARMSTART
 SOFTBODY_SOLVER_QUASISTATIC
 SOFTBODY_SOLVER_RELAXATION
 SPHERICAL_JOINT
+SPLINE_JOINT
 SSE and SSE2 are required.
 STATE_FAILED
 STATE_OVERLAPPED
@@ -2311,6 +2362,7 @@ STATE_TOUCHING
 STATE_UNKNOWN
 Same body
 Satisfy
+SaveKV3(KV3ID_t const&, KV3ID_t const&, KeyValues3 const*, CUtlString*, CUtlBuffer*)
 SaveKV3Text_NoHeader(KeyValues3 const*, CUtlString*, CUtlBuffer*)
 SaveKV3Text_NoHeader(KeyValues3 const*, CUtlString*, CUtlString*)
 SaveKV3Text_ToString(KV3ID_t const&, KeyValues3 const*, CUtlString*, CUtlString*)
@@ -2391,6 +2443,7 @@ Solved/Report/Solver Contacts
 Solved/Total Bodies
 Solved/Total Joints
 Sort[%d] = %s ticks, %s/op
+SoundGuid_t
 SoundOpSystem001
 SoundOpSystemEdit001
 SoundService_001
@@ -2491,6 +2544,7 @@ Touch list not implemented
 Touches Reported/Body Pair Table Size
 TouchingEntPairs
 Trace Query
+Trace Result
 Trace and Queries disabled on shape
 Tri %d
 Tri %d verts %u,%u,%u
@@ -2527,6 +2581,10 @@ Unsupported leaf class presumably derived from CRnSolverJoint, hash 0x%08X
 Unsupported leaf class presumably derived from CSoftbodyEffect, hash 0x%08X
 Unsupported leaf class presumably derived from ISoftbodyEffect, hash 0x%08X
 Unsupported version %d for resource '%s' (Expected %d)
+UnusedLayer0
+UnusedLayer1
+UnusedLayer2
+UnusedLayer3
 Update Collision Threads
 UpdateNotifications
 UpdatePositions
@@ -2565,6 +2623,7 @@ VGUI_System010
 VGUI_ivgui008
 VMDLLIB001
 VMaterialSystem2_001
+VMatrix
 VMediaFoundation001
 VP4003
 VPHYSICS_CREATE_AUX_WORLD
@@ -2577,29 +2636,14 @@ VPHYSICS_MOTION_TYPE_INVALID
 VPHYSICS_MOTION_TYPE_KEYFRAMED
 VPHYSICS_MOTION_TYPE_STATIC
 VPhysXAggregateData_t
-VPhysXAggregateData_t::FLAG_IGNORE_SCALE_OBSOLETE_DO_NOT_USE
-VPhysXAggregateData_t::FLAG_IS_POLYSOUP_GEOMETRY
-VPhysXAggregateData_t::FLAG_LEVEL_COLLISION
-VPhysXAggregateData_t::VPhysXFlagEnum_t
 VPhysXBodyPart_t
-VPhysXBodyPart_t::FLAG_ALWAYS_DYNAMIC_ON_CLIENT
-VPhysXBodyPart_t::FLAG_JOINT
-VPhysXBodyPart_t::FLAG_KINEMATIC
-VPhysXBodyPart_t::FLAG_MASS
-VPhysXBodyPart_t::FLAG_STATIC
 VPhysXBodyPart_t::VPhysXFlagEnum_t
 VPhysXCollisionAttributes_t
 VPhysXConstraint2_t
 VPhysXConstraintParams_t
 VPhysXConstraintParams_t::EnumFlags0_t
-VPhysXConstraintParams_t::FLAG0_SHIFT_BREAKABLE_FORCE
-VPhysXConstraintParams_t::FLAG0_SHIFT_BREAKABLE_TORQUE
-VPhysXConstraintParams_t::FLAG0_SHIFT_CONSTRAIN
-VPhysXConstraintParams_t::FLAG0_SHIFT_INTERPENETRATE
 VPhysXJoint_t
 VPhysXJoint_t::Flags_t
-VPhysXJoint_t::JOINT_FLAGS_BODY1_FIXED
-VPhysXJoint_t::JOINT_FLAGS_NONE
 VPhysXRange_t
 VPhysics2ShapeDef_t
 VPhysics2SurfacePropLoader
@@ -2612,6 +2656,7 @@ VProfService_001
 VR_001
 VRenderDeviceSetupV001
 VSInputSignature
+VScript
 VScriptDbg
 VScriptManager010
 VStringTokenSystem001
@@ -2625,7 +2670,7 @@ V_PrettifyNum
 V_RemoveDotSlashes
 V_SplitString(char const*, char const*, CUtlVector<char*, CUtlMemory<char*, int> >&)
 V_UnqualifiedFileName
-V_acos
+V_acosd
 V_acosf
 V_asinf
 V_atan2f
@@ -2636,22 +2681,23 @@ V_atofloat64
 V_atoi
 V_atoi64
 V_atoui64
-V_cos
+V_cosd
 V_cosf
 V_expf
 V_fmodf
-V_fpclassify
+V_fpclassifyd
 V_frexpf
-V_isnan
+V_isnand
 V_log10f
-V_log2
+V_log2d
 V_logf
-V_pow
+V_modff
+V_powd
 V_powf
 V_qsort
 V_qsort_s
-V_sin
 V_sincosf
+V_sind
 V_sinf
 V_snprintf
 V_sscanf
@@ -2661,9 +2707,9 @@ V_strlower_fast
 V_strnlen
 V_strtod
 V_strtoi64
-V_strtok
 V_strtoui64
 V_tanf
+V_uuid_t
 V_vsnprintf
 Vector IrrotationalVortexOnGridRefl_t::m_vAxisX
 Vector IrrotationalVortexOnGridRefl_t::m_vAxisY
@@ -2713,6 +2759,7 @@ Vector RnSoftbodyRefl_t::m_vSimOrigin
 Vector RnSphericalJointRefl_t::m_vLinearLambda
 Vector RnSphericalJointRefl_t::m_vMotorLambda
 Vector RnSphericalJointRefl_t::m_vMotorTargetVelocity
+Vector RnSplineJointRefl_t::m_vAngularLambda
 Vector RnWeldJointRefl_t::m_vAngularImpulse
 Vector RnWeldJointRefl_t::m_vLinearImpulse
 Vector RnWorldRefl_t::m_vGravity
@@ -2742,6 +2789,7 @@ Vortices
 WARNING: Failed to convert introspected block for file: %s
 WARNING: Invalid resource version (%d): %s
 WARNING: Trying to create a CRenderContextPtr without a valid context.
+WARNING: Unrecognized bone "%s"
 WELD_JOINT
 WORLD_DEBUG_RECORD_DEBUGDRAW
 WORLD_DEBUG_RECORD_HITBOXES
@@ -2779,6 +2827,7 @@ Yaw;
 [%d] (%d)
 [%d] hit %d
 [%d] hitboxes
+[%u]
 [CBroadphaseProxyData]
 [CFeModelOverlay]
 [CRnContact]
@@ -2793,6 +2842,7 @@ Yaw;
 [ISoftbodyEffect]
 [RnBodyPair_t]
 [empty]
+[idx=%d] "%s"
 [in %.2f] VSets(0x%X) -> %.2f @ %.2f
 \"
 \"""
@@ -2831,6 +2881,7 @@ abbp
 abc
 abnap
 abs( %s )
+advanced to state %d at %f
 always
 and adding Touch Persist flag, because of trigger group
 angDragBasis
@@ -2843,6 +2894,7 @@ audioroughnessfactor
 audiosounds
 awake_bodies
 bAccelerate
+bAnalogSteering
 bAnimTransformChanged
 bAutoSleeping
 bColliderTransformsValid
@@ -2854,6 +2906,7 @@ bEnableSprings
 bFrozen
 bFrozenInLocalSpace
 bGoalAttractionSimplified
+bHasBrakePedal
 bHasScale
 bIsContinuousEnabled
 bIsLimitEnabled
@@ -2862,11 +2915,13 @@ bIsSpeculativeEnabled
 bIsSwingLimitEnabled
 bIsTwistLimitEnabled
 bNew
+bOfflineSimQuality
 bOwnHull
 bOwnMesh
 bParallelIslands
 bParallelSolver
 bSimTransformsOutdated
+bSkipWorldStep
 bSleepEnabled
 bStartInSolid
 baselayer
@@ -2878,6 +2933,7 @@ binary
 binary_auto
 binary_bc
 binary_lz4
+binary_zstd
 bit %d
 bit field
 bit from PhysicsJointStateFlagsEnum_t
@@ -2887,6 +2943,7 @@ blendweights
 blocklight
 blocklos
 blocksound
+bodyMassScale
 body_groups
 bool
 bool ManifoldPointRefl_t::m_bNew
@@ -2917,14 +2974,18 @@ bool RnSoftbodyRefl_t::m_bEnableSprings
 bool RnSoftbodyRefl_t::m_bFrozen
 bool RnSoftbodyRefl_t::m_bFrozenInLocalSpace
 bool RnSoftbodyRefl_t::m_bGoalAttractionSimplified
+bool RnSoftbodyRefl_t::m_bOfflineSimQuality
 bool RnSoftbodyRefl_t::m_bSimTransformsOutdated
+bool RnSoftbodyRefl_t::m_bSkipWorldStep
 bool RnSoftbodyRefl_t::m_bSleepEnabled
 bool RnWorldRefl_t::m_bParallelIslands
 bool RnWorldRefl_t::m_bParallelSolver
 bool RnWorldRefl_t::m_bSleeping
 bool SoftbodyEffectPressurizeRefl_t::m_bAdditive
 bool SoftbodyEffectSpeedupRefl_t::m_bAccelerate
+boost
 both sides of collision in the same hierarchy must have self-collision and solid contacts enabled.Intersection disabled.
+brakepedal
 break_list
 breakable_glass
 broadphase_update_%d_%d.rnsave
@@ -2946,6 +3007,7 @@ ccffcc
 ceilf
 cf
 cg
+char
 char *
 cheat
 cl_jiggle_bone_debug_pitch_constraints
@@ -2988,6 +3050,9 @@ cloth_wind_pitch
 collisionGroup
 collision_group_override
 config_state
+configvalue.cpp
+constraint
+constraint_breakableparams_t
 contact_indices
 contact_manifolds
 contact_points
@@ -3035,7 +3100,10 @@ flGravity
 flGroundFriction
 flHeight0
 flMaxDist
+flMaxRotation
 flMinDist
+flMinRotation
+flMotorTargetAngSpeed
 flNodeWeight0
 flPointDamping
 flRelaxationFactor
@@ -3158,6 +3226,9 @@ float RnSoftbodyRefl_t::m_flVelQuadAirDrag
 float RnSphericalJointRefl_t::m_flMotorDampingRatio
 float RnSphericalJointRefl_t::m_flMotorFrequency
 float RnSphericalJointRefl_t::m_flMotorMaxTorque
+float RnSplineJointRefl_t::m_flLinearLambda1
+float RnSplineJointRefl_t::m_flLinearLambda2
+float RnSplineJointRefl_t::m_flProjectionTime
 float RnSpringJointRefl_t::m_flDampingRatio
 float RnSpringJointRefl_t::m_flFrequency
 float RnSpringJointRefl_t::m_flImpulse
@@ -3210,18 +3281,18 @@ float32 FeModelRefl_t::m_flQuadVelocitySmoothRate
 float32 FeModelRefl_t::m_flRodVelocitySmoothRate
 float32 FeModelRefl_t::m_flWindDrag
 float32 FeModelRefl_t::m_flWindage
+float64
 float[3]
 float[4]
 floor
 floorf
 fltx4
+forceLimit
 formats.cpp
 fraction
 from {%.2f,%.2f,%.2f} delta {%.2f,%.2f,%.2f}
 frozen
 g default
-g_BitBuf_BitWriteMasks
-g_BitBuf_ExtraMasks
 g_bUpdateStringTokenDatabase
 g_pMemAlloc
 g_pThreadPool
@@ -3229,6 +3300,9 @@ game
 generic
 goal strength user:%.2f internal:%.2f damping %.3f
 halfEdges %d,%d faces %d,%d angle %.1f deg.
+handbrake
+handbrakeLeft
+handbrakeRight
 have <b>NO</b> pair flags
 have pair flags
 have the pair flag
@@ -3314,6 +3388,7 @@ interactive_debris
 introspectedtokv3typemanager.cpp
 invA
 is <b><font color="red">inconsistent</font></b> with actual collision group
+isActive
 jiggle bone %u
 joints[%d]
 key
@@ -3333,9 +3408,11 @@ loaded %.1f = %.1f - %.1f
 lowprecisionuv
 lowprecisionuv1
 m_AnimStrayRadii
+m_AnimatedMaterialAttributes
 m_Args
 m_AttachmentName
 m_AttachmentType
+m_AttributeName
 m_AxialEdges
 m_BodyGroupsHiddenInTools
 m_BoxRigids
@@ -3351,6 +3428,7 @@ m_Color
 m_Command
 m_ConeAxis
 m_ConeCutoff
+m_ConfigName
 m_Configs
 m_CtrlName
 m_CtrlOffsets
@@ -3400,6 +3478,7 @@ m_JiggleBones
 m_KelagerBends
 m_LegacyStretchForce
 m_LinearLimit
+m_LocalAttachmentOffsetName
 m_LocalForce
 m_LocalInertiaInv.c1
 m_LocalInertiaInv.c2
@@ -3502,6 +3581,7 @@ m_bIsNotMatchedToMaterial
 m_bOverrideMassCenter
 m_bSelected
 m_bSleeping
+m_bSpeculativeEnabled
 m_bTopLevel
 m_bTranslationOnly
 m_bUseBlockSolver
@@ -3614,7 +3694,6 @@ m_flGravityScale
 m_flInertiaScale
 m_flInternalPressure
 m_flK
-m_flLength
 m_flLinearDamping
 m_flLinearDampingRatio
 m_flLinearDampingRatios
@@ -3630,7 +3709,6 @@ m_flMaxAngle
 m_flMaxAngularConstraintImpulse
 m_flMaxAngularImpulses
 m_flMaxAngularRadius
-m_flMaxExtent
 m_flMaxEyeDeflection
 m_flMaxForce
 m_flMaxLinearConstraintImpulse
@@ -3761,6 +3839,7 @@ m_modelSkeleton
 m_modelSpaceTransforms
 m_morphArray
 m_morphDatas
+m_morphNames
 m_morphRectDatas
 m_morphSet
 m_nAngularMotions
@@ -3776,6 +3855,7 @@ m_nBoneIndex
 m_nBoneNameHash
 m_nBoneWeightCount
 m_nBoxRigidIndex
+m_nBoxedTypeSafeInt
 m_nCallbackFlags
 m_nChainIndex
 m_nChainInvIndex
@@ -3801,6 +3881,7 @@ m_nExtraGoalIterations
 m_nExtraIterations
 m_nExtraPressureIterations
 m_nFace
+m_nFingerIndex
 m_nFlag
 m_nFlex
 m_nGameFlags
@@ -3820,13 +3901,13 @@ m_nJiggleParent
 m_nLinearMotions
 m_nLookupType
 m_nMeshID
-m_nMorphCount
 m_nMotorMode
 m_nNameHash
 m_nNext
 m_nNode
 m_nNodeBaseJiggleboneDependsCount
 m_nNodeCount
+m_nNumChannels
 m_nOldPointer
 m_nOrigin
 m_nParent
@@ -3877,7 +3958,6 @@ m_nXLeftDst
 m_nYTopDst
 m_name
 m_nameHash
-m_names
 m_objectList
 m_offsets
 m_orientation
@@ -4179,7 +4259,6 @@ never
 node %u
 node %u '%s'
 nodraw
-none
 norm
 not
 notconnected
@@ -4199,6 +4278,7 @@ other
 overlay
 pA
 pab
+panorama
 parent of jiggle bone %u: %s
 parts[%d]={
 pas
@@ -4209,6 +4289,8 @@ pervertexlighting
 phys2_contact_debug_draw_size
 phys2_debug_broadphase
 phys_build_bounds
+phys_build_mass
+phys_buoyancy_drag_multiplier
 phys_debug_draw
 phys_debug_showdefaultmaterial
 phys_drag_multiplier
@@ -4258,11 +4340,11 @@ recorded_raycasts
 relaxed %.1f < %.1f
 remapping vertex %d[w%d] invalid: %d->%d >= %d
 remapping vertex %d[w%d] invalid: %d->? >= %d
+resource
+resource_name
 resourcestream.cpp
 resourcesystem
 return Cast%s();
-rnd_down
-rnd_up
 rnserialize.inl
 rnsnoop.inl
 rod %u %.2f * max %.1f inches, min = %.2f of max;nodes(%u,%u)
@@ -4281,6 +4363,7 @@ scale=%g;
 scale={%g,%g,%g};
 schemabindings.cpp
 schemaclassinfo.cpp
+schematype.cpp
 scrapeRoughThreshold
 scraperough
 scrapesmooth
@@ -4309,6 +4392,7 @@ softbody_fields
 softbody_indices
 softbody_node_names
 solid
+soundevent
 speeds
 sphere
 springConstant
@@ -4321,23 +4405,27 @@ staticImpactVolume
 static_bodies
 std::ios_base::Init::Init()
 std::ios_base::Init::~Init()
+steering
 stiffness=%g damping=%g
 stray from
 strchr
 strcmp
 strcpy
+strength
 strlen
+subclass
 surface
 surfacePropertyName
 surfaceproperties/surfaceproperties.vsurf
 tangent
 tangentu_signv
-teleportclip
 test name index
 test%d
 texcoord
 text
+throttle
 tmFrame
+torqueLimit
 touchall
 transparent
 transparent %d
@@ -4540,6 +4628,7 @@ vas
 vb phys
 vehicle_clip
 vn %g %g %g
+void
 vphys2_angular_damping
 vphys2_angular_damping_in_water
 vphys2_artificial_acceleration
@@ -4582,10 +4671,11 @@ wireframe
 with
 with collision disabled. Do Not Collide.
 with collision enabled
+worldAxisDirection
 worldGeometry
+worldPosition
 wt
 zD
-zero
 {
 {%.3f,%.3f,%.3f}
 {%.3f,%.3f,%.3f} v=%.3f

@@ -4,6 +4,34 @@
 {	
 	"change"
 	{
+		"date"			"1621882800"
+		"type"			"Default"
+		"description"	"#DOTA_729d_Update"
+		"event"			"DOTAShowPatchVersion( '7.29d' )"
+	}
+	"change"
+	{
+		"date"			"1619708400"
+		"type"			"Default"
+		"description"	"#DOTA_729c_Update"
+		"event"			"DOTAShowPatchVersion( '7.29c' )"
+	}
+	"change"
+	{
+		"date"			"1618592323"
+		"type"			"Default"
+		"description"	"#DOTA_729b_Update"
+		"event"			"DOTAShowPatchVersion( '7.29b' )"
+	}
+	"change"
+	{
+		"date"			"1613780291"
+		"type"			"Default"
+		"description"	"#DOTA_728c_Update"
+		"event"			"DOTAShowPatchVersion( '7.28c' )"
+	}
+	"change"
+	{
 		"date"			"1610324348"
 		"type"			"Default"
 		"description"	"#DOTA_728b_Update"

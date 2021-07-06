@@ -125,6 +125,7 @@
 	input EnableShadow(void) : "Turn shadow on."
 	input AlternativeSorting(bool) : "Used to attempt to fix sorting problems when rendering. True activates, false deactivates"
 	input SetRenderAttribute(string) : "Set the value of a render attribute used in material dynamic expressions. Examples: $myfloat=0.25 $myfloat4=1.0,0.0,1.0,1.0"
+	input ClearRenderAttribute(string) : "Remove a render attribute previously set by SetRenderAttribute, restoring it to its previous value."
 
 	// Outputs
 	output OnIgnite(void) : "Fired when this object catches fire."
@@ -574,7 +575,7 @@
 	[
 		1: "Clients" : 1
 		2: "NPCs" : 0
-		4: "Pushables": 0
+		4: "Projectiles": 0
 		8: "Physics Objects" : 0
 		16: "Only player ally NPCs" : 0
 		32: "Only clients in vehicles" : 0
@@ -614,6 +615,7 @@
 		0 : "Disabled"
 		1 : "Test map (open space, no skybox)"
 		10 : "Full visibility solve"
+		11 : "Partitioned solve (large map volume)"
 	]
 
 	newunit(choices) : "New Level Unit" : 0 : "Used to clear out savegame data of previous levels to keep the savegame size as small as possible. Only set it to Yes if the player cannot return to any previous levels." = 
@@ -809,7 +811,8 @@
 	stackName(string) : "Stack Name" : "" : "The name of the stack the operator is in"
 	operatorName(string) : "Operator Name" : "" : "The name of the operator the OpVar is in"
 	opvarName(string) : "OpVar Name" : "" : "The name of the OpVar to change"
-	opvarArrayIndex(integer) : "OpVar Index" : "" : "Index of the OpVar array to set"
+	opvarUseAutoCompare(bool) : "Use Auto Compare" : "0" : "All entities that point to the same opvar and have this selected will automatically have their values compared and the largest set to the opvar value"
+	opvarArrayIndex(integer){ enabled={ variable="opvarUseAutoCompare" value="0" } } : "OpVar Index" : "" : "Index of the OpVar array to set"
 	distanceMapMin(float) : "Distance Map Minimum" : "" : "Minimum value to map distance to"
 	distanceMapMax(float) : "Distance Map Maximum" : "" : "Maximum value to map distance to"
 	occlusionRadius(float) : "Occlusion Radius" : "" : "Size of the occlusion sphere"
@@ -885,6 +888,28 @@
 [
 ]
 
+@PointClass base( Targetname ) tags( Sound ) iconsprite("editor/snd_opvar_set.vmat") box_oriented( box_mins, box_maxs ) = snd_opvar_set_wind_obb
+[
+	stackName(string) : "Stack Name" : "" : "The name of the stack the operator is in"
+	operatorName(string) : "Operator Name" : "" : "The name of the operator the OpVar is in"
+	opvarName(string) : "OpVar Name" : "" : "The name of the OpVar to change"
+	opvarUseAutoCompare(bool) : "Use Auto Compare" : "0" : "All entities that point to the same opvar and have this selected will automatically have their values compared and the largest set to the opvar value"
+	opvarArrayIndex(integer){ enabled={ variable="opvarUseAutoCompare" value="0" } } : "OpVar Index" : "" : "Index of the OpVar array to set"
+	wind_min(float) : "Minimum Wind Value" : "0.0" : "Minimum value of env_wind"
+	wind_max(float) : "Maximum Wind Value" : "1.0" : "Maximum value of env_wind"
+	wind_map_min(float) : "Minimum Wind Map Value" : "0.0" : "Minimum value to map env_wind to opvar"
+	wind_map_max(float) : "Maximum Wind Map Value" : "1.0" : "Maximum value to map env_wind to opvar"
+	box_mins(vector) : "Box Mins" : "-32 -32 -32"
+	box_maxs(vector) : "Box Maxs" : "32 32 32"	
+	
+	// inputs
+	input SetStackName(string) : "Change the target stack name"
+	input SetOperatorName(string) : "Change the target operator name"
+	input SetOpvarName(string) : "Change the target opvar name"	
+	input SetOpvarIndex(integer) : "Change the target opvar index"	
+	input SetSoundEventGUID(integer) : "Start the sound event using a snd_event_point and pass its guid output to this."
+]
+
 @PointClass base(Targetname) = env_zoom : 
 	"An entity that can be used to control the player's FOV. Useful for scenes where the player's view is being controlled, or player-usable binoculars/telescopes, etc."
 [
@@ -956,23 +981,29 @@
 	]
 ]
 
-@PointClass base(Targetname) color(255 0 0) = env_sun : 
+@PointClass base(Targetname) color(255 255 255) 
+	editormodel( "models/editor/light_environment", lightModeTint, "124 255 157", "255 64 64" )
+	iconsprite
+	{
+		image = "materials/editor/env_sun.vmat"
+		tintKey = "color"
+	}	
+	helper_env_sun() = env_sun : 
 	"An entity to control & draw a sun effect in the sky."
 [
-	target(target_destination) : "Viewer entity" : : "Name of an entity used to determine where the sun is in the skybox. The sun should be lined up on a line from this entity to the env_sun entity."
-	
-	use_angles(boolean) : "UseAngles" : 0 : "The old way to orient env_sun is to point it at a target. The new way is to specify the angles. If you use the new way, set this property to YES."
-
-	rendercolor(color255) : "Sun Color (R G B)" : "100 80 80"
-	overlaycolor(color255) : "Overlay Color (R G B)" : "0 0 0" : "A value of 0 0 0 will act the old way."
-	
-	size(integer) : "Size" : 16
-	overlaysize(integer) : "Overlay Size" : -1 : "A value of -1 means the overlay will act the old way."
-	
-	material(sprite) : "Material Name" : "materials/sprites/light_glow02_add_noz" : "Material of the inner glow."
-	overlaymaterial(sprite) : "Overlay Material Name" : "materials/sprites/light_glow02_add_noz" : "Material of the overlay glow."
-
-	HDRColorScale(float) : "HDR color scale." : "1.0" : "float value to multiply sprite color by when running in HDR mode."
+	 effect_name(particlesystem) [report] : "Particle Sun flare" : "particles/environment/env_sun_clear.vpcf"
+	 effect_namess(particlesystem) [report] : "Sceenspace effect (addition)" : "" : "particles/environment/env_sun_screenspace_flare.vpcf"
+	 full_luminositycolorvalue(boolean) : "Remap to Max Luminosity" : 1 : "Regardless of color Value set to max luminocity. This is mainly for additive things like the sun"
+	 colortint(color255) : "Sun Color (R G B)" : "100 80 80"
+	 scale(float) : "Size" : "4.0" : "Increased control on scaling the sun in the particle system. This read into control point 17 which should drive the system."
+	 selfillumscale(float) : "HDR color scale (0-10)" : 4 : "float value to multiply sprite color by when running in HDR mode. Cp 17 y."
+	 hazescale(float) : "Haze Scale (0-10)" : 4 : "additional control for creating things like haze. Treat this like another float input on cp 17 z."
+	 rotation(float) [ group="Advanced Properties" ] : "Sprite Rotation" : "0.0" : "Rotate the sprite. passed to Particle through Control point 15"
+	 alphascale(float) [ group="Advanced Properties" ] : "Core Alpha" : "1.0" : "Rotate the sprite. passed to Particle through Control point 18 x"
+	 alphahdr(float) [ group="Advanced Properties" ] : "Hdr Alpha" : "1.0" : "Rotate the sprite. passed to Particle through Control point 18 y"
+	 alphahaze(float) [ group="Advanced Properties" ] : "Haze Alpha" : "1.0" : "Alpha sprite. passed to Particle through Control point 18 z"
+	 mapfarz(integer) [ group="Advanced Properties" ] : "Map Farz" : 10000 : "The farz set in the map's env_fog_controller. this is to help preview for size in hammer only. Not used in game. "
+	 farzscale(float) [ group="Advanced Properties" ] : "FarZ Scale" : ".95" : "Default is .9, it will let you scale the distance of the sun to the player incase of fog fading out the sun.  "
 
 	// Inputs
 	input TurnOn(void) : "Enable sun rendering."
@@ -1303,7 +1334,7 @@
 //
 //-------------------------------------------------------------------------
 
-@PointClass base(Targetname, Parentname, RenderFxChoices, RenderFields, CanBeClientOnly) model()
+@PointClass base(Targetname, Parentname, CanBeClientOnly, RenderFxChoices, RenderFields) model()
 	metadata
 	{
 		model_archetypes = [ "animated_model" ]
@@ -2377,37 +2408,6 @@
 	input SetMessage(string) : "Sets the message text to display."
 ]
 
-
-@PointClass base(Targetname, Parentname) size(-8 -8 -8, 8 8 8) = point_tesla : 
-	"An entity that creates tesla lightning arcs around its origin."
-[
-	m_SourceEntityName(string) : "Source Entity" : "" : "If specified, tesla lightning will originate from the specified entity. Otherwise, they originate from this entity."
-	m_SoundName(string) : "Sound Name" : "DoSpark" : "Sound to be played whenever lightning is created."
-
-	texture(sprite) : "Sprite Name" : "sprites/physbeam.vmat" : "Material to use for the tesla lightning beams."
-
-	m_Color(color255) : "Color" : "255 255 255"
-
-	m_flRadius(integer) : "Radius" : 200 : "Radius around the origin to find a point to strike with a tesla lightning beam."
-
-	beamcount_min(integer) : "Min # of Beams" : 6 : "Minimum number of tesla lightning beams to create when creating an arc."
-	beamcount_max(integer) : "Max # of Beams" : 8 : "Maximum number of tesla lightning beams to create when creating an arc."
-	
-	thick_min(string) : "Min Beam Width" : "4" : "Minimum width of the tesla lightning beams."
-	thick_max(string) : "Max Beam Width" : "5" : "Maximum width of the tesla lightning beams."
-	
-	lifetime_min(string) : "Min Time Visible" : "0.3" : "Minimum lifetime of the tesla lightning beams."
-	lifetime_max(string) : "Max Time Visible" : "0.3" : "Maximum lifetime of the tesla lightning beams."
-	
-	interval_min(string) : "Min Time Between Arcs":"0.5" : "Minimum time delay between random arcing."
-	interval_max(string) : "Max Time Between Arcs":"2" : "Maximum time delay between random arcing."
-
-	// Inputs
-	input TurnOn(void) : "Turn emitter on." 
-	input TurnOff(void) : "Turn emitter off."
-	input DoSpark(void) : "Force a single arc."
-]
-
 @PointClass base(Targetname) size(-8 -8 -8, 8 8 8) = point_clientcommand : 
 	"An entity that issues commands to the client console, as if it was typed in by the player (if activator is a player, or the local player in single player)."
 [
@@ -2627,7 +2627,7 @@
 [
 ]
 
-@PointClass tags( Info ) base(Targetname, Parentname) iconsprite("editor/info_target.vmat") = info_target : 
+@PointClass tags( Info ) base(Targetname, Parentname) editormodel("models/editor/info_target") iconsprite( "editor/icon_empty.vmat" ) = info_target : 
 	"An entity that does nothing. Very useful as a positioning entity for other entities to refer to (i.e. the endpoint of an env_beam)"
 [
 	spawnflags( Flags ) =
@@ -3608,8 +3608,8 @@
 	"If the input value is greater than the compare value, the OnGreaterThan output is fired with the input value."
 [
 	// Keys
-	InitialValue(integer) : "Initial value" : : "Initial value for the input value."
-	CompareValue(integer) : "Compare value" : : "The value to compare against."
+	InitialValue(float) : "Initial value" : : "Initial value for the input value."
+	CompareValue(float) : "Compare value" : : "The value to compare against."
 	
 	// Inputs
 	input SetValue(float) : "Set the value that will be compared against the compare value."
@@ -3686,7 +3686,7 @@
 		entity_tool_group = "Logic"
 	}
 = logic_case :
-	"Compares an input to up to 16 preset values. If the input value is the same as " +
+	"Compares an input to up to 32 preset values. If the input value is the same as " +
 	"any of the preset values, an output corresponding to that value is fired.<br><br>" +
 	"For example: if Case01 is set to 2 and Case02 is set to 5, and the input value is 5, " +
 	"the OnCase02 output will be fired.<br><br>" +
@@ -3710,6 +3710,22 @@
 	Case14(string) : "Case 14"
 	Case15(string) : "Case 15"
 	Case16(string) : "Case 16"
+	Case17(string) : "Case 17"
+	Case18(string) : "Case 18"
+	Case19(string) : "Case 19"
+	Case20(string) : "Case 20"
+	Case21(string) : "Case 21"
+	Case22(string) : "Case 22"
+	Case23(string) : "Case 23"
+	Case24(string) : "Case 24"
+	Case25(string) : "Case 25"
+	Case26(string) : "Case 26"
+	Case27(string) : "Case 27"
+	Case28(string) : "Case 28"
+	Case29(string) : "Case 29"
+	Case30(string) : "Case 30"
+	Case31(string) : "Case 31"
+	Case32(string) : "Case 32"
 
 	// Inputs
 	input InValue(string) : "Compares the Input value to the case values, and fires the appropriate output, if any."
@@ -3718,6 +3734,7 @@
 	input ResetShuffle(void) : "Starts the shuffle over so that the next PickRandomShuffle can select from all cases."
 	
 	// Outputs
+	output OnDefault(void) : "Fired when the input value does not equal any of the Case values."
 	output OnCase01(void) : "Fired when the input value equals the Case01 value."
 	output OnCase02(void) : "Fired when the input value equals the Case02 value."
 	output OnCase03(void) : "Fired when the input value equals the Case03 value."
@@ -3734,7 +3751,22 @@
 	output OnCase14(void) : "Fired when the input value equals the Case14 value."
 	output OnCase15(void) : "Fired when the input value equals the Case15 value."
 	output OnCase16(void) : "Fired when the input value equals the Case16 value."
-	output OnDefault(void) : "Fired when the input value does not equal any of the Case values."
+	output OnCase17(void) : "Fired when the input value equals the Case17 value."
+	output OnCase18(void) : "Fired when the input value equals the Case18 value."
+	output OnCase19(void) : "Fired when the input value equals the Case19 value."
+	output OnCase20(void) : "Fired when the input value equals the Case20 value."
+	output OnCase21(void) : "Fired when the input value equals the Case21 value."
+	output OnCase22(void) : "Fired when the input value equals the Case22 value."
+	output OnCase23(void) : "Fired when the input value equals the Case23 value."
+	output OnCase24(void) : "Fired when the input value equals the Case24 value."
+	output OnCase25(void) : "Fired when the input value equals the Case25 value."
+	output OnCase26(void) : "Fired when the input value equals the Case26 value."
+	output OnCase27(void) : "Fired when the input value equals the Case27 value."
+	output OnCase28(void) : "Fired when the input value equals the Case28 value."
+	output OnCase29(void) : "Fired when the input value equals the Case29 value."
+	output OnCase30(void) : "Fired when the input value equals the Case30 value."
+	output OnCase31(void) : "Fired when the input value equals the Case31 value."
+	output OnCase32(void) : "Fired when the input value equals the Case32 value."
 ]
 
 // NEEDHELP: Unused in HL2, not clear what it's useful for.
@@ -5220,6 +5252,14 @@
 	output NotifyForceReachedZ(void) : "The requested force has been reached on the Z axis.  Won't fire if force min time is zero."
 ]
 
+@PointClass base(TwoObjectPhysics) editormodel("models/editor/axis_helper_thick") tags( Physics ) = phys_splineconstraint :
+	"Constrain an entity to a spline."
+[
+	spawnflags(flags) =
+	[
+	]
+]
+
 @PointClass base(Targetname) size(-8 -8 -8, 8 8 8) color(0 0 255) tags( Physics ) = phys_convert : 
 	"Turns an arbitrary entity into a physically simulated entity. i.e. brush entities will behave like func_physbox, model entities behave like prop_physics."
 [
@@ -5352,14 +5392,7 @@
 	model(studio) : "World model"
 ]
 
-@BaseClass base(SystemLevelChoice) 
-	metadata
-	{
-	entity_tool_name = "Static Prop"
-	entity_tool_group = "Content"
-	entity_tool_tip = "Adds a static model"
-	}
-= prop_static_base
+@BaseClass base(SystemLevelChoice) = prop_static_base
 [
 	model(studio) [report] : "World Model"
 	skin(materialgroup) [ group="Render Properties" ] : "Skin" : "default" : "Some models have multiple versions of their textures, called skins."
@@ -5397,7 +5430,7 @@
 	]
 ]
 
-@BaseClass base(Parentname, Global, Studiomodel, BreakableProp, SystemLevelChoice, RenderFields, Glow) tags( PropDynamic ) = prop_dynamic_base
+@BaseClass base(Parentname, CanBeClientOnly, Global, Studiomodel, BreakableProp, SystemLevelChoice, RenderFields, Glow) tags( PropDynamic ) = prop_dynamic_base
 [
 	solid(choices) : "Collisions" : 6 =
 	[
@@ -5420,7 +5453,8 @@
 		1: "Yes"
 	]
 
-	DefaultAnim(sequence) : "Default Animation" : "" : "The name of the idle animation that this prop will revert to whenever it finishes a random or forced animation."
+	DefaultAnim(sequence) { enabled={ function="NotUsingAnimGraph" } } : "Default Animation" : "" : "The name of the idle animation that this prop will revert to whenever it finishes a random or forced animation. This setting is ignored for models with an animgraph when Use Animgraph is enabled."
+	use_animgraph(boolean) { enabled={ function="ModelHasAnimGraph" } } : "Use Animgraph" : 1 : "Allow the model to use its animgraph it has one. If the model has no animgraph this setting has no effect and is disabled"
 
 	RandomAnimation(boolean) : "Randomly Animate" : 0 : "If set, this prop will randomly choose and play animations, based upon the times specified in 'Min/Max Random Anim Time'. Inbetween the random animations, it will revert to playing the 'Default Animation'."
 	HoldAnimation(boolean) : "Hold Animation" : 0 : "If set, the prop will not loop its animation, but hold the last frame."
@@ -5464,7 +5498,6 @@
 	updatechildren(boolean) : "Update children" : 0 : "Update touches for any children that are attached to attachment points as this prop animates. "+
 		"This allows SetParentAttached triggers or func_brushes to touch properly."
 
-	use_animgraph(boolean) : "Allow Animgraph" : 0 : "Allow this entity to use its animgraph"
 
 	CreateNavObstacle(boolean) : "Create Nav Obstacle" : "0" : "Create a navigation obstacle to assist NPC pathfinding"
 
@@ -5481,6 +5514,9 @@
 	metadata
 	{
 		model_archetypes = [ "static_prop_model" ]
+		entity_tool_name = "Static Prop"
+		entity_tool_group = "Content"
+		entity_tool_tip = "Adds a static model"
 	}
 = prop_static
 [
@@ -5514,13 +5550,15 @@
 		"and greater than 1 cause it to fade out at closer distances."
 	detailgeometry(boolean) : "Detail Geometry" : 0 : "If true this geometry is not important for precomputed lighting"	
 	visoccluder(boolean) : "Vis Occluder" : 0 : "If true this geometry is used as an occluder for precomputed visibility"	
-	baketoworld(boolean) : "Bake To World" : 0 : "If true this geometry will be baked into the world geometry of the map so that the model is not referenced at runtime."
+	baketoworld(boolean) [ group="Build Settings" ] : "Bake To World" : 0 : "If true this geometry will be baked into the world geometry of the map so that the model is not referenced at runtime."
+	disablemerging(boolean) [ group="Build Settings" ] : "Disable Mesh Merging" : 0 : "If true this will not be merged with other geometry during map compile (reduces rendering efficiency)."
 	renderamt(integer) [ group="Render Properties" ] : "Alpha" : 255 : "Alpha of the fade, where 0 = fully transparent and 255 = fully opaque." 
 	rendercolor(color255) : "Color (R G B)" : "255 255 255"
 	lightingorigin(target_destination) [ group="Render Properties" ]: "Lighting Origin" : "" : "Select a an entity to specify a location to sample lighting from, instead of using this entity's bounding box center."
 	lightgroup(string) [ group="Render Properties" ] : "Light Group" : "" : "Will only be lit by lights affecting this group."
 	rendertocubemaps(boolean) [ group="Render Properties" ] : "Render to Cubemaps" : 1 : "If true, this geometry renders into baked cube maps"	
 	precomputelightprobes(boolean) [ group="Render Properties" ] : "Precompute Light Probes" : 1 : "Pre-compute environment map and light probe volume used on this object."
+	bakelightdoublesided(boolean) [ group = "Render Properties" ] : "Bake Lighting As If Double-Sided" : 0 : "Bake lighting as if this were double-sided geometry. Useful on geometry with pre-culled backfaces whose neighbors have lighting errors caused by saw-too-many-backfaces sample invalidation."
 	materialoverride(material) [ group="Render Properties" ] : "Override Material" : ""
 	disableinlowquality(boolean) [ group="Render Properties" ] : "Disable in low quality mode" : 0 : "Do not render this prop when using the lowest quality video settings, it is an non-essential detail."
 	lightmapscalebias(choices) [ group="Render Properties" ] : "Lightmap Scale Bias" : 0 : "Use to scale the resolution of the lightmap for this object." =
@@ -5788,26 +5826,27 @@
 	_minlight(string) : "Minimum Light Level" : : "The minimum level of ambient light that hits this brush."
 ]
 
-
-@SolidClass base(Targetname, Parentname) = func_precipitation : 
-	"A brush entity that creates rain and snow inside its volume."
+@SolidClass base(Trigger) = func_precipitation :
+	"A brush entity that creates precipitation inside its volume."
 [
-	renderamt(integer) : "Density (0-100%)" : 100	
-	preciptype(choices) : "Precipitation Type" : 4 =	
+	spawnflags(flags) = 
 	[
-		4 : "Particle Rain"
-		5 : "Particle Ash"
-		6 : "Particle Rainstorm"
-		7 : "Particle Bugs"
-		8 : "Particle Smoke"
-		9 : "Particle Snow"
-		10 : "Particle Xen Particulate"
-		11 : "Particle Dust Motes"
-		12 : "Particle Embers"
-		13 : "Particle Ground Fog"
+		1: "Clients" : 1
+		2: "NPCs" : 0
+		4: "Pushables": 0
+		8: "Physics Objects" : 0
+		16: "Only player ally NPCs" : 0
+		32: "Only clients in vehicles" : 0
+		64: "Everything (not including physics debris)" : 1
+		512: "Only clients *not* in vehicles" : 0
+		1024: "Physics debris" : 0
+		2048: "Only NPCs in vehicles (respects player ally flag)" : 0
+		4096: "Correctly account for object mass (trigger_push used to assume 100Kg) and multiple component physobjs (car, blob...)" : 1
+		8192: "Ignore client's hands" : 0
 	]
+	subclass_name( subclass_choice:scripts/precipitation.vdata ) : "Precipitation Subclass" : "" : "The Type of Precipitation."
+	renderamt(integer) : "Density (0-100%)" : 100	
 ]
-
 
 @SolidClass base(Targetname, Parentname) = func_precipitation_blocker : 
 	"A brush entity that prevents rain and snow inside its volume."
@@ -6022,11 +6061,19 @@
 	"When it spawns it will automatically rotate to face the next path_track on the path."
 [
 
+	// Inputs
+	input MoveToPathNode(string) : "Start moving to a destination and stop when you get there. This must be in the same path."
+	input TeleportToPathNode(string) : "Teleport to a destination and stop there. This can be in a new path."
+	input LockOrientation(void) : "Lock the current orientation of the train."
+	input UnlockOrientation(void) : "Unlock the current orientation of the train."
+
+	input SetMaxSpeed(float) : "Set a new max speed for the train."
+
 	// Outputs
 	output OnStart(void) : "Fired when the train starts moving in either direction."
 	output OnNext(string) : "Fires when this train picks a new point to move towards (and just after OnStart)."
 	
-
+	output OnArrivedAtDestinationNode(void) : "Fired when this train arrives at a destination that was specified by the MoveToPathNode Input."	
 ]
 
 @SolidClass base(BaseTrain) = func_tanktrain :
@@ -7169,7 +7216,7 @@
 = env_sky : 
 	"Controls the sky."
 [
-	skyname(resource:material) [report] : "Sky Material" : "materials/dev/default_sky.vmat"
+	skyname(resource:material) { report=true initial_filter_string="materials/skybox/" } : "Sky Material" : "materials/dev/default_sky.vmat"
 	tint_color(color255) : "Skybox Tint Color" : "255 255 255" : "Tint the skybox"
 
 	fog_type(choices) : "Fog Type" : 1 =
@@ -7276,7 +7323,7 @@
 	]
 ]
 
-@PointClass tags( Info ) iconsprite( "materials/editor/visibility_hint.vmat" ) box_world_aligned( box_mins, box_maxs) = visibility_hint
+@PointClass tags( Info, VisPreview ) iconsprite( "materials/editor/visibility_hint.vmat" ) box_world_aligned( box_mins, box_maxs) = visibility_hint
 [
 	box_mins(vector) : "Box Mins" : "-64 -64 -64"
 	box_maxs(vector) : "Box Maxs" : "64 64 64"
@@ -7313,10 +7360,46 @@
 	]
 ]
 
+
+@PathNodeClass
+	metadata
+	{
+		editor_only = true
+	}
+= path_node_generic
+[
+]
+
+
+@PathClass 
+	metadata
+	{
+		editor_only = true
+		path_node_class = "path_node_generic"
+	}
+= path_generic
+[
+]
+
+
+@PathNodeClass
+	metadata
+	{
+		editor_only = true
+	}
+= path_node_particle_rope
+[
+	radius_scale(float) : "Radius Scale" : "1.0" : "Radius multiplier value"
+	color_tint(color255) : "Color Tint" : "255 255 255"
+	pin_enabled(bool) : "Pin Enabled" : "1" : "If enabled, the rope simulation treats this node a locaiton to which the rope is attached."
+]
+
+
 @PathClass base(Targetname) tags( Particles ) particle_rope() 
 	metadata
 	{
 		default_interpolation = "linear"
+		path_node_class = "path_node_particle_rope"
 	}
 = path_particle_rope
 [
@@ -7340,12 +7423,36 @@
 	input DisablePin( string ) : "Disable the contraint which pins a particle to the specified path node."
 ]
 
-@CableClass = cable_static
+
+@PathNodeClass
+	metadata
+	{
+		editor_only = true
+	}
+= path_node_cable
+[
+	radius_scale(float) : "Radius Scale" : "1.0" : "Radius multiplier value"
+	color_tint(color255) : "Color Tint" : "255 255 255"
+]
+
+@CableClass
+	metadata
+	{
+		editor_only = true
+		path_node_class = "path_node_cable"
+	}
+= cable_static
 [
 
 ]
 
-@CableClass base( Targetname, Parentname, Global, RenderFields, Glow, EnableDisable) sphere(fademindist) sphere(fademaxdist) = cable_dynamic
+
+@CableClass base( Targetname, Parentname, Global, RenderFields, Glow, EnableDisable) sphere(fademindist) sphere(fademaxdist)
+	metadata
+	{
+		path_node_class = "path_node_cable"
+	}
+= cable_dynamic
 [
 	secondary_material(material) : "Secondary Material" : "" : "Optional secondary material, can be selected using Skin(1)"
 	lightingorigin(target_destination) [ group="Render Properties" ] : "Lighting Origin" : "" : "Select an entity to specify a location to sample lighting from, instead of using this entity's origin."
@@ -7368,6 +7475,7 @@
 	input EnableShadow(void) : "Turn shadow on."
 	input AlternativeSorting(bool) : "Used to attempt to fix sorting problems when rendering. True activates, false deactivates"
 	input SetRenderAttribute(string) : "Set the value of a render attribute used in material dynamic expressions. Examples: $myfloat=0.25 $myfloat4=1.0,0.0,1.0,1.0"
+	input ClearRenderAttribute(string) : "Remove a render attribute previously set by SetRenderAttribute, restoring it to its previous value."
 ]
 
 
@@ -7429,3 +7537,9 @@
 ]
 
 //==================================================================================================
+@SolidClass base(Trigger)
+ = trigger_buoyancy : "A volumetric trigger that affects the motion of vphysics objects that touch it by applying buoyancy to them."
+[
+	SetFluidDensity(float) : "Fluid density, kg/liter" : "1.0"
+	input SetFluidDensity(float) : "Fluid density, kg/liter"
+]
