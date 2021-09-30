@@ -23154,6 +23154,7 @@ To join as an experienced player, you must have at least {d:new_player_req_games
 	"DOTA_WatchLive_BotScriptOnly"					"Workshop Bots"
 	"DOTA_WatchLive_InDraft"						"In Draft Phase"
 	"DOTA_WatchLive_Viewers"						"{s:spectating} Viewers"
+	"DOTA_WatchLive_TopPlayerRank"						"Top Player Rank"
 
 	"DOTA_WatchLive_Game_ProInfo"					"{g:dota_persona:pro:account_id}"
 	"DOTA_WatchLive_Game_TeamInfo"					"<font color='#ffffff'>{s:team_1_name}</font> vs <font color='#ffffff'>{s:team_2_name}</font>"
@@ -31463,7 +31464,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
     "DOTA_730_Update"     "7.30 Gameplay Update"
     "DOTA_730b_Update"    "7.30b Gameplay Update"
     "DOTA_730c_Update"    "7.30c Gameplay Update"
-
+	"DOTA_730d_Update"	  "7.30d Gameplay Update"
 	"DOTA_Settings_Tooltip_NetworkLatency" "If you have a network connection with packet loss, setting this to 'LOW' will increase latency but improve overall smoothness."
 
 	"DOTA_Popup_RankCalibration_Congrats" "Congratulations!"
@@ -39636,6 +39637,12 @@ If you don't feel that you were able to dedicate the appropriate attention level
 		"DOTA_Replay_IncreaseSpeed"	"Increase Playback Speed"
 		"DOTA_Replay_DecreaseSpeed"	"Decrease Playback Speed"
 		"DOTA_Settings_Tooltip_EnableEdgepanTemporaryFreeCam" "Enable spectator override camera when edge panning."
+
+		"DOTA_SettingsLanguageChange_Title" "Restart Required"
+		"DOTA_SettingsLanguageChange_Body" "Restart the DOTA client to apply language changes."
+		"DOTA_SpectatorNavTooltipSort"	"Sort Stats"
+		"DOTA_SpectatorNavTooltipGraphs"	"Graphs"
+		"DOTA_SpectatorNavTooltipItems"		"Items"
 	}
 }
 

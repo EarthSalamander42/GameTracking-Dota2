@@ -30,6 +30,7 @@
 !hero
 !is_large()
 !m_bNeedsSort
+!m_bOnDestroyCalled
 !m_pInstallJob
 !player
 !playerid
@@ -1706,6 +1707,7 @@ $tK
 /home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/_build_/game/server/_vpc_server_dota/unity/linuxsteamrt64/_vpc_/unity/../../_schema_/release/../../../../../../../../src/game/server/dota/npc/dota_npc_base.cpp
 /home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/_build_/game/server/_vpc_server_dota/unity/linuxsteamrt64/_vpc_/unity/../../_schema_/release/../../../../../../../../src/game/shared/dota/dota_game_manager.cpp
 /home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/_build_/game/server/_vpc_server_dota/unity/linuxsteamrt64/_vpc_/unity/../../_schema_/release/../../../../../../../../src/game/shared/dota/dota_vscriptgamesystem.cpp
+/home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/_build_/game/server/_vpc_server_dota/unity/linuxsteamrt64/_vpc_/unity/../../_schema_/release/../../../../../../../../src/game/shared/dota/units/dota_unit_hero_keeper_of_the_light.cpp
 /home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/_build_/game/server/_vpc_server_dota/unity/linuxsteamrt64/_vpc_/unity/../../_schema_/release/../../../../../../../../src/game/shared/dota/units/dota_unit_hero_pangolier.cpp
 /home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/_build_/game/server/_vpc_server_dota/unity/linuxsteamrt64/_vpc_/unity/../../_schema_/release/../../../../../../../../src/game/shared/vscriptgamesystem.cpp
 /laugh
@@ -22017,6 +22019,13 @@ CDOTA_MLUnitTracker::Update
 CDOTA_MapTree
 CDOTA_ModifierManager
 CDOTA_Modifier_AghsFort_Watch_Tower
+CDOTA_Modifier_KeeperOfTheLight_Will_O_Wisp::OnDestroy GetParent() is null?
+CDOTA_Modifier_KeeperOfTheLight_Will_O_Wisp::OnDestroy GetParent()->GetLocomotionInterface() is null?
+CDOTA_Modifier_KeeperOfTheLight_Will_O_Wisp::OnDestroy called *twice*??
+CDOTA_Modifier_KeeperOfTheLight_Will_O_Wisp::OnDestroy called with no parent locomotor?
+CDOTA_Modifier_KeeperOfTheLight_Will_O_Wisp::OnDestroy called with no parent?
+CDOTA_Modifier_KeeperOfTheLight_Will_O_Wisp::UpdateHorizontalMotion called *after* OnDestroy?
+CDOTA_Modifier_KeeperOfTheLight_Will_O_Wisp::~CDOTA_Modifier_KeeperOfTheLight_Will_O_Wisp OnDestroy not called?
 CDOTA_Modifier_Lua
 CDOTA_Modifier_Lua_Horizontal_Motion
 CDOTA_Modifier_Lua_Motion_Both
@@ -27831,6 +27840,8 @@ GetOverrideAnimationWeight
 GetOverrideAttackMagical
 GetOwner
 GetPaddedCollisionRadius
+GetParent()
+GetParent()->GetLocomotionInterface()
 GetParticleReplacement
 GetPartyID
 GetPhysicalArmorBaseValue
@@ -33161,7 +33172,6 @@ P20CNavSearchHexLattice
 P29CNavBreadthFirstSearchLattice
 P33BreadthFirstSearchVolumeCollector
 P@%.6f
-PA
 PARALLEL_PROCESS /home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/_build_/game/server/_vpc_server_dota/unity/linuxsteamrt64/_vpc_/unity/../../../../../../../../src/game/server/gameinterface.cpp:2953
 PARALLEL_PROCESS /home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/_build_/game/server/_vpc_server_dota/unity/linuxsteamrt64/_vpc_/unity/../../../../../../../../src/game/server/gameinterface.cpp:3063
 PARALLEL_PROCESS /home/buildbot/buildslave/source2_dota_rel_linuxsteamrt64/build/_build_/game/server/_vpc_server_dota/unity/linuxsteamrt64/_vpc_/unity/../../../../../../../../src/game/shared/animgraph_gamesystem.cpp:239
@@ -37631,6 +37641,7 @@ UpdateDefendLaneDesires
 UpdateEventPoints
 UpdateFarmLaneDesires
 UpdateGestureLayer
+UpdateHorizontalMotion
 UpdateLaneAssignments
 UpdateLinearProjectileDirection
 UpdateLiveFantasyStats
@@ -53197,7 +53208,6 @@ modifier_item_medallion_of_courage_armor_addition
 modifier_item_medallion_of_courage_armor_reduction
 modifier_item_mekansm
 modifier_item_mekansm_aura
-modifier_item_mekansm_noheal
 modifier_item_meteor_hammer
 modifier_item_meteor_hammer_burn
 modifier_item_meteor_hammer_land
@@ -63354,5 +63364,6 @@ zuus_thundergods_wrath
 } %llu aggs, %s total data
 } from:
 ~
+~CDOTA_Modifier_KeeperOfTheLight_Will_O_Wisp
 
 C
