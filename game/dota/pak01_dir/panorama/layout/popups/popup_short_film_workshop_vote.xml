@@ -35,10 +35,12 @@
 					<Label class="ArrowLabel" text="#DOTA_Short_Film_Vote_PrevLabel" />
 				</Button>
 				<Panel class="VoteControlsBox" >
-					<Panel id="BattlepassLabelContainer" class="HideWhenBattlePassOwned">
-						<Label id="OnlyBattlepassLabel" text="#DOTA_Short_Film_OnlyBattlepass" />
+					<Panel id="ShortFilmTimerContainer">
+						<Label class="ExpirationLabel" text="#DOTA_CompTI10_Achievement_VoteForShortFilm_ExpiresIn" />
+						<Label class="ExpirationLabel" html="true" text="#DOTA_CompTI10_Achievement_VoteForShortFilm_Timer" />
+						<Label class="VotingEndedLabel" text="#DOTA_CompTI10_Achievement_VoteForShortFilm_HasExpired" />
 					</Panel>
-					<Panel class="VisibleWhenBattlePassOwned RequiresVoteState">
+					<Panel class="RequiresVoteState">
 						<Label class="SmallCapsLabel" text="#DOTA_Custom_Game_Vote_ControlsLabel" />
 						<Panel id="ShouldWePromote" class="CallToActionRow">
 							<Label id="ShouldWePromoteLabel" text="#DOTA_Short_Film_VotePrompt" />

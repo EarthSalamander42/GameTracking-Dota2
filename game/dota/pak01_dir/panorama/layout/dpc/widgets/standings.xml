@@ -19,7 +19,7 @@
 				<Panel class="TeamNameContainer">
 					<Label class="TeamName Short" text="{g:dota_team_name:a:team_id}" />
 					<Label class="TeamName Long" text="{g:dota_team_name::team_id}" />
-					<Panel class="FavoriteStar DPCFavoriteStar" />
+					<Panel class="FavoriteStar DPCFavoriteStar" onmouseover="UIShowTextTooltip( #DOTA_DPCTeams_Following )" onmouseout="UIHideTextTooltip()" />
 				</Panel>
 				<Label class="TeamRecord" text="{d:wins}-{d:losses}" />
 				<Label class="TeamPoints" text="{d:points}" />
@@ -34,7 +34,7 @@
 				<Label class="StandingsButtonText" text="#DOTA_DPCSchedule_Standings" />
 				<Panel class="LinkArrow" />
 			</Button>
-			<Panel id="CenterHeader">
+			<Panel id="CenterHeader" class="TI10Collapse">
 				<Button class="SpoilerRefresh" onactivate="DotaDPCRefreshSpoilerStandings()" />
 				<Label id="SpoilerUpdateTime" class="SpoilerLastUpdated" text="#DOTA_DPCSchedule_SpoilerLastUpdated" />
 			</Panel>
@@ -48,4 +48,3 @@
 		</AsyncDataPanel>
 	</DotaDPCStandingsWidget>
 </root>
-

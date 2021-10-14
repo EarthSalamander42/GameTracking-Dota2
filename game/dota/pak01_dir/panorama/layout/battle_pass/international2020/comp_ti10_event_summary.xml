@@ -19,38 +19,73 @@
 		</Panel>
 
 		<Panel id="PlayerCardsSection" onactivate="DOTAShowCompTI10PlayerCardsPage()">
-			<Panel class="PlayerCardsHeader">
-				<Label class="PlayerCardsTitle" text="#DOTA_Compendium_SecondaryTabHeader_PlayerCards" />
+			<Panel class="SummaryHeader">
+				<Label class="SummaryTitle" text="#DOTA_Compendium_SecondaryTabHeader_PlayerCards" />
 				<Panel class="FillWidth" />
 				<Panel class="InfoIcon" onmouseover="DOTAShowCompTI10PlayerCardsTooltip()" onmouseout="DOTAHideCompTI10PlayerCardsTooltip()"/>
 			</Panel>
 
 			<Panel id="StarterPacks" class="ClaimPacksRow">
-				<Label class="ClaimPacksLabel" text="#DOTA_CompendiumSummary_PlayerCards_StarterPacks" />
+				<Label class="SummaryLabel" text="#DOTA_CompendiumSummary_PlayerCards_StarterPacks" />
 				<Panel class="FillWidth" />
 				<TextButton class="PopupButton Gold ClaimPacksButton" text="#DOTA_Claim" onactivate="DOTACompTI10EventSummaryClaimStarterPacks()" />
 				<Label class="ClaimPacksCompleted" text="#DOTA_Claimed" />
 			</Panel>
 
 			<Panel id="SupportersPacks" class="ClaimPacksRow">
-				<Label class="ClaimPacksLabel" text="#DOTA_CompendiumSummary_PlayerCards_SupportersPacks" />
+				<Label class="SummaryLabel" text="#DOTA_CompendiumSummary_PlayerCards_SupportersPacks" />
 				<Panel class="FillWidth" />
 				<TextButton class="PopupButton Gold ClaimPacksButton" text="#DOTA_Claim" onactivate="DOTACompTI10EventSummaryClaimSupportersPacks()" />
 				<TextButton class="SupporterClubsButton" text="#DOTA_CompendiumSummary_PlayerCards_BecomeASupporter" onactivate="DOTAShowWatchDPCFanContentPage()" />
 			</Panel>
 
 			<Panel id="DailyWinPacks" class="ClaimPacksRow">
-				<Label class="ClaimPacksLabel" text="#DOTA_CompendiumSummary_PlayerCards_DailyWinPack" />
+				<Label class="SummaryLabel" text="#DOTA_CompendiumSummary_PlayerCards_DailyWinPack" />
 				<Panel class="FillWidth" />
 				<TextButton class="PopupButton Gold ClaimPacksButton" text="#DOTA_Claim" onactivate="DOTACompTI10EventSummaryClaimDailyWinPacks()" />
 				<Label class="NextDailyWinAvailable" text="#DOTA_CompendiumSummary_PlayerCards_DailyWinPackAvailable" />
 				<DOTACountdown id="NextDailyWinCountdown" server-time="true">
-					<Label text="Next in {t:d:t:T:countdown_time}" />
+					<Label text="#DOTA_CompendiumSummary_PlayerCards_DailyWinPack_Next" />
 				</DOTACountdown>
 			</Panel>
-
-			<TextButton id="UnopenedPacksButton" class="PopupButton Gold" text="{s:unopened_packs}" onactivate="DOTAShowCompTI10PlayerCardsPage()" />
+			<Button id="UnopenedPacksButton" class="PopupButton Gold" onactivate="DOTAShowCompTI10PlayerCardsPage()">
+				<Label id="UnopenedPacksButtonLabel" />
+			</Button>
 		</Panel>
+		<Panel id="OtherSection">
+			<Panel class="SummaryHeader">
+				<Label class="SummaryTitle" text="#DOTA_Prediction_Button" />
+				<Panel class="FillWidth" />
+			</Panel>
+			<Panel id="FantasyDraft" class="ClaimPacksRow PredictionsRow" onactivate="DOTAShowCompTI10FantasyPage(-1)">
+				<Label class="SummaryLabel" text="#DOTA_CompendiumSummary_Predictions_Fantasy" />
+				<Panel class="FillWidth" />
+				<Label id="FantasyUnlockLabel" html="true" class="PredictionResultLabel SummaryLabel" text="" />
+			</Panel>
+			<Panel id="TournamentPredictions" class="TournamentPredictionsRow PredictionsRow" onactivate="DOTAShowCompTI10MainEventPredictionsPage(3)">
+				<Label class="SummaryLabel" text="#DOTA_Predictions_TournamentPredictions" />
+				<Panel class="FillWidth" />
+				<Panel class="PredictionLockedIcon"/>
+				<Label class="PredictionResultLabel" html="true" text="#DOTA_CompendiumSummary_Predictions_TournamentPrediction_Count" />
+			</Panel>
+			<Panel class="BracketPredictionsRow Unlocked PredictionsRow" onactivate="DOTAShowCompDoubleElimBracketPage( EVENT_ID_TEAM_FANDOM )">
+				<Label class="SummaryLabel" text="#DOTA_Compendium_BracketPredictions" />
+				<Panel class="FillWidth" />
+				<TextButton class="PopupButton Gold ClaimPacksButton" html="true" text="#DOTA_Compendium_Unlocked" />
+			</Panel>
+			<Panel class="BracketPredictionsRow Ready PredictionsRow" onactivate="DOTAShowCompDoubleElimBracketPage( EVENT_ID_TEAM_FANDOM )">
+				<Label class="SummaryLabel" text="#DOTA_CompendiumSummary_Predictions_Bracket_Unlocks" />
+				<Panel class="FillWidth" />
+				<Label class="PredictionResultLabel" html="true" text="#DOTA_CompendiumSummary_Predictions_Bracket_Unlock" />
+			</Panel>
+			<Panel id="BracketPredictions" class="BracketPredictionsRow Locked PredictionsRow" onactivate="DOTAShowCompDoubleElimBracketPage( EVENT_ID_TEAM_FANDOM )">
+				<Label class="SummaryLabel" text="#DOTA_Compendium_BracketPredictions" />
+				<Panel class="FillWidth" />
+				<Panel class="PredictionLockedIcon"/>
+				<Label class="PredictionResultLabel" html="true" text="#DOTA_Compendium_Locked" />
+			</Panel>
+		</Panel>
+		<Panel class="EventSummaryFooter"/>
 		
 		<!--                                                                      -->
 -
