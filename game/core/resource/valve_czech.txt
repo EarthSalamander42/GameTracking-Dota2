@@ -174,8 +174,7 @@
 
 "game_player_connecting"	"Hráč %s1 se připojuje"
 "game_player_joined_game"	"Hráč %s1 se připojil do hry"
-"game_player_left_game"		"Hráč %s1 opustil hru (%s2)" [$WIN32]
-"game_player_left_game"		"Hráč %s1 opustil hru" [$X360]
+"game_player_left_game"		"Hráč %s1 opustil hru (%s2)"
 "game_player_joined_team"	"Hráč %s1 se přidal do týmu %s2"
 "game_player_joined_autoteam" "Hráč %s1 byl automaticky přiřazen do týmu %s2"
 "game_player_changed_name"	"Hráč %s1 si změnil jméno na %s2"
@@ -443,15 +442,17 @@
 
 "Engine_UnsupportedWindowsTitle"	"Nepodporovaná verze systému Windows"
 "Engine_UnsupportedWindowsBody"		"Tato verze systému Windows není podporovaná, aktualizujte na novější."
+"Engine_Deprecated32BitTitle"		"Ukončení podpory"
+"Engine_Deprecated32BitBody"		"Podpora 32bitové verze byla ukončena a tato verze bude odstraněna. Přejděte na 64bitovou verzi."
 
 "Native_VersionLabel"				"VERZE: "
 "Native_ContactingServer"			"Kontaktování serveru"
-"Native_ManifestDownloaded"			"Manifest byl stažen"
+"Native_ManifestDownloaded"			"Záznamový soubor byl stažen"
 "Native_PreparingToDownload"		"Příprava na stahování..."
 "Native_DownloadingContent"			"STAHOVÁNÍ OBSAHU"
 "Native_DownloadError"				"Došlo k chybě"
 "Native_DownloadErrorUnknown"		"Neznámá chyba"
-"Native_DownloadErrorManifest"		"Nepodařilo se stáhnout manifest"
+"Native_DownloadErrorManifest"		"Nepodařilo se stáhnout záznamový soubor"
 "Native_DownloadErrorDownload"		"Nepodařilo se stáhnout soubor s obsahem"
 "Native_DownloadErrorQueueDownload"	"Nepodařilo se zahájit stahování souboru s obsahem"
 "Native_DownloadErrorStorage"		"Nedostatek místa v úložišti"
@@ -587,6 +588,7 @@
 "LOC_Date_Format_Day_Month_Year_Numeric"								"%s1. %s2. %s3"					// 18/4/2014
 "LOC_Date_Format_Day_Month_Numeric"										"%s1. %s2."						// 18/4
 "LOC_Date_Format_DayOfWeek_Month_Day_Year"								"%s1 %s3. %s2 %s4"				// Wednesday, April 18, 2014
+"LOC_Date_Format_Month_Day_Year"										"%s2. %s1 %s3"					// April 18, 2014
 "LOC_Date_Format_Day_Month"												"%s1. %s2"						// 18 April
 "LOC_Date_Format_Day_Month_Year"										"%s1. %s2 %s3"					// 18 April 2014
 "LOC_Date_Format_Day_Month_Year_Hour_Minute_24"							"%s1. %s2 %s3 %s4.%s5"			// 18 April 2014, 17:30
@@ -627,7 +629,7 @@
 "LOC_Duration_Second"													"sekunda"
 "LOC_Number_NegativeSign"												"−"
 "LOC_Number_PositiveSign"												"+"
-"LOC_Number_Grouping"													" "
+"LOC_Number_Grouping"													" "
 "LOC_Number_DecimalPoint"												","
 "LOC_Number_InfinityShort"												"∞"
 // Ordinals can have a prefix or suffix. For either one the number modulo 100

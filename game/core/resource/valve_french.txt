@@ -174,8 +174,7 @@
 
 "game_player_connecting"	"%s1 se connecte"
 "game_player_joined_game"	"%s1 a rejoint la partie"
-"game_player_left_game"		"%s1 a quitté la partie (%s2)" [$WIN32]
-"game_player_left_game"		"%s1 a quitté la partie" [$X360]
+"game_player_left_game"		"%s1 a quitté la partie (%s2)"
 "game_player_joined_team"	"%s1 a rejoint l'équipe %s2"
 "game_player_joined_autoteam" "%s1 a rejoint automatiquement l'équipe %s2"
 "game_player_changed_name"	"%s1 a changé de nom et s'appelle maintenant %s2"
@@ -443,6 +442,8 @@
 
 "Engine_UnsupportedWindowsTitle"	"Version de Windows non prise en charge"
 "Engine_UnsupportedWindowsBody"		"Cette version de Windows n'est pas prise en charge. Veuillez installer une version plus récente."
+"Engine_Deprecated32BitTitle"		"Avertissement d'obsolescence"
+"Engine_Deprecated32BitBody"		"La version 32 bits est obsolète et sera retirée. Veuillez utiliser la version 64 bits."
 
 "Native_VersionLabel"				"VERSION : "
 "Native_ContactingServer"			"Contact avec le serveur"
@@ -525,9 +526,10 @@
 "Valve_TestGenders_Noun1:n"					"#|m|#Trésor"
 "Valve_TestGenders_Noun2:n"					"#|f|#Gemme"
 "Valve_TestGenders_Adjective1:g"			"#|m|#Original#|f|#Originale"
+"Valve_TestGenders_Adjective2:g"			"#|f|#Originale#|m|#Original"
 "Valve_TestPluralGenders_Noun1:np"			"#|m|#Trésor#|m|#Trésors"
 "Valve_TestPluralGenders_Noun2:np"			"#|f|#Gemme#|f|#Gemmes"
-"Valve_TestPluralGenders_Adjective1:gp"		"#|m|#peu Commun#|f|#peu Commune#|m|#peu Communs#|f|#peu Communes"
+"Valve_TestPluralGenders_Adjective1:gp"		"#|m|#peu Commun#|f|#peu Commune#|f|#peu Communes#|m|#peu Communs"
 
 "LOC_Date_Month0"					"janvier"
 "LOC_Date_Month1"					"février"
@@ -594,6 +596,7 @@
 "LOC_Date_Format_Day_Month_Year_Numeric"								"%s1/%s2/%s3"					// 18/4/2014
 "LOC_Date_Format_Day_Month_Numeric"										"%s1/%s2"						// 18/4
 "LOC_Date_Format_DayOfWeek_Month_Day_Year"								"%s1 %s3 %s2 %s4"				// Wednesday, April 18, 2014
+"LOC_Date_Format_Month_Day_Year"										"%s2 %s1 %s3"					// April 18, 2014
 "LOC_Date_Format_Day_Month"												"%s1 %s2"						// 18 April
 "LOC_Date_Format_Day_Month_Year"										"%s1 %s2 %s3"					// 18 April 2014
 "LOC_Date_Format_Day_Month_Year_Hour_Minute_24"							"%s1 %s2 %s3, %s4:%s5"			// 18 April 2014, 17:30

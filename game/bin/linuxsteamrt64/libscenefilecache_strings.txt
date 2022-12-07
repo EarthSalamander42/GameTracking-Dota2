@@ -1,40 +1,40 @@
-"%s"
-"%s" = "%s"
 #include
 $ORIGIN
-%-120s
-%-120s - %s
 %20s = '%s'
 %20s = '%s' (weight %f)
+%d %d %d %d
 %d vcd names remaining (%d removed) after unload of '%s'
 %d:  '%s'
-%i %i %i %i
+%f %f %f %f
+%lf
+%lld
+%llu
 %s Schema Type: %s
 %s allocation count overflow
 %s allocation count overflow( %llu > %llu )
 %s%20s : %40s %5.3f
-%s%d
 %s%s
 %s(token %i) : %s
 %s,%s
 %s/%s:  discarded rule because of invalid criterion %i:  %s
+%u
 '%20s' vs. '%20s' =
-( def. "%s" )
+( (int64)m_nAllocationCount + (int64)num ) <= 0x7FFFFFFF
 *
 ,
 , score %4.2f
 ->
-../../public/tier0/utlleanvector.h
-../../public/tier0/utlrbtree.h
-../public/ordered_constructor.h
+../../public/tier0/utlmemory.h
+../public/tier0/utlmemory.h
 .vcd
 /
+0 0 0 0
+0 0 0 255
 10IAppSystem
-11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
+11CRefCountedI20CRefCountServiceBaseI6CRefMTEE
 14CBaseAppSystemI10IAppSystemE
 14CBaseAppSystemI15ISceneFileCacheE
 14CBaseAppSystemI23IResponseRulesFileCacheE
-14ConCommandBase
 15CResponseSystem
 15CSceneFileCache
 15CTier0AppSystemI15ISceneFileCacheLx0EE
@@ -44,36 +44,29 @@ $ORIGIN
 15CTier2AppSystemI15ISceneFileCacheLx0EE
 15IResponseSystem
 15ISceneFileCache
-16CDefaultAccessor
 17CChoreoStringPool
 17IChoreoStringPool
-18CPlaceholderConVar
 19CGameResponseSystem
 19CSchemaRegistration
 20CPostConnectCallback
-20CRefCountServiceBaseILb1E6CRefMTE
+20CRefCountServiceBaseI6CRefMTE
 20IResourceTypeManager
 22CSchemaInstallCallback
 22IAddonListChangeNotify
 23CResponseRulesFileCache
-23IConCommandBaseAccessor
 23IResponseEngineEmulator
 23IResponseRulesFileCache
 27CChoreoSceneDataTypeManager
 31CResponseRulesToEngineInterface
 34CSchemaRegistration_scenefilecache
-6ConVar
-7IConVar
 <
 < %d >
 <%s : %u>
 <%s%.3f
 <%s, cat %d>
 <invalid>
-<no deferred ref found>
 <no failure reason set>
-<null>
-<unconnected>
+<undefined>
 <unknown: %d>
 =
 >%s%.3f
@@ -84,11 +77,11 @@ AGResp_%s_%d
 AGRule_%s
 AI_ResponseSystem:  Unxpected TokenWaiting() with NULL buffer in %s
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!
-Access of unconnected ConVarRef
-Access of unconnected SplitScreenConVarRef
+AlignedByteArray not properly aligned
 AnimGraphEditorUtils001
 AnimationSystemUtils_001
 AnimationSystem_001
+Assert_ConditionFailed(_AssertCompileTimeConstantStruct_t const&)
 AssetBrowserSystem_001
 AssetPreviewSystem_001
 AssetRenameSystem_001
@@ -109,7 +102,6 @@ CBufferString::ShortenPath(bool)
 CBufferString::StripExtension()
 CBufferString::StripTrailingSlash()
 CBufferString::ToLowerFast(int)
-CCommand::Tokenize: Encountered command which overflows the argument buffer.. Clamped!
 CCommand::Tokenize: Encountered command which overflows the tokenizer buffer.. Skipping!
 CEntityIndex
 CLZMA::GetActualSize(unsigned char const*)
@@ -117,10 +109,11 @@ CLZMA::IsCompressed(unsigned char const*)
 CLZMA::Uncompress(unsigned char const*, unsigned char*, void (*)())
 CMemAllocSystemInitialize
 CMotionTransform
-COLORCORRECTION_VERSION_1
 COM_TimestampedLog
 CPlayerSlot
+CRR_Response
 CRR_Response::ResponseEnum_t
+CRawAllocator::Free(RawAllocatorType_t, void*, unsigned long)
 CResponseCriteriaSet
 CResponseFileParser::LoadFromBuffer:  Unknown entry type '%s', expecting 'response', 'criterion', 'enumeration' or 'rules' in file %s(offset:%i)
 CResponseSystem:  %s (%i rules, %i criteria, and %i responses)
@@ -149,6 +142,7 @@ CUtlString
 CUtlString::Acquire(CBufferString*, bool)
 CUtlString::FixSlashes(char)
 CUtlString::FreeMemoryBlock()
+CUtlString::IsEqual_FastCaseInsensitive(char const*) const
 CUtlString::Set(char const*)
 CUtlString::SetDirect(char const*, int)
 CUtlString::StripExtension() const
@@ -157,13 +151,14 @@ CUtlString::operator+(char const*) const
 CUtlString::operator+=(char const*)
 CUtlSymbol
 CUtlSymbolLarge
-CUtlSymbolTable::AddString(char const*)
+CUtlSymbolTable::AddString(char const*, bool*)
 CUtlSymbolTable::CUtlSymbolTable(int, int, bool)
 CUtlSymbolTable::Find(char const*) const
 CUtlSymbolTable::String(CUtlSymbol) const
 CUtlSymbolTable::~CUtlSymbolTable()
 CUtlVector
 CXXABI_1.3
+CXXABI_1.3.9
 CharacterSetBuild
 ChoreoSceneDataStartup
 ChoreoSceneDataStartup_Staging
@@ -171,20 +166,14 @@ ChoreoSceneFileDataManifest
 ChoreoSceneFileDataManifest_Staging
 Color
 CommandLine
-ConMsg(char const*, ...)
-ConVar(%s) defined with infinite float value (%s)
-ConVarRef %s doesn't point to an existing ConVar
 Concept
-ConfigurationSystem_001
 ConnectInterfaceSingletons
 CreateInterface
-DebugTextureInfo001
 DegreeEuler
 DemoUpconverterVersion001
 DevMsg(char const*, ...)
 Dictionary: %s
 Discarded rule %s
-DotaCardGameClient_001
 EXPORTSYSTEM_INTERFACE_VERSION_001
 EarlyInit_Tier0
 EconItemToolModel_001
@@ -192,19 +181,17 @@ Embedded criteria Generated: rule '%s' pointing to response '%s'.
 Embedded response receiving name: '%s'.
 EngineServiceMgr001
 EnsureCapacity
-EventSystem001
 Expecting '{' in enumeration '%s', got '%s'
 Expecting '{' in rule '%s', got '%s'
 Expecting more tokens in enumeration '%s'
 Expecting more tokens in rule '%s'
 FATAL ERROR: unable to register all schema data: %s
-FCVAR_NEVER_AS_STRING
 FIRE token in response needs exactly three parameters.
 FlattenedSerializersVersion001
 FontManager_001
 Found %i matching rules, selecting slot %i
 GAME
-GCC: (Ubuntu 5.4.0-7.really.6+steamrt1.1+srt1) 5.4.1 20160803
+GCC: (SteamRT 5.4.0-7.really.6+steamrt1.2+srt2) 5.4.1 20160803
 GLIBC_2.14
 GLIBC_2.2.5
 GLIBC_2.4
@@ -217,19 +204,15 @@ GetResourceManifests
 GetSceneDataFromImage( %s ) called with %u byte buffer, but compressed file is %u bytes
 GetSceneDataFromImage( %s ) called with %u byte buffer, but file data is %u bytes
 GetSceneDataFromImage( %s ) lzma decompression failed
+Grow
 HammerMapLoader001
 HelpSystem_001
-HookUpConfigValue
 HostStateMgr001
-IQuickTime001
 InputService_001
 InputStackSystemVersion001
 InputSystemVersion001
-InstallChangeCallback called with NULL callback, ignoring!!!
-InstallChangeCallback ignoring duplicate change callback!!!
 InstallSchemaBindings
 Intentionally vague touch behavior for %p
-Invalid access of deferred ConVarRef for '%s'
 KeyValueCache001
 LOG_GENERAL
 LoadFromBuffer
@@ -249,6 +232,7 @@ MODEL_PROCESSING_SERVICES_INTERFACE_001
 MapListService_001
 Matched rule '%s',
 MaterialUtils_001
+MemAlloc_StrDupFunc
 MeshSystem001
 MeshUtils001
 ModelDocUtils001
@@ -261,9 +245,7 @@ NetworkMessagesVersion001
 NetworkP2PService_001
 NetworkServerService_001
 NetworkService_001
-NetworkSystemUtilsVersion001
 NetworkSystemVersion001
-NewNode
 No such enumeration '%s'
 No such response '%s' for rule '%s'
 PanoramaTextServices001
@@ -273,15 +255,16 @@ ParticleSystemMgr003
 PhysicsBuilderMgr001
 Plat_DebugPrint
 Plat_ExitProcess
+Plat_FatalErrorFunc
 Plat_FloatTime
 Plat_IsInDebugSession
+Plat_NonFatalErrorFunc
 Plat_ShouldCollectMiniDumpsForFatalErrors
 PostProcessingSystem_001
 PropertyEditorSystem_001
 QAngle
 Quaternion
-QuaternionAligned
-QueuedLoaderVersion001
+QuaternionStorage
 RESOURCE_TYPE_CHOREO_SCENE_FILE_DATA
 RESPONSE_ACTIVITY
 RESPONSE_ENTITYIO
@@ -297,8 +280,8 @@ RadianEuler
 RandomFloat
 RandomInt
 Reading: %s
-RegisterAllModuleData
-RegisterConfigValue: Unknown error constructing config value "%s"!
+RegisterConCommand: Unknown error registering con command "%s"!
+RegisterConVar: Unknown error registering convar "%s"!
 RegisterStringToken
 Release
 Reloading .vcdlist due to addon change
@@ -306,14 +289,13 @@ RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
 RenderService_001
-RenderSystemSurface001
 RenderUtils_001
 ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
 ResourceSystem013
 Response group '%s' is trying to use embedded responses, but it has no embedded criteria, which is required for embedded responses.
-ResponseParams
+ResponseFollowup
 ResponseRulesCache001
 RotationVector
 Rule file isn't whitelisted.
@@ -358,7 +340,6 @@ SchemaTestExternal_Two_001
 Scoring rule '%s' (%i){
 Search criteria:
 SerializedEntitiesVersion001
-ServerUploadGameStats001
 ShutdownSceneCache: %d vcd names remaining (%d removed)
 SoundGuid_t
 SoundLevel string appears to be a Volume level %f
@@ -377,10 +358,13 @@ Source2GameClients001
 Source2GameEntities001
 Source2Host001
 Source2Server001
-Source2ServerSerializers002
+Source2V8System001
 Speaker contexts: '%s',
 SplitContext:  warning, ignoring context '%s', missing colon separator!
 SplitContext:  warning, ignoring context '%s', missing comma separator!  Entire context was '%s'.
+St11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE
+St16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE
+St19_Sp_make_shared_tag
 StatsService_001
 SteamAudio001
 THEN token in response had a target '%s', but lacked any further info.
@@ -395,30 +379,21 @@ TestFormatE
 TestScriptMgr001
 TextLayout_001
 ThenSimple rule Generated: rule '%s' with criteria '%s' pointing to response '%s'.
+This convar is being accessed prior to ConVar_Register being called
 TokenWaiting
 ToolFramework2_002
 ToolSceneNodeFactory_001
 ToolService_001
 Unable to load #included script %s
-UserInfoChangeService_001
 UtlMemory_Alloc
 UtlMemory_CalcNewAllocationCount
 VApplication001
 VAsyncFileSystem2_001
 VAvi001
-VBAllocTracker001
 VBik001
 VConComm001
-VDebugService_001
 VEngineCvar007
 VFileSystem017
-VGUI_Input005
-VGUI_Panel010
-VGUI_Scheme010
-VGUI_Surface032
-VGUI_System010
-VGUI_ivgui008
-VMDLLIB001
 VMaterialSystem2_001
 VMatrix
 VMediaFoundation001
@@ -437,7 +412,6 @@ V_AppearsToBeANumber
 V_FixSlashes
 V_atof
 V_atofloat32
-V_atofloat64
 V_atoi
 V_qsort_s
 V_snprintf
@@ -453,10 +427,8 @@ Vector4D
 VectorAligned
 VisBuilder_001
 Warning
-Warning:  %s = '%s' is infinite, clamping value.
 World contexts: '%s',
 WorldRendererMgr001
-[%.3f server clamped to %.3f]
 [%s%03i]
 [%s::%s]
 [%u]
@@ -475,6 +447,7 @@ __cxa_guard_acquire
 __cxa_guard_release
 __cxa_pure_virtual
 __gmon_start__
+__pthread_key_create
 __stack_chk_fail
 _edata
 _end
@@ -483,7 +456,6 @@ _init
 and
 applycontext
 applycontexttoworld
-archive
 bFired
 binary
 binary_auto
@@ -493,11 +465,8 @@ binary_zstd
 bool
 cancel_existing
 char
-cheat
-client
-clientcmd_can_execute
+color
 conceptpriority
-configvalue.cpp
 criteria
 criterion
 criterion '%25s':'%15s'
@@ -508,6 +477,7 @@ displaylast
 enumeration
 failed
 failed (+exclude rule)
+false
 fire
 flags
 float32
@@ -522,7 +492,6 @@ followup_entityiotarget
 followup_target
 g_bUpdateStringTokenDatabase
 g_pMemAlloc
-game
 generic
 interrupt_and_cancel
 interrupt_then_resume
@@ -552,19 +521,16 @@ matcher:  ==%s
 matchonce
 matrix3x4_t
 matrix3x4a_t
-max. %f
 memcpy
 memmove
 memset
-min. %f
 nodelay
 nopriority
 norepeat
 noscene
-notconnected
-notify
 odds
 operator delete(void*)
+operator delete(void*, unsigned long)
 operator delete[](void*)
 operator new(unsigned long)
 operator new(unsigned long, std::nothrow_t const&)
@@ -572,7 +538,7 @@ operator new[](unsigned long)
 operator new[](unsigned long, std::nothrow_t const&)
 permitrepeats
 predelay
-replicated
+qangle
 required
 resourcesystem
 respeakdelay
@@ -593,31 +559,36 @@ scenefilecache.cpp
 scenes/scenes.vrman
 scenes_staging/scenes.vrman
 scenes_staging/scenes.vrman_c
-schemabindings.cpp
 schematype.cpp
 scripts/%s
 self
 sequential
-server_can_execute
-singleplayer
 singletons.cpp
 soundlevel
 speakonce
-ss
-ss_added
+std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_destroy()
 stop_on_nonidle
 strchr
 strcmp
-strcpy
+string
 strlen
 targetclassname
 then
 thensimple
+true
+typeinfo for std::_Mutex_base<(__gnu_cxx::_Lock_policy)2>
+typeinfo for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>
+typeinfo for std::_Sp_make_shared_tag
+typeinfo name for std::_Mutex_base<(__gnu_cxx::_Lock_policy)2>
+typeinfo name for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>
+typeinfo name for std::_Sp_make_shared_tag
 uint16
 uint32
 uint64
 uint8
-user
+vector2
+vector3
+vector4
 void
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__si_class_type_info
@@ -626,5 +597,4 @@ weapondelay
 weight
 whitelistname
 {
-{}()':
 }

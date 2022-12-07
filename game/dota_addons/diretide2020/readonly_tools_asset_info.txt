@@ -1,3 +1,4 @@
+materials/particle/msg/msg_01.vtex
 scripts/soundscapes_manifest.txt
 materials/cubemaps/bronze_day_contrast_cube_psd_be2fead9.vtex
 materials/cubemaps/bronze_day_cube_psd_39b66ffb.vtex
@@ -5,6 +6,7 @@ materials/cubemaps/palegreen_day_cube_psd_a88a532d.vtex
 materials/cubemaps/purple_day_cube_psd_94d8476d.vtex
 materials/cubemaps/red_day_cube_psd_6a8fe464.vtex
 materials/default/default_ao_tga_56a28bd.vtex
+materials/default/default_color_tga_41192599.vtex
 materials/default/default_detail2_tga_70788555.vtex
 materials/default/default_eyes_cube_psd_f281aa41.vtex
 materials/default/default_fresnelwarprim_tga_d9279d65.vtex
@@ -15,7 +17,6 @@ materials/models/heroes/visage/visage_familiar_glow_detail_psd_840f27a9.vtex
 materials/models/props_structures/props_generic_02_color_psd_4479a520.vtex
 materials/models/props_structures/props_generic_02_normal_psd_df3b71fd.vtex
 materials/models/props_structures/props_generic_02_refl_psd_e453c9c1.vtex
-materials/particle/msg/msg_01.vtex
 models/props_gameplay/pumpkin_bucket.vmdl
 panorama/images/control_icons/icon_hero_next_arrow_png.vtex
 panorama/images/events/aghanim/aghs_tutorial_png.vtex
@@ -38,6 +39,10 @@ panorama/layout/custom_game/custom_loading_screen.vxml
 panorama/layout/custom_game/custom_ui_manifest.vxml
 panorama/styles/custom_game/custom_loading_screen.vcss
 scenes/scenes.vrman
+materials/dev/shapemodel_02.vmat
+materials/dev/shapemodel_02_vmat_g_tcolor_d49b98e5.vtex
+materials/dev/shapemodel_02_vmat_g_tspecular_bb343319.vtex
+materials/vgui/hud/heroportraits/portraitbackground_gradient_top_psd_753a16c8.vtex
 addoninfo.txt
 maps/diretide_2020.vmap
 maps/diretide_2020_intro.vmap
@@ -46,9 +51,6 @@ materials/cubemaps/green_metallic_cube_psd_87c9e31e.vtex
 materials/cubemaps/teal_metallic_cube_psd_de9bba0a.vtex
 materials/cubemaps/treasure_chest_gold_cube_psd_e75fbdbc.vtex
 materials/dev/shapemodel_01.vmat
-materials/dev/shapemodel_02.vmat
-materials/dev/shapemodel_02_vmat_g_tcolor_d49b98e5.vtex
-materials/dev/shapemodel_02_vmat_g_tspecular_bb343319.vtex
 materials/fx/lightray_1.vmat
 materials/models/creeps/ice_biome/ogreseal/ogreseal_undead.vmat
 materials/models/creeps/ice_biome/ogreseal/ogreseal_undead_color_psd_f2df5077.vtex
@@ -96,7 +98,6 @@ materials/skybox/sky_diretide2020.vmat
 materials/skybox/sky_diretide2020_psd_e8887b6b.vtex
 materials/skybox/sky_dota_diretide_intro_halfdome.vmat
 materials/skybox/sky_dota_diretide_intro_halfdome_clouds.vmat
-materials/vgui/hud/heroportraits/portraitbackground_gradient_top_psd_753a16c8.vtex
 materials/vgui/hud/minimap_diretide_pumpkin.vmat
 materials/vgui/hud/minimap_diretide_pumpkin_psd_bb514bd7.vtex
 materials/vgui/hud/minimap_diretide_roshan.vmat
@@ -233,7 +234,6 @@ models/structures/village_building_2.vmdl
 models/structures/village_building_2.vmesh
 models/structures/village_tower_1.vmdl
 models/structures/village_tower_1.vmesh
-panorama/dynamic_images_custom_abilities.vpdi
 panorama/dynamic_images_custom_abilities_sentinel.vtex
 panorama/images/candycount_png.vtex
 panorama/images/candy_icon_small_psd.vtex

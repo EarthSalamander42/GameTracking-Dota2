@@ -174,8 +174,7 @@
 
 "game_player_connecting"	"Ο παίκτης %s1 συνδέεται"
 "game_player_joined_game"	"Ο χρήστης %s1 εισήλθε στο παιχνίδι"
-"game_player_left_game"		"Ο παίκτης %s1 αποχώρησε από το παιχνίδι (%s2)" [$WIN32]
-"game_player_left_game"		"Ο παίκτης %s1 αποχώρησε από το παιχνίδι" [$X360]
+"game_player_left_game"		"Ο παίκτης %s1 αποχώρησε από το παιχνίδι (%s2)"
 "game_player_joined_team"	"Ο παίκτης %s1 προσχώρησε στην ομάδα %s2"
 "game_player_joined_autoteam" "Ο παίκτης %s1 εκχωρήθηκε αυτόματα στην ομάδα %s2"
 "game_player_changed_name"	"Ο παίκτης %s1 άλλαξε το όνομά του σε %s2"
@@ -443,6 +442,8 @@
 
 "Engine_UnsupportedWindowsTitle"	"Μη υποστηριζόμενη έκδοση Windows"
 "Engine_UnsupportedWindowsBody"		"Αυτή η έκδοση των Windows δεν υποστηρίζεται. Παρακαλούμε αναβαθμίστε σε νεότερη έκδοση"
+"Engine_Deprecated32BitTitle"		"Προειδοποίηση απόσυρσης"
+"Engine_Deprecated32BitBody"		"Η έκδοση 32-bit έχει αποσυρθεί και θα αφαιρεθεί, χρησιμοποιήστε την έκδοση 64-bit."
 
 "Native_VersionLabel"				"ΕΚΔΟΣΗ: "
 "Native_ContactingServer"			"Επικοινωνία με διακομιστή"
@@ -594,6 +595,7 @@
 "LOC_Date_Format_Day_Month_Year_Numeric"								"%s1/%s2/%s3"					// 18/4/2014
 "LOC_Date_Format_Day_Month_Numeric"										"%s1/%s2"						// 18/4
 "LOC_Date_Format_DayOfWeek_Month_Day_Year"								"%s1, %s3 %s2 %s4"				// Wednesday, April 18, 2014
+"LOC_Date_Format_Month_Day_Year"										"%s2 %s1 %s3"					// April 18, 2014
 "LOC_Date_Format_Day_Month"												"%s1 %s2"						// 18 April
 "LOC_Date_Format_Day_Month_Year"										"%s1 %s2 %s3"					// 18 April 2014
 "LOC_Date_Format_Day_Month_Year_Hour_Minute_24"							"%s1 %s2 %s3, %s4:%s5"			// 18 April 2014, 17:30

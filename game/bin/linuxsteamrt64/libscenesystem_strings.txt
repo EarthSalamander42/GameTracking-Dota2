@@ -1,17 +1,92 @@
 
 !
+!is_large()
 !m_bNeedsSort
 !pObj->HasFlags( SCENEOBJECTFLAG_DELETED )
 !pObj->IsDeleted()
 "
-"%s"
-"%s" = "%s"
+" because it is missing required fields:
+" conflicts with field "
+" conflicts with the existing symbol "
+" contains null character.
+" for field "
+" for option "
+" has no field named "
+" has no value named "
+" has not been loaded.
+" implements neither SetCachedSize() nor ByteSize().  Must implement one or the other.
+" is a message. To set the entire message, use syntax like "
+" is a repeated message. Repeated message options must be initialized using an aggregate value.
+" is already defined (as something other than a package) in file "
+" is already defined in "
+" is already defined in file "
+" is already defined.
+" is an atomic type, not a message.
+" is missing required fields:
+" is not a field or extension of message "
+" is not a message type.
+" is not a proto3 enum, but is used in "
+" is not a type.
+" is not a valid identifier.
+" is not an enum type.
+" is not defined or is not an extension of "
+" is not defined.
+" is resolved to "
+" is resolved to "(
+" is specified along with field "
+" is specified multiple times.
+" must be unique within
+" not previously defined in symbols_by_name_, but was defined in symbols_by_parent_; this shouldn't be possible.
+" seems to be defined in "
+" stored in google.protobuf.Any has missing required fields
+" stored in google.protobuf.Any.
+" unknown. Ensure that your proto
+" uses the same enum value as "
+" was already set.
+" was listed twice.
+" was not found or had errors.
+" which is a proto3 message type.
+" which is not defined or is not an extension of "
+" which is.
+"$0" does not declare $1 as an extension number.
+"$0",
+"%s":
+"%s":%d
+"%s":%s
+"%s":[
+") is not compatible with this reflection object (which is for type "
+") to start from the outermost scope.
+").  Note that the exact same class is required; not just the same descriptor.
+", another member of oneof "
+", but only
+", field number
+", found "
+", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., ".
+", which is not imported by "
+".  To use it here, please add the necessary import.
+". If this is intended, set 'option allow_alias = true;' to the enum definition.
+". This appears to be a value from a sibling type.
+". This is not
+". Value: "
+".)
+"/*" inside block comment.  Block comments cannot be nested.
+"0x" must be followed by hex digits.
+":
 "@
 "Context" functions are simple helpers to associate a Popup to a given Item or Window identifier.
+"DeleteMapValue"
+"GetMapData"
+"GetRawRepeatedField"
+"InsertOrLookupMapValue"
+"LookupMapValue"
+"MapBegin"
+"MapEnd"
+"MapSize"
+"MutableRawRepeatedField"
+"e" must be followed by exponent.
 "imgui" letters
 #
 # %s
-# of channels is zero.
 ###
 ###NavWindowingList
 ##<
@@ -150,6 +225,7 @@
 #%02X%02X%02X%02XR:%d, G:%d, B:%d, A:%d(%.3f, %.3f, %.3f, %.3f)
 #%02X%02X%02XR: %d, G: %d, B: %d(%.3f, %.3f, %.3f)
 #%d: %s 0x%p @ (%g,%g,%g)
+#%s/%s
 #%s/%s/%s
 #%s/%s/+MultiGpu-Mutex( %d -> %d )
 #%s/%s/+MultiGpu-ResetMask( 0x%x )
@@ -161,8 +237,11 @@
 #%s/%s/+SteamVrCompositor-TransferLeftEye( %dx%d @ (x: %d y: %d) )
 #%s/%s/+SteamVrCompositor-TransferRightEye( %dx%d @ x: %d y: %d) )
 #%s/%s/UpdatePerViewConstantBuffer%d
+#%s/AsyncComputeSemaphoreWait
 #%s/PrimaryContext frame( %d )
 #%s/RenderAView/LightSetup
+#%s/SetupGpuCull
+#%s/SetupView
 #%s/UpdatePerViewConstantBuffers
 #%s/UpdatePerViewConstantBuffers%d
 #@
@@ -181,6 +260,22 @@
 #WindowMenu
 #f %d %d %d, original mesh: %d %d %d
 $
+$0  extend .$1 {
+$0  extensions $1 to $2;
+$0  reserved
+$0  }
+$0 to $1,
+$0 to max,
+$0$1 = $2
+$0$1$2 $3 = $4
+$0,
+$0// $1
+$0enum $1 {
+$0message $1
+$0oneof $1 {
+$0option $1;
+$0rpc $1($4.$2) returns ($5.$3)
+$0}
 $@
 $ORIGIN
 %
@@ -190,9 +285,9 @@ $ORIGIN
 %*s%s%*s
 %*sHello, sailor! Making this line long enough for the example.
 %*sThis is line %d
-%-120s
-%-120s - %s
 %-16s
+%.*g
+%.*s
 %.02f
 %.06f ns
 %.0E
@@ -208,11 +303,11 @@ $ORIGIN
 %.1fms
 %.2f FPS
 %.2f px
+%.2f%% of pixels above %2.2f%% target @ %4.2f%%  Target Scalar = %4.2f  Min/Max( %4.2f, %4.2f )  Final Scalar: %4.2f
 %.2fsec
 %.3f V
 %.8f
 %0.2f
-%01d
 %02d Hz
 %02d%c Tab 0x%08X '%s' Offset: %.1f, Width: %.1f/%.1f
 %02d:%02d:%02d
@@ -220,14 +315,14 @@ $ORIGIN
 %02d:00
 %04d
 %04d: scrollable region
-%05d
-%06d
 %08dx.geo
 %3d: %s
+%6.2f %6.2f %6.2f %.3f %.3f %.3f
 %6d
 %8.3f
 %c%c%c
 %d "No animation data"
+%d %d %d %d
 %d (%d depth-only
 %d (0x%X)
 %d (0x%X) (%.02f secs)
@@ -242,11 +337,13 @@ $ORIGIN
 %d particle systems rendered
 %d primary, %d secondary
 %d some text
+%d tris
 %d vertices, %d indices (%d triangles)
 %d%%
 %d-%02d
 %d-%02d-%02d
 %d-%d
+%d.%d.%d
 %d/%d
 %d/%d/%02d
 %d: %8.4g%d: %8.4g
@@ -257,25 +354,29 @@ $ORIGIN
 %dx%dTriStrippedVB
 %e
 %e grams
-%f %f %f
-%f is before m_SimulationState[%d].m_flSimulationTime %f
+%f %f %f %f
+%f %f %f %f %f %f %f %f %f
 %g
 %hu
-%i %i %i %i
 %i The quick brown fox jumps over the lazy dog
 %i filtered textures
+%i object%s, %i draw call%s, %s tris
+%i shadows, %i failed, %i recycled in %ix%i atlas
 %i textures
+%ix%i %s [sub frustum %i]
 %ix%ix%i
+%ld
 %lf
 %lld
 %llu
 %llu ms
+%lu
+%s %.1f %.1f %.1f %s
 %s %04d: pos (%8.2f,%8.2f), uv (%.6f,%.6f), col %08X
 %s %d,%d
 %s %s
 %s '%s'%s
 %s (%s base, %s anim
-%s (%s tested)
 %s (Y%d)
 %s * %s
 %s + %s
@@ -291,9 +392,10 @@ $ORIGIN
 %s [%s]
 %s allocation count overflow
 %s allocation count overflow( %llu > %llu )
+%s allocation count overflow( add %llu + current %llu > max %llu )
 %s%.0f/%.0f
-%s%d
 %s'%s'
+%s.%s
 %s/%08X
 %s/%s's viewport (%d,%d - %d,%d) extends outside of the framebuffer (%d,%d)
 %s/%s_%08X
@@ -303,21 +405,26 @@ $ORIGIN
 %s: %d
 %s: %d entries, %d bytes
 %s: '%s' %d vtx, %d indices, %d cmds
+%s: Invalid capacity %u
+%s: Invalid grow amount %d
 %s: NULL
+%s:%d
 %sLOD Level: %d Draw Calls: %d Triangles: %d
 %s_%u
 %u ms
+'
 '%c' (0x%04X)
 '%s':
 (
+( (int64)m_nAllocationCount + (int64)num ) <= 0x7FFFFFFF
 ( )
-( def. "%s" )
 (%.3ff, %.3ff, %.3ff, %.3ff)
 (%3.3f - %3.3f)(%3.3f - %3.3f)(%3.3f - %3.3f)%3.3f x %3.3f
 (%6.1f,%6.1f) (%6.1f,%6.1f) Size (%6.1f,%6.1f) %s
 (%6.1f,%6.1f) (%6.1f,%6.1f) Size (%6.1f,%6.1f) Col %d %s
+(%d,%d)
 (%d,%d,%d,%d)
-(%s agg)
+(%s%s)
 (2) Or right-click this text
 (3) Or click this button
 (<-- right-click here)
@@ -329,9 +436,7 @@ $ORIGIN
 (Dock node)
 (Frozen)
 (In front-to-back order:)
-(MSAA)
 (Main menu bar)
-(No MSAA)
 (None)
 (Owned)
 (Popup)
@@ -340,47 +445,65 @@ $ORIGIN
 (Untitled)
 (Use ImGui::SameLine() to keep adding items to the right of the preceding item)
 (auto)
+(cannot determine missing fields for lite message)
 (demo menu)
-(discarded renderbatch =
 (dump)
 (dump3d)
 (hidden)
-(index =
+(merge
 (unnamed)
 (w: %5.1f)
 ) in %s batchlists
+)", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
+).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 *
 *** Skip layer '%s'
+*@
 *CentralNode*
 *Inactive*
+*N6google8protobuf12_GLOBAL__N_123AggregateErrorCollectorE
+*N6google8protobuf12_GLOBAL__N_123GeneratedMessageFactoryE
+*N6google8protobuf12_GLOBAL__N_123StringBaseTextGeneratorE
+*N6google8protobuf12_GLOBAL__N_124FieldValuePrinterWrapperE
+*N6google8protobuf12_GLOBAL__N_133FastFieldValuePrinterUtf8EscapingE
 *Unknown item*
 *ZL29InitForFrustum_DebugRendering17ESceneObjectFlagsS_P10CSceneViewEUlP25CSceneLightObjectInternalE_
+*ZN12CSceneSystem11RenderAViewEP10CSceneViewfP24ConstantBufferHandle_t__R26SceneSystemPerFrameStats_tEUlvE0_
+*ZN12CSceneSystem11RenderAViewEP10CSceneViewfP24ConstantBufferHandle_t__R26SceneSystemPerFrameStats_tEUlvE_
+*ZN12CSceneSystem17Thread_RenderViewEP10CSceneViewEUlvE_
+*ZN12CSceneSystem22ReleaseLayerDependentsERKSt10shared_ptrI13CViewDrawListEP11CSceneLayerEUlvE0_
+*ZN12CSceneSystem22ReleaseLayerDependentsERKSt10shared_ptrI13CViewDrawListEP11CSceneLayerEUlvE_
+*ZN12CSceneSystem26Thread_RenderLayerDrawListESt10shared_ptrI13CViewDrawListEP11CSceneLayerP16CRenderBatchList18EBatchStartFlags_tRK10CUtlVectorIP14CSceneDrawListi10CUtlMemoryISA_iEEEUlvE_
 *ZN13CLightBinner225AddEnvironmentMapsForViewEP10CSceneView17ESceneObjectFlagsS2_iEUlP18CEnvMapSceneObjectE_
 *ZN13CLightBinner225DebugLightProbeVolumeGridEP10CSceneViewEUlP28CSceneLightProbeVolumeObjectE0_
 *ZN13CLightBinner225DebugLightProbeVolumeGridEP10CSceneViewEUlP28CSceneLightProbeVolumeObjectE_
 *ZN13CLightBinner227AddLightProbeVolumesForViewEP10CSceneView17ESceneObjectFlagsS2_iEUlP28CSceneLightProbeVolumeObjectE_
 *ZN15CLightBinnerGPU18GatherHammerLightsEvEUlP25CSceneLightObjectInternalE_
-*ZN26CBindlessFastPathPartition21EnsureEnvironmentMapsEvEUlP18CEnvMapSceneObjectE_
-*ZN32CBindlessFastPathSceneObjectDesc25UpdateLightProbeVolumeSetEP31LightProbeVolumeDescriptorSet_tP26CBindlessFastPathPartitionEUlP28CSceneLightProbeVolumeObjectE_
+*ZN26CBindlessFastPathPartition21EnsureEnvironmentMapsEPK10ISceneViewEUlP18CEnvMapSceneObjectE_
+*ZN32CBindlessFastPathSceneObjectDesc25UpdateLightProbeVolumeSetEPK10ISceneViewP31LightProbeVolumeDescriptorSet_tP26CBindlessFastPathPartitionEUlP28CSceneLightProbeVolumeObjectE_
+*ZZN12CSceneSystem22Thread_RenderViewLayerESt10shared_ptrI13CViewDrawListEP11CSceneLayerENKUlbE_clEbEUlvE_
 *ZZN13CLightBinner225DebugLightProbeVolumeGridEP10CSceneViewENKUlP28CSceneLightProbeVolumeObjectE0_clES3_EUlvE0_
 *ZZN13CLightBinner225DebugLightProbeVolumeGridEP10CSceneViewENKUlP28CSceneLightProbeVolumeObjectE0_clES3_EUlvE_
 *ZZN13CLightBinner225DebugLightProbeVolumeGridEP10CSceneViewENKUlP28CSceneLightProbeVolumeObjectE_clES3_EUlvE_
 +
 +%.0f px
-+x east
-+y north
-+z up
++++
++++ %s:
++++ %s[%d]:
 ,
 , %d depth-only alpha-tested
 , %s
-, %s agg
-, channels =
-, height =
+, %s agg [%s fragments, %s meshlets]
+, but was
+, from:
+, lo=
+, not just within "
 , parent:
 ,%.*f
 ,%.3E
 ,(%.*f)
 ,(%.3E)
+- %s
 - Load additional fonts with io.Fonts->AddFontFromFileTTF().- The font atlas is built when calling io.Fonts->GetTexDataAsXXXX() or io.Fonts->Build().- Read FAQ and docs/FONTS.md for more details.- If you need to add/remove fonts at runtime (e.g. for DPI change), do it before calling NewFrame().
 - or me
 -%s
@@ -389,13 +512,22 @@ $ORIGIN
 --%02d
 --%02d-%02d
 ---
+--- %s:
+--- %s[%d]:
 ------
 --------------------------------
--0.000001
--1 -1 -1
--1.0
+-1
+-2
+-3
+-4
+-5
+-6
+-7
+-8
+->
 -AA
 -avx
+-inf
 -shadowTargetSize
 -shadowTargetSize %d - Adjusting nMaxShadowBufferSize size to %d from %d
 -shadowTargetSize Adjusting shadow target size to %d from %d
@@ -403,105 +535,129 @@ $ORIGIN
 -sse3
 -sse4
 -tools
--y south
--z down
+.
+.  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
+. Difference of
 ..-         -XXXXXXX-    X    -           X           -XXXXXXX          -          XXXXXXX-     XX          ..-         -X.....X-   X.X   -          X.X          -X.....X          -          X.....X-    X..X         ---         -XXX.XXX-  X...X  -         X...X         -X....X           -           X....X-    X..X         X           -  X.X  - X.....X -        X.....X        -X...X            -            X...X-    X..X         XX          -  X.X  -X.......X-       X.......X       -X..X.X           -           X.X..X-    X..X         X.X         -  X.X  -XXXX.XXXX-       XXXX.XXXX       -X.X X.X          -          X.X X.X-    X..XXX       X..X        -  X.X  -   X.X   -          X.X          -XX   X.X         -         X.X   XX-    X..X..XXX    X...X       -  X.X  -   X.X   -    XX    X.X    XX    -      X.X        -        X.X      -    X..X..X..XX  X....X      -  X.X  -   X.X   -   X.X    X.X    X.X   -       X.X       -       X.X       -    X..X..X..X.X X.....X     -  X.X  -   X.X   -  X..X    X.X    X..X  -        X.X      -      X.X        -XXX X..X..X..X..XX......X    -  X.X  -   X.X   - X...XXXXXX.XXXXXX...X -         X.X   XX-XX   X.X         -X..XX........X..XX.......X   -  X.X  -   X.X   -X.....................X-          X.X X.X-X.X X.X          -X...X...........XX........X  -  X.X  -   X.X   - X...XXXXXX.XXXXXX...X -           X.X..X-X..X.X           - X..............XX.........X -XXX.XXX-   X.X   -  X..X    X.X    X..X  -            X...X-X...X            -  X.............XX..........X-X.....X-   X.X   -   X.X    X.X    X.X   -           X....X-X....X           -  X.............XX......XXXXX-XXXXXXX-   X.X   -    XX    X.X    XX    -          X.....X-X.....X          -   X............XX...X..X    ---------   X.X   -          X.X          -          XXXXXXX-XXXXXXX          -   X...........X X..X X..X   -       -XXXX.XXXX-       XXXX.XXXX       -------------------------------------    X..........X X.X  X..X   -       -X.......X-       X.......X       -    XX           XX    -           -    X..........X XX    X..X  -       - X.....X -        X.....X        -   X.X           X.X   -           -     X........X        X..X          -  X...X  -         X...X         -  X..X           X..X  -           -     X........X         XX           -   X.X   -          X.X          - X...XXXXXXXXXXXXX...X -           -     XXXXXXXXXX  ------------        -    X    -           X           -X.....................X-           ------------------                    ----------------------------------- X...XXXXXXXXXXXXX...X -                                                                                   -  X..X           X..X  -                                                                                   -   X.X           X.X   -                                                                                   -    XX           XX    -
 ... }
-../public/ordered_constructor.h
+...<truncated>...
+../common/protobuf_helpers.cpp
+../public/scenesystem/scenevisibility.h
 ../public/scenesystem/vertexformat.h
 ../public/tier0/tslist.h
 ../public/tier0/utl3dallocator.h
-../public/tier0/utlblockmemory.h
 ../public/tier0/utlhashdict.h
-../public/tier0/utlleanvector.h
-../public/tier0/utllinkedlist.h
-../public/tier0/utlmultilist.h
-../public/tier0/utlrbtree.h
+../public/tier0/utlmemory.h
 ../public/tier0/utlsymboltable.h
-../public/tier0/utltshash.h
+./google/protobuf/arena_impl.h
+./google/protobuf/arenastring.h
+./google/protobuf/descriptor.pb.h
+./google/protobuf/extension_set.h
+./google/protobuf/extension_set_inl.h
+./google/protobuf/generated_message_reflection.h
+./google/protobuf/io/coded_stream.h
+./google/protobuf/map.h
+./google/protobuf/message_lite.h
+./google/protobuf/metadata_lite.h
+./google/protobuf/parse_context.h
+./google/protobuf/reflection.h
+./google/protobuf/reflection_internal.h
+./google/protobuf/repeated_field.h
+./google/protobuf/stubs/stringpiece.h
+./google/protobuf/unknown_field_set.h
 .@
-.exr
-.jpg
-.psd
-.tif
+.PLACEHOLDER_VALUE
+.dummy
+.foo = value".
+.placeholder.proto
 /
 /C
 /path/one
 /path/three
 /path/two
 0
+0 0 0 0
+0 0 0 255
 0 < %.10f < 1
+0 <= i
 0..255
+0.0
 0.00..1.00
 0.1
-0.15
+0.125
+0.2
+0.25
+0.3
+0.4
 0.5
-0.85
+0.6
+0.7
+0.8
+0.9
+0123456789abcdef
 04
+05
 06
+08
 09
 0: spheres, 1: cubes
-0A
+0@
+0AERROR: Docking is not enabled! See Demo > Configuration.
 0q@
+0v@
 0x%08X "%s" Pos (%d,%d) Size (%d,%d) Collapsed=%d
 0x%08X %s,
 0x%08X,%d
-1 = visualize bounds, 2 = visualize sceneobject mesh materials, 3 = required texture size, 4 = bounds group, 5 = LOD
+1
+1 = visualize bounds, 2 = visualize sceneobject mesh materials, 3 = required texture size, 4 = bounds group, 5 = LOD, 6 == LPV Binding
 1. I am selectable
-1.2
-1.8
 1.83 WIP
-10.0
-1000.0
+10CEntityMsg
+10CMsgQAngle
+10CMsgVector
+10CMsg_CVars
 10CSceneView
 10ConCommand
 10IAppSystem
 10ISceneView
-11
 11CDefaultPVS
+11CNETMsg_NOP
 11CSceneLayer
 11CSceneUtils
 11CSceneWorld
-11IRefCounted
 11ISceneLayer
 11ISceneUtils
 11ISceneWorld
 11IVSSequence
-12
 12,345 bytes
 123.456
 1234
 123456
-128 128 128
-12CRefCounted1I8CFunctor20CRefCountServiceBaseILb1E6CRefMTEE
+12CMsgVector2D
+12CNETMsg_Tick
 12CSceneObject
 12CSceneSystem
 12CShadowAtlas
+12CThreadEvent
 12ILightBinner
 12ISceneSystem
 13CImGuiWrapper
 13CLightBinner2
-13CNoRefFunctor
+13ConCommandRef
 13IBaseSequence
-14
 14CBaseAppSystemI10IAppSystemE
 14CBaseAppSystemI11ISceneUtilsE
 14CBaseAppSystemI12ISceneSystemE
 14CEmptySequence
 14CImPlotWrapper
+14CMsgPlayerInfo
 14CTonemapSystem
 14CVolumetricFog
-14ConCommandBase
 14ITonemapSystem
 14IVolumetricFog
 15CLightBinnerCPU
 15CLightBinnerGPU
-15CMemberFunctor1IP12CSceneSystemMS0_FvP10CSceneViewES3_12CRefCounted1I8CFunctor20CRefCountServiceBaseILb1E6CRefMTEE18CFuncMemPolicyNoneE
-15CMemberFunctor1IP26CParallelProcessorAbstractI18CParallelProcessorIP12CSceneObject21CFuncJobItemProcessorIS3_ELi1EEEMS7_FviEi12CRefCounted1I8CFunctor20CRefCountServiceBaseILb1E6CRefMTEE18CFuncMemPolicyNoneE
-15CMemberFunctor1IP26CParallelProcessorAbstractI22CParallelLoopProcessorI13CViewDrawList31CLoopMemberFuncJobItemProcessorIS2_12CSceneSystemS4_EEEMS7_FviEi12CRefCounted1I8CFunctor20CRefCountServiceBaseILb1E6CRefMTEE18CFuncMemPolicyNoneE
-15CMemberFunctor5IP12CSceneSystemMS0_FvSt10shared_ptrI13CViewDrawListEP11CSceneLayerP16CRenderBatchList18EBatchStartFlags_tRK10CUtlVectorIP14CSceneDrawList10CUtlMemoryISC_iEEES4_S6_S8_S9_SF_12CRefCounted1I8CFunctor20CRefCountServiceBaseILb1E6CRefMTEE18CFuncMemPolicyNoneE
-15CMemberFunctor6IP13CSOAContainerMS0_FviiiiiDv4_fEiiiiiS2_12CRefCounted1I8CFunctor20CRefCountServiceBaseILb1E6CRefMTEE18CFuncMemPolicyNoneE
-15CMemberFunctor7IP12CSceneSystemMS0_FvSt10shared_ptrI13CViewDrawListEP11CSceneLayerP16CRenderBatchList18EBatchStartFlags_tS2_I10CUtlVectorI20CMeshDrawPrimitive_t10CUtlMemoryISB_iEEEiiES4_S6_S8_S9_SF_ii12CRefCounted1I8CFunctor20CRefCountServiceBaseILb1E6CRefMTEE18CFuncMemPolicyNoneE
+15CMsg_CVars_CVar
 15CTier0AppSystemI10IAppSystemLx0EE
 15CTier0AppSystemI11ISceneUtilsLx0EE
 15CTier0AppSystemI12ISceneSystemLx0EE
@@ -514,12 +670,14 @@ $ORIGIN
 15CTier3AppSystemI10IAppSystemLx0EE
 15CTier3AppSystemI11ISceneUtilsLx0EE
 15CTier3AppSystemI12ISceneSystemLx0EE
-160
-16CDefaultAccessor
+16.0
 16CLightObjectDesc
 16CTonemapRenderer
 16ICommandCallback
 16ISceneObjectDesc
+17CNETMsg_SetConVar
+17CNETMsg_StringCmd
+17CSVCMsg_GameEvent
 17CSceneLightObject
 17CSkyBoxObjectDesc
 17CTimestampManager
@@ -528,26 +686,33 @@ $ORIGIN
 18C6FaceSkyboxObject
 18CEnvMapSceneObject
 18CMonitorObjectDesc
-18CPlaceholderConVar
+18CNETMsg_Disconnect
 18CRenderingPipeline
 18CSceneSkyBoxObject
 18IModelRenderHelper
+18IMultipleWorkerJob
 18IRenderingPipeline
 19
 19CDebugLayerRenderer
+19CNETMsg_SignonState
+19CRayTraceSceneWorld
 19CRenderingPipelines
 19CScalableAORenderer
 19CSceneMonitorObject
 19CSchemaRegistration
 19CSimpleQuadRenderer
+19CTonemapSystemMulti
 19ILightBinnerFactory
+19IRayTraceSceneWorld
+19IReadBufferCallback
+19IRenderReadCallback
 19ISceneLightListener
+1GB
+1d
 2
 2,345 bytes
+2.
 2. I am selectable
-2.13
-2.2
-2.5
 20
 200x200
 20CBarnLightObjectDesc
@@ -555,8 +720,9 @@ $ORIGIN
 20CDebugTextObjectDesc
 20CFilterLayerRenderer
 20CLightBinner2Factory
+20CNETMsg_DebugOverlay
 20CPostConnectCallback
-20CRefCountServiceBaseILb1E6CRefMTE
+20CTonemapSystemLegacy
 20ISceneObjectDescBaseI21CSceneBarnLightObjectE
 20ISceneObjectDescBaseI21CSceneDebugTextObjectE
 20ISceneObjectDescBaseI25CSceneLPVSampleGridObjectE
@@ -566,7 +732,6 @@ $ORIGIN
 20ISceneObjectDescBaseI33CAmbientOcclusionProxySceneObjectE
 20ISceneObjectDescBaseIN23CCharacterDecalRenderer26CCharacterDecalSceneObjectEE
 21
-21.0
 21CAggregateSceneObject
 21CResolveLayerRenderer
 21CSceneBarnLightObject
@@ -578,9 +743,10 @@ $ORIGIN
 22CEnvMapLightObjectDesc
 22CLightBinnerCPUFactory
 22CLightBinnerGPUFactory
+22CSVCMsgList_GameEvents
 22CSceneAnimatableObject
 22CSchemaInstallCallback
-22CTier2ShutdownCallback
+22CTonemapRendererLegacy
 22CVolumetricFogRenderer
 22IToolsResourceListener
 23
@@ -588,40 +754,27 @@ $ORIGIN
 23CCharacterDecalRenderer
 23CFullscreenQuadRenderer
 23CMeshBuilderSceneObject
+23CNETMsg_SpawnGroup_Load
+23CNETMsg_SplitScreenUser
 23CRenderingPipelineAlias
-23CSSAOProceduralRenderer
+23CSVCMsg_GameEvent_key_t
 23CSceneViewDebugOverlays
 23CSpotLightObjectDescCPU
 23CSpotLightObjectDescGPU
 23ICharacterDecalRenderer
-23IConCommandBaseAccessor
 23ISceneViewDebugOverlays
+24
 24 Hour Clock
-240
 24CPointLightObjectDescCPU
 24CPointLightObjectDescGPU
 24CVConCommandMessageScene
 24IProceduralLayerRenderer
-25
 25%
-256
 25CAggregateSceneObjectDesc
 25CConCommandMemberAccessorI12CSceneSystemE
 25CEnvMapLightObjectDescCPU
 25CEnvMapLightObjectDescGPU
-25CKV3TransferDefaultHelperI13SceneViewId_tE
-25CKV3TransferDefaultHelperI17CSSDSMsg_EndFrameE
-25CKV3TransferDefaultHelperI17CSSDSMsg_PreLayerE
-25CKV3TransferDefaultHelperI18CSSDSMsg_LayerBaseE
-25CKV3TransferDefaultHelperI18CSSDSMsg_PostLayerE
-25CKV3TransferDefaultHelperI19AnimationSnapshot_tE
-25CKV3TransferDefaultHelperI19CSSDSMsg_ViewRenderE
-25CKV3TransferDefaultHelperI19CSSDSMsg_ViewTargetE
-25CKV3TransferDefaultHelperI21CSSDSEndFrameViewInfoE
-25CKV3TransferDefaultHelperI23AnimationSnapshotBase_tE
-25CKV3TransferDefaultHelperI23CSSDSMsg_ViewTargetListE
-25CKV3TransferDefaultHelperI26AnimationDecodeDebugDump_tE
-25CKV3TransferDefaultHelperI33AnimationDecodeDebugDumpElement_tE
+25CNETMsg_SpawnGroup_Unload
 25CRenderingPipelineFactoryI25CRenderingPipelineForwardE
 25CRenderingPipelineForward
 25CSceneLPVSampleGridObject
@@ -629,11 +782,14 @@ $ORIGIN
 25IRenderingPipelineFactory
 26
 26CAnimatableSceneObjectDesc
+26CParallelProcessorAbstractI18CParallelProcessorIP12CSceneObject21CFuncJobItemProcessorIS2_ELi1EEE
+26CParallelProcessorAbstractI22CParallelLoopProcessorI13CViewDrawList31CLoopMemberFuncJobItemProcessorIS1_12CSceneSystemS3_EEE
 26ICommandCompletionCallback
 27
 27CDirectionalLightObjectDesc
 27CLightProbeVolumeObjectDesc
 27CMeshBuilderSceneObjectDesc
+28
 28CBindlessFastPathSceneObject
 28CSceneLightProbeVolumeObject
 28CTextureBarrierLayerRenderer
@@ -643,6 +799,7 @@ $ORIGIN
 29CBaseNonPooledSceneObjectDescI18C6FaceSkyboxObjectE
 29CBaseRenderingPipelineFactory
 29CVolumetricFogClipmapRenderer
+2GB
 2Way_0( %s )
 2Way_1( %s )
 2_BONE_IK
@@ -653,15 +810,21 @@ $ORIGIN
 30
 30CDirectionalLightObjectDescGPU
 30CProjectedDecalSceneObjectDesc
+30CSVCMsgList_GameEvents_event_t
 30ISceneLightProbeVolumeListener
 31
 31CBlitTextureToRenderTargetLayer
+31CParallelProcessorAbstract_Base
 31CResolveProceduralLayerRenderer
 31CSchemaRegistration_scenesystem
 32.0
 32CBindlessFastPathSceneObjectDesc
+32CNETMsg_SpawnGroup_LoadCompleted
+32CSVCMsg_GameSessionConfiguration
 33
 33CAmbientOcclusionProxySceneObject
+33CNETMsg_SpawnGroup_ManifestUpdate
+34CNETMsg_SpawnGroup_SetCreationTick
 34CSimplePostProcessingLayerRenderer
 35
 35CInputLayoutRegistration_sm_hLayout
@@ -669,21 +832,22 @@ $ORIGIN
 36
 37
 37CAmbientOcclusionProxySceneObjectDesc
-38
 38IMaxSwapChainDimensionsChangedListener
 39
+3D
 3D Skybox
+3DSkyBox
+3dSkyboxFog
+3dSkyboxFrustum
 3ways
 4
 4 (tab skip)
 4. I am selectable
 4.0
-4096.0f
 40ISceneAnimatableProceduralBoneTransforms
 41
 42
 43
-43CFunctor_SceneSystem_Thread_RenderViewLayer
 45
 46
 46CBindlessFastPathParitionToolsResourceListener
@@ -692,38 +856,43 @@ $ORIGIN
 49
 4C
 4CMDL
-4IPVS
+4GB
 5
 5. I am double clickable
 500x500
-50CFunctor_SceneSystem_Thread_ProcessProceduralLayer
 50x50
+51
 52
 53
 54
 57
 58
 59
-6
-6ConVar
+6GB
+7
 75%
-7IConVar
 7IImPlot
 7])#######hV0qs'/###[),##/l:$#Q6>##5[n42>c-TH`->>#/e>11NNV=Bv(*:.F?uu#(gRU.o0XGH`$vhLG1hxt9?W`#,5LsCp#-i>.r$<$6pD>Lb';9Crc6tgXmKVeU2cD4Eo3R/2*>]b(MC;$jPfY.;h^`IWM9<Lh2TlS+f-s$o6Q<BWH`YiU.xfLq$N;$0iR/GX:U(jcW2p/W*q?-qmnUCI;jHSAiFWM.R*kU@C=GH?a9wp8f$e.-4^Qg1)Q-GL(lf(r/7GrRgwV%MS=C#`8ND>Qo#t'X#(v#Y9w0#1D$CIf;W'#pWUPXOuxXuU(H9M(1<q-UE31#^-V'8IRUo7Qf./L>=Ke$$'5F%)]0^#0X@U.a<r:QLtFsLcL6##lOj)#.Y5<-R&KgLwqJfLgN&;Q?gI^#DY2uLi@^rMl9t=cWq6##weg>$FBjVQTSDgEKnIS7EM9>ZY9w0#L;>>#Mx&4Mvt//L[MkA#W@lK.N'[0#7RL_&#w+F%HtG9M#XL`N&.,GM4Pg;-<nLENhvx>-VsM.M0rJfLH2eTM`*oJMHRC`NkfimM2J,W-jXS:)r0wK#@Fge$U>`w'N7G#$#fB#$E^$#:9:hk+eOe--6x)F7*E%?76%^GMHePW-Z5l'&GiF#$956:rS?dA#fiK:)Yr+`&#0j@'DbG&#^$PG.Ll+DNa<XCMKEV*N)LN/N*b=%Q6pia-Xg8I$<MR&,VdJe$<(7G;Ckl'&hF;;$<_=X(b.RS%%)###MPBuuE1V:v&cX&#2m#(&cV]`k9OhLMbn%s$G2,B$BfD3X*sp5#l,$R#]x_X1xKX%b5U*[r5iMfUo9U`N99hG)tm+/Us9pG)XPu`<0s-)WTt(gCRxIg(%6sfh=ktMKn3j)<6<b5Sk_/0(^]AaN#(p/L>&VZ>1i%h1S9u5o@YaaW$e+b<TWFn/Z:Oh(Cx2$lNEoN^e)#CFY@@I;BOQ*sRwZtZxRcU7uW6CXow0i(?$Q[cjOd[P4d)]>ROPOpxTO7Stwi1::iB1q)C_=dV26J;2,]7op$]uQr@_V7$q^%lQwtuHY]=DX,n3L#0PHDO4f9>dC@O>HBuKPpP*E,N+b3L#lpR/MrTEH.IAQk.a>D[.e;mc.x]Ip.PH^'/aqUO/$1WxLoW0[iLA<QT;5HKD+@qQ'NQ(3_PLhE48R.qAPSwQ0/WK?Z,[x?-J;jQTWA0X@KJ(_Y8N-:/M74:/-ZpKrUss?d#dZq]DAbkU*JqkL+nwX@@47`5>w=4h(9.`GCRUxHPeR`5Mjol(dUWxZa(>STrPkrJiWx`5U7F#.g*jrohGg`cg:lSTvEY/EV_7H4Q9[Z%cnv;JQYZ5q.l7Zeas:HOIZOB?G<Nald$qs]@]L<J7bR*>gv:[7MI2k).'2($5FNP&EQ(,)U]W]+fh18.vsai00);D3@4ku5P?DP8aJt+;qUM]=+b'8@;mViBKx0DE[-auGl8:PJ&Dj+M6OC]O^((##]`0i)drT;-7X`=-H3[igUnPG-NZlo.#k@h#=Ork$m>a>$-?Tm$UV(?#P6YY#'/###xe7q.73rI3*pP/$1>s9)W,JrM7SN]'/4C#v$U`0#V.[0>xQsH$fEmPMgY2u7Kh(G%siIfLSoS+MK2eTM$=5,M8p`A.;_R%#u[K#$x4AG8.kK/HSB==-'Ie/QTtG?-.*^N-4B/ZM_3YlQC7(p7q)&](`6_c)$/*JL(L-^(]$wIM`dPtOdGA,U3:w2M-0<q-]L_?^)1vw'.,MRsqVr.L;aN&#/EgJ)PBc[-f>+WomX2u7lqM2iEumMTcsF?-aT=Z-97UEnXglEn1K-bnEO`guFt(c%=;Am_Qs@jLooI&NX;]0#j4#F14;gl8-GQpgwhrq8'=l_f-b49'UOqkLu7-##oDY2L(te+Mch&gLYtJ,MEtJfLh'x'M=$CS-ZZ%P]8bZ>#S?YY#%Q&q'3^Fw&?D)UDNrocM3A76//oL?#h7gl85[qW/NDOk%16ij;+:1a'iNIdb-ou8.P*w,v5#EI$TWS>Pot-R*H'-SEpA:g)f+O$%%`kA#G=8RMmG1&O`>to8bC]T&$,n.LoO>29sp3dt-52U%VM#q7'DHpg+#Z9%H[K<L%a2E-grWVM3@2=-k22tL]4$##6We'8UJCKE[d_=%wI;'6X-GsLX4j^SgJ$##R*w,vP3wK#iiW&#*h^D&R?jp7+/u&#(AP##XU8c$fSYW-J95_-Dp[g9wcO&#M-h1OcJlc-*vpw0xUX&#OQFKNX@QI'IoPp7nb,QU//MQ&ZDkKP)X<WSVL(68uVl&#c'[0#(s1X&xm$Y%B7*K:eDA323j998GXbA#pwMs-jgD$9QISB-A_(aN4xoFM^@C58D0+Q+q3n0#3U1InDjF682-SjMXJK)(h$hxua_K]ul92%'BOU&#BRRh-slg8KDlr:%L71Ka:.A;%YULjDPmL<LYs8i#XwJOYaKPKc1h:'9Ke,g)b),78=I39B;xiY$bgGw-&.Zi9InXDuYa%G*f2Bq7mn9^#p1vv%#(Wi-;/Z5ho;#2:;%d&#x9v68C5g?ntX0X)pT`;%pB3q7mgGN)3%(P8nTd5L7GeA-GL@+%J3u2:(Yf>et`e;)f#Km8&+DC$I46>#Kr]]u-[=99tts1.qb#q72g1WJO81q+eN'03'eM>&1XxY-caEnOj%2n8)),?ILR5^.Ibn<-X-Mq7[a82Lq:F&#ce+S9wsCK*x`569E8ew'He]h:sI[2LM$[guka3ZRd6:t%IG:;$%YiJ:Nq=?eAw;/:nnDq0(CYcMpG)qLN4$##&J<j$UpK<Q4a1]MupW^-sj_$%[HK%'F####QRZJ::Y3EGl4'@%FkiAOg#p[##O`gukTfBHagL<LHw%q&OV0##F=6/:chIm0@eCP8X]:kFI%hl8hgO@RcBhS-@Qb$%+m=hPDLg*%K8ln(wcf3/'DW-$.lR?n[nCH-eXOONTJlh:.RYF%3'p6sq:UIMA945&^HFS87@$EP2iG<-lCO$%c`uKGD3rC$x0BL8aFn--`ke%#HMP'vh1/R&O_J9'um,.<tx[@%wsJk&bUT2`0uMv7gg#qp/ij.L56'hl;.s5CUrxjOM7-##.l+Au'A&O:-T72L]P`&=;ctp'XScX*rU.>-XTt,%OVU4)S1+R-#dg0/Nn?Ku1^0f$B*P:Rowwm-`0PKjYDDM'3]d39VZHEl4,.j']Pk-M.h^&:0FACm$maq-&sgw0t7/6(^xtk%LuH88Fj-ekm>GA#_>568x6(OFRl-IZp`&b,_P'$M<Jnq79VsJW/mWS*PUiq76;]/NM_>hLbxfc$mj`,O;&%W2m`Zh:/)Uetw:aJ%]K9h:TcF]u_-Sj9,VK3M.*'&0D[Ca]J9gp8,kAW]%(?A%R$f<->Zts'^kn=-^@c4%-pY6qI%J%1IGxfLU9CP8cbPlXv);C=b),<2mOvP8up,UVf3839acAWAW-W?#ao/^#%KYo8fRULNd2.>%m]UK:n%r$'sw]J;5pAoO_#2mO3n,'=H5(etHg*`+RLgv>=4U8guD$I%D:W>-r5V*%j*W:Kvej.Lp$<M-SGZ':+Q_k+uvOSLiEo(<aD/K<CCc`'Lx>'?;++O'>()jLR-^u68PHm8ZFWe+ej8h:9r6L*0//c&iH&R8pRbA#Kjm%upV1g:a_#Ur7FuA#(tRh#.Y5K+@?3<-8m0$PEn;J:rh6?I6uG<-`wMU'ircp0LaE_OtlMb&1#6T.#FDKu#1Lw%u%+GM+X'e?YLfjM[VO0MbuFp7;>Q&#WIo)0@F%q7c#4XAXN-U&VB<HFF*qL($/V,;(kXZejWO`<[5??ewY(*9=%wDc;,u<'9t3W-(H1th3+G]ucQ]kLs7df($/*JL]@*t7Bu_G3_7mp7<iaQjO@.kLg;x3B0lqp7Hf,^Ze7-##@/c58Mo(3;knp0%)A7?-W+eI'o8)b<nKnw'Ho8C=Y>pqB>0ie&jhZ[?iLR@@_AvA-iQC(=ksRZRVp7`.=+NpBC%rh&3]R:8XDmE5^V8O(x<<aG/1N$#FX$0V5Y6x'aErI3I$7x%E`v<-BY,)%-?Psf*l?%C3.mM(=/M0:JxG'?7WhH%o'a<-80g0NBxoO(GH<dM]n.+%q@jH?f.UsJ2Ggs&4<-e47&Kl+f//9@`b+?.TeN_&B8Ss?v;^Trk;f#YvJkl&w$]>-+k?'(<S:68tq*WoDfZu';mM?8X[ma8W%*`-=;D.(nc7/;)g:T1=^J$&BRV(-lTmNB6xqB[@0*o.erM*<SWF]u2=st-*(6v>^](H.aREZSi,#1:[IXaZFOm<-ui#qUq2$##Ri;u75OK#(RtaW-K-F`S+cF]uN`-KMQ%rP/Xri.LRcB##=YL3BgM/3MD?@f&1'BW-)Ju<L25gl8uhVm1hL$##*8###'A3/LkKW+(^rWX?5W_8g)a(m&K8P>#bmmWCMkk&#TR`C,5d>g)F;t,4:@_l8G/5h4vUd%&%950:VXD'QdWoY-F$BtUwmfe$YqL'8(PWX(P?^@Po3$##`MSs?DWBZ/S>+4%>fX,VWv/w'KD`LP5IbH;rTV>n3cEK8U#bX]l-/V+^lj3;vlMb&[5YQ8#pekX9JP3XUC72L,,?+Ni&co7ApnO*5NK,((W-i:$,kp'UDAO(G0Sq7MVjJsbIu)'Z,*[>br5fX^:FPAWr-m2KgL<LUN098kTF&#lvo58=/vjDo;.;)Ka*hLR#/k=rKbxuV`>Q_nN6'8uTG&#1T5g)uLv:873UpTLgH+#FgpH'_o1780Ph8KmxQJ8#H72L4@768@Tm&Qh4CB/5OvmA&,Q&QbUoi$a_%3M01H)4x7I^&KQVgtFnV+;[Pc>[m4k//,]1?#`VY[Jr*3&&slRfLiVZJ:]?=K3Sw=[$=uRB?3xk48@aeg<Z'<$#4H)6,>e0jT6'N#(q%.O=?2S]u*(m<-V8J'(1)G][68hW$5'q[GC&5j`TE?m'esFGNRM)j,ffZ?-qx8;->g4t*:CIP/[Qap7/9'#(1sao7w-.qNUdkJ)tCF&#B^;xGvn2r9FEPFFFcL@.iFNkTve$m%#QvQS8U@)2Z+3K:AKM5isZ88+dKQ)W6>J%CL<KE>`.d*(B`-n8D9oK<Up]c$X$(,)M8Zt7/[rdkqTgl-0cuGMv'?>-XV1q['-5k'cAZ69e;D_?$ZPP&s^+7])$*$#@QYi9,5P&#9r+$%CE=68>K8r0=dSC%%(@p7.m7jilQ02'0-VWAg<a/''3u.=4L$Y)6k/K:_[3=&jvL<L0C/2'v:^;-DIBW,B4E68:kZ;%?8(Q8BH=kO65BW?xSG&#@uU,DS*,?.+(o(#1vCS8#CHF>TlGW'b)Tq7VT9q^*^$$.:&N@@$&)WHtPm*5_rO0&e%K&#-30j(E4#'Zb.o/(Tpm$>K'f@[PvFl,hfINTNU6u'0pao7%XUp9]5.>%h`8_=VYbxuel.NTSsJfLacFu3B'lQSu/m6-Oqem8T+oE--$0a/k]uj9EwsG>%veR*hv^BFpQj:K'#SJ,sB-'#](j.Lg92rTw-*n%@/;39rrJF,l#qV%OrtBeC6/,;qB3ebNW[?,Hqj2L.1NP&GjUR=1D8QaS3Up&@*9wP?+lo7b?@%'k4`p0Z$22%K3+iCZj?XJN4Nm&+YF]u@-W$U%VEQ/,,>>#)D<h#`)h0:<Q6909ua+&VU%n2:cG3FJ-%@Bj-DgLr`Hw&HAKjKjseK</xKT*)B,N9X3]krc12t'pgTV(Lv-tL[xg_%=M_q7a^x?7Ubd>#%8cY#YZ?=,`Wdxu/ae&#w6)R89tI#6@s'(6Bf7a&?S=^ZI_kS&ai`&=tE72L_D,;^R)7[$s<Eh#c&)q.MXI%#v9ROa5FZO%sF7q7Nwb&#ptUJ:aqJe$Sl68%.D###EC><?-aF&#RNQv>o8lKN%5/$(vdfq7+ebA#u1p]ovUKW&Y%q]'>$1@-[xfn$7ZTp7mM,G,Ko7a&Gu%G[RMxJs[0MM%wci.LFDK)(<c`Q8N)jEIF*+?P2a8g%)$q]o2aH8C&<SibC/q,(e:v;-b#6[$NtDZ84Je2KNvB#$P5?tQ3nt(0d=j.LQf./Ll33+(;q3L-w=8dX$#WF&uIJ@-bfI>%:_i2B5CsR8&9Z&#=mPEnm0f`<&c)QL5uJ#%u%lJj+D-r;BoF&#4DoS97h5g)E#o:&S4weDF,9^Hoe`h*L+_a*NrLW-1pG_&2UdB86e%B/:=>)N4xeW.*wft-;$'58-ESqr<b?UI(_%@[P46>#U`'6AQ]m&6/`Z>#S?YY#Vc;r7U2&326d=w&H####?TZ`*4?&.MK?LP8Vxg>$[QXc%QJv92.(Db*B)gb*BM9dM*hJMAo*c&#b0v=Pjer]$gG&JXDf->'StvU7505l9$AFvgYRI^&<^b68?j#q9QX4SM'RO#&sL1IM.rJfLUAj221]d##DW=m83u5;'bYx,*Sl0hL(W;;$doB&O/TQ:(Z^xBdLjL<Lni;''X.`$#8+1GD:k$YUWsbn8ogh6rxZ2Z9]%nd+>V#*8U_72Lh+2Q8Cj0i:6hp&$C/:p(HK>T8Y[gHQ4`4)'$Ab(Nof%V'8hL&#<NEdtg(n'=S1A(Q1/I&4([%dM`,Iu'1:_hL>SfD07&6D<fp8dHM7/g+tlPN9J*rKaPct&?'uBCem^jn%9_K)<,C5K3s=5g&GmJb*[SYq7K;TRLGCsM-$$;S%:Y@r7AK0pprpL<Lrh,q7e/%KWK:50I^+m'vi`3?%Zp+<-d+$L-Sv:@.o19n$s0&39;kn;S%BSq*$3WoJSCLweV[aZ'MQIjO<7;X-X;&+dMLvu#^UsGEC9WEc[X(wI7#2.(F0jV*eZf<-Qv3J-c+J5AlrB#$p(H68LvEA'q3n0#m,[`*8Ft)FcYgEud]CWfm68,(aLA$@EFTgLXoBq/UPlp7:d[/;r_ix=:TF`S5H-b<LI&HY(K=h#)]Lk$K14lVfm:x$H<3^Ql<M`$OhapBnkup'D#L$Pb_`N*g]2e;X/Dtg,bsj&K#2[-:iYr'_wgH)NUIR8a1n#S?Yej'h8^58UbZd+^FKD*T@;6A7aQC[K8d-(v6GI$x:T<&'Gp5Uf>@M.*J:;$-rv29'M]8qMv-tLp,'886iaC=Hb*YJoKJ,(j%K=H`K.v9HggqBIiZu'QvBT.#=)0ukruV&.)3=(^1`o*Pj4<-<aN((^7('#Z0wK#5GX@7u][`*S^43933A4rl][`*O4CgLEl]v$1Q3AeF37dbXk,.)vj#x'd`;qgbQR%FW,2(?LO=s%Sc68%NP'##Aotl8x=BE#j1UD([3$M(]UI2LX3RpKN@;/#f'f/&_mt&F)XdF<9t4)Qa.*kTLwQ'(TTB9.xH'>#MJ+gLq9-##@HuZPN0]u:h7.T..G:;$/Usj(T7`Q8tT72LnYl<-qx8;-HV7Q-&Xdx%1a,hC=0u+HlsV>nuIQL-5<N?)NBS)QN*_I,?&)2'IM%L3I)X((e/dl2&8'<M:^#M*Q+[T.Xri.LYS3v%fF`68h;b-X[/En'CR.q7E)p'/kle2HM,u;^%OKC-N+Ll%F9CF<Nf'^#t2L,;27W:0O@6##U6W7:$rJfLWHj$#)woqBefIZ.PK<b*t7ed;p*_m;4ExK#h@&]>_>@kXQtMacfD.m-VAb8;IReM3$wf0''hra*so568'Ip&vRs849'MRYSp%:t:h5qSgwpEr$B>Q,;s(C#$)`svQuF$##-D,##,g68@2[T;.XSdN9Qe)rpt._K-#5wF)sP'##p#C0c%-Gb%hd+<-j'Ai*x&&HMkT]C'OSl##5RG[JXaHN;d'uA#x._U;.`PU@(Z3dt4r152@:v,'R.Sj'w#0<-;kPI)FfJ&#AYJ&#//)>-k=m=*XnK$>=)72L]0I%>.G690a:$##<,);?;72#?x9+d;^V'9;jY@;)br#q^YQpx:X#Te$Z^'=-=bGhLf:D6&bNwZ9-ZD#n^9HhLMr5G;']d&6'wYmTFmL<LD)F^%[tC'8;+9E#C$g%#5Y>q9wI>P(9mI[>kC-ekLC/R&CH+s'B;K-M6$EB%is00:+A4[7xks.LrNk0&E)wILYF@2L'0Nb$+pv<(2.768/FrY&h$^3i&@+G%JT'<-,v`3;_)I9M^AE]CN?Cl2AZg+%4iTpT3<n-&%H%b<FDj2M<hH=&Eh<2Len$b*aTX=-8QxN)k11IM1c^j%9s<L<NFSo)B?+<-(GxsF,^-Eh@$4dXhN$+#rxK8'je'D7k`e;)2pYwPA'_p9&@^18ml1^[@g4t*[JOa*[=Qp7(qJ_oOL^('7fB&Hq-:sf,sNj8xq^>$U4O]GKx'm9)b@p7YsvK3w^YR-CdQ*:Ir<($u&)#(&?L9Rg3H)4fiEp^iI9O8KnTj,]H?D*r7'M;PwZ9K0E^k&-cpI;.p/6_vwoFMV<->#%Xi.LxVnrU(4&8/P+:hLSKj$#U%]49t'I:rgMi'FL@a:0Y-uA[39',(vbma*hU%<-SRF`Tt:542R_VV$p@[p8DV[A,?1839FWdF<TddF<9Ah-6&9tWoDlh]&1SpGMq>Ti1O*H&#(AL8[_P%.M>v^-))qOT*F5Cq0`Ye%+$B6i:7@0IX<N+T+0MlMBPQ*Vj>SsD<U4JHY8kD2)2fU/M#$e.)T4,_=8hLim[&);?UkK'-x?'(:siIfL<$pFM`i<?%W(mGDHM%>iWP,##P`%/L<eXi:@Z9C.7o=@(pXdAO/NLQ8lPl+HPOQa8wD8=^GlPa8TKI1CjhsCTSLJM'/Wl>-S(qw%sf/@%#B6;/U7K]uZbi^Oc^2n<bhPmUkMw>%t<)'mEVE''n`WnJra$^TKvX5B>;_aSEK',(hwa0:i4G?.Bci.(X[?b*($,=-n<.Q%`(X=?+@Am*Js0&=3bh8K]mL<LoNs'6,'85`0?t/'_U59@]ddF<#LdF<eWdF<OuN/45rY<-L@&#+fm>69=Lb,OcZV/);TTm8VI;?%OtJ<(b4mq7M6:u?KRdF<gR@2L=FNU-<b[(9c/ML3m;Z[$oF3g)GAWqpARc=<ROu7cL5l;-[A]%/+fsd;l#SafT/f*W]0=O'$(Tb<[)*@e775R-:Yob%g*>l*:xP?Yb.5)%w_I?7uk5JC+FS(m#i'k.'a0i)9<7b'fs'59hq$*5Uhv##pi^8+hIEBF`nvo`;'l0.^S1<-wUK2/Coh58KKhLjM=SO*rfO`+qC`W-On.=AJ56>>i2@2LH6A:&5q`?9I3@@'04&p2/LVa*T-4<-i3;M9UvZd+N7>b*eIwg:CC)c<>nO&#<IGe;__.thjZl<%w(Wk2xmp4Q@I#I9,DF]u7-P=.-_:YJ]aS@V?6*C()dOp7:WL,b&3Rg/.cmM9&r^>$(>.Z-I&J(Q0Hd5Q%7Co-b`-c<N(6r@ip+AurK<m86QIth*#v;-OBqi+L7wDE-Ir8K['m+DDSLwK&/.?-V%U_%3:qKNu$_b*B-kp7NaD'QdWQPKYq[@>P)hI;*_F]u`Rb[.j8_Q/<&>uu+VsH$sM9TA%?)(vmJ80),P7E>)tjD%2L=-t#fK[%`v=Q8<FfNkgg^oIbah*#8/Qt$F&:K*-(N/'+1vMB,u()-a.VUU*#[e%gAAO(S>WlA2);Sa>gXm8YB`1d@K#n]76-a$U,mF<fX]idqd)<3,]J7JmW4`6]uks=4-72L(jEk+:bJ0M^q-8Dm_Z?0olP1C9Sa&H[d&c$ooQUj]Exd*3ZM@-WGW2%s',B-_M%>%Ul:#/'xoFM9QX-$.QN'>[%$Z$uF6pA6Ki2O5:8w*vP1<-1`[G,)-m#>0`P&#eb#.3i)rtB61(o'$?X3B</R90;eZ]%Ncq;-Tl]#F>2Qft^ae_5tKL9MUe9b*sLEQ95C&`=G?@Mj=wh*'3E>=-<)Gt*Iw)'QG:`@IwOf7&]1i'S01B+Ev/Nac#9S;=;YQpg_6U`*kVY39xK,[/6Aj7:'1Bm-_1EYfa1+o&o4hp7KN_Q(OlIo@S%;jVdn0'1<Vc52=u`3^o-n1'g4v58Hj&6_t7$##?M)c<$bgQ_'SY((-xkA#Y(,p'H9rIVY-b,'%bCPF7.J<Up^,(dU1VY*5#WkTU>h19w,WQhLI)3S#f$2(eb,jr*b;3Vw]*7NH%$c4Vs,eD9>XW8?N]o+(*pgC%/72LV-u<Hp,3@e^9UB1J+ak9-TN/mhKPg+AJYd$MlvAF_jCK*.O-^(63adMT->W%iewS8W6m2rtCpo'RS1R84=@paTKt)>=%&1[)*vp'u+x,VrwN;&]kuO9JDbg=pO$J*.jVe;u'm0dr9l,<*wMK*Oe=g8lV_KEBFkO'oU]^=[-792#ok,)i]lR8qQ2oA8wcRCZ^7w/Njh;?.stX?Q1>S1q4Bn$)K1<-rGdO'$Wr.Lc.CG)$/*JL4tNR/,SVO3,aUw'DJN:)Ss;wGn9A32ijw%FL+Z0Fn.U9;reSq)bmI32U==5ALuG&#Vf1398/pVo1*c-(aY168o<`JsSbk-,1N;$>0:OUas(3:8Z972LSfF8eb=c-;>SPw7.6hn3m`9^Xkn(r.qS[0;T%&Qc=+STRxX'q1BNk3&*eu2;&8q$&x>Q#Q7^Tf+6<(d%ZVmj2bDi%.3L2n+4W'$PiDDG)g,r%+?,$@?uou5tSe2aN_AQU*<h`e-GI7)?OK2A.d7_c)?wQ5AS@DL3r#7fSkgl6-++D:'A,uq7SvlB$pcpH'q3n0#_%dY#xCpr-l<F0NR@-##FEV6NTF6##$l84N1w?AO>'IAOURQ##V^Fv-XFbGM7Fl(N<3DhLGF%q.1rC$#:T__&Pi68%0xi_&[qFJ(77j_&JWoF.V735&T,[R*:xFR*K5>>#`bW-?4Ne_&6Ne_&6Ne_&n`kr-#GJcM6X;uM6X;uM(.a..^2TkL%oR(#;u.T%fAr%4tJ8&><1=GHZ_+m9/#H1F^R#SC#*N=BA9(D?v[UiFY>>^8p,KKF.W]L29uLkLlu/+4T<XoIB&hx=T1PcDaB&;HH+-AFr?(m9HZV)FKS8JCw;SD=6[^/DZUL`EUDf]GGlG&>w$)F./^n3+rlo+DB;5sIYGNk+i1t-69Jg--0pao7Sm#K)pdHW&;LuDNH@H>#/X-TI(;P>#,Gc>#0Su>#4`1?#8lC?#<xU?#@.i?#D:%@#HF7@#LRI@#P_[@#Tkn@#Xw*A#]-=A#a9OA#d<F&#*;G##.GY##2Sl##6`($#:l:$#>xL$#B.`$#F:r$#JF.%#NR@%#R_R%#Vke%#Zww%#_-4&#3^Rh%Sflr-k'MS.o?.5/sWel/wpEM0%3'/1)K^f1-d>G21&v(35>V`39V7A4=onx4A1OY5EI0;6Ibgr6M$HS7Q<)58C5w,;WoA*#[%T*#`1g*#d=#+#hI5+#lUG+#pbY+#tnl+#x$),#&1;,#*=M,#.I`,#2Ur,#6b.-#;w[H#iQtA#m^0B#qjBB#uvTB##-hB#'9$C#+E6C#/QHC#3^ZC#7jmC#;v)D#?,<D#C8ND#GDaD#KPsD#O]/E#g1A5#KA*1#gC17#MGd;#8(02#L-d3#rWM4#Hga1#,<w0#T.j<#O#'2#CYN1#qa^:#_4m3#o@/=#eG8=#t8J5#`+78#4uI-#m3B2#SB[8#Q0@8#i[*9#iOn8#1Nm;#^sN9#qh<9#:=x-#P;K2#$%X9#bC+.#Rg;<#mN=.#MTF.#RZO.#2?)4#Y#(/#[)1/#b;L/#dAU/#0Sv;#lY$0#n`-0#sf60#(F24#wrH0#%/e0#TmD<#%JSMFove:CTBEXI:<eh2g)B,3h2^G3i;#d3jD>)4kMYD4lVu`4m`:&5niUA5@(A5BA1]PBB:xlBCC=2CDLXMCEUtiCf&0g2'tN?PGT4CPGT4CPGT4CPGT4CPGT4CPGT4CPGT4CPGT4CPGT4CPGT4CPGT4CPGT4CPGT4CP-qekC`.9kEg^+F$kwViFJTB&5KTB&5KTB&5KTB&5KTB&5KTB&5KTB&5KTB&5KTB&5KTB&5KTB&5KTB&5KTB&5KTB&5KTB&5o,^<-28ZI'O?;xpO?;xpO?;xpO?;xpO?;xpO?;xpO?;xpO?;xpO?;xpO?;xpO?;xpO?;xpO?;xpO?;xp;7q-#lLYI:xvD=#
 8
+8.0
 800x200
 80x80
-8192
-8CFunctor
+8CMsgRGBA
+8CUtlGrid
+8GB
+8J
 9
-9.1.15
 9ISequence
 :
+: 0x
 : DrawCmd: +%d (in child window), Scroll: (%.f/%.f) (%.f/%.f)
 : DrawCmd: +%d (in same window)
+: Tried to copy from a message with a different type. to:
+: Tried to merge from a message with a different type.  to:
+: [
+: failed to parse contents
 :%02d.%03d %03d
 :%i
-;
 <
 < %d >
 <%s : %u>
@@ -734,6 +903,7 @@ $ORIGIN
 <<PRESS SPACE TO DISABLE>>
 <INVALID EXPRESSION>
 <INVALID_RBF_TYPE>
+<Left click for details>
 <NULL>
 <None>
 <UNKNOWN ID: %d>
@@ -741,13 +911,10 @@ $ORIGIN
 <b>Viewport X</b>=%d <b>Y</b>=%d <b>Width</b>=%d <b>Height</b>=%d  <b>MinZ</b>=%.3f <b>MaxZ</b>=%.3f
 <font color="red">Display lists discarded</font>
 <hashed>
-<i>Display lists discarded because of unmet stencil bit dependency</i>
 <i>Label Layer</i>
 <i>Not using PerViewConstantBuffer_t</i>
 <i>PerViewConstantBuffer_t</i>
 <i>Procedural Layer</i>
-<no deferred ref found>
-<no failure reason set>
 <null>
 <password>
 <table border="1">
@@ -808,10 +975,9 @@ $ORIGIN
 <td>LAYERFLAGS_READONLY_DEPTH_STENCIL_NORESOLVE</td>
 <td>MATERIAL_SUPPORTS_SHADOWS</td>
 <td>NEEDS_DIRTY_UPDATE</td>
-<td>NEEDS_DYNAMIC_REFLECTION_MAP</td>
+<td>NEEDS_DYNAMIC_REFLECTION_OR_REFRACTION</td>
 <td>NEEDS_STATIC_ENVMAP_BINDING</td>
 <td>NEEDS_STATIC_LPV_BINDING</td>
-<td>NO_OCCLUSION_CULLING</td>
 <td>NO_PVS_CULLING</td>
 <td>NO_Z_PREPASS</td>
 <td>PIPELINE_SPECIFIC_0</td>
@@ -832,20 +998,15 @@ $ORIGIN
 <tr><td><b>m_nAuxiliaryCameraMask</b></td><td>%x</td></tr>
 <tr><td><b>m_nClearFlags</b></td><td>0x%x</td>
 <tr><td><b>m_nLayerFlags</b></td><td>0x%llx</td>
-<tr><td><b>m_nNumDebugDisplayLists</b></td><td>%d</td></tr>
-<tr><td><b>m_nNumDisplayListsGenerated</b></td><td>%d</td></tr>
 <tr><td><b>m_nObjectMatchID</b></b></td><td>0x%x</td></tr>
-<tr><td><b>m_viewConstantBufferData.m_flEnvMapScalar</b></td><td>%.3f</td></tr>
 <tr><td><b>m_viewConstantBufferData.m_flFarPlane</b></td><td>%.3f</td></tr>
 <tr><td><b>m_viewConstantBufferData.m_flFogExponent</b></td><td>%.3f</td></tr>
 <tr><td><b>m_viewConstantBufferData.m_flFogMaxDensity</b></td><td>%.3f</td></tr>
 <tr><td><b>m_viewConstantBufferData.m_flInvFogRange</b></td><td>%.3f</td></tr>
 <tr><td><b>m_viewConstantBufferData.m_flLightBinnerFarPlane</b></td><td>%.3f</td></tr>
-<tr><td><b>m_viewConstantBufferData.m_flLightMapScalar</b></td><td>%.3f</td></tr>
 <tr><td><b>m_viewConstantBufferData.m_flNearPlane</b></td><td>%.3f</td></tr>
 <tr><td><b>m_viewConstantBufferData.m_flNegFogStartOverFogRange</b></td><td>%.3f</td></tr>
 <tr><td><b>m_viewConstantBufferData.m_flTime</b></td><td>%.3f</td></tr>
-<tr><td><b>m_viewConstantBufferData.m_flToneMapScalarGamma</b></td><td>%.3f</td></tr>
 <tr><td><b>m_viewConstantBufferData.m_flToneMapScalarLinear</b></td><td>%.3f</td></tr>
 <tr><td><b>m_viewConstantBufferData.m_flViewportMaxZ</b></td><td>%.3f</td></tr>
 <tr><td><b>m_viewConstantBufferData.m_flViewportMinZ</b></td><td>%.3f</td></tr>
@@ -855,9 +1016,10 @@ $ORIGIN
 <tr><td><b>m_viewConstantBufferData.m_vClipPlane0</b></td><td>[%.3f %.3f %.3f %.3f]</td></tr>
 <tr><td><b>m_viewConstantBufferData.m_vFogColor</b></td><td>[%.3f %.3f %.3f]</td></tr>
 <tr><td><b>m_viewConstantBufferData.m_vInvProjRow3</b></td><td>[%.3f %.3f %.3f %.3f]</td></tr>
-<unconnected>
+<undefined>
 <unknown: %d>
 <unnamed>
+= { <proto text format> }". To set fields within it, use syntax like "
 >
 >C
 ?
@@ -868,10 +1030,14 @@ $ORIGIN
 @A
 @B
 @DE
+@fog_override
+@j@
 @@
 A
 A Rather Long Title
-A sceneobject (perhaps a decal) is still in the world that needs to be deleted before deleting the world.
+A file with this name is already in the pool.
+A protobuf object %s with a repeated field %s was used in a container, this will crash
+A protocol message was rejected because it was too big (more than
 A0
 A0 Row 0
 A0 Row 1
@@ -883,6 +1049,9 @@ A:%0.3f
 A:%3d
 AA for plots can be toggled from the plot's context menu.
 AAAA
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
+ABGR8888
+ABORTED
 ABOUT THIS DEMO:
 ACTIVITY WEIGHTS
 ACT_IDLE
@@ -892,6 +1061,7 @@ AE_CL_DISABLE_BODYGROUP
 AE_CL_ENABLE_BODYGROUP
 AE_SV_BODYGROUP_SET_VALUE
 AIM
+ALREADY_EXISTS
 ALT
 ANIMATION_PROCESSING_CLIENT_INTERPOLATION
 ANIMATION_PROCESSING_CLIENT_PREDICTION
@@ -909,57 +1079,76 @@ ANIMATION_SNAPSHOT_SERVER_SIMULATION
 AO Proxies: %d (%d drawcalls)
 AOProxies
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!
+ARGB8888
 ATI1N
 ATI2N
-ATI_DST16
-ATI_DST24
 ATTACHMENT_INFLUENCE_FLAGS_NONE
 Abibliophobia
 About Dear ImGui
 Absquatulate
-Access of unconnected ConVarRef
-Access of unconnected SplitScreenConVarRef
 Action
 Active DrawLists in Viewport #%d, ID: 0x%08X
 Active: %d/%d, WriteAccessed: %d, BeginOrderWithinContext: %d
 ActiveId: 0x%08X/0x%08X (%.2f sec), AllowOverlap: %d, Source: %s
 ActiveIdWindow: '%s'
+Actual    :
+Actual   :
 Add 1000 lines
 Add Debug Error
 Add Debug Text
 Add another modal..
+AddAllocatedMessage
+AddBool
+AddCleared() can only be used on a RepeatedPtrField not on an arena.
+AddDouble
+AddEnum
+AddFloat
+AddInt32
+AddInt64
+AddMessage
+AddMultipleToTail
+AddString
 AddToView
+AddUInt32
+AddUInt64
 Adjust if you cannot see the edges of your screen (e.g. on a TV where scaling has not been configured).
 AdvanceX: %.1f
 Advanced
 Advanced & Close Button
 Advanced, with Selectable nodes
-AfterTranslucent3D
 AgeList
 AggregateDesc
+AggregateSceneObjectManifest
 Air
 Align label with current X position
 Align to right edge
 Align to right edge minus 100
 Align to right edge minus half
+AlignedByteArray not properly aligned
 Alignment applies when a button is larger than its text content.
 Alignment applies when a selectable is larger than its text content.
 All primitives
 All those beautiful files will be deleted.This operation cannot be undone!
 AllHovered: %s
-Alloc
-AllocInternal
+AllocatePerFrameTransformData
+AllocatePerFrameTransformData: Transform buffer full!
 AllocateRenderTarget: Does not work to pass pOtherView == this!
-Allocating new transform texture!
+Allocating new transform buffer!
 Allow time-sliced shadow buffer rendering when enabled via gameinfo.gi
+AllowSubrectResolve
 Allows rendering dynamic lights
 Allows rendering stationary/mixed lights
 AlphaTest
+AlphaTestZPrepass
+Already saw decimal point or exponent; can't have another one.
 Also see Style->Rendering for rendering options.
 Alt to jump to the menu layer of a window.
 Alt+F4
 Always clamp value to min/max bounds (if any) when input manually with CTRL+Click.
 AlwaysAutoResize
+AmbientLightingSHB
+AmbientLightingSHG
+AmbientLightingSHR
 Amplitude
 An extra line here.
 And now some textured buttons..
@@ -970,6 +1159,7 @@ AnimVRHand_t
 Animate
 Animated
 Animated title %c %d###AnimatedTitle
+AnimationDecodeDebugDumpElement_t
 AnimationDecodeDebugDump_t
 AnimationProcessingType_t
 AnimationSnapshotBase_t
@@ -985,10 +1175,13 @@ Anti-aliased lines
 Anti-aliased lines use texture
 Anti-aliasing can be enabled from the plot's context menu (see Help).
 AntiAliasedLines
+AnyHit0
+AnyHit1
+AnyHit2
+AnyHit3
 Appearing: %d, Hidden: %d (CanSkip %d Cannot %d), SkipItems: %d
 Apple
 Application average %.3f ms/frame (%.1f FPS)
-ApplyNewState %d at %f
 Apr
 Apricot
 April
@@ -1002,7 +1195,6 @@ Ascent: %f, Descent: %f, Height: %f
 Aspect:     %f
 Assert_ConditionFailed(_AssertCompileTimeConstantStruct_t const&)
 Assert_ConditionFailed(_AssertCompileTimeConstantStruct_t const&, char const*, ...)
-Assertion Failed in function %s():%s
 AssetBrowserSystem_001
 AssetGridWidget_ClearLayer
 AssetPreviewSystem_001
@@ -1010,7 +1202,6 @@ AssetRenameSystem_001
 AssetSystem001
 AssetSystemTest001
 Asterisk
-AsyncComputeSemaphoreWait
 Atlas texture
 Atlas texture (%dx%d pixels)
 Attempt to add %s to renderable types when it is already there
@@ -1030,10 +1221,9 @@ Auto-scroll
 Auto/Current
 Avail %.2f
 Average
+AvgLum @ %4.2f%%  flTonemapMinAvgLum = %4.2f%%  Using %d pixels  Override(%s): %4.2f
 Avocado
 B
-B channel not found
-B channel not found!
 B%d-%s%s
 B0
 B0 Row 0
@@ -1045,30 +1235,33 @@ B:%0.3f
 B:%3d
 BBBBBBBB
 BC6H
-BC6h compression not supported on this target (windows only).
 BC7
-BC7 compression not supported on this target (windows only).
 BG/FG draw lists
 BGR565
-BGR888_BLUESCREEN
+BGR888
 BGRA1010102
 BGRA4444
-BGRA5551
+BGRA8888
 BGRA8888_LINEAR
+BGRX8888
 BGRX8888_LINEAR
 BL
+BLAS %d
 BR
 B[%d]=%.2f
+BackUp() can only be called after Next().
+BackUp() can only be called after a successful Next().
 Backend Flags
+BackfaceCulling
 Background color
 BackgroundClipRect
 Bad KV3 data for '%s': %s
 BakedLODBuilderMgr001
+BakedLightShadowCache
+BakedLightingConstantBuffer_t
 Banana
 Bar Plot
 Bar Plots
-Barn Light Mixed Shadow
-Barn Light Shadow
 BarnLight
 BarnLightCB
 BarnLightObjectDesc
@@ -1097,14 +1290,20 @@ BinCullParams_t
 BinaryProperties_GetValue
 BindlessFastPathDesc
 BindlessFastPathManifest
+BindlessFastPathPushConstants_t
 BindlessFastPathSceneObject
 Blah blah blah
 Blah blahBlah Blah
 Blaine
+BloomScale = %4.2f  flTonemapRate = %4.2f  m_flAccelerateExposureDown = %4.2f
 Blue
+Blue is Av Lum. Green is percent target. Histogram is in linear space
+BlueNoise
 Blueberry
 Bobby
 BoneChannel
+BoneConstraintList
+Boolean default must be true or false.
 BorderShadow
 Borders, background
 Both
@@ -1119,7 +1318,9 @@ Bream
 Brianna
 Broccoli
 Bryn
+BudgetGroupName - FIXME
 Buffer contents: %d lines, %d bytes
+BufferName - FIXME
 Bullet point 1
 Bullet point 2On multiple lines
 Bullet point 3 (two calls)
@@ -1142,7 +1343,7 @@ By default, anti-aliased lines are turned OFF.
 By default, colors are given to ColorEdit and ColorPicker in RGB, but ImGuiColorEditFlags_InputHSVallows you to store colors as HSV and pass them to ColorEdit and ColorPicker as HSV. This comes with theadded benefit that you can manipulate hue values with the picker even when saturation or value are zero.
 By default, labels are in UTC time but can be set to use local time instead.
 By default, right-clicking over a TableHeadersRow()/TableHeader() line will open the default context-menu.Using ImGuiTableFlags_ContextMenuInBody we also allow right-clicking over columns body.
-C
+Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of
 C++ lambdas can be passed as function pointers as well!
 C1
 C3
@@ -1150,14 +1351,13 @@ C4
 C5
 C6
 C6FaceSkyboxObjectDesc
+CANCELLED
+CAggregateSceneObject
 CAimConstraint
 CAmbientOcclusionProxySceneObjectDesc
 CAnimBone
 CAnimDataChannelDesc
 CAnimKeyData
-CAnimRetargetChainData
-CAnimRetargetData
-CAnimRetargetElementData
 CAnimUser
 CAnimVariant
 CAnimationDecodeContext::AddAnimationDecodeDesc ran out of allocator memory (1)
@@ -1176,6 +1376,7 @@ CBlitTextureToBackBufferLayer
 CBoneConstraintBase
 CBoneConstraintPoseSpaceBone
 CBoneConstraintPoseSpaceMorph
+CBufferString
 CBufferString::AppendConcat(int, char const* const*, int const*, bool)
 CBufferString::AppendFormat(char const*, ...)
 CBufferString::AppendFormatV(char const*, __va_list_tag*)
@@ -1203,7 +1404,6 @@ CBufferString::StripTrailingSlash()
 CBufferString::ToLowerFast(int)
 CCCCCCCCCCCC
 CCallQueue::ParallelCallQueued(char const*, IThreadPool*)
-CCommand::Tokenize: Encountered command which overflows the argument buffer.. Clamped!
 CCommand::Tokenize: Encountered command which overflows the tokenizer buffer.. Skipping!
 CConstraintSlave
 CConstraintTarget
@@ -1220,9 +1420,252 @@ CFingerBone
 CFingerChain
 CFingerSource
 CFootDefinition
-CFormatNumber_DontUseDirectly_UseFormatNumberMacro::FormatNumberInternal64(long long)
-CFunctor_SceneSystem_Thread_ProcessProceduralLayer CUtlMemoryPoolMT
-CFunctor_SceneSystem_Thread_RenderViewLayer CUtlMemoryPoolMT
+CHECK failed: !InRealOneof(field):
+CHECK failed: !IsDefault(default_value):
+CHECK failed: !TableEntryIsTree(b) && !TableEntryIsTree(b ^ 1):
+CHECK failed: !checkpoints_.empty():
+CHECK failed: !descriptor_:
+CHECK failed: !ext->is_repeated:
+CHECK failed: !extension->is_repeated:
+CHECK failed: !failed_:
+CHECK failed: !field->options().weak():
+CHECK failed: !fields_.empty():
+CHECK failed: !file->finished_building_:
+CHECK failed: !file_:
+CHECK failed: !had_error_:
+CHECK failed: !is_closed_:
+CHECK failed: !name_:
+CHECK failed: !once_:
+CHECK failed: !oneof_descriptor->is_synthetic():
+CHECK failed: !out.HadError():
+CHECK failed: !schema_.InRealOneof(field) || HasOneofField(message, field):
+CHECK failed: !tagged_ptr_.IsTagged():
+CHECK failed: !tree->empty():
+CHECK failed: !value || options_ != nullptr:
+CHECK failed: !value || source_code_info_ != nullptr:
+CHECK failed: (&from) != (this):
+CHECK failed: (&from) != (to):
+CHECK failed: (&other) != (this):
+CHECK failed: ((*extension).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_OPTIONAL):
+CHECK failed: ((*extension).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_REPEATED):
+CHECK failed: ((*extension).is_repeated ? REPEATED_FIELD : OPTIONAL_FIELD) == (OPTIONAL_FIELD):
+CHECK failed: ((*extension).is_repeated ? REPEATED_FIELD : OPTIONAL_FIELD) == (REPEATED_FIELD):
+CHECK failed: (*buffer) == (first_byte):
+CHECK failed: (0) != (n):
+CHECK failed: (0) <= (pos):
+CHECK failed: (0) == (BufferSize()):
+CHECK failed: (FieldDescriptor::TypeToCppType(field->type())) == (value.type()):
+CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
+CHECK failed: (backup_bytes_) == (0):
+CHECK failed: (bucket_index_ & 1) == (0u):
+CHECK failed: (buffer[0]) >= (128):
+CHECK failed: (buffer_size) >= (0):
+CHECK failed: (buffer_used_) == (0):
+CHECK failed: (buffer_used_) == (buffer_size_):
+CHECK failed: (byte_size_before_serialization) == (byte_size_after_serialization):
+CHECK failed: (bytes_produced_by_serialization) == (byte_size_before_serialization):
+CHECK failed: (calc_escaped_size) == (escaped_len):
+CHECK failed: (count) <= (buffer_used_):
+CHECK failed: (count) <= (kMaxLength):
+CHECK failed: (count) <= (last_returned_size_):
+CHECK failed: (count) == (tree->size()):
+CHECK failed: (count) >= (0):
+CHECK failed: (cpp_type((*extension).type)) == (FieldDescriptor::CPPTYPE_MESSAGE):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_BOOL):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_DOUBLE):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_ENUM):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_FLOAT):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_INT32):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_INT64):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_MESSAGE):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_STRING):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_UINT32):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_UINT64):
+CHECK failed: (cpp_type(extension->type)) == (FieldDescriptor::CPPTYPE_MESSAGE):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_BOOL):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_DOUBLE):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_ENUM):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_FLOAT):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_INT32):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_INT64):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_MESSAGE):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_STRING):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT32):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT64):
+CHECK failed: (current_size_) < (total_size_):
+CHECK failed: (current_size_) > (0):
+CHECK failed: (descriptor->field(field_count - 1)) == (end - 1):
+CHECK failed: (descriptor->file()->pool()) == (DescriptorPool::generated_pool()):
+CHECK failed: (digits) < (100):
+CHECK failed: (extension->is_packed) == (other_extension.is_packed):
+CHECK failed: (extension->is_packed) == (packed):
+CHECK failed: (extension->type) == (other_extension.type):
+CHECK failed: (field->message_type()) == (desc):
+CHECK failed: (field->options().ctype()) == (ctype):
+CHECK failed: (field->type()) == (FieldDescriptor::TYPE_BYTES):
+CHECK failed: (field_count()) == (2):
+CHECK failed: (final_byte_count) < (target_byte_count):
+CHECK failed: (first_byte & 0x80) == (0x80):
+CHECK failed: (first_byte_or_zero) != (0):
+CHECK failed: (first_byte_or_zero) == (buffer_[0]):
+CHECK failed: (from.GetDescriptor()) == (descriptor):
+CHECK failed: (has_bit_index) != (~0u):
+CHECK failed: (index) < (current_size_):
+CHECK failed: (index) >= (0):
+CHECK failed: (internal::AlignUpTo8(n)) == (n):
+CHECK failed: (it.m_) == (this):
+CHECK failed: (kBlockHeaderSize + ThreadSafeArena::kSerialArenaSize) <= (mem.size):
+CHECK failed: (last_returned_size_) > (0):
+CHECK failed: (len) <= (dest_len):
+CHECK failed: (len) >= (0):
+CHECK failed: (limit_) >= (ptr_):
+CHECK failed: (message1->GetReflection()) == (this):
+CHECK failed: (message2->GetReflection()) == (this):
+CHECK failed: (message_type) == (field->message_type()):
+CHECK failed: (min_bytes) <= (std::numeric_limits<size_t>::max() - SerialArena::kBlockHeaderSize):
+CHECK failed: (n & (n - 1)) == (0):
+CHECK failed: (n) >= (0):
+CHECK failed: (new_num_buckets) >= (kMinTableSize):
+CHECK failed: (new_size) <= (current_size_):
+CHECK failed: (new_size) >= (0):
+CHECK failed: (num) >= (0):
+CHECK failed: (option_field->type()) == (FieldDescriptor::TYPE_GROUP):
+CHECK failed: (out) == (begin + result->size()):
+CHECK failed: (out) == (begin + result.size()):
+CHECK failed: (overrun) <= (kSlopBytes):
+CHECK failed: (pos) <= (x.length_):
+CHECK failed: (recursion_budget_) < (recursion_limit_):
+CHECK failed: (reinterpret_cast<uintptr_t>(mem) & 7) == (0u):
+CHECK failed: (rep_->allocated_size) > (current_size_):
+CHECK failed: (result.bucket_index_) == (b & ~static_cast<size_type>(1)):
+CHECK failed: (size) <= (6):
+CHECK failed: (size) <= (static_cast<size_t>(2147483647)):
+CHECK failed: (size) > (0):
+CHECK failed: (start + num) <= (size()):
+CHECK failed: (start + num) <= (this->current_size_):
+CHECK failed: (start) >= (0):
+CHECK failed: (static_cast<size_t>(count)) <= (target_->size()):
+CHECK failed: (static_cast<size_t>(new_size)) <= ((std::numeric_limits<size_t>::max() - kRepHeaderSize) / sizeof(Element)):
+CHECK failed: (str.size()) <= (kuint32max):
+CHECK failed: (table_[b]) == (table_[b ^ 1]):
+CHECK failed: (target - output->data()) == (output->size()):
+CHECK failed: (temp[0]) == ('1'):
+CHECK failed: (temp[size - 1]) == ('5'):
+CHECK failed: (to->GetDescriptor()) == (descriptor):
+CHECK failed: (total_size_ - current_size_) >= (n):
+CHECK failed: (total_size_) > (0):
+CHECK failed: (type) != (WireFormatLite::TYPE_ENUM):
+CHECK failed: (type) != (WireFormatLite::TYPE_GROUP):
+CHECK failed: (type) != (WireFormatLite::TYPE_MESSAGE):
+CHECK failed: (type) == (WireFormatLite::TYPE_ENUM):
+CHECK failed: (uintptr_t((a).data() - (*result).data())) > (uintptr_t((*result).size())):
+CHECK failed: (uintptr_t((b).data() - (*result).data())) > (uintptr_t((*result).size())):
+CHECK failed: (uintptr_t((c).data() - (*result).data())) > (uintptr_t((*result).size())):
+CHECK failed: (uintptr_t((d).data() - (*result).data())) > (uintptr_t((*result).size())):
+CHECK failed: (v.size()) <= (kStringPrintfVectorMaxArgs):
+CHECK failed: (value.size()) <= (static_cast<size_t>(kint32max)):
+CHECK failed: *ptr:
+CHECK failed: GeneratedDatabase()->Add(encoded_file_descriptor, size):
+CHECK failed: GetArena() == NULL:
+CHECK failed: GetArena() == nullptr:
+CHECK failed: GetArena() == other->GetArena():
+CHECK failed: HasExtensionSet():
+CHECK failed: HasHasbits():
+CHECK failed: IsDefault(default_value):
+CHECK failed: IsInitialized():
+CHECK failed: IsMapValid() && other.IsMapValid():
+CHECK failed: TableEntryIsNonEmptyList(b):
+CHECK failed: TableEntryIsTree(b):
+CHECK failed: a.type() == b.type():
+CHECK failed: allow_unknown_field_ || allow_unknown_extension_ || reserved_field:
+CHECK failed: arena != nullptr:
+CHECK failed: backup_bytes_ == 0 && buffer_.get() != NULL:
+CHECK failed: builder_:
+CHECK failed: checkpoints_.empty():
+CHECK failed: cpp_type(extension->type) == WireFormatLite::CPPTYPE_MESSAGE:
+CHECK failed: ctx.LastTag() != 1:
+CHECK failed: cur_:
+CHECK failed: desc_proto.has_name():
+CHECK failed: descriptor:
+CHECK failed: dest:
+CHECK failed: dynamic.get() != nullptr:
+CHECK failed: end >= ptr:
+CHECK failed: enum_type_->value_count():
+CHECK failed: errors == nullptr:
+CHECK failed: extension != NULL:
+CHECK failed: extension->is_repeated:
+CHECK failed: fallback_database_ == nullptr:
+CHECK failed: field != nullptr:
+CHECK failed: field->cpp_type() == cpp_type || (field->cpp_type() == FieldDescriptor::CPPTYPE_ENUM && cpp_type == FieldDescriptor::CPPTYPE_INT32):
+CHECK failed: field->is_repeated() || (index == -1):
+CHECK failed: field->is_repeated():
+CHECK failed: file != nullptr:
+CHECK failed: file && file->pool_:
+CHECK failed: file()->finished_building_ == true:
+CHECK failed: file->pool_->lazily_build_dependencies_:
+CHECK failed: file_->finished_building_:
+CHECK failed: find(node->kv.first) == end():
+CHECK failed: finished_building_ == true:
+CHECK failed: had_errors_ || recursion_limit_ == initial_recursion_limit_:
+CHECK failed: has_default_value():
+CHECK failed: i >= 0:
+CHECK failed: index_of_first_non_null_ == num_buckets_ || table_[index_of_first_non_null_] != nullptr:
+CHECK failed: is_prototype():
+CHECK failed: is_repeated:
+CHECK failed: limit >= 0 && limit <= INT_MAX - kSlopBytes:
+CHECK failed: limit_ > 0:
+CHECK failed: limit_ > kSlopBytes:
+CHECK failed: limit_end_ == buffer_end_ + (std::min)(0, limit_):
+CHECK failed: limit_end_ == buffer_end_:
+CHECK failed: m1->GetArena() != m2_arena:
+CHECK failed: m_->index_of_first_non_null_ == m_->num_buckets_ || m_->table_[m_->index_of_first_non_null_] != nullptr:
+CHECK failed: message_arena != submessage_arena:
+CHECK failed: mutex_ == nullptr:
+CHECK failed: n <= size:
+CHECK failed: n >= kMinTableSize:
+CHECK failed: node_ != nullptr && m_ != nullptr:
+CHECK failed: options_ != nullptr:
+CHECK failed: options_descriptor:
+CHECK failed: original_uninterpreted_options_field != nullptr:
+CHECK failed: other->GetArena() != GetArena():
+CHECK failed: out_location != nullptr:
+CHECK failed: output->message_info.prototype != nullptr:
+CHECK failed: output:
+CHECK failed: overrun != limit_:
+CHECK failed: overrun < limit_:
+CHECK failed: overrun <= kSlopBytes:
+CHECK failed: overrun >= 0 && overrun <= kSlopBytes:
+CHECK failed: overrun >= 0:
+CHECK failed: owning_arena == nullptr:
+CHECK failed: prototype != NULL:
+CHECK failed: ptr < end_:
+CHECK failed: ptr <= buffer_end_ + kSlopBytes:
+CHECK failed: ptr <= end_ + kSlopBytes:
+CHECK failed: reflection:
+CHECK failed: rep_ != NULL:
+CHECK failed: result != nullptr:
+CHECK failed: s != nullptr:
+CHECK failed: s >= 0:
+CHECK failed: schema_.HasHasbits():
+CHECK failed: size > 0:
+CHECK failed: size > chunk_size:
+CHECK failed: size_ == 0:
+CHECK failed: size_ > kSlopBytes:
+CHECK failed: snprintf_result > 0 && snprintf_result < kDoubleToBufferSize:
+CHECK failed: snprintf_result > 0 && snprintf_result < kFloatToBufferSize:
+CHECK failed: source_code_info_ != nullptr:
+CHECK failed: submessage->GetArena() == submessage_arena:
+CHECK failed: table_[b] == table_[b + 1] && (b & 1) == 0:
+CHECK failed: tagged_ptr_.UnsafeGet() != nullptr:
+CHECK failed: target + size == res:
+CHECK failed: target_ != NULL:
+CHECK failed: this != other:
+CHECK failed: this == other_mutator:
+CHECK failed: type == WireFormatLite::TYPE_MESSAGE || type == WireFormatLite::TYPE_GROUP:
+CHECK failed: type > 0 && type <= WireFormatLite::MAX_FIELD_TYPE:
+CHECK failed: uninterpreted_options_field != nullptr:
+CHECK failed: value != nullptr:
+CHECK failed: z.first != NULL:
 CHitBox
 CHitBoxSet
 CHitBoxSetList
@@ -1237,12 +1680,22 @@ CMTPositionSpeed
 CMTatlastexture_.vtex
 CMaterialDrawDescriptor
 CMemAllocSystemInitialize
+CMesh Cannot create packed input layout, because the bone indices are out of range (0x%X)
+CMeshletDescriptor
 CMorphConstraint
 CMotionTransform
-COLORCORRECTION_VERSION_1
 CONTENT
 CONTENTROOT
 COrientConstraint
+CPPTYPE_BOOL
+CPPTYPE_DOUBLE
+CPPTYPE_ENUM
+CPPTYPE_FLOAT
+CPPTYPE_INT32
+CPPTYPE_INT64
+CPPTYPE_STRING
+CPPTYPE_UINT32
+CPPTYPE_UINT64
 CParentConstraint
 CPlayerSlot
 CPointConstraint
@@ -1250,11 +1703,12 @@ CPointLightObjectDescCPU
 CProjectedDecalSceneObjectDesc
 CRC32_ProcessBuffer
 CRC64_ProcessBuffer
+CRawAllocator::Alloc(RawAllocatorType_t, unsigned long, unsigned long*)
+CRawAllocator::Free(RawAllocatorType_t, void*, unsigned long)
 CRenderBufferBinding
 CRenderMesh
 CRenderSkeleton
 CSM%i "%s" (%s)
-CSOAContainer::SetAttributeType - ERROR, trying to change type of previously-defined attribute %d!
 CSSDSEndFrameViewInfo
 CSSDSMsg_EndFrame
 CSSDSMsg_LayerBase
@@ -1279,24 +1733,18 @@ CScratchRenderTargetSystem::AllocateRenderTarget: Tried to specify RENDER_MULTIS
 CScratchRenderTargetSystem::AllocateRenderTarget: invalid other view render target for "%s"!
 CScratchRenderTargetSystem::AllocateRenderTarget: invalid other view target for "%s"!
 CScratchRenderTargetSystem::AllocateRenderTarget: invalid texture handle for "%s"!
-CScratchRenderTargetSystem::FindOrCreateRenderTarget: Encountered two different specs for the same render target "%s"!
-CScratchRenderTargetSystem::FindOrCreateRenderTarget: Tried to reference unknown render target name "%s"!
-CScratchRenderTargetSystem::FindOrCreateRenderTarget: Tried to specify RENDER_MULTISAMPLE_INVALID! "%s"
-CScratchRenderTargetSystem::FindOrCreateRenderTarget: invalid other render target for "%s"!
-CScratchRenderTargetSystem::FindOrCreateRenderTarget: invalid other view render target for "%s"!
-CScratchRenderTargetSystem::FindOrCreateRenderTarget: invalid other view target for "%s"!
-CScratchRenderTargetSystem::FindOrCreateRenderTarget: invalid texture handle for "%s"!
 CScratchRenderTargetSystem::GetRenderTargetInfo cannot work until FinishRenderingViews is called!
 CSimpleQuadRenderer
 CSkyBoxObjectDesc
 CSplitScreenSlot
-CSplitString::Construct(char const*, char const**, int)
+CSplitString::Construct(char const*, char const**, int, bool)
 CSpotLightObjectDescCPU
 CSpotLightObjectDescGpu
 CStrAutoEncode::Clear()
 CStrAutoEncode::Copy(CStrAutoEncode const&)
 CStrAutoEncode::InitEmpty()
 CStrAutoEncode::SetCopy(char const*, int)
+CStrongHandle
 CTRL
 CTRL+A or double-click to select all.
 CTRL+C
@@ -1318,7 +1766,6 @@ CTSQueue corruption
 CTextureDisplayer
 CThreadEvent::CThreadEvent(bool)
 CThreadEvent::Set()
-CThreadFastMutex::Lock(char const*, int, unsigned long long, unsigned int) volatile
 CThreadMultiWaitEvent::CThreadMultiWaitEvent(bool)
 CThreadMultiWaitEvent::Reset()
 CThreadMultiWaitEvent::Set()
@@ -1326,19 +1773,22 @@ CThreadMultiWaitEvent::~CThreadMultiWaitEvent()
 CThreadRWLock::LockForWrite(char const*, int)
 CThreadRWLock::UnlockWrite(char const*, int)
 CThreadRWLock::WaitForRead()
-CThreadRWLock_FastRead::CThreadRWLock_FastRead(bool)
+CThreadRWLock_FastRead::CThreadRWLock_FastRead()
 CThreadRWLock_FastRead::EncounteredComplexReadLockOperation(unsigned int, bool, char const*, int)
-CThreadRWLock_FastRead::HandleFirstWriteLockTransition()
+CThreadRWLock_FastRead::HaveWriteLock_BlockReadsNow(bool)
 CThreadRWLock_FastRead::UnlockReadAccounting(char const*, int, unsigned int)
 CThreadRWLock_FastRead::UnlockWrite(char const*, int)
 CThreadSemaphore::~CThreadSemaphore()
+CThreadSpinMutex::Lock(char const*, int, unsigned long long, unsigned int) volatile
 CThreadSyncObject::Wait(unsigned int)
 CThreadSyncObject::WaitImpl(unsigned int)
 CThreadSyncObject::~CThreadSyncObject()
-CThreadedJob::Abort(bool)
 CTiltTwistConstraint
+CTonemapRenderer is trying to render with an invalid occlusion query handle. Are we rendering while the screen isn't visible? Look for a previous warning saying we ran out of buckets.
 CTonemapRenderer needs to use a layer which has had a render attribute called "ColorBuffer" set!
+CTonemapRendererLegacy needs to use a layer which has had a render attribute called "ColorBuffer" set!
 CTonemapSystem::GenerateRendererData ran out of buckets!!
+CTonemapSystemLegacy::GenerateRendererData ran out of buckets!!
 CTransform
 CTwistConstraint
 CURRENTLY APPENDING
@@ -1355,7 +1805,10 @@ CUtlBinaryBlock
 CUtlBinaryBlock::Set(void const*, int)
 CUtlBinaryBlock::SetLength(int)
 CUtlBinaryBlock::operator=(CUtlBinaryBlock const&)
+CUtlBinaryBlock::operator=(CUtlBinaryBlock&&)
 CUtlBlockMemory overflow!
+CUtlBuffer::AccessGet(int)
+CUtlBuffer::AccessPut(int)
 CUtlBuffer::AddNullTermination()
 CUtlBuffer::CUtlBuffer(int, int, int)
 CUtlBuffer::CUtlBuffer(void const*, int, int)
@@ -1364,21 +1817,18 @@ CUtlBuffer::CheckGet(int)
 CUtlBuffer::CheckPut(int)
 CUtlBuffer::EnsureCapacity(int)
 CUtlBuffer::Get(void*, int)
-CUtlBuffer::GetOverflow(int)
 CUtlBuffer::ParseToken(characterset_t const*, char*, int, bool)
-CUtlBuffer::PeekGet(int, int)
 CUtlBuffer::Printf(char const*, ...)
 CUtlBuffer::Put(void const*, int)
 CUtlBuffer::PutString(char const*)
 CUtlBuffer::SeekGet(CUtlBuffer::SeekType_t, int)
 CUtlBuffer::SeekPut(CUtlBuffer::SeekType_t, int)
 CUtlBuffer::SetBigEndian(bool)
-CUtlBuffer::SetOverflowFuncs(bool (CUtlBuffer::*)(int), bool (CUtlBuffer::*)(int))
-CUtlFixedMemory overflow!
+CUtlBuffer::SetBufferType(bool, bool)
 CUtlLinkedList overflow! (exhausted index range)
 CUtlLinkedList overflow! (exhausted memory allocator)
-CUtlMemoryBlockAllocator::AllocCopy(char const*, unsigned int)
-CUtlMemoryBlockAllocator::CUtlMemoryBlockAllocator(int, unsigned int)
+CUtlMemoryBlockAllocator::AllocAndCopy(char const*, unsigned int)
+CUtlMemoryBlockAllocator::CUtlMemoryBlockAllocator(int, unsigned int, RawAllocatorType_t)
 CUtlMemoryBlockAllocator::~CUtlMemoryBlockAllocator()
 CUtlMemoryPoolBase::Alloc()
 CUtlMemoryPoolBase::CUtlMemoryPoolBase(int, int, int, MemoryPoolGrowType_t, char const*, MemAllocAttribute_t)
@@ -1414,34 +1864,46 @@ CUtlString::operator==(CUtlString const&) const
 CUtlString::operator[](int) const
 CUtlSymbol
 CUtlSymbolLarge
-CUtlSymbolTable::AddString(char const*)
+CUtlSymbolTable::AddString(char const*, bool*)
 CUtlSymbolTable::CUtlSymbolTable(int, int, bool)
 CUtlSymbolTable::Find(char const*) const
+CUtlSymbolTable::RemoveAll()
 CUtlSymbolTable::String(CUtlSymbol) const
 CUtlSymbolTable::~CUtlSymbolTable()
-CUtlTSRowAllocator::AllocateDataIgnoreHoles(int, int*, int*, int)
-CUtlTSRowAllocator::Reset(int, int)
 CUtlVector
+CUtlVectorFixedGrowable
 CVProfNode::EnterScope()
 CVProfNode::ExitScope()
 CVProfNode::GetSubNode(char const*, int, char const*, int)
 CVertexKDTree::BuildMidpoint(float const*, int, int)
-CVertexKDTree::FindVertsInBox(CUtlVectorFixedGrowable<float const*, 64ul>&, Vector const&, Vector const&, int) const
+CVertexKDTree::BuildMidpointFromVertexSubSet(float const*, int, int const*, int)
+CVertexKDTree::FindVertsInBox(CUtlVectorFixedGrowable<float const*, 64ul, int>&, Vector const&, Vector const&, int) const
 CVrSkeletalInputSettings
 CWristBone
 CXXABI_1.3
-CXXABI_1.3.3
+CXXABI_1.3.5
+CXXABI_1.3.9
+Call set methods to initialize MapKey.
 Callback %p, user_data %p
-Can't bake cube maps unless you use -tools or -dev
+Caller should provide us with *buffer_ when buffer is non-empty
+Can't
+Can't BackUp() after failed Next().
+Can't back up over more bytes than were returned by the last call to Next().
+Can't get here.
+Can't get here: failed to get default value as string
+Can't happen
+Can't print proto content: proto type
+Can't reach
 Can't read a rendertarget from a view with a higher priority.
 CanHostOtherWindows
 Cancel
 Candlestick Chart
 Cannot add a resolve layer as the first layer in a view!
-Cannot read a file
-Cannot read file
+Cannot call BuildFile on a DescriptorPool that uses a DescriptorDatabase.  You must instead find a way to get your file into the underlying database.
+Cannot copy json_name to a proto of a different size.
+Cannot get here
 Cannot resolve to the same render targets as in the previous layer!
-Cannot write a file
+Cannot skip field value, unexpected token:
 Canvas
 Capture/Logging
 Carrot
@@ -1466,6 +1928,7 @@ CharacterSetBuild
 Chars queue:
 Check
 CheckMark
+CheckOriginInPVS:  cluster would read past end of pvs data (cluster %d, offset %u:%u)
 Checked
 Cherry
 Child
@@ -1494,7 +1957,7 @@ ClassId=0x%X
 Classic
 Clear nodes
 Clear settings
-ClearHistory
+ClearField
 Click and drag any point.
 Click and drag column headers to reorder columns.Right-click on a header to open a context menu.
 Click and drag on lower corner to resize window(double-click to auto fit window to its contents).
@@ -1505,7 +1968,6 @@ Click me
 Click on the color square to open a color picker.CTRL+click on individual component to input value.
 Click on the color square to open a color picker.Click and hold to use drag and drop.Right-click on the color square to show options.CTRL+click on individual component to input value.
 Click to break in debugger!
-Client Rendering
 Clipping
 Close
 Close All Documents
@@ -1513,6 +1975,10 @@ Close Console
 Close all
 Close this window
 Close: $%.2f
+ClosestHit0
+ClosestHit1
+ClosestHit2
+ClosestHit3
 Coconut
 Codepoint: U+%04X
 Collapsed=%d
@@ -1564,18 +2030,16 @@ ColumnsWorkRect
 Combo(
 CommandLine
 Commands:
+Comment started here.
 Completion
 Completion, History, Edit Callbacks
 Compressed texture bits for mip %i are corrupt, decompression error!
 ComputeCullBits
 ComputeLayerInfo
-ConMsg(char const*, ...)
-ConVar(%s) defined with infinite float value (%s)
-ConVarRef %s doesn't point to an existing ConVar
+ComputeScratchTargetActualSize
 Config/Build Information
 Configuration
 Configuration##2
-ConfigurationSystem_001
 ConnectInterfaceSingletons
 Constrained-resizing window
 Content
@@ -1583,6 +2047,8 @@ ContentIdeal
 ContentRegionRect
 Contents
 Context menus
+ConvertFloatToChannel: Trying to convert to a a float to a destation of byte size %d
+ConvertFloatToChannel: Trying to convert to a a normalized float to a destation of byte size %d
 Cool
 Copy
 Copy "Hello, world!" to clipboard
@@ -1595,10 +2061,15 @@ CopyRT
 CopyRenderTargetOutputsAndViewportFromPreviousLayer
 Corniflower
 Coudn't read pixels for texture %s
+Could not create an instance of
+Could not find type "
+Couldn't parse default value "
 Courier New
 Course Grade
 Create a docking node and tab-bar on single floating windows.
 CreateInterface
+Creating VB/IB/BLAS for %d meshes...
+Creating ray trace scene world with %d instances...
 Cross
 Crosshairs
 Ctrl + click in the plot area to draw points.
@@ -1609,11 +2080,17 @@ Cube
 CubeMapDebugColors
 Cubic
 Cucumber
+Cull View
+CullCameraForwardWs
+CullCameraPositionWs
+CullFront
+CullPlanes
+CulledMeshletDrawArgs
+Culling: %s objects pre-cull (%s tested), %s passing culling
 Cur: %.2f
 Current
 Current mouse cursor = %d: %s
 Currently all this does is to lift the 0..1 limits on dragging widgets.
-Curve
 Curve Tessellation Tolerance
 Curves segments override
 Custom
@@ -1626,36 +2103,67 @@ Custom Ticks##
 Custom headers
 Custom: Always Square
 Custom: Fixed Steps (100)
-CustomTexture0
+CustomShadowPipeline
 CustomTexture1
+CustomTexture2
 Cut
 D
-D15S1
 D16
 D16_SHADOW
 D24FS8
-D24X4S4
 D24X8
 D24X8_SHADOW
-D32
 D32FS8
+DATA_LOSS
 DDDD
+DEADLINE_EXCEEDED
 DEFAULT_WRITE_PATH
+DISK
 DND_DEMO_CELL
 DND_LEFT
 DND_RIGHT
+DO NOT PARSE: fields may be stripped and missing.
 DXT1
 DXT1_ONEBITALPHA
 DXT3
 DXT5
 DXT5_NM
 DYN
+D_ALPHATINT
+D_BAKED_LIGHTING_FROM_LIGHTMAP
+D_BAKED_LIGHTING_FROM_PROBE
+D_BAKED_LIGHTING_FROM_VERTEX_STREAM
+D_COMPOSITETYPE
+D_COMPRESSED_NORMALS_AND_TANGENTS
+D_DEBUG_OUTPUT_CULLED
+D_DEBUG_OUTPUT_STATS
+D_ENABLE_INDIRECT
+D_ENABLE_VOLUMETRIC_FOG
+D_FLOAT_INTERMEDIATE_TEXTURES
+D_JITTER
+D_MULTIVIEW_INSTANCING_STRIDE
+D_NO_ZTEST
+D_OCCLUSION_CULLING
+D_OPAQUE_FADE
+D_ORTHOGRAPHIC_VIEW
+D_OVERWRITE_DEPTH
+D_PASS
+D_SCENE_DEPTH_MSAA
+D_SHADOW_PASS
+D_SPECULAR_CUBEMAP_IS_ROTATED
+D_SPECULAR_CUBEMAP_PROJECTION_MODE
+D_SPECULAR_CUBE_MAP_STATIC
+D_SUN_SHADOW_CASCADE_SIZE
+D_SUN_SHADOW_DEPTH_COMPARES
+D_TEMPORAL_INTEGRATE
+D_USE_INSTANCE_TRANSFORM
+D_WIREFRAME
+D_WRITE_DEPTH_TO_COLOR
 Daikon
 Dark
 Data 1
 Data 2
 Data Types
-Data size too short
 Data: %pSize: %dCapacity: %d
 Day
 Days
@@ -1667,13 +2175,14 @@ Dear ImGui Style Editor
 Dear ImGui is licensed under the MIT License, see LICENSE for more information.
 Dear ImGui uses monitor data:- to query DPI settings on a per monitor basis- to position popup/tooltips so they don't straddle monitors.
 Debug details
+Debug draw the light shape
+Debug draw the visclusters the light overlaps - can be used to see why the light is drawing.
 Debug##Default
 DebugInfoLayerRenderBuffers
 DebugInfoLayerRenderColorizeSplits
 DebugLevel:
 DebugPrintKV3(KeyValues3 const*)
 DebugText
-DebugTextureInfo001
 Dec
 DecalNormals_%d.vtex
 DecalRenderTarget_Staging.vtex
@@ -1685,6 +2194,7 @@ Deep
 Default Depth
 Default for column 0
 Default for column >0
+Default value for an enum field must be an identifier.
 Default: Float + HDR + Hue Wheel
 Default: Uint8 + HSV + Hue Bar
 DegreeEuler
@@ -1695,9 +2205,14 @@ DeleteSceneObject
 DemoUpconverterVersion001
 Demonstrate mixing table context menu (over header), item context button (over button) and custom per-colum context menu (over column body).
 Depth bias applied to shadow receiver
+DepthModeRequiresPushConstantUpdate
+DepthPyramid
+DepthValue
 Des
+DestTexture
 Details
 DevMsg
+DevMsg(char const*, ...)
 Diamond
 Digital and Analog Signals
 Digital signals do not respond to Y drag and zoom, so that
@@ -1718,11 +2233,15 @@ Disable tree indentation
 Disable vertical borders in columns Body (borders will always appears in Headers
 Disable vertical borders in columns Body until hovered for resize (borders will always appears in Headers)
 DisableShadows_t
+Disk
+Disk-shaped light
 Display Mode
 Display all characters as '*'.Disable clipboard cut and copy.Disable logging.
 Display headers
 DisplaySafeAreaPadding
 Distance to cull the AO proxy as a factor of size
+Division or mod by zero: dividend.hi=
+DoNotCastShadows
 DockId: %X%s
 DockId: 0x%04X, DockOrder: %d, Act: %d, Vis: %d
 DockId=0x%08X
@@ -1741,11 +2260,14 @@ Document "%s"
 Dogs
 Dominate(
 Don't ask me next time
-DotaCardGameClient_001
+Don't lookup extension types if they aren't present (1).
+Don't lookup extension types if they aren't present (2).
+Done (%.2f seconds)
 Double left-click axis labels to fit the individual axis.
 Double left-click to fit all visible data.
 Double-click on title bar to collapse window.
 Double-save to Member '%s'
+DoubleSided
 Downsample2x
 Downsample4x
 DpiEnableScaleFonts
@@ -1770,7 +2292,7 @@ Dragging
 Dragging:   %s
 Drags:
 Draw Proxy: qh:%p org:<%d,%d,%d> (frame:%d)
-Draw calls:
+Draw calls: %s
 Draw everything normal and ignore the source for rendering
 Draw in Background draw list
 Draw in Foreground draw list
@@ -1784,12 +2306,15 @@ Dump a list of the objects in a sceneworld (Usage: sc_dumpworld <world_index>)
 Dump debug info
 Dump the objects in a sceneworld into a 3d geoview buffer (Usage: sc_dumpworld3d <world_index>)
 Dynamic Decals
+Dynamic Shadow
+DynamicAmbientOcclusion
+DynamicAmbientOcclusionDepth
+E
 EEEE
 EMG %d
 EMG Signal
+ERROR
 ERROR! Cannot load GpuLightBinnerManifest
-ERROR! Cannot load ImGuiRendererManifest
-ERROR: Docking is not enabled! See Demo > Configuration.
 ERROR: Resource name "%s" has the incorrect extension "%s" for the specified resource type (expected "%s")!
 ERROR: Specified full path %s does not lie under the mod search path!)
 ERROR: Specified path %s could not be made content-relative
@@ -1816,28 +2341,45 @@ Enable logarithmic editing (more precision for small values).
 Enable outer-most padding (default if ImGuiTableFlags_BordersOuterV is set)
 Enable resizing of windows from their edges and from the lower-left corner.This requires (io.BackendFlags & ImGuiBackendFlags_HasMouseCursors) because it needs mouse cursor feedback.
 Enable turning DragXXX widgets into text input with a simple mouse click-release (without moving).
-EncodeBC7Blocks
+EnableAlphaTint
+EnableSunlight
+EnableViewModelSunlight
 EncodeRGBM
+Encountered bad skin weights, summing to %g (1.0 expected) at position %.3f %.3f %.3f
+End-of-file inside block comment.
 EndTimestamp
 Engine2
+Engine2/RenderingPipeline
 Engine2/RenderingPipeline/AmbientOcclusionProxies
 Engine2/RenderingPipeline/OpaqueFade
 Engine2/RenderingPipeline/ShadowDepthCullFront
+Engine2/RenderingPipeline/Tonemapping_MultipleSystems
 EngineServiceMgr001
 EnsureCapacity
 Enter 'HELP' for help.
+Entry
+Enum name
+Enum type "
+Enum value "$0" is reserved multiple times.
+Enum value "$0" is reserved.
+Enum value "$0" uses reserved number $1.
+Enum value in map must define 0 as the first value.
+Enums must contain at least one value.
 EnvMap
+EnvMapArray
 Equal
 Equal Axes
 Error Bars
+Error loading barn light: %s
+Error parsing text-format
+Error reporting not implemented.
+Error while parsing option value for "
 Error: View "%s", layer "%s", render target "%s": Attempted to bind the back buffers of two different swap chains in a single layer!
-Error: View "%s", layer "%s", render target "%s": Attempted to resolve a non-MSAA render target to a MSAA texture!
 ErrorBar
 ErrorBarSize
 ErrorBarWeight
 Escape to deactivate a widget, close popup, exit child window.
 Even more contents
-EventSystem001
 Exact
 Example: Auto-resizing window
 Example: Console
@@ -1856,57 +2398,126 @@ Exceeded maximum number visible environment maps: %i, %i maximum
 Exceeding number of envmaps: MAX %i, found %i
 Exceeding number of lpvs: MAX %i, found %i
 Exit
+Expanded map entry type
+Expect a decimal number, got:
+Expected "
+Expected :
+Expected double, got:
+Expected eight hex digits up to 10ffff for \U escape sequence
+Expected four hex digits for \u escape sequence.
+Expected hex digits for escape sequence.
+Expected identifier, got:
+Expected integer or identifier, got:
+Expected integer, got:
+Expected string, got:
 Explicit content size
+Explicit default values are not allowed in proto3.
 Export
 Export code for selected Colormap(built in or custom).
+Exposure Scale
 ExtHovered: %s
 Extend hit area to all available width instead of allowing more items to be laid out after the node.
+Extension "
+Extension conflicts with extension already in database: extend
+Extension factory's GetPrototype() returned NULL for extension:
+Extension not found.
+Extension number $0 has already been used in "$1" by extension "$2" defined in $3.
+Extension number $0 has already been used in "$1" by extension "$2".
+Extension numbers cannot be greater than $0.
+Extension numbers must be positive integers.
+Extension range $0 to $1 includes field "$2" ($3).
+Extension range $0 to $1 overlaps with already-defined range $2 to $3.
+Extension range $0 to $1 overlaps with reserved range $2 to $3.
+Extension range end number must be greater than start number.
+Extension ranges are not allowed in proto3.
+Extensions in proto3 are only allowed for defining options.
+Extensions of MessageSets must be optional messages.
+Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend a non-lite type to contain a lite type, but the reverse is allowed.
+ExtractSubrange() when arena is non-NULL is only supported when
 F
+FAILED_PRECONDITION
+FATAL
 FATAL ERROR: unable to register all schema data: %s
 FFFF
 Failed to allocate scratch rendertarget for %s from pool. The following pool entries were matches:
 Failed to allocate space for morph!
+Failed to compute mesh tangents for mesh using material %s
+Failed to compute mesh tangents for mesh using material %s -- normals are all identical
+Failed to compute mesh tangents for mesh using material %s -- positions are all identical
+Failed to compute mesh tangents for mesh using material %s -- uvs are all identical
 Failed to convert introspected block: %s
 Failed to get material pointer for world node draw call. (material name: %s)
-Failed to parse EXR version
-Failed to parse attribute
-Failed to parse channel info
-Failed to read attribute.
 Failed to save unsupported class
+FakeInputTexture
 Fallback character: '%c' (U+%04X)
 False
+FarPlaneOverride
+FastHexToBuffer() wants non-negative integers, not
 Faster lines using texture data. Require backend to render with bilinear filtering (not point/nearest filtering).
 Features:
 Feb
 February
+Feel free to add support for more if you need it.
 FeetSettings
+Field       :
+Field "
+Field "$0" uses reserved number $1.
+Field =
+Field does not match message type.
+Field is not a map field.
+Field is repeated; the method requires a singular field.
+Field is singular; the method requires a repeated field.
+Field name "$0" is reserved multiple times.
+Field name "$0" is reserved.
+Field number $0 has already been used in "$1" by field "$2".
+Field numbers $0 through $1 are reserved for the protocol buffer library implementation.
+Field numbers cannot be greater than $0.
+Field numbers must be positive integers.
+Field type:
+Field with message or enum type missing type_name.
+Field with primitive type has type_name.
+Field:
+FieldDescriptorProto.extendee not set for extension field.
+FieldDescriptorProto.extendee set for non-extension field.
+FieldDescriptorProto.oneof_index $0 is out of range for type "$1".
+FieldDescriptorProto.oneof_index should not be set for extensions.
+FieldSize
 Field_%d
+Fields in the same oneof must be defined consecutively. "$0" cannot be defined before the completion of the "$1" oneof definition.
+Fields of oneofs must themselves have label LABEL_OPTIONAL.
+Fields with proto3_optional set must be a member of a one-field oneof
 File Menu..
-File size is zero :
-File size too short
+File already exists in database:
+File appears to be in generated pool but wasn't registered:
+File is already registered:
+File not found in database (unexpected):
+File recursively imports itself:
 File1_a.wav
 File1_b.wav
+Files that do not use optimize_for = LITE_RUNTIME cannot import files which do use this option.  This file is not lite, but it imports "
+Files with optimize_for = LITE_RUNTIME cannot define services unless you set both options cc_generic_services and java_generic_services to false.
 Fill Button
 FillAlpha
-FillAttr
 FillButton
 Filled Line Plots
 Filled Markers
 Fills
+Filmic Curve
+Filter
 Filter ("incl,-excl") ("error")
 Filter (inc,-exc)
+Filter By Streaming Activity
 Filter colors
 Filter usage:  ""         display all lines  "xxx"      display lines containing "xxx"  "xxx,yyy"  display lines containing "xxx" or "yyy"  "-xxx"     hide lines containing "xxx"
-FilterFrom
 Filtered Text Input
 Filtering
 Final Exam
-FindClosestMatchingRegion
-FindOrCreateRenderTarget: Does not work to pass pOtherView == this!
 Finish to complete : %f
 FinishRenderingViews
 FinishRenderingViews has been called without a call to begin!!!
 Fire
+First argument to Swap() (of type "
+First argument to SwapFields() (of type "
 First group hovered
 Fit X
 Fit Y
@@ -1932,15 +2543,7 @@ Flags: 0x%04X =%s%s%s%s%s%s%s%s%s%s%s%s
 Flags: 0x%08X (%s%s%s%s%s%s%s%s%s..)
 FlattenedSerializersVersion001
 Flexible;
-FloatBitMap::DownsampleNiceFiltered
-FloatBitMap::QuarterSize
-FloatBitMap::QuarterSizeBlocky
-FloatBitMap_t: Error loading %s
-FloatBitMap_t::CopyFloatBitmap: Received NULL pointer!
-FloatBitMap_t::LoadFromBuffer: Received improper buffer size, skipping!
-FloatBitMap_t::LoadFromBuffer: Unsupported color format, skipping!
-FloatBitMap_t::LoadFromFloatBitmap: Received improper bitmap size, skipping!
-FloatBitMap_t::WriteToBuffer: Received improper buffer size %s (expecting %s), skipping!
+FlipFrustumX
 Focus from code
 Focus on 1
 Focus on 2
@@ -1948,8 +2551,10 @@ Focus on 3
 Focus on X
 Focus on Y
 Focus on Z
+FogEndScale
 FogLightBinnerSetup
 FogLightView
+FogMaxDensityScale
 Folder
 Font
 Font scale
@@ -1957,10 +2562,20 @@ Font: "%s"%.2f px, %d glyphs, %d file(s)
 FontManager_001
 Fonts##Selector
 For envmaps in low quality shader mode, how much of the fade region to scale the envmap box by.
+Force respect TTL even when clearing scopes
+ForceFullResolve
+Forces all ray traced geometry to use default hit shaders instead of specialized ones.
+Forward
+ForwardDebugLightingOnly
 ForwardLightSetup
+Found invalid proto option data for:
 FourFourFour
 Fr
-FragmentIndex
+FragmentBounds
+FragmentDrawArgs
+FragmentDrawCount
+FragmentRecullDrawArgs
+FragmentStats
 Frame Overlay
 Frame Times
 FrameBg
@@ -1968,45 +2583,49 @@ FrameBgActive
 FrameBgHovered
 FrameBorder
 FrameBorderSize
+FrameBufferCopyTexture
+FrameBufferCopyViewport
 FrameHovered:  %s
 FramePadding
 FrameRounding
 Framerate (Hz)
 Frequency
 Frogs
+Frust+Illum
+FrustumCulling
+FrustumPlane0
+FrustumPlane1
+FrustumPlane2
+FrustumPlane3
+FrustumPlane4
+FrustumPlane5
 Full-width:
 Fullscreen
 FvP12CSceneObjectE
-G channel not found
-G channel not found!
 G:%0.3f
 G:%3d
 GAME
 GCC: (SteamRT 4.8.4-1ubuntu15~12.04+steamrt1.2+srt2) 4.8.4
-GCC: (Ubuntu 5.4.0-7.really.6+steamrt1.1+srt1) 5.4.1 20160803
-GCC: (crosstool-NG 1.17.0) 4.6.3
+GCC: (SteamRT 5.4.0-7.really.6+steamrt1.2+srt2) 5.4.1 20160803
 GGGG
 GLIBCXX_3.4
 GLIBCXX_3.4.11
 GLIBCXX_3.4.14
-GLIBCXX_3.4.15
-GLIBCXX_3.4.19
-GLIBCXX_3.4.20
-GLIBCXX_3.4.9
-GLIBC_2.11
+GLIBCXX_3.4.18
+GLIBCXX_3.4.5
 GLIBC_2.14
 GLIBC_2.2.5
 GLIBC_2.3
 GLIBC_2.3.4
 GLIBC_2.4
-GLIBC_2.7
-GLIBC_2.8
 GNU
 GOOGL
 GPOS
+GPU Memory Size
 GameResourceServiceClientV001
 GameResourceServiceServerV001
 GameStartup
+GameStartup_RayTracing
 GameStartup_SM40
 GameStartup_SM50
 GameUIService_001
@@ -2014,22 +2633,48 @@ Gaussian
 Generate Huge Data (~500MB!)
 GenerateCompositeMorphTextureAtlas
 GenerateDecalNormals
-GenerateDistanceField
 GenerateResourceNameFromFileName: Invalid extension specified in file name "%s"!
+Generating LPV debug grid colors for %s
+GenericOpaque
+GenericTransparent
+Geometry %d
+GetBool
 GetCPUInformation
+GetDouble
+GetFloat
 GetGameInfoBool(char const*, bool)
 GetGameInfoInt(char const*, int)
 GetGameInfoString(char const*, char const*, char*, unsigned long)
+GetInt32
+GetInt64
+GetMessage
 GetMouseDragDelta(0):
-GetRenderTargetTexture cannot work until FinishRenderingViews is called!
+GetRawRepeatedField
+GetRepeatedBool
+GetRepeatedDouble
+GetRepeatedEnumValue
+GetRepeatedFloat
+GetRepeatedInt32
+GetRepeatedInt64
+GetRepeatedMessage
+GetRepeatedString
+GetRepeatedStringReference
+GetRepeatedUInt32
+GetRepeatedUInt64
 GetResourceManifestCount
 GetResourceManifests
+GetString
+GetStringReference
+GetUInt32
+GetUInt64
 Global Alpha
 GlobalEnvironmentMapConstantBuffer_t
+GlobalStats
 Glyphs
 Glyphs (%d)
 Got request to send CSceneSystemStats to vconsole
 Gpu Mem
+GpuCullPhase
 GpuLightBinnerManifest
 GpuLightBinnerStartupManifest
 GrabMinSize
@@ -2039,6 +2684,8 @@ Gradients
 Grapefruit
 Grid Lines
 Groups
+Groups are not supported in proto3 syntax.
+Grow
 H
 H-scrollbar
 H: %.3f, S: %.3f, V: %.3f
@@ -2048,6 +2695,7 @@ H:%3d
 HB
 HC
 HD
+HDR histogram (unscaled)
 HELP
 HELPER_BONE
 HHHH
@@ -2068,6 +2716,7 @@ Hammer/UsesBakedLighting
 HammerMapLoader001
 Handle ImGuiBackendFlags_RendererHasVtxOffset for 16-bit indices in your backend.
 Has Collision;
+HasField
 HasMouseCursors
 HasMouseHoveredViewport
 HasRange:   %s
@@ -2097,11 +2746,13 @@ Here we toggle the casing of the first character on every edits + count edits.
 Here, all circle data is stored in a single interleaved buffer:
 Hex
 Hex Only
+Hex and octal numbers must be integers.
 Hidden
 HiddenTabBar=%d%n
 HiddenTabBar=1
 Hide tab bar
 High:  $%.2f
+HighPrecisionLightingOffset
 History
 Hogs
 Hold Alt to expand box selection horizontally.
@@ -2111,7 +2762,6 @@ Hold Shift to expand box selection vertically.
 Hold Shift to expand query vertically.
 Hold to repeat:
 Holding me clears thethe keyboard capture flag
-HookUpConfigValue
 Horizontal
 Horizontal Scrolling
 Horizontal contents size demo window
@@ -2135,18 +2785,24 @@ HoveredWindowUnderMovingWindow: '%s'
 Hovering me sets thekeyboard capture flag
 Hue bar + SV rect
 Hue wheel + SV triangle
+I
 I am a fancy tooltip
 I am a tooltip
 I am a tooltip over a popup
 I am an odd tab.
 I am the last one here.
+I8
 I@
 IA88
 ID: 0123456789
 ID=0x%08X
 IIIIIII
+IMAGE_FORMAT_R11G11B10_FLOAT
+INFO
+INTERNAL
 INVALID
-IQuickTime001
+INVALID_ARGUMENT
+INVALID_CPPTYPE
 ISO 8601
 ITEM: Button
 ITEM: Checkbox
@@ -2167,6 +2823,9 @@ If lb_csm_override_staticgeo_cascades, override value used to determine which ca
 If permitable, you are better off using hardware AA (e.g. MSAA).
 If scrolling is disabled (ScrollX and ScrollY not set):- The table is output directly in the parent window.- OuterSize.x < 0.0f will right-align the table.- OuterSize.x = 0.0f will narrow fit the table unless there are any Stretch column.- OuterSize.y then becomes the minimum size for the table, which will extend vertically if there are more rows (unless NoHostExtendY is set).
 If you see visual artifacts, do one of the following:
+IgnoreFaceNormalsForLighting
+Ignoring extension "
+Illegal jstype for int64, uint64, sint64, fixed64 or sfixed64 field:
 ImDrawIdx: %d-bit
 ImDrawVert
 ImGui Style
@@ -2246,57 +2905,83 @@ ImVec4* colors = ImGui::GetStyle().Colors;
 ImVec4* colors = ImPlot::GetStyle().Colors;
 Image file
 Images
+Import
+Import "
+In
+In Mem
 In SettingsNodes:
 In SettingsWindows:
 In columns
 In the Advanced demo we override the policy of each column so those table-wide settings have less effect that typical.
 In the color list:Left-click on color square to open color picker,Right-click to open edit options menu.
 In the color list:Left-click on colored square to open color picker,Right-click to open edit options menu.
+InLightingTexture
 IndentSpacing
 Indented
+Index must be -1 for non-repeated fields
+Index must be -1 for singular fields.
+Index must be in range of repeated field values.
+Index out-of-bounds (field is empty).
 Inferred order (front-to-back)
+Infinite Joint Weights encountered: Skinning will not work! (At position %.3f %.3f %.3f)
 Infinite Lines
+InfoForResourceTypeCAnimData
 InlayText
 InnerClipRect
 InnerRect
 Input %d: '%s', Oversample: (%d,%d), PixelSnapH: %d, Offset: (%.1f,%.1f)
 Input flags:
+Input size too large:
+InputIndices
 InputService_001
 InputStackSystemVersion001
 InputSystemVersion001
 InputText
 Inputs, Navigation & Focus
-InstallChangeCallback called with NULL callback, ignoring!!!
-InstallChangeCallback ignoring duplicate change callback!!!
 InstallSchemaBindings
 InstallTemplateViewFactory
 Instruct Dear ImGui to render a mouse cursor itself. Note that a mouse cursor rendered via your application GPU rendering path will feel more laggy than hardware cursor, but will be more in sync with your other visuals.Some desktop applications may use both kinds of cursors (e.g. enable software cursor only when resizing/dragging something).
 Instruct backend to not alter mouse cursor shape and visibility.
 Instruct navigation to move the mouse cursor. See comment for ImGuiConfigFlags_NavEnableSetMousePos.
-Insufficient data length.
-Insufficient data size.
+Integer out of range (
 Intentionally vague touch behavior for %p
 Interactive Data
+Internal inconsistency between the layout format and attribute is detected.Try changing the number of bones per vertex or the skin weighting, and send Sergiy a repro mesh with this error description.
 Internal state
-Invalid EXR header.
-Invalid access of deferred ConVarRef for '%s'
+Interpreting non ascii codepoint %d.
+InvRenderTargetDim
 Invalid bone and flex counts for model %s, %d meshes but %d counts
 Invalid bone remap for mesh %d on model %s, meshBone[%d] = modelBone[%d], valid modelBone range[0, %d]
 Invalid boneAndFlexCounts mesh %d on model %s, %d expected %d
-Invalid channels format
-Invalid data height value
-Invalid data width value
+Invalid control characters encountered in text.
+Invalid descriptor
+Invalid escape sequence in string literal.
+Invalid file descriptor data passed to EncodedDescriptorDatabase::Add().
 Invalid flex control remap for mesh %d on model %s, meshFlexCtrl[%d] = modelFlexCtrl[%d], valid modelFlexCtrl range[0, %d]
+Invalid float number:
 Invalid hitbox bone remap for mesh %d on model %s, meshHitboxBone[%d] = modelBone[%d], valid modelBone range[0, %d]
-Invalid magic number
+Invalid input layout field format %d for joint indices
+Invalid key for map field.
+Invalid message set extension.
+Invalid package name:
+Invalid proto descriptor for file "
+Invalid public dependency index.
 Invalid remapping table for model %s, has %d meshes but %d remapping starts
 Invalid remapping table size for mesh %d on model %s, need %d entries, only %d
 Invalid remapping table starts for mesh %d on model %s, %d expected %d
 Invalid request for mesh %d in model %s with %d entry remapping start table
 Invalid request for mesh %d in model %s with no remapping table
 Invalid request for mesh %d in model %s with no remapping table starts
-Invalid tile size x :
-Invalid tile size y :
+Invalid strings::Substitute() format string: "
+Invalid symbol name:
+Invalid value for boolean field "
+Invalid weak dependency index.
+Invalid width/height for ScratchTarget, Size=%i, Width=%i/Height=%i
+Invalid wire type for CPPTYPE_INT32:
+Invalid wire type for CPPTYPE_INT64:
+Invalid wire type for CPPTYPE_MESSAGE:
+Invalid wire type for CPPTYPE_UINT32:
+Invalid wire type for CPPTYPE_UINT64:
 Inverse Multi Quadratic
 Invert
 Invert Axes;
@@ -2305,8 +2990,11 @@ IsActive
 IsAlive
 IsCentralNode
 IsDockSpace
+IsFirstRender
+IsInPVS
 IsItemHovered() after begin = %d (== is title bar hovered)IsItemActive() after begin = %d (== is window being clicked/moved)
 IsItemHovered: %d
+IsLeftEye
 IsMouseDragging(%d):
 IsPlatformMonitor
 IsWindowFocused() = %dIsWindowFocused(_ChildWindows) = %dIsWindowFocused(_ChildWindows|_RootWindow) = %dIsWindowFocused(_RootWindow) = %dIsWindowFocused(_AnyWindow) = %d
@@ -2337,34 +3025,47 @@ ItemInnerSpacing
 ItemSpacing
 Items (%d)
 Items (1,000 pts each)
+J
 JIGGLE_BONE
 JJJJ
 Jan
 January
 Jet
+Joint Indices (%d) Out Of Range for SINT16: Skinning will not work!
+Joint Indices (%d) Out Of Range for UINT10: Skinning will not work!
+Joint Indices (%d) Out Of Range for UINT8: Skinning will not work!
 Jul
 July
 Jun
 June
 K
 KKKKKKK
-KMeansQuantization
 KO Blahblah
 KV3 load transfer failed: %s
-KV3 save transfer failed: %s
 Key 0x%08X Value { i: %d }
+Key in map fields cannot be enum types.
+Key in map fields cannot be float/double, bytes or message types.
 KeyValueCache001
+KeyValues::CreateNewKey()
 KeyValues::FindKey(char const*, bool)
+KeyValues::GetDataType(char const*) const
 KeyValues::GetFirstSubKey() const
 KeyValues::GetFirstValue() const
-KeyValues::GetFloat(char const*, float)
-KeyValues::GetInt(char const*, int)
+KeyValues::GetFloat(char const*, float) const
+KeyValues::GetInt(char const*, int) const
 KeyValues::GetName() const
 KeyValues::GetNextKey() const
 KeyValues::GetNextValue() const
+KeyValues::GetPtr(char const*, void*) const
 KeyValues::GetString(char const*, char const*, char*, unsigned long)
+KeyValues::GetUint64(char const*, unsigned long long) const
 KeyValues::KeyValues(char const*)
 KeyValues::LoadFromFile(IFileSystem*, char const*, char const*, bool (*)(char const*, void*), void*, char const*)
+KeyValues::SetFloat(char const*, float)
+KeyValues::SetInt(char const*, int)
+KeyValues::SetString(char const*, char const*)
+KeyValues::SetUint64(char const*, unsigned long long)
+KeyValues::operator new(unsigned long)
 KeyValues::operator=(KeyValues const&)
 KeyValues::~KeyValues()
 Keyboard & Navigation State
@@ -2374,22 +3075,15 @@ Keys pressed:
 Keys release:
 Kiwi
 L
+LDR histogram (Exposure Scaled HDR & Filmic Tonemapped)
 LEVERAGEBUZZWORD
-LE_BGRA8888
-LE_BGRX8888
-LINEAR_ABGR8888
-LINEAR_ARGB8888
-LINEAR_BGR888
-LINEAR_BGRA8888
-LINEAR_BGRX5551
-LINEAR_BGRX8888
+LIGHTBINNER
 LINEAR_D24S8
-LINEAR_I8
-LINEAR_RGB888
-LINEAR_RGBA16161616
-LINEAR_RGBA8888
 LLLLLLL
 LOG_GENERAL
+LPVIndex
+LPV_DirectShadows
+LPV_Irradiance
 Label
 Label1
 Label2
@@ -2401,7 +3095,6 @@ Layout & Scrolling
 Leaked drawlists : %d!!!!!
 Left
 Left-click drag on axis labels to pan an individual axis.
-Left-click drag within the plot area to pan X and Y axes.
 Left-click while box selecting to cancel the selection.
 Legacy Columns API
 LegendBg
@@ -2414,9 +3107,18 @@ LegendText
 Length;
 Lettuce
 Light
+Light Bounds Debugger
 Light Cookies
+LightBinnerCullingData_t
+LightCookieTexture
+LightGroup
 LightProbeVolumeDebugColors
+LightProbeVolumeDebugColors_Atlas
 LightProbeVolumeDesc
+LightSim_Albedo
+LightSim_DiffuseAlbedoTexture
+LightSim_Opacity
+LightSim_Opacity_A
 LightmapUV
 LightmapUVW
 Lights in view (unshadowed+shadowed): %d+%d omni, %d+%d spot, %d+%d barn %d env
@@ -2425,6 +3127,7 @@ Line
 Line #
 Line %d
 Line %d Column %d...
+Line %d col %d:
 Line 1 helloLine 2 clip me!
 Line Plot
 LineWeight
@@ -2439,13 +3142,12 @@ List boxes
 List root nodes
 List the object class names known by scenesystem
 Lists:
-LoadEXRImageFromMemory failed! Error message: %s
-LoadFromInMemoryEXR( %s ) failed.
 LoadKV3(KeyValues3*, CUtlString*, CUtlBuffer*, KV3ID_t const&, char const*)
 LoadKV3(KeyValues3*, CUtlString*, char const*, KV3ID_t const&, char const*)
 LoadKV3ObjectInPlace error: %s
 LoadTextureBits failed to read file %s
 Loaded
+Loading %d resources...
 Local Time
 LocalFlags: 0x%04X SharedFlags: 0x%04X
 LocalFlags: HiddenTabBar
@@ -2468,6 +3170,7 @@ Log To File
 Log To TTY
 Log out display list submits from scenesystem
 LogButtons
+LogHandler
 LogSliderDeadzone
 LoggingSystem_IsChannelEnabled
 LoggingSystem_Log
@@ -2476,6 +3179,7 @@ LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ..
 LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, Color, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, char const*, ...)
 LoggingSystem_RegisterLoggingChannel
+Logic problem? szsrc =
 Logs
 Long Text
 Long text that is likely to clip
@@ -2485,6 +3189,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Low level command to set the flags byte associated with an object class. sc_SetClassFlags <classname> <value>
 Low:   $%.2f
 LowerEyelid(
+M
 M:0.000
 M:000
 MATCHFRAMEWORK_001
@@ -2514,7 +3219,35 @@ Make window or viewport transparent when docking and only display docking boxes 
 Mango
 Manipulating window titles
 Manually wrapping:
+MapKey::GetBoolValue
+MapKey::GetInt32Value
+MapKey::GetInt64Value
+MapKey::GetStringValue
+MapKey::GetUInt32Value
+MapKey::GetUInt64Value
+MapKey::type MapKey is not initialized.
 MapListService_001
+MapValueConstRef::GetBoolValue
+MapValueConstRef::GetDoubleValue
+MapValueConstRef::GetEnumValue
+MapValueConstRef::GetFloatValue
+MapValueConstRef::GetInt32Value
+MapValueConstRef::GetInt64Value
+MapValueConstRef::GetMessageValue
+MapValueConstRef::GetStringValue
+MapValueConstRef::GetUInt32Value
+MapValueConstRef::GetUInt64Value
+MapValueConstRef::type MapValueConstRef is not initialized.
+MapValueRef::MutableMessageValue
+MapValueRef::SetBoolValue
+MapValueRef::SetDoubleValue
+MapValueRef::SetEnumValue
+MapValueRef::SetFloatValue
+MapValueRef::SetInt32Value
+MapValueRef::SetInt64Value
+MapValueRef::SetStringValue
+MapValueRef::SetUInt32Value
+MapValueRef::SetUInt64Value
 Mar
 March
 Marker Size
@@ -2524,6 +3257,7 @@ MarkerOutline
 MarkerSize
 MarkerWeight
 Markers and Text
+Material %s - cannot find raytrace shader!
 Material changes:
 MaterialParamBuffer_t
 MaterialParamFloat_t
@@ -2542,14 +3276,19 @@ Max: %d units
 Max: (%.2f, %.2f)
 May
 Maybe
+MaybeAllocateAligned cannot fail here.
 Mb
+MemAlloc_AllocAlignedFunc
 MemAlloc_AllocFunc
+MemAlloc_FreeAlignedFunc
 MemAlloc_FreeFunc
-Memory
+MemAlloc_GetSizeAlignedFunc
+MemAlloc_StrDupFunc
 Menu inside a regular window
 Menu item
 MenuBarBg
 Menus inside a regular window
+Mesh contains %d blend weights per vertex;  truncating to %d
 Mesh: ElemCount: %d, VtxOffset: +%d, IdxOffset: +%d, Area: ~%0.f px
 MeshBuilderObject
 MeshSystem001
@@ -2557,7 +3296,21 @@ MeshUtils001
 Meshbuilder2
 Meshbuilder2IndexData
 Meshbuilder2VertexData
+MeshletData
+MeshletIndexCopyLoops
+Message class "
+Message does not support reflection (type
+Message is too deep, the parser exceeded the configured recursion limit of
+Message missing required fields:
+Message of type "
+Message type "
+Message type:
 MessageData
+MessageLite at 0x
+MessageSet is not supported in proto3.
+MessageSets cannot have fields, only extensions.
+Messages can't have default values!
+Messages can't have default values.
 Metrics (ImGui)
 Metrics (ImPlot)
 Middle click (or Ctrl + right click) and drag to create a query rect.
@@ -2575,7 +3328,15 @@ MinorTickLen
 MinorTickSize
 Misc items:
 Misc:%s%s%s%s%s
+Miss0
+Miss1
+Miss2
+Miss3
+Missing field: FileDescriptorProto.name.
+Missing name.
+Mixed Shadow
 Mixed items
+MixedShadowsStrength
 Mo
 Modal
 Modal windows are like popups but the user cannot close them by clicking outside.
@@ -2621,11 +3382,25 @@ Multi-Axis Plot
 Multi-component Widgets
 Multi-line Text Input
 Multi-line text:
+MultiGpuMask
+MultiGpuMutex
+MultiGpuTransfer
+MultiGpuTransferBackBuffer
+MultiGpuTransferDstGpu
+MultiGpuTransferRenderTargetDst
+MultiGpuTransferRenderTargetSrc
+MultiGpuTransferSrcGpu
+MultiGpuTransferSrcRectX
+MultiGpuTransferSrcRectY
 Multiple Y-Axes
 Multiple calls to Text(), clipped
 Multiple calls to Text(), not clipped (slow)
+Multiple extension registrations for type "
 Multiple tables with the same identifier will share their settings, width, visibility, order etc.
 Music
+MutableMessage
+MutableRawRepeatedField
+MutableRepeatedMessage
 My
 MyColor##1
 MyColor##2
@@ -2642,18 +3417,115 @@ MyPopup
 MyTabBar
 N-gon sides
 N/A
+N19CRayTraceSceneWorld9CPipelineE
+N19IRayTraceSceneWorld9IPipelineE
 N23CCharacterDecalRenderer26CCharacterDecalSceneObjectE
 N23CCharacterDecalRenderer27CCharacterDecalRendererDescE
+N6google8protobuf10TextFormat17FieldValuePrinterE
+N6google8protobuf10TextFormat21FastFieldValuePrinterE
+N6google8protobuf10TextFormat6FinderE
+N6google8protobuf10TextFormat6Parser10ParserImpl20ParserErrorCollectorE
+N6google8protobuf10TextFormat7Printer13TextGeneratorE
+N6google8protobuf11EnumOptionsE
+N6google8protobuf11FileOptionsE
+N6google8protobuf11MessageLiteE
+N6google8protobuf12FieldOptionsE
+N6google8protobuf12OneofOptionsE
+N6google8protobuf13MethodOptionsE
+N6google8protobuf14DescriptorPool14ErrorCollectorE
+N6google8protobuf14DynamicMessageE
+N6google8protobuf14FatalExceptionE
+N6google8protobuf14MessageFactoryE
+N6google8protobuf14MessageOptionsE
+N6google8protobuf14ServiceOptionsE
+N6google8protobuf14SourceCodeInfoE
+N6google8protobuf15DescriptorProtoE
+N6google8protobuf16EnumValueOptionsE
+N6google8protobuf17DescriptorBuilder17OptionInterpreter21AggregateOptionFinderE
+N6google8protobuf17FileDescriptorSetE
+N6google8protobuf17GeneratedCodeInfoE
+N6google8protobuf18DescriptorDatabaseE
+N6google8protobuf19EnumDescriptorProtoE
+N6google8protobuf19FileDescriptorProtoE
+N6google8protobuf19UninterpretedOptionE
+N6google8protobuf20FieldDescriptorProtoE
+N6google8protobuf20OneofDescriptorProtoE
+N6google8protobuf21DynamicMessageFactoryE
+N6google8protobuf21ExtensionRangeOptionsE
+N6google8protobuf21MethodDescriptorProtoE
+N6google8protobuf22DescriptorPoolDatabaseE
+N6google8protobuf22ServiceDescriptorProtoE
+N6google8protobuf23SourceCodeInfo_LocationE
+N6google8protobuf24EnumValueDescriptorProtoE
+N6google8protobuf24MergedDescriptorDatabaseE
+N6google8protobuf24SimpleDescriptorDatabaseE
+N6google8protobuf24ZeroCopyCodedInputStreamE
+N6google8protobuf25EncodedDescriptorDatabaseE
+N6google8protobuf28GeneratedCodeInfo_AnnotationE
+N6google8protobuf28UninterpretedOption_NamePartE
+N6google8protobuf29DescriptorProto_ReservedRangeE
+N6google8protobuf2io14ErrorCollectorE
+N6google8protobuf2io15FileInputStream22CopyingFileInputStreamE
+N6google8protobuf2io15FileInputStreamE
+N6google8protobuf2io16ArrayInputStreamE
+N6google8protobuf2io16FileOutputStream23CopyingFileOutputStreamE
+N6google8protobuf2io16FileOutputStreamE
+N6google8protobuf2io17ArrayOutputStreamE
+N6google8protobuf2io18CopyingInputStreamE
+N6google8protobuf2io18IstreamInputStream25CopyingIstreamInputStreamE
+N6google8protobuf2io18IstreamInputStreamE
+N6google8protobuf2io18StringOutputStreamE
+N6google8protobuf2io19CopyingOutputStreamE
+N6google8protobuf2io19LimitingInputStreamE
+N6google8protobuf2io19OstreamOutputStream26CopyingOstreamOutputStreamE
+N6google8protobuf2io19OstreamOutputStreamE
+N6google8protobuf2io19ZeroCopyInputStreamE
+N6google8protobuf2io20ZeroCopyOutputStreamE
+N6google8protobuf2io24ConcatenatingInputStreamE
+N6google8protobuf2io25CopyingInputStreamAdaptorE
+N6google8protobuf2io26CopyingOutputStreamAdaptorE
+N6google8protobuf30DescriptorProto_ExtensionRangeE
+N6google8protobuf37EnumDescriptorProto_EnumReservedRangeE
+N6google8protobuf7ClosureE
+N6google8protobuf7MessageE
+N6google8protobuf8internal12FieldSkipperE
+N6google8protobuf8internal12MapFieldBaseE
+N6google8protobuf8internal15DynamicMapFieldE
+N6google8protobuf8internal15ExtensionFinderE
+N6google8protobuf8internal16MapFieldAccessorE
+N6google8protobuf8internal19ImplicitWeakMessageE
+N6google8protobuf8internal20RepeatedFieldWrapperIbEE
+N6google8protobuf8internal20RepeatedFieldWrapperIdEE
+N6google8protobuf8internal20RepeatedFieldWrapperIfEE
+N6google8protobuf8internal20RepeatedFieldWrapperIiEE
+N6google8protobuf8internal20RepeatedFieldWrapperIjEE
+N6google8protobuf8internal20RepeatedFieldWrapperIlEE
+N6google8protobuf8internal20RepeatedFieldWrapperImEE
+N6google8protobuf8internal21RepeatedFieldAccessorE
+N6google8protobuf8internal22MessageSetFieldSkipperE
+N6google8protobuf8internal23RepeatedPtrFieldWrapperINS0_7MessageEEE
+N6google8protobuf8internal23RepeatedPtrFieldWrapperISsEE
+N6google8protobuf8internal23TypeDefinedMapFieldBaseINS0_6MapKeyENS0_11MapValueRefEEE
+N6google8protobuf8internal24GeneratedExtensionFinderE
+N6google8protobuf8internal27UnknownFieldSetFieldSkipperE
+N6google8protobuf8internal29CodedOutputStreamFieldSkipperE
+N6google8protobuf8internal29DescriptorPoolExtensionFinderE
+N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIbEE
+N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIdEE
+N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIfEE
+N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIiEE
+N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIjEE
+N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorIlEE
+N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorImEE
+N6google8protobuf8internal30RepeatedPtrFieldStringAccessorE
+N6google8protobuf8internal31RepeatedPtrFieldMessageAccessorE
+N6google8protobuf8internal33RandomAccessRepeatedFieldAccessorE
 N: MMMR: MMM
 N@
 NAV,FOCUS
 NB: Cursor & selection are preserved when refocusing last used item in code.
-NSt13__future_base19_Async_state_commonE
-NV_DST16
-NV_DST24
-NV_INTZ
+NOT_FOUND
 NV_NULL
-NV_RAWZ
 NWay(
 Name:       %s
 NameOffset: %d
@@ -2678,16 +3550,17 @@ NavWindow: '%s'
 NavWindowingDimBg
 NavWindowingHighlight
 NavWindowingTarget: '%s'
+Need space between identifier and decimal point.
+Need space between number and identifier.
 Need valid position to calculate face centers!
+NeedsLightProbe
 Nested tables
 NetworkClientService_001
 NetworkMessagesVersion001
 NetworkP2PService_001
 NetworkServerService_001
 NetworkService_001
-NetworkSystemUtilsVersion001
 NetworkSystemVersion001
-NewNode
 Nincompoop
 Nine
 No
@@ -2695,7 +3568,9 @@ No background
 No bring to front
 No close
 No collapse
+No default value
 No docking
+No field named "uninterpreted_option" in the Options proto.
 No match for "%.*s"!
 No menu
 No move
@@ -2730,58 +3605,59 @@ Node##2
 Node%d
 Node%d.%d
 Nodes
-Non-windows platforms don't support loading of JPG images
-Non-windows platforms don't support loading of PNG images
-Non-windows platforms don't support loading of TIFF images
+Non-primitive types can't be packed.
+Non-repeated Any specified multiple times.
+Non-repeated field "
 None
 Normal buttons
 Normalize
-Normalize3ComponentVectorInAttributes
-Normalized3x3SobelEdgeFilterFrom
 North
 Not Available
 Not Selected
-Not Used
+Not implemented field number
+Not supported.
 NotAllowed
 Note than the default embedded font is NOT meant to be scaled.Font are currently rendered into bitmaps at a given size at the time of building the atlas. You may oversample them to get some flexibility with scaling. You can also render at multiple sizes and select which one to use at runtime.(Glimmer of hope: the atlas system will be rewritten in the future to make scaling more flexible.)
+Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 Note: some memory buffers have been compacted/freed.
+Notes
+Notes:
 Nov
 November
 Now
+NumCullRequests
+NumEyes
+NumFragments
 Number of cascades in sunlight shadow
+Number of contexts created:
 Number of cull boxes: %d
 Number of display lists submitted:
-Number of draws backface-culled:
 Number of jobs used to render:
 Number of lines
 Number of objects culled by cull boxes: %d
-Number of objects culled by distance fade:
-Number of objects culled by screen-size test:
-Number of objects culled by vis:
-Number of objects fast-culled by bounds index:
-Number of objects passing cull check:
-Number of objects pre-cull check:
 Number of objects starting to fade:
 Number of objects tested against cull boxes: %d (%lluus)
 Number of pushconstant sets:
-Number of render batch contexts created:
 Number of rendertarget binds:
 Number of resolves:
+Number of targets (%d) exceeds maximum (%d).  List of targets:
 Number of transform rows used:
 Number of unique materials in the frame:
 Number of views allocated : %d
-Number of views rendered:
-Number of world traversals:
+Number of views rendered: %d (%d with world traversals)
+Numbers starting with leading zero must be in octal.
 O
 OK
 OK Blahblah
 OOOOOOO
 ORIENT
+OUT_OF_RANGE
 Object %4d: 0x%p, class=%20s, origin=(%13g,%13g,%13g), bounds=(%13g,%13g,%13g):(%13g,%13g,%13g), desc=0x%p, flags=0x%016llX
 ObjectLists use %ikb w/%ikb waste, reclaimed %ikb of unused
 OcclusionQueryIssueLayer
 Oct
 October
+Off
 Offset %.2f
 Offset X
 Offset and Stride
@@ -2789,9 +3665,10 @@ Offsets can be negative and/or larger than the actual data count.
 Offsetting is useful for realtime plots (see above) and circular buffers.
 Oh dear
 OmniLight
+On
 OneOneOne
 OneTwoThree
-Only DXT1/DXT5 online texture compression supported.
+Oneof must have at least one field.
 Only Modified Colors
 Only available if ScrollX is disabled.
 Only makes a difference if the popup is larger than the combo
@@ -2801,26 +3678,39 @@ Open Recent
 Open all
 Open the plot context menu (double right click) to change scales.
 Open:  $%.2f
-Options
+Option "
+Option field "
+Option must have a name.
+Option must not use reserved name "uninterpreted_option".
 Or, enable 32-bit indices in imconfig.h.
 Orange
 Order=%d
 Order=%d%n
 Org(%.3f,%.3f,%.3f) Ang(%.3f,%.3f,%.3f)
 Original
+OriginalColor
 OrthoLight
 Other
 Other:
+Out
+Out Mem
+OutLightingClipmap
+OutLightingFroxelTexture
+OutScatteringTexture
+Outdent() without matching Indent().
 Outer size
 OuterRect
 OuterRect: Pos: (%.1f,%.1f) Size: (%.1f,%.1f) Sizing: '%s'
 OuterRectClipped
 Output
 Output flags:
-Output memory size is zero
+OutputCullBits
+OutputIndices
+OutputTexture
 Outside
 Overlapping
 Override Cascades that will render static objects with lb_csm_override_staticgeo_cascades_value
+Override Streaming GPU Memory
 Override default setting for HDR rendering. -1 default, 0 NoHdr, 1 Hdr, 2 Hdr 1010102
 Override width/height of individual cascades in the CSM
 Override width/height of shadow atlas texture
@@ -2834,39 +3724,51 @@ P0
 P1
 P2
 P3
-P8
 P@
-PARALLEL_PROCESS utlsoacontainer.cpp:2517
 PARENT
-PF%d %d-1.000000
+PERMISSION_DENIED
 PFvP12CSceneObjectE
 POINT
 POSE_SPACE_BONE
 POSE_SPACE_MORPH
 PROGRAMMER GUIDE:
+PUNCTUAL
+PackedAABB_t
 Padding:
 Paired
 Palette
 PanoramaTextServices001
 PanoramaUIClient001
 PanoramaUIEngine001
+Parameter to BackUp() can't be negative.
 Parent=0x%08X SizeRef=%d,%d
 Parent=0x%08X%n
 ParentNode
 ParentWindow
-ParseEXRHeaderFromMemory failed! Error message: %s
+ParseFromString failed
 ParseRenderTargetTokens
+Parsing attempt:
+Particle Cloth %s
+ParticleShadowBuffer
 ParticleSystemMgr003
 Password Input
 Paste
 Pastel
+PathTracingShaderBindingTable
 Pauciloquent
+Pause Streaming Activity Graph
 Pear
 Pen Pressure: %.1f
+PerLayerConstantBuffer_t
 PerVertexLighting
+PerViewBarnLightConstantBuffer2_t
+PerViewBarnLightConstantBuffer_t
+PerViewBarnLightFogConstantBuffer_t
+PerViewConstantBuffer_t
+PerViewLightProbeVolumeConstantBuffer_t
 PerViewLightingConstantBufferGPU_t
 PerViewLightingConstantBufferGPU_t ViewModel
-Pf%d %d-1.000000
+PerViewLightingConstantBufferGpu_t
 Physics
 PhysicsBuilderMgr001
 Picker Mode
@@ -2881,17 +3783,16 @@ Pixels visible: %d (qh:%p) (frame:%d)
 Pixels visible: %d (qh:%p) Pixels possible: %d (qh:%p) (frame:%d)
 Pixels:     %f
 Plasma
+Plat_CPUTickFrequency
 Plat_DebugPrint
 Plat_ExitProcess
+Plat_FatalErrorFunc
 Plat_FloatTime
-Plat_GetCPUFrequency
-Plat_GetCrtEnv
 Plat_GetEnv
 Plat_GetModuleFilename
-Plat_GetThreadIndex
 Plat_IsInDebugSession
 Plat_MSTime
-Plat_SetDenormalsAreZero
+Plat_NonFatalErrorFunc
 Plat_ShouldCollectMiniDumpsForFatalErrors
 PlatformHasViewports
 Player Overlay
@@ -2954,36 +3855,57 @@ Price
 Primitives
 Printing unusually long amount of text.
 Prints out the overall extra data allocation counts
+Problem     :
+Problem     : Enum value did not match field type:    Expected  :
+Problem     : Field is not the right type for this message:    Expected  :
 ProggyClean.ttf, %dpx
 Progress Bar
 ProjectedDecalSceneObjectDesc
 ProjectionDepth
 PropWorldOrigin
 PropertyEditorSystem_001
+Proto file starts with 0xEF but not UTF-8 BOM. Only UTF-8 is accepted for proto file.
+ProtoBufHelper::DebugParseBinary: Couldn't find descriptor pool
+ProtoBufHelper::DebugParseBinary: Couldn't find message factory
+ProtoBufHelper::DebugParseBinary: Couldn't find message type '%s'
+ProtoBufHelper::DebugParseBinary: Couldn't find prototype for msg '%s'
+ProtoBufHelper::DebugParseBinary: Couldn't parse message
+ProtoBufHelper::ParseJSON: Array Begin found on invalid field!
+ProtoBufHelper::ParseJSON: Array Begin found on non-repeated field: '%s'!
+ProtoBufHelper::ParseJSON: Array End found on invalid field!
+ProtoBufHelper::ParseJSON: Array End found on non-repeated field: '%s'!
+ProtoBufHelper::ParseJSON: Array size mismatch in field '%s' - JSON %d, protobuf %d
+ProtoBufHelper::ParseJSON: Failed to parse JSON type %d into protobuf type %d for field '%s'!
+ProtoBufHelper::ParseJSON: Ignoring extra JSON key '%s', which is not found in protobuf message '%s'!
+ProtoBufHelper::ParseJSON: Object Begin found on invalid field!
+ProtoBufHelper::ParseJSON: received callback with message field but no message!
+ProtoBufHelper::ParseJSON: received callback with no current message field!
+Protocol Buffer map usage error:
+Protocol Buffer reflection usage error:  Method      : google::protobuf::Reflection::
 Push
 QAngle
+QUAD
+Quad-shaped light
 Quantity
-QuarterSizeAttrWithBoxFilter
 Quaternion
-QuaternionAligned
+QuaternionStorage
 Queried:       %s
 Query the first plot to render a subview in the second plot (see above for controls).
 Querying
 Querying Status (Edited/Active/Focused/Hovered etc.)
 Querying:      %s
-QueuedLoaderVersion001
 Quintic
 Quit
-R channel not found
-R channel not found!
 R1
 R11_EAC
 R16
 R16F
-R16F_EXPAND
+R16G16_UINT
+R16_UINT
 R2
 R3
 R32F
+R32G32_UINT
 R32_UINT
 R4
 R5
@@ -2991,44 +3913,49 @@ R6
 R7
 R8G8B8A8_ETC2_EAC
 R8G8B8_ETC2
+R8G8_UINT
+R8_UINT
 R: %.fN: %d
 R:%0.3f
 R:%3d
 REACTION
 RESOLVE: After layer %s, resolve rt to %s %d %d, %dx%d
+RESOURCE_EXHAUSTED
 RG11_EAC
 RG1616
 RG1616F
-RG1616F_EXPAND
 RG3232F
+RGB
 RGB Only
 RGB323232F
 RGB565
-RGB888_BLUESCREEN
+RGB888
 RGBA1010102
-RGBA1010102F_EDRAM
+RGBA16161616
 RGBA16161616F
-RGBA16161616F_EDRAM_RGBA1010102F
-RGBA16161616F_EXPAND
-RGBA16161616F_EXPAND_EDRAM_RGBA1010102F
-RGBA16161616_EDRAM
-RGBA16161616_EDRAM_RGBA16161616
 RGBA32323232F
 RGBA32323232_UINT
 RGBA8888_LINEAR
-RGBX555
 RGBX8888
 ROTATION
 RadianEuler
 RandomFloat
 RandomInt
-RandomSeed
 Range Widgets
 Range:      [%f,%f]
 Raw HSV values
+Ray trace shader material %s - has no default mode!
+Ray trace shader material %s has invalid RayTypeCount %d - must be between 1 and %d
+RayGen
+RayTrace
+RayTypeCount
+RaytraceLightBins
+Reached an unintended state: CPPTYPE_MESSAGE
+Reached impossible case in HasBit().
 Read FAQ and docs/FONTS.md for details on font loading.
 Read the FAQ at http://www.dearimgui.org/faq/
 Realtime Plots
+Rebuild
 Rebuild all
 Recovered from missing End() for '%s'
 Recovered from missing EndChild() for '%s'
@@ -3041,23 +3968,39 @@ Recovered from missing PopStyleColor() in '%s' for ImGuiCol_%s
 Recovered from missing PopStyleVar() in '%s'
 Recovered from missing TreePop() in '%s'
 Rect of child window is: (%.0f,%.0f) (%.0f,%.0f)
+RecullDispatchArgs
+RecullRequestCount
+RecullRequests
 Recurse..
+Recursion limit at end of parse should be
 Red
 Redo
 Redock all
 RefScale=%g
 Reflection Render View
+ReflectionMapDepthTexture
+ReflectionMapDescriptor_t
+ReflectionMapTexture
 ReflectionStencil
 ReflectionTemplate
 Refraction
 Refraction Render View
-RegisterAllModuleData
-RegisterConfigValue: Unknown error constructing config value "%s"!
+RefractionClipPlaneAdjust
+RefractionMapTexture
+RefractionReflectionAlreadyRendered
+RefractionsFromFramebuffer
+RegisterConVar: Unknown error registering convar "%s"!
 RegisterStringToken
+RelativeViewport
 Release
+ReleaseCleared() can only be used on a RepeatedPtrField not on
+ReleaseLast
+ReleaseLast() called on a RepeatedPtrField that is on an arena,
+ReleaseMessage
 RemapValClamped(
 Remove all
 Remove one
+RemoveLast
 Render
 Render %d specific objects
 Render world : %s
@@ -3067,31 +4010,36 @@ Render3DLineOverlays
 Render3DSphereOverlays
 Render3DTriangleOverlays
 Render3DVectorTextOverlays
-RenderCubeMap
-RenderCubeMap frustum %s
 RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
 RenderLayerDrawListPart
 RenderPipelineAliases
 RenderPrimitiveType_t
+RenderReflections
 RenderService_001
 RenderSkeletonBone_t
-RenderSystemSurface001
+RenderSlotType_t
+RenderStencilReflection
 RenderUtils_001
 RendererHasViewports
 RendererHasVtxOffset
 Rendering more text into the same line
-RenderingPipeline
 RenderingPipelineForwardManifest
 RenderingPipelines_001
 Reorderable Tabs
 Reorderable, hideable, with headers
-Res(D)
-Res(L)
+Repeated fields can't have default values.
+RepresentativeTexture
+Requested size is too large to fit into size_t.
+Required fields are not allowed in proto3.
+Reserved numbers must be positive integers.
+Reserved range $0 to $1 overlaps with already-defined range $2 to $3.
+Reserved range end number must be greater than start number.
 Reset Data
 Reset Pos
 Reset order
+Residency Constrained by Streamer
 Resizable, fixed
 Resizable, mixed
 Resizable, stretch
@@ -3116,7 +4064,6 @@ ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
 ResourceSystem013
-RetargetSrc.%s.%s
 Return to input text into a widget.
 Return value = %dIsItemFocused() = %dIsItemHovered() = %dIsItemHovered(_AllowWhenBlockedByPopup) = %dIsItemHovered(_AllowWhenBlockedByActiveItem) = %dIsItemHovered(_AllowWhenOverlapped) = %dIsItemHovered(_RectOnly) = %dIsItemActive() = %dIsItemEdited() = %dIsItemActivated() = %dIsItemDeactivated() = %dIsItemDeactivatedAfterEdit() = %dIsItemVisible() = %dIsItemClicked() = %dIsItemToggledOpen() = %dGetItemRectMin() = (%.1f, %.1f)GetItemRectMax() = (%.1f, %.1f)GetItemRectSize() = (%.1f, %.1f)
 Revert
@@ -3141,11 +4088,13 @@ Row %d Column %d
 Row height
 RowBg0
 RowBg1
+S1
 S10
 S16
 S2
 S3
 S32
+S4
 S5
 S6
 S64
@@ -3154,10 +4103,10 @@ S9
 S: %7.3f
 S:%0.3f
 S:%3d
-SCENESYSTEMMAT_OCCLUSION_PROXY material has pass count %d, expected 1!
-SCENESYSTEMMAT_OCCLUSION_PROXY_COUNT_DRAW material has pass count %d, expected 1!
 SHIFT
+SPHERE
 SSAOManifest
+SSAOOcclusionFactor
 SSE and SSE2 are required.
 SUPER
 S_BINDLESS_RUNTIME
@@ -3166,6 +4115,7 @@ Safe Area Padding
 Sailor
 Same title as another window##1
 Same title as another window##2
+Sample
 Sample count
 Save
 Save %s
@@ -3186,10 +4136,14 @@ Scatter
 Scatter Plot
 Scatter Plots
 Scene World %3d: 0x%p %40s [%4d objects]
+SceneDepth
+SceneGfxResources_RayTracing
 SceneLPVDebugGridObjectDesc
 SceneLPVDebugGridObjectVB
 SceneObjects drawn:
 SceneSystem
+SceneSystem/Aggregates/Draw Aggregates
+SceneSystem/Aggregates/Show GPU Culled Meshes
 SceneSystem/AssertViewportWithinFramebuffer
 SceneSystem/CMTAtlasChunkSize
 SceneSystem/CMTAtlasHeight
@@ -3201,17 +4155,19 @@ SceneSystem/CubemapFog
 SceneSystem/DefaultShadowTextureHeight
 SceneSystem/DefaultShadowTextureWidth
 SceneSystem/DisableShadowFullSort
+SceneSystem/FirstpersonLegs
 SceneSystem/GPU Profiler
 SceneSystem/GpuLightBinner
 SceneSystem/GpuLightBinnerBinEnvMaps
 SceneSystem/GpuLightBinnerCachedShadowMapHeight
 SceneSystem/GpuLightBinnerCachedShadowMapTileSize
 SceneSystem/GpuLightBinnerCachedShadowMapWidth
-SceneSystem/GpuLightBinnerSunLightFastPath
 SceneSystem/GpuLightBinnerSupportViewModelCascade
 SceneSystem/HDRFrameBuffer
 SceneSystem/LayerBatchThreshold
 SceneSystem/LayerBatchThresholdFullsort
+SceneSystem/LightBinner/Debug Dynamic Shadow Atlas
+SceneSystem/LightBinner/Debug Light Bounds
 SceneSystem/LightBinner/Debug Silhouettes
 SceneSystem/LightBinner/Debug Tiles
 SceneSystem/LightBinner/Enable Baked Shadows
@@ -3220,6 +4176,9 @@ SceneSystem/LightBinner/Enable EnvMaps
 SceneSystem/LightBinner/Enable Lights
 SceneSystem/LightBinner/Enable Mixed Shadows
 SceneSystem/LightBinner/Enable Sunlight
+SceneSystem/LightBinner/Use Illumination Bounds
+SceneSystem/LightCookieAllocGranularity
+SceneSystem/LightCookieMinAllocSize
 SceneSystem/NonTexturedGradientFog
 SceneSystem/PointLightShadowsEnabled
 SceneSystem/SkipLoadingRenderingPipelines
@@ -3231,20 +4190,25 @@ SceneSystem/SunLightMaxShadowBufferSize
 SceneSystem/SunLightMaxShadowBufferSizeTools
 SceneSystem/SunLightShadowRenderMode
 SceneSystem/Texture Visualizer
+SceneSystem/Tonemap Visualizer
+SceneSystem/Tonemapping
 SceneSystem/TransformTextureRowCount
 SceneSystem/VolumetricFog
 SceneSystem/WellKnownLightCookies
 SceneSystemInit
 SceneSystem_002
+SceneTLAS
 SceneUtils_001
 SceneViewDebugOverlaysScreenTextFont
-SceneViewId_t
 SceneWorldDump
 Scenesystem render target token too large! Increase MAX_RT_NAME_SIZE in scenesystem/scenesystem.h!
 SchemaSystem_001
 SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
 Score
+ScrambledHalton
+ScrambledHaltonPermutations
+ScreenSpaceQuad
 Scroll %.1f/%.1f %.1f/%.1f
 Scroll Offset
 Scroll To Pos
@@ -3260,6 +4224,9 @@ ScrollbarRounding
 ScrollbarSize
 Scrolling Text %d
 Scrolling:
+Second argument to Swap() (of type "
+Second argument to SwapFields() (of type "
+SecondaryViewIndex
 Sections below are demonstrating many aspects of the library.
 See ImGui Wiki page 'Image Loading and Displaying Examples'.
 See comments in imgui.cpp.
@@ -3286,7 +4253,6 @@ SeparatorActive
 SeparatorHovered
 September
 SerializedEntitiesVersion001
-ServerUploadGameStats001
 Set 'io.ConfigFlags |= NavEnableGamepad' for gamepad controls.
 Set 'io.ConfigFlags |= NavEnableKeyboard' for keyboard controls.
 Set a float attribute which will be visible to all rendering (Usage: sc_setfloatattr <attrname> <value>)
@@ -3297,12 +4263,31 @@ Set io.ConfigFlags |= ImGuiConfigFlags_DockingEnable in your code, or
 Set to PI
 Set to make all floating imgui windows always create their own viewport. Otherwise, they are merged into the main host viewports when overlapping it.
 Set to zero
+SetAllocatedMessage
+SetBool
 SetColorEditOptions() is designed to allow you to set boot-time default.We don't have Push/Pop functions because you can force options on a per-widget basis if needed,and the user can change non-forced ones with the options menu.We don't have a getter to avoidencouraging you to persistently save values that aren't forward-compatible.
+SetDouble
+SetEnum
+SetFloat
+SetInt32
+SetInt64
 SetNextItemWidth/PushItemWidth(-100)
 SetNextItemWidth/PushItemWidth(-FLT_MIN)
 SetNextItemWidth/PushItemWidth(-GetContentRegionAvail().x * 0.5f)
 SetNextItemWidth/PushItemWidth(100)
 SetNextItemWidth/PushItemWidth(GetContentRegionAvail().x * 0.5f)
+SetRepeatedBool
+SetRepeatedDouble
+SetRepeatedEnum
+SetRepeatedFloat
+SetRepeatedInt32
+SetRepeatedInt64
+SetRepeatedString
+SetRepeatedUInt32
+SetRepeatedUInt64
+SetString
+SetUInt32
+SetUInt64
 Setting style.CellPadding to (0,0) or a custom value.
 Settings 0x%08X (%d columns)
 Settings handlers: (%d)
@@ -3321,8 +4306,16 @@ Seven
 Shaded
 Shaded Plots
 Shaded Plots##
-Shadows
+Shadow Atlas Debugger
+ShadowAtlasHeight
+ShadowAtlasWidth
+ShadowDepthBuffer
+ShadowDepthBufferNoCmp
+ShadowDepthMapAtlas
+ShadowStrength
+SheetTexture
 Short Text
+Should not reach here.
 Show
 Show 2nd header
 Show Axes Rects
@@ -3336,9 +4329,11 @@ Show LPV debug grid, 0: off, 1: closest only 2: closest and keep 3: all
 Show Labels##1
 Show Labels##2
 Show Leading TabItemButton()
+Show Light Shape
 Show Plot Rects
 Show Tooltip
 Show Trailing TabItemButton()
+Show Vis
 Show cost of lights in fog clipmap constant buffer. yellow = 1 cost, red = 6 cost
 Show indented items
 Show step buttons
@@ -3376,12 +4371,16 @@ Sizing policies
 Sizing:
 SkeletonBoneBounds_t
 SkinnedObject
-Sky
+SkipBindlessFastPath
+SkyBrightnessExposureBias
+SkyTexture
+SkyTextureFormat
 SliderFloat (0 -> 1)
 SliderGrab
 SliderGrabActive
 SliderInt (0 -> 100)
 Sliders (reverse)
+SlopeScaleDepthBias
 SlopeTrace
 Small buttons
 SmallButton
@@ -3389,17 +4388,20 @@ SmallButton()
 Snickersnee
 Software AA can be enabled globally with ImPlotStyle.AntiAliasedLines.
 Software AA can be enabled per plot with ImPlotFlags_AntiAliased.
+Solo
 Some %s text %d,%dOver two lines..
 Some Document
 Some content %d
 Some contents
 Some framed item
 Some menu item
+Some options could not be correctly parsed using the proto descriptors compiled into this binary.Unparsed options:
 Some other contents
 Some test %d
 Some tree contents
 SomeOption
 Someone needed to call WaitForRenderingToComplete()!!!!!
+Sorry, currently only supports log-luminance histogram & filmic tonemapping!
 Sort=%d%c
 Sort=%d%c%n
 Sorting
@@ -3420,23 +4422,28 @@ Source2GameClients001
 Source2GameEntities001
 Source2Host001
 Source2Server001
-Source2ServerSerializers002
+Source2V8System001
+SourceMorphAtlas
 South
 Space to activate a widget.
 Specify height of the Selectable item.
 Spherical %sStrength %.2fExponent %.2f
+Spherical light
 Spiral
 Split=%c
 Split=%c%n
 SpotLight
+SpotLightShadowZBuffer
 SpotShadowDepth
 SpotShadowDepth_Atlas%d.vtex
+SrcColorTexture
 St11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE
 St16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE
 St19_Sp_make_shared_tag
-St23_Sp_counted_ptr_inplaceI10CUtlVectorI20CMeshDrawPrimitive_t10CUtlMemoryIS1_iEESaIS4_ELN9__gnu_cxx12_Lock_policyE2EE
+St23_Sp_counted_ptr_inplaceI10CUtlVectorI20CMeshDrawPrimitive_ti10CUtlMemoryIS1_iEESaIS4_ELN9__gnu_cxx12_Lock_policyE2EE
 St23_Sp_counted_ptr_inplaceI13CViewDrawListSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE
 St23_Sp_counted_ptr_inplaceI23CSceneViewDebugOverlaysSaIS0_ELN9__gnu_cxx12_Lock_policyE2EE
+Stack depth limit hit (%d)
 Stacked 1
 Stacked 2
 Stacked Popup
@@ -3444,59 +4451,73 @@ Stacked modals..
 Stairstep Plot
 Stairstep Plots
 Static World Overlays
+StaticOverlayLayer
 StatsService_001
 SteamAudio001
+SteamVrCompositorLeftDepthRt
+SteamVrCompositorLeftRt
+SteamVrCompositorRightDepthRt
+SteamVrCompositorRightRt
+SteamVrCompositorRtHeight
+SteamVrCompositorRtWidth
 Stem Plots
 Stem Plots##
 Stems 1
 Stems 2
 Stencil Reflection Render View
 Stencil bit allocation failed
-Stencil bit dependency satisfied (bit %d)
-Stencil dependency layer : %s
-StencilReflection
 Stock 1
 Stock 2
 Stock 3
 Stock Prices
-Storage
 StrReplaceChar
 Strawberry
+Streamed
+Streamed In: %0.2f MB
+Streamed Out: %0.2f MB:
 Stretch + ScrollX
 StretchProp
 StretchSame
 Striding is useful for interleaved data (e.g. audio) or plotting structs.
+String field
+String literals cannot cross line boundaries.
+StringPrintfVector currently only supports up to
 Student
 Style Editor (ImGui)
 Style Editor (ImPlot)
 Su
 Sub-menu
 Submit all display lists
-Submit clear screen for layer
-Submit dependent display list for dependent view
+Submit clear screen for layer %s
+Submit dependent display list for dependent view %s
 Submit transform texture and other resource updates
-Submit update for auxiliary camera pos=
-Submit update for main camera pos=
 SubmitRenderLists
 Suggested
+SunLightShaderParamsCB
 SunShadow
 SunShadow%u
 SunShadowClear
+SunlightManagerIndex
+SupportsBindlessFastPath
+SupportsCubeMapArrays
 Swap
 Swap %s
+Symbol name "
 Synced Table %d
 Synced instances
 Syntax Error at offset: %d
+Synthetic oneofs must be after all other oneofs
 System file
 T
 T: %7.3f
 TAB/SHIFT+TAB to cycle through keyboard editable fields.
-TEST
 TEST##1
 TEST##2
 TILT_TWIST
 TL
 TR
+TUBE
+TUBE_WITH_END_CAPS
 Tab
 Tab Bars (%d)
 Tab bar
@@ -3510,7 +4531,6 @@ TabRounding
 TabUnfocused
 TabUnfocusedActive
 Tabbing
-Table
 Table 0x%08X (%d columns, in '%s')
 Table 0x%08X (%d columns, in '%s')%s
 TableBorderLight
@@ -3547,6 +4567,7 @@ TextInput
 TextLayout_001
 TextSelectedBg
 Texture Area: about %d px ~%dx%d px
+Texture Memory
 Texture Visualizer
 Textures
 Th
@@ -3556,10 +4577,14 @@ The "Tools" menu above gives access to: About Box, Style Editor,and Metrics/Debu
 The "Tools" menu above gives access to: Style Editors (ImPlot/ImGui)and Metrics (general purpose Dear ImGui debugging tool).
 The Background draw list will be rendered below every Dear ImGui windows.
 The Foreground draw list will be rendered over every Dear ImGui windows.
+The JSON camel-case name of field "
 The TextDisabled color is stored in ImGuiStyle.
+The [proto3_optional=true] option may only be set on proto3fields, not
 The current plot limits are:  [%g,%g,%g,%g]
 The current query limits are: [%g,%g,%g,%g]
 The demo data precision is: float
+The extension
+The first enum value must be zero in proto3.
 The lazy dog is a good dog. This paragraph should fit within %.0f pixels. Testing a 1 character word. The quick brown fox jumps over the lazy dog.
 The logging API redirects all text output so you can easily capture the content of a window or a block. Tree nodes can be automatically expanded.Try opening any of the contents below in this window and then click one of the "Log To" button.
 The offset value indicates which circle point index is considered the first.
@@ -3567,9 +4592,13 @@ The query rect can be dragged after it's created.
 The quick brown fox jumps over the lazy dog
 The quick brown fox jumps over the lazy dog.
 The same contents can be accessed in 'Tools->Style Editor' or by calling the ShowStyleEditor() function.
+The type parameter T in RepeatedFieldRef<T> API doesn't match
 Thickness
 Thin Plate
+This ZeroCopyOutputStream doesn't support aliasing. Reaching here usually means a ZeroCopyOutputStream implementation bug.
 This a popup for "%s"!
+This can't happen; base64 decoder state =
+This convar is being accessed prior to ConVar_Register being called
 This demonstrate embedding a table into another table cell.
 This example assumes 60 FPS. Higher FPS requires larger buffer size.
 This example implements a console with basic coloring, completion (TAB key) and history (Up/Down keys). A more elaborate implementation may want to store entries along with extra data such as timestamp, emitter, etc.
@@ -3587,17 +4616,21 @@ This is the Cucumber tab!blah blah blah blah blah
 This is the popup for Button("..") in Cell %d,%d
 This is window 1.My title is the same as window 2, but my identifier is unique.
 This is window 2.My title is the same as window 1, but my identifier is unique.
+This program requires version
+This program was compiled against version
 This section allows you to interact and see the effect of various sizing policies depending on whether Scroll is enabled and the contents of your columns.
+This shouldn't be called if all the sizes are equal.
 This text should automatically wrap on the edge of the window. The current implementation for text wrapping follows simple rules suitable for English and possibly other languages.
 This text should automatically wrap on the edge of the work rectangle.
 This window has a changing title.
 Those are old settings provided for convenience.However, the _correct_ way of scaling your UI is currently to reload your font at the designed size, rebuild the font atlas, and call style.ScaleAllSizes() on a reference ImGuiStyle structure.Using those settings here will give you poor quality results.
 Those flags are set by the backends (imgui_impl_xxx files) to specify their capabilities.Here we expose then as read-only fields to avoid breaking interactions with your backend.
 ThreadGetCurrentId
-ThreadMultiWait
+ThreadInMainThread
 ThreadMultiWaitObjectSetDestroy
 ThreadSleep
 Thread_ProcessProceduralLayer
+Thread_RenderGpuCullingLayer
 Thread_RenderSceneDrawList
 Thread_RenderViewLayer
 ThreeThreeThree
@@ -3607,9 +4640,9 @@ TileCullParams_t
 Tilefish
 Time Formatted Axes
 Time Series
+TimeSlicedShadowMapRendering
 Timer took %.4f
 TimestampQuery
-Tint
 Title bar Hovered/Active tests
 TitleBg
 TitleBgActive
@@ -3622,14 +4655,16 @@ To Ref
 To TTY
 Toggle display of box around text
 Toggle..
-Toggles drawing of aggregate meshes
+Toggles GPU culling of aggregate meshes
 Toggling this at runtime is normally unsupported (most platform backends won't refresh the decoration right away).
 Toggling this at runtime is normally unsupported (most platform backends won't refresh the parenting right away).
 Toggling this at runtime is normally unsupported (most platform backends won't refresh the task bar icon state right away).
+Tokenizer::ParseFloat() passed text that could not have been tokenized as a float:
+Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string:
 Tomato
 ToneMapping
+Tonemap Visualizer
 TonemapManifest
-TonemappingVRForward
 Tonemapping_DefaultAutoExposureMax
 Tonemapping_DefaultAutoExposureMin
 Tonemapping_DefaultRate
@@ -3641,8 +4676,13 @@ ToolFramework2_002
 ToolSceneNodeFactory_001
 ToolService_001
 Tools
+ToolsAmbientLighting
+ToolsStartup_RayTracing
+ToolsUtil
 ToolsUtil Opaque
 ToolsUtil Translucent
+ToolsVis
+ToolsWireframe
 Tools_Opaque
 Tools_PreTranslucent
 Tools_Translucent
@@ -3655,7 +4695,7 @@ TopMost
 Total : %d (%ukb)
 TouchExtraPadding
 Track
-TranslucentScreenSpace
+TransformBuffer
 Transparency
 Tree in column
 Tree node
@@ -3664,51 +4704,67 @@ Tree view
 TreeNode (w/ double-click)
 Trees
 Triangles rendered:
+Tried to calc delta to a src message of a different type.
+Tried to merge messages of different types
 Tried to move layer to be after non-existant label
+Tried to register a non-generated type with the generated type registry.
 True
 Trying to concatenate meshes with different numbers of attributes!
 Trying to concatenate meshes with incompatible attribute sets!
 Tu
+Tube light with end caps
+Tube light without end caps
 Two items: Hello
 TwoTwoTwo
+Type appears to be in generated pool but wasn't
+Type is already registered:
 U
 U+%04X..U+%04X (%d %s)
 U16
 U32
 U64
 U8
+UNAUTHENTICATED
+UNAVAILABLE
+UNIMPLEMENTED
+UNKNOWN
+UNKNOWN_ENUM_VALUE_%s_%d
 USD
 USER GUIDE:
 USER:Hold SHIFT or use mouse to select text.CTRL+Left/Right to word jump.CTRL+A or double-click to select all.CTRL+X,CTRL+C,CTRL+V clipboard.CTRL+Z,CTRL+Y undo/redo.ESCAPE to revert.PROGRAMMER:You can use the ImGuiInputTextFlags_CallbackResize facility if you need to wire InputText() to a dynamic string type. See misc/cpp/imgui_stdlib.h for an example (this is not demonstrated in imgui_demo.cpp).
 UTF-8 Text
+UTF-8 data when
 UTF-8 input
 UV0
 UV1
 UV88
 UV: (%.3f,%.3f)->(%.3f,%.3f)
-UVLX8888
 UVWQ8888
-Unable to read file %s
 Unable to read resource file %s!
 Unbatchable material draws:
 Uncertain Data
 Underlying float value: %f
 Undo
+Unexpected end of string.
+Unexpected failure while serializing option submessage
+Unimplemented type:
+Uninterpreted option is missing name or value.
 Unknown
 Unknown command: '%s'
-Unknown compression type.
+Unknown enumeration value of "
 Unknown object class type %s
 Unnamed
+Unnormalized joint weights encountered (%f): Skinning may not work! (At position %.3f %.3f %.3f)
 Unrecognized command %d in scene system debugger command
 Unrecognized resource version (%d): %s
-Unsupported ETC image format %d.
-Update
+Unrecognized syntax:
+Unsupported
+Unsupported: type mismatch
 UpdateBinGPUData
 UpdateDirtyObjects
 UpperEyelid(
 Usage is sc_setfloatattr <attrname> <value>
 Usage is sc_setintattr <attrname> <value>
-Usage scope:
 Use SetScrollHereX() or SetScrollFromPosX() to scroll to a given horizontal position.Because the clipping rectangle of most window hides half worth of WindowPadding on the left/right, using SetScrollFromPosX(+1) will usually result in clipped text whereas the equivalent SetScrollFromPosY(+1) wouldn't.
 Use SetScrollHereY() or SetScrollFromPosY() to scroll to a given vertical position.
 Use TAB/SHIFT+TAB to cycle through keyboard editable fields.
@@ -3720,7 +4776,6 @@ Use work area instead of main area
 User can right-click the picker to change mode.
 UserID=%08X
 UserID=0x%08X%n
-UserInfoChangeService_001
 Using 16-bit blend indices
 Using ImDrawList::AddText() with a fine ClipRect:Will alter only this specific ImDrawList::AddText() rendering.(this is often used internally to avoid altering the clipping rectangle and minimize draw calls)
 Using ImDrawList::PushClipRect():Will alter ImDrawList rendering only.(use this as a shortcut if you are only using ImDrawList calls)
@@ -3746,20 +4801,12 @@ V:%3d
 VApplication001
 VAsyncFileSystem2_001
 VAvi001
-VBAllocTracker001
 VBik001
 VConComm001
-VDebugService_001
 VEngineCvar007
 VFileSystem017
-VGUI_Input005
-VGUI_Panel010
-VGUI_Scheme010
-VGUI_Surface032
-VGUI_System010
-VGUI_ivgui008
+VGuiTexture
 VLines
-VMDLLIB001
 VMaterialSystem2_001
 VMatrix
 VMediaFoundation001
@@ -3768,32 +4815,37 @@ VPhysics2_Handle_Interface_001
 VPhysics2_Interface_001
 VProcessUtils002
 VProfService_001
+VRLODScreenWidthInPixels
 VR_001
 VRenderDeviceSetupV001
-VSInputSignature
 VScript
 VScriptDbg
 VScriptManager010
 VStringTokenSystem001
-VTT for std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >
-VTT for std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >
-V_CopyMemory3D
+V_DoubleToString_Unsafe
 V_FixDoubleSlashes
+V_FloatToString_Unsafe
 V_GetFileExtension
+V_InitJSONConfig
+V_Int32ToString_Unsafe
+V_Int64ToString_Unsafe
 V_IsAbsolutePath
 V_LZ4_decompress_safe
+V_ParseJSONBuffer
 V_PathContainsPath
 V_PrettifyMem
 V_PrettifyNum
 V_RemoveDotSlashes
-V_SplitString(char const*, char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString, int> >&, bool)
+V_SplitString(char const*, char const*, CUtlVector<CUtlString, int, CUtlMemory<CUtlString, int> >&, bool)
+V_SplitString(char const*, char const*, CUtlVector<char*, int, CUtlMemory<char*, int> >&)
+V_UInt32ToString_Unsafe
+V_UInt64ToString_Unsafe
 V_UnqualifiedFileName
 V_acosd
 V_acosf
 V_asinf
 V_atan2f
 V_atanf
-V_atof
 V_atofloat32
 V_atofloat64
 V_atoi
@@ -3805,8 +4857,8 @@ V_exp2f
 V_expf
 V_fmodf
 V_fpclassifyd
-V_fprintf
 V_frexpf
+V_isfinited
 V_isnand
 V_log2_uint
 V_log2f
@@ -3831,6 +4883,20 @@ V_tanf
 V_uuid_t
 V_vsnprintf
 Value = %.3f <-- (1) right-click this value
+Value must be "true" or "false" for boolean option "
+Value must be identifier for boolean option "
+Value must be identifier for enum-valued option "
+Value must be integer for int32 option "
+Value must be integer for int64 option "
+Value must be non-negative integer for uint32 option "
+Value must be non-negative integer for uint64 option "
+Value must be number for double option "
+Value must be number for float option "
+Value must be quoted string for string option "
+Value of type "
+Value out of range for int32 option "
+Value out of range for int64 option "
+Value out of range for uint32 option "
 ValveBiped.
 ValveBiped_
 Variables
@@ -3853,10 +4919,10 @@ VertexWireFrame_t
 Vertical Sliders
 Vertical Text
 Vertical scrolling, with clipping
+VguiStencilRef
 View "%s": %d layers
 View "%s": %d render target usage
 View "%s": %d render targets
-ViewModel
 Viewport #%d, ID: 0x%08X, FrontMostStampCount = %08d, Window: "%s"
 Viewport #%d, ID: 0x%08X, Parent: 0x%08X, Window: "%s"
 Viewport: %d%s, ViewportId: 0x%08X, ViewportPos: (%.1f,%.1f)
@@ -3871,10 +4937,15 @@ VisBuilder_001
 Visible=%d
 Visible=%d%n
 VisibleWindow
+VisualizeCulled
 Voltage
 VolumeFog
+VolumetricFogConstantBuffer_t
 VolumetricFogManifest
+W
 W: %.1f
+WARNING
+WARNING: Encountered %d total problems with vertex data (first %d shown above)
 WARNING: Trying to create a CRenderContextPtr without a valid context.
 WARNING: Unrecognized bone "%s"
 WINDOWING
@@ -3884,7 +4955,7 @@ WantLockSizeOnce
 WantSetMousePos: %d
 WantTextInput: %d
 Warning
-Warning:  %s = '%s' is infinite, clamping value.
+Warning parsing text-format
 Warning: Sizing Constraints won't work if the window is docked!
 Warning: owning Window is inactive. This DrawList is not being rendered!
 Water
@@ -3908,6 +4979,7 @@ When drawing circle primitives with "num_segments == 0" tesselation will be calc
 When sorting is enabled: allow no sorting, disable default sorting. TableGetSortSpecs() may return specs where (SpecsCount == 0).
 When sorting is enabled: hold shift when clicking headers to sort on multiple column. TableGetSortSpecs() may return specs where (SpecsCount > 1).
 While inputing text:
+Whitepoint
 Widgets Width
 Width
 Width %.2f
@@ -3960,12 +5032,11 @@ WorldRenderer/LightProbeVolumeColorSpace
 WorldRenderer/LightProbeVolumeUncompressedFormat
 WorldRendererMgr001
 Wrap width
+Writing kdTree with %d triangles
 X
 X-Axis
+X-axis in Stops
 X/Y = %.0f px
-X360_DST16
-X360_DST24
-X360_DST24F
 XAxis
 XAxisGrid
 Y
@@ -3983,6 +5054,7 @@ YAxisGrid2
 YAxisGrid3
 Yaw;
 Yellow
+Yellow mark below is the scalar value
 Yes
 Yes, you candrag this!
 You can also call ImGui::LogText() to output directly to the log without a visual output.
@@ -4001,11 +5073,10 @@ You can use the ImGuiInputTextFlags_CallbackResize facility if you need to wire 
 Your application can render a different mouse cursor based on what ImGui::GetMouseCursor() returns. If software cursor rendering (io.MouseDrawCursor) is set ImGui will draw the right cursor for you, otherwise your backend needs to handle it.
 Your current configuration is:
 Z
-ZN26CParallelProcessorAbstractI18CParallelProcessorIP12CSceneObject21CFuncJobItemProcessorIS2_ELi1EEE3RunEvE13CStackFunctor
-ZN26CParallelProcessorAbstractI22CParallelLoopProcessorI13CViewDrawList31CLoopMemberFuncJobItemProcessorIS1_12CSceneSystemS3_EEE3RunEvE13CStackFunctor
+Zero-area light
 [
 [ ]
-[%.3f server clamped to %.3f]
+[$0]
 [%05d] [%s] Hello, current time is %.1f, here's a word: '%s'
 [%d]
 [%d] %.2f (%.02f secs)
@@ -4018,13 +5089,29 @@ ZN26CParallelProcessorAbstractI22CParallelLoopProcessorI13CViewDrawList31CLoopMe
 []
 [beta] Enable beta multi-viewports support. See ImGuiPlatformIO for details.
 [c0.x0 c0.y0 ... cn.x0 cn.y0 c0.x1 c0.y1 ... cn.x1 cn.y1 ... cn.xm cn.ym]
+[default = $0
 [drop here]
 [error]
 [error] something went wrong
 [idx=%d] "%s"
+[lazy = true] can only be specified for submessage fields.
+[libprotobuf %s %s:%d] %s
+[packed = true] can only be specified for repeated primitive fields.
 [x]
 [~]
 \
+\"
+\%03o
+\U%08x
+\\
+\n
+\r
+\t
+\u00
+\x%02x
+_BindlessFastCB_PS_t
+_BindlessFastCB_VS_t
+_BindlessFastEnvMapCB_PS_t
 _BoundTexture%d
 _BoundTextureSrgb%d
 _COL3F
@@ -4052,6 +5139,22 @@ _NoSortDescending
 _PreferSortAscending
 _PreferSortDescending
 _TREENODE
+_TexBarrierRT0
+_TexBarrierRT1
+_TexBarrierRT10
+_TexBarrierRT11
+_TexBarrierRT12
+_TexBarrierRT13
+_TexBarrierRT14
+_TexBarrierRT15
+_TexBarrierRT2
+_TexBarrierRT3
+_TexBarrierRT4
+_TexBarrierRT5
+_TexBarrierRT6
+_TexBarrierRT7
+_TexBarrierRT8
+_TexBarrierRT9
 _V_SetExtension
 _V_StringAfterPrefix
 _V_StripLastDir
@@ -4064,23 +5167,24 @@ _WidthFixed
 _WidthStretch
 __assert_fail
 __bss_start
+__cxa_allocate_exception
 __cxa_atexit
 __cxa_begin_catch
 __cxa_end_catch
 __cxa_finalize
+__cxa_free_exception
+__cxa_guard_abort
 __cxa_guard_acquire
 __cxa_guard_release
 __cxa_pure_virtual
 __cxa_rethrow
+__cxa_throw
 __dynamic_cast
-__finitef
-__fread_chk
+__errno_location
+__fprintf_chk
 __gmon_start__
-__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > > std::vector<unsigned char, std::allocator<unsigned char> >::insert<__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, void>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >)
 __gxx_personality_v0
 __isnan
-__isnanf
-__longjmp_chk
 __memcpy_chk
 __memset_chk
 __once_proxy
@@ -4089,31 +5193,39 @@ __pthread_key_create
 __snprintf_chk
 __sprintf_chk
 __stack_chk_fail
+__temp_unserialization_member__
 __tls_get_addr
-__vasprintf_chk
 __vsnprintf_chk
+_base
 _c
 _edata
+_editor
 _end
 _fini
-_setjmp
-_z0
+_multibase
+_not_pickable
+`
 ```
+`x@
+a
+a protocol
 aC
 aaa1.c
 aaa2.cpp
 aaaa
 aaaaaaaa bbbbbbbb, c cccccccc,dddddddd. d eeeeeeee   ffffffff. gggggggg!hhhhhhhh
+aabb
 abc
 abc.h
-abort
 abs( %s )
+accessor_ == other.accessor_
+active sceneobject: %i clusters
 adding views while previous rendering is running. Someone needed to call WaitForRenderingToComplete()!!!!!
-advanced to state %d at %f
-after solve err=%f
 after sort
-aggregate
+aggregatedesc.cpp
 albedo for LPV debug grid
+alphatest
+ambientColor
 ambientocclusionproxy.cpp
 analog_%d
 analog_0
@@ -4123,21 +5235,26 @@ another one of those tree node...
 another popup
 ao_proxy_box_list
 ao_proxy_capsule_list
-archive
+args were given.  Full format string was: "
+arguments.
+asbounce
 atan
-auto alias
 avg %f
+avg lum: average scene luminance, calculated using average of pixels that fall withinmat_tonemap_force_log_lum_min, mat_tonemap_force_log_lum_max.(defaults 0.5,0.5 so average is half of pixels either side)
 b%d (%.02f secs)
+bDisableDynamicRefractionMap
+bReflectDynamicObjectsOnly
+bStereoRendering
+baked_shadow_index
+baked_shadow_light_id
+bakedshadowindex
+barn
 baselayer
-basic_string::_S_construct null not valid
 bbb1.c
 bbb2.cpp
 bbbb
-because aux mask=
-before solve err=%f
+because aux mask=%i (index = %i) (discarded renderbatch = %s)
 bentnormal
-best wh=%d %d info w h=%d %d testinf wh=%d %d
-binary
 binary_auto
 binary_bc
 binary_lz4
@@ -4152,12 +5269,18 @@ blue
 bodygroup
 bonename
 bool
-box2i
-buf error
-calloc
+bool google::protobuf::internal::RepeatedFieldRefIterator<T>::operator!=(const google::protobuf::internal::RepeatedFieldRefIterator<T>&) const [with T = google::protobuf::Message]
+bounce_scale
+bouncescale
+buffer. Use the 'bytes' type if you intend to send raw
+bytes).  To increase the limit (or to disable these warnings), see CodedInputStream::SetTotalBytesLimit() in third_party/protobuf/src/google/protobuf/io/coded_stream.h.
+bytes.
+cameraIndex
 can fit within a text block.
-cannot allocate transform texture
+can't reach here.
+cannot be required.
 canvas
+castshadowmode
 ccc1.c
 ccc2.cpp
 cccc
@@ -4167,22 +5290,17 @@ cell bg type
 cfg/imgui.ini
 cfg/imgui.log
 cfg_infos
-channels
 char
-char* std::string::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)
-cheat
+char google::protobuf::StringPiece::operator[](google::protobuf::stringpiece_ssize_type) const
 checkbox
-chlist
-chunkCount
+clearTargets
 click here
-client
-clientcmd_can_execute
+close() failed:
 cloth_enable
 cmap
 color 1
 color 2
 color per batch
-colorTarget
 colors[ImGuiCol_%s]%*s= ImVec4(%.2ff, %.2ff, %.2ff, %.2ff);
 colors[ImPlotCol_%s]%*s= IMPLOT_AUTO_COL;
 colors[ImPlotCol_%s]%*s= ImVec4(%.2ff, %.2ff, %.2ff, %.2ff);
@@ -4191,10 +5309,19 @@ combo 1
 combo 2 (one-liner)
 combo 3 (array)
 combo 4 (function)
-compression
-configvalue.cpp
+conflicts with an existing enum type.
+conflicts with an existing field.
+conflicts with an existing nested message type.
+conflicts with an existing oneof type.
+const google::protobuf::UnknownFieldSet& google::protobuf::UnknownField::group() const
+const google::protobuf::internal::ExtensionSet::Extension* google::protobuf::internal::ExtensionSet::FindOrNullInLargeMap(int) const
+const google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_begin() const
+const google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_end() const
+const string& google::protobuf::UnknownField::length_delimited() const
+contains invalid
 copy_rt
 cos( %s )
+csmFrustumFOVOverride
 csm_bias_override_0
 csm_bias_override_1
 csm_bias_override_2
@@ -4219,20 +5346,19 @@ csm_viewmodel_max_visible_dist
 csm_viewmodel_shadows
 cube
 cube arr
-cube.pfm
 cullbitsbuffer
+culled by [ boundsgrp %d ] [ vis %d ] [ distance %d ] [ size %d ] [ backface %d ] [ gpu %d+%d+%d ]
 cullplanesbuffer
+cullstats
 curvature
 d
-data error
-data height too large.
-data width too large.
-dataWindow
-data_height =
+data_ == other.data_
 dddd
 dear imgui says hello. (%s)
 debug_chart_color
+debugdrawindirect
 debugoverlay_draw_current
+debugoverlay_force_respect_ttl
 debugoverlay_ignore_source
 debugoverlay_show_text_outline
 define: IMGUI_HAS_DOCK
@@ -4240,18 +5366,18 @@ define: IMGUI_HAS_VIEWPORT
 define: __GNUC__=%d
 define: __cplusplus=%d
 define: __linux__
+definition file imports the proto which defines the option.
 depthTarget
 desktop.ini
+details:
 dev
 digital_%d
 digital_0
 digital_1
 dimensions
-dir=%d %d %d, err=%f
 direct_light_shadows
 directional_irradiance
 display very important message here!
-displayWindow
 dl_iterate_phdr
 dme_position_map
 drag double
@@ -4276,13 +5402,23 @@ drag u32
 drag u64
 drag u8
 draw2D
+drawShadows
+drawcounts
+drawindirectargs
+drawindirectargs_debug
+drawindirectargs_recull
 drawmaterialquad2
 drawspotlights
 eeee
-eikonal
 enter text here
 envMapLayout
+environmentmapped
+environmentmappeddynamic
+error
+exceeded maximum protobuf size of 2GB:
 exp( %s )
+extend .$0 {
+f
 f %d %d %d
 f(x)
 f(x) = 10^x
@@ -4293,18 +5429,16 @@ f(x) = sin(x)+1
 f(x) = sin(x+.5)*100+200 (Y3)
 f(x) = x
 false
-fastshadowlayout_instance
 fastshadowlayout_transform
 fclose
-fesetround
-fff?fff?fff?fff?
 fflush
-file error
-filterinY
-filterinZ
+filmic curve           linear scale(whitepoint scaled to 1.0)
+filmic curve (log scale)
 fish_hat.c
 fish_hat.h
 fish_hat.inl
+flWaterDepth
+flWaterStart
 flags3
 float (indented)##1b
 float (indented)##2b
@@ -4319,66 +5453,208 @@ float0
 float1
 float32
 float64
-floatbitmap.cpp
-floatbitmap.cpp(126): Unknown gamma type "%s"!
-floatbitmap.cpp(2602): Error calling TGALoader::GetInfo( %s )
-floatbitmap.cpp(2613): Error loading %s
-floatbitmap.cpp(2636): Error! Unknown file type for %s
-floatbitmap.cpp(2655): Error! Slice %d format %dx%dx%d Attr(%d) != previous slices of %dx%d Attr(%d) for %s
-floatbitmap.cpp(304): Conversion not supported yet!
-floatbitmap.cpp(388): Conversion not supported yet!
-floatbitmap.cpp(942): Unsupported color format "%s", skipping!
 floor
 floorf
 fltx4
+fog
 fog_color
 fog_hdrcolorscale
 fog_lighting_clipmap_%d.vtex
-fog_override
+fogscale
+fogshadowmode
 foo
 fopen64
-formats.cpp
-fputc
-frame
+forceZPrePass
+fragmentbounds
 fread
-fread() error on
 free
 freeze_cols
 freeze_rows
-frexp
 fseek
 ftell
 func
 fwrite
+g
 g default
-g_Mathlib_GammaToLinearByteTable
 g_VProfCurrentProfile
+g_bCubemapNormalization
+g_bDisableNormalMapping
+g_bShowLPVVoxels
+g_bShowLightmapTexels
 g_bUpdateStringTokenDatabase
+g_bindlessFastPathSet
+g_bindlessSamplersSet
+g_bindlessTexturesSet
+g_lightBinnerCpuSet
+g_lightBinnerGpuSet
+g_lightProbeVolumeSet
+g_lightingSet
+g_nFirstView
+g_nJitterOffset
+g_nToolsVisMode
 g_pMemAlloc
 g_pThreadPool
+g_tFogIndirect
+g_tLastFrameFogVolume
+g_tLightingClipmap0
+g_tLightingClipmap1
+g_tLightingClipmap2
+g_tNoise
+g_vFogBoundingBoxInvMinScaleWithBias0
+g_vFogBoundingBoxInvMinScaleWithBias1
+g_vFogBoundingBoxInvMinScaleWithBias2
+g_vFogClipmapIndirectBBOffset
+g_vFogClipmapUVBiasScale0
+g_vFogClipmapUVBiasScale1
+g_vFogClipmapUVBiasScale2
+g_vFogClipmapUVWOffset0
+g_vFogClipmapUVWOffset1
+g_vFogClipmapUVWOffset2
+g_vIndirectBBScale_flIndirectStrength
 game
 generic
+generic_data_type
 global scale
 glyf
 glyphs
 gmtime_r
+google.protobuf.
+google.protobuf.Any
+google.protobuf.BoolValue
+google.protobuf.BytesValue
+google.protobuf.DescriptorProto.name
+google.protobuf.DescriptorProto.reserved_name
+google.protobuf.DoubleValue
+google.protobuf.Duration
+google.protobuf.Empty
+google.protobuf.EnumDescriptorProto.name
+google.protobuf.EnumDescriptorProto.reserved_name
+google.protobuf.EnumOptions
+google.protobuf.EnumValueDescriptorProto.name
+google.protobuf.EnumValueOptions
+google.protobuf.ExtensionRangeOptions
+google.protobuf.FieldDescriptorProto.default_value
+google.protobuf.FieldDescriptorProto.extendee
+google.protobuf.FieldDescriptorProto.json_name
+google.protobuf.FieldDescriptorProto.name
+google.protobuf.FieldDescriptorProto.type_name
+google.protobuf.FieldMask
+google.protobuf.FieldOptions
+google.protobuf.FieldOptions.boxed_type
+google.protobuf.FileDescriptorProto.dependency
+google.protobuf.FileDescriptorProto.name
+google.protobuf.FileDescriptorProto.package
+google.protobuf.FileDescriptorProto.syntax
+google.protobuf.FileOptions
+google.protobuf.FileOptions.additional_includes
+google.protobuf.FileOptions.csharp_namespace
+google.protobuf.FileOptions.go_package
+google.protobuf.FileOptions.java_outer_classname
+google.protobuf.FileOptions.java_package
+google.protobuf.FileOptions.objc_class_prefix
+google.protobuf.FileOptions.php_class_prefix
+google.protobuf.FileOptions.php_metadata_namespace
+google.protobuf.FileOptions.php_namespace
+google.protobuf.FileOptions.ruby_package
+google.protobuf.FileOptions.swift_prefix
+google.protobuf.FloatValue
+google.protobuf.GeneratedCodeInfo.Annotation.source_file
+google.protobuf.Int32Value
+google.protobuf.Int64Value
+google.protobuf.ListValue
+google.protobuf.MessageOptions
+google.protobuf.MethodDescriptorProto.input_type
+google.protobuf.MethodDescriptorProto.name
+google.protobuf.MethodDescriptorProto.output_type
+google.protobuf.MethodOptions
+google.protobuf.OneofDescriptorProto.name
+google.protobuf.OneofOptions
+google.protobuf.ServiceDescriptorProto.name
+google.protobuf.ServiceOptions
+google.protobuf.SourceCodeInfo.Location.leading_comments
+google.protobuf.SourceCodeInfo.Location.leading_detached_comments
+google.protobuf.SourceCodeInfo.Location.trailing_comments
+google.protobuf.StringValue
+google.protobuf.Struct
+google.protobuf.Timestamp
+google.protobuf.UInt32Value
+google.protobuf.UInt64Value
+google.protobuf.UninterpretedOption.NamePart.name_part
+google.protobuf.UninterpretedOption.aggregate_value
+google.protobuf.UninterpretedOption.identifier_value
+google.protobuf.Value
+google.protobuf.bridge.MessageSet
+google/protobuf/arenastring.cc
+google/protobuf/descriptor.cc
+google/protobuf/descriptor.pb.cc
+google/protobuf/descriptor.proto
+google/protobuf/extension_set.cc
+google/protobuf/extension_set_heavy.cc
+google/protobuf/generated_message_reflection.cc
+google/protobuf/generated_message_util.cc
+google/protobuf/io/coded_stream.cc
+google/protobuf/io/tokenizer.cc
+google/protobuf/io/zero_copy_stream_impl.cc
+google/protobuf/io/zero_copy_stream_impl_lite.cc
+google/protobuf/map_field.cc
+google/protobuf/message.cc
+google/protobuf/message_lite.cc
+google/protobuf/parse_context.cc
+google/protobuf/reflection_ops.cc
+google/protobuf/stubs/common.cc
+google/protobuf/stubs/int128.cc
+google/protobuf/stubs/stringpiece.cc
+google/protobuf/stubs/strutil.cc
+google/protobuf/stubs/substitute.cc
+google/protobuf/text_format.cc
+google/protobuf/unknown_field_set.cc
+google/protobuf/wire_format.cc
+google/protobuf/wire_format_lite.cc
+google::protobuf::FieldDescriptorProto_Label_IsValid(value)
+google::protobuf::FieldDescriptorProto_Type_IsValid(value)
+google::protobuf::FieldOptions_CType_IsValid(value)
+google::protobuf::FieldOptions_JSType_IsValid(value)
+google::protobuf::FileOptions_OptimizeMode_IsValid(value)
+google::protobuf::MethodOptions_IdempotencyLevel_IsValid(value)
+google::protobuf::StringPiece::StringPiece(const char*, google::protobuf::stringpiece_ssize_type)
+google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_begin()
+google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_end()
+google::protobuf::uint32 google::protobuf::UnknownField::fixed32() const
+google::protobuf::uint64 google::protobuf::UnknownField::fixed64() const
+google::protobuf::uint64 google::protobuf::UnknownField::varint() const
+google::protobuf::uint8* google::protobuf::internal::ExtensionSet::_InternalSerialize(int, int, google::protobuf::uint8*, google::protobuf::io::EpsCopyOutputStream*) const
 h
 half
+has the same name as
 head
+heat
 heat1
 heat2
 hello, world
 hexadecimal
 hhea
+hitgroup_default_opaque:%d
+hitgroup_default_transparent:%d
+hitgroup_shader_%p
 hmtx
 horizontal
 hue
+i < V_ARRAYSIZE( s_szMissShaderNames )
+i < length_
+ibl
 idle
+if you ignore case and strip out the enum name prefix (if any). This is error-prone and can lead to undefined behavior. Please avoid doing this. If you are using allow_alias, please assign the same numeric value to both enums.
+illum
+illumfrustum
 imGUI detached window
-imgui
 imgui_atlas
 imgui_log.txt
 imgui_render.cpp
+import "$0";
+import public "$0";
+import weak "$0";
+indirectLighting
+infinity
 inner_width
 inner_width (when ScrollX active)
 input double
@@ -4405,6 +5681,8 @@ input u64
 input u8
 instanceidbuffer
 instanceidbuffer2
+int google::protobuf::CalculateBase64EscapedLen(int, bool)
+internal error in map key sorting
 io.BackendFlags: 0x%08X
 io.BackendFlags: HasGamepad
 io.BackendFlags: HasMouseCursors
@@ -4441,10 +5719,13 @@ io.DisplaySize: %.2f,%.2f
 io.Fonts: %d fonts, Flags: 0x%08X, TexSize: %d,%d
 io.MouseDelta: (%.1f, %.1f)
 io.MouseDrawCursor
+is unused.
 item view
 items_count
 items_type (first column)
 jiggle bone %u
+json_name = "
+jstype is only allowed on int64, uint64, sint64, fixed64 or sfixed64 fields.
 kDisableShadows_All
 kDisableShadows_Baked
 kDisableShadows_None
@@ -4464,6 +5745,8 @@ lb_csm_override_staticgeo_cascades_value
 lb_csm_receiver_plane_depth_bias
 lb_cubemap_normalization_max
 lb_cubemap_normalization_roughness_begin
+lb_debug_light_bounds
+lb_debug_shadow_atlas
 lb_debug_silhouette
 lb_debug_tiles
 lb_enable_baked_shadows
@@ -4484,41 +5767,58 @@ lb_use_ellipsoid_bounds
 lb_use_illumination_silhouette
 ld-linux-x86-64.so.2
 left pane
+len >= 0
+len >= input_len
+length_ >= n
 libc.so.6
 libm.so.6
 libpthread.so.0
 libscenesystem.so
 libstdc++.so.6
 libtier0.so
+light AABB: %i clusters
+light frustum & illum bounds: %i clusters
+light frustum: %i clusters
+light illum bounds: %i clusters
+light_cookie
 lightbinner_gpu.cpp
 lightbinnerarray
 lighting_array_fog_RT1.vtex
 lighting_array_fog_RT2.vtex
 lightmap
 lightmapuv
-lineOrder
-lineartogamma
+lightsize
+linear
 listbox
 listbox 1
 loca
 localtime_r
 log
+log-luminance
+log-luminance (stops)
 log10
 long
 longeeer
-longjmp
 lowprecisionuv
 lowprecisionuv1
+lseek
+m
 m_ConeAxis
 m_ConeCutoff
-m_CullDataIndex
+m_CullingData
 m_DecodeDump
+m_Endpoints
+m_Format
 m_HitBoxSets
 m_HitBoxes
 m_LayerName
+m_Luminaire
 m_Name
+m_PackedAABB
+m_ScaledTangents
 m_SnapshotType
 m_SourceFilename
+m_Tangents
 m_Targets
 m_TextureId
 m_ViewName
@@ -4529,16 +5829,15 @@ m_bBonesInWorldSpace
 m_bCanBatchWithDynamicShaderConstants
 m_bClamp
 m_bDrawLast
-m_bEnableRetarget
 m_bHasBakedLightingFromLightMap
 m_bHasBakedLightingFromVertexStream
-m_bHasCullingData
 m_bHasDecodeDump
 m_bIgnoreRotation
 m_bInfluenceRootTransform
 m_bInverse
 m_bIsAttachment
 m_bIsNotMatchedToMaterial
+m_bLightInsideFrustum
 m_bSelected
 m_bTranslationOnly
 m_bUseCompressedNormalTangent
@@ -4552,7 +5851,6 @@ m_boneSetupMask
 m_boneTransforms
 m_bones
 m_cRenderColor
-m_chain
 m_constantBufferData.m_nNumFogVolumeBoundingBoxes[0] <= 128
 m_constraints
 m_dataChannelArray
@@ -4562,28 +5860,29 @@ m_decodedAnims
 m_directHSeqGroup
 m_directHSeqGroup_Handle
 m_displayText
+m_drawBounds
 m_drawCalls
-m_drawCullData
 m_dynamicParams
 m_dynamicTextureParams
 m_eHand
 m_eRbfType
-m_element
 m_elems
 m_fingers
+m_flAlpha
 m_flBindPoseDirectionMS
-m_flDistance
+m_flEndcapAreaPercentage
 m_flFalloff
 m_flFingerScaleRatio
 m_flFingerWeight
 m_flFootLength
-m_flMass
+m_flLightColorToRadiance
 m_flMax
 m_flMaxAngle
 m_flMin
 m_flMinAngle
 m_flRadius
 m_flRealTime
+m_flShape
 m_flShapeRadius
 m_flSphereRadius
 m_flSplayMaxAngle
@@ -4612,11 +5911,13 @@ m_intAttributes
 m_intParams
 m_internalOps
 m_invBindPose
-m_invTransform
 m_localHAnimArray
 m_localHAnimArray_Handle
+m_mFromClipSpace
+m_mToClipSpace
 m_material
 m_materialName
+m_meshlets
 m_metacarpalBoneName
 m_modelName
 m_morphArray
@@ -4624,54 +5925,54 @@ m_morphSet
 m_nBaseVertex
 m_nBindOffsetBytes
 m_nBoneHash
-m_nBoneIndex
 m_nBoneNameHash
 m_nBoneWeightCount
-m_nChainIndex
-m_nChainInvIndex
-m_nChainType
 m_nChannelElements
+m_nCookie
 m_nD3DSemanticIndex
 m_nDepth
-m_nElement
 m_nElementIndexArray
 m_nElementMaskArray
-m_nElementType
 m_nEntIndex
 m_nEntityIndex
 m_nFingerIndex
+m_nFirstMeshlet
 m_nFlags
 m_nFormat
 m_nFrameCount
 m_nGroupId
-m_nGroupType
 m_nHeight
 m_nHitBoxIndex
 m_nIndexCount
 m_nInfluences
-m_nInstanceCount
+m_nInstanceStepRate
 m_nLayerId
 m_nLayerIndex
-m_nMeshID
+m_nLuminaireType
+m_nMax
+m_nMin
 m_nMultisampleNumSamples
 m_nNameHash
+m_nNumMeshlets
 m_nNumMipLevels
 m_nNumObjects <= V_ARRAYSIZE( m_objectReferences )
 m_nNumObjects >= 0
+m_nOffset
 m_nPrimitiveType
 m_nRequestedHeight
 m_nRequestedWidth
-m_nRetargetStyle
+m_nSemanticIndex
 m_nShapeType
 m_nSlaveAxis
 m_nSlaveChannel
+m_nSlot
+m_nSlotType
 m_nStartIndex
-m_nStartInstance
 m_nTargetAxis
 m_nType
 m_nUpType
-m_nValue
 m_nVertexCount
+m_nViewId
 m_nWidth
 m_name
 m_outerKnuckle1
@@ -4682,6 +5983,7 @@ m_outputWeightList
 m_pD3DSemanticName
 m_pName
 m_pSemantic
+m_pSemanticName
 m_pValue
 m_parent
 m_parentName
@@ -4693,15 +5995,13 @@ m_qAlignment
 m_qBaseOrientation
 m_qChildBindRotation
 m_qOffset
+m_qOrientation
 m_qParentBindRotation
 m_quat
 m_renderAttributesUsed
-m_replicated
-m_retarget
 m_rootToWorld
 m_sAttachmentName
 m_sBoneName
-m_sChainName
 m_sName
 m_sSurfaceProperty
 m_sTargetMorph
@@ -4721,20 +6021,29 @@ m_textureAttributes
 m_textureParams
 m_tipParentBoneName
 m_toeBoneName
-m_transform
 m_userArray
+m_vAngleFade
 m_vBallOffset
 m_vBasePosition
 m_vCapsulePos1
 m_vCapsulePos2
+m_vCenter
+m_vColor
 m_vConeApex
+m_vDistanceFade
 m_vForwardLS
 m_vHeelOffset
 m_vInfluenceOffsets
 m_vInfluenceRotations
+m_vInnerRadius
+m_vLightPosition
 m_vMaxBounds
 m_vMinBounds
+m_vNearPlane
+m_vNormal
 m_vOffset
+m_vPosition
+m_vSkirt
 m_vSplayHingeAxis
 m_vTintColor
 m_vTipOffset
@@ -4744,8 +6053,6 @@ m_vUpLS
 m_vUpVector
 m_value
 m_vecCenter
-m_vecMax
-m_vecMin
 m_vecSize
 m_vectorAttributes
 m_vectorParams
@@ -4755,11 +6062,28 @@ m_wristBones
 main.c
 malloc
 manyquads
+map keys are not unique
+map<$0, $1>
+map_entry should not be set explicitly. Use map<KeyType, ValueType> instead.
+mapbuilder.blocklight
 mapbuilder.nodraw
 mapbuilder.occluder
 mat_fullbright
 mat_tonemap_bloom_scale
 mat_tonemap_bloom_start_value
+mat_tonemap_csgo_bloom_scale
+mat_tonemap_csgo_bloom_start_value
+mat_tonemap_csgo_debug
+mat_tonemap_csgo_force_accelerate_exposure_down
+mat_tonemap_csgo_force_average_lum_min
+mat_tonemap_csgo_force_max
+mat_tonemap_csgo_force_min
+mat_tonemap_csgo_force_percent_bright_pixels
+mat_tonemap_csgo_force_percent_target
+mat_tonemap_csgo_force_rate
+mat_tonemap_csgo_force_scale
+mat_tonemap_csgo_force_use_alpha
+mat_tonemap_csgo_uncap_exposure
 mat_tonemap_debug
 mat_tonemap_force_accelerate_exposure_down
 mat_tonemap_force_average_lum_min
@@ -4773,15 +6097,18 @@ mat_tonemap_force_rate
 mat_tonemap_force_scale
 mat_tonemap_force_use_alpha
 mat_tonemap_uncap_exposure
+mat_viewportscale
 materials/deferred_lights/envmaplight.vmat
 materials/deferred_lights/pointlight.vmat
 materials/deferred_lights/spotlight.vmat
 materials/deferred_lights/spotlight_shadowed.vmat
 materials/deferred_lights/spotlight_volumeshadowed.vmat
 materials/deferred_lights/sunlight.vmat
+materials/dev/aoproxy_splat.vmat
 materials/dev/compute_depthbin_cullbits.vmat
 materials/dev/compute_tile_cullbits.vmat
 materials/dev/cs_volumetric_fog.vmat
+materials/dev/cull_aggregate_fragments.vmat
 materials/dev/debug_show_texture.vmat
 materials/dev/debug_solid.vmat
 materials/dev/debug_sunshadow_vis.vmat
@@ -4803,11 +6130,17 @@ materials/dev/occlusionproxy_debugdraw.vmat
 materials/dev/primary_white.vmat
 materials/dev/primary_white_trans.vmat
 materials/dev/reflectivity_90.vmat
+materials/dev/rtx/binlights.vmat
+materials/dev/rtx/generate_scrambled_halton_samples.vmat
+materials/dev/rtx/hitgroup_default_opaque.vmat
+materials/dev/rtx/hitgroup_default_transparent.vmat
 materials/dev/ssao_convert_depth.vmat
 materials/dev/ssao_downsample_depth.vmat
 materials/dev/ssao_scalable_ao.vmat
+materials/dev/sum_aggregate_cull_stats.vmat
 materials/dev/tonemap_query.vmat
-materials/effects/aoproxy_splat.vmat
+materials/dev/visualize_aggregate.vmat
+materials/dev/visualize_depth.vmat
 materials/error.vmat
 materials/rendertargetops/copydepth.vmat
 materials/tools/copy_texture_with_gamma.vmat
@@ -4815,8 +6148,9 @@ materials/tools/copy_to_backbuffer.vmat
 materialsystem2
 matrix3x4_t
 mattestquad
+max scale: reresents the most a dark scene's exposure will be increased by.
+max scale:%.2f (%.1f stops)
 max( %s, %s )
-max. %f
 maxSpringTension
 maxdate
 maxp
@@ -4827,16 +6161,26 @@ memcmp
 memcpy
 memmove
 memset
+mergedindices
+mesh
 mesh.cpp
 mesh_calculate_curvature_smooth_invert
 mesh_calculate_curvature_smooth_pass_count
 mesh_calculate_curvature_smooth_weight
+meshletdata
 meshsystem
+message
+message of type "
 metalness for LPV debug grid
+mid-grey
+mid-grey1.0 (0 stops)
+min scale: represents the most a bright scene's exposure will be decreased by.
+min scale:%.2f (%.1f stops)
 min( %s, %s )
-min. %f
+min, max scale: min/max exposure scale clamps, set using min/max exposure brightnessin post_processing_volume entity or mat_tonemap_force_min/max.
 min_row_height = %.2f
 mindate
+minroughness
 mintime
 mktime
 model.cpp
@@ -4851,13 +6195,16 @@ my_toggle_popup
 mycolumns
 mycolumns3
 mypicker
+n
 n/a
 nDispatchX <= c_nClipmapDimension
 nDispatchY <= c_nClipmapDimension
 nDispatchZ <= c_nClipmapDimension
 nIndex < m_RenderTargets.Count()
 nTries < 10000000
-need dictionary
+nan
+network_connection.proto
+networkbasetypes.proto
 nextafterf
 no
 no blank
@@ -4865,39 +6212,53 @@ nomsaa + msaa copies
 nomsaa copy
 none
 norm
-notconnected
-notify
+null
+null material
+nullptr output boolean given.
+num pixels
 nxnstripped
+of the Protocol Buffer runtime library, but the installed version is
+of the Protocol Buffer runtime library, which is not compatible with the installed version (
 offset_angles
 offset_origin
+omitDepthFeathering
 operator delete(void*)
 operator delete(void*, std::nothrow_t const&)
+operator delete(void*, unsigned long)
 operator delete[](void*)
+operator delete[](void*, unsigned long)
 operator new(unsigned long)
 operator new(unsigned long, std::nothrow_t const&)
 operator new[](unsigned long)
 operator new[](unsigned long, std::nothrow_t const&)
-out of memory
+option json_name is not allowed on extension fields.
+optional
+optionallycompressedtangentframe
 outer_child
 outer_size
-outputcolor
-outputdepth
+output specified is nullptr
+outputColor
+outputDepth
+overlay_deferred
 p
 pA
 pB
+package $0;
 panorama
-parameter error
 parent of jiggle bone %u: %s
-particle_cloth_experimental_support
+parse
+parsing
 password
 password (clear)
 password (w/ hint)
+path_trace_light_flags
+permutations
 pervertexlighting
 phys_res
 physaggregatedata.cpp
 physib
-pixelAspectRatio
 pixelvis_debug
+please implement MergeFrom for your type.
 plots
 pm
 point0
@@ -4905,11 +6266,14 @@ point1
 pointLightLayout
 pos2Dtex2D
 position
-postprocess
 posxyz
 pow
+preserveColorBuffers
 prev layer not found
-ps_
+previewbaked
+previewindexed
+proto2
+proto3
 ptestbed
 pthread_mutex_destroy
 pthread_mutex_init
@@ -4918,17 +6282,24 @@ pthread_mutex_unlock
 pthread_mutexattr_init
 pthread_mutexattr_settype
 pthread_once
+q
+qangle
 quadLayout
-r_allow_morph_batching_on_base
 r_aoproxy_cull_dist
 r_aoproxy_min_dist
 r_aoproxy_min_dist_box
+r_character_decal_renderdoc_capture
+r_character_decal_resolution
+r_cpu_light_binner_32bit_shadows
+r_cpu_light_binner_allow_sun_shadows_on_spots
+r_cpu_light_binner_default_spec_env_fade_time
+r_cpu_light_binner_shadow_target_size
+r_cpu_light_binner_spot_shadow_size
 r_cpu_light_binner_use_gpu
 r_cubemap_debug_colors
 r_directional_lightmaps
 r_dither_scale
 r_dopixelvisibility
-r_draw_animatables
 r_draw_overlays
 r_drawpixelvisibility
 r_fallback_texture_lod_scale
@@ -4947,6 +6318,7 @@ r_pixelvisibility_spew
 r_render_to_cubemap_debug
 r_reset_character_decals
 r_shadows
+r_size_cull_threshold_fade
 r_size_cull_threshold_shadow
 r_skinning_enabled
 r_ssao_bias
@@ -4957,7 +6329,9 @@ r_stereo_mode_anaglyph
 r_stereo_mode_crossed
 r_stereo_mode_parallel
 r_stereo_multiview_instancing
+r_texture_budget_dynamic
 r_texture_lod_scale
+r_texture_pool_size
 radio a
 radio b
 radio c
@@ -4965,44 +6339,64 @@ range float
 range int
 range int (no bounds)
 ratio = %.3f
+raytrace.cpp
 rb
-realloc
+recullcounter
+reculldispatchargs
+recullrequests
+recursion_budget_ < recursion_limit_
+reflection_clip_plane
+reflection_outputcolor
+reflection_outputdepth
+refraction_clip_plane
+refraction_outputcolor
 remapping vertex %d[w%d] invalid: %d->%d >= %d
 remapping vertex %d[w%d] invalid: %d->? >= %d
+render3DSkybox
+renderDecals
+renderReflectiveObjects
+renderSSAO
+renderSky
+renderTranslucent
+renderTranslucentScreenSpace
+renderViewModel
+renderbackfaces
+renderbatchlist.cpp
 renderingpipelineforward.cpp
 rendertarget_
 rendertarget_dscratch_%d_%d.vtex
-rendertarget_scratch_1010102_mip_%d_%d
+rendertarget_r11g11b10f_%d_%d
 rendertarget_scratch_16161616F_mip_%d_%d
-rendertarget_scratch_8888_mip_%d_%d
 rendertarget_ssao_depth_%d_%d
 rendertargets
+rendertargettoken.cpp
+repeated
+required
 resolved_rt
 resource
 resource_name
 right-align
 roughness for LPV debug grid
-roundf
 row bg target
 row bg type
 row_min_height
-rows of transform texture
-rt_bakecubemap.vtex
-rt_bakecubemap_depthstencil.vtex
+rtx_force_default_hitgroup
+rtx_random_samples.vtex
 runspeed
 s offg cMeshusemtl initialShadingGroup
-sRGB
+sc_aggregate_gpu_culling
+sc_aggregate_gpu_culling_show_culled
+sc_aggregate_gpu_occlusion_culling
+sc_aggregate_material_solo
 sc_allow_dynamic_constant_batching
 sc_allow_secondary_contexts
-sc_animatable_disable_materials
-sc_animatable_fastpath_always_bind_materials
-sc_animatable_fastpath_enable_sort
 sc_aux_cameras_enabled
 sc_batch_layer_cb_updates
 sc_bounds_group_cull
 sc_cache_envmap_lpv_lookup
 sc_check_world
 sc_disableThreading
+sc_disable_baked_lighting
 sc_disable_culling_boxes
 sc_disable_procedural_layer_rendering
 sc_disable_shadow_fastpath
@@ -5018,7 +6412,6 @@ sc_dumpworld3d
 sc_dumpworld3d %d
 sc_enable_discard
 sc_extended_stats
-sc_force_camera
 sc_force_lod_level
 sc_force_materials_batchable
 sc_force_push_constant_update_every_draw
@@ -5031,7 +6424,6 @@ sc_layer_batch_threshold_fullsort
 sc_list_extradata_allocations
 sc_listworlds
 sc_lod_distance_scale_override
-sc_log_stats
 sc_log_submits
 sc_max_framebuffer_copies_per_layer
 sc_mesh_backface_culling
@@ -5042,7 +6434,6 @@ sc_only_render_opaque
 sc_only_render_shadowcasters
 sc_override_shadow_fade_max_dist
 sc_override_shadow_fade_min_dist
-sc_precise_projection_to_world
 sc_queue_reflection_views_to_layers
 sc_reject_all_objects
 sc_setclassflags
@@ -5057,6 +6448,7 @@ sc_show_gpu_profiler
 sc_show_rejected_objects
 sc_show_rejected_objects_range
 sc_show_texture_visualizer
+sc_show_tonemap_visualizer
 sc_showclasses
 sc_skip_identical_rt_binds
 sc_skip_traversal
@@ -5068,10 +6460,12 @@ sc_visualize_sceneobjects
 scene_quadindexbuffer
 scenegfxresources
 scenegfxresources.cpp
-scenelayer.cpp
+sceneinfo_gpu - Load Materials
 scenelight.cpp
 scenelpvdebuggrid.cpp
 sceneobject_h
+sceneobject_methods.cpp
+sceneraytracing.cpp
 scenesimpleidx
 scenesimplevb
 scenesysBox
@@ -5079,31 +6473,31 @@ scenesysCone
 scenesysDodecahedron
 scenesysPyramid
 scenesystem
-scenesystem.cpp
-scenesystem.cpp(5764): Expecting 1 renderable pass for material "%s" but found %d!
-scenesystem.cpp(6984): Waited 500 ms for jobs to complete. Attempt to drain windows message queue.
-scenesystem.h
+scenesystem.cpp(3311):
+scenesystem.cpp(5843): Expecting 1 renderable pass for material "%s" but found %d!
+scenesystem.cpp(7014): Waited 500 ms for jobs to complete. Attempt to drain windows message queue.
 scenesystemdebug
 scenetextureset_%d
+sceneview.cpp
 sceneviewdebugoverlays.cpp
-schemabindings.cpp
 schematype.cpp
 scratch_rt_result_%d_%d
 scratchrendertarget_%d_%dx%d_%d_%d.vtex
 scratchrendertargetsystem.cpp
-screenWindowCenter
-screenWindowWidth
 screenmessage_show
 seaborn style
 seq_trans
-server_can_execute
-set1
-set2
+serialize
+serializing
+service $0 {
 set3
-setting m_SimulationState[%d].m_flSimulationTime=%f
-shadowcache.cpp
+sfixed32
+sfixed64
+shadow_atlas_depth_%d_%d.vtex
 shadowcolor
 shadowdepth
+shadowmapsize
+shadowpriority
 sharpStartAngle
 show_headers
 show_widget_frame_bg
@@ -5112,10 +6506,12 @@ sin
 sin( %s )
 sin(x)
 sincos
-singleplayer
 singletons.cpp
+sint32
+sint64
+size too big:
+size_t to int conversion
 sizeof(size_t): %d, sizeof(ImDrawIdx): %d, sizeof(ImDrawVert): %d
-skybox.cpp
 slider angle
 slider double high
 slider double low
@@ -5171,91 +6567,111 @@ sqrt( %s )
 sqrtf
 srand
 srgb
-srgbgammatolinear
-ss_added
+stack frames not accounted for stack unwind.
 static const ImVec4 colormap[%d] = {
+stats_display
 std::_Function_base::_Base_manager<void (*)(CSceneObject*)>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Hash_bytes(void const*, unsigned long, unsigned long)
+std::_Rb_tree_decrement(std::_Rb_tree_node_base const*)
+std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
+std::_Rb_tree_increment(std::_Rb_tree_node_base const*)
+std::_Rb_tree_increment(std::_Rb_tree_node_base*)
+std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+std::_Rb_tree_rebalance_for_erase(std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_destroy()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()
-std::__exception_ptr::exception_ptr::exception_ptr(std::__exception_ptr::exception_ptr const&)
-std::__exception_ptr::exception_ptr::swap(std::__exception_ptr::exception_ptr&)
-std::__exception_ptr::exception_ptr::~exception_ptr()
-std::__exception_ptr::operator==(std::__exception_ptr::exception_ptr const&, std::__exception_ptr::exception_ptr const&)
-std::__future_base::_Result_base::_Result_base()
-std::__future_base::_Result_base::~_Result_base()
-std::__future_base::_State_base::~_State_base()
+std::__detail::_Prime_rehash_policy::_M_need_rehash(unsigned long, unsigned long, unsigned long) const
+std::__detail::_Prime_rehash_policy::_M_next_bkt(unsigned long) const
 std::__once_call
 std::__once_callable
 std::__throw_bad_alloc()
-std::__throw_bad_cast()
 std::__throw_bad_function_call()
-std::__throw_future_error(int)
 std::__throw_length_error(char const*)
 std::__throw_logic_error(char const*)
-std::__throw_out_of_range_fmt(char const*, ...)
 std::__throw_system_error(int)
-std::basic_ios<char, std::char_traits<char> >::clear(std::_Ios_Iostate)
-std::basic_ios<char, std::char_traits<char> >::init(std::basic_streambuf<char, std::char_traits<char> >*)
-std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+std::basic_ios<char, std::char_traits<char> >::fill() const
+std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setfill<char>)
+std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setw)
+std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char>, std::allocator<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
 std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >::basic_ostringstream(std::_Ios_Openmode)
+std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >::~basic_ostringstream()
 std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)
 std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, unsigned long, std::allocator<char> const&)
 std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&)
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(unsigned long, char, std::allocator<char> const&)
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()
 std::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >::str() const
-std::chrono::_V2::steady_clock::now()
-std::condition_variable::condition_variable()
-std::condition_variable::notify_all()
-std::condition_variable::wait(std::unique_lock<std::mutex>&)
-std::ctype<char>::_M_widen_init() const
-std::ctype<char>::do_widen(char) const
-std::current_exception()
+std::exception::~exception()
 std::ios_base::Init::Init()
 std::ios_base::Init::~Init()
-std::ios_base::ios_base()
-std::ios_base::~ios_base()
-std::locale::locale()
-std::locale::~locale()
+std::istream::read(char*, long)
 std::nothrow
-std::ostream& std::ostream::_M_insert<double>(double)
-std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long)
-std::ostream& std::ostream::_M_insert<void const*>(void const*)
-std::ostream::flush()
-std::ostream::operator<<(int)
-std::ostream::put(char)
-std::rethrow_exception(std::__exception_ptr::exception_ptr)
+std::ostream::operator<<(std::ios_base& (*)(std::ios_base&))
+std::ostream::operator<<(unsigned long)
+std::ostream::write(char const*, long)
+std::string::_M_iend() const
+std::string::_M_leak()
+std::string::_M_leak_hard()
+std::string::_M_mutate(unsigned long, unsigned long, unsigned long)
 std::string::_Rep::_M_destroy(std::allocator<char> const&)
+std::string::_Rep::_M_set_length_and_sharable(unsigned long)
 std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&)
 std::string::_Rep::_S_empty_rep_storage
+std::string::_S_copy_chars(char*, char*, char*)
+std::string::append(char const*)
 std::string::append(char const*, unsigned long)
 std::string::append(std::string const&)
+std::string::append(std::string const&, unsigned long, unsigned long)
+std::string::append(unsigned long, char)
 std::string::assign(char const*, unsigned long)
 std::string::assign(std::string const&)
+std::string::at(unsigned long)
+std::string::at(unsigned long) const
+std::string::begin()
+std::string::clear()
 std::string::compare(char const*) const
-std::string::insert(unsigned long, char const*, unsigned long)
+std::string::compare(std::string const&) const
+std::string::end()
+std::string::end() const
+std::string::erase(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>)
+std::string::erase(unsigned long, unsigned long)
+std::string::find(char const*, unsigned long, unsigned long) const
+std::string::find(char, unsigned long) const
+std::string::find(std::string const&, unsigned long) const
+std::string::insert(unsigned long, char const*)
+std::string::insert(unsigned long, std::string const&)
+std::string::insert(unsigned long, unsigned long, char)
 std::string::operator+=(char const*)
+std::string::operator+=(std::string const&)
+std::string::operator=(char const*)
+std::string::operator=(std::string const&)
+std::string::push_back(char)
+std::string::replace(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char const*, std::string>, __gnu_cxx::__normal_iterator<char const*, std::string>)
+std::string::replace(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, char const*, char const*)
+std::string::replace(unsigned long, unsigned long, char const*)
+std::string::replace(unsigned long, unsigned long, char const*, unsigned long)
+std::string::reserve(unsigned long)
+std::string::resize(unsigned long)
+std::string::rfind(char, unsigned long) const
+std::string::substr(unsigned long, unsigned long) const
 std::string::swap(std::string&)
-std::terminate()
-std::thread::_M_start_thread(std::shared_ptr<std::thread::_Impl_base>)
-std::thread::join()
-std::vector<float, std::allocator<float> >::_M_default_append(unsigned long)
-std::vector<unsigned char, std::allocator<unsigned char> >::_M_default_append(unsigned long)
-std::vector<unsigned char, std::allocator<unsigned char> >::vector(unsigned long, std::allocator<unsigned char> const&)
-std::vector<unsigned short, std::allocator<unsigned short> >::vector(unsigned long, std::allocator<unsigned short> const&)
 stderr
 stdout
-strcasecmp
 strchr
 strcmp
 strcpy
-strdup
-stream end
-stream error
-string
+stream
+strerror
 strlen
-strncasecmp
+strpbrk
 strrchr
 strspn
 strstr
+strtof
+strtol
+strtoll
+strtoul
+strtoull
 style.FrameBorderSize: %.2f
 style.FramePadding: %.2f,%.2f
 style.FrameRounding: %.2f
@@ -5263,14 +6679,15 @@ style.ItemInnerSpacing: %.2f,%.2f
 style.ItemSpacing: %.2f,%.2f
 style.WindowBorderSize: %.2f
 style.WindowPadding: %.2f,%.2f
-sub%dx%d.tga
 subclass
-submrg%dx%d.tga
+subtype mismatch
+summedstats
 sunlightquadlayout
 sunlightscreenquad
 sunshadowdepthstencil
 sunshadowdummy
 sunshadows
+syntax = "$0";
 t
 table1
 table2
@@ -5291,29 +6708,49 @@ table_scrollx
 table_scrolly
 table_sorting
 tangentu_signv
+target avg lum
+target avg lum  tonemap scale:  %.2f (%.2f stops)
 tesidx
 tests1
 texcoord
+text format contains deprecated field "
+texture_memory
+texture_streaming
 textures/dev/blue_noise_256.vtex
 textures/dev/ggx_integrate_brdf_lut_schlick.vtex
+textures/dev/scrambled_halton.vdata
+the Element type supplies a MergeFrom() operation to make copies.
+the actual field type (for enums T should be the generated enum
+the global scope
 this cell %d
 this is a 300-wide button
 this is a tree node
 timegm
+tint_color
+tonemap scale: final exposure scale used to scale HDR values before tonemapping.mid-grey in HDR becomes 'target average lum' after scaling -> mid-grey (0.18) in LDR.
 tonemap.cpp: g_pRenderDevice->CreateQueryObject( RENDER_QUERY_OCCLUSION ) failed!
+tools.toolsmaterial
+tools_preview
 toupper
-transformtexture_.vtex
+transformbuffer
 tree
 true
-trunc
 trying to move layer %s after unfound layer %s
 trying to move non existent layer
+type does not match
+type or int32).
+type() == TYPE_FIXED32
+type() == TYPE_FIXED64
+type() == TYPE_GROUP
+type() == TYPE_LENGTH_DELIMITED
+type() == TYPE_VARINT
+type.googleapis.com/
+type.googleprod.com/
 typeinfo for CThreadSyncObject
 typeinfo for std::_Mutex_base<(__gnu_cxx::_Lock_policy)2>
 typeinfo for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>
 typeinfo for std::_Sp_make_shared_tag
-typeinfo for std::__future_base::_Result_base
-typeinfo for std::__future_base::_State_base
+typeinfo for std::exception
 typeinfo name for std::_Mutex_base<(__gnu_cxx::_Lock_policy)2>
 typeinfo name for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>
 typeinfo name for std::_Sp_make_shared_tag
@@ -5321,37 +6758,53 @@ uint16
 uint32
 uint64
 uint8
+uniform_color
+uninterpreted_option
+unknown
 unrecognized string in token spec %s
 unspecified
 unused
+updateFogLights
 uppercase
 useMotionDamping
 useSmoothPaths
-user
 utils/characterdecalrenderer.cpp
 utils/scalable_ambient_obscurance.cpp
 utils/sceneutils.cpp
-utils/sceneutils.h(70): Material %s cannot render in mode %s but is being asked to
+utils/sceneutils.h(66): Material %s cannot render in mode %s but is being asked to
 utils/tonemapsystem.cpp
 utils/volumetricfog.cpp
+utlgrid.cpp:238
 uvtangent
+v
 v %g %g %g
 v %g %g %g%s
-v2f
+valveextensions.proto
 vb phys
+vector2
+vector3
+vector4
 vector::_M_default_append
 vector::_M_emplace_back_aux
+vector::_M_insert_aux
 vector::_M_range_insert
-version error
+vector::reserve
 vertexbuffer
 vertical
+view.bIsToolView
+viewModelFarPlane
+viewModelFov
+viewmodel
 vn %g %g %g
 void
-void std::vector<std::vector<unsigned long, std::allocator<unsigned long> >, std::allocator<std::vector<unsigned long, std::allocator<unsigned long> > > >::_M_emplace_back_aux<std::vector<unsigned long, std::allocator<unsigned long> > const&>(std::vector<unsigned long, std::allocator<unsigned long> > const&)
-void std::vector<unsigned char, std::allocator<unsigned char> >::_M_emplace_back_aux<unsigned char const&>(unsigned char const&)
-void std::vector<unsigned char, std::allocator<unsigned char> >::_M_range_insert<__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > > >(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, std::forward_iterator_tag)
-void std::vector<unsigned char, std::allocator<unsigned char> >::_M_range_insert<char*>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, char*, char*, std::forward_iterator_tag)
-void std::vector<unsigned char, std::allocator<unsigned char> >::_M_range_insert<unsigned char const*>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char const*, unsigned char const*, std::forward_iterator_tag)
+void google::protobuf::FieldDescriptorProto::_internal_set_label(google::protobuf::FieldDescriptorProto_Label)
+void google::protobuf::FieldDescriptorProto::_internal_set_type(google::protobuf::FieldDescriptorProto_Type)
+void google::protobuf::FieldOptions::_internal_set_ctype(google::protobuf::FieldOptions_CType)
+void google::protobuf::FieldOptions::_internal_set_jstype(google::protobuf::FieldOptions_JSType)
+void google::protobuf::FileOptions::_internal_set_optimize_for(google::protobuf::FileOptions_OptimizeMode)
+void google::protobuf::MethodOptions::_internal_set_idempotency_level(google::protobuf::MethodOptions_IdempotencyLevel)
+void google::protobuf::io::CodedInputStream::UnsafeDecrementRecursionDepth()
+void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int const&>(int const&)
 void_context
 volume_fog_clipmap_update
 volume_fog_clipmaps_enabled
@@ -5368,18 +6821,13 @@ volume_fog_show_volumes
 volume_fog_vr_single_dispatch
 volume_fog_width
 volumetric_fog.vtex
+vrRefractColor
 vr_disable_view_override
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__function_type_info
 vtable for __cxxabiv1::__pointer_type_info
 vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
-vtable for std::__future_base::_State_base
-vtable for std::basic_ios<char, std::char_traits<char> >
-vtable for std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >
-vtable for std::basic_streambuf<char, std::char_traits<char> >
-vtable for std::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >
-vtable for std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >
 w/ default threshold: %d,
 w/ default threshold: (%.1f, %.1f)
 w/ large threshold: %d,
@@ -5387,7 +6835,9 @@ w/ zero threshold: %d,
 w/ zero threshold: (%.1f, %.1f)
 walkspeed
 warn
-wb
+was modified concurrently during serialization.
+waterDepth
+waterStart
 wellknown_black_1x1
 wellknown_black_2x2x2
 wellknown_black_cube_1x1
@@ -5399,31 +6849,45 @@ wellknown_opaque_black_2x2x2
 wellknown_transparent_black_1x1
 wellknown_transparent_black_array_1x1
 wellknown_white_1x1
+wellknown_white_1x1x1
 wellknown_white_array_1x1x1
+wellknown_zero_1x1_uint.vtex
+whitepoint
+whitepoint: filmic whitepoint scaled by tonemap scale.[0..whitepoint] in HDR gets tonemapped to [0..1] in LDR.
 window scale
 window_context
+wireframeColor
+with a type that does not implement MergeFrom. This is unsafe;
+with type
 word-wrapping
+wrong submessage type
 wt
 x
+x%ixAA
 x-axis
 x=150
 x=300
+xC
 x^2
+y
 y-axis
 y1
 y2
-y@
-yes
 you can drag analog signals over the rising/falling digital edge.
+z
 z>
-zC
 zD
+zPrePassNormals
 {
+{ ... };
+{$0$1}
 |
 |/-\
+|?
+|B
 }
 } %llu aggs, %s total data
+} from:
 };
 
-A
 C

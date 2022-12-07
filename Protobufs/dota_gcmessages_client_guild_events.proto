@@ -138,10 +138,11 @@ message CMsgClientToGCSelectGuildContractResponse {
 		k_eInvalidContractID = 9;
 		k_eAlreadyAssigned = 10;
 		k_eInvalidContractSlot = 11;
-		k_eContractSlotLocked = 12;
+		k_eContractSlotLockedGuild = 12;
 		k_eContractSlotCooldown = 13;
 		k_eContractDuplicate = 14;
 		k_eContractSlotTimeError = 15;
+		k_eContractSlotLockedDotaPlus = 16;
 	}
 
 	optional .CMsgClientToGCSelectGuildContractResponse.EResponse result = 1 [default = k_eInternalError];
@@ -198,29 +199,14 @@ message CMsgClientToGCRequestGuildEventMembersResponse {
 }
 
 message CMsgGuildLeaderboardCombinedResponse {
-	message Entry {
-		optional uint32 id = 1;
-		optional uint32 r = 2;
-		optional uint32 c = 3;
-		optional uint32 w = 4;
-		optional uint32 p = 5;
-	}
-
 	optional .EEvent event_id = 1 [default = EVENT_ID_NONE];
 	optional uint32 region = 2;
 	optional uint32 last_updated = 3;
-	repeated .CMsgGuildLeaderboardCombinedResponse.Entry entries = 4;
-}
-
-message CMsgGuildLeaderboardCombinedResponseV2 {
-	optional .EEvent event_id = 1 [default = EVENT_ID_NONE];
-	optional uint32 region = 2;
-	optional uint32 last_updated = 3;
-	repeated uint32 id = 4 [packed = true];
-	repeated uint32 r = 5 [packed = true];
-	repeated uint32 c = 6 [packed = true];
-	repeated uint32 w = 7 [packed = true];
-	repeated uint32 p = 8 [packed = true];
+	repeated uint32 guild_id = 4 [packed = true];
+	repeated uint32 rank = 5 [packed = true];
+	repeated uint32 current_percentile = 6 [packed = true];
+	repeated uint32 weekly_percentile = 7 [packed = true];
+	repeated uint32 points = 8 [packed = true];
 }
 
 message CMsgClientToGCClaimLeaderboardRewards {

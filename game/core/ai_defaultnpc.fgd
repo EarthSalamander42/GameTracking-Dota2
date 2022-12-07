@@ -44,7 +44,7 @@
 	input DisableChoreoPhysProxy(void) : "Disable the phys proxy."
 	input DisableRandomLookAts( boolean ) : "Disables the AI's random lookAts."
 	input EnableRandomLookAts( boolean ) : "Enables the AI's random lookAts."
-	input ForceLookAtTarget( void ): "Set named actor to be the look at target"
+	input ForceLookAtTarget( string ): "Set named actor to be the look at target"
 	input ClearForcedLookAtTarget( void ): "Clear the look at target set by ForceLookAtTarget"
 	input LookAtIgnoreHands( void ) : "NPC does not look at the player hands"
 	input LookAtUseHands( void ) : "NPC will look at the player hands"
@@ -52,6 +52,8 @@
 	input EnableAbility( string ) : "Enables an ability on the NPC"
 	input DisableAbility( string ) : "Disables an ability on the NPC"
 	input RemoveAbility( string ) : "Removes an ability to the NPC"
+	input SetForceWalkRun(integer) : "Force this NPC to walk or run. Parameter: 0 - Return to AI, 1 - Force Walk, 2 - Force Run."
+	input SetForceAim(integer) : "Force this NPC to aim or not aim. Parameter: 0 - Return to AI, 1 - Force Aiming, 2 - Force Not Aiming. Note that an NPC forced to Not Aim may be non-functional in combat."
 ]
 
 @BaseClass base(DefaultNPC) = TalkNPC
@@ -220,6 +222,11 @@
 	lightingorigin(target_destination) : "Lighting Origin" : "" : "Select an entity to specify a location to sample lighting from, instead of using this entity's origin."
 ]
 
+@PointClass base(npc_furniture) tags( Choreo ) model() iconsprite("editor/ghost_speaker.vmat") = ghost_speaker : "A meshless model you can use as a speaker location for vcd's"
+[
+	model(studio) : "Model" : "models/actors/ghost_speaker.vmdl"
+]
+
 @NPCClass base(Parentname, DefaultNPC) iconsprite("editor/bullseye.vmat") color(255 0 0) = npc_bullseye : "Bullseye"
 [
 	// Unlike other NPCs level designers are allowed to set the health on bullseyes
@@ -299,11 +306,6 @@
 		0 : "Enqueue"
 		1 : "Interrupt"
 	]
- 	m_nGroundIKPreference(choices) : "Ground IK Preference" : 0 : "If this NPC has ground IK; whether we disable it for the playthrough of the sequence or not." = 
-	[
-		0 : "No change"
-		1 : "Disable for this sequence"
-	] 
 
 	m_flRadius(integer) : "Search Radius (0=everywhere)" : 0 : "Radius to search within for an NPC to use. 0 searches everywhere."
 	m_flRepeat(integer) : "Repeat Rate ms" : 0
@@ -457,16 +459,22 @@
 	output OnFailedToPerform(void) : "Fired when any target NPC(s) fails to move to the destination. This occurs if no target NPCs could be found, or if they were found but were in a state that couldn't be broken out of to perform the movement."
 ]
 
-@PointClass base(Targetname) tags( Choreo ) selected_line( 255 255 255, targetname, m_iszTarget ) color(255 0 255)  iconsprite("editor/ai_scripted_moveto") = ai_scripted_moveto :
+@PointClass base(Targetname) tags( Choreo ) selected_line( 255 255 255, targetname, m_iszTarget ) selected_line( 255 255 255, targetname, m_iszNPC ) color(255 0 255)  iconsprite("editor/ai_scripted_moveto") = ai_scripted_moveto :
 	"Forces an NPC to move to a specified destination entity."
 [
 	m_iszNPC(target_destination) : "Target NPC(s)" : : "The name or classname of an NPC to use. If multiple NPCs are found, all of them will be told to move to the Target Destination."
 	m_iszTarget(target_destination) : "Target Destination" : "" : "The entity that marks the destination of this move-to."
 
-	resilient(choices) : "Reacquire after break" : 1 : "If set , once the NPC returns to idling, it'll resume the move-to until reaching the destination, even if it previously broke out of the schedule due to the Interruptability choices." =
+	resilient(choices) : "Reacquire after break" : 1 : "If set, if the NPC doesn't complete the movement, it'll retry, even if it previously broke out of the schedule due to the Interruptability choices. Note that by default, the Reacquisition Priority is Low, which means they'll only retry when they're idling. Set that to High if you want them to retry in combat." =
 	[
 		0 : "No"
 		1 : "Yes"
+	]
+
+	resumepriority(choices) : "Reacquisition Priority" : 0 : "Used to decide when to retry the moveto after it failed. Low means only retry when the NPC is about to idle. High means it should retry any time the NPC selects a schedule, unless the NPC needs to perform a critical schedule (like being required to flinch in response to heavy damage)." =
+	[
+		0 : "Low"
+		1 : "High"
 	]
 
 	shouldsetenemy(choices) : "Set Enemy To Target" : 0 : "If the target destination is an NPC or player, setting this to 'Yes' will also give commanded NPCs memory of the target, and cause them to set their enemy to it. Note that if there's another NPC that's a better enemy, commanded NPCs will flip to the better enemy on their next think." =
@@ -481,7 +489,7 @@
 		1 : "Yes"
 	]
 
-	interruptability(choices) : "Interruptability" : 0 : "Sets what kind of events can interrupt an NPC that's performing this move to. Note that when set to 'Everything', NPCs can be easily interrupted by small things like physics impact sounds, or distant combat sounds." =
+	interruptability(choices) : "Interruptability" : 0 : "Sets what kind of events can interrupt an NPC that's performing this move to. Note that this only describes events that interrupt the moveto while it's working properly, not whether or not movement itself can fail. So even if this is set to 'Nothing', a moveto can still fail due to core movement failure (path failing / route blocked). Also, note that when set to 'Everything', NPCs can be easily interrupted by small things like physics impact sounds, or distant combat sounds." =
 	[
 		0 : "Everything that usually interrupts AI"
 		3 : "Direct Combat (Seeing enemies, taking damage, etc)"
@@ -489,12 +497,10 @@
 		2 : "Nothing"
 	]
 
-	movementtype(choices) : "Movement Type" : 0 : "Set movement type" =
-	[
-		0 : "Walk"
-		1 : "Run"
-	]
-	
+	force_lookat_path(boolean) : "Force LookAt Path?" : "No" : "If yes, the NPC will be forced to keep looking in the direction its path during the moveto. "
+
+	npc_lock_delay(float) : "NPC Lock Delay" : "0" : "Optionnal per NPC override of the same parameter defined in the lock trigger."
+
 	// Inputs
 	input StartMoveTo(void) : "Starts all target NPC(s) moving to the target destination."
 	input StopMoveTo(void) : "Stops all target NPCs that are performing this move to."
@@ -509,8 +515,10 @@
 	"Forces an NPC to perform an ability at a specified target."
 [
 	m_iszNPC(target_destination) : "Target NPC(s)" : "" : "The name or classname of an NPC to use. If multiple NPCs are found, all of them will be told to perform the ability at the Ability Target."
-	m_iszAbilityName( vdata_choice:scripts/misc.vdata&scripts/npc_abilities.vdata ) : "Ability Subclass to Perform" : "" : "Subclass of the ability that target NPC(s) should perform against the Ability Target."
+	m_iszAbilityName(npc_ability_name) : "Ability Subclass to Perform" : "" : "Subclass of the ability that target NPC(s) should perform against the Ability Target."
 	m_iszTarget(target_destination) : "Ability Target" : "" : "The entity that marks the target of the ability."
+	m_bAddIfMissing(boolean) : "Add Ability if Missing?" : "No" : "If yes, we'll add the ability to the NPC when trying to execute it. "
+
 	m_nAbilityTargetBodyLoc(choices) : "Target Body Location" : 3 : "The body location on the Ability Target entity that the ability should target." =
 	[
 		0 : "Eyes"
@@ -544,6 +552,8 @@
 		0 : "No"
 		1 : "Yes"
 	]
+
+	npc_lock_delay(float) : "NPC Lock Delay" : "0" : "Optionnal per NPC override of the same parameter defined in the lock trigger."
 
 	// Inputs
 	input PerformAbility(void) : "Tells all target NPC(s) to perform the ability."

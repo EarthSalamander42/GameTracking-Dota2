@@ -1,4 +1,5 @@
-panorama/images/control_icons/double_arrow_left_png.vtex
+panorama/images/control_icons/arrow_solid_right_png.vtex
+panorama/images/control_icons/plus_png.vtex
 panorama/layout/custom_game/custom_loading_screen.vxml
 panorama/layout/custom_game/custom_ui_manifest.vxml
 addoninfo.txt
@@ -12,6 +13,8 @@ materials/overviews/hero_demo_frostivus.vmat
 materials/overviews/hero_demo_frostivus_tga_b912263e.vtex
 materials/overviews/hero_demo_main.vmat
 materials/overviews/hero_demo_main_tga_10bb8a0.vtex
+panorama/images/control_icons/single_arrow_left_png.vtex
+panorama/images/refresh_icon_png.vtex
 panorama/layout/custom_game/hud_hero_demo.vxml
 panorama/scripts/hud_hero_demo.vjs
 panorama/styles/hud_hero_demo.vcss
@@ -33,6 +36,7 @@ resource/addon_italian.txt
 resource/addon_japanese.txt
 resource/addon_korean.txt
 resource/addon_koreana.txt
+resource/addon_latam.txt
 resource/addon_norwegian.txt
 resource/addon_polish.txt
 resource/addon_portuguese.txt
@@ -45,11 +49,12 @@ resource/addon_tchinese.txt
 resource/addon_thai.txt
 resource/addon_turkish.txt
 resource/addon_ukrainian.txt
+resource/addon_vietnamese.txt
 resource/overviews/hero_demo_frostivus.txt
 resource/overviews/hero_demo_main.txt
+scripts/custom_net_tables.txt
 scripts/npc/npc_abilities_custom.txt
 scripts/npc/npc_abilities_override.txt
 scripts/npc/npc_units_custom.txt
 soundevents/game_sounds_hero_demo.vsndevts
 tools_settings.txt
-scripts/custom_net_tables.txt

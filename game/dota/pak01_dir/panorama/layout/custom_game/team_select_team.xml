@@ -1,3 +1,4 @@
+<!-- xml reconstructed by ValveResourceFormat: https://vrf.steamdb.info/ -->
 <root>
 	<styles>
 		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
@@ -9,10 +10,10 @@
 	<Button class="TeamSelectTeam" onactivate="OnJoinTeamPressed()">
 		<Panel id="TeamBackgroundGradient" />
 		<Panel id="TeamBackgroundGradientHighlight" />
-		<Panel id="TeamGroup" >
+		<Panel id="TeamGroup">
 			<Panel id="TeamHeader">
 				<Panel id="TeamLogo" />
-				<Label id="TeamNameLabel" text="TEAM_NAME" />
+				<Label id="TeamNameLabel" text="xxxxx" />
 				<Label id="JoinTeamLabel" text="#custom_game_team_select_join" />
 			</Panel>
 			<Panel id="TeamPlayerDivider" />
@@ -20,4 +21,3 @@
 		</Panel>
 	</Button>
 </root>
-

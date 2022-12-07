@@ -5,6 +5,7 @@ cd "${0%/*}"
 
 echo "Processing Dota 2..."
 
+ProcessDepot ".dll"
 ProcessDepot ".so"
 ProcessVPK
 ProcessToolAssetInfo
@@ -15,6 +16,7 @@ do
 	
 	echo "> VPK $baseFile"
 	
+	# https://github.com/Penguinwizzard/VPKTool
 	../.support/vpktool "$file" > "$baseFile"
 done <   <(find "game/dota/maps/" -type f -name "*.vpk" -print0)
 

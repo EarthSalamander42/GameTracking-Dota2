@@ -94,6 +94,10 @@ enum EDotaClientMessages {
 	DOTA_CM_PerfReport = 391;
 	DOTA_CM_ContextualTips_Subscribe = 393;
 	DOTA_CM_ChatMessage = 394;
+	DOTA_CM_AddCommunicationsReportMarker = 395;
+	DOTA_CM_AddCommunicationsBlockMarker = 396;
+	DOTA_CM_NeutralCampAlert = 397;
+	DOTA_CM_DuelAccepted = 398;
 }
 
 message CDOTAClientMsg_MapPing {
@@ -105,7 +109,7 @@ message CDOTAClientMsg_ItemAlert {
 }
 
 message CDOTAClientMsg_EnemyItemAlert {
-	optional uint32 item_entindex = 1;
+	optional int32 item_entindex = 1;
 	optional int32 rune_type = 2 [default = -1];
 	optional int32 item_level = 3 [default = -1];
 	optional int32 primary_charges = 4 [default = -1];
@@ -114,17 +118,23 @@ message CDOTAClientMsg_EnemyItemAlert {
 
 message CDOTAClientMsg_ModifierAlert {
 	optional int32 buff_internal_index = 1;
-	optional uint32 target_entindex = 2;
+	optional int32 target_entindex = 2;
 }
 
 message CDOTAClientMsg_ClickedBuff {
 	optional int32 buff_internal_index = 1;
-	optional uint32 target_entindex = 2;
+	optional int32 target_entindex = 2;
 }
 
 message CDOTAClientMsg_HPManaAlert {
-	optional uint32 target_entindex = 1;
+	optional int32 target_entindex = 1;
 	optional bool show_raw_values = 2;
+}
+
+message CDOTAClientMsg_NeutralCampAlert {
+	optional int32 spawner_entindex = 1;
+	optional int32 unit_entindex = 2;
+	optional bool stack_request = 3;
 }
 
 message CDOTAClientMsg_GlyphAlert {
@@ -184,17 +194,17 @@ message CDOTAClientMsg_ShopViewMode {
 }
 
 message CDOTAClientMsg_SetUnitShareFlag {
-	optional uint32 playerID = 1;
+	optional int32 player_id = 1;
 	optional uint32 flag = 2;
 	optional bool state = 3;
 }
 
 message CDOTAClientMsg_SwapRequest {
-	optional uint32 player_id = 1;
+	optional int32 player_id = 1;
 }
 
 message CDOTAClientMsg_SwapAccept {
-	optional uint32 player_id = 1;
+	optional int32 player_id = 1;
 }
 
 message CDOTAClientMsg_WorldLine {
@@ -283,7 +293,7 @@ message CDOTAClientMsg_FillEmptySlotsWithBots {
 }
 
 message CDOTAClientMsg_HeroStatueLike {
-	optional uint32 owner_player_id = 1;
+	optional int32 owner_player_id = 1;
 }
 
 message CDOTAClientMsg_EventCNY2015Cmd {
@@ -325,11 +335,11 @@ message CDOTAClientMsg_RankWager {
 }
 
 message CDOTAClientMsg_PlayerBounty {
-	optional uint32 player_id = 1;
+	optional int32 player_id = 1;
 }
 
 message CDOTAClientMsg_EventPointsTip {
-	optional uint32 recipient_player_id = 1;
+	optional int32 recipient_player_id = 1;
 }
 
 message CDOTAClientMsg_ExecuteOrders {
@@ -337,19 +347,19 @@ message CDOTAClientMsg_ExecuteOrders {
 }
 
 message CDOTAClientMsg_XPAlert {
-	optional uint32 target_entindex = 1;
+	optional int32 target_entindex = 1;
 	optional uint32 damage_taken = 2;
 }
 
 message CDOTAClientMsg_TalentTreeAlert {
-	optional uint32 target_entindex = 1;
+	optional int32 target_entindex = 1;
 	optional int32 ability_id = 2;
 	optional int32 slot = 3;
 	optional bool learned = 4;
 }
 
 message CDOTAClientMsg_KillcamDamageTaken {
-	optional uint32 target_entindex = 1;
+	optional int32 target_entindex = 1;
 	optional uint32 damage_taken = 2;
 	optional uint32 item_type = 3;
 	optional uint32 item_ability_id = 4;
@@ -382,11 +392,11 @@ message CDOTAClientMsg_ToggleAutoattack {
 
 message CDOTAClientMsg_SpecialAbility {
 	optional uint32 ability_index = 1;
-	optional uint32 target_entindex = 2;
+	optional int32 target_entindex = 2;
 }
 
 message CDOTAClientMsg_SetEnemyStartingPosition {
-	optional uint32 enemy_player_id = 1;
+	optional int32 enemy_player_id = 1;
 	optional uint32 enemy_starting_position = 2;
 }
 
@@ -410,7 +420,7 @@ message CDOTAClientMsg_RequestItemSuggestions {
 }
 
 message CDOTAClientMsg_MakeTeamCaptain {
-	optional uint32 player_id = 1;
+	optional int32 player_id = 1;
 }
 
 message CDOTAClientMsg_HelpTipSystemStateChanged {
@@ -486,10 +496,18 @@ message CDOTAClientMsg_AddOverwatchReportMarker {
 	optional uint32 seconds_ago = 4;
 }
 
+message CDOTAClientMsg_AddCommunicationsReportMarker {
+	optional int32 target_player_id = 1;
+}
+
+message CDOTAClientMsg_AddCommunicationsBlockMarker {
+	optional int32 target_player_id = 1;
+}
+
 message CDOTAClientMsg_AghsStatusAlert {
-	optional uint32 source_player_id = 1;
-	optional uint32 target_player_id = 2;
-	optional uint32 target_entindex = 3;
+	optional int32 source_player_id = 1;
+	optional int32 target_player_id = 2;
+	optional int32 target_entindex = 3;
 	optional uint32 alert_type = 4;
 }
 
@@ -530,4 +548,9 @@ message CDOTAClientMsg_ContextualTips_Subscribe {
 message CDOTAClientMsg_ChatMessage {
 	optional uint32 channel_type = 1;
 	optional string message_text = 2;
+}
+
+message CDOTAClientMsg_DuelAccepted {
+	optional int32 challenger_player_id = 1;
+	optional int32 accepter_player_id = 2;
 }

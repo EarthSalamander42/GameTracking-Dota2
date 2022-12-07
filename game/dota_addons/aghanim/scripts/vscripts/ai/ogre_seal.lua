@@ -12,6 +12,7 @@ function Spawn( entityKeyValues )
 
 	thisEntity.hFlop = thisEntity:FindAbilityByName( "ogreseal_flop" )
 	thisEntity.flSearchRadius = 700
+	thisEntity.bPatrolled = false
 
 	thisEntity:SetContextThink( "OgreSealThink", OgreSealThink, 0.5 )
 end
@@ -27,8 +28,12 @@ function OgreSealThink()
 		return 0.5
 	end
 
-	local hEnemies = FindUnitsInRadius( thisEntity:GetTeamNumber(), thisEntity:GetOrigin(), nil, thisEntity.flSearchRadius, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES + DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE, FIND_CLOSEST, false )
+	local hEnemies = FindUnitsInRadius( thisEntity:GetTeamNumber(), thisEntity:GetOrigin(), nil, thisEntity.flSearchRadius, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES + DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE + DOTA_UNIT_TARGET_FLAG_NO_INVIS, FIND_CLOSEST, false )
 	if #hEnemies == 0 then
+		if thisEntity.bPatrolled == false then
+			thisEntity.bPatrolled = true
+			return Patrol()
+		end
 		return 0.5
 	end
 
@@ -55,6 +60,20 @@ function CastBellyFlop( enemy )
 	})
 
 	return 4
+end
+
+--------------------------------------------------------------------------------------------------------
+
+function Patrol()
+	if thisEntity:GetInitialGoalEntity() == nil then
+		local hWaypoint = Entities:FindByClassnameNearest( "path_track", thisEntity:GetOrigin(), 2000.0 )
+		if hWaypoint ~= nil then
+			--print( "Patrolling to " .. hWaypoint:GetName() )
+			thisEntity:SetInitialGoalEntity( hWaypoint )
+		end
+	end
+
+	return 1.0
 end
 
 --------------------------------------------------------------------------------

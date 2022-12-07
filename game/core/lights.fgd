@@ -6,7 +6,7 @@
 
 @include "lights_base.fgd"
 
-@PointClass light() base(light_base, light_base_legacy_params, light_base_attenuation_params) leansphere(lightsourceradius,255,255,255) sphere(range,255,255,0)
+@PointClass light() base(light_base, light_base_legacy_params, light_base_attenuation_params, CanBeClientOnly) leansphere(lightsourceradius,255,255,255) sphere(range,255,255,0)
 	iconsprite
 	{
 		image = "materials/editor/light_omni.vmat"
@@ -46,8 +46,8 @@
 	lightcookie(resource:vtex) : "Light Cookie" : ""
 
 	falloff(float) : "Falloff" : "1" : "angular falloff exponent for spot lights"
-	innerconeangle(float) : "Inner Cone Angle" : "45" : "inner cone angle. no angular falloff within this cone"
-	outerconeangle(float) : "Outer Cone Angle" : "60" : "outer cone angle"
+	innerconeangle(float) { min="1" max="89" } : "Inner Cone Angle" : "45" : "inner cone angle. no angular falloff within this cone"
+	outerconeangle(float) { min="1" max="89" } : "Outer Cone Angle" : "60" : "outer cone angle"
 
 	shadowfademindist(float) : "Shadow Start Fade Dist" : -250 : "Distance at which the shadow starts to fade (<0 = use fademaxdist)."
 	shadowfademaxdist(float) : "Shadow End Fade Dist" : 1000 : "Maximum distance at which the shadow is visible (0 = don't fade out)."
@@ -60,22 +60,11 @@
 [
 	lightcookie(resource:vtex) : "Light Cookie" : ""
 
-	ortholightwidth(float) : "Width" : "512.0" : "Ortho light rectangle width"
-	ortholightheight(float) : "Height" : "512.0" : "Ortho light rectangle height"
-	range(float) : "Range" : "2048.0" : "Distance range for light. 0=infinite"
-	angulardiameter(float) : "SunSpreadAngle" : "1.0" : "The angular extent of the sun for casting soft shadows. Higher numbers are more diffuse. 1 is a good starting value."
+	ortholightwidth(float) { min="1" } : "Width" : "512.0" : "Ortho light rectangle width"
+	ortholightheight(float) { min="1" } : "Height" : "512.0" : "Ortho light rectangle height"
+	range(float) { min="0" } : "Range" : "2048.0" : "Distance range for light. 0=infinite"
+	angulardiameter(float) : "Sun Spread Angle" : "1.0" : "The angular extent of the sun for casting soft shadows. Higher numbers are more diffuse. 1 is a good starting value."
 	shadowtexturewidth(integer) [ group = "Shadows" ] : "Shadow Texture Width" : 0 : "0 = use default texture resolution"
-]
-
-@PointClass
-	iconsprite( "materials/editor/light_importance_volume.vmat" )
-	box_oriented( box_mins, box_maxs, autoCenter )
-	bakelightimportancevolume()
-	tags( Lighting )
-= light_importance_volume
-[
-	box_mins(vector) : "Box Mins" : "-512 -512 -512"
-	box_maxs(vector) : "Box Maxs" : "512 512 512"
 ]
 
 @BaseClass = IndoorOutdoorLevel
@@ -149,11 +138,20 @@
 	base( Targetname, Parentname, EnableDisable, BaseCubemap, IndoorOutdoorLevel )
 	tags( VisPreview )
 	editormodel( "models/editor/env_cubemap" )
-	leansphere( influenceradius, 128, 128, 255 )
+	leansphere
+    {
+        radius = "influenceradius"
+        color = [128, 128, 255]
+        edge_fade = "edge_fade_dist"
+    }
 	bakeresource( cubemaptexture, vtex, env_cubemap, "ToolObjects/CubeMap" )
 = env_cubemap :	"Cubemap for sampling indirect specular reflection."
 [
-	influenceradius(float) : "Influence Radius" : "512.0" : "The radius of influence for this cubemap"
+	influenceradius(float) { min=12 } : "Influence Radius" : "256.0" : "The radius of influence for this cubemap"
+
+	// Subclasses in mods which want to support this feature can add this property.
+	// The name cannot be changed, as it is used by the leansphere helper.
+	//edge_fade_dist(float) : "Edge Fade" : "0.0"
 ]
 
 @PointClass
@@ -200,29 +198,4 @@
 	// Subclasses in mods which want to support this feature can add this property.
 	// The name cannot be changed, as it is used by the box_oriented helper.
 	//edge_fade_dists(vector) : "Edge Fade Dist" : "0 0 0"
-]
-
-// An entity that’s designed around this workflow if you’d like? Something like: env_cubemap_capture where its purpose is to write an exr/vtex whenever cubemap building is triggered (presumably in Hammer via preview lighting or in-engine via buildcubemaps). I can also imagine a future where this is dynamic or semi-static (i.e. triggered to refresh at key moments) at runtime.
-// And of course pointing the cubemap fog at it would do the smart thing, but you could also just have the two point at the same vtex?
-@PointClass
-	base( Targetname, Parentname )
-	tags( VisPreview )
-	iconsprite( "editor/env_cubemap.vmat" )
-= env_cubemap_capture :	"Renders a cubemap and stores the result somewhere."
-[
-	bake_path_buildcubemaps(string) { group="Bake Path" } : "Unimplemented!!! Bake Path (buildcubemaps)" : "" : "Where to write the cubemap when running the buildcubemaps command."
-	bake_path_previewlighting(string) { group="Bake Path" } : "Bake Path (Preview Baked Lighting)" : "" : "Where to write the cubemap when doing preview bake."
-
-	resolution(choices) { group="Render Settings" } : "Resolution" : "0" =
-	[
-		"0" : "Default"
-		"128" : "128x128"
-		"256" : "256x256"
-		"512" : "512x512"
-		"1024" : "1024x1024"
-		"2048" : "2048x2048"
-		"4096" : "4096x4096"
-	]
-	bakenearz(float) { group="Render Settings" } : "Render Near Z" : "2.0" : "Near clip plane used for the camera when rendering the cube map"
-	bakefarz(float) { group="Render Settings" } : "Render Far Z" : "4096.0" : "Far clip plane used for the camera when rendering the cube map"
 ]

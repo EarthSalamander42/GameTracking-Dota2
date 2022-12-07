@@ -10,6 +10,7 @@
 		"Dee Bradley Baker"
 		{
 			"techies"		"0"
+			"#DOTA_Credits_Flockheart"		"0"
 		}
 		"Dennis Bateman"
 		{
@@ -47,6 +48,10 @@
 		"Trevor Devall"
 		{
 			"mars"		"0"
+		}
+		"Dan Donohue"
+		{
+			"phantom_assassin"		"1"
 		}
 		"Dave Fennoy"
 		{
@@ -175,11 +180,20 @@
 			"shadow_demon"		"0"
 			"troll_warlord"		"0"
 		}
+		"Jon Olson"
+		{
+			"primal_beast"		"0"
+		}
 		"Dempsey Pappion"
 		{
 			"magnataur"		"0"
 			"nyx_assassin"		"0"
 			"visage"		"0"
+		}
+		"Lara Pulver"
+		{
+			"mirana"		"1"
+			"#DOTA_Credits_Mirana_Persona"	"1"
 		}
 		"TJ Ramini"
 		{
@@ -251,6 +265,10 @@
 			"night_stalker"		"0"
 			"viper"		"0"
 			"#DOTA_Credits_Slyrak"		"0"
+		}
+		"Keri Tombazian"
+		{
+			"crystal_maiden"		"1"
 		}
 		"Brooke Williams"
 		{

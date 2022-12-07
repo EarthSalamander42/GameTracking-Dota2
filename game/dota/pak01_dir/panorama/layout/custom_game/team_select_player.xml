@@ -1,3 +1,4 @@
+<!-- xml reconstructed by ValveResourceFormat: https://vrf.steamdb.info/ -->
 <root>
 	<styles>
 		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
@@ -9,7 +10,7 @@
 	<Panel class="TeamSelectPlayer">
 		<DOTAAvatarImage id="PlayerAvatar" />
 		<Label id="PlayerIsHostPanel" />
-		<Label id="PlayerName" text="PLAYER_NAME" />
+		<Label id="PlayerName" text="xxxxx" />
 		<Button id="PlayerLeaveTeamButton" onactivate="OnLeaveTeamPressed()" />
 	</Panel>
 </root>

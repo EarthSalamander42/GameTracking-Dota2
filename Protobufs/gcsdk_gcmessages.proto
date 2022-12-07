@@ -50,12 +50,6 @@ message CMsgSDOAssert {
 	repeated .CMsgSDOAssert.Request requests = 2;
 }
 
-message CMsgSHA1Digest {
-	required fixed64 block1 = 1;
-	required fixed64 block2 = 2;
-	required fixed32 block3 = 3;
-}
-
 message CMsgSOIDOwner {
 	optional uint32 type = 1;
 	optional uint64 id = 2;
@@ -135,16 +129,16 @@ message CMsgGCMultiplexMessage {
 }
 
 message CMsgGCToGCSubGCStarting {
-	optional uint32 dir_index = 1;
+	optional int32 dir_index = 1;
 }
 
 message CGCToGCMsgMasterAck {
 	message Process {
-		optional uint32 dir_index = 1;
+		optional int32 dir_index = 1;
 		repeated uint32 type_instances = 2;
 	}
 
-	optional uint32 dir_index = 1;
+	optional int32 dir_index = 1;
 	optional string machine_name = 3;
 	optional string process_name = 4;
 	repeated .CGCToGCMsgMasterAck.Process directory = 6;
@@ -164,7 +158,7 @@ message CMsgGCToGCUniverseStartupResponse {
 
 message CGCToGCMsgMasterStartupComplete {
 	message GCInfo {
-		optional uint32 dir_index = 1;
+		optional int32 dir_index = 1;
 		optional string machine_name = 2;
 	}
 
@@ -249,8 +243,6 @@ message CMsgClientWelcome {
 	repeated .CMsgSOCacheSubscriptionCheck uptodate_subscribed_caches = 4;
 	optional .CMsgClientWelcome.Location location = 5;
 	optional bytes save_game_key = 6;
-	optional fixed32 item_schema_crc = 7;
-	optional string items_game_url = 8;
 	optional uint32 gc_socache_file_version = 9;
 	optional string txn_country_code = 10;
 	optional bytes game_data2 = 11;

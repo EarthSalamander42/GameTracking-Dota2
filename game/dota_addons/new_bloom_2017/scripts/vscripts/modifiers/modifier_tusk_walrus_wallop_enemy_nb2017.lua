@@ -26,6 +26,13 @@ function modifier_tusk_walrus_wallop_enemy_nb2017:OnCreated( kv )
 	self.knockback_distance = self:GetAbility():GetSpecialValueFor( "knockback_distance" ) 
 	self.knockback_duration = self:GetAbility():GetSpecialValueFor( "knockback_duration" )
 
+	local knockback_distance_bonus = 0
+	local hTalent = self:GetCaster():FindAbilityByName( "special_bonus_unique_tusk_walrus_wallop_knockback_distance" )
+	if hTalent and hTalent:GetLevel() > 0 then
+		--print( 'INCREASING WALRUS WALLOP KNOCKBACK DISTANCE = ' .. hTalent:GetSpecialValueFor( "value" ) )
+		knockback_distance_bonus = hTalent:GetSpecialValueFor( "value" )
+	end
+
 	if IsServer() then
 		if self:ApplyHorizontalMotionController() == false then 
 			self:Destroy()
@@ -36,9 +43,9 @@ function modifier_tusk_walrus_wallop_enemy_nb2017:OnCreated( kv )
 		self.vDirection = self:GetParent():GetOrigin() - hSourceUnit:GetOrigin()
 		self.vDirection = self.vDirection:Normalized()
 		self.vDirection.z = 0.0
-		self.flDistRemaining = self.knockback_distance
+		self.flDistRemaining = ( self.knockback_distance + knockback_distance_bonus )
 		if hSourceUnit ~= self:GetCaster() then
-			self.flDistRemaining = self.knockback_distance / 2
+			self.flDistRemaining = self.flDistRemaining / 2
 			self.knockback_speed = self.knockback_speed / 2
 		end
 		

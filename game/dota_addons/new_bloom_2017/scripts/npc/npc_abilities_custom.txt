@@ -6408,67 +6408,26 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"leap_distance"			"500 600 700"
+			"leap_distance"			"500 600 700"
+			"leap_speed"			"1000 1100 1200"
+			"leap_acceleration"		"7000.0"
+			"leap_radius"			"175 225 275"
+			"damage"					
+			{	
+				"value"			"150 250 350"
+				"special_bonus_unique_axe_5"	"+150"
 			}
-			"02"
+			"speed_bonus"				"40"
+			"atk_speed_bonus"				"20 30 40"
+			"speed_duration"			"6"
+			"speed_aoe"					"900"
+			"charge_speed"				"1200"
+			"armor_per_stack"			
 			{
-				"var_type"				"FIELD_FLOAT"
-				"leap_speed"			"1000 1100 1200"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"leap_acceleration"		"7000.0"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"leap_radius"			"175 225 275"
-			}
-			"05"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"kill_threshold"			"250 350 450"
-			}
-			"06"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"damage"					"150 250 350"
-			}
-			"07"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"speed_bonus"				"40"
-			}
-			"08"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"speed_duration"			"6"
-			}
-			"09"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"speed_aoe"					"900"
-			}
-			"10"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"cooldown_scepter"			"6.0 6.0 6.0"
-			}
-			"11"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"kill_threshold_scepter"	"300 450 625"
-			}
-			"12"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"speed_duration_scepter"	"10"
+				"value"					"1 1.5 2"
+				"special_bonus_unique_axe_3"	"+1"
 			}
 		}
 	}
@@ -7627,6 +7586,8 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"150 200 250"
 
+		"HasScepterUpgrade"			"1"
+
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -7655,6 +7616,24 @@
 			{
 				"var_type"					"FIELD_FLOAT"
 				"duration"					"15.0"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"scepter_duration"			"20.0"
+				"RequiresScepter"			"1"
+			}
+			"07"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"scepter_cooldown_reduction"	"10.0"
+				"RequiresScepter"				"1"
+			}
+			"08"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"scepter_damage_reduction_pct"	"25"
+				"RequiresScepter"				"1"
 			}
 		}
 	}
@@ -8884,6 +8863,75 @@
 	}
 
 	//=================================================================================================================
+	// Tusk: Walrus Wallop Crit
+	//=================================================================================================================
+	"special_bonus_unique_tusk_walrus_wallop_crit"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/special_bonus_unique_tusk_walrus_wallop_crit"
+
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"						"125"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Tusk: Walrus Wallop Auto Trigger
+	//=================================================================================================================
+	"special_bonus_unique_tusk_walrus_wallop_auto_trigger"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/special_bonus_unique_tusk_walrus_wallop_auto_trigger"
+
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"						"12"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Tusk: Walrus Wallop Knockback Distance
+	//=================================================================================================================
+	"special_bonus_unique_tusk_walrus_wallop_knockback_distance"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/special_bonus_unique_tusk_walrus_wallop_knockback_distance"
+
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"						"400"
+			}
+		}
+	}
+
+	//=================================================================================================================
 	// Tusk: Walrus Wallop
 	//=================================================================================================================
 	"tusk_walrus_wallop_nb2017"
@@ -8894,7 +8942,7 @@
 		"AbilityTextureName"			"tusk_walrus_punch"
 		"ScriptFile"					"abilities/tusk_walrus_wallop_nb2017"
 
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_ATTACK"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
@@ -8940,6 +8988,11 @@
 			{
 				"var_type"					"FIELD_FLOAT"
 				"knockback_duration"				"1.0"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"knockback_height"				"100"
 			}
 		}
 	}

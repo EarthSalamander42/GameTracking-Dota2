@@ -80,7 +80,7 @@
 "Valve_Switch_Weapons_Immediately"	"Vaihda aseet välittömästi"
 "Valve_Automatic_Screenshots"		"Ota kuvankaappaus automaattisesti, kun peli loppuu"
 "Valve_Observer_Crosshair"		"Tarkkailijan tähtäin"
-"Valve_Console_Toggle"		"Ota kehittäjäkonsoli käyttöön / pois käytöstä"
+"Valve_Console_Toggle"		"Kehittäjäkonsoli päällä/pois"
 
 "Valve_OK"					"OK"
 "Valve_Cancel"				"Peruuta"
@@ -161,7 +161,7 @@
 "Valve_Suit_Zoom"	"Puvun zoomi"
 "Valve_Commander_Mode"	"Lähetä ryhmä tai kutsu se takaisin"
 "Valve_Gravity_Gun"	"Painovoima-ase"
-"Valve_CC_Toggle"	"Äänitehosteiden tekstitys käyttöön/pois"
+"Valve_CC_Toggle"	"Äänitehosteiden tekstitys päällä/pois"
 
 "Valve_FilmDemo_FilmGrain_LeftTitle"	"Ei rakeisuutta"
 "Valve_FilmDemo_FilmGrain_RightTitle"	"Rakeinen"
@@ -174,8 +174,7 @@
 
 "game_player_connecting"	"Pelaaja %s1 liittyy peliin"
 "game_player_joined_game"	"%s1 liittyi peliin"
-"game_player_left_game"		"%s1 poistui pelistä (%s2)" [$WIN32]
-"game_player_left_game"		"%s1 poistui pelistä" [$X360]
+"game_player_left_game"		"%s1 poistui pelistä (%s2)"
 "game_player_joined_team"	"%s1 liittyi tiimiin %s2"
 "game_player_joined_autoteam" "Pelaaja %s1 liitettiin automaattisesti tiimiin %s2"
 "game_player_changed_name"	"%s1 muutti nimekseen %s2"
@@ -443,6 +442,8 @@
 
 "Engine_UnsupportedWindowsTitle"	"Tätä Windows-versiota ei tueta"
 "Engine_UnsupportedWindowsBody"		"Tätä Windows-versiota ei tueta. Päivitä uudempaan versioon."
+"Engine_Deprecated32BitTitle"		"Vanhenemisvaroitus"
+"Engine_Deprecated32BitBody"		"32-bittinen versio on vanhentunut ja se poistetaan. Käytä 64-bittistä versiota."
 
 "Native_VersionLabel"				"VERSIO: "
 "Native_ContactingServer"			"Muodostetaan yhteyttä palvelimeen"
@@ -522,18 +523,18 @@
 "AsyncPanel_Failure"						"Tietojen lataus epäonnistui. Yritä hetken kuluttua uudelleen."
 "AsyncPanel_Loading"						"Ladataan tietoja..."
 
-"LOC_Date_Month0"					"tammikuu"
-"LOC_Date_Month1"					"helmikuu"
-"LOC_Date_Month2"					"maaliskuu"
-"LOC_Date_Month3"					"huhtikuu"
-"LOC_Date_Month4"					"toukokuu"
-"LOC_Date_Month5"					"kesäkuu"
-"LOC_Date_Month6"					"heinäkuu"
-"LOC_Date_Month7"					"elokuu"
-"LOC_Date_Month8"					"syyskuu"
-"LOC_Date_Month9"					"lokakuu"
-"LOC_Date_Month10"					"marraskuu"
-"LOC_Date_Month11"					"joulukuu"	
+"LOC_Date_Month0"					"1"
+"LOC_Date_Month1"					"2"
+"LOC_Date_Month2"					"3"
+"LOC_Date_Month3"					"4"
+"LOC_Date_Month4"					"5"
+"LOC_Date_Month5"					"6"
+"LOC_Date_Month6"					"7"
+"LOC_Date_Month7"					"8"
+"LOC_Date_Month8"					"9"
+"LOC_Date_Month9"					"10"
+"LOC_Date_Month10"					"11"
+"LOC_Date_Month11"					"12"	
 "LOC_Date_MonthShort0"				"1"
 "LOC_Date_MonthShort1"				"2"
 "LOC_Date_MonthShort2"				"3"
@@ -586,28 +587,29 @@
 "LOC_Date_HourNumFormat"			"1"
 "LOC_Date_Format_Day_Month_Year_Numeric"								"%s1.%s2.%s3"					// 18/4/2014
 "LOC_Date_Format_Day_Month_Numeric"										"%s1.%s2."						// 18/4
-"LOC_Date_Format_DayOfWeek_Month_Day_Year"								"%s1, %s3. %s2ta %s4"				// Wednesday, April 18, 2014
-"LOC_Date_Format_Day_Month"												"%s1. %s2ta"						// 18 April
-"LOC_Date_Format_Day_Month_Year"										"%s1. %s2ta %s3"					// 18 April 2014
-"LOC_Date_Format_Day_Month_Year_Hour_Minute_24"							"%s1. %s2ta %s3, klo %s4.%s5"			// 18 April 2014, 17:30
-"LOC_Date_Format_Day_Month_Year_Hour_Minute_12"							"%s1. %s2ta %s3, klo %s4.%s5 %s6"		// 18 April 2014, 5:30 PM
-"LOC_Date_Format_Day_Month_Year_Hour_Minute_Second_24"					"%s1. %s2ta %s3, klo %s4.%s5.%s6"		// 18 April 2014, 17:30:18
-"LOC_Date_Format_Day_Month_Year_Hour_Minute_Second_12"					"%s1. %s2ta %s3, klo %s4.%s5.%s6 %s7"	// 18 April 2014, 5:30:18 PM
+"LOC_Date_Format_DayOfWeek_Month_Day_Year"								"%s1, %s3.%s2.%s4"				// Wednesday, April 18, 2014
+"LOC_Date_Format_Month_Day_Year"										"%s2.%s1.%s3"					// April 18, 2014
+"LOC_Date_Format_Day_Month"												"%s1.%s2."						// 18 April
+"LOC_Date_Format_Day_Month_Year"										"%s1.%s2.%s3"					// 18 April 2014
+"LOC_Date_Format_Day_Month_Year_Hour_Minute_24"							"%s1.%s2.%s3 klo %s4.%s5"			// 18 April 2014, 17:30
+"LOC_Date_Format_Day_Month_Year_Hour_Minute_12"							"%s1.%s2.%s3 klo %s4.%s5 %s6"		// 18 April 2014, 5:30 PM
+"LOC_Date_Format_Day_Month_Year_Hour_Minute_Second_24"					"%s1.%s2.%s3 klo %s4.%s5.%s6"		// 18 April 2014, 17:30:18
+"LOC_Date_Format_Day_Month_Year_Hour_Minute_Second_12"					"%s1.%s2.%s3 klo %s4.%s5.%s6 %s7"	// 18 April 2014, 5:30:18 PM
 "LOC_Date_Format_DayOfWeekShort_MonthShort_Day_Hour_Minute_Second_24"	"%s1 %s3.%s2. klo %s4.%s5.%s6"		// Wed Apr 18 17:30:18
 "LOC_Date_Format_DayOfWeekShort_MonthShort_Day_Hour_Minute_Second_12"	"%s1 %s3.%s2. klo %s4.%s5.%s6 %s7"	// Wed Apr 18 5:30:18 PM
-"LOC_Date_Format_DayOfWeek_Month_Day_Year_Hour_Minute_Second_24"		"%s1, %s3. %s2ta %s4 klo %s5.%s6.%s7"		// Wednesday, April 18, 2014 17:30:18
-"LOC_Date_Format_DayOfWeek_Month_Day_Year_Hour_Minute_Second_12"		"%s1, %s3. %s2ta %s4, klo %s5.%s6.%s7 %s8"	// Wednesday, April 18, 2014 5:30:18 PM
+"LOC_Date_Format_DayOfWeek_Month_Day_Year_Hour_Minute_Second_24"		"%s1, %s3.%s2.%s4 klo %s5.%s6.%s7"		// Wednesday, April 18, 2014 17:30:18
+"LOC_Date_Format_DayOfWeek_Month_Day_Year_Hour_Minute_Second_12"		"%s1, %s3.%s2.%s4, klo %s5.%s6.%s7 %s8"	// Wednesday, April 18, 2014 5:30:18 PM
 "LOC_Date_Format_Hour_Minute_24"										"%s1.%s2"						// 17:30
 "LOC_Date_Format_Hour_Minute_12"										"%s1.%s2 %s3"					// 5:30 PM
 "LOC_Date_Format_Hour_Minute_Second_24"									"%s1.%s2.%s3"					// 17:30:22
 "LOC_Date_Format_Hour_Minute_Second_12"									"%s1.%s2.%s3 %s4"				// 5:30:22 PM
 "LOC_Date_Format_DayOfWeek"												"%s1"							// Wednesday
-"LOC_Date_Format_DayOfWeek_Day_Month_Hour_Minute_24"					"%s1, %s2. %s3ta, klo %s4.%s5"			// Wednesday, 18 April, 17:30
-"LOC_Date_Format_DayOfWeek_Day_Month_Hour_Minute_12"					"%s1, %s2. %s3ta, klo %s4.%s5 %s6"		// Wednesday, 18 April, 5:30 PM
+"LOC_Date_Format_DayOfWeek_Day_Month_Hour_Minute_24"					"%s1, %s2.%s3. klo %s4.%s5"			// Wednesday, 18 April, 17:30
+"LOC_Date_Format_DayOfWeek_Day_Month_Hour_Minute_12"					"%s1, %s2.%s3. klo %s4.%s5 %s6"		// Wednesday, 18 April, 5:30 PM
 "LOC_Date_Format_Econ_MonthShort_Day_Year_Hour_Minute_Second"			"%s2.%s1.%s3 (%s4.%s5.%s6)"	// Apr 18, 2014 (15:30:18)
 "LOC_Date_Format_Econ_MonthShort_Day_Year_Hour_Minute_Second_GMT"		"%s2 %s1, %s3 (%s4:%s5:%s6) GMT"// Apr 18, 2014 (15:30:18) GMT
 "LOC_Date_UnknownTime"													"Tuntematon"
-"LOC_Duration_dhhmmss"													"%s1p %s2.%s3.%s4"
+"LOC_Duration_dhhmmss"													"%s1pv %s2.%s3.%s4"
 "LOC_Duration_hhmmss"													"%s1.%s2.%s3"
 "LOC_Duration_mmss"														"%s1.%s2"
 "LOC_Duration_d_h_m_s"													"%s1 p %s2 t %s3 m %s4 s"
@@ -627,7 +629,7 @@
 "LOC_Duration_Second"													"sekunti"
 "LOC_Number_NegativeSign"												"-"
 "LOC_Number_PositiveSign"												"+"
-"LOC_Number_Grouping"													" "
+"LOC_Number_Grouping"													" "
 "LOC_Number_DecimalPoint"												","
 "LOC_Number_InfinityShort"												"∞"
 // Ordinals can have a prefix or suffix. For either one the number modulo 100

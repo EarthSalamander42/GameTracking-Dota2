@@ -174,8 +174,7 @@
 
 "game_player_connecting"	"Играчът %s1 се свързва"
 "game_player_joined_game"	"Играчът %s1 се присъедини в играта"
-"game_player_left_game"		"Играчът %s1 напусна играта (%s2)" [$WIN32]
-"game_player_left_game"		"Играчът %s1 напусна играта" [$X360]
+"game_player_left_game"		"Играчът %s1 напусна играта (%s2)"
 "game_player_joined_team"	"Играчът %s1 се присъедини към отбор „%s2“"
 "game_player_joined_autoteam" "Играчът %s1 автоматично бе прехвърлен към отбор „%s2“"
 "game_player_changed_name"	"Играчът %s1 смени името си на %s2"
@@ -443,6 +442,8 @@
 
 "Engine_UnsupportedWindowsTitle"	"Неподдържана версия на Windows"
 "Engine_UnsupportedWindowsBody"		"Тази версия на Windows не се поддържа. Моля, надстройте до по-нова версия"
+"Engine_Deprecated32BitTitle"		"Предупреждение за остаряла версия"
+"Engine_Deprecated32BitBody"		"32-битовата версия е остаряла и ще бъде премахната. Моля, използвайте 64-битовата версия"
 
 "Native_VersionLabel"				"ВЕРСИЯ: "
 "Native_ContactingServer"			"Свързване със сървър"
@@ -489,35 +490,35 @@
 "Native_FileSystemFailed"					"Неуспешна изисквана операция на файловата система. Моля, рестартирайте приложението. Ако това съобщение все още е налице, опитайте да преинсталирате приложението."
 "Native_UpdateFailed_ConnectToTheInternet"	"Предходна операция за обновяване е била неуспешна и е нужна интернет връзка за възстановяване."
 
-"Valve_SelectLanguage_English"				"English (aнглийски)"
-"Valve_SelectLanguage_Spanish"				"Español (испански)"
-"Valve_SelectLanguage_French"				"Français (френски)"
-"Valve_SelectLanguage_Italian"				"Italiano (италиански)"
-"Valve_SelectLanguage_German"				"Deutsch (немски)"
-"Valve_SelectLanguage_Greek"				"Ελληνικά (гръцки)"
-"Valve_SelectLanguage_Korean"				"한국어 (корейски)"
-"Valve_SelectLanguage_Simplified_Chinese"	"简体中文 (опростен китайски)"
-"Valve_SelectLanguage_Traditional_Chinese"	"繁體中文 (традиционен китайски)"
-"Valve_SelectLanguage_Russian"				"Русский (руски)"
-"Valve_SelectLanguage_Thai"					"ไทย (тайландски)"
-"Valve_SelectLanguage_Japanese"				"日本語 (японски)"
-"Valve_SelectLanguage_Portuguese"			"Português (португалски)"
-"Valve_SelectLanguage_Brazilian"	 		"Português — Brasil (бразилски португалски)"
-"Valve_SelectLanguage_Polish"				"Polski (полски)"
-"Valve_SelectLanguage_Danish"				"Dansk (датски)"
-"Valve_SelectLanguage_Dutch"				"Nederlands (холандски)"
-"Valve_SelectLanguage_Finnish"				"Suomi (фински)"
-"Valve_SelectLanguage_Norwegian"			"Norsk (норвежки)"
-"Valve_SelectLanguage_Swedish"				"Svenska (шведски)"
-"Valve_SelectLanguage_Czech"				"Čeština (чешки)"
-"Valve_SelectLanguage_Hungarian"			"Magyar (унгарски)"
-"Valve_SelectLanguage_Romanian"				"Română (румънски)"
-"Valve_SelectLanguage_Bulgarian"			"български"
-"Valve_SelectLanguage_Turkish"				"Türkçe (турски)"
-"Valve_SelectLanguage_Arabic"				"العربية (арабски)"
-"Valve_SelectLanguage_Ukrainian"			"Українська (украински)"
-"Valve_SelectLanguage_Latam_Spanish"		"Español — Latinoamérica (испански — Латинска Америка)"
-"Valve_SelectLanguage_Vietnamese"			"Tiếng Việt (виетнамски)"
+"Valve_SelectLanguage_English"				"Английски (English)"
+"Valve_SelectLanguage_Spanish"				"Испански (Español)"
+"Valve_SelectLanguage_French"				"Френски (Français)"
+"Valve_SelectLanguage_Italian"				"Италиански (Italiano)"
+"Valve_SelectLanguage_German"				"Немски (Deutsch)"
+"Valve_SelectLanguage_Greek"				"Гръцки (Ελληνικά)"
+"Valve_SelectLanguage_Korean"				"Корейски (한국어)"
+"Valve_SelectLanguage_Simplified_Chinese"	"Опростен китайски (简体中文)"
+"Valve_SelectLanguage_Traditional_Chinese"	"Традиционен китайски (繁體中文)"
+"Valve_SelectLanguage_Russian"				"Руски (Русский)"
+"Valve_SelectLanguage_Thai"					"Тайландски (ไทย)"
+"Valve_SelectLanguage_Japanese"				"Японски (日本語)"
+"Valve_SelectLanguage_Portuguese"			"Бразилски португалски (Português — Brasil)"
+"Valve_SelectLanguage_Brazilian"	 		"Бразилски португалски (Português — Brasil)"
+"Valve_SelectLanguage_Polish"				"Полски (Polski)"
+"Valve_SelectLanguage_Danish"				"Датски (Dansk)"
+"Valve_SelectLanguage_Dutch"				"Холандски (Nederlands)"
+"Valve_SelectLanguage_Finnish"				"Финландски (Suomi)"
+"Valve_SelectLanguage_Norwegian"			"Норвежки (Norsk)"
+"Valve_SelectLanguage_Swedish"				"Шведски (Svenska)"
+"Valve_SelectLanguage_Czech"				"Чешки (Čeština)"
+"Valve_SelectLanguage_Hungarian"			"Унгарски (Magyar)"
+"Valve_SelectLanguage_Romanian"				"Румънски (Română)"
+"Valve_SelectLanguage_Bulgarian"			"Български"
+"Valve_SelectLanguage_Turkish"				"Турски (Türkçe)"
+"Valve_SelectLanguage_Arabic"				"Арабски (العربية)"
+"Valve_SelectLanguage_Ukrainian"			"Украински (Українська)"
+"Valve_SelectLanguage_Latam_Spanish"		"Испански — Латинска Америка (Español — Latinoamérica)"
+"Valve_SelectLanguage_Vietnamese"			"Виетнамски (Tiếng Việt)"
 
 "AsyncPanel_Failure"						"Неуспешно зареждане на данни. Моля, опитайте отново след няколко минути."
 "AsyncPanel_Loading"						"Зареждане на данни..."
@@ -587,6 +588,7 @@
 "LOC_Date_Format_Day_Month_Year_Numeric"								"%s1.%s2.%s3"					// 18/4/2014
 "LOC_Date_Format_Day_Month_Numeric"										"%s1/%s2"						// 18/4
 "LOC_Date_Format_DayOfWeek_Month_Day_Year"								"%s1, %s3 %s2 %s4"				// Wednesday, April 18, 2014
+"LOC_Date_Format_Month_Day_Year"										"%s2 %s1 %s3"					// April 18, 2014
 "LOC_Date_Format_Day_Month"												"%s1 %s2"						// 18 April
 "LOC_Date_Format_Day_Month_Year"										"%s1 %s2 %s3"					// 18 April 2014
 "LOC_Date_Format_Day_Month_Year_Hour_Minute_24"							"%s1 %s2 %s3, %s4:%s5"			// 18 April 2014, 17:30

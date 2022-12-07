@@ -38,6 +38,7 @@
 		"npc_dota_hero_shadow_shaman" 	"1"
 		"npc_dota_hero_slardar" 	"1"		
 		"npc_dota_hero_tidehunter" 	"1"
+		"npc_dota_hero_techies" 	"1"
 		"npc_dota_hero_witch_doctor" 	"1"
 		"npc_dota_hero_warlock" 	"1"
 		"npc_dota_hero_beastmaster" 	"1"
@@ -75,6 +76,8 @@
 		"npc_dota_hero_keeper_of_the_light"		"1"
 		"npc_dota_hero_grimstroke"		"1"
 		"npc_dota_hero_dawnbreaker"			"1"
+		"npc_dota_hero_marci"			"1"
+		"npc_dota_hero_primal_beast"			"1"
 	}
 	"challenge_ranks"		"3"
 }

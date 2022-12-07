@@ -4,6 +4,77 @@
 {	
 	"change"
 	{
+		"date"			"1669716000"
+		"type"			"Default"
+		"description"	"#DOTA_732d_Update"
+		"event"			"DOTAShowPatchVersion( '7.32d' )"
+	}
+	"change"
+	{
+		"date"			"1664308480"
+		"type"			"Default"
+		"description"	"#DOTA_732c_Update"
+		"event"			"DOTAShowPatchVersion( '7.32c' )"
+	}
+	"change"
+	{
+		"date"			"1661853600"
+		"type"			"Default"
+		"description"	"#DOTA_732b_Update"
+		"event"			"DOTAShowPatchVersion( '7.32b' )"
+	}
+	"change"
+	{
+		"date"			"1661271649"
+		"type"			"Default"
+		"description"	"#DOTA_732_Update"
+		"event"			"DOTAShowPatchVersion( '7.32' )"
+	}
+	"change"
+	{
+		"date"			"1654725600"
+		"type"			"Default"
+		"description"	"#DOTA_731d_Update"
+		"event"			"DOTAShowPatchVersion( '7.31d' )"
+	}
+
+	"change"
+	{
+		"date"			"1651485600"
+		"type"			"Default"
+		"description"	"#DOTA_731c_Update"
+		"event"			"DOTAShowPatchVersion( '7.31c' )"
+	}
+	"change"
+	{
+		"date"			"1646067600"
+		"type"			"Default"
+		"description"	"#DOTA_731b_Update"
+		"event"			"DOTAShowPatchVersion( '7.31b' )"
+	}
+	"change"
+	{
+		"date"			"1645613142"
+		"type"			"Default"
+		"description"	"#DOTA_731_Update"
+		"event"			"DOTAShowPatchVersion( '7.31' )"
+	}
+	"change"
+	{
+		"date"			"1635449655"
+		"type"			"Default"
+		"description"	"#DOTA_730e_Update"
+		"event"			"DOTAShowPatchVersion( '7.30e' )"
+	}
+	"change"
+	{
+		"date"			"1635447600"
+		"type"			"Default"
+		"description"	"#DOTA_ChangeLog_TI0CompendiumEnded"
+		"event"			"DOTAShowTI10CompHome()"
+	}
+	"change"
+	{
 		"date"			"1632621000"
 		"type"			"Default"
 		"description"	"#DOTA_730d_Update"
@@ -1077,6 +1148,12 @@
 		"description"	"#DOTA_ChangeLog_Halloween_Quest_Available"
 		"event"			"DOTAShowBPFall2016QuestsPage()"
 	}
-
-
+	"change"
+	{
+		"date"				"1640073600"
+		"expiration_date"	"1641340740"
+		"type"				"Default"
+		"description"		"#DOTA_ChangeLog_Collectors_Cache_Voting_Started"
+		"event"				"DOTAShowBPFall2021CollectorsCacheVotePage()"
+	}
 }

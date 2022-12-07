@@ -249,6 +249,22 @@ RunFunctionAction.prototype.update = function ()
 	return false;
 }
 
+// Action that calls $.DispatchEvent. You may include extra arguments and they will be passed to event
+function DispatchEventAction( eventName )
+{
+	this.argsArray = [];
+	for ( var i = 0; i < arguments.length; ++i )
+	{
+		this.argsArray.push( arguments[i] );
+	}
+}
+DispatchEventAction.prototype = new BaseAction();
+DispatchEventAction.prototype.update = function ()
+{
+	$.DispatchEvent.apply( null, this.argsArray );
+	return false;
+}
+
 
 function WaitForConditionAction( f )
 {
@@ -424,7 +440,7 @@ function WaitForClassAction( panel, panelClass )
 WaitForClassAction.prototype = new BaseAction();
 WaitForClassAction.prototype.update = function ()
 {
-	return !this || !this.panel || !this.panel.BHasClass( this.panelClass );
+	return !this || !this.panel || !this.panel.IsValid() || !this.panel.BHasClass( this.panelClass );
 }
 
 
@@ -626,6 +642,26 @@ PlaySoundForDurationAction.prototype.finish = function ()
 }
 
 // ----------------------------------------------------------------------------
+//   PlaySoundUntilFinishedAction
+// ----------------------------------------------------------------------------
+
+function PlaySoundUntilFinishedAction( soundName )
+{
+	this.soundName = soundName;
+}
+PlaySoundUntilFinishedAction.prototype = new BaseAction();
+
+PlaySoundUntilFinishedAction.prototype.start = function ()
+{
+	this.soundEventGuid = PlayUISoundScript( this.soundName );
+}
+PlaySoundUntilFinishedAction.prototype.update = function ()
+{
+	return IsUISoundScriptPlaying( this.soundEventGuid );
+}
+
+
+// ----------------------------------------------------------------------------
 //   LerpAction
 //
 //   Base class that you can override an applyProgress for to do a simple Lerp
@@ -659,6 +695,90 @@ LerpAction.prototype.finish = function ()
 LerpAction.prototype.applyProgress = function ( progress )
 {
 	// Override this method to apply your progress
+}
+
+// ----------------------------------------------------------------------------
+//   GuardedAction
+//
+//   Runs a contained action, except that it's immediately aborted if the
+//   passed-in guard function ever returns false -- not even finishing the
+//   contained action.
+//
+//   Alternatively you can keep a reference to the GuardedAction and just
+//   set guardFailed to true to trigger this abort.
+// ----------------------------------------------------------------------------
+function GuardedAction(action, guard = null)
+{
+	this.action = action;
+	this.guard = guard;
+	this.guardFailed = false;
+}
+GuardedAction.prototype = new BaseAction();
+GuardedAction.prototype.TriggerFailure = function()
+{
+	this.guardFailed = true;
+}
+GuardedAction.prototype.checkGuardFailure = function ()
+{
+	if ( this.guardFailed )
+	{
+		return true;
+	}
+
+	if ( this.guard && !this.guard() )
+	{
+		this.guardFailed = true;
+	}
+
+	return this.guardFailed;
+}
+GuardedAction.prototype.start = function ()
+{
+	if( this.checkGuardFailure() )
+	{
+		return;
+	}
+
+	this.action.start();
+}
+GuardedAction.prototype.update = function ()
+{
+    if( this.checkGuardFailure() )
+	{
+	    return false;
+	}
+
+	return this.action.update();
+}
+GuardedAction.prototype.finish = function ()
+{
+    if( this.checkGuardFailure() )
+	{
+	    return;
+	}
+
+	this.action.finish();
+}
+
+// ----------------------------------------------------------------------------
+
+function PlayMovieAction( moviePanel )
+{
+	this.moviePanel = moviePanel;
+
+	this.isMovieFinished = false;
+	var thisAction = this;
+	$.RegisterEventHandler( 'MoviePlayerPlaybackEnded', this.moviePanel, function () { thisAction.isMovieFinished = true; } );
+}
+PlayMovieAction.prototype = new BaseAction();
+
+PlayMovieAction.prototype.start = function ()
+{
+	this.moviePanel.Play();
+}
+PlayMovieAction.prototype.update = function ()
+{
+	return !this.isMovieFinished;
 }
 
 // ----------------------------------------------------------------------------

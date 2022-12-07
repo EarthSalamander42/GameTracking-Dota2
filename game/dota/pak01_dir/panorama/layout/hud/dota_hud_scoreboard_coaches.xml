@@ -1,3 +1,4 @@
+<!-- xml reconstructed by ValveResourceFormat: https://vrf.steamdb.info/ -->
 <root>
 	<styles>
 		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
@@ -6,7 +7,6 @@
 		<include src="s2r://panorama/styles/hud/dota_hud_scoreboard.vcss_c" />
 		<include src="s2r://panorama/styles/hud/dota_hud_scoreboard_coaches.vcss_c" />
 	</styles>
-
 	<snippets>
 		<snippet name="ScoreboardCoach">
 			<Panel class="ScoreboardCoach">
@@ -17,21 +17,17 @@
 					<DOTAAvatarImage id="AvatarImage" class="ScoreboardAvatar" />
 					<Panel id="PlayerAndHeroNameContainer" class="TopBottomFlow">
 						<Label id="PlayerNameLabel" class="PlayerNameLabel" text="{g:dota_filtered_string:player_name}" />
-						<Label id="HeroNameLabel" class="HeroNameLabel" text="#DOTA_Hero_Selection_Coach"/>
+						<Label id="HeroNameLabel" class="HeroNameLabel" text="#DOTA_Hero_Selection_Coach" />
 					</Panel>
 					<Panel class="FillWidth" />
 					<Panel id="ScoreboardMuteButtons" class="LeftRightFlow">
-						<ToggleButton id="VoiceMute" class="ScoreboardMuteButton Voice" onactivate="DOTAPlayerMuteChanged()" />
-						<ToggleButton id="TextMute" class="ScoreboardMuteButton Text" onactivate="DOTAPlayerMuteChanged()" />
+						<DOTAPlayerMuteButton id="PlayerMuteButton" />
 					</Panel>
 				</Panel>
 			</Panel>
 		</snippet>
 	</snippets>
-
-
 	<DOTAScoreboardCoaches hittest="false">
-
 		<Panel id="RadiantCoaches" class="TeamCoaches">
 			<Panel class="TeamCoachesHeader">
 				<Label text="#DOTA_Coaches" />
@@ -43,7 +39,6 @@
 				<Label class="NoCoachesLabel" text="#DOTA_CoachNone" />
 			</Panel>
 		</Panel>
-
 		<Panel id="DireCoaches" class="TeamCoaches">
 			<Panel class="TeamCoachesHeader">
 				<Label text="#DOTA_Coaches" />
@@ -55,6 +50,5 @@
 				<Label class="NoCoachesLabel" text="#DOTA_CoachNone" />
 			</Panel>
 		</Panel>
-
 	</DOTAScoreboardCoaches>
 </root>

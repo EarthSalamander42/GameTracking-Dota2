@@ -1,3 +1,5 @@
+import "dota_shared_enums.proto";
+
 option optimize_for = SPEED;
 option cc_generic_services = false;
 
@@ -65,6 +67,8 @@ message CMsgDotaScenario {
 		optional int32 hero_kills = 3;
 		optional int32 tower_kills = 4;
 		optional int32 barracks_kills = 5;
+		optional float glyph_cooldown = 6;
+		optional float radar_cooldown = 7;
 	}
 
 	message HeroHeroInt {
@@ -150,6 +154,7 @@ message CMsgDotaScenario {
 		optional bool first_blood_given = 72;
 		optional int32 bounty_runes = 73;
 		optional int32 outposts_captured = 74;
+		optional .CScenario_Position position = 75;
 		repeated .CMsgDotaScenario.HeroHeroInt enemy_kills = 150;
 		repeated .CMsgDotaScenario.DamageStatsByType damage_stats = 151;
 		repeated .CMsgDotaScenario.HeroAbility abilities = 152;

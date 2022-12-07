@@ -232,15 +232,6 @@ message CMsgDOTALeaguePrizePool {
 message CMsgDOTALeagueInfoListAdminsRequest {
 }
 
-message CMsgDOTALeagueNodeRequest {
-	optional uint32 league_id = 1;
-	optional uint32 node_id = 2;
-}
-
-message CMsgDOTALeagueNodeResponse {
-	optional .CMsgDOTALeagueNode node = 1;
-}
-
 message CMsgDOTALeagueAvailableLobbyNodesRequest {
 	optional uint32 league_id = 1;
 }
@@ -344,8 +335,8 @@ message CMsgDOTADPCSeasonResults {
 	}
 
 	message Standing {
-		optional uint32 region = 1;
-		optional uint32 division = 2;
+		optional .ELeagueRegion region = 1 [default = LEAGUE_REGION_UNSET];
+		optional .ELeagueDivision division = 2 [default = LEAGUE_DIVISION_UNSET];
 		repeated .CMsgDOTADPCSeasonResults.StandingEntry entries = 3;
 	}
 

@@ -174,8 +174,7 @@
 
 "game_player_connecting"	"Gracz %s1 dołącza do gry"
 "game_player_joined_game"	"Gracz %s1 dołączył do gry"
-"game_player_left_game"		"Gracz %s1 opuścił grę (%s2)" [$WIN32]
-"game_player_left_game"		"Gracz %s1 opuścił grę" [$X360]
+"game_player_left_game"		"Gracz %s1 opuścił grę (%s2)."
 "game_player_joined_team"	"Gracz %s1 dołączył do drużyny %s2"
 "game_player_joined_autoteam" "Gracz %s1 został automatycznie przydzielony do drużyny %s2"
 "game_player_changed_name"	"Gracz %s1 zmienił pseudonim na %s2"
@@ -443,6 +442,8 @@
 
 "Engine_UnsupportedWindowsTitle"	"Niewspierana wersja systemu Windows"
 "Engine_UnsupportedWindowsBody"		"Ta wersja systemu Windows nie jest wspierana. Zainstaluj nowszą wersję systemu."
+"Engine_Deprecated32BitTitle"		"Ostrzeżenie o przestarzałej wersji"
+"Engine_Deprecated32BitBody"		"32-bitowa wersja jest przestarzała i zostanie usunięta, skorzystaj z 64-bitowej wersji."
 
 "Native_VersionLabel"				"WERSJA:"
 "Native_ContactingServer"			"Łączenie z serwerem"
@@ -587,6 +588,7 @@
 "LOC_Date_Format_Day_Month_Year_Numeric"								"%s1.%s2.%s3"					// 18/4/2014
 "LOC_Date_Format_Day_Month_Numeric"										"%s1.%s2"						// 18/4
 "LOC_Date_Format_DayOfWeek_Month_Day_Year"								"%s1, %s3 %s2 %s4"				// Wednesday, April 18, 2014
+"LOC_Date_Format_Month_Day_Year"										"%s2 %s1 %s3"					// April 18, 2014
 "LOC_Date_Format_Day_Month"												"%s1 %s2"						// 18 April
 "LOC_Date_Format_Day_Month_Year"										"%s1 %s2 %s3"					// 18 April 2014
 "LOC_Date_Format_Day_Month_Year_Hour_Minute_24"							"%s1 %s2 %s3, %s4:%s5"			// 18 April 2014, 17:30

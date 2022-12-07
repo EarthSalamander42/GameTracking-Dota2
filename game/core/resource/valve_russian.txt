@@ -174,8 +174,7 @@
 
 "game_player_connecting"	"Игрок %s1 подключается"
 "game_player_joined_game"	"Игрок %s1 вступает в игру"
-"game_player_left_game"		"Игрок %s1 покидает игру (%s2)" [$WIN32]
-"game_player_left_game"		"Игрок %s1 покидает игру" [$X360]
+"game_player_left_game"		"Игрок %s1 покидает игру (%s2)"
 "game_player_joined_team"	"Игрок %s1 присоединяется к команде: %s2"
 "game_player_joined_autoteam" "%s1 автоматически присоединяется к команде %s2"
 "game_player_changed_name"	"Игрок %s1 меняет имя на %s2"
@@ -443,6 +442,8 @@
 
 "Engine_UnsupportedWindowsTitle"	"Неподдерживаемая версия Windows"
 "Engine_UnsupportedWindowsBody"		"Это версия Windows не поддерживается, пожалуйста, обновите её до более современной версии"
+"Engine_Deprecated32BitTitle"		"Предупреждение об устаревшем ПО"
+"Engine_Deprecated32BitBody"		"Данная 32-битная версия устарела и будет удалена. Используйте 64-битную версию."
 
 "Native_VersionLabel"				"ВЕРСИЯ: "
 "Native_ContactingServer"			"Подключение к серверу"
@@ -588,6 +589,7 @@
 "LOC_Date_Format_Day_Month_Year_Numeric"								"%s1.%s2.%s3"					// 18/4/2014
 "LOC_Date_Format_Day_Month_Numeric"										"%s1/%s2"						// 18/4
 "LOC_Date_Format_DayOfWeek_Month_Day_Year"								"%s1, %s3 %s2 %s4"				// Wednesday, April 18, 2014
+"LOC_Date_Format_Month_Day_Year"										"%s2 %s1 %s3"					// April 18, 2014
 "LOC_Date_Format_Day_Month"												"%s1 %s2"						// 18 April
 "LOC_Date_Format_Day_Month_Year"										"%s1 %s2 %s3"					// 18 April 2014
 "LOC_Date_Format_Day_Month_Year_Hour_Minute_24"							"%s1 %s2 %s3, %s4:%s5"			// 18 April 2014, 17:30

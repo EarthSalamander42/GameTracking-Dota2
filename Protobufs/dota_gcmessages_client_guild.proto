@@ -1,3 +1,5 @@
+import "dota_shared_enums.proto";
+
 option optimize_for = SPEED;
 option cc_generic_services = false;
 
@@ -233,24 +235,6 @@ message CMsgClientToGCRequestGuildMembershipResponse {
 
 message CMsgGCToClientGuildMembershipUpdated {
 	optional .CMsgAccountGuildMemberships guild_memberships = 1;
-}
-
-message CMsgClientToGCRequestGuildSummary {
-	optional uint32 guild_id = 1;
-}
-
-message CMsgClientToGCRequestGuildSummaryResponse {
-	enum EResponse {
-		k_eInternalError = 0;
-		k_eSuccess = 1;
-		k_eTooBusy = 2;
-		k_eDisabled = 3;
-		k_eTimeout = 4;
-		k_eInvalidGuild = 5;
-	}
-
-	optional .CMsgClientToGCRequestGuildSummaryResponse.EResponse result = 1 [default = k_eInternalError];
-	optional .CMsgGuildSummary guild_summary = 2;
 }
 
 message CMsgClientToGCJoinGuild {

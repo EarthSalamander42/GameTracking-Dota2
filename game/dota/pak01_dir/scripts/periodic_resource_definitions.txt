@@ -339,4 +339,86 @@
 		"default_max_value"			"6"
 	}
 
+	"fall2021_drow_arcana_event_resource"
+	{
+		"periodic_resource_id"		"47"
+		"period_start_timestamp"	"1638982800"	// 09/12/2021 - 9am PST
+		"period_duration" 			"604800"		// weekly
+		"default_max_value"			"1"
+	}
+
+    "fantasy_dpc_daily_packs"
+	{
+		"periodic_resource_id"		"48"
+		"period_start_timestamp"	"1637654400"	// 23/11/2021 - 12am PST
+		"period_duration" 			"86400"			// daily
+		"default_max_value"			"1"
+	}
+
+	"fall_2021_labyrinth_battle_points"
+	{
+		"periodic_resource_id"		"49"
+		"period_start_timestamp"	"1639587600"	// Wed 15 Dec 2021 - 9am PST
+		"period_duration"			"604800"		// weekly
+		"default_max_value"			"2000"
+		"extend_initial_period"		"1"				// treat pre-wednesday as part of week 1
+	}
+
+	"fall_2021_labyrinth_arcane_fragments"
+	{
+		"periodic_resource_id"		"50"
+		"period_start_timestamp"	"1639587600"	// Wed 15 Dec 2021 - 9am PST
+		"period_duration"			"604800"		// weekly
+		"default_max_value"			"5400"
+		"extend_initial_period"		"1"				// treat pre-wednesday as part of week 1
+	}
+
+	"featured_game_mode_points"
+	{
+		"periodic_resource_id"		"51"
+		"period_start_timestamp"	"1654801200" // Thursday 9 Jun - 12pm PDT
+		"period_duration"			"604800"		// weekly
+		"default_max_value"			"300"
+		"extend_initial_period"		"1"				// treat pre-Thursday as part of week 1
+	}
+	
+	"international_2022_tipping_tokens"
+	{
+		"periodic_resource_id"		"52"
+		"period_start_timestamp"	"1661443200"
+		"period_duration" 			"604800"
+		"default_max_value"			"5"
+	}
+
+	"international_2022_daily_in_game_predictions"
+	{
+		"periodic_resource_id"		"53"
+		"period_start_timestamp"	"1661443200"
+		"period_duration" 			"86400"			// daily
+		"default_max_value"			"6"
+	}
+
+	"international_2022_weekly_bonus"
+	{
+		"periodic_resource_id"		"54"
+		"period_start_timestamp"	"1662073200"
+		"period_duration" 			"604800"			// weekly
+		"default_max_value"			"2000"
+	}
+
+	"international_2022_weekly_candy_points"
+	{
+		"periodic_resource_id"		"55"
+		"period_start_timestamp"	"1662073200"
+		"period_duration" 			"604800"			// weekly
+		"default_max_value"			"2000"
+	}
+
+	"international_2022_weekly_candyshop_rerollcharges"
+	{
+		"periodic_resource_id"		"56"
+		"period_start_timestamp"	"1666886400"		// Thursday, October 27, 2022 4:00:00 PM GMT
+		"period_duration" 			"604800"			// weekly
+		"default_max_value"			"10"
+	}
 }

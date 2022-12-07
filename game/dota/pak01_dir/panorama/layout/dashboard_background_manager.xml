@@ -1,16 +1,8 @@
+<!-- xml reconstructed by ValveResourceFormat: https://vrf.steamdb.info/ -->
 <root>
 	<styles>
 		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
 		<include src="s2r://panorama/styles/dashboard_background_manager.vcss_c" />
 	</styles>
-
-	<!-- 
-	                                                                                 
-	                                                                                     
-		                                                
-	-->
-	
-	<DOTADashboardBackgroundManager override-background="file://{resources}/layout/battle_pass/international2020/comp_ti10_dashboard_background.xml">
-	</DOTADashboardBackgroundManager>
-
+	<DOTADashboardBackgroundManager override-background="DOTABPBackgroundInternational2022" />
 </root>

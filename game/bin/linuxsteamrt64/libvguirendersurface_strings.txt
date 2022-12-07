@@ -1,6 +1,4 @@
 !m_bNeedsSort
-"%s"
-"%s" = "%s"
 #Frame_Untitled
 #MessageBox_Cancel
 #MessageBox_OK
@@ -28,14 +26,13 @@ $ORIGIN
 %
 %%%d
 %%%s%%
-%-120s
-%-120s - %s
 %d %d %d %d
 %d_hidden
 %d_width
 %f %f %f %f
-%i %i %i %i
-%s
+%lf
+%lld
+%llu
 %s %s
 %s moved to front
 %s string image, int src_corner_height, int src_corner_width, int draw_corner_height, int draw_corner_width
@@ -54,12 +51,12 @@ $ORIGIN
 %s: '%s'
 %s:hscroll
 %s:vscroll
+%u
 &Apply
 &Cut
 &Exit
 &Reload Localization
 &Save
-( def. "%s" )
 (no name)
 *
 *N12_GLOBAL__N_115ScrollBarButtonE
@@ -77,14 +74,12 @@ $ORIGIN
 -vguifocus
 -vguimessages
 ...
-../../public/tier0/utllinkedlist.h
-../../public/tier0/utlrbtree.h
 ../../public/tier0/utlsortvector.h
-../public/ordered_constructor.h
 ../public/scenesystem/vertexformat.h
-../public/tier0/utllinkedlist.h
 0 - no auto-resize
 0 - top-left
+0 0 0 0
+0 0 0 255
 1 - resize right
 1 - top-right
 10CheckImage
@@ -97,7 +92,6 @@ $ORIGIN
 14CColorProperty
 14CFloatProperty
 14CHFontProperty
-14ConCommandBase
 14ISchemeSurface
 15CSmallTextEntry
 15CStringProperty
@@ -105,11 +99,9 @@ $ORIGIN
 15CTier1AppSystemI18IVGuiRenderSurfaceLx0EE
 15CTier2AppSystemI18IVGuiRenderSurfaceLx0EE
 15CTier3AppSystemI18IVGuiRenderSurfaceLx0EE
-16CDefaultAccessor
 16CRSEmbeddedPanel
 17IVGuiPaintSurface
 18CBuildModeNavCombo
-18CPlaceholderConVar
 18CTextureDictionary
 18CTextureIdProperty
 18CVGuiRenderSurface
@@ -122,10 +114,8 @@ $ORIGIN
 20CDragDropHelperPanel
 20CPostConnectCallback
 22CSchemaInstallCallback
-23IConCommandBaseAccessor
 24CProportionalIntProperty
 24IProceduralLayerRenderer
-255
 25CProportionalXPosProperty
 25CProportionalYPosProperty
 26CProportionalFloatProperty
@@ -135,31 +125,27 @@ $ORIGIN
 3 - down & right
 4
 4 - no pin
-6ConVar
 7Dragger
-7IConVar
 </a>
 <a href=
-<no deferred ref found>
+<invalid>
 <no failure reason set>
-<null>
-<unconnected>
+<undefined>
 <unknown>
 >
-?../public/tier0/utlrbtree.h
+?
 ???
+?CUtlRBTree overflow with %u elements!
 @
 @?
 @A
 @B
-A
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!
 APanelListPanel
+AVScript
 Accel
-Access of unconnected ConVarRef
-Access of unconnected SplitScreenConVarRef
 ActivateItem
-AllocInternal
+AlignedByteArray not properly aligned
 Already have converter for type %s, ignoring...
 Alt
 AnimGraphEditorUtils001
@@ -211,6 +197,7 @@ CBufferString::ExtendPath(char const*, char)
 CBufferString::ExtractFilePath(char const*, bool)
 CBufferString::FixSlashes(char)
 CBufferString::FixupPathName(char)
+CBufferString::Format(char const*, ...)
 CBufferString::Insert(int, char const*, int, bool)
 CBufferString::MakeAbsolutePath(char const*, char const*)
 CBufferString::MakeRelativePath(char const*, char const*)
@@ -228,7 +215,6 @@ CBufferString::ToLowerFast(int)
 CBuildFactoryHelper
 CBuildFactoryHelper:  Factory for '%s' already exists!!!!
 CBuildModeNavCombo
-CCommand::Tokenize: Encountered command which overflows the argument buffer.. Clamped!
 CCommand::Tokenize: Encountered command which overflows the tokenizer buffer.. Skipping!
 CDragDropHelperPanel
 CExpressionEvaluator::CExpressionEvaluator()
@@ -237,7 +223,6 @@ CExpressionEvaluator::~CExpressionEvaluator()
 CKeyValues_Data::Internal_SetString(char const*)
 CMatSystemTexture::SetMaterial
 CMemAllocSystemInitialize
-COLORCORRECTION_VERSION_1
 CONTENT
 CONTENTROOT
 CRC32_ProcessBuffer
@@ -274,20 +259,20 @@ CUtlMemoryPoolBase::Alloc()
 CUtlMemoryPoolBase::CUtlMemoryPoolBase(int, int, int, MemoryPoolGrowType_t, char const*, MemAllocAttribute_t)
 CUtlMemoryPoolBase::ClearDestruct(void (*)(void*))
 CUtlMemoryPoolBase::~CUtlMemoryPoolBase()
-CUtlRBTree overflow with %u elements!
 CUtlString::Acquire(CBufferString*, bool)
 CUtlString::CUtlString(CBufferString const&)
 CUtlString::FixSlashes(char)
 CUtlString::FreeMemoryBlock()
 CUtlString::IsEqual_CaseSensitive(char const*) const
+CUtlString::IsEqual_FastCaseInsensitive(char const*) const
 CUtlString::Purge()
 CUtlString::Set(char const*)
 CUtlString::SetDirect(char const*, int)
 CUtlString::ToLowerFast()
 CUtlString::operator+=(char const*)
 CUtlString::operator=(CBufferString const&)
-CUtlSymbolTable::AddString(char const*)
-CUtlSymbolTable::AddString(char const*, int)
+CUtlSymbolTable::AddString(char const*, bool*)
+CUtlSymbolTable::AddString(char const*, int, bool*)
 CUtlSymbolTable::CUtlSymbolTable(int, int, bool)
 CUtlSymbolTable::Find(char const*) const
 CUtlSymbolTable::SetPageSize(unsigned int)
@@ -306,6 +291,7 @@ CVGuiRenderSurface::DrawGradientQuad
 CVGuiRenderSurface::Init
 CVGuiRenderSurface::StartDrawing
 CXXABI_1.3
+CXXABI_1.3.9
 CallQueued
 Can't add Keybindings Context for unnamed panels
 CanBeDefaultButton
@@ -340,10 +326,6 @@ ComboBoxButton.ArrowColor
 ComboBoxButton.BgColor
 ComboBoxButton.DisabledBgColor
 CommandLine
-ConMsg(char const*, ...)
-ConVar(%s) defined with infinite float value (%s)
-ConVarRef %s doesn't point to an existing ConVar
-ConfigurationSystem_001
 ConnectInterfaceSingletons
 ControlFactory
 ControlModified
@@ -368,7 +350,6 @@ CursorExitedChild
 CursorExitedMenuItem
 CvarToggleCheckButton
 Deaccel
-DebugTextureInfo001
 Default
 DefaultSmall
 DefaultUnderline
@@ -380,7 +361,6 @@ DeletePanelButton
 DemoUpconverterVersion001
 DialogVariables
 DisarmItem
-Divider
 DoCompositionString
 DoConversionModeChanged
 DoCopySelected
@@ -391,7 +371,6 @@ DoPaste
 DoSentenceModeChanged
 DoShowIMECandidates
 DoUpdateIMECandidates
-DotaCardGameClient_001
 DownArrow
 DragDrop
 DragDrop.DragFrame
@@ -443,14 +422,12 @@ Engine2
 EngineServiceMgr001
 Error: Could not save changes.  File is most likely read only.
 Escape
-EventSystem001
 ExitButton
 Expand
 ExpandButton
 ExpandButton.Color
 Expanded
 FATAL ERROR: unable to register all schema data: %s
-FCVAR_NEVER_AS_STRING
 Fieldname is not unique: %sRename it and try again.
 FileSelectionCombo
 Find
@@ -490,7 +467,7 @@ FrameTitleButton.DisabledBgColor
 FrameTitleButton.DisabledFgColor
 FrameTitleButton.FgColor
 GAME
-GCC: (Ubuntu 5.4.0-7.really.6+steamrt1.1+srt1) 5.4.1 20160803
+GCC: (SteamRT 5.4.0-7.really.6+steamrt1.2+srt2) 5.4.1 20160803
 GLIBC_2.14
 GLIBC_2.2.5
 GLIBC_2.4
@@ -514,7 +491,6 @@ HammerMapLoader001
 HelpSystem_001
 HideNewControlMenu
 Home
-HookUpConfigValue
 HorizScrollBar
 HostStateMgr001
 Hotkey
@@ -527,11 +503,8 @@ InputStackSystemVersion001
 InputSystemVersion001
 Ins
 Insert
-InstallChangeCallback called with NULL callback, ignoring!!!
-InstallChangeCallback ignoring duplicate change callback!!!
 InstallSchemaBindings
 Intentionally vague touch behavior for %p
-Invalid access of deferred ConVarRef for '%s'
 Invalid parent region %s specified for region %s in panel %s
 Invalidate
 KEY_0
@@ -746,6 +719,7 @@ Marlett
 MarlettSmall
 MaterialUtils_001
 MathLib_Init
+MemAlloc_StrDupFunc
 Menu.ArmedBgColor
 Menu.ArmedTextColor
 Menu.BgColor
@@ -799,7 +773,6 @@ N4vgui12ToggleButtonE
 N4vgui12TreeNodeTextE
 N4vgui13EditablePanelE
 N4vgui13FocusNavGroupE
-N4vgui13ListViewPanelE
 N4vgui13MenuSeparatorE
 N4vgui13TreeNodeImageE
 N4vgui14ComboBoxButtonE
@@ -817,7 +790,6 @@ N4vgui19AnimationControllerE
 N4vgui19CircularProgressBarE
 N4vgui20CTreeViewListControlE
 N4vgui21ContinuousProgressBarE
-N4vgui21CvarToggleCheckButtonI9ConVarRefEE
 N4vgui21IVguiShutdownCallbackE
 N4vgui27CAnimationControllerCleanupE
 N4vgui32IPanelAnimationPropertyConverterE
@@ -837,7 +809,6 @@ N4vgui8RichTextE
 N4vgui8TreeNodeE
 N4vgui8TreeViewE
 N4vgui8URLLabelE
-N4vgui9ListPanelE
 N4vgui9ScrollBarE
 N4vgui9TextImageE
 NetworkClientService_001
@@ -845,10 +816,8 @@ NetworkMessagesVersion001
 NetworkP2PService_001
 NetworkServerService_001
 NetworkService_001
-NetworkSystemUtilsVersion001
 NetworkSystemVersion001
 NewControls
-NewNode
 Next
 NextChild
 No binding for '%s', defautl key already bound to '%s'
@@ -892,19 +861,19 @@ Plat_CreateWindow
 Plat_DebugPrint
 Plat_DestroyWindow
 Plat_ExitProcess
+Plat_FatalErrorFunc
 Plat_FlashWindow
 Plat_FloatTime
 Plat_GetEnv
 Plat_GetModuleFilename
-Plat_GetThreadIndex
 Plat_GetWindowBounds
 Plat_GetWindowClientSize
 Plat_IsInDebugSession
 Plat_IsWindowMinimized
 Plat_IsWindowVisible
 Plat_MinimizeWindow
+Plat_NonFatalErrorFunc
 Plat_ScreenToWindowCoords
-Plat_SetDenormalsAreZero
 Plat_SetWindowPos
 Plat_SetWindowSize
 Plat_SetWindowTitleW
@@ -921,13 +890,11 @@ Pulse
 PushMakeCurrent
 Queued fxn call: %s
 Queued fxn call: %s '%s'
-QueuedLoaderVersion001
 RadioButton
 RadioButtonChecked
 RandomFloat
-RandomSeed
-RegisterAllModuleData
-RegisterConfigValue: Unknown error constructing config value "%s"!
+RegisterConCommand: Unknown error registering con command "%s"!
+RegisterConVar: Unknown error registering convar "%s"!
 Release
 ReloadLocalization
 Remaining
@@ -1001,7 +968,6 @@ ScrollButtonPressed
 SelectedImage
 SentenceModeMenu
 SerializedEntitiesVersion001
-ServerUploadGameStats001
 SetActiveControl
 SetAsCurrentDefaultButton
 SetAsDefaultButton
@@ -1038,7 +1004,7 @@ Source2GameClients001
 Source2GameEntities001
 Source2Host001
 Source2Server001
-Source2ServerSerializers002
+Source2V8System001
 Space
 Spline
 StartDrawing
@@ -1074,6 +1040,7 @@ Texture1
 Texture2
 Texture3
 Texture4
+This convar is being accessed prior to ConVar_Register being called
 ThreadGetCurrentId
 ThreadInMainThread
 ThreadSleep
@@ -1108,16 +1075,13 @@ UnpinnedCornerOffsetY
 UpArrow
 UpdateControlData
 UseL4D2VguiHack
-UserInfoChangeService_001
 UtlMemory_Alloc
 UtlMemory_CalcNewAllocationCount
 VApplication001
 VAsyncFileSystem2_001
 VAvi001
-VBAllocTracker001
 VBik001
 VConComm001
-VDebugService_001
 VEngineCvar007
 VFileSystem017
 VGUI Build Mode Editor
@@ -1136,7 +1100,6 @@ VGuiRenderSurface requires the material system to run!
 VGuiRenderSurface requires the vgui::IInput system to run!
 VGuiRenderSurface requires the vgui::IPanel system to run!
 VGuiRenderSurface requires the vgui::IVGUI system to run!
-VMDLLIB001
 VMaterialSystem2_001
 VMediaFoundation001
 VP4003
@@ -1167,7 +1130,6 @@ V_atan2f
 V_atanf
 V_atof
 V_atofloat32
-V_atofloat64
 V_atoi
 V_cosd
 V_cosf
@@ -1197,7 +1159,6 @@ V_towupper
 V_vsnprintf
 V_wcsicmp
 V_wcsnicmp_cch
-Valve Client
 VarsButton
 VarsMenu
 VertScrollBar
@@ -1212,14 +1173,12 @@ WIN32HIDEF
 WIN32LODEF
 WIN32WIDE
 Warning
-Warning:  %s = '%s' is infinite, clamping value.
 WindowDisabledBgColor
 Windows
 WorldRendererMgr001
 [
 [ no resource file associated with dialog ]
 [$
-[%.3f server clamped to %.3f]
 [%s] applying key '%s', has changed from '%s' to '%s'
 [nothing currently selected]
 \\
@@ -1263,7 +1222,6 @@ anim_framerate
 animate
 animationcontroller.cpp
 append
-archive
 armedBgColor_override
 armedFgColor_override
 associate
@@ -1292,15 +1250,11 @@ cellcolor
 center
 centerwrap
 changed
-cheat
 cl_hud_minmode
-client
-clientcmd_can_execute
 clientinsetx_override
 col
 column
 command
-configvalue.cpp
 controls
 ctrl
 cvar_name
@@ -1333,6 +1287,7 @@ editable
 editablepanel.cpp
 english
 f%d
+false
 fg_image
 fgcolor
 fieldName
@@ -1340,6 +1295,8 @@ fillColor
 fillcolor
 fillcolor_override
 filtered
+float32
+float64
 floor
 floorf
 frame
@@ -1360,7 +1317,6 @@ frame_trGrip
 frames
 ftp://
 g_pMemAlloc
-game
 generic
 group
 handle
@@ -1383,7 +1339,6 @@ keycode
 labelText
 labeltext
 lastBarWidth
-ld-linux-x86-64.so.2
 libc.so.6
 libm.so.6
 libpthread.so.0
@@ -1401,7 +1356,6 @@ m_nBgTextureId3
 m_nBgTextureId4
 m_nPaintBackgroundType
 mailto:
-malloc
 materials
 materials/vgui/hud/800corner1.vmat
 materials/vgui/hud/800corner2.vmat
@@ -1412,14 +1366,12 @@ materialsystem2
 mathlib.cpp
 matsystemtexture_%s_%lld.vtex
 max
-max. %f
 maxchars
 mdl
 memcmp
 memcpy
 memmove
 memset
-min. %f
 minimum-height
 minimum-width
 mouseinputenabled
@@ -1432,12 +1384,11 @@ north
 north-east
 northeast
 northwest
-notconnected
-notify
 nw
 oldtall
 oldwide
 operator delete(void*)
+operator delete(void*, unsigned long)
 operator delete[](void*)
 operator new(unsigned long)
 operator new(unsigned long, std::nothrow_t const&)
@@ -1471,12 +1422,12 @@ pthread_mutex_unlock
 pthread_mutexattr_init
 pthread_mutexattr_settype
 ptr
+qangle
 qsort
 r%d
 r_screen_size_expansion
 replace
 replaceSelection
-replicated
 resource/layout/%s.layout
 resource/layout/%s_%s.layout
 resourcesystem
@@ -1485,19 +1436,16 @@ runevent
 s
 scaleAmount
 scaleImage
-schemabindings.cpp
 screenx
 screeny
 scrollbar
 selectionColor_override
 selectionTextColor_override
 selfDroppable
-server_can_execute
 setChildPanelWidth
 settitlebarvisible
 shift
 showScrollBar
-singleplayer
 singletons.cpp
 sound_armed
 sound_depressed
@@ -1512,7 +1460,6 @@ sqrt
 sqrtf
 src_corner_height
 src_corner_width
-ss_added
 state
 steam://
 steambeta://
@@ -1554,15 +1501,19 @@ tooltiptext
 top
 true
 typeinfo for CThreadSyncObject
+uint32
+uint64
 unable to find control '%s'
 unichar
 unicode
 unnamed
 url
 use_proportional_insets
-user
 usetitlesafe
 variable
+vector2
+vector3
+vector4
 vgui/
 vgui2
 vgui::

@@ -17,12 +17,13 @@ end
 function modifier_tusk_walrus_wallop_nb2017:OnCreated( kv )
 	self.bIsWalrusPunch = false
 	self.crit_multiplier = self:GetAbility():GetSpecialValueFor( "crit_multiplier" )
-	self.knockback_speed = self:GetAbility():GetSpecialValueFor( "knockback_speed" )
+	self.knockback_height = self:GetAbility():GetSpecialValueFor( "knockback_height" )
 	self.knockback_distance = self:GetAbility():GetSpecialValueFor( "knockback_distance" ) 
 	self.knockback_duration = self:GetAbility():GetSpecialValueFor( "knockback_duration" )
 
 	if IsServer() then
 		self.hHitTargets = {}
+		self.iProcAttackRecords = {}
 	end
 end
 
@@ -30,7 +31,7 @@ end
 
 function modifier_tusk_walrus_wallop_nb2017:OnRefresh( kv )
 	self.crit_multiplier = self:GetAbility():GetSpecialValueFor( "crit_multiplier" )
-	self.knockback_speed = self:GetAbility():GetSpecialValueFor( "knockback_speed" )
+	self.knockback_height = self:GetAbility():GetSpecialValueFor( "knockback_height" )
 	self.knockback_distance = self:GetAbility():GetSpecialValueFor( "knockback_distance" ) 
 	self.knockback_duration = self:GetAbility():GetSpecialValueFor( "knockback_duration" )
 end
@@ -56,27 +57,39 @@ function modifier_tusk_walrus_wallop_nb2017:OnAttackRecord( params )
 		local hTarget = params.target
 		local hAbility = self:GetAbility()
 
-
 		if hAttacker == nil or hAttacker ~= self:GetParent() or hTarget == nil or hAbility == nil then
 			return 0
 		end
 
+		local bTalentProc = false
+		local hTalent = self:GetCaster():FindAbilityByName( "special_bonus_unique_tusk_walrus_wallop_auto_trigger" )
+		if hTalent and hTalent:GetLevel() > 0 then
+			local fTalentChance = hTalent:GetSpecialValueFor( "value" )
+			--print( 'CHECKING WALRUS WALLOP CHANCE @ ' .. fTalentChance )
+			if RollPseudoRandomPercentage( math.floor( fTalentChance ), DOTA_PSEUDO_RANDOM_TUSK_CRIT, self:GetParent() ) then
+				--print( 'WALLOP TIME!!!!' )
+				bTalentProc = true
+			end
+		end		
+
 		self.bIsWalrusPunch = false
 
-		if hAttacker:IsSilenced() then
-			return 0
-		end
+		if not bTalentProc then
+			if hAttacker:GetCurrentActiveAbility() ~= hAbility and hAbility:GetAutoCastState() == false then
+				return 0
+			end
 
-		if hAttacker:GetCurrentActiveAbility() ~= hAbility then
-			return 0
-		end
+			if hAbility:GetEffectiveManaCost( hAbility:GetLevel() ) > hAttacker:GetMana() then
+				return 0
+			end
 
-		if hAbility:GetManaCost( hAbility:GetLevel() ) > hAttacker:GetMana() then
-			return 0
-		end
+			if hAbility:IsCooldownReady() == false then
+				return 0
+			end
 
-		if hAbility:IsCooldownReady() == false then
-			return 0
+			if hAttacker:IsSilenced() then
+				return 0
+			end
 		end
 
 		if hTarget:IsInvulnerable() or hTarget:IsBuilding() or hTarget:IsOther() or hTarget:GetTeamNumber() == hAttacker:GetTeamNumber() then
@@ -84,6 +97,9 @@ function modifier_tusk_walrus_wallop_nb2017:OnAttackRecord( params )
 		end
 
 		self.bIsWalrusPunch = true
+		if bTalentProc then
+			table.insert( self.iProcAttackRecords, params.record )
+		end
 		self.hHitTargets = {}
 
 		EmitSoundOn( "Hero_Tusk.WalrusPunch.Cast", hAttacker )
@@ -101,6 +117,14 @@ function modifier_tusk_walrus_wallop_nb2017:OnAttackLanded( params )
 		local hTarget = params.target
 		local hAbility = self:GetAbility()
 
+		local bProcAttack = false
+		for i = 1,#self.iProcAttackRecords do
+			if self.iProcAttackRecords[i] == params.record then
+				--print( 'FOUND PROC ATTACK!' )
+				table.remove( self.iProcAttackRecords, i )
+				bProcAttack = true
+			end
+		end
 
 		if hAttacker == nil or hAttacker ~= self:GetParent() or hTarget == nil or hAbility == nil then
 			return 0
@@ -110,27 +134,13 @@ function modifier_tusk_walrus_wallop_nb2017:OnAttackLanded( params )
 			return 0
 		end
 
-		if hAttacker:IsSilenced() then
-			return 0
-		end
-
-		if hAttacker:GetCurrentActiveAbility() ~= hAbility then
-			return 0
-		end
-
-		if hAbility:CastFilterResult( hTarget ) ~= UF_SUCCESS then
-			return 0
-		end
-
-		if hAbility:GetManaCost( hAbility:GetLevel() ) > hAttacker:GetMana() then
-			return 0
-		end
-
 		if hTarget:IsInvulnerable() or hTarget:IsBuilding() or hTarget:IsOther() or hTarget:GetTeamNumber() == hAttacker:GetTeamNumber() then
 			return 0
 		end
 
-		hAbility:CastAbility()
+		if bProcAttack == false then
+			hAbility:CastAbility()
+		end
 
 		local nFXIndex = ParticleManager:CreateParticle( "particles/units/heroes/hero_tusk/tusk_walruspunch_start.vpcf", PATTACH_CUSTOMORIGIN, hAttacker );
 		ParticleManager:SetParticleControlEnt( nFXIndex, 0, hTarget, PATTACH_ABSORIGIN_FOLLOW, nil, hTarget:GetOrigin(), true );
@@ -157,11 +167,17 @@ function modifier_tusk_walrus_wallop_nb2017:OnAttackLanded( params )
 		hTarget:AddNewModifier( self:GetCaster(), self:GetAbility(), "modifier_tusk_walrus_wallop_enemy_nb2017", kv )
 
 		table.insert( self.hHitTargets, hTarget )
-		print( "setting walrus punch = false" )
+		--print( "setting walrus punch = false" )
 		self.bIsWalrusPunch = false
 	end
 
 	return 0
+end
+
+--------------------------------------------------------------------------------
+
+function modifier_tusk_walrus_wallop_nb2017:GetCritDamage()
+	return self.crit_multiplier
 end
 
 --------------------------------------------------------------------------------
@@ -176,35 +192,20 @@ function modifier_tusk_walrus_wallop_nb2017:GetModifierPreAttack_CriticalStrike(
 		local hTarget = params.target
 		local hAbility = self:GetAbility()
 
-
 		if hAttacker == nil or hAttacker ~= self:GetParent() or hTarget == nil or hAbility == nil then
 			return 0
 		end
 
-		if hAttacker:IsSilenced() then
-			return 0
-		end
-
-		if hAttacker:GetCurrentActiveAbility() ~= hAbility then
-			return 0
-		end
-
-		if hAbility:CastFilterResult( hTarget ) ~= UF_SUCCESS then
-			return 0
-		end
-
-		if hAbility:GetManaCost( hAbility:GetLevel() ) > hAttacker:GetMana() then
-			return 0
-		end
 
 		if hTarget:IsInvulnerable() or hTarget:IsBuilding() or hTarget:IsOther() or hTarget:GetTeamNumber() == hAttacker:GetTeamNumber() then
 			return 0
 		end
 
 		local nCritPct = self.crit_multiplier
-		local hTalent = self:GetCaster():FindAbilityByName( "special_bonus_unique_tusk" )
+		local hTalent = self:GetCaster():FindAbilityByName( "special_bonus_unique_tusk_walrus_wallop_crit" )
 		if hTalent and hTalent:GetLevel() > 0 then
-			nCritPct = nCritPct + hAbility:GetSpecialValueFor( "value" )
+			--print( 'ADDING CRIT TO WALRUS WALLOP = ' .. hTalent:GetSpecialValueFor( "value" ) )
+			nCritPct = nCritPct + hTalent:GetSpecialValueFor( "value" )
 		end
 
 		return nCritPct

@@ -1,5 +1,6 @@
 
 ogre_tank_jump_smash = class({})
+
 LinkLuaModifier( "modifier_ogre_tank_melee_smash_thinker", "modifiers/creatures/modifier_ogre_tank_melee_smash_thinker", LUA_MODIFIER_MOTION_NONE )
 
 ----------------------------------------------------------------------------------------
@@ -33,3 +34,6 @@ function ogre_tank_jump_smash:OnSpellStart()
 end
 
 -----------------------------------------------------------------------------
+
+ogre_tank_farmer_jump_smash = ogre_tank_jump_smash
+bonus_ogre_tank_jump_smash = ogre_tank_jump_smash

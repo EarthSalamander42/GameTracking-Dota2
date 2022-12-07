@@ -543,6 +543,11 @@
 			"heroID"		"77"
 			"tag"		"Lycanthrope"
 		}
+		"marci"
+		{
+			"heroID"		"136"
+			"tag"		    "Marci"
+		}
 		"mars"
 		{
 			"heroID"		"129"
@@ -647,6 +652,11 @@
 		{
 			"heroID"		"110"
 			"tag"		"Phoenix"
+		}
+		"primal_beast"
+		{
+			"heroID"		"137"
+			"tag"		"Primal Beast"
 		}
 		"puck"
 		{
@@ -831,12 +841,12 @@
 		{
 			"heroID"		"98"
 			"tag"		"Timbersaw"
-			"mesh_groups"
+			"bodygroups"
 			{
 				"armor"
 				{
-					"empty_mesh_group"		"default_@0"
-					"nonempty_mesh_group"	"default_@1"
+					"bodygroup_name"			"default"
+					"meshes_enabled_by_default"	"0"
 				}
 			}
 		}

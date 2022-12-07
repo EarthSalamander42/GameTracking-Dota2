@@ -27,13 +27,13 @@ panorama/images/hud/icon_gold_psd.vtex
 panorama/images/hud/reborn/bg_scoreboard_psd.vtex
 panorama/images/hud/reborn/buff_outline_psd.vtex
 panorama/images/hud/reborn/scoreboard_playerslot_vignette_psd.vtex
-panorama/images/hud/reborn/shop_launcher_button_hover_psd.vtex
-panorama/images/hud/reborn/shop_launcher_button_psd.vtex
 panorama/images/spellicons/alchemist_goblins_greed_png.vtex
 panorama/images/status_icons/icon_star_empty_png.vtex
 panorama/images/status_icons/icon_star_png.vtex
 panorama/layout/custom_game/custom_ui_manifest.vxml
 soundevents/game_sounds_heroes/game_sounds_abyssal_underlord.vsndevts
+panorama/images/hud/reborn/shop_launcher_button_hover_psd.vtex
+panorama/images/hud/reborn/shop_launcher_button_psd.vtex
 addoninfo.txt
 maps/siege02.vmap
 materials/overviews/siege02.vmat
@@ -314,7 +314,6 @@ particles/frostivus_herofx/queen_shadow_strike_explosion_points_b_linear.vpcf
 particles/frostivus_herofx/queen_shadow_strike_explosion_points_linear.vpcf
 particles/frostivus_herofx/queen_shadow_strike_glow_linear.vpcf
 particles/frostivus_herofx/queen_shadow_strike_linear.vpcf
-particles/frostivus_herofx/queen_shadow_strike_linear_glow_core.vpcf
 particles/frostivus_herofx/queen_shadow_strike_linear_parent.vpcf
 particles/frostivus_herofx/queen_shadow_strike_trail_c_linear.vpcf
 particles/frostivus_herofx/queen_shadow_strike_trail_linear.vpcf
@@ -433,3 +432,6 @@ sounds/round_start.vsnd
 sounds/tally_end.vsnd
 sounds/tally_end_gold.vsnd
 sounds/tally_rise_gold.vsnd
+resource/addon_latam.txt
+resource/addon_norwegian.txt
+resource/addon_vietnamese.txt

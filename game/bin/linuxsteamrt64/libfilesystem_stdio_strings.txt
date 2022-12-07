@@ -1,21 +1,22 @@
-"%s"
-"%s" = "%s"
 $ORIGIN
-%-120s
-%-120s - %s
 %-20s "%s" %s%s
 %-20s %s
+%d %d %d %d
 %d_%d_%d_%d_%d.tmp
+%f %f %f %f
 %f elapsed w/o i/o
-%i %i %i %i
-%s%d
+%lf
+%lld
 %s%s%s crc=0x%x metadatasz=%d
 %s, %s, %s
 %s/%llu
 %s/%llu.vpk
+%s: Invalid capacity %u
+%s: Invalid grow amount %d
 %s: file too large
 %s_%03d.vpk
-( def. "%s" )
+%u
+( (int64)m_nAllocationCount + (int64)num ) <= 0x7FFFFFFF
 (Unique   ): [%s]\%s
 (vpk)
 *.*
@@ -25,7 +26,6 @@ $ORIGIN
 ---FS%s:  close %s 0x%llX %i (%.3f)
 ---FS%s:  read %s %i 0x%llX (%.3f)
 ---FS%s:  write %s %i 0x%llX
--1
 -async_memory_map
 -disable_auto_vpk_loading
 -fake_workshop_dir
@@ -33,31 +33,25 @@ $ORIGIN
 -no_hierarchical_vpk_memory_mapping
 -recordPerfStats
 ...
-../public/ordered_constructor.h
-../public/tier0/threadtools.h
-../public/tier0/utlblockmemory.h
-../public/tier0/utlfixedmemory.h
-../public/tier0/utllinkedlist.h
-../public/tier0/utlrbtree.h
+../public/tier0/threadtoolstypes.h
+../public/tier0/utlmemory.h
 ../public/tier0/utlsymboltable.h
-../public/tier2/fileutils.h
 ./
 .\
 .bsp
 .zip
+0 0 0 0
+0 0 0 255
 0:Off, 1:All (for tracking accumulated duplicate read times), >1:Microsecond threashold
 0:Off, 1:Always, 2:Not during load
-0:Off, 1:Any, 2:Sync only
 0:Off, 1:Warn main thread, 2:Warn other threads
 10CStdioFile
-10ConCommand
 10IAppSystem
 11CFileHandle
 11IFileSystem
 12CThreadEvent
 14CBaseAppSystemI11IFileSystemE
 14CBaseAppSystemI17IAsyncFileSystem2E
-14ConCommandBase
 15CBaseFileSystem
 15CTier0AppSystemI11IFileSystemLx0EE
 15CTier0AppSystemI17IAsyncFileSystem2Lx0EE
@@ -65,14 +59,11 @@ $ORIGIN
 15CTier1AppSystemI17IAsyncFileSystem2Lx0EE
 15CTier2AppSystemI11IFileSystemLx0EE
 15CTier2AppSystemI17IAsyncFileSystem2Lx0EE
-16
-16CDefaultAccessor
 16CFioReadOnlyFile
 17CAsyncFileSystem2
 17CFileSystem_Stdio
 17IAsyncFileSystem2
 17IMemoryMappedFile
-18CPlaceholderConVar
 18CStdFilesystemFile
 18IAsyncCopyRequest2
 18IAsyncReadRequest2
@@ -81,35 +72,30 @@ $ORIGIN
 19IAsyncWriteRequest2
 20CPostConnectCallback
 22CSchemaInstallCallback
-23IConCommandBaseAccessor
 24CMemoryMappedFileSection
 25CFileSystemReloadFileList
 28CFioReadOnlyMemoryMappedFile
 28CPackedStoreMemoryMappedFile
 35CMemoryMappedFileSection_SelfDelete
 47CPackedStoreMemoryMappedFile_HierarchicalParent
-6ConVar
-7IConVar
 9IFileList
 ;
 <Invalid file time %lld>
-<no deferred ref found>
+<invalid>
 <no failure reason set>
-<null>
-<unconnected>
+<undefined>
 ???
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!
 ASYNC Read: %s
-Access of unconnected ConVarRef
-Access of unconnected SplitScreenConVarRef
 Add N ms of delay to every low-level read operation, to simulate a slow disk
 Adding VPK file: %s
 Addreffing existing VPK file: %s
+AlignedByteArray not properly aligned
 Alignment
-AllocInternal
 AnimGraphEditorUtils001
 AnimationSystemUtils_001
 AnimationSystem_001
+Assert_ConditionFailed(_AssertCompileTimeConstantStruct_t const&)
 Assert_ConditionFailed(_AssertCompileTimeConstantStruct_t const&, char const*, ...)
 AssetBrowserSystem_001
 AssetPreviewSystem_001
@@ -182,7 +168,6 @@ CBufferString::StripExtension()
 CBufferString::StripTrailingSlash()
 CBufferString::ToLowerFast(int)
 CByteswap::SwapFieldsToTargetEndian(void*, void*, datamap_t*)
-CCommand::Tokenize: Encountered command which overflows the argument buffer.. Clamped!
 CCommand::Tokenize: Encountered command which overflows the tokenizer buffer.. Skipping!
 CCountedStringPool::CCountedStringPool(StringPoolCase_t)
 CCountedStringPool::~CCountedStringPool()
@@ -191,10 +176,11 @@ CDirIterator::NextFile()
 CDirIterator::~CDirIterator()
 CFioReadOnlyFile::FS_fread
 CMemAllocSystemInitialize
-COLORCORRECTION_VERSION_1
 CONTENTROOT
 CPackedStore
 CRC32_ProcessBuffer
+CRawAllocator::Alloc(RawAllocatorType_t, unsigned long, unsigned long*)
+CRawAllocator::Free(RawAllocatorType_t, void*, unsigned long)
 CThread::CThread()
 CThread::Init()
 CThread::IsThreadRunning()
@@ -210,19 +196,19 @@ CThreadBarrier::CThreadBarrier(unsigned int)
 CThreadBarrier::~CThreadBarrier()
 CThreadEvent::CThreadEvent(bool)
 CThreadEvent::Set()
-CThreadFastMutex::Lock(char const*, int, unsigned long long, unsigned int) volatile
 CThreadRWLock::LockForWrite(char const*, int)
 CThreadRWLock::UnlockWrite(char const*, int)
 CThreadRWLock::WaitForRead()
-CThreadRWLock_FastRead::CThreadRWLock_FastRead(bool)
+CThreadRWLock_FastRead::CThreadRWLock_FastRead()
 CThreadRWLock_FastRead::EncounteredComplexReadLockOperation(unsigned int, bool, char const*, int)
-CThreadRWLock_FastRead::HandleFirstWriteLockTransition()
+CThreadRWLock_FastRead::HaveWriteLock_BlockReadsNow(bool)
 CThreadRWLock_FastRead::UnlockReadAccounting(char const*, int, unsigned int)
-CThreadRWLock_FastRead::UnlockRead_LockForWrite(char const*, int)
+CThreadRWLock_FastRead::UnlockRead_LockForWrite(char const*, int, CThreadRWLock_FastRead::WriteLockTransition_t)
 CThreadRWLock_FastRead::UnlockWrite(char const*, int)
 CThreadSemaphore::CThreadSemaphore(int, int, char const*, bool)
 CThreadSemaphore::Release(int, int*)
 CThreadSemaphore::~CThreadSemaphore()
+CThreadSpinMutex::Lock(char const*, int, unsigned long long, unsigned int) volatile
 CThreadSyncObject::Wait(unsigned int)
 CThreadSyncObject::WaitImpl(unsigned int)
 CThreadSyncObject::~CThreadSyncObject()
@@ -248,8 +234,8 @@ CUtlFilenameSymbolTable::String(unsigned int const&, CBufferString*)
 CUtlFixedMemory overflow!
 CUtlLinkedList overflow! (exhausted index range)
 CUtlLinkedList overflow! (exhausted memory allocator)
-CUtlMemoryBlockAllocator::AllocCopy(char const*, unsigned int)
-CUtlMemoryBlockAllocator::CUtlMemoryBlockAllocator(int, unsigned int)
+CUtlMemoryBlockAllocator::AllocAndCopy(char const*, unsigned int)
+CUtlMemoryBlockAllocator::CUtlMemoryBlockAllocator(int, unsigned int, RawAllocatorType_t)
 CUtlMemoryBlockAllocator::~CUtlMemoryBlockAllocator()
 CUtlRBTree overflow with %u elements!
 CUtlString::Acquire(CBufferString*, bool)
@@ -269,8 +255,8 @@ CUtlString::Trim(char const*)
 CUtlString::UnqualifiedFilenameAlloc() const
 CUtlString::operator=(CBufferString const&)
 CUtlString::operator==(CUtlString const&) const
-CUtlSymbolTable::AddString(char const*)
-CUtlSymbolTable::AddString(char const*, int)
+CUtlSymbolTable::AddString(char const*, bool*)
+CUtlSymbolTable::AddString(char const*, int, bool*)
 CUtlSymbolTable::CUtlSymbolTable(int, int, bool)
 CUtlSymbolTable::Find(char const*) const
 CUtlSymbolTable::SetPageSize(unsigned int)
@@ -280,16 +266,12 @@ CVProfNode::EnterScope()
 CVProfNode::ExitScope()
 CVProfNode::GetSubNode(char const*, int, char const*, int)
 CXXABI_1.3
+CXXABI_1.3.9
 Cannot open %s for writing
 Cannot rename file "%s" that exists in a VPK or UGC file!
 Cannot rename file "%s" that exists in a read only search path!
-ChangeSize
 Clear the list of files that have been opened.
 CommandLine
-ConMsg(char const*, ...)
-ConVar(%s) defined with infinite float value (%s)
-ConVarRef %s doesn't point to an existing ConVar
-ConfigurationSystem_001
 ConnectInterfaceSingletons
 Content being marked corrupt.  bMissingFilesOnly = %s, pFile specified as '%s', reason: '%s'
 CopyAFile: Cannot copy into a VPK or UGC file '%s'
@@ -298,47 +280,20 @@ CopyAFile: dest '%s' must be absolute path.
 CreateInterface
 DEFAULT_WRITE_PATH
 DataOffset
-DebugTextureInfo001
 DemoUpconverterVersion001
 Destroying Completion Queue with %zu pending results!
-DotaCardGameClient_001
-ERROR_ALIGNMENT
-ERROR_ALREADYSERVICED
-ERROR_ALREADYSUBMITTED
-ERROR_BADOPER
-ERROR_BADPATHSPEC
-ERROR_BADPTR
-ERROR_BADUSERBUFFER
-ERROR_FAILURE
-ERROR_FAILURE[ABORT]
-ERROR_FAILURE[APPEND]
-ERROR_FAILURE[FINISH]
-ERROR_FAILURE[GET_RESULT]
-ERROR_FAILURE[SET_PRIORITY]
-ERROR_FAILURE[STATUS]
-ERROR_FILENAMETOOLONG
-ERROR_FILEOPEN
-ERROR_INVALIDFILENAME
-ERROR_IOLOCKED
-ERROR_IOSUSPENDED
-ERROR_ISSYNCHRONOUS
-ERROR_NOBUFFER
-ERROR_NOMEMORY
-ERROR_NONOTIFICATION
-ERROR_NOTSUBMITTED
-ERROR_NOTVALIDSYNCRONOUS
-ERROR_PATHTOOLONG
-ERROR_READING
-ERROR_UNKNOWNID
+ERROR_BADREQUEST: Code error - bad request
+ERROR_FILEOPEN: File not found
+ERROR_NOMEMORY: Out of memory
+ERROR_READING: File exists but read failed
 EXECUTABLE_PATH
 EXPORTSYSTEM_INTERFACE_VERSION_001
 EarlyInit_Tier0
 EconItemToolModel_001
 EnableWhitelistFileTracking
 EngineServiceMgr001
-EventSystem001
+EnsureCapacity
 FATAL ERROR: unable to register all schema data: %s
-FCVAR_NEVER_AS_STRING
 FS:  Tried to Close NULL file handle!
 FS:  Tried to EndOfFile NULL file handle!
 FS:  Tried to FPrintf NULL file handle!
@@ -356,6 +311,8 @@ FS:  Tried to Write NULL file pointer inside valid file handle!
 FS: Specified two path IDs (%s, %s).
 Failed
 Failed to load module %s
+Failed to map from %s to content-path
+Failed to map from %s to game-path
 Failed to read
 Failed to read %d bytes
 File %s was never closed
@@ -376,7 +333,7 @@ FlattenedSerializersVersion001
 FontManager_001
 From Steam: [%s]\%s
 GAMEROOT
-GCC: (Ubuntu 5.4.0-7.really.6+steamrt1.1+srt1) 5.4.1 20160803
+GCC: (SteamRT 5.4.0-7.really.6+steamrt1.2+srt2) 5.4.1 20160803
 GLIBCXX_3.4
 GLIBC_2.14
 GLIBC_2.2.5
@@ -390,22 +347,16 @@ GameUIService_001
 GetCPUInformation
 GetResourceManifestCount
 GetResourceManifests
-GetWaitForResourcesProgress (stdio)
 Grow
 HammerMapLoader001
 HelpSystem_001
-HookUpConfigValue
 HostStateMgr001
-IQuickTime001
 InputService_001
 InputStackSystemVersion001
 InputSystemVersion001
-InstallChangeCallback called with NULL callback, ignoring!!!
-InstallChangeCallback ignoring duplicate change callback!!!
 InstallSchemaBindings
 Intentionally vague touch behavior for %p
 Invalid Path
-Invalid access of deferred ConVarRef for '%s'
 KeyValueCache001
 KeyValues::KeyValues(char const*)
 KeyValues::LoadFromFile(IFileSystem*, char const*, char const*, bool (*)(char const*, void*), void*, char const*)
@@ -429,11 +380,13 @@ MODEL_PROCESSING_SERVICES_INTERFACE_001
 MapListService_001
 MarkContentCorrupt
 MaterialUtils_001
+MemAlloc_AllocAlignedFunc
+MemAlloc_FreeAlignedFunc
+MemAlloc_StrDupFunc
 MeshSystem001
 MeshUtils001
 ModelDocUtils001
 Msg
-MustRead
 N17CAsyncFileSystem215CBarrierRequestE
 N17CAsyncFileSystem215CCopyFileHandleE
 N17CAsyncFileSystem216CCompletionQueueE
@@ -453,9 +406,7 @@ NetworkMessagesVersion001
 NetworkP2PService_001
 NetworkServerService_001
 NetworkService_001
-NetworkSystemUtilsVersion001
 NetworkSystemVersion001
-NewNode
 Number of IO threads in async filesystem (-1 == auto)
 OK
 Open( %llu microsecs, %s )
@@ -466,11 +417,13 @@ PanoramaUIClient001
 PanoramaUIEngine001
 ParticleSystemMgr003
 Path ID:
+Path Overflow, must be less than 4096 characters.
 PhysicsBuilderMgr001
 Plat_CreateDirectory
 Plat_DebugPrint
 Plat_DebugString
 Plat_ExitProcess
+Plat_FatalErrorFunc
 Plat_FileSize
 Plat_FloatTime
 Plat_GetCurrentDirectory
@@ -482,6 +435,7 @@ Plat_IsFile
 Plat_IsInDebugSession
 Plat_LoadModule
 Plat_NeedsLowFragmentation
+Plat_NonFatalErrorFunc
 Plat_RelativeTicks
 Plat_RemoveDirectory
 Plat_RemoveFile
@@ -492,35 +446,33 @@ Plat_TickDiffMicroSec
 Plat_TickDiffMicroSecF
 Plat_TranslateSymbolicLinks
 Plat_UnloadModule
-Plat_ctime
+Plat_ctime64
 PostProcessingSystem_001
 Preload size for '%s' is too big
 PreloadDirectoryEntries
 PropertyEditorSystem_001
-QueuedLoaderVersion001
 ReadFileEx
 ReadToBuffer
 Reading UGC %llu that still needs update. Continuing...
-RegisterAllModuleData
-RegisterConfigValue: Unknown error constructing config value "%s"!
+RegisterConCommand: Unknown error registering con command "%s"!
+RegisterConVar: Unknown error registering convar "%s"!
 Release
 Removing VPK file: %s
 RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
 RenderService_001
-RenderSystemSurface001
 RenderUtils_001
 Requested non-existent write path %s!
 ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
 ResourceSystem013
-STATUS_ABORTED
-STATUS_PENDING
-STATUS_UNDEFINED
+STATUS_ABORTED: Request canceled
+STATUS_PENDING: Request still pending
+STATUS_UNDEFINED: Internal filesystem error
 STEAMAPPS_INTERFACE_VERSION008
-STEAMUGC_INTERFACE_VERSION014
+STEAMUGC_INTERFACE_VERSION016
 SceneSystem_002
 SceneUtils_001
 SchemaSystem_001
@@ -528,7 +480,6 @@ SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
 Sending Steam API content notification
 SerializedEntitiesVersion001
-ServerUploadGameStats001
 Set fs_report_long_reads 1 before loading to use this. Prints a list of files that were opened more than once and ~how long was spent reading from them.
 Show the filesystem path.
 Size mismatch determining size of signed data block (%d vs %d)
@@ -548,7 +499,7 @@ Source2GameClients001
 Source2GameEntities001
 Source2Host001
 Source2Server001
-Source2ServerSerializers002
+Source2V8System001
 St11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE
 St16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE
 St19_Sp_make_shared_tag
@@ -571,6 +522,8 @@ TestFormatD
 TestFormatE
 TestScriptMgr001
 TextLayout_001
+The filename may only contain lower case alphanumeric characters, dashes, and underscores.
+This convar is being accessed prior to ConVar_Register being called
 ThreadGetCurrentId
 ThreadInMainThread
 ThreadSleep
@@ -590,26 +543,16 @@ Unknown read error %d
 Unknown version %d for vpk %s
 UnzipFile
 Use native FS or STDIO
-UserInfoChangeService_001
 UtlMemory_Alloc
 UtlMemory_CalcNewAllocationCount
 VApplication001
 VAsyncFileSystem2_001
 VAvi001
-VBAllocTracker001
 VBik001
 VConComm001
-VDebugService_001
 VEngineCvar007
 VFileSystem017
 VGAME
-VGUI_Input005
-VGUI_Panel010
-VGUI_Scheme010
-VGUI_Surface032
-VGUI_System010
-VGUI_ivgui008
-VMDLLIB001
 VMaterialSystem2_001
 VMediaFoundation001
 VP4003
@@ -636,8 +579,6 @@ V_MakeAbsoluteVPKPathNameBuffer
 V_PathContainsPath
 V_SetErrno
 V_UnqualifiedFileName
-V_atof
-V_atofloat64
 V_atoi
 V_fclose
 V_fdopen
@@ -674,7 +615,6 @@ WARNING: File might be corrupt or missing - '%s'
 WARNING: Local content might be corrupt or missing files
 WARNING: Local content might be corrupt or missing files. Not reporting to Steam due to disabled reporting.
 Warning
-Warning:  %s = '%s' is infinite, clamping value.
 Whitelist -       reload %s
 Whitelist -       reload (absolute path) %s
 Whitelist - don't reload %s
@@ -687,7 +627,6 @@ ZIP_FileHeader
 ZIP_LocalFileHeader
 ZIP_PreloadDirectoryEntry
 ZIP_PreloadHeader
-[%.3f server clamped to %.3f]
 [a]
 \*
 _ITM_deregisterTMCloneTable
@@ -697,7 +636,6 @@ _V_ComposeFileName
 _V_StringAfterPrefix
 _V_StripLastDir
 _V_strEndsWith
-_V_strncat
 _V_strncmp
 _V_strncpy
 _V_strnicmp_fast
@@ -721,7 +659,6 @@ _flt.vpk
 a+
 ab+
 abort
-archive
 asyncfilesystem2.cpp
 basefilesystem.cpp
 binary
@@ -729,14 +666,12 @@ binary_auto
 binary_bc
 binary_lz4
 binary_zstd
+bool
 centralDirectorySize
-cheat
 chmod
-client
-clientcmd_can_execute
+color
 commentLength
 compressionMethod
-configvalue.cpp
 console.log
 content
 crc32
@@ -756,6 +691,8 @@ filesystem_stdio
 filesystem_unbuffered_io
 filetime
 flags
+float32
+float64
 flock
 fnumber=%d ofs=0x%x sz=%d
 fs_async_threads
@@ -764,7 +701,6 @@ fs_debug
 fs_debug:
 fs_dump_open_duplicate_times
 fs_fake_read_delay_ms
-fs_monitor_read_from_pack
 fs_report_async_io
 fs_report_long_reads
 fs_report_sync_opens
@@ -788,23 +724,21 @@ libtier0.so
 localtime
 materials/overviews/
 materials/vgui/hud/
-max. %f
+memcmp
 memcpy
 memmove
 memset
-min. %f
 mmap64
 munmap
 nCentralDirectoryEntries_ThisDisk
 nCentralDirectoryEntries_Total
 need to hook up zip for linux
-notconnected
-notify
 numberOfTheDiskWithStartOfCentralDirectory
 numberOfThisDisk
 open
 opened_files.txt
 operator delete(void*)
+operator delete(void*, unsigned long)
 operator delete[](void*)
 operator new(unsigned long)
 operator new(unsigned long, std::nothrow_t const&)
@@ -820,37 +754,33 @@ pthread_mutex_lock
 pthread_mutex_unlock
 pthread_mutexattr_init
 pthread_mutexattr_settype
+qangle
 rb
 rb+
 relativeOffsetOfLocalHeader
-replicated
 resource/cursor/
 resource/flash3/images/
 resource/flash3/videos/
 rewind
 rw+
-schemabindings.cpp
 scripts/game_sounds_heroes/
 scripts/music/
 scripts/talker/
 scripts/voscripts/
 sdktools/bin/vproj.exe
 sdktools/bin/vprojUI.exe
-server_can_execute
 signature
-singleplayer
 singletons.cpp
 sound/
 src
 src/public/tier0/platform.h
-ss_added
 startOfCentralDirOffset
 stat
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_destroy()
 std::__throw_bad_alloc()
 strchr
 strcmp
-strcpy
+string
 strlen
 strrchr
 strstr
@@ -866,8 +796,12 @@ typeinfo name for std::_Mutex_base<(__gnu_cxx::_Lock_policy)2>
 typeinfo name for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>
 typeinfo name for std::_Sp_make_shared_tag
 ugc:
+uint32
+uint64
 uncompressedSize
-user
+vector2
+vector3
+vector4
 versionMadeBy
 versionNeededToExtract
 vpk:
@@ -877,4 +811,3 @@ vtable for __cxxabiv1::__vmi_class_type_info
 w
 wb
 zD
-~CCompletionQueue

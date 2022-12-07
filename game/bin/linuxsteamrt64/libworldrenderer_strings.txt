@@ -5,8 +5,6 @@
 !m_boolPunchThroughPixels
 !m_boolTransparent
 "
-"%s"
-"%s" = "%s"
 "channels" attribute not found in the header.
 "compression" attribute not found in the header.
 "dataWindow" attribute not found in the header or invalid.
@@ -22,8 +20,6 @@
 $ORIGIN
 %
 %%%s
-%-120s
-%-120s - %s
 %.15lf
 %01d
 %02d
@@ -32,16 +28,17 @@ $ORIGIN
 %05d
 %06d
 %3d: e=%.3f rms=%.6f %u
+%50.50s: %2.2d bits == '%s'
 %8.3f
 %cmaps%c
 %d "No animation data"
 %d %d %d %d
 %d (s/n %d)
-%f %f %f
+%f %f %f %f
 %g %g %g %g
 %hd
 %hu
-%i %i %i %i
+%lf
 %lld
 %llu
 %s
@@ -57,7 +54,6 @@ $ORIGIN
 %s allocation count overflow
 %s allocation count overflow( %llu > %llu )
 %s executing script: %s
-%s%d
 %s%s
 %s%s - %s
 %s%s::%s - %s
@@ -67,6 +63,8 @@ $ORIGIN
 %s0x%08X %s = "%s"
 %s0x%08X:%s = "%s"
 %s: %s
+%s: Invalid capacity %u
+%s: Invalid grow amount %d
 %s:%s needs base %s:%s to be registered
 %s== World '%s' Entity Lump '%s': %d entities ==
 %sEntity %d (%s '%s'):
@@ -85,9 +83,11 @@ $ORIGIN
 %u unfinished blocks
 &
 (
+( (int64)m_nAllocationCount + (int64)num ) <= 0x7FFFFFFF
 ( Resource "%s type %lld", handle is%s set
-( def. "%s" )
-(None)
+(%d)
+(%d,%d)
+(%s%s)
 (fWeightSumLeft + fWeightSumRight) > 0.0f
 (fWeightSumTop + fWeightSumBottom) > 0.0f
 (hide)
@@ -95,6 +95,8 @@ $ORIGIN
 (null)
 (show)
 (spew)
+)
+*
 *St19_Sp_counted_deleterIPhZN3Etc13EncodeMipmapsEPfjjNS1_5Image6FormatENS1_11ErrorMetricEfjjjjPNS1_8RawImageEPibEUlS0_E_SaIiELN9__gnu_cxx12_Lock_policyE2EE
 *ZN11ImageLoaderL14ConvertFromBC7I10BGRA8888_tEEbPKhPT_iiEUlRiE_
 *ZN11ImageLoaderL14ConvertFromBC7I10RGBA8888_tEEbPKhPT_iiEUlRiE_
@@ -102,7 +104,9 @@ $ORIGIN
 *ZN11ImageLoaderL15ConvertFromBC6hI10RGBA8888_tLb1EEEbPKhPT_iiEUlRiE_
 *ZN11ImageLoaderL15ConvertFromBC6hI15RGBA16161616F_tLb0EEEbPKhPT_iiEUlRiE_
 *ZN11ImageLoaderL15ConvertFromBC6hI15RGBA32323232F_tLb0EEEbPKhPT_iiEUlRiE_
+*ZN13CSOAContainer8FillAttrEifEUlvE_
 *ZN17CWorldRendererMgr22HandleGrassLoadRequestEP18GrassLoadRequest_tEUlP18IAsyncReadRequest220AsyncRequestStatus_tE_
+*ZN20CGrassTileObjectDesc20GenerateGrassTextureE11CWeakHandleI29InfoForResourceTypeIMaterial2ES0_I31InfoForResourceTypeCTextureBaseEibPK12CTextureDescEUlvE_
 *ZN3Etc13EncodeMipmapsEPfjjNS_5Image6FormatENS_11ErrorMetricEfjjjjPNS_8RawImageEPibEUlPhE_
 +
 ,
@@ -113,7 +117,9 @@ $ORIGIN
 -%s
 --%s is at refcount %d
 ----End Script Dump
+-> %s
 -avx
+-codegenerrors
 -entkv_use_schema
 -sse2
 -sse3
@@ -121,13 +127,9 @@ $ORIGIN
 .
 ../public/entity2/concreteentitylist.h
 ../public/networksystem/networkfieldscratchdata.h
-../public/ordered_constructor.h
 ../public/tier0/memstack.h
 ../public/tier0/tslist.h
-../public/tier0/utlblockmemory.h
-../public/tier0/utlleanvector.h
-../public/tier0/utllinkedlist.h
-../public/tier0/utlrbtree.h
+../public/tier0/utlmemory.h
 ../public/tier0/utltshash.h
 .exr
 .jpg
@@ -149,40 +151,26 @@ $ORIGIN
 /home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcDifferentialTrys.cpp
 /home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcIndividualTrys.cpp
 /home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcSortedBlockList.cpp
+0 0 0 0
+0 0 0 255
 0 = Density corresponds to blade existance, 1 = Density corresponds to blade height, 2 = Both 0 and 1
 0 = Off, 1 = Low, 2 = Med, 3 = high, 4 = ultra
-0.003
-0.03
-0.25 0.3 0.2
-0.707 0.707 0.0
 0x%08X %s,
-1.0
 1.8
-10.0
 10CEntityMgr
 10ConCommand
 10IAppSystem
-11CFunctorJob
 11CGrassWorld
-11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
-11IRefCounted
+11CRefCountedI20CRefCountServiceBaseI6CRefMTEE
 11IVSSequence
-12CRefCounted1I11IRefCounted20CRefCountServiceBaseILb1E6CRefMTEE
-12CRefCounted1I8CFunctor20CRefCountServiceBaseILb1E6CRefMTEE
 12CSceneObject
-12CThreadedJob
-13CNoRefFunctor
 13CScriptScopeTI22CDefScriptAccessorBaseLb1EE
 13CWorldManager
+13ConCommandRef
 13IBaseSequence
 14CBaseAppSystemI17IWorldRendererMgrE
 14CEmptySequence
-14ConCommandBase
 15CEntityIOOutput
-15CMemberFunctor1IP26CParallelProcessorAbstractI18CParallelProcessorIi23CLambdaJobItemProcessorIiELi1EEEMS5_FviEi12CRefCounted1I8CFunctor20CRefCountServiceBaseILb1E6CRefMTEE18CFuncMemPolicyNoneE
-15CMemberFunctor5IP20CGrassTileObjectDescMS0_Fb11CWeakHandleI29InfoForResourceTypeIMaterial2ES2_I31InfoForResourceTypeCTextureBaseEibRK12CTextureDescE21CStrongHandleCopyableIS3_ESC_IS5_EibS7_12CRefCounted1I8CFunctor20CRefCountServiceBaseILb1E6CRefMTEE18CFuncMemPolicyNoneE
-15CMemberFunctor6IP13CSOAContainerMS0_FviiiiiDv4_fEiiiiiS2_12CRefCounted1I8CFunctor20CRefCountServiceBaseILb1E6CRefMTEE18CFuncMemPolicyNoneE
-15CMemberFunctor7IP20CGrassTileObjectDescMS0_Fb11CWeakHandleI31InfoForResourceTypeCTextureBaseEPhiib11ImageFormatRK12CTextureDescE21CStrongHandleCopyableIS3_ES5_iibS6_S7_12CRefCounted1I8CFunctor20CRefCountServiceBaseILb1E6CRefMTEE18CFuncMemPolicyNoneE
 15CSingleWorldRep
 15CTier0AppSystemI17IWorldRendererMgrLx0EE
 15CTier1AppSystemI17IWorldRendererMgrLx0EE
@@ -190,7 +178,6 @@ $ORIGIN
 15CTier3AppSystemI17IWorldRendererMgrLx0EE
 15ISaveRestoreOps
 15IWorldReference
-16CDefaultAccessor
 16CEntityComponent
 16CScriptAccessorTI22CDefScriptAccessorBaseLb1EE
 16CScriptComponent
@@ -201,7 +188,7 @@ $ORIGIN
 17IGenericInterface
 17IWorldRendererMgr
 18CDefSaveRestoreOps
-18CPlaceholderConVar
+18IMultipleWorkerJob
 19CSchemaRegistration
 19CVariantSaveDataOps
 19IRenderReadCallback
@@ -209,10 +196,9 @@ $ORIGIN
 2.0
 2.2
 2.5
-2000.0
 20CGrassTileObjectDesc
 20CPostConnectCallback
-20CRefCountServiceBaseILb1E6CRefMTE
+20CRefCountServiceBaseI6CRefMTE
 20CWorldSceneObjectRef
 20IResourceTypeManager
 21CGrassTileSceneObject
@@ -220,35 +206,14 @@ $ORIGIN
 22CDefScriptAccessorBase
 22CEntityComponentHelper
 22CSchemaInstallCallback
-22CTier2ShutdownCallback
 22IToolsResourceListener
 23CEntityComponentHelperTI16CScriptComponent32CEntityComponentHelperReferencedIS0_EE
 23CKV3ResourceBlockHelper
-23IConCommandBaseAccessor
 24ISaveRestoreBlockHandler
 25CAttributeDictSaveDataOps
 25CConCommandMemberAccessorI17CWorldRendererMgrE
-25CKV3TransferDefaultHelperI10NodeData_tE
-25CKV3TransferDefaultHelperI11WorldNode_tE
-25CKV3TransferDefaultHelperI13SceneObject_tE
-25CKV3TransferDefaultHelperI16CVoxelVisibilityE
-25CKV3TransferDefaultHelperI17InfoOverlayData_tE
-25CKV3TransferDefaultHelperI18MaterialOverride_tE
-25CKV3TransferDefaultHelperI19AggregateMeshInfo_tE
-25CKV3TransferDefaultHelperI19BakedLightingInfo_tE
-25CKV3TransferDefaultHelperI19voxel_vis_cluster_tE
-25CKV3TransferDefaultHelperI20CRenderBufferBindingE
-25CKV3TransferDefaultHelperI20EntityKeyValueData_tE
-25CKV3TransferDefaultHelperI20PermEntityLumpData_tE
-25CKV3TransferDefaultHelperI20WorldBuilderParams_tE
-25CKV3TransferDefaultHelperI21voxel_vis_mergelist_tE
-25CKV3TransferDefaultHelperI22AggregateSceneObject_tE
-25CKV3TransferDefaultHelperI24EntityIOConnectionData_tE
-25CKV3TransferDefaultHelperI25BaseSceneObjectOverride_tE
-25CKV3TransferDefaultHelperI27ExtraVertexStreamOverride_tE
-25CKV3TransferDefaultHelperI27WorldNodeOnDiskBufferData_tE
-25CKV3TransferDefaultHelperI7World_tE
 25IAsyncProcessedDataResult
+26CParallelProcessorAbstractI18CParallelProcessorIi23CLambdaJobItemProcessorIiELi1EEE
 26ICommandCompletionCallback
 26IReadTexturePixelsCallback
 27CDefSaveRestoreBlockHandler
@@ -258,7 +223,7 @@ $ORIGIN
 2Way_1( %s )
 2_BONE_IK
 3
-3000.0
+31CParallelProcessorAbstract_Base
 31CReadGrassTexturePixelsCallback
 32CEntityComponentHelperReferencedI16CScriptComponentE
 33CBaseIntrospectedToKV3TypeManager
@@ -267,24 +232,20 @@ $ORIGIN
 34IKV3TransferInterface_ResourceLoad
 35CEventQueue_SaveRestoreBlockHandler
 36CDefaultIntrospectedToKV3TypeManagerILy431316170614E7World_tE
+36CKV3Transfer_UtlSymbolLargeInterfaceI24CUtlSymbolTableLargeBaseILb0ELm2048E16CThreadNullMutexEE
+36IKV3TransferInterface_UtlSymbolLarge
 37CTypesafeIntrospectedToKV3TypeManagerILy431366240118E11WorldNode_tE
 37CTypesafeIntrospectedToKV3TypeManagerILy495874631030E20PermEntityLumpData_tE
-40.0
-4<No schemasystem>
-65536
 6CWorld
-6ConVar
 6IWorld
 7
-75
-7IConVar
-8CFunctor
 9.1.15
 9ISequence
 <
 < %d >
 <%s : %u>
 <%s, cat %d>
+<<NULL ENTITY LUMP>>
 <<null>>
 <INVALID EXPRESSION>
 <INVALID_RBF_TYPE>
@@ -297,7 +258,6 @@ $ORIGIN
 <input>
 <invalid>
 <no classname>
-<no deferred ref found>
 <no failure reason set>
 <no targetname>
 <none>
@@ -305,10 +265,9 @@ $ORIGIN
 <resource>
 <shim>
 <type name is DEBUG only>
-<unconnected>
+<undefined>
 <unknown hash %u>
 <unknown: %d>
-<unknown>
 <unspecified>
 <unused>
 === %sEntity List Summary (%s) ===
@@ -321,42 +280,38 @@ $ORIGIN
 @@
 @@/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/Etc/EtcImage.cpp
 @@/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding_RGB8A1.cpp
-@Afff?
+@A
 @B
 A=g?33s?
-AABB_t
+ABGR8888
 ACT_IDLE
 ACT_NEUTRAL_REF_POSE
 AIM
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!
+ARGB8888
 ATI1N
 ATI2N
-ATI_DST16
-ATI_DST24
 ATTACHMENT_INFLUENCE_FLAGS_NONE
-Access of unconnected ConVarRef
-Access of unconnected SplitScreenConVarRef
 Add an output
 AddOutput
 AddResource
-Adding animation group resource in replace animations: %s
 AggregateMeshInfo_t
 AggregateSceneObjectDesc
 AggregateSceneObject_t
+AlignedByteArray not properly aligned
 AllocateAndLoad failed for '%s'
 AllocateAndLoad failed for '%s' (%s)
 AllocateResource: Cannot find DATA block in resource %s!
 AllocateResource: Cannot find VXVS data in resource %s!
-AllocateResourceFromAsyncResult
 AmmoIndex_t
 Angle;
+AnimEventIndex_t
 AnimGraphEditorUtils001
 AnimVRFinger_t
 AnimVRHand_t
 Animated
 AnimationSystemUtils_001
 AnimationSystem_001
-ApplyNewState %d at %f
 Assert_ConditionFailed(_AssertCompileTimeConstantStruct_t const&)
 Assert_ConditionFailed(_AssertCompileTimeConstantStruct_t const&, char const*, ...)
 AssetBrowserSystem_001
@@ -378,11 +333,12 @@ BC6h compression not supported on this target (windows only).
 BC7
 BC7 compression not supported on this target (windows only).
 BGR565
-BGR888_BLUESCREEN
+BGR888
 BGRA1010102
 BGRA4444
-BGRA5551
+BGRA8888
 BGRA8888_LINEAR
+BGRX8888
 BGRX8888_LINEAR
 Bad KV3 data for '%s': %s
 Bad KV3 data for resource '%s': %s
@@ -405,6 +361,7 @@ BenchmarkService001
 BinaryProperties_GetValue
 BindlessFastPathDesc
 BoneChannel
+BoneConstraintList
 Breaks in the debugger
 C
 C-side of entity framework
@@ -413,9 +370,6 @@ CAimConstraint
 CAnimBone
 CAnimDataChannelDesc
 CAnimKeyData
-CAnimRetargetChainData
-CAnimRetargetData
-CAnimRetargetElementData
 CAnimUser
 CAnimVariant
 CAnimationGroup
@@ -427,6 +381,7 @@ CBitVecEnum<
 CBoneConstraintBase
 CBoneConstraintPoseSpaceBone
 CBoneConstraintPoseSpaceMorph
+CBufferString
 CBufferString::AppendConcat(int, char const* const*, int const*, bool)
 CBufferString::AppendFormat(char const*, ...)
 CBufferString::AppendFormatV(char const*, __va_list_tag*)
@@ -455,9 +410,7 @@ CBufferString::StripTrailingSlash()
 CBufferString::ToLowerFast(int)
 CCallQueue::ParallelCallQueued(char const*, IThreadPool*)
 CCitadelModifierHandleTyped<
-CCommand::Tokenize: Encountered command which overflows the argument buffer.. Clamped!
 CCommand::Tokenize: Encountered command which overflows the tokenizer buffer.. Skipping!
-CConstraintSlave
 CConstraintTarget
 CDrawCullingData
 CEmptyEntityInstance
@@ -485,7 +438,6 @@ CFingerBone
 CFingerChain
 CFingerSource
 CFootDefinition
-CFormatNumber_DontUseDirectly_UseFormatNumberMacro::FormatNumberInternal64(long long)
 CHandle
 CHandle<
 CHitBox
@@ -498,6 +450,7 @@ CMemoryStack::CommitTo(unsigned char*)
 CMemoryStack::FreeAll(bool)
 CMemoryStack::Init(char const*, unsigned int, unsigned int, unsigned int, unsigned int)
 CMemoryStack::~CMemoryStack()
+CMeshletDescriptor
 CModel >
 CModifierHandleBase
 CModifierHandleTyped
@@ -518,7 +471,6 @@ CNetworkVarChainer
 CNetworkVelocityVector
 CNetworkViewOffsetVector
 CNetworkedQuantizedFloat
-COLORCORRECTION_VERSION_1
 COM_TimestampedLog
 CONTENT
 CONTENTROOT
@@ -528,6 +480,8 @@ CPlayerSlot
 CPointConstraint
 CPostProcessingResource >
 CRC32_ProcessBuffer
+CRawAllocator::Alloc(RawAllocatorType_t, unsigned long, unsigned long*)
+CRawAllocator::Free(RawAllocatorType_t, void*, unsigned long)
 CRenderBufferBinding
 CRenderMesh
 CRenderSkeleton
@@ -540,18 +494,14 @@ CScriptKeyValues
 CScriptNativeOutputs
 CScriptPrecacheContext
 CSplitScreenSlot
-CSplitString::Construct(char const*, char const**, int)
+CSplitString::Construct(char const*, char const**, int, bool)
 CStrongHandle
 CStrongHandleCopyable
 CSubclassName<
 CSubclassNameGeneric
 CTSQueue corruption
 CTextureBase >
-CThreadFastMutex::Lock(char const*, int, unsigned long long, unsigned int) volatile
-CThreadMultiWaitEvent::CThreadMultiWaitEvent(bool)
-CThreadMultiWaitEvent::Set()
-CThreadMultiWaitEvent::~CThreadMultiWaitEvent()
-CThreadedJob::Abort(bool)
+CThreadSpinMutex::Lock(char const*, int, unsigned long long, unsigned int) volatile
 CTiltTwistConstraint
 CTransform
 CTransform-world
@@ -560,6 +510,7 @@ CUtlBinaryBlock
 CUtlBinaryBlock::Set(void const*, int)
 CUtlBinaryBlock::SetLength(int)
 CUtlBinaryBlock::operator=(CUtlBinaryBlock const&)
+CUtlBinaryBlock::operator=(CUtlBinaryBlock&&)
 CUtlBlockMemory overflow!
 CUtlBuffer::AddNullTermination()
 CUtlBuffer::CUtlBuffer(int, int, int)
@@ -584,8 +535,8 @@ CUtlBuffer::SetExternalBuffer(void*, int, int, int)
 CUtlBuffer::SetOverflowFuncs(bool (CUtlBuffer::*)(int), bool (CUtlBuffer::*)(int))
 CUtlLinkedList overflow! (exhausted index range)
 CUtlLinkedList overflow! (exhausted memory allocator)
-CUtlMemoryBlockAllocator::AllocCopy(char const*, unsigned int)
-CUtlMemoryBlockAllocator::CUtlMemoryBlockAllocator(int, unsigned int)
+CUtlMemoryBlockAllocator::AllocAndCopy(char const*, unsigned int)
+CUtlMemoryBlockAllocator::CUtlMemoryBlockAllocator(int, unsigned int, RawAllocatorType_t)
 CUtlMemoryBlockAllocator::Purge()
 CUtlMemoryBlockAllocator::~CUtlMemoryBlockAllocator()
 CUtlMemoryPoolBase::Alloc()
@@ -625,22 +576,27 @@ CUtlString::operator+(char const*) const
 CUtlString::operator+=(char const*)
 CUtlString::operator=(CBufferString const&)
 CUtlString::operator==(CUtlString const&) const
+CUtlStringAndTokenWithStorage
 CUtlStringToken
 CUtlSymbol
 CUtlSymbolLarge
-CUtlSymbolTable::AddString(char const*)
+CUtlSymbolTable::AddString(char const*, bool*)
 CUtlSymbolTable::CUtlSymbolTable(int, int, bool)
 CUtlSymbolTable::Find(char const*) const
+CUtlSymbolTable::String(CUtlSymbol) const
 CUtlSymbolTable::~CUtlSymbolTable()
 CUtlVector
 CUtlVector<
 CUtlVectorEmbeddedNetworkVar
+CUtlVectorFixedGrowable
 CUtlVectorFixedGrowable<
+CVDataResource >
 CVariant
 CVariantBase
 CVariantDefaultAllocator
 CVertexKDTree::BuildMidpoint(float const*, int, int)
-CVertexKDTree::FindVertsInBox(CUtlVectorFixedGrowable<float const*, 64ul>&, Vector const&, Vector const&, int) const
+CVertexKDTree::BuildMidpointFromVertexSubSet(float const*, int, int const*, int)
+CVertexKDTree::FindVertsInBox(CUtlVectorFixedGrowable<float const*, 64ul, int>&, Vector const&, Vector const&, int) const
 CVoxelVisibility
 CVrSkeletalInputSettings
 CWeakHandle<
@@ -652,6 +608,7 @@ CWorldRendererMgr::ServiceWorldRequests long frame: %fms
 CWristBone
 CXXABI_1.3
 CXXABI_1.3.3
+CXXABI_1.3.9
 C_NetworkUtlVectorBase
 C_NetworkUtlVectorBase<
 C_UtlVectorEmbeddedNetworkVar
@@ -676,17 +633,12 @@ ChangeAccessorFieldPathIndex_t
 ChangeCallbackOnChange
 ChangeCallbackOnChangeOrCreate
 CharacterSetBuild
-ClearHistory
 Combo(
 CommandLine
 Component class %s needs its own datadesc (is using %s)
 CompressAndUploadGrassTextureJob
-ConMsg(char const*, ...)
-ConVar(%s) defined with infinite float value (%s)
-ConVarRef %s doesn't point to an existing ConVar
 ConcreteEntityList:  approaching limit, allocating entity chuck %d/%d for ents [%d -> %d]
 ConditionId_t
-ConfigurationSystem_001
 ConnectInterfaceSingletons
 ConnectOutput
 ConnectOutputToScript
@@ -698,11 +650,9 @@ CreateEntity
 CreateInterface
 Creating %i scene objects for node %i
 Cubic
-D15S1
 D16
 D16_SHADOW
 D24FS8
-D24X4S4
 D24X8
 D24X8_SHADOW
 D32
@@ -715,7 +665,6 @@ DXT5_NM
 Data size too short
 Datamap at addr %p
 DebugPrintKV3(KeyValues3 const*)
-DebugTextureInfo001
 DegreeEuler
 Delete this entity
 Deletion List:
@@ -732,11 +681,9 @@ DispatchPrecache
 DispatchSpawn
 DispatchUpdateOnRemove
 DoAllocateEntity failed
-DoAllocateEntity pEntity->m_pId == NULL %d
 DoAllocateEntity pEntity->m_pInstance != NULL %d
 DoIncludeScript
 Dominate(
-DotaCardGameClient_001
 Double-save to Member '%s'
 Dump all of the worlds that we know about
 Dump the contents of an entity lump
@@ -750,9 +697,9 @@ ENTITY_IO_TARGET_ENTITYNAME_OR_CLASSNAME
 ENTITY_IO_TARGET_INVALID
 ENTITY_IO_TARGET_SPECIAL_ACTIVATOR
 ENTITY_IO_TARGET_SPECIAL_CALLER
-ENTITY_LUMP_NONE
 ENTITY_NOT_DORMANT
 ENTITY_SUSPENDED
+ERROR! LoadFromPNG( %s ) failed!
 ERROR: Resource name "%s" has the incorrect extension "%s" for the specified resource type (expected "%s")!
 ERROR: Schema registration error - class '%s' is not marked as MModuleLocalTypeScope but contains member '%s' with locally-scoped type '%s'
 ERROR: Schema registration error - class '%s' is not marked as MModuleLocalTypeScope but derives from locally-scoped class '%s'
@@ -784,7 +731,6 @@ EntityIOConnectionDesc_t
 EntityIOConnection_t
 EntityIOQueuePrioritizedEvent_t
 EntityKeyValueData_t
-EntityLumpFlags_t
 EntityNames
 EntitySystem - Class Tables
 EntityUtils
@@ -794,12 +740,10 @@ Etc::Image::Image(Etc::Image::Format, unsigned int, unsigned int, unsigned char*
 Etc::Image::Image(float*, unsigned int, unsigned int, Etc::ErrorMetric)
 Etc::IndividualTrys::IndividualTrys(Etc::ColorFloatRGBA, Etc::ColorFloatRGBA, const unsigned int*, const unsigned int*, unsigned int)
 EventQueue
-EventSystem001
 Execute a script (internal)
 ExtraVertexStreamOverride_t
 FATAL ERROR: unable to register all schema data: %s
 FB
-FCVAR_NEVER_AS_STRING
 FIELD_AI_SCHEDULE_BITS
 FIELD_AMMO_INDEX
 FIELD_ATTACHMENT_HANDLE
@@ -828,6 +772,7 @@ FIELD_HRENDERTEXTURE
 FIELD_HSCRIPT
 FIELD_HSCRIPT_LIGHTBINDING
 FIELD_HSCRIPT_NEW_INSTANCE
+FIELD_HVDATA
 FIELD_INPUT
 FIELD_INT16
 FIELD_INT32
@@ -849,9 +794,11 @@ FIELD_QUATERNION_WORLDSPACE
 FIELD_RESOURCE
 FIELD_ROTATION_VECTOR
 FIELD_ROTATION_VECTOR_WORLDSPACE
+FIELD_SCALE32
 FIELD_SHIM
 FIELD_SOUNDNAME
 FIELD_STRING
+FIELD_STRING_AND_TOKEN
 FIELD_TICK
 FIELD_TIME
 FIELD_TYPEUNKNOWN
@@ -900,6 +847,10 @@ FTYPEDESC_WAS_OUTPUT
 Failed to allocate an instance of a class
 Failed to call CBaseIntrospectedToKV3TypeManager::Init
 Failed to compute channel layout.
+Failed to compute mesh tangents for mesh using material %s
+Failed to compute mesh tangents for mesh using material %s -- normals are all identical
+Failed to compute mesh tangents for mesh using material %s -- positions are all identical
+Failed to compute mesh tangents for mesh using material %s -- uvs are all identical
 Failed to convert introspected block: %s
 Failed to include script "%s"
 Failed to load geometry for level %s
@@ -914,11 +865,11 @@ Failed to transfer KV3 data for resource '%s' - %s
 FeetSettings
 Field "%s" of class "%s" cannot be unserialized yet (lacking array support)!
 Field %s::%s cannot have sub-keyfields since it is an atomic type!
+FieldPathEncodeFinish
 File size is zero :
 File size too short
 FillAttr
 FilterFrom
-FindClosestMatchingRegion
 Finished %d Blocks out of %d
 Fire an entity output
 FixupResourceName: Illegal full path passed in ("%s")!
@@ -935,12 +886,12 @@ FloatBitMap_t::LoadFromBuffer: Unsupported color format, skipping!
 FloatBitMap_t::LoadFromFloatBitmap: Received improper bitmap size, skipping!
 FloatBitMap_t::WriteToBuffer: Received improper buffer size %s (expecting %s), skipping!
 FontManager_001
+Forward
 G channel not found
 G channel not found!
 GAME
 GCC: (SteamRT 4.8.4-1ubuntu15~12.04+steamrt1.2+srt2) 4.8.4
-GCC: (Ubuntu 5.4.0-7.really.6+steamrt1.1+srt1) 5.4.1 20160803
-GCC: (crosstool-NG 1.17.0) 4.6.3
+GCC: (SteamRT 5.4.0-7.really.6+steamrt1.2+srt2) 5.4.1 20160803
 GLIBCXX_3.4
 GLIBCXX_3.4.11
 GLIBCXX_3.4.14
@@ -986,6 +937,7 @@ GetNativeClassForScriptClass
 GetNativeOutputsForClass
 GetOrCreatePrivateScriptScope
 GetOrCreatePublicScriptScope
+GetPathData failed for read only CFieldPath
 GetResourceManifestCount
 GetResourceManifests
 GetScriptClassForDesignerName
@@ -1003,6 +955,7 @@ GrassTileInit
 GrassTileInputLayout
 GrassTileVB
 GrassTint.vtex
+Grow
 HB
 HELPER_BONE
 HMaterial
@@ -1016,20 +969,31 @@ HRenderTexture
 HRenderTextureStrong
 HSCRIPT-light
 HSCRIPT-new
+HVDataResource
+HVDataResourceStrong
 HammerMapLoader001
 Has Collision;
 HelpSystem_001
 Hitbox indexing is incorrect for set %s, hitbox %s. Hitboxes will not be setup properly.
-HookUpConfigValue
 HostStateMgr001
+I8
 IA88
 IHandleEntity
+IMAGE_FORMAT_R11G11B10_FLOAT
 IMaterial2 >
 IParticleSnapshot >
 IParticleSystemDefinition >
-IQuickTime001
+ITEM_FLAG_DOHITLOCATIONDMG
+ITEM_FLAG_EXHAUSTIBLE
+ITEM_FLAG_LIMITINWORLD
+ITEM_FLAG_NOAMMOPICKUPS
+ITEM_FLAG_NOAUTORELOAD
+ITEM_FLAG_NOAUTOSWITCHEMPTY
+ITEM_FLAG_NOITEMPICKUP
 Image data size is zero or too large: width =
 IncludeScript stack overflow
+InfoForResourceTypeCAnimData
+InfoForResourceTypeCEntityLump
 InfoForResourceTypeCModel
 InfoForResourceTypeCRenderMesh
 InfoForResourceTypeCTextureBase
@@ -1039,8 +1003,6 @@ InputRunPrivateScript
 InputService_001
 InputStackSystemVersion001
 InputSystemVersion001
-InstallChangeCallback called with NULL callback, ignoring!!!
-InstallChangeCallback ignoring duplicate change callback!!!
 InstallClasses
 InstallSchemaBindings
 Insufficient data length.
@@ -1051,7 +1013,6 @@ Insufficient header/data size.
 Intentionally vague touch behavior for %p
 Invalid EXR header.
 Invalid `part number' in EXR header chunks.
-Invalid access of deferred ConVarRef for '%s'
 Invalid argument for DecodeEXRImage().
 Invalid argument for LoadDeepEXR
 Invalid argument for LoadEXR()
@@ -1092,25 +1053,22 @@ Inverse Multi Quadratic
 Invert Axes;
 IsKeyValueUsed
 JIGGLE_BONE
-K
-KMeansQuantization
 KV3 load transfer failed for resource '%s': %s
 KV3 load transfer failed: %s
-KV3 save transfer failed: %s
 KeyValueCache001
 KeyValues::FindKey(char const*, bool)
-KeyValues::GetColor(char const*, Color const&)
+KeyValues::GetColor(char const*, Color const&) const
 KeyValues::GetDataType(char const*) const
 KeyValues::GetFirstTrueSubKey() const
 KeyValues::GetFirstValue() const
-KeyValues::GetFloat(char const*, float)
-KeyValues::GetInt(char const*, int)
+KeyValues::GetFloat(char const*, float) const
+KeyValues::GetInt(char const*, int) const
 KeyValues::GetName() const
 KeyValues::GetNextTrueSubKey() const
 KeyValues::GetNextValue() const
-KeyValues::GetPtr(char const*, void*)
+KeyValues::GetPtr(char const*, void*) const
 KeyValues::GetString(char const*, char const*, char*, unsigned long)
-KeyValues::GetUint64(char const*, unsigned long long)
+KeyValues::GetUint64(char const*, unsigned long long) const
 KeyValues::KeyValues(char const*)
 KeyValues::KeyValues(char const*, char const*, char const*)
 KeyValues::LoadFromBuffer(char const*, char const*, IFileSystem*, char const*, bool (*)(char const*, void*), IKeyValuesErrorSpew*, void*, char const*)
@@ -1118,19 +1076,7 @@ KeyValues::operator delete(void*)
 KeyValues::operator new(unsigned long)
 KeyValues::operator=(KeyValues const&)
 KeyValues::~KeyValues()
-LE_BGRA8888
-LE_BGRX8888
-LINEAR_ABGR8888
-LINEAR_ARGB8888
-LINEAR_BGR888
-LINEAR_BGRA8888
-LINEAR_BGRX5551
-LINEAR_BGRX8888
 LINEAR_D24S8
-LINEAR_I8
-LINEAR_RGB888
-LINEAR_RGBA16161616
-LINEAR_RGBA8888
 LOG_GENERAL
 Length;
 Lightmap version number is out of date! Reverting to dynamic lighting
@@ -1164,8 +1110,10 @@ MESH_DRAW_FLAGS_DRAW_LAST
 MESH_DRAW_FLAGS_NONE
 MGetKV3ClassDefaults
 MIgnoreDataDescValidation
+MIsBoxedFloatType
 MIsBoxedIntegerType
 MIsNotWorldspace
+MIsStringAndTokenType
 MIsWorldspace
 MIsWorldspaceDirection
 MKV3TransferName
@@ -1200,8 +1148,12 @@ MathLib_Init
 MaxNetworkableEntities
 MaxNonNetworkableEntities
 Maximum lightmap resolution.
+MemAlloc_AllocAlignedFunc
 MemAlloc_AllocFunc
+MemAlloc_FreeAlignedFunc
 MemAlloc_FreeFunc
+MemAlloc_GetSizeAlignedFunc
+MemAlloc_StrDupFunc
 MeshDrawPrimitiveFlags_t
 MeshSystem001
 MeshUtils001
@@ -1236,6 +1188,7 @@ N3Etc35Block4x4Encoding_RGB8A1_TransparentE
 NETWORK_FIELD_CHANGED_ARRAY_WITH_VALUE
 NETWORK_FIELD_CHANGED_NO_VALUE
 NETWORK_FIELD_CHANGED_NO_VALUE_NO_CONTEXT
+NETWORK_FIELD_CHANGED_REPLAY_COMPAT
 NETWORK_FIELD_CHANGED_TYPE_NONE
 NETWORK_FIELD_CHANGED_WITH_VALUE
 NETWORK_FIELD_CHANGES_OFTEN_PRIORITY
@@ -1257,22 +1210,17 @@ NSt6thread10_Impl_baseE
 NSt6thread5_ImplISt12_Bind_simpleIFZNSt13__future_base17_Async_state_implIS1_IFSt7_Mem_fnIMN3Etc5ImageEFjjjjEEPS6_jijEEjEC1EOSC_EUlvE_vEEEE
 NSt6thread5_ImplISt12_Bind_simpleIFZNSt13__future_base17_Async_state_implIS1_IFSt7_Mem_fnIMN3Etc5ImageEFvjjEEPS6_ijEEvEC1EOSC_EUlvE_vEEEE
 NULL RenderMesh with valid handle
-NV_DST16
-NV_DST24
-NV_INTZ
 NV_NULL
-NV_RAWZ
 NWay(
 NativeFunctions
 Need valid position to calculate face centers!
+NeedsLightProbe
 NetworkClientService_001
 NetworkMessagesVersion001
 NetworkP2PService_001
 NetworkServerService_001
 NetworkService_001
-NetworkSystemUtilsVersion001
 NetworkSystemVersion001
-NewNode
 No DATA block for resource
 No DATA block for resource '%s'
 No conversion from %s to bool now
@@ -1281,19 +1229,21 @@ No conversion from %s to int now
 No conversion from %s to string at the moment!
 No conversion from %s to uint now
 No free conversion of %s variant to %s right now
+No free conversion of %s variant to CEntityHandle right now
 No free conversion of %s variant to CUtlStringToken right now
 No free conversion of %s variant to Color right now
-No free conversion of %s variant to EHANDLE2 right now
 No free conversion of %s variant to QAngle right now
-No free conversion of %s variant to Quaternion right now
+No free conversion of %s variant to QuaternionStorage right now
 No free conversion of %s variant to Vector right now
 No free conversion of %s variant to Vector2D right now
 No free conversion of %s variant to Vector4D right now
 Node
 NodeData_t
 Non-windows platforms don't support loading of JPG images
-Non-windows platforms don't support loading of PNG images
 Non-windows platforms don't support loading of TIFF images
+NonTopoComplex
+NonTopoComplexPack4Bits
+NonTopoPenultimatePluseOne
 Normalize3ComponentVectorInAttributes
 Normalized3x3SobelEdgeFilterFrom
 Not safe to 'new' this class due to alignment requirements
@@ -1307,7 +1257,6 @@ OBJECT_TYPE_MODEL_HAS_LODS
 OBJECT_TYPE_NONE
 OBJECT_TYPE_NO_SHADOWS
 OBJECT_TYPE_NO_SUN_SHADOWS
-OBJECT_TYPE_NO_ZPREPASS
 OBJECT_TYPE_PRECOMPUTED_VISMEMBERS
 OBJECT_TYPE_RENDER_TO_CUBEMAPS
 OBJECT_TYPE_RENDER_WITH_DYNAMIC
@@ -1319,10 +1268,8 @@ Only DXT1/DXT5 online texture compression supported.
 Org(%.3f,%.3f,%.3f) Ang(%.3f,%.3f,%.3f)
 Output memory size is zero
 Output unserialization of entities on map load. 0 - off, 1 - client/server, 2 - server, 3 - client
-P8
+P
 P@
-PARALLEL_PROCESS tinyexr_impl.cpp:163
-PARALLEL_PROCESS utlsoacontainer.cpp:2517
 PARENT
 PEvent
 PF%d %d-1.000000
@@ -1331,12 +1278,17 @@ POSE_SPACE_BONE
 POSE_SPACE_MORPH
 PSt12_Bind_simpleIFSt7_Mem_fnIMN3Etc5ImageEFjjjjEEPS2_jijEE
 PSt12_Bind_simpleIFSt7_Mem_fnIMN3Etc5ImageEFvjjEEPS2_ijEE
+PackedAABB_t
 PanoramaTextServices001
 PanoramaUIClient001
 PanoramaUIEngine001
 ParseEXRHeaderFromMemory failed! Error message: %s
 ParticleSystemMgr003
 Particles
+Path_AddToTail failed for read only CFieldPath
+Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)
+Path_PopLast failed for read only CFieldPath
+Path_RemoveAll failed for read only CFieldPath
 Pending List:
 PerVertexLighting
 PermEntityLumpData_t
@@ -1344,18 +1296,31 @@ Pf%d %d-1.000000
 Physics
 PhysicsBuilderMgr001
 Pitch;
-Plat_CreateUUIDImpl
+Plat_CPUTickFrequency
 Plat_DebugPrint
 Plat_ExitProcess
-Plat_GetCPUFrequency
+Plat_FatalErrorFunc
 Plat_GetCrtEnv
 Plat_GetEnv
 Plat_GetModuleFilename
-Plat_GetThreadIndex
 Plat_IsInDebugSession
 Plat_NeedsLowFragmentation
-Plat_SetDenormalsAreZero
+Plat_NonFatalErrorFunc
+Plat_RelativeTicks
 Plat_ShouldCollectMiniDumpsForFatalErrors
+Plat_TickDiffSecF
+PlusFour
+PlusThree
+PlusTwo
+PopAllButOnePlusN
+PopAllButOnePlusNPack3Bits
+PopAllButOnePlusNPack6Bits
+PopAllButOnePlusOne
+PopNAndNonTopographical
+PopNPlusN
+PopNPlusOne
+PopOnePlusN
+PopOnePlusOne
 PostProcessingSystem_001
 Precaches a specific resource
 Print model load-time conversion info
@@ -1363,47 +1328,65 @@ PropWorldOrigin
 PropertyEditorSystem_001
 Push
 PushCurrentSkewBrightnessValuesToSceneObject
+PushN
+PushNAndNonTopographical
+PushOneLeftDeltaNRightNonZero
+PushOneLeftDeltaNRightNonZeroPack6Bits
+PushOneLeftDeltaNRightNonZeroPack8Bits
+PushOneLeftDeltaNRightZero
+PushOneLeftDeltaOneRightNonZero
+PushOneLeftDeltaOneRightZero
+PushOneLeftDeltaZeroRightNonZero
+PushOneLeftDeltaZeroRightZero
+PushThreeLeftDeltaN
+PushThreeLeftDeltaOne
+PushThreeLeftDeltaZero
+PushThreePack5LeftDeltaN
+PushThreePack5LeftDeltaOne
+PushThreePack5LeftDeltaZero
+PushTwoLeftDeltaN
+PushTwoLeftDeltaOne
+PushTwoLeftDeltaZero
+PushTwoPack5LeftDeltaN
+PushTwoPack5LeftDeltaOne
+PushTwoPack5LeftDeltaZero
 QAngle
 QAngle-world
 QuarterSizeAttrWithBoxFilter
 Quaternion
 Quaternion-world
-QuaternionAligned
-QueuedLoaderVersion001
+QuaternionStorage
 Quintic
 R channel not found
 R channel not found!
 R11_EAC
 R16
 R16F
-R16F_EXPAND
+R16G16_UINT
+R16_UINT
 R32F
+R32G32_UINT
 R32_UINT
 R8G8B8A8_ETC2_EAC
 R8G8B8_ETC2
+R8G8_UINT
+R8_UINT
 RESOURCE_TYPE_ENTITY_LUMP
 RESOURCE_TYPE_WORLD
-RESOURCE_TYPE_WORLD_NODE
 RESOURCE_TYPE_WORLD_VIS
 RG11_EAC
 RG1616
 RG1616F
-RG1616F_EXPAND
 RG3232F
 RGB323232F
-RGB888_BLUESCREEN
+RGB565
+RGB888
 RGBA1010102
-RGBA1010102F_EDRAM
+RGBA16161616
 RGBA16161616F
-RGBA16161616F_EDRAM_RGBA1010102F
-RGBA16161616F_EXPAND
-RGBA16161616F_EXPAND_EDRAM_RGBA1010102F
-RGBA16161616_EDRAM
-RGBA16161616_EDRAM_RGBA16161616
 RGBA32323232F
 RGBA32323232_UINT
 RGBA8888_LINEAR
-RGBX555
 RGBX8888
 ROTATION
 RadianEuler
@@ -1413,8 +1396,8 @@ RandomInt
 RandomSeed
 Reads a spawn key
 RedirectOutput
-RegisterAllModuleData
-RegisterConfigValue: Unknown error constructing config value "%s"!
+RegisterConCommand: Unknown error registering con command "%s"!
+RegisterConVar: Unknown error registering convar "%s"!
 RegisterStringToken
 Release
 RemapValClamped(
@@ -1430,7 +1413,6 @@ RenderPrimitiveType_t
 RenderService_001
 RenderSkeletonBone_t
 RenderSlotType_t
-RenderSystemSurface001
 RenderUtils_001
 ReportClassError
 ResourceCompiler/BakedLighting/Version
@@ -1441,9 +1423,6 @@ ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
 ResourceSystem013
-RetargetSrc.%llX.%s
-RetargetSrc.%s.%s
-ReturnJobManualEventToPool
 Rigid;
 Root entity class
 RotationVector
@@ -1471,7 +1450,6 @@ ScriptGetPublicScriptScope
 Script_DebugBreak
 Script_MakeStringToken
 SerializedEntitiesVersion001
-ServerUploadGameStats001
 Set Integer Attribute
 SetIntAttr
 Show or hide the specified world layer
@@ -1494,7 +1472,7 @@ Source2GameClients001
 Source2GameEntities001
 Source2Host001
 Source2Server001
-Source2ServerSerializers002
+Source2V8System001
 St11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE
 St12_Bind_simpleIFSt7_Mem_fnIMN3Etc5ImageEFjjjjEEPS2_jijEE
 St12_Bind_simpleIFSt7_Mem_fnIMN3Etc5ImageEFvjjEEPS2_ijEE
@@ -1519,22 +1497,22 @@ TestScriptMgr001
 TextLayout_001
 The entity instance is too large for type %s! Make more components referenced!
 Thin Plate
+This convar is being accessed prior to ConVar_Register being called
 ThreadGetCurrentId
-ThreadMultiWait
+ThreadInMainThread
 ThreadSleep
 ToolFramework2_002
 ToolSceneNodeFactory_001
 ToolService_001
 Top-%u
 Tried to load resource reference '%s' from a value without a resource reference flag.
-Tried to replace animations from model with no anim groups!
+Tried to replace animations from model %s with no anim groups!
 Trying to concatenate meshes with different numbers of attributes!
 Trying to concatenate meshes with incompatible attribute sets!
 Trying to find a flex controller (%s) that doesn't actually exist in the model.
 TypeManager
 UNNAMED
 UV88
-UVLX8888
 UVWQ8888
 Unable to find in-place conversion path
 Unable to read file %s
@@ -1557,26 +1535,16 @@ UpperEyelid(
 Usage: %s <world_name> <layer_name> <visible>
 Usage: %s <world_name> <lump_name>
 Use
-UserInfoChangeService_001
 Using 16-bit blend indices
 UtlMemory_Alloc
 UtlMemory_CalcNewAllocationCount
 VApplication001
 VAsyncFileSystem2_001
 VAvi001
-VBAllocTracker001
 VBik001
 VConComm001
-VDebugService_001
 VEngineCvar007
 VFileSystem017
-VGUI_Input005
-VGUI_Panel010
-VGUI_Scheme010
-VGUI_Surface032
-VGUI_System010
-VGUI_ivgui008
-VMDLLIB001
 VMapResourceData_t
 VMaterialSystem2_001
 VMatrix
@@ -1606,7 +1574,7 @@ V_PathContainsPath
 V_PrettifyMem
 V_PrettifyNum
 V_RemoveDotSlashes
-V_SplitString(char const*, char const*, CUtlVector<char*, CUtlMemory<char*, int> >&)
+V_SplitString(char const*, char const*, CUtlVector<char*, int, CUtlMemory<char*, int> >&)
 V_StringToColor
 V_StringToFloatArray
 V_StringToVector
@@ -1628,14 +1596,16 @@ V_expf
 V_fmodf
 V_fpclassifyd
 V_fprintf
+V_fread
 V_frexpf
+V_fwrite
+V_isfinited
 V_isnand
 V_logf
 V_powd
 V_powf
 V_qsort
 V_qsort_s
-V_roundf
 V_sincosf
 V_sind
 V_sinf
@@ -1653,6 +1623,7 @@ V_uuid_t
 V_vsnprintf
 Vector-dir
 Vector-quantized
+Vector2D
 Vector2d
 Vector4D
 Vector4d
@@ -1670,7 +1641,6 @@ WARNING: Invalid worldnode version '%d' for file: %s
 WARNING: Trying to create a CRenderContextPtr without a valid context.
 WARNING: Unrecognized bone "%s"
 Warning
-Warning:  %s = '%s' is infinite, clamping value.
 Warning: Error resource loaded for level %s
 World '%s' Lump '%s'
 World '%s' layer '%s'
@@ -1679,6 +1649,7 @@ WorldExtraVertexStream
 WorldGroupId_t
 WorldNodeOnDiskBufferData_t
 WorldNodeProceduralModel
+WorldNode_t
 WorldRenderer
 WorldRenderer/BindlessSceneObjectDesc
 WorldRenderer/GrassCastsShadows
@@ -1687,18 +1658,14 @@ WorldRenderer/GrassNoHalfTexel
 WorldRenderer/GrassQuadSize
 WorldRendererMgr001
 World_t
-X360_DST16
-X360_DST24
-X360_DST24F
 Yaw;
 ZFP compression is not supported in this build
 ZFP compression is not supported.
-ZN26CParallelProcessorAbstractI18CParallelProcessorIi23CLambdaJobItemProcessorIiELi1EEE3RunEvE13CStackFunctor
+ZN31CReadGrassTexturePixelsCallback19OnReadTexturePixelsEPKh11ImageFormatiiiiEUlvE_
 ZN37CTypesafeIntrospectedToKV3TypeManagerILy431366240118E11WorldNode_tE15AllocateAndLoadER23CKV3TransferLoadContextPK21ResourceBindingBase_tP29IRD_RegisterResourceDataUtilsE15CAllocatorUtils
 ZN37CTypesafeIntrospectedToKV3TypeManagerILy431366240118E11WorldNode_tE24DeallocateDestroyCleanupEPvP25IResourceDeallocatorUtilsE17CDeallocatorUtils
 ZN37CTypesafeIntrospectedToKV3TypeManagerILy495874631030E20PermEntityLumpData_tE15AllocateAndLoadER23CKV3TransferLoadContextPK21ResourceBindingBase_tP29IRD_RegisterResourceDataUtilsE15CAllocatorUtils
 ZN37CTypesafeIntrospectedToKV3TypeManagerILy495874631030E20PermEntityLumpData_tE24DeallocateDestroyCleanupEPvP25IResourceDeallocatorUtilsE17CDeallocatorUtils
-[%.3f server clamped to %.3f]
 [%u]
 [PR#]
 []
@@ -1728,7 +1695,6 @@ __cxa_guard_acquire
 __cxa_guard_release
 __cxa_pure_virtual
 __cxa_rethrow
-__finitef
 __fread_chk
 __gmon_start__
 __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > > std::vector<unsigned char, std::allocator<unsigned char> >::insert<__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, void>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >)
@@ -1741,10 +1707,12 @@ __printf_chk
 __procedural_adopted_targetname_
 __pthread_key_create
 __stack_chk_fail
+__temp_unserialization_member__
 __tls_get_addr
 __vasprintf_chk
 _attr_
 _c
+_class
 _edata
 _end
 _fini
@@ -1758,10 +1726,10 @@ a_uiRadius <= MAX_RADIUS
 abort
 abs( %s )
 activator
-advanced to state %d at %f
 after solve err=%f
+aggegated
 angles
-archive
+animation
 attrib
 base class is not embedded
 baselayer
@@ -1789,17 +1757,14 @@ channels
 char
 char* std::string::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)
 character
-cheat
 chlist
 choices
 chunkCount
 class %s - %s instance%s (%.2f%%)
-client
-clientcmd_can_execute
+clientside
 cloth_enable
 color
 compression
-configvalue.cpp
 cos( %s )
 cstring
 curvature
@@ -1811,15 +1776,14 @@ data width too large.
 dataWindow
 data_height =
 data_with or data_height too large. data_width:
+delay
 detexConvertPixels: Too many temporary buffers needed
 detexConvertPixels: Unable to find conversion path
-dir=%d %d %d, err=%f
 displayWindow
 dl_iterate_phdr
 dme_position_map
 double
 effortblocks = %d
-eikonal
 encodingTry.m_fError < 3.40282346638528859812e+38F
 entindex
 entity2
@@ -1846,8 +1810,8 @@ fWeightSumRight > 0.0f
 fWeightSumTop > 0.0f
 false
 fclose
+feof
 fesetround
-fff?fff?fff?fff?
 file error
 filesystem_stdio
 filterinY
@@ -1858,27 +1822,22 @@ float32
 float32-quantized
 float64
 floatbitmap.cpp
-floatbitmap.cpp(126): Unknown gamma type "%s"!
-floatbitmap.cpp(2602): Error calling TGALoader::GetInfo( %s )
-floatbitmap.cpp(2613): Error loading %s
-floatbitmap.cpp(2636): Error! Unknown file type for %s
-floatbitmap.cpp(2655): Error! Slice %d format %dx%dx%d Attr(%d) != previous slices of %dx%d Attr(%d) for %s
-floatbitmap.cpp(304): Conversion not supported yet!
-floatbitmap.cpp(388): Conversion not supported yet!
-floatbitmap.cpp(942): Unsupported color format "%s", skipping!
+floatbitmap.cpp(129): Unknown gamma type "%s"!
+floatbitmap.cpp(2695): Error loading %s
+floatbitmap.cpp(2719): Error! Unknown file type for %s
+floatbitmap.cpp(2738): Error! Slice %d format %dx%dx%d Attr(%d) != previous slices of %dx%d Attr(%d) for %s
+floatbitmap.cpp(307): Conversion not supported yet!
+floatbitmap.cpp(393): Conversion not supported yet!
+floatbitmap.cpp(941): Unsupported color format "%s", skipping!
 floor
 floorf
 fltx4
 fopen64
-formats.cpp
-fputc
-fread
+found %u errors, run with -codegenerrors to see spew!!!
 fread() error on
 free
-frexp
 fseek
 ftell
-fwrite
 g default
 g_BitBuf_BitWriteMasks
 g_BitBuf_ExtraMasks
@@ -1887,7 +1846,6 @@ g_TSPointerListNodes
 g_bUpdateStringTokenDatabase
 g_pMemAlloc
 g_pThreadPool
-game
 generic
 grasstilesceneobject.cpp
 has unknown type '%s'
@@ -1923,9 +1881,9 @@ init
 integer
 interval
 interval_t
-introspectedtokv3typemanager.cpp
 iszString
 item_definition_index_t
+j
 jiggle bone %u
 js_array
 js_object
@@ -1944,7 +1902,6 @@ lightmap
 lightmapuv
 lineOrder
 lineartogamma
-longjmp
 lowprecisionuv
 lowprecisionuv1
 m_16ByteOrLessStack out of space, falling through after %d entries, consider upping NETWORKFIELDSCRATCHDATA_16BYTE_COUNT
@@ -1952,12 +1909,12 @@ m_CScriptComponent
 m_ChildNodeIndices
 m_ConeAxis
 m_ConeCutoff
-m_CullDataIndex
-m_Flags
+m_CullingData
 m_Format
 m_HitBoxSets
 m_HitBoxes
 m_NetworkVar_PathIndex
+m_PackedAABB
 m_PathIndex
 m_SourceFilename
 m_Value
@@ -1972,11 +1929,10 @@ m_bBuildBakedLighting
 m_bCanBatchWithDynamicShaderConstants
 m_bClamp
 m_bDrawLast
-m_bEnableRetarget
 m_bHasBakedLightingFromLightMap
 m_bHasBakedLightingFromVertexStream
-m_bHasCullingData
 m_bHasLightmaps
+m_bHasTransform
 m_bIgnoreRotation
 m_bInfluenceRootTransform
 m_bInverse
@@ -1989,7 +1945,6 @@ m_bTranslationOnly
 m_bUseCompressedNormalTangent
 m_bUseShadowFastPath
 m_bVisible
-m_bWrapInAtlas
 m_bbox
 m_blockOffset
 m_boneArray
@@ -2002,7 +1957,6 @@ m_boolDiff == true
 m_boundsGroups
 m_builderParams
 m_cRenderColor
-m_chain
 m_childLumps
 m_clusters
 m_connections
@@ -2012,13 +1966,12 @@ m_decodeKey
 m_designerName
 m_directHSeqGroup
 m_directHSeqGroup_Handle
+m_drawBounds
 m_drawCalls
-m_drawCullData
 m_dynamicParams
 m_dynamicTextureParams
 m_eHand
 m_eRbfType
-m_element
 m_elems
 m_entityKeyValues
 m_entityLumps
@@ -2030,10 +1983,10 @@ m_fError >= 0.0f
 m_fLODEndDrawDistance
 m_fLODStartDrawDistance
 m_fingers
+m_flAlpha
 m_flBindPoseDirectionMS
 m_flDelay
 m_flDepth
-m_flDistance
 m_flFadeEndDistance
 m_flFadeStartDistance
 m_flFalloff
@@ -2042,19 +1995,12 @@ m_flFingerWeight
 m_flFireTime
 m_flFootLength
 m_flGridSize
-m_flGutterSize
-m_flHalfScreenWidth
 m_flHeight
-m_flHorzFOV
-m_flMass
 m_flMax
 m_flMaxAngle
 m_flMin
 m_flMinAngle
-m_flMinAtlasDist
-m_flMinDistToCamera
 m_flMinDrawVolumeSize
-m_flMinSimplifiedDist
 m_flMinimumDistance
 m_flRadius
 m_flShapeRadius
@@ -2063,7 +2009,6 @@ m_flSplayMaxAngle
 m_flSplayMinAngle
 m_flTraceHeight
 m_flTraceRadius
-m_flUVMapThreshold
 m_flUvDensity
 m_flValue
 m_flWeight
@@ -2072,6 +2017,7 @@ m_flags
 m_float
 m_floatAttributes
 m_floatParams
+m_fragmentTransforms
 m_grassFileName
 m_hActivator
 m_hBuffer
@@ -2099,19 +2045,18 @@ m_int
 m_intAttributes
 m_intParams
 m_invBindPose
-m_invTransform
 m_iszPrivateVScripts
 m_keyValuesData
 m_layerNames
 m_lightMaps
 m_localHAnimArray
 m_localHAnimArray_Handle
-m_manifestName
 m_material
 m_materialName
 m_materialOverrides
 m_mergeClusters
 m_mergeLists
+m_meshlets
 m_metacarpalBoneName
 m_mode == MODE_ETC1
 m_mode == MODE_H
@@ -2120,41 +2065,32 @@ m_mode == MODE_T
 m_morphArray
 m_morphSet
 m_nAdditionalMeshDrawPrimitiveFlags
-m_nAtlasTextureSizeX
-m_nAtlasTextureSizeY
 m_nBaseVertex
 m_nBindOffsetBytes
 m_nBlockIndex
 m_nBoneHash
-m_nBoneIndex
 m_nBoneNameHash
 m_nBoneWeightCount
 m_nBoundsGroupIndex
-m_nChainIndex
-m_nChainInvIndex
-m_nChainType
 m_nChannelElements
 m_nClusterCount
 m_nCompileFingerprint
 m_nCompileTimestamp
-m_nCompressedAtlasSize
+m_nCubeMapPrecomputedHandshake
 m_nD3DSemanticIndex
 m_nDrawCallIndex
-m_nElement
 m_nElementCount
 m_nElementIndexArray
 m_nElementMaskArray
 m_nElementSizeInBytes
-m_nElementType
 m_nFingerIndex
 m_nFirstCluster
+m_nFirstMeshlet
 m_nFlags
 m_nGroupId
-m_nGroupType
 m_nHitBoxIndex
 m_nIndexCount
 m_nInfluences
-m_nInstanceCount
 m_nInstanceStepRate
 m_nLODGroupMask
 m_nLODOverride
@@ -2163,10 +2099,11 @@ m_nLightGroup
 m_nLightProbeVolumePrecomputedHandshake
 m_nLightmapGameVersionNumber
 m_nLightmapVersionNumber
-m_nMaxTexScaleSlots
-m_nMeshID
+m_nMax
+m_nMin
 m_nNameHash
 m_nNodeCount
+m_nNumMeshlets
 m_nObjectID
 m_nObjectTypeFlags
 m_nOffset
@@ -2180,7 +2117,6 @@ m_nPrimitiveType
 m_nPriority
 m_nRegionCount
 m_nRenderOrder
-m_nRetargetStyle
 m_nRuntimeIndex
 m_nSceneObjectIndex
 m_nSemanticIndex
@@ -2191,15 +2127,12 @@ m_nSlaveChannel
 m_nSlot
 m_nSlotType
 m_nStartIndex
-m_nStartInstance
 m_nSubSceneObject
 m_nTargetAxis
 m_nTargetType
 m_nTimesToFire
 m_nTreeSize
 m_nType
-m_nUniqueTextureSizeX
-m_nUniqueTextureSizeY
 m_nUpType
 m_nValue
 m_nVertexCount
@@ -2223,11 +2156,9 @@ m_pCPPClassname
 m_pD3DSemanticName
 m_pData
 m_pEntity
-m_pId
 m_pInfo
 m_pMaterial
 m_pName
-m_pNetworkDataReferencedDescription
 m_pNetworkDataReferencedPtrPropDescription
 m_pNext
 m_pNextByClass
@@ -2253,14 +2184,12 @@ m_quat
 m_renderAttributesUsed
 m_renderable
 m_renderableModel
-m_replicated
-m_retarget
 m_sAttachmentName
 m_sBoneName
-m_sChainName
 m_sName
 m_sSurfaceProperty
 m_sTargetMorph
+m_scale
 m_sceneObjectLayerIndices
 m_sceneObjects
 m_scriptClassName
@@ -2320,13 +2249,10 @@ m_vUVStart
 m_vUpLS
 m_vUpVector
 m_vWorldBounds
-m_vWorldUnitsPerTile
 m_value
 m_valueOverride
 m_variantValue
 m_vecCenter
-m_vecMax
-m_vecMin
 m_vecSize
 m_vectorAttributes
 m_vectorParams
@@ -2351,9 +2277,9 @@ matrix3x4-world
 matrix3x4_t
 matrix3x4a_t
 max( %s, %s )
-max. %f
 maxSpringTension
 mdl
+memchr
 memcmp
 memcpy
 memmove
@@ -2366,7 +2292,6 @@ mesh_calculate_curvature_smooth_weight
 meshsystem
 method flags
 min( %s, %s )
-min. %f
 mismatched inputfunc
 missing base class
 missing field
@@ -2385,10 +2310,10 @@ non-
 non-networkable
 none
 norm
-notconnected
-notify
 operator delete(void*)
+operator delete(void*, unsigned long)
 operator delete[](void*)
+operator delete[](void*, unsigned long)
 operator new(unsigned long)
 operator new(unsigned long, std::nothrow_t const&)
 operator new[](unsigned long)
@@ -2413,7 +2338,7 @@ pos-cellorigin
 position
 positive_or_null
 posxyz
-pow
+prediction codegen: %u classes checked in %.3f ms.
 ptestbed
 pthread_mutex_destroy
 pthread_mutex_init
@@ -2435,6 +2360,7 @@ r_grass_alpha_test
 r_grass_density_mode
 r_grass_end_fade
 r_grass_max_brightness_change
+r_grass_parallel_load
 r_grass_quality
 r_grass_start_fade
 r_grass_vertex_lighting
@@ -2449,7 +2375,9 @@ r_world_wind_offset_speed
 r_world_wind_smooth_time
 r_world_wind_strength
 rb
+read
 realloc
+regex
 remapping vertex %d[w%d] invalid: %d->%d >= %d
 remapping vertex %d[w%d] invalid: %d->? >= %d
 resource_name
@@ -2458,12 +2386,13 @@ resourcesystem
 rnd_down
 rnd_up
 root
+roundf
 runspeed
 s offg cMeshusemtl initialShadingGroup
 sRGB
 sc_allow_precomputed_vismembers
+scale32
 scenesystem
-schemabindings.cpp
 schemaclassinfo.cpp
 schematype.cpp
 screenWindowCenter
@@ -2472,11 +2401,10 @@ scripts/vscripts/
 scripts/vscripts/%s
 self
 seq_trans
-server_can_execute
 sharpStartAngle
+simulation
 sin
 sin( %s )
-singleplayer
 singletons.cpp
 soundevent
 soundname
@@ -2486,7 +2414,7 @@ sqrt
 sqrt( %s )
 sqrtf
 srgbgammatolinear
-ss_added
+std::_Function_base::_Base_manager<CReadGrassTexturePixelsCallback::OnReadTexturePixels(unsigned char const*, ImageFormat, int, int, int, int)::{lambda()#1}>::_M_manager(std::_Any_data&, std::_Function_base::_Base_manager<CReadGrassTexturePixelsCallback::OnReadTexturePixels(unsigned char const*, ImageFormat, int, int, int, int)::{lambda()#1}> const&, std::_Manager_operation)
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_destroy()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()
 std::_Sp_counted_ptr<decltype(nullptr), (__gnu_cxx::_Lock_policy)2>::_M_dispose()
@@ -2566,16 +2494,26 @@ subclass
 submrg%dx%d.tga
 tangent
 tangentu_signv
+target
 target entity not found
 target input not found
+target_type
 texcoord
 thisEntity
 tick
 tiles
+times_to_fire
+tinyexr_impl.cpp:161
 tmp
-trunc
+tools_preview
+typeinfo for std::_Mutex_base<(__gnu_cxx::_Lock_policy)2>
+typeinfo for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>
+typeinfo for std::_Sp_make_shared_tag
 typeinfo for std::__future_base::_Result_base
 typeinfo for std::__future_base::_State_base
+typeinfo name for std::_Mutex_base<(__gnu_cxx::_Lock_policy)2>
+typeinfo name for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>
+typeinfo name for std::_Sp_make_shared_tag
 uiTransparentPixels < PIXELS
 uint16
 uint32
@@ -2591,7 +2529,7 @@ unspecified
 unused
 useMotionDamping
 useSmoothPaths
-user
+utlsoacontainer.cpp:2362
 utlstringtoken
 v %g %g %g
 v %g %g %g%s
@@ -2601,12 +2539,14 @@ v8callback
 v8object
 v8value
 value { %s }
+value_override
 variant
 vb phys
 vecSave
 vector
 vector2
 vector2d
+vector3
 vector4
 vector4d
 vector::_M_default_append
@@ -2664,7 +2604,6 @@ void std::vector<unsigned char, std::allocator<unsigned char> >::_M_emplace_back
 void std::vector<unsigned char, std::allocator<unsigned char> >::_M_range_insert<__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > > >(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, std::forward_iterator_tag)
 void std::vector<unsigned char, std::allocator<unsigned char> >::_M_range_insert<char*>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, char*, char*, std::forward_iterator_tag)
 void std::vector<unsigned char, std::allocator<unsigned char> >::_M_range_insert<unsigned char const*>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char const*, unsigned char const*, std::forward_iterator_tag)
-voxel_vis_cluster_t
 voxel_vis_compression_t
 voxel_vis_mergelist_t
 vtable for __cxxabiv1::__class_type_info

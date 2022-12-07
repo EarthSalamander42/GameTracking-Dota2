@@ -1,19 +1,20 @@
 
 !
 "
-"%s"
-"%s" = "%s"
 #
 $
 $ORIGIN
-%-120s
-%-120s - %s
-%i %i %i %i
-%s
-%s%d
+%d %d %d %d
+%f %f %f %f
+%lf
+%lld
+%llu
+%s: %s has no surfaces
+%s: cursor has no surfaces
+%u
 'is NOT active'
 'is active'
-( def. "%s" )
+( (int64)m_nAllocationCount + (int64)num ) <= 0x7FFFFFFF
 *
 ,
 ,%d
@@ -28,47 +29,40 @@ $ORIGIN
 -inputss_update_spew
 -noime
 -pass_vk_processkey
-../public/ordered_constructor.h
-../public/tier0/utlrbtree.h
+../public/tier0/utlmemory.h
 /
 /cursor.res
 0
-0.3
+0 0 0 0
+0 0 0 255
 1
-10ConCommand
 10IAppSystem
 12CInputSystem
+12IInputSystem
 14CBaseAppSystemI12IInputSystemE
 14CBaseAppSystemI17IInputStackSystemE
-14ConCommandBase
 15CTier0AppSystemI12IInputSystemLx0EE
 15CTier0AppSystemI17IInputStackSystemLx0EE
 15CTier1AppSystemI12IInputSystemLx0EE
 15CTier1AppSystemI17IInputStackSystemLx0EE
 15CTier2AppSystemI12IInputSystemLx0EE
 15CTier2AppSystemI17IInputStackSystemLx0EE
-16CDefaultAccessor
 17CInputStackSystem
 17IInputStackSystem
-18CPlaceholderConVar
 2
 20CPostConnectCallback
 22CSchemaInstallCallback
-23IConCommandBaseAccessor
 5
 6
-6ConVar
 7
-7IConVar
 8
 9
 :
 ;
 <
-<no deferred ref found>
+<invalid>
 <no failure reason set>
-<null>
-<unconnected>
+<undefined>
 =
 >
 ?
@@ -100,13 +94,14 @@ A_WITH_DIAERESIS
 A_WITH_GRAVE
 A_WITH_RING_ABOVE
 A_WITH_TILDE
-Access of unconnected ConVarRef
-Access of unconnected SplitScreenConVarRef
+AlignedByteArray not properly aligned
 Analog axis range before a button press is registered.
 AnimGraphEditorUtils001
 AnimationSystemUtils_001
 AnimationSystem_001
 App activation changed: %s
+Applying deferred input state reset
+Assert_ConditionFailed(_AssertCompileTimeConstantStruct_t const&)
 AssetBrowserSystem_001
 AssetPreviewSystem_001
 AssetRenameSystem_001
@@ -130,6 +125,7 @@ CARET
 CBufferString::AppendFormat(char const*, ...)
 CBufferString::AppendFormatV(char const*, __va_list_tag*)
 CBufferString::FixSlashes(char)
+CBufferString::Format(char const*, ...)
 CBufferString::Insert(int, char const*, int, bool)
 CBufferString::Purge(int)
 CBufferString::SetExtension(char const*)
@@ -137,7 +133,6 @@ CBufferString::SetLength(int, bool, int*)
 CBufferString::ShortenPath(bool)
 CBufferString::StripExtension()
 CBufferString::ToLowerFast(int)
-CCommand::Tokenize: Encountered command which overflows the argument buffer.. Clamped!
 CCommand::Tokenize: Encountered command which overflows the tokenizer buffer.. Skipping!
 CENT_SIGN
 CInputStackSystem:  %s IME %s
@@ -152,7 +147,6 @@ CInputSystem::AttachToWindow: Tried to attach to the same window twice!
 CInputSystem::SleepUntilInput
 CLEARAGAIN
 CMemAllocSystemInitialize
-COLORCORRECTION_VERSION_1
 COMPUTER
 COPY
 COPYRIGHT_SIGN
@@ -167,8 +161,9 @@ CUtlBuffer::ParseToken(characterset_t const*, char*, int, bool)
 CUtlBuffer::Put(void const*, int)
 CUtlRBTree overflow with %u elements!
 CUtlString::FreeMemoryBlock()
+CUtlString::IsEqual_FastCaseInsensitive(char const*) const
 CUtlString::Set(char const*)
-CUtlSymbolTable::AddString(char const*)
+CUtlSymbolTable::AddString(char const*, bool*)
 CUtlSymbolTable::CUtlSymbolTable(int, int, bool)
 CUtlSymbolTable::Find(char const*) const
 CUtlSymbolTable::RemoveAll()
@@ -177,12 +172,9 @@ CVProfNode::EnterScope()
 CVProfNode::ExitScope()
 CVProfNode::GetSubNode(char const*, int, char const*, int)
 CXXABI_1.3
+CXXABI_1.3.9
 C_WITH_CEDILLA
 CommandLine
-ConMsg(char const*, ...)
-ConVar(%s) defined with infinite float value (%s)
-ConVarRef %s doesn't point to an existing ConVar
-ConfigurationSystem_001
 ConnectInterfaceSingletons
 CreateInterface
 Current coordinate bias %s: %g,%g scale %g,%g
@@ -194,9 +186,8 @@ DISPLAYSWITCH
 DIVISION_SIGN
 DOLLAR
 DOWNARROW
-DebugTextureInfo001
 DemoUpconverterVersion001
-DotaCardGameClient_001
+Disconnecting SDL joystick %d %s (%d)
 E
 EJECT
 END
@@ -214,7 +205,6 @@ E_WITH_GRAVE
 EarlyInit_Tier0
 EconItemToolModel_001
 EngineServiceMgr001
-EventSystem001
 F
 F1
 F10
@@ -241,7 +231,6 @@ F7
 F8
 F9
 FATAL ERROR: unable to register all schema data: %s
-FCVAR_NEVER_AS_STRING
 FEMININE_ORDINAL_INDICATOR
 FIND
 Failed to load cursor from '%s'
@@ -250,7 +239,7 @@ Failed to scale image for cursor to %d,%d (hot %d,%d; scaling %g): %s
 FlattenedSerializersVersion001
 FontManager_001
 G
-GCC: (Ubuntu 5.4.0-7.really.6+steamrt1.1+srt1) 5.4.1 20160803
+GCC: (SteamRT 5.4.0-7.really.6+steamrt1.2+srt2) 5.4.1 20160803
 GLIBC_2.14
 GLIBC_2.2.5
 GLIBC_2.4
@@ -260,11 +249,11 @@ GameResourceServiceServerV001
 GameUIService_001
 GetResourceManifestCount
 GetResourceManifests
+Grow
 H
 HELP
 HammerMapLoader001
 HelpSystem_001
-HookUpConfigValue
 HostStateMgr001
 I
 IE_ActivateApp
@@ -301,7 +290,6 @@ INACTIVE
 INS
 INVERTED_EXCLAMATION_MARK
 INVERTED_QUESTION_MARK
-IQuickTime001
 ISS: Cursor clip %s from '%s'
 ISS: Cursor clip disabled from default
 ISS: Cursor icon from '%s'
@@ -324,11 +312,8 @@ InputService_001
 InputStackSystemVersion001
 InputSystem
 InputSystemVersion001
-InstallChangeCallback called with NULL callback, ignoring!!!
-InstallChangeCallback ignoring duplicate change callback!!!
 InstallSchemaBindings
 Intentionally vague touch behavior for %p
-Invalid access of deferred ConVarRef for '%s'
 J
 JOY1
 JOY10
@@ -366,7 +351,7 @@ K
 KBDILLUMDOWN
 KBDILLUMTOGGLE
 KBDILLUMUP
-KEYDOWN (%s): sdlkeycode=%d sdlscancode=%d SDL_GetKeyName='%s' buttoncode=%d buttonname='%s' ButtonCode_GetLocalKeyNameUTF8='%s'
+KEYDOWN (%s): sdlkeycode=%d sdlscancode=%d SDL_GetKeyName='%s' buttoncode=%d buttonname='%s' ButtonCode_GetLocalKeyNameUTF8='%s' repeat=%d
 KEYUP (%s) sdlkeycode=%d sdlscancode=%d buttoncode=%d buttonname='%s'
 KEY_CYRILLIC_BE
 KEY_CYRILLIC_E
@@ -438,7 +423,7 @@ KP_VERTICALBAR
 KP_XOR
 KeyValueCache001
 KeyValues::FindKey(char const*, bool)
-KeyValues::GetInt(char const*, int)
+KeyValues::GetInt(char const*, int) const
 KeyValues::KeyValues(char const*)
 KeyValues::LoadFromFile(IFileSystem*, char const*, char const*, bool (*)(char const*, void*), void*, char const*)
 KeyValues::operator delete(void*)
@@ -496,9 +481,7 @@ NetworkMessagesVersion001
 NetworkP2PService_001
 NetworkServerService_001
 NetworkService_001
-NetworkSystemUtilsVersion001
 NetworkSystemVersion001
-NewNode
 No cursor image files for '%s'
 O
 OPER
@@ -530,6 +513,7 @@ ParticleSystemMgr003
 PhysicsBuilderMgr001
 Plat_DebugPrint
 Plat_ExitProcess
+Plat_FatalErrorFunc
 Plat_GetCurrentFrame
 Plat_GetDefaultMonitorIndex
 Plat_GetDesktopResolution
@@ -537,10 +521,10 @@ Plat_GetWindowClientBounds
 Plat_GetWindowClientSize
 Plat_GetWindowMonitorIndex
 Plat_IsHighDPI
-Plat_IsInDebugSession
 Plat_LoadSDL
 Plat_MSTime
 Plat_MilliSecTickDiff
+Plat_NonFatalErrorFunc
 Plat_OsSpecificHandleToPlatWindow
 Plat_RelativeTicks
 Plat_RequireSDL
@@ -548,16 +532,13 @@ Plat_ScreenToWindowCoords
 Plat_SetupFPUControlWord
 Plat_ShouldCollectMiniDumpsForFatalErrors
 Plat_TickDiffMilliSecF
-Plat_UnloadModule
 Plat_WindowToOsSpecificHandle
 Plat_WindowToScreenCoords
 PostProcessingSystem_001
-PrimaryUserId is %d
 PropertyEditorSystem_001
 Q
 QUESTION
 QUOTEDBL
-QueuedLoaderVersion001
 R
 RALT
 RCTRL
@@ -573,15 +554,13 @@ R_AXIS_NEG
 R_AXIS_POS
 R_SHOULDER
 R_TRIGGER
-RegisterAllModuleData
-RegisterConfigValue: Unknown error constructing config value "%s"!
-RegisterStringToken
+RegisterConCommand: Unknown error registering con command "%s"!
+RegisterConVar: Unknown error registering convar "%s"!
 Release
 RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
 RenderService_001
-RenderSystemSurface001
 RenderUtils_001
 ResourceCompilerSystem001
 ResourceHandleUtils001
@@ -632,6 +611,8 @@ SDL_CONTROLLERBUTTONUP
 SDL_CONTROLLERDEVICEADDED
 SDL_CONTROLLERDEVICEREMAPPED
 SDL_CONTROLLERDEVICEREMOVED
+SDL_CreateColorCursor failed
+SDL_CreateColorCursor failed for %s
 SDL_DISPLAYEVENT
 SDL_DOLLARGESTURE
 SDL_DOLLARRECORD
@@ -675,13 +656,13 @@ SUPERSCRIPT_ONE
 SUPERSCRIPT_THREE
 SUPERSCRIPT_TWO
 SYSREQ
+ScaleCursorEntry
 SceneSystem_002
 SceneUtils_001
 SchemaSystem_001
 SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
 SerializedEntitiesVersion001
-ServerUploadGameStats001
 SetCursorClip:  %s SDL_SetWindowGrab on 0x%p (%s) %s
 SetCursorClip:  disabling SDL_SetWindowGrab on 0x%p (%s)
 SoundOpSystem001
@@ -699,7 +680,7 @@ Source2GameClients001
 Source2GameEntities001
 Source2Host001
 Source2Server001
-Source2ServerSerializers002
+Source2V8System001
 StatsService_001
 SteamAudio001
 T
@@ -713,6 +694,7 @@ TestFormatD
 TestFormatE
 TestScriptMgr001
 TextLayout_001
+This convar is being accessed prior to ConVar_Register being called
 ThreadGetCurrentId
 ToolFramework2_002
 ToolSceneNodeFactory_001
@@ -729,26 +711,16 @@ U_WITH_DIAERESIS
 U_WITH_GRAVE
 UpdateCursorClipOnFocusChange:  %s SDL_SetWindowGrab on 0x%p (%s) %s
 Updates game keyboard layout to current windows keyboard setting.
-UserInfoChangeService_001
 UtlMemory_Alloc
 UtlMemory_CalcNewAllocationCount
 VApplication001
 VAsyncFileSystem2_001
 VAvi001
-VBAllocTracker001
 VBik001
 VConComm001
-VDebugService_001
 VERTICAL_BAR
 VEngineCvar007
 VFileSystem017
-VGUI_Input005
-VGUI_Panel010
-VGUI_Scheme010
-VGUI_Surface032
-VGUI_System010
-VGUI_ivgui008
-VMDLLIB001
 VMaterialSystem2_001
 VMediaFoundation001
 VOLUMEDOWN
@@ -771,20 +743,14 @@ V_AXIS
 V_AXIS_NEG
 V_AXIS_POS
 V_UTF8ToUTF32
-V_atof
-V_atofloat64
 V_atoi
 V_powf
 V_qsort_s
-V_snprintf
 V_sscanf
 V_stricmp_fast
-V_tier0_memset
-V_vsnprintf
 VisBuilder_001
 WWW
 Warning
-Warning:  %s = '%s' is infinite, clamping value.
 Window activation changed: %s
 Wingman warrior centering hack.
 Wingman warrior hack related to turn axes.
@@ -806,7 +772,6 @@ Z_AXIS
 Z_AXIS_NEG
 Z_AXIS_POS
 [
-[%.3f server clamped to %.3f]
 \
 ]
 ^
@@ -815,8 +780,6 @@ _ITM_deregisterTMCloneTable
 _ITM_registerTMCloneTable
 _Jv_RegisterClasses
 _V_FileBase
-_V_strncat
-_V_strncpy
 _V_strnicmp_fast
 __UNKNOWN__
 __bss_start
@@ -834,7 +797,6 @@ _init
 _vsz%u.bmp
 `
 a
-archive
 aux
 b
 binary
@@ -842,33 +804,32 @@ binary_auto
 binary_bc
 binary_lz4
 binary_zstd
+bool
 c
-cheat
 cl_auto_cursor_scale
 cl_cursor_scale
-client
-clientcmd_can_execute
-configvalue.cpp
+color
 d
 disabled
 disabling
 disallowed
 down
 e
-enabled
 enabling
 f
+false
+float32
+float64
 g
 g_VProfCurrentProfile
-g_bUpdateStringTokenDatabase
 g_pMemAlloc
-game
 generic
 h
 hidden
 hotx
 hoty
-initializing SDL joystick %d %s
+i
+initializing SDL joystick %d %s (%d)
 inputsystem
 j
 joy_axisbutton_threshold
@@ -882,46 +843,42 @@ libinputsystem.so
 libpthread.so.0
 libstdc++.so.6
 libtier0.so
-max. %f
 memcpy
 memmove
-min. %f
+memset
 mouse %d %s (%d) at %d %d on window %d
 mouse motion %d %d at %d %d with buttons "%s" on window %d
 not using
-notconnected
-notify
 off
 operator delete(void*)
+operator delete(void*, unsigned long)
 operator delete[](void*)
 operator new(unsigned long)
 operator new(unsigned long, std::nothrow_t const&)
 operator new[](unsigned long)
 operator new[](unsigned long, std::nothrow_t const&)
 q
+qangle
 rb
-replicated
 scan
-schemabindings.cpp
-server_can_execute
 shown
-singleplayer
 singletons.cpp
-ss
-ss_added
 strchr
 strcmp
+string
 strlen
 text
-tier0
-u
+true
+uint32
+uint64
 unknown event
 unset
 up
-user
 v
+vector2
+vector3
+vector4
 visible
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__si_class_type_info
-vtable for __cxxabiv1::__vmi_class_type_info
 z

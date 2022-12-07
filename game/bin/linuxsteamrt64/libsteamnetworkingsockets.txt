@@ -1,17 +1,19 @@
  A __bss_start
  A _edata
  A _end
- T SteamDatagramClient_Init_InternalV9
- T SteamDatagramClient_Internal_SteamAPIKludge
+ T SteamDatagramClient_Init
+ T SteamDatagramClient_InitSteam_InternalV1
  T SteamDatagramClient_Kill
- T SteamDatagramClient_SetAppID
- T SteamDatagramClient_SetUniverse
- T SteamDatagramServer_Init_InternalV2
+ T SteamDatagramServer_Init
+ T SteamDatagramServer_InitSteam_InternalV1
  T SteamDatagramServer_Kill
  T SteamDatagram_GetNetworkConfigURL
+ T SteamDatagram_Internal_SteamAPIKludge
+ T SteamDatagram_SetAppID
  T SteamDatagram_SetNetworkConfig
+ T SteamDatagram_SetUniverse
  T SteamGameServerNetworkingMessages_LibV2
- T SteamGameServerNetworkingSockets_LibV11
+ T SteamGameServerNetworkingSockets_LibV12
  T SteamNetworkingIPAddr_GetFakeIPType
  T SteamNetworkingIPAddr_ParseString
  T SteamNetworkingIPAddr_ToString
@@ -19,7 +21,7 @@
  T SteamNetworkingIdentity_ToString
  T SteamNetworkingMessages_LibV2
  T SteamNetworkingSockets_DefaultPreFormatDebugOutputHandler
- T SteamNetworkingSockets_LibV11
+ T SteamNetworkingSockets_LibV12
  T SteamNetworkingSockets_Poll
  T SteamNetworkingSockets_SetLockAcquiredCallback
  T SteamNetworkingSockets_SetLockHeldCallback
@@ -84,6 +86,7 @@
  __gnu_debug::_Safe_iterator_base::_M_singular() const@@GLIBCXX_3.4
  __gnu_debug::_Safe_sequence_base::_M_detach_all()@@GLIBCXX_3.4
  __gnu_debug::_Safe_sequence_base::_M_get_mutex()@@GLIBCXX_3.4.9
+ __gnu_debug::_Safe_sequence_base::_M_swap(__gnu_debug::_Safe_sequence_base&)@@GLIBCXX_3.4
  __gxx_personality_v0@@CXXABI_1.3
  __isoc99_sscanf@@GLIBC_2.7
  __memcpy_chk@@GLIBC_2.3.4
@@ -122,10 +125,13 @@
  fputs@@GLIBC_2.2.5
  fread@@GLIBC_2.2.5
  free@@GLIBC_2.2.5
+ freeaddrinfo@@GLIBC_2.2.5
  freeifaddrs@@GLIBC_2.3
  fseek@@GLIBC_2.2.5
  ftell@@GLIBC_2.2.5
  fwrite@@GLIBC_2.2.5
+ gai_strerror@@GLIBC_2.2.5
+ getaddrinfo@@GLIBC_2.2.5
  getegid@@GLIBC_2.2.5
  getenv@@GLIBC_2.2.5
  geteuid@@GLIBC_2.2.5
@@ -278,6 +284,7 @@
  strncpy@@GLIBC_2.2.5
  strpbrk@@GLIBC_2.2.5
  strrchr@@GLIBC_2.2.5
+ strstr@@GLIBC_2.2.5
  strtod@@GLIBC_2.2.5
  strtof@@GLIBC_2.2.5
  strtol@@GLIBC_2.2.5

@@ -174,8 +174,7 @@
 
 "game_player_connecting"	"ผู้เล่น %s1 กำลังเชื่อมต่อ"
 "game_player_joined_game"	"ผู้เล่น %s1 ได้เข้าร่วมเกม"
-"game_player_left_game"		"ผู้เล่น %s1 ออกจากเกม (%s2)" [$WIN32]
-"game_player_left_game"		"ผู้เล่น %s1 ออกจากเกม" [$X360]
+"game_player_left_game"		"ผู้เล่น %s1 ออกจากเกม (%s2)"
 "game_player_joined_team"	"ผู้เล่น %s1 เข้าร่วมทีม %s2"
 "game_player_joined_autoteam" "ผู้เล่น %s1 ได้ถูกกำหนดเข้าร่วมทีม %s2 โดยอัตโนมัติ"
 "game_player_changed_name"	"ผู้เล่น %s1 เปลี่ยนชื่อเป็น %s2"
@@ -445,6 +444,8 @@
 
 "Engine_UnsupportedWindowsTitle"	"เวอร์ชันที่ไม่รองรับใน Windows"
 "Engine_UnsupportedWindowsBody"		"ไม่รองรับเวอร์ชันนี้ใน Windows กรุณาอัปเกรดให้เป็นเวอร์ชันใหม่กว่านี้"
+"Engine_Deprecated32BitTitle"		"คำเตือนเรื่องการเลิกใช้งาน"
+"Engine_Deprecated32BitBody"		"ขณะนี้ได้ยกเลิกการใช้งานเวอร์ชัน 32 บิตแล้ว และจะลบออก กรุณาใช้เวอร์ชัน 64 บิต"
 
 "Native_VersionLabel"				"เวอร์ชัน: "
 "Native_ContactingServer"			"กำลังติดต่อเซิร์ฟเวอร์"
@@ -577,8 +578,7 @@
 "LOC_Date_PM"						"_"
 // To have numeric days in the DMY_Numeric format be zero-prefixed set this to "02".
 // For non-prefixed numbers use "1".
-"LOC_Date_DayNumFormat"				"1
-"
+"LOC_Date_DayNumFormat"				"1"
 // To have numeric months be zero-prefixed set this to "02".
 // For non-prefixed numbers use "1".
 "LOC_Date_MonthNumFormat"			"1"
@@ -590,6 +590,7 @@
 "LOC_Date_Format_Day_Month_Year_Numeric"								"%s1/%s2/%s3"					// 18/4/2014
 "LOC_Date_Format_Day_Month_Numeric"										"%s1/%s2"						// 18/4
 "LOC_Date_Format_DayOfWeek_Month_Day_Year"								"%s1ที่ %s3 %s2 %s4"				// Wednesday, April 18, 2014
+"LOC_Date_Format_Month_Day_Year"										"%s2 %s1 %s3"					// April 18, 2014
 "LOC_Date_Format_Day_Month"												"%s1 %s2"						// 18 April
 "LOC_Date_Format_Day_Month_Year"										"%s1 %s2 %s3"					// 18 April 2014
 "LOC_Date_Format_Day_Month_Year_Hour_Minute_24"							"%s1 %s2 %s3 เวลา %s4:%s5 น."			// 18 April 2014, 17:30

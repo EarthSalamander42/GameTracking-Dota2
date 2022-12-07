@@ -1,19 +1,21 @@
 local Disruptor =
 {
-	-- {
-	-- 	 description = "aghsfort_disruptor_thunder_strike_pct_mana_cost",
-	-- 	 ability_name = "aghsfort_disruptor_thunder_strike",
-	-- 	 special_value_name = "mana_cost",
-	-- 	 operator = MINOR_ABILITY_UPGRADE_OP_MUL,
-	-- 	 value = 15,
-	-- },
-
 	{
-		 description = "aghsfort_disruptor_thunder_strike_pct_cooldown",
-		 ability_name = "aghsfort_disruptor_thunder_strike",
-		 special_value_name = "cooldown",
-		 operator = MINOR_ABILITY_UPGRADE_OP_MUL,
-		 value = 12,
+		description = "aghsfort_disruptor_thunder_strike_mana_cost_cooldown",
+		ability_name = "aghsfort_disruptor_thunder_strike",
+		special_values =
+		{
+			{
+				special_value_name = "mana_cost",
+				operator = MINOR_ABILITY_UPGRADE_OP_MUL,
+				value = MINOR_ABILITY_COOLDOWN_MANACOST_PCT,
+			},
+			{
+				special_value_name = "cooldown",
+				operator = MINOR_ABILITY_UPGRADE_OP_MUL,
+				value = MINOR_ABILITY_COOLDOWN_MANACOST_PCT,
+			},
+		},
 	},
 
 	{
@@ -41,6 +43,24 @@ local Disruptor =
 	},
 
 	{
+		description = "aghsfort_disruptor_glimpse_mana_cost_cooldown",
+		ability_name = "aghsfort_disruptor_glimpse",
+		special_values =
+		{
+			{
+				special_value_name = "mana_cost",
+				operator = MINOR_ABILITY_UPGRADE_OP_MUL,
+				value = MINOR_ABILITY_COOLDOWN_MANACOST_PCT,
+			},
+			{
+				special_value_name = "cooldown",
+				operator = MINOR_ABILITY_UPGRADE_OP_MUL,
+				value = MINOR_ABILITY_COOLDOWN_MANACOST_PCT,
+			},
+		},
+	},
+
+	{
 		 description = "aghsfort_disruptor_glimpse_flat_cast_radius",
 		 ability_name = "aghsfort_disruptor_glimpse",
 		 special_value_name = "cast_radius",
@@ -53,23 +73,25 @@ local Disruptor =
 		 ability_name = "aghsfort_disruptor_glimpse",
 		 special_value_name = "bonus_damage",
 		 operator = MINOR_ABILITY_UPGRADE_OP_ADD,
-		 value = 30,
+		 value = 50,
 	},
 
 	{
-		 description = "aghsfort_disruptor_glimpse_pct_cooldown",
-		 ability_name = "aghsfort_disruptor_glimpse",
-		 special_value_name = "cooldown",
-		 operator = MINOR_ABILITY_UPGRADE_OP_MUL,
-		 value = 12,
-	},
-
-	{
-		description = "aghsfort_disruptor_kinetic_field_pct_cooldown",
+		description = "aghsfort_disruptor_kinetic_field_mana_cost_cooldown",
 		ability_name = "aghsfort_disruptor_kinetic_field",
-		special_value_name = "cooldown",
-		operator = MINOR_ABILITY_UPGRADE_OP_MUL,
-		value = 12,
+		special_values =
+		{
+			{
+				special_value_name = "mana_cost",
+				operator = MINOR_ABILITY_UPGRADE_OP_MUL,
+				value = MINOR_ABILITY_COOLDOWN_MANACOST_PCT,
+			},
+			{
+				special_value_name = "cooldown",
+				operator = MINOR_ABILITY_UPGRADE_OP_MUL,
+				value = MINOR_ABILITY_COOLDOWN_MANACOST_PCT,
+			},
+		},
 	},
 
 	{
@@ -87,28 +109,38 @@ local Disruptor =
 		operator = MINOR_ABILITY_UPGRADE_OP_MUL,
 		value = -20,
 	},
+
+	{
+		description = "aghsfort_disruptor_kinetic_field_intellect_bonus",
+		ability_name = "aghsfort_disruptor_kinetic_field",
+		special_value_name = "intellect_bonus",
+		operator = MINOR_ABILITY_UPGRADE_OP_MUL,
+		value = 4,
+	},
+	{
+		description = "aghsfort_disruptor_static_storm_mana_cost_cooldown",
+		ability_name = "aghsfort_disruptor_static_storm",
+		special_values =
+		{
+			{
+				special_value_name = "mana_cost",
+				operator = MINOR_ABILITY_UPGRADE_OP_MUL,
+				value = MINOR_ABILITY_COOLDOWN_MANACOST_PCT,
+			},
+			{
+				special_value_name = "cooldown",
+				operator = MINOR_ABILITY_UPGRADE_OP_MUL,
+				value = MINOR_ABILITY_COOLDOWN_MANACOST_PCT,
+			},
+		},
+	},
+
 	{
 		description = "aghsfort_disruptor_static_storm_flat_duration",
 		ability_name = "aghsfort_disruptor_static_storm",
 		special_value_name = "duration",
 		operator = MINOR_ABILITY_UPGRADE_OP_ADD,
 		value = 1.25,
-	},
-
-	-- {
-	-- 	description = "aghsfort_disruptor_static_storm_pct_mana_cost",
-	-- 	ability_name = "aghsfort_disruptor_static_storm",
-	-- 	special_value_name = "mana_cost",
-	-- 	operator = MINOR_ABILITY_UPGRADE_OP_ADD,
-	-- 	value = 15,
-	-- },
-
-	{
-		description = "aghsfort_disruptor_static_storm_pct_cooldown",
-		ability_name = "aghsfort_disruptor_static_storm",
-		special_value_name = "cooldown",
-		operator = MINOR_ABILITY_UPGRADE_OP_MUL,
-		value = 12,
 	},
 
 	{

@@ -1,5 +1,6 @@
 import "dota_gcmessages_common_bot_script.proto";
 import "dota_commonmessages.proto";
+import "dota_shared_enums.proto";
 
 option optimize_for = SPEED;
 option cc_generic_services = false;

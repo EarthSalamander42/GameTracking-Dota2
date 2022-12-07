@@ -174,8 +174,7 @@
 
 "game_player_connecting"	"%s1 está conectando-se"
 "game_player_joined_game"	"%s1 entrou na partida"
-"game_player_left_game"		"%s1 saiu da partida (%s2)" [$WIN32]
-"game_player_left_game"		"%s1 saiu da partida" [$X360]
+"game_player_left_game"		"%s1 saiu da partida (%s2)"
 "game_player_joined_team"	"%s1 entrou na equipe %s2"
 "game_player_joined_autoteam" "%s1 foi automaticamente designado(a) para a equipe %s2"
 "game_player_changed_name"	"%s1 mudou o nome para %s2"
@@ -443,6 +442,8 @@
 
 "Engine_UnsupportedWindowsTitle"	"Versão do Windows incompatível"
 "Engine_UnsupportedWindowsBody"		"Esta versão do Windows é incompatível. Instale uma versão mais recente."
+"Engine_Deprecated32BitTitle"		"Alerta de versão obsoleta"
+"Engine_Deprecated32BitBody"		"A versão de 32 bits tornou-se obsoleta e será removida. Use a versão de 64 bits."
 
 "Native_VersionLabel"				"VERSÃO: "
 "Native_ContactingServer"			"Comunicando-se com servidor"
@@ -534,18 +535,18 @@
 "LOC_Date_Month9"					"outubro"
 "LOC_Date_Month10"					"novembro"
 "LOC_Date_Month11"					"dezembro"	
-"LOC_Date_MonthShort0"				"jan"
-"LOC_Date_MonthShort1"				"fev"
-"LOC_Date_MonthShort2"				"mar"
-"LOC_Date_MonthShort3"				"abr"
-"LOC_Date_MonthShort4"				"mai"
-"LOC_Date_MonthShort5"				"jun"
-"LOC_Date_MonthShort6"				"jul"
-"LOC_Date_MonthShort7"				"ago"
-"LOC_Date_MonthShort8"				"set"
-"LOC_Date_MonthShort9"				"out"
-"LOC_Date_MonthShort10"				"nov"
-"LOC_Date_MonthShort11"				"dez"
+"LOC_Date_MonthShort0"				"jan."
+"LOC_Date_MonthShort1"				"fev."
+"LOC_Date_MonthShort2"				"mar."
+"LOC_Date_MonthShort3"				"abr."
+"LOC_Date_MonthShort4"				"mai."
+"LOC_Date_MonthShort5"				"jun."
+"LOC_Date_MonthShort6"				"jul."
+"LOC_Date_MonthShort7"				"ago."
+"LOC_Date_MonthShort8"				"set."
+"LOC_Date_MonthShort9"				"out."
+"LOC_Date_MonthShort10"				"nov."
+"LOC_Date_MonthShort11"				"dez."
 "LOC_Date_Day0"						"domingo"
 "LOC_Date_Day1"						"segunda-feira"
 "LOC_Date_Day2"						"terça-feira"
@@ -553,13 +554,13 @@
 "LOC_Date_Day4"						"quinta-feira"
 "LOC_Date_Day5"						"sexta-feira"
 "LOC_Date_Day6"						"sábado"
-"LOC_Date_DayShort0"				"dom"
-"LOC_Date_DayShort1"				"seg"
-"LOC_Date_DayShort2"				"ter"
-"LOC_Date_DayShort3"				"qua"
-"LOC_Date_DayShort4"				"qui"
-"LOC_Date_DayShort5"				"sex"
-"LOC_Date_DayShort6"				"sáb"
+"LOC_Date_DayShort0"				"dom."
+"LOC_Date_DayShort1"				"seg."
+"LOC_Date_DayShort2"				"ter."
+"LOC_Date_DayShort3"				"qua."
+"LOC_Date_DayShort4"				"qui."
+"LOC_Date_DayShort5"				"sex."
+"LOC_Date_DayShort6"				"sáb."
 "LOC_Date_DayShorter0"				"D"
 "LOC_Date_DayShorter1"				"S"
 "LOC_Date_DayShorter2"				"T"
@@ -587,6 +588,7 @@
 "LOC_Date_Format_Day_Month_Year_Numeric"								"%s1/%s2/%s3"					// 18/4/2014
 "LOC_Date_Format_Day_Month_Numeric"										"%s1/%s2"						// 18/4
 "LOC_Date_Format_DayOfWeek_Month_Day_Year"								"%s1, %s3 de %s2 de %s4"				// Wednesday, April 18, 2014
+"LOC_Date_Format_Month_Day_Year"										"%s2 de %s1 de %s3"					// April 18, 2014
 "LOC_Date_Format_Day_Month"												"%s1 de %s2"						// 18 April
 "LOC_Date_Format_Day_Month_Year"										"%s1 de %s2 de %s3"					// 18 April 2014
 "LOC_Date_Format_Day_Month_Year_Hour_Minute_24"							"%s1 de %s2 de %s3 %s4:%s5"			// 18 April 2014, 17:30

@@ -1,8 +1,9 @@
+<!-- xml reconstructed by ValveResourceFormat: https://vrf.steamdb.info/ -->
 <root>
-    <styles>
- 		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
-        <include src="s2r://panorama/styles/custom_game/multiteam_end_screen.vcss_c" />
-    </styles>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/custom_game/multiteam_end_screen.vcss_c" />
+	</styles>
 	<Panel class="PlayerRow">
 		<Panel id="PlayerRowContainer">
 			<Panel id="Hero" class="ScoreCol_Hero ScoreboardPanel">
@@ -10,7 +11,7 @@
 			</Panel>
 			<Panel id="PlayerDetailsContainer" class="ScoreCol_PlayerDetails ScoreboardPanel">
 				<Panel id="PlayerAndHeroName">
-					<Label id="PlayerName" text="AAAAA" />
+					<Label id="PlayerName" text="xxxxx" />
 					<Label id="HeroNameAndDescription" text="#custom_scoreboard_hero_name_and_desc" />
 				</Panel>
 			</Panel>
@@ -25,8 +26,8 @@
 				<Label id="Assists" text="999" />
 			</Panel>
 			<Panel id="PlayerItemsContainer" class="ScoreCol_Items ScoreboardPanel" />
-			<Panel id="GoldContainer" class="ScoreCol_Gold ScoreboardPanel">
-				<Label id="PlayerGoldAmount" text="999" />
+			<Panel id="NetworthContainer" class="ScoreCol_Networth ScoreboardPanel">
+				<Label id="PlayerNetworth" text="999" />
 			</Panel>
 		</Panel>
 	</Panel>

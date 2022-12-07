@@ -1,27 +1,27 @@
 !m_bNeedsSort
-"%s"
-"%s" = "%s"
 $ORIGIN
 % 5i:  [%32.32s]
-%-120s
-%-120s - %s
+%d %d %d %d
 %d General references (More ResourceAddRef() calls than ResourceRelease())
 %d Manifest references (Still holding onto a HResourceManifest somewhere)
 %d Schema references (Most likely a resource referring to another resource)
 %d Strong handle references (Still holding onto a CStrongHandle somewhere)
+%f %f %f %f
 %g
-%i %i %i %i
+%hu
+%lf
 %lld
 %lld,
 %llu
 %s Schema Type: %s
 %s$Fence%d
-%s%d
 %s%s%s%sFinal operation count %llu
 %s+--
 %s+-- Schema Class: %s
 %s.%s
 %s: %s
+%s: Invalid capacity %u
+%s: Invalid grow amount %d
 %s:%s needs base %s:%s to be registered
 %sResource System profile stats unavailable. Compile with RESOURCE_SYSTEM_GATHER_STATS as 1 to gather stats.
 %s|  % 2d: %s [Offset: %d]
@@ -32,7 +32,10 @@ $ORIGIN
 %s| Project: '%s' Binary: '%s'
 %s| SizeOf: %d
 %s| Virtual: %s; Abstract: %s; TrivialConstr: %s; TrivialDestr: %s
-( def. "%s" )
+%u
+( (int64)m_nAllocationCount + (int64)num ) <= 0x7FFFFFFF
+(%d,%d)
+(%s%s)
 *
 ** Forcing all resource loads to fail: "%s"
 *** Bad deletion request: Refcount for %s resource "%s" (%016llX) is greater than zero. (%d)!
@@ -58,34 +61,34 @@ $ORIGIN
 -> Matched %d of %d loaded resources
 -exit_on_resource_load_failure
 -force_all_resource_loads_to_fail
+-no_spread_finalize
 -resource_exit_after_time
 -resource_leaks
 -resource_system_verbose
 -start_resource_profiling
-../public/ordered_constructor.h
+..
 ../public/tier0/tslist.h
-../public/tier0/utlblockmemory.h
-../public/tier0/utllinkedlist.h
+../public/tier0/utlmemory.h
 ../public/tier0/utlreferencetracker.h
 ../public/tier0/utlsortvector.h
 ../public/tier0/utltshash.h
+0 0 0 0
+0 0 0 255
 10ConCommand
 10IAppSystem
 12CThreadEvent
+13ConCommandRef
 14CBaseAppSystemI15IResourceSystemE
-14ConCommandBase
 15CResourceSystem
 15CTier0AppSystemI15IResourceSystemLx0EE
 15CTier1AppSystemI15IResourceSystemLx0EE
 15CTier2AppSystemI15IResourceSystemLx0EE
 15IResourceSystem
-16CDefaultAccessor
 16CLoadingResource
 16CNullTypeManager
 16ICommandCallback
 17CVDataTypeManager
 17IVDataTypeManager
-18CPlaceholderConVar
 19CSchemaRegistration
 20CPostConnectCallback
 20IResourceHandleUtils
@@ -94,21 +97,13 @@ $ORIGIN
 21IVConCommDataReceived
 22CSchemaInstallCallback
 22CStreamingResourceData
-22CTier2ShutdownCallback
 23CKV3ResourceBlockHelper
 23CKV3ResourceTypeManagerILy418564367478EE
 23CKV3ResourceTypeManagerILy500152235126EE
 23CResourceSystemProfiler
-23IConCommandBaseAccessor
 23IResourceSystemProfiler
 25CAsyncResourceDataRequest
 25CConCommandMemberAccessorI23CResourceSystemProfilerE
-25CKV3TransferDefaultHelperI14TestResource_tE
-25CKV3TransferDefaultHelperI22ManifestTestResource_tE
-25CKV3TransferDefaultHelperI31CExampleSchemaVData_MonomorphicE
-25CKV3TransferDefaultHelperI35CExampleSchemaVData_PolymorphicBaseE
-25CKV3TransferDefaultHelperI39CExampleSchemaVData_PolymorphicDerivedAE
-25CKV3TransferDefaultHelperI39CExampleSchemaVData_PolymorphicDerivedBE
 25CResourceDeallocatorUtils
 25IAsyncProcessedDataResult
 25IAsyncResourceDataRequest
@@ -135,8 +130,6 @@ $ORIGIN
 38CDefaultKV3TransferResourceTypeManagerILy500152235126EE
 39CExampleSchemaVData_PolymorphicDerivedA
 39CExampleSchemaVData_PolymorphicDerivedB
-6ConVar
-7IConVar
 <
 < %d >
 <%s : %u>
@@ -144,15 +137,11 @@ $ORIGIN
 <INVALID>
 <No schemasystem>
 <invalid>
-<no deferred ref found>
 <no failure reason set>
-<null>
-<unconnected>
+<undefined>
 <unknown: %d>
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!
-Access of unconnected ConVarRef
-Access of unconnected SplitScreenConVarRef
-AllocInternal
+AlignedByteArray not properly aligned
 An attempt was made to create a resource manifest with debug name "%s" while the resource system was shutting down.
 AnimGraphEditorUtils001
 AnimationSystemUtils_001
@@ -173,7 +162,6 @@ BinaryProperties_GetValue
 Blocking Manifest Load
 BlockingLoadResourceByNameIntoJustInTimeManifest
 CAnimVariant
-CAsyncResourceDataRequest
 CBufferString::AppendConcat(int, char const* const*, int const*, bool)
 CBufferString::AppendFormat(char const*, ...)
 CBufferString::AppendFormatV(char const*, __va_list_tag*)
@@ -201,9 +189,8 @@ CBufferString::ShortenPath(bool)
 CBufferString::StripExtension()
 CBufferString::StripTrailingSlash()
 CBufferString::ToLowerFast(int)
-CCallStackCapture::CCallStackCapture(int (*)(void**, int, int), unsigned int, unsigned int)
+CCallStackCapture::CCallStackCapture(int (*)(unsigned long long, void**, int, int), unsigned int, unsigned int)
 CColorGradient
-CCommand::Tokenize: Encountered command which overflows the argument buffer.. Clamped!
 CCommand::Tokenize: Encountered command which overflows the tokenizer buffer.. Skipping!
 CEntityIndex
 CExampleSchemaVData_Monomorphic
@@ -212,12 +199,14 @@ CExampleSchemaVData_PolymorphicDerivedA
 CExampleSchemaVData_PolymorphicDerivedB
 CMemAllocSystemInitialize
 CMotionTransform
-COLORCORRECTION_VERSION_1
 CONTENT
 CONTENTROOT
+CPanoramaImageName
 CPiecewiseCurve
 CPlayerSlot
 CRC32_ProcessBuffer
+CRawAllocator::Alloc(RawAllocatorType_t, unsigned long, unsigned long*)
+CRawAllocator::Free(RawAllocatorType_t, void*, unsigned long)
 CResourceArray
 CResourceName
 CResourceNameTyped
@@ -231,14 +220,13 @@ CResourceSystem::FindOrCreateProceduralResource: Passed in an empty name for a p
 CResourceSystem::ForceSynchronizationAndBlockUntilManifestLoaded blocked for %.3f ms on %s [%s]
 CSoundEventName
 CSplitScreenSlot
-CSplitString::Construct(char const*, char const**, int)
+CSplitString::Construct(char const*, char const**, int, bool)
 CStableSymbolTable::GetId(char const*, bool*)
 CStackTop_Base::CStackTop_Base()
 CStackTop_Base::~CStackTop_Base()
 CStrongHandle
 CStrongHandleCopyable
 CStrongHandleVoid
-CStrongHandleVolatile
 CTSQueue corruption
 CThread::CThread()
 CThread::Init()
@@ -251,9 +239,9 @@ CThread::WaitForCreateComplete(CThreadEvent*)
 CThread::~CThread()
 CThreadEvent::CThreadEvent(bool)
 CThreadEvent::Set()
-CThreadFastMutex::Lock(char const*, int, unsigned long long, unsigned int) volatile
 CThreadSemaphore::CThreadSemaphore(int, int, char const*, bool)
 CThreadSemaphore::Release(int, int*)
+CThreadSpinMutex::Lock(char const*, int, unsigned long long, unsigned int) volatile
 CThreadSpinRWLock::LockForRead(char const*, int)
 CThreadSpinRWLock::SpinLockForWrite(char const*, int, unsigned long long)
 CThreadSpinRWLock::UnlockRead(char const*, int)
@@ -277,8 +265,8 @@ CUtlBuffer::PutString(char const*)
 CUtlBuffer::SeekPut(CUtlBuffer::SeekType_t, int)
 CUtlLinkedList overflow! (exhausted index range)
 CUtlLinkedList overflow! (exhausted memory allocator)
-CUtlMemoryBlockAllocator::AllocCopy(char const*, unsigned int)
-CUtlMemoryBlockAllocator::CUtlMemoryBlockAllocator(int, unsigned int)
+CUtlMemoryBlockAllocator::AllocAndCopy(char const*, unsigned int)
+CUtlMemoryBlockAllocator::CUtlMemoryBlockAllocator(int, unsigned int, RawAllocatorType_t)
 CUtlMemoryBlockAllocator::~CUtlMemoryBlockAllocator()
 CUtlMemoryPoolBase::Alloc()
 CUtlMemoryPoolBase::CUtlMemoryPoolBase(int, int, int, MemoryPoolGrowType_t, char const*, MemAllocAttribute_t)
@@ -293,13 +281,14 @@ CUtlString::Append(char const*)
 CUtlString::CUtlString(CBufferString const&)
 CUtlString::Format(char const*, ...)
 CUtlString::FreeMemoryBlock()
+CUtlString::IsEqual_FastCaseInsensitive(char const*) const
 CUtlString::Set(char const*)
 CUtlString::SetDirect(char const*, int)
 CUtlString::operator+(char const*) const
 CUtlString::operator=(CBufferString const&)
 CUtlSymbol
 CUtlSymbolLarge
-CUtlSymbolTable::AddString(char const*)
+CUtlSymbolTable::AddString(char const*, bool*)
 CUtlSymbolTable::CUtlSymbolTable(int, int, bool)
 CUtlSymbolTable::Find(char const*) const
 CUtlSymbolTable::String(CUtlSymbol) const
@@ -312,30 +301,24 @@ CVariableBitStringBase::Resize(int)
 CWeakHandle
 CWeakHandleVoid
 CXXABI_1.3
+CXXABI_1.3.9
 Cannot allocate abstract class
 Cannot construct abstract class
 Cannot copy abstract class
 Cannot deallocate abstract class
 Cannot deduce for class
 Cannot destruct abstract class
-ChangeSize
 CharacterSetBuild
 Color
 CommandLine
-ConMsg(char const*, ...)
-ConVar(%s) defined with infinite float value (%s)
-ConVarRef %s doesn't point to an existing ConVar
-ConfigurationSystem_001
 ConnectInterfaceSingletons
 Couldn't load KV3 for resource: %s
 CreateInterface
 DISABLED
-DebugTextureInfo001
 DegreeEuler
 DeleteResource
 Deleting empty loading resource
 DemoUpconverterVersion001
-DotaCardGameClient_001
 ENABLED
 ERROR: %s resource %016llX is the wrong resource type!
 ERROR: %s resource %016llX requested but not resident. (Missing from from a manifest?)
@@ -354,14 +337,13 @@ EarlyInit_Tier0
 EconItemToolModel_001
 Encountered nonexistent %s: %016llX (file "%s")
 EngineServiceMgr001
+EnsureCapacity
 Error initializing resource manager for resource type "%lld"!
 Error loading resource "%s" (Invalid header version: %d != %d)
 Error loading resource file "%s" (Error: %s)
 Error loading resource manifest "%s" (No DATA block)
-EventSystem001
 FATAL ERROR: %s resource '%s' (%016llX) is the wrong resource type! (This is likely caused by a hash collision between the strings '%s' and '%s')
 FATAL ERROR: unable to register all schema data: %s
-FCVAR_NEVER_AS_STRING
 FIELD_AI_SCHEDULE_BITS
 FIELD_AMMO_INDEX
 FIELD_ATTACHMENT_HANDLE
@@ -390,6 +372,7 @@ FIELD_HRENDERTEXTURE
 FIELD_HSCRIPT
 FIELD_HSCRIPT_LIGHTBINDING
 FIELD_HSCRIPT_NEW_INSTANCE
+FIELD_HVDATA
 FIELD_INPUT
 FIELD_INT16
 FIELD_INT32
@@ -411,9 +394,11 @@ FIELD_QUATERNION_WORLDSPACE
 FIELD_RESOURCE
 FIELD_ROTATION_VECTOR
 FIELD_ROTATION_VECTOR_WORLDSPACE
+FIELD_SCALE32
 FIELD_SHIM
 FIELD_SOUNDNAME
 FIELD_STRING
+FIELD_STRING_AND_TOKEN
 FIELD_TICK
 FIELD_TIME
 FIELD_TYPECOUNT
@@ -438,9 +423,14 @@ FIELD_VMATRIX_WORLDSPACE
 FIELD_VOID
 Failed to allocate an instance of a class
 Failed to load resource "%s" and -exit_on_resource_load_failure was set and it's not in badresources_whitelist.txt
+Failed to map from %s to content-path
+Failed to map from %s to game-path
 Failed to save unsupported class
 Failed to transfer KV3 data for resource '%s' - %s
 FileSystem
+Finalize queue Finalizing StartLoading(%s) @%.2f
+Finalize queue completed processed %d, %s, elapsed time %.2fMSEC %s @%.2f
+Finalize queue continue processed %d of %d, elapsed time %.2fMSEC %s @%.2f
 Find
 FindLessOrEqual
 FindOrRegisterResourceByName
@@ -450,8 +440,8 @@ FlattenedSerializersVersion001
 FontManager_001
 ForceSynchronizationAndBlockUntilManifestLoaded
 Forgot to remove resource type manager for type %s!
-GAME
-GCC: (Ubuntu 5.4.0-7.really.6+steamrt1.1+srt1) 5.4.1 20160803
+GAMEROOT
+GCC: (SteamRT 5.4.0-7.really.6+steamrt1.2+srt2) 5.4.1 20160803
 GLIBC_2.14
 GLIBC_2.2.5
 GLIBC_2.3.4
@@ -469,15 +459,16 @@ GetResourceManifestCount
 GetResourceManifests
 GetResourceStatus( resourceName ) == RESOURCE_STATUS_RESIDENT
 Gradient()
+Grow
 HammerMapLoader001
 HelpSystem_001
-HookUpConfigValue
 HostStateMgr001
-IQuickTime001
 Idle (ResourceSystemSleep)
 InfoForResourceTypeCAnimData
 InfoForResourceTypeCAnimationGroup
 InfoForResourceTypeCChoreoSceneFileData
+InfoForResourceTypeCCompositeMaterialKit
+InfoForResourceTypeCDACGameDefsData
 InfoForResourceTypeCDOTAPatchNotesList
 InfoForResourceTypeCDotaItemDefinitionResource
 InfoForResourceTypeCEntityLump
@@ -487,11 +478,12 @@ InfoForResourceTypeCPanoramaDynamicImages
 InfoForResourceTypeCPanoramaLayout
 InfoForResourceTypeCPanoramaScript
 InfoForResourceTypeCPanoramaStyle
+InfoForResourceTypeCPanoramaTypeScript
 InfoForResourceTypeCPhysAggregateData
 InfoForResourceTypeCPostProcessingResource
 InfoForResourceTypeCRenderMesh
-InfoForResourceTypeCResourceManifestInternal
 InfoForResourceTypeCSequenceGroupData
+InfoForResourceTypeCSmartProp
 InfoForResourceTypeCTextureBase
 InfoForResourceTypeCVDataResource
 InfoForResourceTypeCVMixListResource
@@ -505,7 +497,6 @@ InfoForResourceTypeIMaterial2
 InfoForResourceTypeIParticleSnapshot
 InfoForResourceTypeIParticleSystemDefinition
 InfoForResourceTypeIVectorGraphic
-InfoForResourceTypeManifestTestResource_t
 InfoForResourceTypeProceduralTestResource_t
 InfoForResourceTypeTestResource_t
 InfoForResourceTypeVSound_t
@@ -514,17 +505,14 @@ InputService_001
 InputStackSystemVersion001
 InputSystemVersion001
 Insert
-InstallChangeCallback called with NULL callback, ignoring!!!
-InstallChangeCallback ignoring duplicate change callback!!!
 InstallResourceTypeManager
 InstallSchemaBindings
 InstallTypeManager
 Intentionally vague touch behavior for %p
-Invalid access of deferred ConVarRef for '%s'
+Invalid Path
 IsResourceManifestGroupKnown: Manifest group name is empty or null
-KV3 save transfer failed: %s
 KeyValueCache001
-KeyValues::GetInt(char const*, int)
+KeyValues::GetInt(char const*, int) const
 LOG_GENERAL
 Leaked reference to ERROR resource for type %s!
 Leaked resource: Refcount %s for %s%s resource "%s" (%016llX).  This may result in a crash.
@@ -536,7 +524,6 @@ Loading Resource %016llX (file "%s") is waiting for its file to load.
 Loading Resource %016llX (file "%s") is waiting for streaming bits to load.
 Localize_001
 Log time spent in Allocate for all resource types
-LoggingSystem_GetChannel
 LoggingSystem_GetChannelVerbosity
 LoggingSystem_IsChannelEnabled
 LoggingSystem_Log
@@ -550,15 +537,19 @@ MATCHFRAMEWORK_001
 MGetKV3ClassDefaults
 MIsBoxedIntegerType
 MKV3TransferName
+MOD
 MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MPropertyCustomEditor
 MPropertyCustomFGDType
 MResourceTypeForInfoType
+MULTI FRAME
 ManifestTestResource_t
 MapListService_001
 MaterialUtils_001
+Max time to spend finalizing resources per frame in miliseconds.
 MaybeExitBecauseOfResourceLoadFailure
+MemAlloc_StrDupFunc
 MeshSystem001
 MeshUtils001
 ModelDocUtils001
@@ -569,7 +560,6 @@ NetworkMessagesVersion001
 NetworkP2PService_001
 NetworkServerService_001
 NetworkService_001
-NetworkSystemUtilsVersion001
 NetworkSystemVersion001
 No DATA block for resource
 Not safe to 'new' this class due to alignment requirements
@@ -578,25 +568,29 @@ PanoramaTextServices001
 PanoramaUIClient001
 PanoramaUIEngine001
 ParticleSystemMgr003
+Path Overflow, must be less than 4096 characters.
 PhysicsBuilderMgr001
 Plat_DebugPrint
 Plat_ExitProcess
+Plat_FatalErrorFunc
 Plat_FloatTime
 Plat_GetEnv
 Plat_GetModuleFilename
 Plat_IsInDebugSession
 Plat_MicroSecTickDiff
+Plat_NonFatalErrorFunc
 Plat_RelativeTicks
 Plat_ShouldCollectMiniDumpsForFatalErrors
+Plat_TickDiffMilliSec
 Plat_TickDiffMilliSecF
+Plat_TickDiffSecF
 Plat_USTime
 PostProcessingSystem_001
 PropertyEditorSystem_001
 Push
 QAngle
 Quaternion
-QuaternionAligned
-QueuedLoaderVersion001
+QuaternionStorage
 RESOURCE_MANIFEST_HANDLE_INVALID
 RESOURCE_TYPE_NONE
 RESOURCE_TYPE_RESOURCE_MANIFEST
@@ -609,15 +603,14 @@ RKS_REQUIRE_EXACT_PAIRINGS
 RSProfilerTool
 RadianEuler
 Re-entrant calls to CResourceSystem::PreShutdown()
-RegisterAllModuleData
-RegisterConfigValue: Unknown error constructing config value "%s"!
+RegisterConCommand: Unknown error registering con command "%s"!
+RegisterConVar: Unknown error registering convar "%s"!
 RegisterStringToken
 Release
 RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
 RenderService_001
-RenderSystemSurface001
 RenderUtils_001
 ReportClassError
 Reporting references for leak tracker error: "%s"
@@ -638,6 +631,7 @@ ResourceSystem/SpewBlockingLoads
 ResourceSystem013
 ResourceSystemWaitingForFutureWork
 RotationVector
+SINGLE FRAME
 SceneSystem_002
 SceneUtils_001
 SchemaSystem_001
@@ -645,7 +639,6 @@ SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
 SerializedEntitiesVersion001
 SeriousWarning
-ServerUploadGameStats001
 Sleeping
 SoundGuid_t
 SoundOpSystem001
@@ -663,7 +656,10 @@ Source2GameClients001
 Source2GameEntities001
 Source2Host001
 Source2Server001
-Source2ServerSerializers002
+Source2V8System001
+St11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE
+St16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE
+St19_Sp_make_shared_tag
 Stack depth limit hit (%d)
 StatsService_001
 SteamAudio001
@@ -674,6 +670,8 @@ TestFormatD
 TestFormatE
 TestScriptMgr001
 TextLayout_001
+The filename may only contain lower case alphanumeric characters, dashes, and underscores.
+This convar is being accessed prior to ConVar_Register being called
 ThreadGetCurrentId
 ThreadGetCurrentProcessId
 ThreadNanoSleep
@@ -688,31 +686,23 @@ Tried to install a placeholder resource manager for an existing resource type "%
 Tried to install two resource managers for the same resource type "%lld"!
 Tried to load resource reference '%s' from a value without a resource reference flag.
 Tried to release UGC that hasn't been referenced: %lld
+Unknown Path Class
 Unrecognized resource leak tracking parameter: "%s", available configuration aliases:
 UnregisterNamedManifest called, but we are not shutting down!!!
 Unsupported version %d for resource '%s' (Expected %d)
 Update_Internal
 Usage: resource_leaks <resource_name>
 Usage: resource_repeated_reload <count> <resource_name>
-UserInfoChangeService_001
 UtlMemory_Alloc
 UtlMemory_CalcNewAllocationCount
 VApplication001
 VAsyncFileSystem2_001
 VAvi001
-VBAllocTracker001
 VBik001
 VConComm001
-VDebugService_001
 VEngineCvar007
 VFileSystem017
-VGUI_Input005
-VGUI_Panel010
-VGUI_Scheme010
-VGUI_Surface032
-VGUI_System010
-VGUI_ivgui008
-VMDLLIB001
+VGAME
 VMaterialSystem2_001
 VMatrix
 VMediaFoundation001
@@ -734,7 +724,6 @@ V_PathContainsPath
 V_PrettifyMem
 V_RemoveDotSlashes
 V_UnqualifiedFileName
-V_atof
 V_atofloat32
 V_atofloat64
 V_atoi
@@ -750,6 +739,10 @@ V_stristr_fast(char const*, char const*)
 V_strnlen
 V_uuid_t
 V_vsnprintf
+Valid Content Absolute Path
+Valid External Path
+Valid Game Absolute Path
+Valid Relative Path
 Vector2D
 Vector4D
 VectorAligned
@@ -762,17 +755,15 @@ WARNING: Resource system exiting at %.2f seconds due to '-resource_exit_after_ti
 WARNING: Trying to deallocate a resource after the type manager was uninstalled! ("%s")
 WARNING: Trying to deallocate a resource with no associated resource type! ("%s")
 WARNING: resource '%s' is an unrecognized resource type!
-Warning:  %s = '%s' is infinite, clamping value.
 WorldRendererMgr001
 [% 5ims alloc] [% 5ims async] [% 5ims final] [% 5i / %10s] %s
 [% 5ims alloc] [% 5ims async] [% 5ims final] [% 5i / %10s] TOTAL
 [% 5ims cb] [% 5ims async cb] [% 5i / %10s] %s
 [% 5ims cb] [% 5ims async cb] [% 5i / %10s] TOTAL
-[%.3f server clamped to %.3f]
 [%u]
 []
 [refcount % 4d]
-_GetCallStack
+\*
 _ITM_deregisterTMCloneTable
 _ITM_registerTMCloneTable
 _Jv_RegisterClasses
@@ -795,15 +786,18 @@ __gmon_start__
 __memcpy_chk
 __pthread_key_create
 __stack_chk_fail
+__temp_unserialization_member__
+_addons
 _base
 _c
+_class
 _edata
+_editor
 _end
 _fini
 _multibase
 _not_pickable
 anonymous
-archive
 badresources_whitelist.txt
 binary
 binary_auto
@@ -812,11 +806,9 @@ binary_lz4
 binary_zstd
 bool
 char
-cheat
-client
-clientcmd_can_execute
+color
 command
-configvalue.cpp
+content
 curve
 default
 disable_group_clearing
@@ -833,6 +825,8 @@ g_VProfCurrentProfile
 g_bUpdateStringTokenDatabase
 g_pMemAlloc
 game
+gameinfo.gi
+gameinfo.txt
 generic
 generic_data_type
 help
@@ -844,45 +838,46 @@ libresourcesystem.so
 libstdc++.so.6
 libtier0.so
 loadingresource.cpp
+m_Value
 m_child
 m_hResource->m_nLoadingResource != LOADING_RESOURCE_INDEX_INVALID
 m_hResource->m_nStreamingResource != STREAMING_RESOURCE_DATA_INDEX_INVALID
-m_nBoxedTypeSafeInt
 m_nDerivedA
 m_nDerivedB
 m_nExample1
 m_nExample2
+m_nPackedMax
+m_nPackedMin
 m_name
 m_vMaxBounds
 m_vMinBounds
 mathlib_extended
 matrix3x4_t
 matrix3x4a_t
-max. %f
 mdl
 memcmp
 memcpy
 memmove
 memset
-min. %f
 nTries < 10000000
 nogroup
-notconnected
-notify
 operator delete(void*)
+operator delete(void*, unsigned long)
 operator delete[](void*)
 operator new(unsigned long)
 operator new(unsigned long, std::nothrow_t const&)
 operator new[](unsigned long)
 operator new[](unsigned long, std::nothrow_t const&)
 panorama
+panorama_image
+profilehelpers.cpp
 pthread_mutex_destroy
 pthread_mutex_init
 pthread_mutex_lock
 pthread_mutex_unlock
 pthread_mutexattr_init
 pthread_mutexattr_settype
-replicated
+qangle
 require_exact_pairings
 resource
 resource_leaks %s
@@ -900,37 +895,44 @@ resource_reset_allocate_timing
 resourcefile
 resourcesystem
 resourcesystem.cpp
-rs_dump_stats
+resourcesystem_multiframe_finalize_time_msec
 rs_dump_stats - Dump resourcesystem stats.
-schemabindings.cpp
 schemaclassinfo.cpp
 schemasystem
 schematype.cpp
-server_can_execute
+sdktools/bin/vproj.exe
+sdktools/bin/vprojUI.exe
 set_profile_mode
-singleplayer
 singletons.cpp
 soundevent
-ss_added
+src
+src/public/tier0/platform.h
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_destroy()
 std::_Sp_counted_ptr<decltype(nullptr), (__gnu_cxx::_Lock_policy)2>::_M_dispose()
 strchr
 strcmp
-strcpy
 streamingresourcedata.cpp
+string
 strlen
 subclass
 text
-tier0
 true
 typeinfo for CThread
 typeinfo for CThreadSyncObject
+typeinfo for std::_Mutex_base<(__gnu_cxx::_Lock_policy)2>
+typeinfo for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>
+typeinfo for std::_Sp_make_shared_tag
+typeinfo name for std::_Mutex_base<(__gnu_cxx::_Lock_policy)2>
+typeinfo name for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>
+typeinfo name for std::_Sp_make_shared_tag
 ugc:
 uint16
 uint32
 uint64
 uint8
-user
+vector2
+vector3
+vector4
 void
 vrgrp
 vtable for __cxxabiv1::__class_type_info
@@ -938,5 +940,6 @@ vtable for __cxxabiv1::__si_class_type_info
 vtable for __cxxabiv1::__vmi_class_type_info
 w
 z
+zD
 ~CLoadingResource
 ~CStreamingResourceData

@@ -174,8 +174,7 @@
 
 "game_player_connecting"	"Spelare %s1 ansluter sig"
 "game_player_joined_game"	"Spelare %s1 har gått med i spelet"
-"game_player_left_game"		"Spelare %s1 har lämnat spelet (%s2)" [$WIN32]
-"game_player_left_game"		"Spelare %s1 har lämnat spelet" [$X360]
+"game_player_left_game"		"Spelare %s1 har lämnat spelet (%s2)"
 "game_player_joined_team"	"Spelare %s1 har gått med i lag %s2"
 "game_player_joined_autoteam" "Spelare %s1 blev automatiskt tilldelad till lag %s2"
 "game_player_changed_name"	"Spelare %s1 har bytt namn till %s2"
@@ -443,6 +442,8 @@
 
 "Engine_UnsupportedWindowsTitle"	"Windows-version utan stöd"
 "Engine_UnsupportedWindowsBody"		"Denna version av Windows stöds ej. Uppgradera till en nyare version."
+"Engine_Deprecated32BitTitle"		"Varning: inaktuell version"
+"Engine_Deprecated32BitBody"		"32-bitarsversionen är inaktuell och kommer att tas bort. Använd 64-bitarsversionen."
 
 "Native_VersionLabel"				"VERSION: "
 "Native_ContactingServer"			"Kontaktar server"
@@ -587,6 +588,7 @@
 "LOC_Date_Format_Day_Month_Year_Numeric"								"%s1/%s2/%s3"					// 18/4/2014
 "LOC_Date_Format_Day_Month_Numeric"										"%s1/%s2"						// 18/4
 "LOC_Date_Format_DayOfWeek_Month_Day_Year"								"%s1, %s3 %s2, %s4"				// Wednesday, April 18, 2014
+"LOC_Date_Format_Month_Day_Year"										"%s2 %s1 %s3"					// April 18, 2014
 "LOC_Date_Format_Day_Month"												"%s1 %s2"						// 18 April
 "LOC_Date_Format_Day_Month_Year"										"%s1 %s2 %s3"					// 18 April 2014
 "LOC_Date_Format_Day_Month_Year_Hour_Minute_24"							"%s1 %s2 %s3 kl. %s4:%s5"			// 18 April 2014, 17:30

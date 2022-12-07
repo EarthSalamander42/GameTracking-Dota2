@@ -174,8 +174,7 @@
 
 "game_player_connecting"	"%s1 játékos csatlakozik"
 "game_player_joined_game"	"%s1 belépett a játékba"
-"game_player_left_game"		"%s1 kilépett a játékból (%s2)" [$WIN32]
-"game_player_left_game"		"%s1 kilépett a játékból" [$X360]
+"game_player_left_game"		"%s1 kilépett a játékból (%s2)"
 "game_player_joined_team"	"%s1 belépett a %s2 csapatba"
 "game_player_joined_autoteam" "%s1 a %s2 csapatba került"
 "game_player_changed_name"	"%s1 neve mostantól %s2."
@@ -443,6 +442,8 @@
 
 "Engine_UnsupportedWindowsTitle"	"Nem támogatott Windows verzió"
 "Engine_UnsupportedWindowsBody"		"A Windows ezen verziója nem támogatott, kérjük frissíts újabb verzióra."
+"Engine_Deprecated32BitTitle"		"Elavulási figyelmeztetés"
+"Engine_Deprecated32BitBody"		"A 32 bites verzió elavult, és el lesz távolítva. Kérjük, használd a 64 bites verziót."
 
 "Native_VersionLabel"				"VERZIÓ: "
 "Native_ContactingServer"			"Kapcsolódás a szerverhez"
@@ -587,6 +588,7 @@
 "LOC_Date_Format_Day_Month_Year_Numeric"								"%s3. %s2. %s1."					// 18/4/2014
 "LOC_Date_Format_Day_Month_Numeric"										"%s2. %s1."						// 18/4
 "LOC_Date_Format_DayOfWeek_Month_Day_Year"								"%s4. %s2 %s3., %s1"				// Wednesday, April 18, 2014
+"LOC_Date_Format_Month_Day_Year"										"%s3. %s1 %s2."					// April 18, 2014
 "LOC_Date_Format_Day_Month"												"%s2 %s1."						// 18 April
 "LOC_Date_Format_Day_Month_Year"										"%s3. %s2 %s1."					// 18 April 2014
 "LOC_Date_Format_Day_Month_Year_Hour_Minute_24"							"%s3. %s2 %s1., %s4:%s5"			// 18 April 2014, 17:30
@@ -627,7 +629,7 @@
 "LOC_Duration_Second"													"másodperc"
 "LOC_Number_NegativeSign"												"-"
 "LOC_Number_PositiveSign"												"+"
-"LOC_Number_Grouping"													" "
+"LOC_Number_Grouping"													" "
 "LOC_Number_DecimalPoint"												","
 "LOC_Number_InfinityShort"												"∞"
 // Ordinals can have a prefix or suffix. For either one the number modulo 100

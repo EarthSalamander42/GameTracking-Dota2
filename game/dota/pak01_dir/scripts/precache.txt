@@ -110,6 +110,7 @@
 	"particle"	"particles/units/heroes/hero_bounty_hunter/bounty_hunter_jinada.vpcf"
 	"particle" 	"particles/econ/events/ti10/aghanim_aura_ti10/agh_aura_pre_ti10.vpcf"
 	"particle" 	"particles/prime/tip_player_shards_lvl2.vpcf"
+	"particle"	"particles/units/heroes/hero_riki/riki_backstab.vpcf"
 
 	"model_folder" "models/heroes/pedestal"
 
@@ -143,6 +144,7 @@
 	"model"   "models/props_gameplay/pig.vmdl"
 	"model"   "models/props_gameplay/pumpkin_bucket.vmdl"
 	"model"   "models/props_gameplay/quelling_blade.vmdl"
+	"model"	  "models/gameplay/attrib_tome_xp.vmdl"
 	"model"   "models/props_gameplay/recipe.vmdl"
 	"model"   "models/props_gameplay/red_box.vmdl"
 	"model"   "models/props_gameplay/rune_arcane.vmdl"

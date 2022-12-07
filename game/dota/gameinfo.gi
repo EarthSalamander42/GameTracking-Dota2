@@ -80,8 +80,6 @@
 	{
 		"HasModAppSystems" "1"
 		"Capable64Bit" "1"
-		"UsesVGui" "0"
-		"UsesPanorama" "1"
 		"PanoramaUIClientFromClient" "1" // IPanoramaUIClient is implemented by client.dll
 		"HasGameUI" "1" // dota uses gameui
 		"GameUIFromClient" "1"  // AND that gameui comes from client.dll
@@ -90,7 +88,6 @@
 		"UsesBink" "0"
         "MaxNetworkableEntities" "10000"
         "MaxNonNetworkableEntities" "10000"
-        "DefaultDXVersion" "11"
         // The shader binary cache on Linux can be over 100MB so
         // we have to allow very large allocations.
 		"AllocWarnMB_linuxsteamrt64" "200"
@@ -101,8 +98,6 @@
 		"AllocWarnMB_osx64" "200"
 		"AllocWarnMB_pc64" "200"
 		"AllocWarnMB" "100"
-		// There are some known large virtual reservations, such as the SBH, which
-		// bypass this limit so we can be fairly conservative.
 		"ReserveWarnMB" "64"
 
 		"DefaultRenderSystem"					"-vulkan" [ $LINUX || $OSX ] // macOS/Linux default to Vulkan
@@ -134,7 +129,7 @@
 	SceneSystem
 	{
 		"SunLightManagerCount" "0"
-		"TransformTextureRowCount" "256"
+		"TransformTextureRowCount" "1024"
 		"CMTAtlasWidth" "1024"
 		"CMTAtlasHeight" "512"
 		"CMTAtlasChunkSize" "128"
@@ -142,11 +137,10 @@
 		"MaxAutoPartitions" "8"
 		"LayerBatchThreshold" "512" [ $OSX && $CPU_EMULATED ] // Apple M1 - increase sc_layer_batch_threshold from 128 -> 512. Reduces TBDR memory bandwidth.
 	}
-	
+
 	SoundSystem
 	{
 		"SteamAudioEnabled" "0"
-		"DefaultWindowsXAudio" "1"
 	}
 
 	ToolsEnvironment
@@ -189,13 +183,13 @@
 
 	ModelCompile
 	{
+		"AllowLegacyModelFormat"	"1" // modeldoc not required (yet)
 		"UseShadowFastPathHeuristic"	"1"
 	}
 	
 	ModelDoc
 	{
 		"models_gamedata"			"models_gamedata.fgd"
-		"export_modeldoc"			"0"
 		"features"					"econitems;editorconfig"
 	}
 
@@ -211,6 +205,8 @@
 			"gridnav"	"1"	// Dota generates its grid navigation data by default
 		}
 		"DotaTileGrid"	"1"
+
+		"DeprecatedBehaviorVersionsAllowed"	"1"
 	}
 
 	RenderPipelineAliases
@@ -241,5 +237,19 @@
 		"VulkanUseSecondaryCommandBuffers"	"1" // Use secondary command buffers for more efficiency on tiled based renderers. All platforms to limit configurations.
 		"VulkanSteamShaderCache"			"1"
 		"OpenGLForceSM30"					"1"
+		"LowLatency"						"1"
+	}
+
+	vdata_editor
+	{
+		"fgd"				"vdata_dota.fgd"
+	}
+
+	ConVars
+	{
+		"r_size_cull_threshold"		"0.4"
+		"cl_interp"					"0.016"
+		"cl_predict"				"0"
 	}
 }
+

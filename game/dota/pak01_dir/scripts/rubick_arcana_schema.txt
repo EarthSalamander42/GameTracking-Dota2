@@ -4,7 +4,7 @@
 	// game will set an auto_style criteria	called rubick_arcana_auto_style
 	// to indicate the current tier and subgroup. Tens digit in tier, ones digit is subgroup.
 	// Both numbers are 1-based. So the first subgroup of tier 1 is 11
-	// These autostyle criteria must then be looked at in rubick_arcana_back.item
+	// These autostyle criteria must then be looked at in the_magus_cypher.item
 
 	"default_cape_color_1"	"0 0 255"
 	"default_cape_color_2"	"0 0 0"
@@ -867,6 +867,13 @@
 			"cape_fx_color"	"179 200 44"
 			"cape_fx_type"	"default"
 		}
+		"marci"
+		{
+			"cape_color_1"	"36 55 124"
+			"cape_color_2"	"0 0 0"
+			"cape_fx_color"	"56 55 124"
+			"cape_fx_type"	"default"
+		}
 	}
 
 	"abilities"
@@ -877,6 +884,12 @@
 			"lina_laguna_blade"
 			{
 				"color_fx" "particles/units/heroes/hero_lina/lina_spell_laguna_blade.vpcf"
+			}
+			"marci_companion_run"
+			{
+				"color_fx" "particles/units/heroes/hero_marci/marci_rebound_charge_projectile.vpcf"
+				"color_fx" "particles/units/heroes/hero_marci/marci_rebound_bounce.vpcf"
+				"color_fx" "particles/units/heroes/hero_marci/marci_rebound_bounce_impact.vpcf"
 			}
 			"furion_wrath_of_nature"
 			{
@@ -1405,10 +1418,9 @@
 			{
 				"color_fx" "particles/units/heroes/hero_ursa/ursa_earthshock.vpcf"
 			}
-			"techies_remote_mines"
+			"techies_sticky_bomb"
 			{
-				"color_fx" "particles/units/heroes/hero_techies/techies_remote_mine_plant.vpcf"
-				"color_fx" "particles/units/heroes/hero_techies/techies_remote_mines_detonate.vpcf"
+				"color_fx" "particles/units/heroes/hero_techies/techies_remote_cart_explode_rubick.vpcf"
 			}
 			"dark_seer_wall_of_replica"
 			{

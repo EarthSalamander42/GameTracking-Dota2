@@ -236,7 +236,7 @@ function modifier_minor_ability_upgrades:GetModifierPercentageCooldown( params )
 	end
 
 	local flResult = 0.0
-	local CooldownUpgrades = hUpgrades[ szAbilityName ][ "cooldown" ]
+	local CooldownUpgrades = hUpgrades[ szAbilityName ][ "cooldown" ] or hUpgrades[ szAbilityName ][ "AbilityChargeRestoreTime" ]
 	if CooldownUpgrades ~= nil then
 		if self.bDirty == false and CooldownUpgrades[ "cached_result" ] ~= nil and CooldownUpgrades[ "cached_result" ][ MINOR_ABILITY_UPGRADE_OP_MUL ] ~= nil and CooldownUpgrades[ "cached_result" ][ MINOR_ABILITY_UPGRADE_OP_MUL ][ nSpecialLevel ] ~= nil then
 			return CooldownUpgrades[ "cached_result" ][ MINOR_ABILITY_UPGRADE_OP_MUL ][ nSpecialLevel ]
