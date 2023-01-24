@@ -3,7 +3,7 @@
 								
 																
 		%.*s
-		g_pMemAlloc
+		_V_strEndsWith
 	 The lexer was matching from line %d, offset %d, which
 	 This indicates a poorly specified lexer RULE
 	 or unterminated input element such as: "STRING["]
@@ -18,8 +18,14 @@
 	LcC 3
 	NAN encountered in element '%s' guid %s attribute '%s'!
 	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
-	g_bUpdateStringTokenDatabase
-	g_pThreadPool
+	_V_StrSubst
+	_V_StringAfterPrefix
+	_V_StringAfterPrefixCaseSensitive
+	_V_strncmp
+	_V_strncpy
+	_V_strnicmp_fast
+	g_Mathlib_GammaToLinearByteTable
+	g_VProfCurrentProfile
 	kE>fvw
  	()|-:<>=~?!
                           
@@ -190,6 +196,7 @@
  fA;J
  fB;L
  fnumber=%d ofs=0x%x sz=%d
+ i0uH
  new[]
  receiver regenerated
  t(<#t
@@ -223,6 +230,7 @@
 !t3HcO
 !type
 !type_raw
+"	g_bUpdateStringTokenDatabase
 " -ie 
 " -oe 
 "%s" 
@@ -589,6 +597,7 @@ $prefix_element$
 )|$`D
 )|$pD
 )|B?d!
+*	g_pMemAlloc
 * %d asset types:
 * %d assets in database, size per CAsset %u
 * %d mods (%d unrecognized):
@@ -692,6 +701,7 @@ $prefix_element$
 -unknown source-
 -unknown source-(
 -validatereadonlyassets
+.	g_pThreadPool
 ../../../../game
 ..om?
 .00cfg
@@ -1329,9 +1339,9 @@ $prefix_element$
 0 0 0
 0 0 0 0
 0 0 0 255
+0%;Xb
 0.0 to 1.0 value indicating the probability of this element being evaluated. Where a value of 0 means the element will never be evaluated and 1.0 means it will always be evaluated
 0123456789abcdefghijklmnopqrstuvwxyz
-0>47$
 0><[cZUg^>
 0A\_]
 0A\_^][
@@ -1393,8 +1403,9 @@ $prefix_element$
 220323000000Z
 220801000000Z
 220921000000Z
-221203185137Z0/
+230112002133Z0/
 241009235959Z0a1
+2D95@
 2DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA
 2DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA0
 2YA1I
@@ -1470,7 +1481,7 @@ $prefix_element$
 9)~.H
 9)~P3
 9*u@A
-95g2(
+95WB(
 99~CE
 9;~:L
 9>powf
@@ -3986,6 +3997,7 @@ H+E8L
 H33M3
 H9(t8
 H9(t|
+H9-cU3
 H93t	H
 H97u+A
 H98t$H
@@ -4538,9 +4550,10 @@ L$xE3
 L$xHc
 L$xfD
 L+|$8
+L9%B61
 L9't	H
-L95|`6
 L97t	H
+L9=!,-
 L9AHA
 L9Qhs
 L9`HA
@@ -5138,6 +5151,7 @@ Q5rHg,>
 QAngle
 QD$`H
 QD9Ql
+QL>uB
 QUOTED_STRING
 Qkkbal
 Quantization table 0x%02x was not defined
@@ -5189,7 +5203,6 @@ RGBA8888
 RGBA8888_LINEAR
 RGBX8888
 RH@8t$PL
-RSDSDz9j
 RST%d
 Radius Random
 Radius Scale
@@ -5282,7 +5295,6 @@ RtlUnwindEx
 RtlVirtualUnwind
 Runic
 S fff
-S&cc>
 S,;S(~9D
 S0Q0O
 S>$hkDh$h>[2
@@ -6232,13 +6244,6 @@ _TIFFSetupFieldInfo
 _TIFFVGetField
 _TIFFVSetField
 _V_MakeAbsolutePath
-_V_StrSubst
-_V_StringAfterPrefix
-_V_StringAfterPrefixCaseSensitive
-_V_strEndsWith
-_V_strncmp
-_V_strncpy
-_V_strnicmp_fast
 __based(
 __cdecl
 __clrcall
@@ -6261,6 +6266,7 @@ _buildcubemaps
 _cabs
 _class
 _dir.vpk
+_eS^0
 _editor
 _flt.vpk
 _gUT^
@@ -6454,6 +6460,7 @@ assettypes.txt
 at4<rt!<wt,L
 atan2
 ati_compress_wrapper.dll
+attached_prop_physics
 audioTarget
 autoTime
 auto_time
@@ -6705,6 +6712,7 @@ directory not empty
 disableShadows
 disableShadows2
 disable_readonly_assets
+disablemultiplegravitygrab
 disallowOverride
 displaySet
 displaySetElements
@@ -6910,8 +6918,6 @@ functionName
 future
 future already retrieved
 g_Cov_DetermineCompileState
-g_Mathlib_GammaToLinearByteTable
-g_VProfCurrentProfile
 g_pAsyncFileSystem2
 g_pToolsSplashScreen->showMessage
 ga_frame
@@ -6933,13 +6939,14 @@ gfffffffH
 ghMcoxE
 graph
 gravity
+gravity_grab_priority
+gravitygrabignoremassandsize
 green
 gridspacing
 group
 groupColor
 group_title
 h AVH
-h67]C}
 h>1my
 hA_A\_[
 hA_A]_[
@@ -7031,9 +7038,9 @@ isGroup
 isOrientation
 isPosition
 ispc_texcomp.dll
+item_item_crate
 iu+-,
 j'Vlk
-j>3Oi
 j>>A?1
 j?V()
 j?{$*
@@ -7578,7 +7585,8 @@ p WATAUAVAWH
 p WAVAWH
 p4lib
 p;>}	H
-p>`6$
+p> @$
+p>?@$
 p?4-byte data pool
 pA\^[
 pA]][
@@ -7696,6 +7704,9 @@ procedural
 process
 processors
 promise already satisfied
+prop_physics
+prop_physics_override
+prop_physics_respawnable
 propdataname
 protocol error
 protocol not supported
@@ -8068,6 +8079,7 @@ t'HcW
 t(fff
 t)IcV
 t*IcH
+t+KB	U[
 t,@8:t'H
 t,@8p t&H
 t-<\u
@@ -8512,10 +8524,12 @@ xHD;[0}BH
 xIA;Y0}CI
 xNA;y0}HI
 xPHc@HM
+xUGD#
 xWH;A
 x^j=|
 xcoord
 xdigit
+xewsY
 y(@8y@t
 y(@8y@t	
 y899u
@@ -8685,6 +8699,7 @@ zY;>u:m
 ~0Hcv(Lc3
 ~1LcY
 ~2LcQ
+~2NRF
 ~3fff
 ~8u!H
 ~FLcU

@@ -10,7 +10,7 @@
 			Radius 10000
 			Shadows 1
 		PointLight
-		g_pMemAlloc
+		_V_strEndsWith
 	!s99
 	#jT$
 	'%s' -> '%s' -> '%s'
@@ -68,11 +68,20 @@
 	TYPE_ENUM
 	VendorId / DeviceId:     0x%x / 0x%x
 	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
+	_V_StringAfterPrefix
+	_V_StringAfterPrefixCaseSensitive
+	_V_StripExtension
+	_V_StripLastDir
+	_V_strncat
+	_V_strncmp
+	_V_strncpy
+	_V_strnicmp_fast
 	enum_type
 	extension
 	f9~*t
-	g_bUpdateStringTokenDatabase
-	g_pThreadPool
+	g_Mathlib_GammaToLinearByteTable
+	g_TSPointerListNodes
+	g_VProfCurrentProfile
 	host_loss
 	json_name
 	kE>fvw
@@ -165,10 +174,12 @@
  (%lu = 0x%lx)
  (%u = 0x%x)
  (08@HPX`hpx
- (08@HPX`j
- (08@HPZ
+ (08@HPX`j 
+ (08@HPZ 
  (08@HR
  (08@J
+ (08@J 
+ (0: 
  (Hsl)
  (OFF):
  (hsv)
@@ -431,6 +442,7 @@
 !NETWORK_DISCONNECT_REMOTE_TIMEOUT
 !hn7!
 !host_framestarttime_std_deviation
+"	g_bUpdateStringTokenDatabase
 " -ie 
 " -oe 
 " ?timerEvent@QListView@@MEAAXPEAVQTimerEvent@@@Z
@@ -502,7 +514,6 @@
 ", found "
 ", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., ".
 ", which is not imported by "
-",3DpuEj
 ".  To use it here, please add the necessary import.
 ". If this is intended, set 'option allow_alias = true;' to the enum definition.
 ". This appears to be a value from a sibling type.
@@ -1136,44 +1147,39 @@ $schemasystem/schema_enable_defines.h
 (#GameUI_Disconnect_LoopLevelLoadActivate
 (#GameUI_Disconnect_RemoteProblem_BadCert
 (#GameUI_Disconnect_RemoteProblem_Timeout
-(%#Y6
+(%"$6
+(%- 6
 (%1%) - Status: Total %2 shots - Done: %3 In Progress: %4 - Estimated days: %5 Worked on: %6 Remaining work: %7
 (%1,%2)
-(%HZ6
-(%PX6
-(%Sc6
-(%S|5
-(%]g6
+(%3_6
+(%N$6
+(%X`6
+(%`^6
+(%ci6
 (%d animationsets skipped due to having locked transform controls)
 (%d,%d
 (%d,%d,%d
 (%d,%d,%d,%d
-(%jI6
-(%lP5
-(%t96
+(%mm6
+(%zO6
+(%|V5
 ((((((
 (*%s*), 
-(-1Z6
-(-9X6
-(-<c6
-(-]96
-(-j|5
-(-o<6
-(-sI6
-(-tg6
+(-7$6
+(-A`6
+(-I^6
+(-Li6
+(-m?6
 (0`hpx
 (0x)?[0-9a-fA-F]+
-(5"X6
-(5"c6
-(5F96
-(5Og6
-(5X<6
-(5j86
-(5u:6
-(5{,7
-(5|I6
-(9=?)*
-(=z,7
+(5*`6
+(52^6
+(52i6
+(5V?6
+(5_m6
+(5hB6
+(5z>6
+(9=O/*
 (?=.*
 (A;@,|
 (A;H,|
@@ -1233,7 +1239,6 @@ $schemasystem/schema_enable_defines.h
 (D$0f
 (D$0ff
 (D$0z	u
-(D$@A
 (D$@D
 (D$@H
 (D$@L
@@ -1579,6 +1584,7 @@ $schemasystem/schema_enable_defines.h
 )l$@H
 )l$@M;
 )l$PD
+)l$PE
 )l$PI
 )l$`A
 )l$`D
@@ -1692,6 +1698,7 @@ $schemasystem/schema_enable_defines.h
 )|B?d!
 )}p@8
 )}pMc
+*	g_pMemAlloc
 * ?timerEvent@QTextEdit@@MEAAXPEAVQTimerEvent@@@Z
 * Rehandling active codes
 * { font-size: 10px }
@@ -1732,7 +1739,6 @@ $schemasystem/schema_enable_defines.h
 *StO9>T
 *YA1D
 *YA1H
-*u2:/
 +	?buddy@QSortFilterProxyModel@@UEBA?AVQModelIndex@@AEBV2@@Z
 + ?timerEvent@QToolButton@@MEAAXPEAVQTimerEvent@@@Z
 +"?updateGeometries@QListView@@MEAAXXZ
@@ -1860,6 +1866,7 @@ $schemasystem/schema_enable_defines.h
 -sse4
 -vsync
 -y -loglevel panic -sameq -f image2 -i %9d.png -vcodec mpeg4 -aspect 16:9 -s 1280x720 -r 23.976 -vb 8000000 <FULL_MOVIE_PATH>
+.	g_pThreadPool
 .#?windowTitle@QWidget@@QEBA?AVQString@@XZ
 .,?sVectorDisplacementColor@FbxSurfaceMaterial@fbxsdk@@2PEBDEB
 ...<truncated>...
@@ -1869,6 +1876,9 @@ $schemasystem/schema_enable_defines.h
 ..\..
 ..om?
 .00cfg
+.5#1r
+.501r
+.521r
 .>PJ;I:qE>
 .?AU?$StoredFunctorCall2@XP6AXAEBVQStringList@@AEBVQString@@@ZV1@V2@@QtConcurrent@@
 .?AU?$_InitialTaskHandle@XV<lambda_5a9ef80d79df7873994019ff15dceae5>@@U_TypeSelectorNoAsync@details@Concurrency@@@?$task@E@Concurrency@@
@@ -2027,6 +2037,7 @@ $schemasystem/schema_enable_defines.h
 .?AV<lambda_34476f123c6757c46fc2e0ac9e4e10ab>@@
 .?AV<lambda_344b379c9dc23465b3c2c82cadb0851c>@@
 .?AV<lambda_347b9c3f4e7e551ff395fd386b13c82f>@@
+.?AV<lambda_349db98dc3c24d36a5dd53a9a6f4d68d>@@
 .?AV<lambda_349fd69fa650a1d1a63157af6d219f57>@@
 .?AV<lambda_384ea4f50ce36bec1a882211ab5f70bb>@@
 .?AV<lambda_385d185e08e07f609f4fdba02757c945>@@
@@ -2200,7 +2211,6 @@ $schemasystem/schema_enable_defines.h
 .?AV<lambda_72dabfd489e3a0b1e95a2249379379f6>@@
 .?AV<lambda_7339d7536216f516eac1e619a1fe5896>@@
 .?AV<lambda_73ab71cc9fd85dba627b415f4bfc58d5>@@
-.?AV<lambda_73b039c5e2046e2106411e93162a52d5>@@
 .?AV<lambda_746a45da10736d46479d95fadba5e542>@@
 .?AV<lambda_74b8cbb5c3009c44b8de4467127e279a>@@
 .?AV<lambda_75270d6d0615348bf7b72b73da3405e8>@@
@@ -2811,8 +2821,8 @@ $schemasystem/schema_enable_defines.h
 .?AV?$CEntityComponentHelperT@VCScriptComponent@@V?$CEntityComponentHelperReferenced@VCScriptComponent@@@@@@
 .?AV?$CParallelLambdaJob@V<lambda_104fad39bdd1b5a2f4ac74e516ed02d2>@@@CParallelProcessLauncher@@
 .?AV?$CParallelLambdaJob@V<lambda_15d0b226922fb76cf7649a2875ecb3e2>@@@CParallelProcessLauncher@@
-.?AV?$CParallelLambdaJob@V<lambda_1cefafe28e24c16b3beba36563012fac>@@@CParallelProcessLauncher@@
 .?AV?$CParallelLambdaJob@V<lambda_a7afef70a578ae2b47aca8f03942e26a>@@@CParallelProcessLauncher@@
+.?AV?$CParallelLambdaJob@V<lambda_ecb62f1a89b9b7c670c681d926842822>@@@CParallelProcessLauncher@@
 .?AV?$CParallelLambdaJob@V<lambda_ecd22fb1041651b7d7f7d27d4d9b0a67>@@@CParallelProcessLauncher@@
 .?AV?$CParallelProcessorAbstract@V?$CParallelProcessor@HV?$CLambdaJobItemProcessor@H@@$00@@@@
 .?AV?$CParallelProcessorAbstract@V?$CParallelProcessor@PEAVCRenderableBinding@@V?$CMemberFuncJobItemProcessor@PEAVCRenderableBinding@@VCRenderableUpdater@@V2@@@$00@@@@
@@ -3168,6 +3178,7 @@ $schemasystem/schema_enable_defines.h
 .?AV?$_Func_impl_no_alloc@V<lambda_34476f123c6757c46fc2e0ac9e4e10ab>@@XPEAVCBindableCamera@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_344b379c9dc23465b3c2c82cadb0851c>@@XPEAVCBindableCamera@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_347b9c3f4e7e551ff395fd386b13c82f>@@X$$V@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_349db98dc3c24d36a5dd53a9a6f4d68d>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_349fd69fa650a1d1a63157af6d219f57>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_384ea4f50ce36bec1a882211ab5f70bb>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_385d185e08e07f609f4fdba02757c945>@@X$$V@std@@
@@ -3338,7 +3349,6 @@ $schemasystem/schema_enable_defines.h
 .?AV?$_Func_impl_no_alloc@V<lambda_72dabfd489e3a0b1e95a2249379379f6>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_7339d7536216f516eac1e619a1fe5896>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_73ab71cc9fd85dba627b415f4bfc58d5>@@XPEAVCGlobalHotkeyCommands@@@std@@
-.?AV?$_Func_impl_no_alloc@V<lambda_73b039c5e2046e2106411e93162a52d5>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_746a45da10736d46479d95fadba5e542>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_74b8cbb5c3009c44b8de4467127e279a>@@XPEAVCGlobalHotkeyCommands@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_75270d6d0615348bf7b72b73da3405e8>@@X$$V@std@@
@@ -4645,8 +4655,7 @@ $schemasystem/schema_enable_defines.h
 .xJ>Hf
 .xdata
 .xdata$x
-/%Ya	
-/-i5 
+/%[yJ
 // 						"BA_INT_AMBUSH"		someone please define this - I have no idea what it does
 // 						"BA_INT_COMBAT"		break out of this anim if combat occurs in my line of sight (bullet hits, grenades, etc), -OR- the max time is reached
 // 						"BA_INT_DANGER"		break out of this anim only if threatened
@@ -4663,10 +4672,10 @@ $schemasystem/schema_enable_defines.h
 // 	"min_time"			"Minimum time to spend in this busy anim"
 // "act busy name"		This is the name that a mapmaker must specify in the hint node.
 /2GG>!B
-/513c
-/58G{
-/5[(&
-/5[u=
+/5&j\
+/5-Il
+/57t@
+/5}{z
 /= %f
 />58d%
 /D$pv
@@ -4712,7 +4721,8 @@ $schemasystem/schema_enable_defines.h
 0123456789abcdefghijklmnopqrstuvwxyz
 08@HP
 08@HPX`hpx
-08@HR
+08@HR 
+08@J 
 0><[cZUg^>
 0?d]<?
 0A;ql
@@ -5278,8 +5288,8 @@ $schemasystem/schema_enable_defines.h
 220323000000Z
 220801000000Z
 220921000000Z
-221203185125Z0/
 23.976
+230112002048Z0/
 24 fps
 241009235959Z0a1
 255 255 255
@@ -5441,7 +5451,7 @@ $schemasystem/schema_enable_defines.h
 333333
 3333333
 33333333H+
-333?333?333?333?8F
+333?333?333?333?
 370322235959Z0c1
 3840 x 2160 (2160p)
 3840 x 2400
@@ -5474,7 +5484,6 @@ $schemasystem/schema_enable_defines.h
 456789:;<=
 4:3 (SDTV)
 4@IcD
-4AH(j
 4HA;p
 4YA1H
 4a?_)[?*
@@ -5624,7 +5633,6 @@ $schemasystem/schema_enable_defines.h
 9*u@A
 9,0<	w
 90~)3
-95`P[
 960 x 540 (540p)
 98~+H
 999.9
@@ -5772,8 +5780,8 @@ $schemasystem/schema_enable_defines.h
 ;0} H
 ;1} H
 ;33s?
-;56u<
-;5ru<
+;5.{<
+;5V{<
 ;8})H
 ;8}NH
 ;8}SH
@@ -5781,7 +5789,7 @@ $schemasystem/schema_enable_defines.h
 ;8}bH
 ;:}8H
 ;;} H
-;=I,r
+;=y<r
 ;>}sH
 ;?WK?0
 ;A8u	;YH
@@ -12345,7 +12353,7 @@ D8 uCH
 D8!u\H
 D8$(u
 D8$2u
-D8%J(3
+D8%J.3
 D8&t 
 D8&t4H
 D8(tUH
@@ -12357,12 +12365,12 @@ D8(uwH
 D8*t#Ic
 D8*u{H
 D8,2u
-D8-)+0
-D8-4Pv
+D8-)10
+D8-T`v
 D84>u
 D8;tAH
 D8<;u
-D8=oAr
+D8=G 0
 D8D$(t
 D8D$(u
 D8I8t
@@ -12432,7 +12440,7 @@ D9,$D
 D92tp
 D92uAA
 D96~&I
-D9= nq
+D9=X%X
 D9@ t
 D9@(|
 D9AP~$E
@@ -13574,6 +13582,7 @@ F8Jc\(
 F8Lc?H
 F>l	y?n
 F>qUxv
+F@8=4
 F@HcR
 F@I9@ u	
 F@IcV
@@ -14164,27 +14173,29 @@ H9(t8
 H9(t|
 H9+t	H
 H9+udH
-H9-	R0
-H9-"%w
-H9-'S4
-H9--~1
-H9-C 7
-H9-C+g
-H9-Yi2
-H9-_o8
-H9-e%w
-H9-oKy
+H9-/o8
+H9-1!w
+H9-55w
+H9-7Y4
+H9-A:g
+H9-S&7
+H9-T%7
+H9-b$m
+H9-bew
+H9-io2
+H9-ou8
+H9-q/m
 H9.t	H
 H9/t	H
 H91t/H
 H93t	H
-H9537p
-H9540
-H956#7
-H95Jc
-H95Ra
-H95ts2
-H95x_$
+H95F)7
+H95I|
+H95Q3
+H95bs
+H95cGp
+H95jq
+H95q3n
 H97u+A
 H99t%
 H99tSH
@@ -14192,14 +14203,12 @@ H99te
 H99tjH
 H9:t`
 H9;t	H
-H9=!:j
-H9=An&
-H9=Ayq
-H9=N_
-H9=Xe
-H9=b ~
-H9=ci
-H9=xPj
+H9="vr
+H9='8
+H9=E7
+H9=H`j
+H9=Qt&
+H9=~o
 H9A s
 H9APumH
 H9C u4H
@@ -14412,10 +14421,10 @@ Hardware config info:
 HasField
 HasTeamCustomHealthbarColor
 Hc+;k
-Hc-vDr
 Hc/;o
 Hc/E3
 Hc3E3
+Hc5;R
 HcA0E
 HcA8;
 HcA8A
@@ -15612,24 +15621,22 @@ L+t$hH
 L+|$8
 L5?Qk
 L9#t	H
-L9%+{
-L9%9rz
-L9%X,
+L9%1!n
+L9%J-
+L9%Q 
+L9%X%
 L9+t	H
-L9-!0t
-L9-qil
-L95!;n
-L95+,p
-L95ESy
-L95]i|
-L95aRv
-L95q9n
-L95q`q
+L9-.@
+L9-9@t
+L9-:V
+L9-Ayl
+L951bv
+L95AIn
+L95[<p
+L95e*j
 L99tP
 L9;t	H
-L9=10
-L9=1On
-L9=Azn
+L9=aJW
 L9?t	H
 L9@ s
 L9AHA
@@ -17430,6 +17437,7 @@ Publish Video to YouTube and Steam
 Put; voiceless alveolar stop
 PxIc.3
 Python (*.py);;All Files (*.*)
+Q)]:o
 Q,A3P
 Q2XXR
 Q5rHg,>
@@ -18450,6 +18458,7 @@ SetWrapEnabled
 Setting %s::%s = '%s'
 Setting up field info failed
 Settings
+ShQ`D
 ShaderVar_WireframeBackfaces
 ShaderVar_WireframeDepthEnable
 ShadowCascadeDistance0
@@ -18953,7 +18962,7 @@ T)Yt(
 T0<A#
 T1TA#
 T2XHc
-T5KX\
+T5\Ol
 T?parent@QStandardItem@@QEBAPEAV1@XZ
 T?parent@QStandardItemModel@@UEBA?AVQModelIndex@@AEBV2@@Z
 T?pos@QCursor@@SA?AVQPoint@@XZ
@@ -19867,13 +19876,12 @@ Visit Developer Help URL
 VrLightCookieSettings
 W H92t
 W fff
-W%4xA
-W%TwA
+W%t~A
 W(IcH
 W*?=,4
-W5Xpz
+W-7+L
 W9QHI
-W=h[^
+W=#x9
 W?rowCount@QStandardItem@@QEBAHXZ
 W?rowCount@QStandardItemModel@@UEBAHAEBVQModelIndex@@@Z
 W?save@QImage@@QEBA_NAEBVQString@@PEBDH@Z
@@ -19997,7 +20005,8 @@ X UWAVH
 X VATAWH
 X VWATH
 X!t5~
-X5iq$
+X5(p`
+X=e99
 X?setBrush@QPainter@@QEAAXAEBVQBrush@@@Z
 X?setBrush@QPainter@@QEAAXW4BrushStyle@Qt@@@Z
 X?setBrush@QPalette@@QEAAXW4ColorGroup@1@W4ColorRole@1@AEBVQBrush@@@Z
@@ -20064,26 +20073,23 @@ X|$ A
 X|$ D
 X|$8E
 X|$XI
-Y%9+[
-Y%u%E
-Y-[*E
+Y%Hy9
+Y-{0E
 Y0HcR
-Y5:E(
-Y5ICf
-Y5RFe
-Y5\[g
-Y5^\g
-Y5`Fi
-Y5s?y
-Y=/m`
-Y=7_!
-Y=9-7
-Y=UFi
-Y=UW$
-Y=ZE`
-Y=_S#
-Y=ms9
-Y=~!7
+Y5"Wf
+Y5(>s
+Y51L(
+Y55$u
+Y5Bb9
+Y5KY`
+Y5bk9
+Y5jPy
+Y5oe3
+Y=>Tf
+Y=GWe
+Y=OY#
+Y=\e3
+Y=b@7
 Y>kX>M
 Y?setData@QStandardItem@@UEAAXAEBVQVariant@@H@Z
 Y?setData@QStandardItemModel@@UEAA_NAEBVQModelIndex@@AEBVQVariant@@H@Z
@@ -20112,7 +20118,6 @@ YD$LJ
 YD$XL
 YD9xluSD9
 YL$(E
-YL$0A
 YL$8H
 YO?insertColumns@QStandardItemModel@@UEAA_NHHAEBVQModelIndex@@@Z
 YPosition
@@ -20172,7 +20177,6 @@ ZIP_LocalFileHeader
 ZIP_PreloadDirectoryEntry
 ZIP_PreloadHeader
 Z\>z8
-Z]1Hl
 Z]?sort@QStandardItemModel@@UEAAXHW4SortOrder@Qt@@@Z
 Zap : voiced alveolar fricative
 Zd[?.
@@ -20225,7 +20229,6 @@ Zt?_)
 [?setText@QStandardItem@@QEAAXAEBVQString@@@Z
 [?setTextAlignment@QStandardItem@@QEAAXV?$QFlags@W4AlignmentFlag@Qt@@@@@Z
 [?setTexture@QBrush@@QEAAXAEBVQPixmap@@@Z
-[@8=tM
 [CTRL]-Close closes all tabs 
 [CTRL]-[LEFT] copies Scene Camera to Work Camera and selects the Work Camera
 [Default]: Rotate   [Shift]: Global Rotate
@@ -20480,9 +20483,7 @@ Zt?_)
 \$xu3M
 \$xv.
 \$|E3
-\%[w`
 \)TA#
-\-dw`
 \?setWeight@QFont@@QEAAXH@Z
 \?setWidth@QPen@@QEAAXH@Z
 \?setWidthF@QPen@@QEAAXN@Z
@@ -20504,17 +20505,13 @@ Zt?_)
 \|$`H
 ] tLH
 ])6M>&
-]-Hj&
 ]0IcE
 ]0tIH
 ]0tKH
 ]0tLH
-]5R9,
-]5Yb"
-]5[R\
-]5gMw
+]5""j
+]5L/9
 ]8tIH
-]=V6,
 ]>)2X
 ]?sharedPainter@QPaintDevice@@MEBAPEAVQPainter@@XZ
 ]Hu2M
@@ -20558,15 +20555,6 @@ _V_FileBase
 _V_FixupPathName
 _V_MakeRelativePath
 _V_SetExtension
-_V_StringAfterPrefix
-_V_StringAfterPrefixCaseSensitive
-_V_StripExtension
-_V_StripLastDir
-_V_strEndsWith
-_V_strncat
-_V_strncmp
-_V_strncpy
-_V_strnicmp_fast
 _XHcGPH
 _]?source@QDropEvent@@QEBAPEAVQObject@@XZ
 __IsValveCQTabbedStyle
@@ -20615,7 +20603,7 @@ _to_curve_
 ` UAVAWH
 `+!]?
 `.rdata
-`2pI+
+`: s1
 `;k8|
 `?validate@QDoubleValidator@@UEBA?AW4State@QValidator@@AEAVQString@@AEAH@Z
 `?validate@QIntValidator@@UEBA?AW4State@QValidator@@AEAVQString@@AEAH@Z
@@ -20767,6 +20755,7 @@ adopted
 afterMovieArguments
 afterMovieCommand
 aggregate_value
+ah	K/!
 aimOffset
 aimat
 allowSetInversion
@@ -20852,6 +20841,7 @@ at4<rt!<wt,L
 atan2
 ati_compress_wrapper.dll
 attach_fx
+attached_prop_physics
 attenuation
 attenuation0
 attenuation1
@@ -21421,6 +21411,7 @@ disableShadows
 disableShadows2
 disableVisualEffects
 disabled
+disablemultiplegravitygrab
 disallowOverride
 diskNumberStart
 displayGrid
@@ -21763,9 +21754,9 @@ falloff_right
 false
 false"
 false:7
+false:<
 false:=
 false:?
-false:@
 fbx2dmx
 fe?TR
 ffValueIn
@@ -21900,9 +21891,6 @@ g#?)\
 g;l$0|_A;
 gD	?A
 gO : upper-mid back rounded vowel
-g_Mathlib_GammaToLinearByteTable
-g_TSPointerListNodes
-g_VProfCurrentProfile
 g_flBrightnessExposureBias
 g_flRenderOnlyExposureBias
 g_pDmElementFramework->Operate()
@@ -22160,6 +22148,8 @@ graphCurve
 graphCurve_%s
 graphEditorState
 gravity
+gravity_grab_priority
+gravitygrabignoremassandsize
 green
 greenCurveColor
 gridLayout
@@ -22486,7 +22476,7 @@ k<9s@~DL
 k<9{@~:L
 k<9{@~EL
 k<9{@~FL
-k@H9-
+k@H9-y$m
 kPH9-
 kQ?lineSpacing@QFontMetrics@@QEBAHXZ
 kX?setBlue@QColor@@QEAAXH@Z
@@ -23138,6 +23128,7 @@ mwL;e
 mwtMH
 n03>Pu
 n0H9-
+n5A;~
 nAlpha
 nBalance
 nBlendIndex
@@ -23606,6 +23597,7 @@ prop_hlvr_crafting_station_console
 prop_item_healthvial_capsule
 prop_physics
 prop_physics_override
+prop_physics_respawnable
 prop_ragdoll
 propdataname
 proto
@@ -24149,6 +24141,7 @@ static
 status
 steam_api64.dll
 steamid
+steamlearn_count
 steamml_is_timestamp
 steamml_max_entries
 stereo
@@ -24387,7 +24380,7 @@ t$HD;0
 t$HE3
 t$HE;
 t$HH+
-t$HH9=r
+t$HH9=
 t$HH;
 t$HHc
 t$HHc1H
@@ -24522,7 +24515,7 @@ t&A88t
 t&H9{Pt H
 t&HcD
 t&IcE
-t&L9=Q>
+t&L9=!N
 t'D8d$8t
 t'D9$
 t'HcW
@@ -24538,6 +24531,7 @@ t*HcC
 t*IcH
 t+IcF
 t+L9-
+t+L9-C
 t+fff
 t,@8p t&H
 t-D8(t(
@@ -24614,7 +24608,7 @@ tOHc+
 tOO : high back rounded vowel
 tP@8:tKH
 tPD8nLuJI
-tPL9%#
+tPL9%S
 tQ@8{xt
 tQH91uLL
 tQHcC
@@ -25267,16 +25261,20 @@ x!H95
 x!H9=
 x!HcK
 x!L9%
-x!L9%qfl
+x!L9%Avl
+x!L9%o
 x!L9-
-x!L9-@
+x!L9-q
 x!L95
+x!L95P
+x!L95`".
 x!Lcd$PM;
 x!Lcl$HM;
 x"?valueFromText@QSpinBox@@MEBAHAEBVQString@@@Z
 x#Lcl$PI;
 x$D;N
 x$H95
+x$H95p
 x$L9%
 x%fff
 x&A;>}!I
@@ -25386,10 +25384,10 @@ znear
 {PD9sD~
 {X?setBottom@QIntValidator@@QEAAXH@Z
 {`9sX|AH
-{pH9=
+{pH9=T
 {pHck0H
 {un'%
-{xH9=
+{xH9=o
 {}()':
 |	;SX
 |!D9d
@@ -25456,7 +25454,7 @@ znear
 |$09A
 |$09G
 |$09{P~FH
-|$0;-}{s
+|$0;-
 |$0;kX
 |$0A+
 |$0A94$~lL

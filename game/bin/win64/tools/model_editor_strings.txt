@@ -20,7 +20,7 @@
 		 [Regular sampling] Number of clipping planes 
 		%.*s
 		PointLight
-		g_pMemAlloc
+		_V_strEndsWith
 	 # inside surface           
 	 # on surface               
 	 # primitives               
@@ -82,10 +82,19 @@
 	TYPE_BOOL
 	TYPE_ENUM
 	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
+	_V_StringAfterPrefix
+	_V_StringAfterPrefixCaseSensitive
+	_V_StripExtension
+	_V_StripLastDir
+	_V_strcspn
+	_V_strncmp
+	_V_strncpy
+	_V_strnicmp_fast
 	enum_type
 	extension
-	g_bUpdateStringTokenDatabase
-	g_pThreadPool
+	g_Mathlib_GammaToLinearByteTable
+	g_TSPointerListNodes
+	g_VProfCurrentProfile
 	host_loss
 	json_name
 	kE>fvw
@@ -239,6 +248,7 @@
  A;C }<A
  A;K }*A
  A;~X|
+ AFeFitWeight_t
  A\_^
  A]A\^][
  A]A\_][
@@ -474,6 +484,7 @@
 !hn7!
 !host_framestarttime_std_deviation
 !m_bNeedsSort
+"	g_bUpdateStringTokenDatabase
 " -ie 
 " -oe 
 " ?timerEvent@QListView@@MEAAXPEAVQTimerEvent@@@Z
@@ -645,6 +656,7 @@
 #?widgetAt@QApplication@@SAPEAVQWidget@@AEBVQPoint@@@Z
 #?winId@QWidget@@QEBA_KXZ
 #?window@QWidget@@QEBAPEAV1@XZ
+#@K p
 #GameUI_ClientConsistencyFail
 #GameUI_ClientDifferentMap
 #GameUI_ClientNoMap
@@ -711,6 +723,7 @@ $#GameUI_Disconnect_Request_HLTVRelay
 $#Player_DisconnectReason_TeamHurting
 $#Player_DisconnectReason_TeamKilling
 $$LcH
+$,P.{
 $0  extend .$1 {
 $0  extensions $1 to $2;
 $0  reserved 
@@ -1161,11 +1174,10 @@ $schemasystem/schema_enable_defines.h
 (%d,%d
 (%d,%d,%d
 (%d,%d,%d,%d
-(%j=d
 (*%s*), 
 (0`hpx
-(5=E.
-(5b6.
+(52<.
+(5o@.
 (;^ |
 (;k |
 (;l$(
@@ -1242,7 +1254,6 @@ $schemasystem/schema_enable_defines.h
 (D$0f
 (D$0ff
 (D$0z	u
-(D$@A
 (D$@D
 (D$@H
 (D$@L
@@ -1349,6 +1360,7 @@ $schemasystem/schema_enable_defines.h
 (T$pD
 (T$pH
 (T?j?Y
+(Tioq
 (V H+
 (Vertices to Edges)
 (Vertices to Faces)
@@ -1719,6 +1731,7 @@ $schemasystem/schema_enable_defines.h
 )l$@L
 )l$@M;
 )l$PD
+)l$PE
 )l$PI
 )l$`A
 )l$`D
@@ -1846,11 +1859,11 @@ $schemasystem/schema_enable_defines.h
 )|$pD
 )|$pL
 )|$pM
-)|$pf
 )|B?d!
 )} A9>
 )}p@8
 )}pMc
+*	g_pMemAlloc
 * ?timerEvent@QTextEdit@@MEAAXPEAVQTimerEvent@@@Z
 * Rehandling active codes
 * { font-size: 10px }
@@ -1958,7 +1971,6 @@ $schemasystem/schema_enable_defines.h
 +f)>0'
 +h->|
 +o'q)}
-+tl-lkM
 +~DiN<
 , %1 nodes selected
 , %s )
@@ -1988,6 +2000,7 @@ $schemasystem/schema_enable_defines.h
 ,0<	w
 ,7D;(
 ,7L9>t	H
+,8eRR
 ,>L9|$Ht
 ,>tKC
 ,?sNormalMap@FbxSurfaceMaterial@fbxsdk@@2PEBDEB
@@ -2051,12 +2064,12 @@ $schemasystem/schema_enable_defines.h
 -unknown source-
 -unknown source-(
 -vsync
+.	g_pThreadPool
 .#?windowTitle@QWidget@@QEBA?AVQString@@XZ
 .,?sVectorDisplacementColor@FbxSurfaceMaterial@fbxsdk@@2PEBDEB
 ...<truncated>...
 ..om?
 .00cfg
-.5@h+
 .>PJ;I:qE>
 .?AU?$_InitialTaskHandle@XV<lambda_5a9ef80d79df7873994019ff15dceae5>@@U_TypeSelectorNoAsync@details@Concurrency@@@?$task@E@Concurrency@@
 .?AU?$_InitialTaskHandle@XV<lambda_60c5de84e69e46aa92419d47e2f3ad51>@@U_TypeSelectorNoAsync@details@Concurrency@@@?$task@E@Concurrency@@
@@ -2215,6 +2228,7 @@ $schemasystem/schema_enable_defines.h
 .?AUCAttr_m_angAngle@?1??GetStaticAttributes@CModelDocMeshModifier_ForceRealignBone@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_angAngle@?1??GetStaticAttributes@CModelDocMeshModifier_ForceUnweightedBindposeBonePositions@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_angAngle@?1??GetStaticAttributes@CModelDocPhysicsHullFromPoints_Point@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
+.?AUCAttr_m_angRotation@?1??GetStaticAttributes@CModelDocAnimForceBonePosition@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_animOrder@?1??GetStaticAttributes@CModelDocAnimOrder@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_ankleBoneName@?1??GetStaticAttributes@CModelDocFoot@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_bAcceleration@?1??GetStaticAttributes@CModelDocClothEffectSpeedup@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
@@ -2443,7 +2457,6 @@ $schemasystem/schema_enable_defines.h
 .?AUCAttr_m_eHandType@?1??GetStaticAttributes@CModelDocSkeletalInputSettings@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_eKeyType@?1??GetStaticAttributes@CModelDocFaceposerKeys@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_eMotionType@?1??GetStaticAttributes@CModelDocExtractMotion@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
-.?AUCAttr_m_eRotation@?1??GetStaticAttributes@CModelDocAnimForceBonePosition@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_eRotation@?1??GetStaticAttributes@CModelDocAnimOffset@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_eRotationOffsetXYZ@?1??GetStaticAttributes@CModelDocAnimConstraintParent@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_expression@?1??GetStaticAttributes@CModelDocMorphRule@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
@@ -2997,6 +3010,7 @@ $schemasystem/schema_enable_defines.h
 .?AV<lambda_34476f123c6757c46fc2e0ac9e4e10ab>@@
 .?AV<lambda_344b379c9dc23465b3c2c82cadb0851c>@@
 .?AV<lambda_34933fc93a501b039df7d2a09ef13598>@@
+.?AV<lambda_349db98dc3c24d36a5dd53a9a6f4d68d>@@
 .?AV<lambda_3667e361ce8e9133fdba5d92e6465962>@@
 .?AV<lambda_3948ecb1106b10b6e84527f298993ef5>@@
 .?AV<lambda_3c81521779fa11ec9d40fcc10a622d8c>@@
@@ -3030,7 +3044,6 @@ $schemasystem/schema_enable_defines.h
 .?AV<lambda_71d2fbada20d30ede201cab86e934de0>@@
 .?AV<lambda_72a88e06160bb68c438cf7af9d85b505>@@
 .?AV<lambda_73ab71cc9fd85dba627b415f4bfc58d5>@@
-.?AV<lambda_73b039c5e2046e2106411e93162a52d5>@@
 .?AV<lambda_74b8cbb5c3009c44b8de4467127e279a>@@
 .?AV<lambda_763529b0c7473cbc215a52d189ac9b18>@@
 .?AV<lambda_7a09fe176ef951e19c3c82125795c6fc>@@
@@ -3395,13 +3408,13 @@ $schemasystem/schema_enable_defines.h
 .?AV?$CBaseConcreteToolAttr@VColor@@VCModelDocMeshModifier_MeshOpBakeTextureToVertexData@@@@
 .?AV?$CBaseConcreteToolAttr@VColor@@VCModelDocVSNAPParticle@@@@
 .?AV?$CBaseConcreteToolAttr@VDegreeEuler@@VCModelDocAnimConstraintParent@@@@
-.?AV?$CBaseConcreteToolAttr@VDegreeEuler@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CBaseConcreteToolAttr@VDegreeEuler@@VCModelDocAnimOffset@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintAim@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintAttachmentInput@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintBoneInput@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintSlave@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintTwist@@@@
+.?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocAttachmentBase@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocBaseBreakPiece@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocBaseParametricMeshOp@@@@
@@ -3915,13 +3928,13 @@ $schemasystem/schema_enable_defines.h
 .?AV?$CConcreteToolAttr@VColor@@VCModelDocMeshModifier_MeshOpBakeTextureToVertexData@@X@@
 .?AV?$CConcreteToolAttr@VColor@@VCModelDocVSNAPParticle@@X@@
 .?AV?$CConcreteToolAttr@VDegreeEuler@@VCModelDocAnimConstraintParent@@X@@
-.?AV?$CConcreteToolAttr@VDegreeEuler@@VCModelDocAnimForceBonePosition@@X@@
 .?AV?$CConcreteToolAttr@VDegreeEuler@@VCModelDocAnimOffset@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintAim@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintAttachmentInput@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintBoneInput@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintSlave@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintTwist@@X@@
+.?AV?$CConcreteToolAttr@VQAngle@@VCModelDocAnimForceBonePosition@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCModelDocAttachmentBase@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCModelDocBaseBreakPiece@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCModelDocBaseParametricMeshOp@@X@@
@@ -4735,13 +4748,13 @@ $schemasystem/schema_enable_defines.h
 .?AV?$CModelDocAttr@VColor@@VCModelDocMeshModifier_MeshOpBakeTextureToVertexData@@@@
 .?AV?$CModelDocAttr@VColor@@VCModelDocVSNAPParticle@@@@
 .?AV?$CModelDocAttr@VDegreeEuler@@VCModelDocAnimConstraintParent@@@@
-.?AV?$CModelDocAttr@VDegreeEuler@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CModelDocAttr@VDegreeEuler@@VCModelDocAnimOffset@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocAnimConstraintAim@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocAnimConstraintAttachmentInput@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocAnimConstraintBoneInput@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocAnimConstraintSlave@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocAnimConstraintTwist@@@@
+.?AV?$CModelDocAttr@VQAngle@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocAttachmentBase@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocBaseBreakPiece@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocBaseParametricMeshOp@@@@
@@ -4921,7 +4934,7 @@ $schemasystem/schema_enable_defines.h
 .?AV?$CMutableRefCounted@V?$CMutableRefCountBase@VCRefMT@@@@@@
 .?AV?$CParallelLambdaJob@V<lambda_104fad39bdd1b5a2f4ac74e516ed02d2>@@@CParallelProcessLauncher@@
 .?AV?$CParallelLambdaJob@V<lambda_15d0b226922fb76cf7649a2875ecb3e2>@@@CParallelProcessLauncher@@
-.?AV?$CParallelLambdaJob@V<lambda_1cefafe28e24c16b3beba36563012fac>@@@CParallelProcessLauncher@@
+.?AV?$CParallelLambdaJob@V<lambda_ecb62f1a89b9b7c670c681d926842822>@@@CParallelProcessLauncher@@
 .?AV?$CParallelLambdaJob@V<lambda_ecd22fb1041651b7d7f7d27d4d9b0a67>@@@CParallelProcessLauncher@@
 .?AV?$CParallelProcessorAbstract@V?$CParallelProcessor@HV?$CLambdaJobItemProcessor@H@@$00@@@@
 .?AV?$CParallelProcessorAbstract@V?$CParallelProcessor@PEAVCRenderableBinding@@V?$CMemberFuncJobItemProcessor@PEAVCRenderableBinding@@VCRenderableUpdater@@V2@@@$00@@@@
@@ -5228,13 +5241,13 @@ $schemasystem/schema_enable_defines.h
 .?AV?$CToolAttrGetSetAccess@VColor@@VCModelDocMeshModifier_MeshOpBakeTextureToVertexData@@@@
 .?AV?$CToolAttrGetSetAccess@VColor@@VCModelDocVSNAPParticle@@@@
 .?AV?$CToolAttrGetSetAccess@VDegreeEuler@@VCModelDocAnimConstraintParent@@@@
-.?AV?$CToolAttrGetSetAccess@VDegreeEuler@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CToolAttrGetSetAccess@VDegreeEuler@@VCModelDocAnimOffset@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocAnimConstraintAim@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocAnimConstraintAttachmentInput@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocAnimConstraintBoneInput@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocAnimConstraintSlave@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocAnimConstraintTwist@@@@
+.?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocAttachmentBase@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocBaseBreakPiece@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocBaseParametricMeshOp@@@@
@@ -5869,13 +5882,13 @@ $schemasystem/schema_enable_defines.h
 .?AV?$CValueAttributeWrapper@VColor@@VCModelDocMeshModifier_MeshOpBakeTextureToVertexData@@@@
 .?AV?$CValueAttributeWrapper@VColor@@VCModelDocVSNAPParticle@@@@
 .?AV?$CValueAttributeWrapper@VDegreeEuler@@VCModelDocAnimConstraintParent@@@@
-.?AV?$CValueAttributeWrapper@VDegreeEuler@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CValueAttributeWrapper@VDegreeEuler@@VCModelDocAnimOffset@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocAnimConstraintAim@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocAnimConstraintAttachmentInput@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocAnimConstraintBoneInput@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocAnimConstraintSlave@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocAnimConstraintTwist@@@@
+.?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocAttachmentBase@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocBaseBreakPiece@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocBaseParametricMeshOp@@@@
@@ -6196,6 +6209,7 @@ $schemasystem/schema_enable_defines.h
 .?AV?$_Func_impl_no_alloc@V<lambda_34476f123c6757c46fc2e0ac9e4e10ab>@@XPEAVCBindableCamera@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_344b379c9dc23465b3c2c82cadb0851c>@@XPEAVCBindableCamera@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_34933fc93a501b039df7d2a09ef13598>@@XPEAVCModelEditorApp@@@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_349db98dc3c24d36a5dd53a9a6f4d68d>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_3667e361ce8e9133fdba5d92e6465962>@@XPEAVCModelEditorApp@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_3948ecb1106b10b6e84527f298993ef5>@@XPEAVCModelEditorApp@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_3c81521779fa11ec9d40fcc10a622d8c>@@XPEAVCGlobalHotkeyCommands@@@std@@
@@ -6226,7 +6240,6 @@ $schemasystem/schema_enable_defines.h
 .?AV?$_Func_impl_no_alloc@V<lambda_71d2fbada20d30ede201cab86e934de0>@@XPEAVCModelEditorApp@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_72a88e06160bb68c438cf7af9d85b505>@@XAEAH@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_73ab71cc9fd85dba627b415f4bfc58d5>@@XPEAVCGlobalHotkeyCommands@@@std@@
-.?AV?$_Func_impl_no_alloc@V<lambda_73b039c5e2046e2106411e93162a52d5>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_74b8cbb5c3009c44b8de4467127e279a>@@XPEAVCGlobalHotkeyCommands@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_7a09fe176ef951e19c3c82125795c6fc>@@XPEAVCBindableCamera@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_803279bba73fd37759748d32eb0a634e>@@XPEAVCBindableCamera@@@std@@
@@ -7649,7 +7662,6 @@ $schemasystem/schema_enable_defines.h
 .xdata
 .xdata$x
 / ?title@QGroupBox@@QEBA?AVQString@@XZ
-/%7l*
 // 						"BA_INT_AMBUSH"		someone please define this - I have no idea what it does
 // 						"BA_INT_COMBAT"		break out of this anim if combat occurs in my line of sight (bullet hits, grenades, etc), -OR- the max time is reached
 // 						"BA_INT_DANGER"		break out of this anim only if threatened
@@ -7669,11 +7681,11 @@ $schemasystem/schema_enable_defines.h
 // FRAMERATE=%f
 // SCENE=%511s
 /2GG>!B
-/5#=-
-/5'o*
-/5Kl*
-/5ZBx
-/=JS-
+/5:Ix
+/5<o0
+/5CC-
+/=T	s
+/=jY-
 />58d%
 /A@v'
 /AHs<
@@ -8488,7 +8500,7 @@ $schemasystem/schema_enable_defines.h
 220323000000Z
 220801000000Z
 220921000000Z
-221203185126Z0/
+230112002516Z0/
 241009235959Z0a1
 255 255 255
 2: Grayscale full specular without normal maps
@@ -8658,7 +8670,7 @@ $schemasystem/schema_enable_defines.h
 333333
 3333333
 33333333H+
-333?333?333?333?P8
+333?333?333?333?
 360 Rotation
 370322235959Z0c1
 3: Full specular with normal maps
@@ -9019,7 +9031,6 @@ $schemasystem/schema_enable_defines.h
 ;/}[K
 ;1} H
 ;3}&H
-;5Fip
 ;>}sH
 ;A0}?
 ;A8u	;YH
@@ -11499,7 +11510,6 @@ $schemasystem/schema_enable_defines.h
 @08@HPX`hpx
 @6W!?
 @8,:u
-@8-|Rl
 @8.t?H
 @80twL
 @83t?H
@@ -11509,6 +11519,7 @@ $schemasystem/schema_enable_defines.h
 @84)u
 @848u
 @84:u
+@85=o
 @87tDH
 @88t9H
 @88u&H
@@ -11626,6 +11637,7 @@ $schemasystem/schema_enable_defines.h
 @H;XX
 @H;xXs
 @HPX&E
+@Hc5w
 @HcA@H
 @HcAp3
 @HcD$0L
@@ -11633,7 +11645,6 @@ $schemasystem/schema_enable_defines.h
 @Integer overflow in %s
 @JcD9
 @L99t
-@Lc5c
 @Mcg<M
 @PH+H(
 @PL+@(
@@ -12084,6 +12095,7 @@ ANDROID_VULKAN_4_1
 ANDROID_VULKAN_5_0
 ANTLR3_EXCEPTION number %d (%08X).
 ANTLR3_EXCEPTION: %s
+APC8F
 APH+H(
 APH+H(I
 APHc3H
@@ -16608,7 +16620,6 @@ D8$0u
 D8$2u
 D8$8u
 D8$;u
-D8%6ev
 D8&t 
 D8&t4H
 D8(tj
@@ -16621,15 +16632,16 @@ D8,2u
 D8,9u
 D8,:u
 D8,>u
-D8-G&
+D8-p@
 D83tHH
 D83tu
 D84(u
 D84;u
 D84>u
+D85w(|
 D8;tAH
 D8<;u
-D8=,Eo
+D8=|Zo
 D8CqA
 D8L$0uP
 D8\0>t
@@ -16699,7 +16711,8 @@ D9+~5E
 D9+~=I
 D9+~?I
 D9,$D
-D9-+p
+D9-H^
+D9-^^
 D9.~/
 D9.~1fff
 D9.~QA
@@ -16708,7 +16721,7 @@ D91~HH
 D92tp
 D92uAA
 D92~0A
-D9=La
+D95[4
 D9>|%Hc
 D9@(t
 D9@(|
@@ -18166,7 +18179,6 @@ FeEffectDesc_t
 FeEffectName
 FeFitInfluence_t
 FeFitMatrix_t
-FeFitWeight_t
 FeFollowNode_t
 FeKelagerBend2_t
 FeModelBuilder: Follower #%d %s is following parent #%d %s, which is also a follower but is setup down the chain. The order should be parent-to-child. The follower chain may produce overly-soft or 1-tick-lagging results
@@ -18828,19 +18840,25 @@ H9(t8
 H9(t|
 H9+t	H
 H9+udH
-H9-"%r
-H9-VX
+H9-0ps
+H9-GEr
+H9-r:r
 H9.t	H
 H9/t	H
 H91tB
 H93t	H
-H95 T
-H958KW
+H952&r
+H95;,p
+H95B$
+H95s'r
+H95x`W
 H97t	H
 H97u+A
 H98tE
 H99tjH
 H9;t	H
+H9=S\
+H9=a]r
 H9>t	H
 H9A s
 H9A(u
@@ -20593,8 +20611,6 @@ L+|$8
 L0hE3
 L9#t	H
 L9$9u)A
-L9% &
-L9%]]
 L9't	H
 L9+t	H
 L93t	H
@@ -21501,7 +21517,6 @@ MaxSampleValue
 Maximum
 Maximum Degrees
 Maximum supported image dimension is %u pixels
-MbP?@
 Mc$$L
 Mc)E3
 Mc+E3
@@ -22146,6 +22161,7 @@ OHt H
 OKXHc
 OPL9q@tNH
 ORIENT
+OTtxv
 OX9JXt
 OXfff
 OZw3(?
@@ -22719,7 +22735,7 @@ P(f!k
 P(fD!k*H
 P(fD!|
 P08@J
-P08NT:
+P08NdE
 P0A;E
 P0I;P8t
 P8H=vmdl
@@ -23301,6 +23317,7 @@ RHH=vpcft4I
 RMouse
 RMouseDoubleClick
 ROTATION
+RSDSU
 RST%d
 R^?supportedDropActions@QStandardItemModel@@UEBA?AV?$QFlags@W4DropAction@Qt@@@@XZ
 Radial Basis Function Type
@@ -24744,13 +24761,12 @@ T$xL+
 T$xLc,
 T$xM;
 T$xfH
-T%yo*
-T%zLv
+T%Iu*
+T%ZSv
+T%jTv
 T* I;
-T-<+K
 T/ I;
 T2XHc
-T=WDt
 T?parent@QStandardItem@@QEBAPEAV1@XZ
 T?parent@QStandardItemModel@@UEBA?AVQModelIndex@@AEBV2@@Z
 T?pos@QCursor@@SA?AVQPoint@@XZ
@@ -25119,6 +25135,7 @@ U0+G$A
 U0H+U`G
 U20>,+
 U20>3
+U6	:c!
 U8+G$A
 U8A8_
 U?qt_metacall@QIntValidator@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z
@@ -25772,9 +25789,12 @@ VmodelChanged
 Vortices
 Voxelization
 W fff
+W%<c@
 W(HcKDH
 W(IcH
-W-6={
+W50g>
+W58f1
+W5>)1
 W9QHI
 W?rowCount@QStandardItem@@QEBAHXZ
 W?rowCount@QStandardItemModel@@UEBAHAEBVQModelIndex@@@Z
@@ -25947,14 +25967,11 @@ X UVWH
 X UWAVH
 X VWATH
 X!t5~
-X%0n*
-X%2)v
-X-&H+
-X-Hn*
-X-\H+
-X-o/u
-X5J	G
-X5w1u
+X-,N+
+X-O6u
+X-nL+
+X54$9
+X5W8u
 X?setBrush@QPainter@@QEAAXAEBVQBrush@@@Z
 X?setBrush@QPainter@@QEAAXW4BrushStyle@Qt@@@Z
 X?setBrush@QPalette@@QEAAXW4ColorGroup@1@W4ColorRole@1@AEBVQBrush@@@Z
@@ -26030,32 +26047,38 @@ X|$8E
 Y - Left
 Y Up (Maya)
 Y$	Hi
-Y%+	u
-Y%0O"
-Y%X+n
+Y%$r'
+Y%82n
+Y%`T"
+Y%hLv
 Y(HcA A
 Y(jdH
 Y,	Hi
-Y-?/u
+Y-_b@
 Y0HcR
-Y5)2u
-Y5@_-
-Y5F[	
-Y5WT-
-Y5YN_
-Y5^.t
-Y5cyj
-Y5m1i
-Y5n7v
-Y5q`-
-Y5yp.
+Y5	9u
+Y5"%s
+Y5'Z-
+Y5+;Z
+Y54:Z
+Y56`	
+Y59U_
+Y5>5t
+Y5Af-
+Y5Iv.
+Y5N>v
+Y5f^.
+Y5g8u
+Y5k3!
+Y5lri
+Y5pDL
+Y5}^?
 Y8HcA0H
-Y=09>
-Y=9Fv
-Y=:;>
-Y=^X>
-Y=gI'
-Y=n'5
+Y=#;Z
+Y='O'
+Y=<:Z
+Y=N-5
+Y=tE'
 Y>kX>M
 Y?setData@QStandardItem@@UEAAXAEBVQVariant@@H@Z
 Y?setData@QStandardItemModel@@UEAA_NAEBVQModelIndex@@AEBVQVariant@@H@Z
@@ -26084,7 +26107,6 @@ YD$LJ
 YD$\E
 YD9xluSD9
 YL$(E
-YL$0A
 YL$8E
 YL$Pf
 YO?insertColumns@QStandardItemModel@@UEAA_NHHAEBVQModelIndex@@@Z
@@ -26464,6 +26486,8 @@ Zpm"U
 \$xu#H
 \$xv.
 \$|L+
+\%ot*
+\5f/0
 \?setToolTip@QStandardItem@@QEAAXAEBVQString@@@Z
 \?setWeight@QFont@@QEAAXH@Z
 \?setWidth@QPen@@QEAAXH@Z
@@ -26489,15 +26513,16 @@ Zpm"U
 \|$\H
 ] C  = 
 ] tLH
+]%K]=
 ](uDH
 ])6M>&
-]->Wf
 ]0IcM@A
 ]0tKH
 ]0tLH
-]5C?v
+]53)O
+]56m:
+]5{u$
 ]8tIH
-]=Hy$
 ]>)2X
 ]?sharedPainter@QPaintDevice@@MEBAPEAVQPainter@@XZ
 ]D$ f
@@ -26532,7 +26557,6 @@ Zpm"U
 ^oEZ_
 _ Hc^ H
 _(HcG H
-_-@?K
 _89_D
 _8Hc^8H
 _8I;_@t
@@ -26564,15 +26588,6 @@ _V_ExtractFilePath
 _V_FileBase
 _V_MakeAbsolutePath
 _V_SetExtension
-_V_StringAfterPrefix
-_V_StringAfterPrefixCaseSensitive
-_V_StripExtension
-_V_StripLastDir
-_V_strEndsWith
-_V_strcspn
-_V_strncmp
-_V_strncpy
-_V_strnicmp_fast
 _XHcGPH
 _\$$E
 _\$4E
@@ -26661,6 +26676,7 @@ _toolsautosave
 _xu)H
 _zero
 _|$XI
+_|,:N7
 ` @SH
 ` AUAVAWH
 ` UAVAWH
@@ -26775,7 +26791,7 @@ a(D9~p
 a0IcN
 a?write@QStandardItem@@UEBAXAEAVQDataStream@@@Z
 a?x@QMouseEvent@@QEBAHXZ
-aBvT:
+aBvdE
 abcdefghijklmnopqrstuvwxyz
 abs( %s )
 acceleration
@@ -26985,6 +27001,7 @@ attachAngle
 attachBone
 attachOffset
 attach_point
+attached_prop_physics
 attachment
 attachmentName
 attachment_key
@@ -27791,6 +27808,7 @@ disable_compression
 disable_morph
 disable_update_during_drag
 disabled
+disablemultiplegravitygrab
 disallowOverride
 display
 displayScale
@@ -28151,9 +28169,9 @@ falloff_right
 false
 false"
 false:7
+false:<
 false:=
 false:?
-false:@
 fbx2dmx
 fbxScale
 features
@@ -28325,9 +28343,6 @@ fuvA;
 g %4096s
 g cMesh
 g default
-g_Mathlib_GammaToLinearByteTable
-g_TSPointerListNodes
-g_VProfCurrentProfile
 g_bFogTypeEnabled
 g_bOtherFxEnabled
 g_bRoughnessParams
@@ -28668,8 +28683,10 @@ gradient
 graphCurve
 grate
 gravity
+gravity_grab_priority
 gravity_scale
 gravity_z
+gravitygrabignoremassandsize
 green
 grenade
 gridspacing
@@ -28994,6 +29011,7 @@ is_transition
 ishltv
 ispc_texcomp.dll
 iszString
+item_item_crate
 items
 iterate_to_element
 iterations
@@ -29057,7 +29075,7 @@ k<9{@~:L
 k<9{@~EL
 k<9{@~FL
 kE_PL
-kPH9-v
+kPH9-
 kPH9k(H
 kPH9k8H
 kQ?lineSpacing@QFontMetrics@@QEBAHXZ
@@ -29094,6 +29112,7 @@ kochanek_early
 kochanek_late
 kpH9kXH
 ksmCH
+ku? FH
 k}nfff
 l!;b	F
 l"?value@QDoubleSpinBox@@QEBANXZ
@@ -31180,9 +31199,9 @@ numchannels
 numframes
 n|$`fA
 o0L9s0t
-o5) y
+o59&y
 o8L9s8t
-o=)tz
+o=	{z
 o@H9)t
 o@Hcw
 oD$ H
@@ -31285,7 +31304,7 @@ p WATAUAVAWH
 p WAVAWH
 p"?value@QSpinBox@@QEBAHXZ
 p-o'H
-p08@H^T:
+p08@H^dE
 p;>}	H
 p?ati_compress_wrapper.dll
 pA+{pE
@@ -31575,6 +31594,9 @@ propDataBreakableType
 propDataExplosionType
 propDataMultiplayerBreak_t
 prop_data
+prop_physics
+prop_physics_override
+prop_physics_respawnable
 propdata
 propdataname
 properties
@@ -31626,7 +31648,6 @@ r	Vr.>T
 r!fff
 r$D9L
 r%dc%d
-r+P3)
 r0fD;B
 r<w7A
 r>@8o
@@ -32142,6 +32163,7 @@ static
 staticFriction
 staticImpactVolume
 steamid
+steamlearn_count
 steamml_is_timestamp
 steamml_max_entries
 stereo
@@ -32261,7 +32283,7 @@ t$ ATAVAWH
 t$ AUAVAWH
 t$ AVAWH
 t$ AVH
-t$ AVHc-h
+t$ AVHc-
 t$ AVL
 t$ AWH
 t$ Ai
@@ -32855,7 +32877,7 @@ tID;G`sCI
 tID;s`sCI
 tIHcA
 tIHcC
-tIL9-
+tIL9-*&o
 tIf9wbH
 tJ;Q`sEI
 tJ;S`sEI
@@ -32957,7 +32979,7 @@ tWHcC
 tXA;P
 tXA;V`sRI
 tXfff
-tY@85z
+tY@85
 tYA;J0sSH
 tYE;f`sSI
 tYfff
@@ -34273,7 +34295,7 @@ znear
 |$8u)H
 |$8uEH
 |$8xjL
-|$<;=izd
+|$<;=
 |$@	u
 |$@ u
 |$@$"L

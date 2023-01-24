@@ -27,7 +27,7 @@
 		"CDmeTextureOutputChannel"
 		%.*s
 		PointLight
-		g_pMemAlloc
+		_V_strEndsWith
 		}%s
 	 The lexer was matching from line %d, offset %d, which
 	 This indicates a poorly specified lexer RULE
@@ -104,12 +104,21 @@
 	This can occur if the case of the file or directory was changed in p4 after the initial source 1 sync in the clientspec.
 	WriteFileAndEditAddToPerforce required absolute path for "%s"!
 	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
+	_V_StringAfterPrefix
+	_V_StringAfterPrefixCaseSensitive
+	_V_StripExtension
+	_V_StripLastDir
+	_V_strncat
+	_V_strncmp
+	_V_strncpy
+	_V_strnicmp_fast
 	body_groups = %s
 	enum_type
 	extension
 	f9~*t
-	g_bUpdateStringTokenDatabase
-	g_pThreadPool
+	g_Mathlib_GammaToLinearByteTable
+	g_TSPointerListNodes
+	g_VProfCurrentProfile
 	host_loss
 	json_name
 	kE>fvw
@@ -117,7 +126,6 @@
 	map_field
 	material_group = "%s"
 	name_part
-	nexttoken
 	overlap %i: [%s @ %.1f %.1f %.1f] slot %i
 	s#H;
 	s&H;
@@ -252,9 +260,9 @@
  (08@HPX`hpx
  (08@HPX`j
  (08@HPZ
- (08@HR@
+ (08@HRp
  (08@J
- (08@J@
+ (08@Jp
  (Driven by choice group '%1')
  (Expand)
  (Hsl)
@@ -355,6 +363,7 @@
  ?timerEvent@QAbstractSlider@@MEAAXPEAVQTimerEvent@@@Z
  ?timerEvent@QAbstractSpinBox@@MEAAXPEAVQTimerEvent@@@Z
  ?tr@QWidget@@SA?AVQString@@PEBD0H@Z
+ @ iv
  @SUVWATH
  A\^[
  A\^[H
@@ -678,6 +687,7 @@
 !host_framestarttime_std_deviation
 !player
 !self
+"	g_bUpdateStringTokenDatabase
 " -ie 
 " -oe 
 " ?timerEvent@QListView@@MEAAXPEAVQTimerEvent@@@Z
@@ -1459,23 +1469,24 @@ $})Hi
 (#GameUI_Disconnect_RemoteProblem_BadCert
 (#GameUI_Disconnect_RemoteProblem_Timeout
 (%0.f : %.0f)
+(%0m5
 (%1 total flattened instances, %2 references in parent)
 (%1,%2)
-(%9g5
-(%d';
 (%d) %s
 (%d)pin: %s
 (%d,%d
 (%d,%d)
 (%d,%d,%d
 (%d,%d,%d,%d
-(%e%;
 (%f %f %f) (%f %f %f) (%f %f %f)
 (%i) %s
 (%s) %s
+(%tSb
 (*%s*), 
+(--a#
 (0`hpx
-(5n2t
+(59K#
+(5N9t
 (8Q)t+
 (8Q8t+
 (8Q9t+
@@ -2201,6 +2212,7 @@ $})Hi
 )l$@M;
 )l$@f
 )l$PD
+)l$PE
 )l$PI
 )l$`D
 )l$`E
@@ -2355,12 +2367,12 @@ $})Hi
 )|$pI
 )|$pL
 )|$pM
-)|$pf
 )|$pt	
 )|B?d!
 )} A9>
 )}p@8
 )}pMc
+*	g_pMemAlloc
 * - Match Any
 * ?timerEvent@QTextEdit@@MEAAXPEAVQTimerEvent@@@Z
 * Rehandling active codes
@@ -2512,7 +2524,7 @@ $})Hi
 ,?sReflection@FbxSurfaceMaterial@fbxsdk@@2PEBDEB
 ,?sShininess@FbxSurfaceMaterial@fbxsdk@@2PEBDEB
 ,?sSpecular@FbxSurfaceMaterial@fbxsdk@@2PEBDEB
-,@:5Bd7
+,@:5rj7
 ,@IcD$
 ,@IcF
 ,@JcD9
@@ -2624,6 +2636,7 @@ $})Hi
 -verbose-kubejobs
 -vsync
 -workshop
+.	g_pThreadPool
 .#?windowTitle@QWidget@@QEBA?AVQString@@XZ
 .$!Di
 .,?sVectorDisplacementColor@FbxSurfaceMaterial@fbxsdk@@2PEBDEB
@@ -2634,7 +2647,9 @@ $})Hi
 ./vrad3 %s -threads %.0f -outdir /tmp/output/ && mv /tmp/output/* $KUBEJOBS_OUTPUT_DIR/
 .0-G/0]T30
 .00cfg
+.5H@c
 .9u!D
+.=YaI
 .>PJ;I:qE>
 .?AU?$_InitialTaskHandle@XV<lambda_5a9ef80d79df7873994019ff15dceae5>@@U_TypeSelectorNoAsync@details@Concurrency@@@?$task@E@Concurrency@@
 .?AU?$_InitialTaskHandle@XV<lambda_60c5de84e69e46aa92419d47e2f3ad51>@@U_TypeSelectorNoAsync@details@Concurrency@@@?$task@E@Concurrency@@
@@ -2863,6 +2878,7 @@ $})Hi
 .?AUCAttr_m_angAngle@?1??GetStaticAttributes@CModelDocMeshModifier_ForceUnweightedBindposeBonePositions@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_angAngle@?1??GetStaticAttributes@CModelDocPhysicsHullFromPoints_Point@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_angLocator@?1??GetAttributeTable_CMapNavLink@CMapNavLink@@SAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
+.?AUCAttr_m_angRotation@?1??GetStaticAttributes@CModelDocAnimForceBonePosition@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_animOrder@?1??GetStaticAttributes@CModelDocAnimOrder@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_ankleBoneName@?1??GetStaticAttributes@CModelDocFoot@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_bAcceleration@?1??GetStaticAttributes@CModelDocClothEffectSpeedup@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
@@ -3118,7 +3134,6 @@ $})Hi
 .?AUCAttr_m_eHandType@?1??GetStaticAttributes@CModelDocSkeletalInputSettings@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_eKeyType@?1??GetStaticAttributes@CModelDocFaceposerKeys@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_eMotionType@?1??GetStaticAttributes@CModelDocExtractMotion@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
-.?AUCAttr_m_eRotation@?1??GetStaticAttributes@CModelDocAnimForceBonePosition@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_eRotation@?1??GetStaticAttributes@CModelDocAnimOffset@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_eRotationOffsetXYZ@?1??GetStaticAttributes@CModelDocAnimConstraintParent@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_expression@?1??GetStaticAttributes@CModelDocMorphRule@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
@@ -3997,6 +4012,7 @@ $})Hi
 .?AV<lambda_34476f123c6757c46fc2e0ac9e4e10ab>@@
 .?AV<lambda_344b379c9dc23465b3c2c82cadb0851c>@@
 .?AV<lambda_34957f38cd253c3da013fb00c1edc3f9>@@
+.?AV<lambda_349db98dc3c24d36a5dd53a9a6f4d68d>@@
 .?AV<lambda_34b62502a7f54ee330c5a7a023591f96>@@
 .?AV<lambda_34c386364e74c96bb4d1c64a60dd4508>@@
 .?AV<lambda_35203f8b027fb273b88653763d80449f>@@
@@ -4336,7 +4352,6 @@ $})Hi
 .?AV<lambda_737c77c5f4eacdf2c90ddfba23b37fd2>@@
 .?AV<lambda_73ab71cc9fd85dba627b415f4bfc58d5>@@
 .?AV<lambda_73ad385bcef56ec02c93290cabc96adb>@@
-.?AV<lambda_73b039c5e2046e2106411e93162a52d5>@@
 .?AV<lambda_73c0ac5664e589cd4ccb3e5f0f6ccfbe>@@
 .?AV<lambda_7468de61332300ecf2b5f22a93a122ca>@@
 .?AV<lambda_74a6fce79cbfa12a1b6872e799a35e46>@@
@@ -5457,7 +5472,6 @@ $})Hi
 .?AV?$CBaseConcreteToolAttr@VColor@@VCModelDocVSNAPParticle@@@@
 .?AV?$CBaseConcreteToolAttr@VColor@@VCTileMeshFace@@@@
 .?AV?$CBaseConcreteToolAttr@VDegreeEuler@@VCModelDocAnimConstraintParent@@@@
-.?AV?$CBaseConcreteToolAttr@VDegreeEuler@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CBaseConcreteToolAttr@VDegreeEuler@@VCModelDocAnimOffset@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCMapNavLink@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCMapNode@@@@
@@ -5466,6 +5480,7 @@ $})Hi
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintBoneInput@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintSlave@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintTwist@@@@
+.?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocAttachmentBase@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocBaseBreakPiece@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocBaseParametricMeshOp@@@@
@@ -6090,7 +6105,6 @@ $})Hi
 .?AV?$CConcreteToolAttr@VColor@@VCModelDocVSNAPParticle@@X@@
 .?AV?$CConcreteToolAttr@VColor@@VCTileMeshFace@@X@@
 .?AV?$CConcreteToolAttr@VDegreeEuler@@VCModelDocAnimConstraintParent@@X@@
-.?AV?$CConcreteToolAttr@VDegreeEuler@@VCModelDocAnimForceBonePosition@@X@@
 .?AV?$CConcreteToolAttr@VDegreeEuler@@VCModelDocAnimOffset@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCMapNavLink@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCMapNode@@X@@
@@ -6099,6 +6113,7 @@ $})Hi
 .?AV?$CConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintBoneInput@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintSlave@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintTwist@@X@@
+.?AV?$CConcreteToolAttr@VQAngle@@VCModelDocAnimForceBonePosition@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCModelDocAttachmentBase@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCModelDocBaseBreakPiece@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCModelDocBaseParametricMeshOp@@X@@
@@ -7002,13 +7017,13 @@ $})Hi
 .?AV?$CModelDocAttr@VColor@@VCModelDocMeshModifier_MeshOpBakeTextureToVertexData@@@@
 .?AV?$CModelDocAttr@VColor@@VCModelDocVSNAPParticle@@@@
 .?AV?$CModelDocAttr@VDegreeEuler@@VCModelDocAnimConstraintParent@@@@
-.?AV?$CModelDocAttr@VDegreeEuler@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CModelDocAttr@VDegreeEuler@@VCModelDocAnimOffset@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocAnimConstraintAim@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocAnimConstraintAttachmentInput@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocAnimConstraintBoneInput@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocAnimConstraintSlave@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocAnimConstraintTwist@@@@
+.?AV?$CModelDocAttr@VQAngle@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocAttachmentBase@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocBaseBreakPiece@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocBaseParametricMeshOp@@@@
@@ -7189,12 +7204,12 @@ $})Hi
 .?AV?$CParallelLambdaJob@V<lambda_075aa57c40133d7dc9b81ece9500ed4a>@@@CParallelProcessLauncher@@
 .?AV?$CParallelLambdaJob@V<lambda_104fad39bdd1b5a2f4ac74e516ed02d2>@@@CParallelProcessLauncher@@
 .?AV?$CParallelLambdaJob@V<lambda_15d0b226922fb76cf7649a2875ecb3e2>@@@CParallelProcessLauncher@@
-.?AV?$CParallelLambdaJob@V<lambda_1cefafe28e24c16b3beba36563012fac>@@@CParallelProcessLauncher@@
 .?AV?$CParallelLambdaJob@V<lambda_1f4d384fc3d7c52b4750b41fd9f436b6>@@@CParallelProcessLauncher@@
 .?AV?$CParallelLambdaJob@V<lambda_31a85b668bc65ce94929e7f690bff118>@@@CParallelProcessLauncher@@
 .?AV?$CParallelLambdaJob@V<lambda_4527fb214ba2601e8e6ace0b3a3808c1>@@@CParallelProcessLauncher@@
 .?AV?$CParallelLambdaJob@V<lambda_7f65d9639fc34678bc587587969c7d7c>@@@CParallelProcessLauncher@@
 .?AV?$CParallelLambdaJob@V<lambda_a7afef70a578ae2b47aca8f03942e26a>@@@CParallelProcessLauncher@@
+.?AV?$CParallelLambdaJob@V<lambda_ecb62f1a89b9b7c670c681d926842822>@@@CParallelProcessLauncher@@
 .?AV?$CParallelLambdaJob@V<lambda_ecd22fb1041651b7d7f7d27d4d9b0a67>@@@CParallelProcessLauncher@@
 .?AV?$CParallelProcessorAbstract@V?$CParallelLoopProcessor@VFloatBitMap_t@@V?$CLoopMemberFuncJobItemProcessor@VFloatBitMap_t@@V1@V1@@@@@@@
 .?AV?$CParallelProcessorAbstract@V?$CParallelProcessor@HV?$CLambdaJobItemProcessor@H@@$00@@@@
@@ -7600,7 +7615,6 @@ $})Hi
 .?AV?$CToolAttrGetSetAccess@VColor@@VCModelDocVSNAPParticle@@@@
 .?AV?$CToolAttrGetSetAccess@VColor@@VCTileMeshFace@@@@
 .?AV?$CToolAttrGetSetAccess@VDegreeEuler@@VCModelDocAnimConstraintParent@@@@
-.?AV?$CToolAttrGetSetAccess@VDegreeEuler@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CToolAttrGetSetAccess@VDegreeEuler@@VCModelDocAnimOffset@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCMapNavLink@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCMapNode@@@@
@@ -7609,6 +7623,7 @@ $})Hi
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocAnimConstraintBoneInput@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocAnimConstraintSlave@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocAnimConstraintTwist@@@@
+.?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocAttachmentBase@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocBaseBreakPiece@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocBaseParametricMeshOp@@@@
@@ -8315,13 +8330,13 @@ $})Hi
 .?AV?$CValueAttributeWrapper@VColor@@VCModelDocMeshModifier_MeshOpBakeTextureToVertexData@@@@
 .?AV?$CValueAttributeWrapper@VColor@@VCModelDocVSNAPParticle@@@@
 .?AV?$CValueAttributeWrapper@VDegreeEuler@@VCModelDocAnimConstraintParent@@@@
-.?AV?$CValueAttributeWrapper@VDegreeEuler@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CValueAttributeWrapper@VDegreeEuler@@VCModelDocAnimOffset@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocAnimConstraintAim@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocAnimConstraintAttachmentInput@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocAnimConstraintBoneInput@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocAnimConstraintSlave@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocAnimConstraintTwist@@@@
+.?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocAttachmentBase@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocBaseBreakPiece@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocBaseParametricMeshOp@@@@
@@ -9016,6 +9031,7 @@ $})Hi
 .?AV?$_Func_impl_no_alloc@V<lambda_34476f123c6757c46fc2e0ac9e4e10ab>@@XPEAVCBindableCamera@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_344b379c9dc23465b3c2c82cadb0851c>@@XPEAVCBindableCamera@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_34957f38cd253c3da013fb00c1edc3f9>@@XPEAVCToolPolyFaceSelection@@@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_349db98dc3c24d36a5dd53a9a6f4d68d>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_34b62502a7f54ee330c5a7a023591f96>@@XPEAVCToolPainting@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_34c386364e74c96bb4d1c64a60dd4508>@@XPEAVCToolSelection@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_35203f8b027fb273b88653763d80449f>@@XPEAVCToolEdgeArc@@@std@@
@@ -9352,7 +9368,6 @@ $})Hi
 .?AV?$_Func_impl_no_alloc@V<lambda_737c77c5f4eacdf2c90ddfba23b37fd2>@@XPEAVCToolNavAreaSplit@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_73ab71cc9fd85dba627b415f4bfc58d5>@@XPEAVCGlobalHotkeyCommands@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_73ad385bcef56ec02c93290cabc96adb>@@XPEAVCQHammerEntityRelayWidget@@@std@@
-.?AV?$_Func_impl_no_alloc@V<lambda_73b039c5e2046e2106411e93162a52d5>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_73c0ac5664e589cd4ccb3e5f0f6ccfbe>@@XPEAVCHammerApp@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_7468de61332300ecf2b5f22a93a122ca>@@XPEAVCHammerEditorSession@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_74a6fce79cbfa12a1b6872e799a35e46>@@XPEAVCToolNavMeshPolyclip@@@std@@
@@ -12148,8 +12163,13 @@ $})Hi
 .xdata$x
 .~<u3D
 .~kfi
-/%yZ0
-/-R!)
+/	nexttoken
+/%e6b
+/%i`0
+/-;5b
+/-H#)
+/-W2b
+/-Wnp
 // 						"BA_INT_AMBUSH"		someone please define this - I have no idea what it does
 // 						"BA_INT_COMBAT"		break out of this anim if combat occurs in my line of sight (bullet hits, grenades, etc), -OR- the max time is reached
 // 						"BA_INT_DANGER"		break out of this anim only if threatened
@@ -12168,10 +12188,11 @@ $})Hi
 // %511s
 // Preview Lighting: %s
 /2GG>!B
+/5Q/=
+/5s&!
+/5w6b
+/5xgO
 /6riH
-/=<Vb
-/=m#)
-/=q!)
 />58d%
 /A@v'
 /AHs<
@@ -12232,8 +12253,9 @@ $})Hi
 08@HP
 08@HPX`hpx
 08@HR
-08@J@
+08@Jp
 0><[cZUg^>
+0@HSv
 0A;7}
 0A;ql
 0A\^[
@@ -12358,7 +12380,6 @@ $})Hi
 0L9NHt
 0L9|$Pt
 0L9|$Xt
-0Lc-?L
 0Lc1L
 0Lc1M
 0Lc2E3
@@ -13111,7 +13132,7 @@ $})Hi
 220323000000Z
 220801000000Z
 220921000000Z
-221203185125Z0/
+230112002128Z0/
 241009235959Z0a1
 255 255 255
 255 255 255 255
@@ -13279,7 +13300,7 @@ $})Hi
 333333
 3333333
 33333333H+
-333?333?333?333?(
+333?333?333?333?
 370322235959Z0c1
 3<$u?A
 3>N;kU
@@ -13371,7 +13392,6 @@ $})Hi
 4rHcE
 5%{>i
 5&YA1A
-5.8tS5
 52?n4
 5;Elu
 5;G$u
@@ -13380,7 +13400,6 @@ $})Hi
 5BppfA
 5D8sHu/H
 5FjiT
-5Omeg
 5YA1D
 5YA1H
 5YA1I
@@ -13791,7 +13810,6 @@ $})Hi
 ;... t
 ;.u1L
 ;1} H
-;;=hk
 ;>}sH
 ;A8u	;YH
 ;A`}0H
@@ -16932,6 +16950,7 @@ $})Hi
 @8<(u
 @8<0u
 @8<2u
+@8=41
 @8krt_
 @8kxt
 @8l$D
@@ -16972,6 +16991,8 @@ $})Hi
 @8}gt'A
 @8}pu"
 @8}wt5H
+@:5Ch4
+@:=s#6
 @:t$PH
 @:uBu
 @>%>b
@@ -17063,16 +17084,16 @@ $})Hi
 @A__[H
 @A__]
 @A__^
+@CMapPrefab CUtlMemoryPool
 @CStatic Overlay %s
 @D9AD
 @D9CD
 @DA9AD}
 @HPX&E
-@HV0u
 @Hc*H
 @Hc1H
 @Hc1M
-@Hc5W
+@Hc5w
 @Hc:3
 @HcAp3
 @HcD$0L
@@ -17088,6 +17109,7 @@ $})Hi
 @JcD9
 @L99t
 @L;d$p
+@Lc-O 
 @Lcq H
 @Mcg<M
 @PH+H(
@@ -19856,7 +19878,6 @@ CMapPhysicsPin
 CMapPhysicsPin CUtlMemoryPool
 CMapPoint CUtlMemoryPool
 CMapPrefab
-CMapPrefab CUtlMemoryPool
 CMapPrefabSubInstance
 CMapPrefabSubInstance CUtlMemoryPool
 CMapProp-%s.dmx
@@ -23957,6 +23978,7 @@ D$8Ii
 D$8KcD
 D$8L9
 D$8L;
+D$8Lc
 D$8Lc6Jc
 D$8Lc`
 D$8M+
@@ -24279,7 +24301,6 @@ D$[v_
 D$\+D$dA
 D$\D;
 D$\E3
-D$\Ic
 D$\u 
 D$`  
 D$`+D$tHc
@@ -24519,6 +24540,7 @@ D8$8u
 D8$9u
 D8$;u
 D8$>u
+D8%M;
 D8&t 
 D8&t4H
 D8't-
@@ -24537,7 +24559,6 @@ D8,8u
 D8,9u
 D8,:u
 D8,>u
-D8-MI
 D8.t<
 D8.tDH
 D80t	@
@@ -24559,7 +24580,6 @@ D8;tAH
 D8<2u
 D8<:u
 D8<;u
-D8=D2
 D8CqA
 D8D$9t
 D8D$Qt
@@ -24661,7 +24681,6 @@ D9*u*H
 D9+~=I
 D9+~?I
 D9,$D
-D9-m6E
 D9.~$M
 D9.~.A
 D9.~/
@@ -24674,12 +24693,9 @@ D91~dE3
 D92tp
 D92uAA
 D92~0A
-D95WX
 D98tL
 D99vz
-D9=1R
-D9=A9e
-D9=ym
+D9=@Ie
 D9>|$Hc
 D9>|%Hc
 D9?uDA
@@ -24847,9 +24863,13 @@ D:uAu
 D:|$-
 D:}Et
 D;	s6E
+D;%f;
+D;-v:
 D;0Hc
 D;0u[H
-D;=	L
+D;5U=
+D;=N>
+D;=yQ
 D;A0|
 D;AP|
 D;Ah|
@@ -26538,7 +26558,6 @@ E|$8D
 E|$HH
 E|$`H
 E|$pH
-E}c((
 F	D9l$ tj<
 F 9F tDA
 F 9F(r
@@ -26575,7 +26594,6 @@ F8|)8t
 F;|6P
 F<L9e@t
 F>qUxv
-F@8=4;c
 F@I9@ u	
 FABRIK
 FATAL
@@ -27732,26 +27750,27 @@ H9(t8
 H9(t|
 H9+t	H
 H9+udH
-H9-P!g
-H9-qw
-H9-x4f
-H9-ya
+H9-#:
+H9-6\^
+H9-AE
+H9-Cz:
+H9-V:f
+H9-_]^
 H9.t	H
 H9/t	H
 H91tB
 H92u{H
 H93t	H
-H95!	
-H95GXf
-H95S}<
+H95"I;
+H95,rQ
+H95bu?
 H97u+A
 H98tE
 H98teA
 H98tjA
 H99tjH
 H9;t	H
-H9=Eae
-H9=a`r
+H9=1pr
 H9>t	H
 H9A s
 H9A(u
@@ -28201,6 +28220,7 @@ Hc/E3
 Hc2E3
 Hc3D+
 Hc3D;
+Hc5F(;
 Hc99:
 Hc9E3
 Hc9Icw
@@ -29698,6 +29718,7 @@ JPEG datastream contains no image
 JPEG parameter struct mismatch: library thinks size is %u, caller expects %u
 JPEGMEM
 JSType
+Jan 11 2023
 January
 Jc4!f
 Jc<>H
@@ -29966,7 +29987,6 @@ L$(Lk
 L$(Mc
 L$(fH
 L$(fI
-L$(fff
 L$(t'H
 L$,9HH
 L$,A;
@@ -30340,34 +30360,32 @@ L6,E3
 L9 ty
 L9#t	H
 L9$9u)A
+L9%Lu
+L9%pl
 L9't	H
 L9+t	H
 L9,2H
 L9,9u-Hc
 L9,:H
-L9-z.
+L9-l3
 L93t	H
 L94:H
-L95(,G
-L95-zX
-L952oR
-L95KyX
-L95[_L
-L95sa
-L95xbe
+L95,j
+L95,vR
+L95ruR
 L96thH
 L97t	H
 L98t"
 L9;t	H
 L9<:H
-L9= #
-L9= Q
-L9=')
-L9=7&
-L9=['
-L9=w%
-L9=y_
-L9=y`
+L9=+)
+L9=><I
+L9=@!
+L9=G'
+L9=P,
+L9=W$
+L9=g/
+L9={%
 L9>t	H
 L9?t	H
 L9@ s
@@ -30701,7 +30719,6 @@ Lc3D;s
 Lc3Hc
 Lc42I
 Lc43A
-Lc5]r
 Lc6D;v
 Lc6Hc
 Lc6Lc
@@ -31817,6 +31834,7 @@ Maximum segment length %
 Maximum slope on which the target will be placed.
 Maximum supported image dimension is %u pixels
 Maxmimum length of the trace. Surfaces beyond this distance will not be hit, if no surface is hit the transform won't be adjusted.
+MbP?p
 Mc&E;f
 Mc&Hc
 Mc'Lc
@@ -32667,7 +32685,6 @@ Note: The soundevent you've selected is not in this games mod. You'll need to co
 Note: This is the list of currently-resident sound events, and may differ set of events available during a running game.
 Nothing to merge, all faces belong to a single mesh
 Notify Children
-Nov  3 2022
 November
 NpHcFh
 Nudge
@@ -33295,7 +33312,7 @@ P(Lc}
 P(f!k
 P(fD!k*H
 P(fD!|
-P08@J@
+P08@Jp
 P0A;E
 P0I;P8t
 P0Lco 3
@@ -36779,16 +36796,14 @@ T$xLc
 T$xLc,
 T$xM;
 T$xfff
-T%"Mb
-T%)1b
-T%L ~
 T&hreads:
+T-C5b
 T0<A#
 T1TA#
 T2XHc
+T5O6_
 T6@Hc
 T<0E3
-T=Z/_
 T?parent@QStandardItem@@QEBAPEAV1@XZ
 T?parent@QStandardItemModel@@UEBA?AVQModelIndex@@AEBV2@@Z
 T?pos@QCursor@@SA?AVQPoint@@XZ
@@ -38548,13 +38563,12 @@ W ?toolTip@QGraphicsItem@@QEBA?AVQString@@XZ
 W fff
 W(IcH
 W)?SetRotation@FbxTexture@fbxsdk@@QEAAXNNN@Z
-W-<q:
-W-uNb
+W-|v:
 W0]7L
 W0]7M
 W1-x]1
-W57W4
-W5~X4
+W5<$y
+W5g\4
 W?reset@QTransform@@QEAAXXZ
 W?rowCount@QStandardItem@@QEBAHXZ
 W?rowCount@QStandardItemModel@@UEBAHAEBVQModelIndex@@@Z
@@ -38817,11 +38831,8 @@ X VWATH
 X axis scaling Scalar field
 X offset of center point
 X!t5~
-X-%za
-X-mNb
-X5CW%
-X5Q~Q
-X5arJ
+X-V c
+X5C^%
 X?setBrush@QPainter@@QEAAXAEBVQBrush@@@Z
 X?setBrush@QPainter@@QEAAXW4BrushStyle@Qt@@@Z
 X?setBrush@QPalette@@QEAAXW4ColorGroup@1@W4ColorRole@1@AEBVQBrush@@@Z
@@ -38937,27 +38948,29 @@ X|$hD
 Y - Left
 Y axis scaling Scalar field
 Y offset of center point
-Y%_$x
-Y%o<x
-Y%~n"
+Y%/*x
+Y%?Bx
+Y%^1b
+Y%p9x
+Y%wRb
+Y%x*=
+Y%~u"
 Y(Hcy
-Y-<}X
-Y-eNb
+Y-}Sb
 Y0HcR
-Y5 nJ
-Y5$jp
-Y5'Vb
-Y56lJ
-Y5E`y
-Y5Ekp
-Y5FH5
-Y5OZ%
-Y5`fn
-Y5wCB
-Y5|lp
+Y56kn
+Y57TB
+Y5D	G
+Y5F)D
+Y5FN5
+Y5FX^
+Y5Oa%
+Y5]bL
+Y5dop
 Y8HcA0H
 Y8~tH
-Y=KSb
+Y=UwL
+Y=V>I
 Y>kX>M
 Y?setData@QStandardItem@@UEAAXAEBVQVariant@@H@Z
 Y?setData@QStandardItemModel@@UEAA_NAEBVQModelIndex@@AEBVQVariant@@H@Z
@@ -38999,7 +39012,6 @@ YD$|H
 YD9xluSD9
 YL$ A
 YL$(E
-YL$0A
 YL$8A
 YL$8E
 YL$DA
@@ -39145,7 +39157,7 @@ Zpm"U
 [?setText@QClipboard@@QEAAXAEBVQString@@W4Mode@1@@Z
 [?setText@QStandardItem@@QEAAXAEBVQString@@@Z
 [?setTexture@QBrush@@QEAAXAEBVQPixmap@@@Z
-[@8=4W
+[@8=dg
 [FbxSystem
 [Inactive]
 [Index: 
@@ -39157,7 +39169,6 @@ Zpm"U
 [hA;n
 [lazy = true] can only be specified for submessage fields.
 [packed = true] can only be specified for repeated primitive fields.
-[|tc_
 \ u&H9
 \$ =... 
 \$ @8t$(
@@ -39553,14 +39564,9 @@ Zpm"U
 \$xu=M
 \$xv.
 \$|L+
-\%O0b
-\%s-b
 \) HcD)
 \)TA#
-\5:qC
-\=FUb
-\=mrJ
-\=}eJ
+\==vJ
 \?setTransform@QPainter@@QEAAXAEBVQTransform@@_N@Z
 \?setWeight@QFont@@QEAAXH@Z
 \?setWidth@QPainterPathStroker@@QEAAXN@Z
@@ -39628,16 +39634,12 @@ Zpm"U
 ] tLH
 ]'H9]
 ])6M>&
-]-&Hy
 ]0A+_
 ]0IcE
 ]0IcM@A
 ]0tKH
 ]0tLH
-]56~Q
-]5Hkp
-]5elp
-]5jmp
+]5-% 
 ]8Hc}0H
 ]8tIH
 ]>)2X
@@ -39647,7 +39649,6 @@ Zpm"U
 ]Hu2M
 ]J<0"0i3
 ]L$xA
-]LjSq
 ]Lu1A
 ]PHc}HH
 ]T$PA
@@ -39656,7 +39657,6 @@ Zpm"U
 ]XHcEPH
 ]XHcI
 ]\$tL
-]\%V)C
 ]`H9|$0t
 ]`t	H
 ]`|EH
@@ -39686,6 +39686,7 @@ Zpm"U
 ^hIcF`Hi
 ^oEZ_
 _ HcW(H
+_%$	"
 _%s.tmp
 _(HcG H
 _0HcG(H
@@ -39725,15 +39726,6 @@ _V_ExtractFilePath
 _V_FileBase
 _V_FixupPathName
 _V_SetExtension
-_V_StringAfterPrefix
-_V_StringAfterPrefixCaseSensitive
-_V_StripExtension
-_V_StripLastDir
-_V_strEndsWith
-_V_strncat
-_V_strncmp
-_V_strncpy
-_V_strnicmp_fast
 _XHcGPH
 _\$$E
 _\$4E
@@ -40032,6 +40024,7 @@ ai_nav_link_area
 aimOffset
 aim_offset
 ajarangle
+algjE
 algorithm
 aliases
 alignToAxis
@@ -40258,6 +40251,7 @@ atan2
 ati_compress_wrapper.dll
 attach
 attach_point
+attached_prop_physics
 attachment
 attachment to follow
 attachment_key
@@ -41437,6 +41431,7 @@ disabledInLowQuality
 disableflashlight
 disableinlowquality
 disablemerging
+disablemultiplegravitygrab
 disablereceiveshadows
 disableselfshadowing
 disableshadowdepth
@@ -42002,9 +41997,9 @@ falloff_right
 false
 false"
 false:7
+false:<
 false:=
 false:?
-false:@
 farz_override
 farzscale
 fast_strobe
@@ -42278,9 +42273,6 @@ g %4096s
 g cMesh
 g default
 g,1fA
-g_Mathlib_GammaToLinearByteTable
-g_TSPointerListNodes
-g_VProfCurrentProfile
 g_f1024InchHighlight
 g_f64InchHighlight
 g_flBrightnessExposureBias
@@ -42808,7 +42800,9 @@ grassOpacity
 grassParams
 grass_exclusion_radius
 gravity
+gravity_grab_priority
 gravity_z
+gravitygrabignoremassandsize
 green
 gridHeight
 gridWidth
@@ -43147,6 +43141,7 @@ iBackPlane
 iD$x1'
 iG(1'
 iGridIntensity
+iMTmK
 iNewValueIn
 iUndoLevels
 iValueChanged
@@ -43390,6 +43385,7 @@ iszString
 itemFile
 itemFileKeys
 item_def
+item_item_crate
 item_name
 item_replace
 items
@@ -46857,7 +46853,7 @@ model_subkey
 modelanimevent
 modelbreakcommand
 modelconfig
-modeldoc31
+modeldoc32
 modeldoc_editor
 modeldoc_utils
 modeldocattr
@@ -46931,7 +46927,6 @@ n	D8n
 n03>Pu
 n0H9n
 n0Lc;A
-n48S5#
 n4Lc;A
 nAlignMode
 nAlpha
@@ -47226,12 +47221,14 @@ numchannels
 numframes
 n|$`fA
 o 	E3
-o%9*<
-o%?HK
+o%!.<
+o%/NK
+o%^Tb
+o%y/<
 o0L9s0t
-o5	{"
-o5u^"
+o5ue"
 o8L9s8t
+o=Z:a
 o@H9)t
 o@Hcw
 oD$ H
@@ -47453,10 +47450,9 @@ p WATAWH
 p WAVAWH
 p"?value@QSpinBox@@QEBAHXZ
 p-o'H
-p08@H^
+p08@H^$
 p4 fstat -Op %s
 p;>}	H
-p?0;g
 p@%d ;
 p@Evt@
 pA\[]
@@ -47639,7 +47635,7 @@ pathnode
 pathnodeclass
 pattern
 payload_path_marker
-pb@U-
+pbpU-
 pdLcd$ H
 pdLc|$ H
 peak_attr
@@ -47848,6 +47844,7 @@ prop_physics
 prop_physics_clientside
 prop_physics_multiplayer
 prop_physics_override
+prop_physics_respawnable
 prop_static
 prop_static_missing_model
 propdataname
@@ -48205,7 +48202,7 @@ s ;7}VH
 s AVH
 s AWH
 s H93t	H
-s H95Zr;
+s H95:x;
 s H9s
 s L93t	H
 s L9e
@@ -48230,6 +48227,7 @@ s0u!H
 s1 env_sprite material
 s1_mapname
 s4+sP+
+s5w>Y
 s7fff
 s89sH|AH
 s8H9s
@@ -48851,6 +48849,7 @@ static_collision
 static_prop
 status
 steamid
+steamlearn_count
 steamml_is_timestamp
 steamml_max_entries
 stepValue
@@ -48994,7 +48993,7 @@ t$ AVAW
 t$ AVAWH
 t$ AVAWf
 t$ AVH
-t$ AVHc- 
+t$ AVHc-`
 t$ AVL
 t$ AW
 t$ AWH
@@ -49359,7 +49358,7 @@ t$P9E
 t$P9\$`~"H
 t$P9}
 t$P@2
-t$P@:59
+t$P@:5i
 t$PA8
 t$PA9t$
 t$PA;]
@@ -49733,7 +49732,7 @@ t9D;G`s3H
 t9D;Y
 t9H9\$Xt
 t9fff
-t:Hc5
+t:Hc5=
 t:HcPxE3
 t;A;T$
 t;D8`
@@ -49896,7 +49895,7 @@ tID;s`sCI
 tIHcA
 tIHcC
 tIHc|$(
-tIL9-*
+tIL9-j
 tIL9j
 tIf9wbH
 tJ;Q(sEI
@@ -50281,7 +50280,7 @@ t];VhsXH
 t];VhsXI
 t];W`sXH
 t];{hsXI
-t]@8-5W
+t]@8-eg
 t]A;Q`sWI
 t]A;R sWI
 t]A;T$`sVI
@@ -51283,6 +51282,7 @@ up_type
 up_vector
 updateButtons
 upfff
+uq<xc
 use animation rate as FPS
 use bones instead of hitboxes
 use existing particle count
@@ -51696,6 +51696,7 @@ wvaMH
 wvaML
 www.digicert.com1!0
 www.digicert.com1$0"
+wx)`z
 x 1u(H
 x ;^`}
 x A;]

@@ -1,5 +1,4 @@
 					
-		g_pMemAlloc
 	!s99
 	8@HPX`hpx
 	CODE_SIZE
@@ -10,11 +9,11 @@
 	TYPE_BOOL
 	TYPE_ENUM
 	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
+	_V_strncpy
 	enum_type
 	extension
 	fD;S
-	g_bUpdateStringTokenDatabase
-	g_pThreadPool
+	g_VProfCurrentProfile
 	host_loss
 	json_name
 	kE>fvw
@@ -59,11 +58,12 @@
  '%s'
  'L>[
  (08@HPX`hpx
- (08@HPX`j
- (08@HPZ
- (08@HR`
+ (08@HPX`j .
+ (08@HPZ .
+ (08@HR
  (08@J
- (08@J`
+ (08@J .
+ (0: .
  ... }
  0"r$4&
  = { <proto text format> }". To set fields within it, use syntax like "
@@ -179,6 +179,7 @@
 !NETWORK_DISCONNECT_REMOTE_TIMEOUT
 !hn7!
 !host_framestarttime_std_deviation
+"	g_bUpdateStringTokenDatabase
 " because it is missing required fields: 
 " conflicts with field "
 " conflicts with the existing symbol "
@@ -262,7 +263,6 @@
 ##GameUI_Disconnect_BadRelayPassword
 ##GameUI_Disconnect_ReliableOverflow
 ##GameUI_Disconnect_SnapshotOverflow
-#1&&+
 #GameUI_ClientConsistencyFail
 #GameUI_ClientDifferentMap
 #GameUI_ClientNoMap
@@ -312,7 +312,6 @@
 #Valve_Reject_Background_Map
 #Valve_Reject_Hidden_Game
 #Valve_Reject_Single_Player
-#hBm@:
 $#GameUI_Disconnect_BadServerPassword
 $#GameUI_Disconnect_ConnectionFailure
 $#GameUI_Disconnect_MessageParseError
@@ -612,6 +611,7 @@ $schemasystem/schema_enable_defines.h
 )|$pD
 )|$pff
 )|B?d!
+*	g_pMemAlloc
 *#GameUI_Disconnect_LocalProblem_ManyRelays
 *H+H0H
 *H+H0I
@@ -665,6 +665,7 @@ $schemasystem/schema_enable_defines.h
 -sse2
 -sse3
 -sse4
+.	g_pThreadPool
 ...<truncated>...
 ..om?
 .00cfg
@@ -881,8 +882,8 @@ $schemasystem/schema_enable_defines.h
 0123456789abcdefghijklmnopqrstuvwxyz
 08@HP
 08@HPX`hpx
-08@HR
-08@J`
+08@HR .
+08@J .
 0><[cZUg^>
 0A;ql
 0A\_]
@@ -931,8 +932,9 @@ $schemasystem/schema_enable_defines.h
 220323000000Z
 220801000000Z
 220921000000Z
-221203185002Z0/
+230112002048Z0/
 241009235959Z0a1
+2A	3&<
 2DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA
 2DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA0
 2F4R2P6
@@ -951,6 +953,7 @@ $schemasystem/schema_enable_defines.h
 3mq+<
 4(6 8(:,<(>
 456789:;<=
+4XF-k
 4http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0
 5;Elu
 5;G$u
@@ -965,6 +968,7 @@ $schemasystem/schema_enable_defines.h
 80tWD
 80u(H
 8@HP.
+8@J .
 8A*tAH
 8A;E$u
 8A;E<u
@@ -1202,6 +1206,7 @@ $schemasystem/schema_enable_defines.h
 @D9CD
 @DA9AD}
 @HPX&E
+@HV h
 @Hc)3
 @HciXM
 @PH+H(
@@ -1325,12 +1330,13 @@ A>l$/
 A>pP&
 A@L;B
 AA,A$
-AA:@8
+AA:p8
 AA<Fu
 AABB_t
 ABCDEFGHIJKLMNOPQRSTUVWXYZ
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
+ACCwJ
 AD9CD
 ADA9@D}	L
 ADA9BD}GH
@@ -1460,6 +1466,7 @@ C H;W
 C(D9C0D
 C0HcH
 C4;C8}
+C4sA/
 C5R?	
 C83G0%
 C847u
@@ -2273,11 +2280,10 @@ H+x@H
 H33M3
 H8Lc$
 H9(t8
-H95QW
-H95uW
+H95%W
 H97u+A
 H99tjH
-H9=z 
+H9=J 
 H9A s
 H9C`u
 H9D$P
@@ -2662,7 +2668,6 @@ L9sPu H
 L9{0u	
 L9|$0
 L9|$@u
-L;54X
 L;A r
 L;Q s
 L;c u
@@ -2911,6 +2916,7 @@ OBJECT_TYPE_WORLDSPACE_TEXURE_BLEND
 ODD;HD
 OF>;^
 OH+WP
+O[^>\
 O`+Wh
 O`HcWXD
 ObjectTypeFlags_t
@@ -2925,7 +2931,7 @@ Option must have a name.
 Option must not use reserved name "uninterpreted_option".
 Ordered constructor wrapped type has no default constructor.
 Outside detection took %.2f seconds
-P08@J`
+P08@J
 P0I;P8t
 P>q_Y~
 P@HPX`h
@@ -2947,6 +2953,7 @@ PD;N0|
 PD;Ox|
 PLACEHOLDER_VALUE
 PX`hpx
+PXo04}P
 PanoramaTextServices001
 PanoramaUIClient001
 PanoramaUIEngine001
@@ -2974,7 +2981,6 @@ Protocol Buffer reflection usage error:
 Q5rHg,>
 QueryPerformanceCounter
 RB dL
-RSDS$
 RaiseException
 Ran out of cluster sets (%u), there may be vis errors close to some geometry
 RandomFloat
@@ -3438,6 +3444,7 @@ Y>kX>M
 YD$@f
 YL$0D
 You must build with -world before you can build with -vis!  Couldn't find raytrace.rte
+ZRNp}
 Z\>z8
 Zod(^?
 [*ncd>0
@@ -3542,7 +3549,6 @@ Zod(^?
 _8I;_@t
 _8M9g(u\
 _RDATA
-_V_strncpy
 _X;G8|
 __based(
 __cdecl
@@ -3737,9 +3743,9 @@ fakeplayer
 false
 false"
 false:7
+false:<
 false:=
 false:?
-false:@
 fffff
 ffffff
 fffffff
@@ -3755,7 +3761,6 @@ float
 float32
 float64
 function not supported
-g_VProfCurrentProfile
 game\
 gamemode
 generic
@@ -3899,6 +3904,7 @@ m0D9V,
 m0D;F,}
 m0k0$
 mL+7H
+mZEyg
 m_ChildNodeIndices
 m_Format
 m_VisClusterMemberBits
@@ -4120,7 +4126,7 @@ p AVH
 p UATAUAVAWH
 p UWAUAVAWH
 p WAVAWH
-p08@H^
+p08@H^H
 p;>}	H
 pA]A\^][
 pA^_]
@@ -4211,6 +4217,7 @@ spawngroupparenthandle
 start
 state not recoverable
 steamid
+steamlearn_count
 steamml_is_timestamp
 steamml_max_entries
 stream timeout
@@ -4445,6 +4452,7 @@ xWI96tRI
 x_^][
 y(Lc7E
 y(Lc?E
+y4D\P
 y\PD>!
 zY;>u:m	
 { AVH

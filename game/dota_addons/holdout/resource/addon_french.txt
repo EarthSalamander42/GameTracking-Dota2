@@ -705,7 +705,7 @@
 		"DOTA_Tooltip_ability_templar_assassin_refraction_holdout_Lore"				"Manipulant son voile psychique, Lanaya force les lois de la nature à obéir à sa volonté."
 		"DOTA_Tooltip_ability_templar_assassin_refraction_holdout_Description"		"Templar Assassin crée un champ de force défensif autour d'elle, qui absorbe les dégâts tout en lui accordant un bonus de dégâts."
 		"DOTA_Tooltip_ability_templar_assassin_refraction_holdout_Note0"			"Les dégâts de type « retrait de PV » ne sont pas bloqués par Deflection."
-		"DOTA_Tooltip_ability_templar_assassin_refraction_holdout_damage_absorb"	"%ABSORPTION DES DÉGÂTS :"
+		"DOTA_Tooltip_ability_templar_assassin_refraction_holdout_damage_absorb"	"%DÉGÂTS ABSORBÉS :"
 		"DOTA_Tooltip_ability_templar_assassin_refraction_holdout_bonus_damage"		"%DÉGÂTS BONUS :"
 		"DOTA_Tooltip_ability_templar_assassin_refraction_holdout_duration"			"DURÉE :"
 
@@ -904,7 +904,7 @@
 		"DOTA_Tooltip_ability_sniper_assassinate_dm2017_scepter_description"				"Transforme Assassinate en une capacité avec un ciblage de zone. Après la période de canalisation, attaque les unités dans la zone cible."
 
 		"DOTA_Tooltip_ability_tiny_trample"								"Trample"
-		"DOTA_Tooltip_ability_tiny_trample_Description"					"Tiny s'élance et piétine les unités ennemies. Il gagne de la vitesse de mouvement bonus et ignore les collisions avec les autres unités. Les unités ennemies piétinées par Tiny sont étourdies et subissent une partie de ses dégâts d'attaque."
+		"DOTA_Tooltip_ability_tiny_trample_Description"					"Tiny s'élance et piétine les unités ennemies. Il se déplace plus rapidement et ignore les obstacles. Les unités ennemies piétinées par Tiny sont étourdies et subissent une partie de ses dégâts d'attaque."
 		"DOTA_Tooltip_ability_tiny_trample_attack_factor_tooltip"		"%DÉGÂTS D'ATTAQUE :"
 		"DOTA_Tooltip_ability_tiny_trample_bonus_movespeed_pct"			"%VITESSE DE DÉPLACEMENT BONUS :"
 		"DOTA_Tooltip_ability_tiny_trample_duration"					"DURÉE DU PIÉTINEMENT :"

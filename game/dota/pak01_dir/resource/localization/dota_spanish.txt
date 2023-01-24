@@ -12633,6 +12633,9 @@ Tres días de partidas eliminatorias a doble grupo aguardan a jugadores y fans, 
 		"DOTA_Style_qop_2022_immortal_legs_0"	"Eminencia"
 		"DOTA_Style_qop_2022_immortal_legs_1"	"Real"
 
+		"DOTA_Item_Frightful_Revelries_0"	"Festines Espantosos"
+		"DOTA_Item_Frightful_Revelries_1"	"Noche de Cosecha"
+
 
 //DOTA_ITEM_STYLES_END
 //DOTA_ITEM_STYLE_END
@@ -12723,7 +12726,7 @@ Tres días de partidas eliminatorias a doble grupo aguardan a jugadores y fans, 
 
 		"DOTA_CoachMenu_RequestCoachTitle"				"Recibir entrenamiento privado"
 		"DOTA_CoachMenu_RequestCoachHelp"				"Pídele ayuda a un jugador de Dota experimentado.<br><br>Los entrenadores verán una lista de jugadores para determinar si necesitan asistencia."
-		"DOTA_CoachMenu_RequestCoachText"				"¿Necesitas ayuda? Pídele asistencia personalizada un jugador experimentado de Dota."
+		"DOTA_CoachMenu_RequestCoachText"				"¿Necesitas ayuda? Pídele asistencia personalizada a un jugador experimentado de Dota."
 		"DOTA_CoachMenu_RequestCoachButton"				"Solicitar un entrenador"
 		"DOTA_CoachMenu_PlayWithCoachText"				"Jugar con un entrenador"
 
@@ -15305,9 +15308,8 @@ Burla especial de Techies"
 		"DOTA_TrophyName_International2022BattlePass_CavernChallenge"	"Recompensa de Aventura de la Gruta"
 		"DOTA_TrophyDesc_International2022BattlePass_CavernChallenge"	"Sets de héroe de Aventura de la Gruta reclamados en el pase de batalla de 2022"
 
-
 		"DOTA_TrophyName_MVPTrophy"						"Trofeo al JMV"
-		"DOTA_TrophyDesc_MVPTrophy"						"Conmemora la cantidad de veces que has sido votado como Jugador Más Valioso de la partida."
+		"DOTA_TrophyDesc_MVPTrophy"						"Conmemora la cantidad de veces que has sido galardonado como Jugador Más Valioso de la partida."
 		"DOTA_TrophyUnits_MVP:p"						"%s1 galardón al JMV#|#%s1 galardones al JMV"
 
 		"DOTA_TrophyName_TI6SeasonalMMR_Solo"			"Máxima Clasificación en Solitario en The International 2016"
@@ -20391,7 +20393,7 @@ Burla especial de Techies"
 		"DOTA_ChallengeDesc_Phoenix_Stun_With_Supernova"   "Aturde a un total de <font color='#ffffff'>%s1</font> héroes enemigos con <font color='#ffffff'>Supernova</font>"
 		"DOTA_ChallengeDesc_Razor_Damage_On_Static_Linked"   "Causa <font color='#ffffff'>%s1</font> de daño a los héroes enemigos drenados por <font color='#ffffff'>Vínculo Estático</font>"
 		"DOTA_ChallengeDesc_Razor_DamageWithUnstableCurrent"   "Inflige <font color='#ffffff'>%s1</font> de daño a héroes enemigos con <font color='#ffffff'>Corriente Inestable</font>"
-		"DOTA_ChallengeDesc_ShadowDemon_KillsUnderSoulCatcher"   "Mata o ayuda a matar a <font color='#ffffff'>%s1</font> héroes enemigos afectados por <font color='#ffffff'>Cazador de Almas</font>."
+		"DOTA_ChallengeDesc_ShadowDemon_KillsUnderDisseminate"   "Mata o ayuda a matar a <font color='#ffffff'>%s1</font> héroes enemigos afectados por <font color='#ffffff'>Diseminar</font>."
 
 
 
@@ -21502,8 +21504,8 @@ Burla especial de Techies"
 	"DOTAAbilityDraft_Ultimates_Label" 	"Habilidades definitivas"
 	"DOTAAbilityDraft_Picking_Next" 	"Siguiente selección"
 
-	"DOTAAbilityDraft_Tooltip_Health" 	"Vida inicial: <span class=\"BaseAttributeValue\">{d:max_health}</span> ({s:health_regen} regeneración)"
-	"DOTAAbilityDraft_Tooltip_Mana" 	"Maná inicial: <span class=\"BaseAttributeValue\">{d:max_mana}</span> ({s:mana_regen} regeneración)"
+	"DOTAAbilityDraft_Tooltip_Health" 	"Vida inicial: <span class=\"BaseAttributeValue\">{d:max_health}</span> ({s:health_regen} de regeneración)"
+	"DOTAAbilityDraft_Tooltip_Mana" 	"Maná inicial: <span class=\"BaseAttributeValue\">{d:max_mana}</span> ({s:mana_regen} de regeneración)"
 	"DOTAAbilityDraft_Tooltip_Speed" 	"Velocidad de movimiento: <span class=\"BaseAttributeValue\">{d:movement_speed}</span>"
 
 	"DOTA_GameMode_0"		"Elección libre"
@@ -21708,15 +21710,15 @@ Para unirte como jugador experimentado, debes tener al menos {d:new_player_req_g
 	"DOTA_ChatMessage_Emote"				"<span class=\"{s:target_class} {s:sender_class} {s:visitor_class}\"><span class=\"ChatTarget\">[{s:target}]</span> <span class=\"ChatPersona\">{s:event_crest}{s:battle_cup_icon}{s:new_player_icon}{s:persona}</span> {g:dota_filtered_string:message}</span>"
 	"DOTA_ChatMessage_Default_NoTarget"		"<span class=\"{s:target_class} {s:sender_class} {s:visitor_class}\"><span class=\"ChatPersona\">{s:event_crest}{s:battle_cup_icon}{s:new_player_icon}{s:persona}</span>: {g:dota_filtered_string:message}</span>"
 	"DOTA_ChatMessage_Emote_NoTarget"		"<span class=\"{s:target_class} {s:sender_class} {s:visitor_class}\"><span class=\"ChatPersona\">{s:event_crest}{s:battle_cup_icon}{s:new_player_icon}{s:persona}</span> {g:dota_filtered_string:message}</span>"
-	"DOTA_ChatMessage_WhisperTo"			"<span class=\"{s:target_class} {s:sender_class} {s:visitor_class}\">Para <span class=\"ChatPersona\">{s:event_crest}{s:persona}</span>: {g:dota_filtered_string:message}</span>"
+	"DOTA_ChatMessage_WhisperTo"			"<span class=\"{s:target_class} {s:sender_class} {s:visitor_class}\">Para <span class=\"ChatPersona\">{s:event_crest}{s:battle_cup_icon}{s:persona}</span>: {g:dota_filtered_string:message}</span>"
 	"DOTA_ChatMessage_WhisperFrom"			"<span class=\"{s:target_class} {s:sender_class} {s:visitor_class}\">De <span class=\"ChatPersona\">{s:event_crest}{s:battle_cup_icon}{s:persona}</span>: {g:dota_filtered_string:message}</span>"
 	"DOTA_ChatMessage_System"				"<span class=\"{s:target_class} {s:sender_class} {s:visitor_class}\"><span class=\"ChatTarget\">({s:target})</span>: {g:dota_filtered_string:message}</span>"
 	"DOTA_ChatMessage_SystemTerse"			"<span class=\"{s:target_class} {s:sender_class} {s:visitor_class}\">{g:dota_filtered_string:message}</span>"
-	"DOTA_ChatMessage_Hud"					"{s:hero_badge_icon}{s:hero_icon}[{s:target}] {s:event_crest}{s:battle_cup_icon}{s:new_player_icon}{s:persona}: {g:dota_filtered_string:message}"
-	"DOTA_ChatMessage_HudAll"				"{s:hero_badge_icon}{s:hero_icon} {s:event_crest}{s:battle_cup_icon}{s:new_player_icon}{s:persona}: {g:dota_filtered_string:message}"
+	"DOTA_ChatMessage_Hud"					"<span class=\"{s:target_class} {s:sender_class} {s:visitor_class}\">{s:hero_badge_icon}{s:hero_icon}<span class=\"ChatTarget\">[{s:target}] <span class=\"ChatPersona\"><span class=\"{s:player_color_class}\">{s:event_crest}{s:battle_cup_icon}{s:new_player_icon}{s:persona}</span></span></span>: {g:dota_filtered_string:message}</span>"
+	"DOTA_ChatMessage_HudAll"				"<span class=\"{s:target_class} {s:sender_class} {s:visitor_class}\">{s:hero_badge_icon}{s:hero_icon}<span class=\"ChatTarget\"> <span class=\"ChatPersona\"><span class=\"{s:player_color_class}\">{s:event_crest}{s:battle_cup_icon}{s:new_player_icon}{s:persona}</span></span></span>: {g:dota_filtered_string:message}</span>"
 	"DOTA_ChatMessage_HudTerse"				"<span class=\"{s:target_class} {s:sender_class} {s:visitor_class}\">{g:dota_filtered_string:message}</span>"
-	"DOTA_ChatMessage_HudEmote"				"<span class=\"{s:target_class} {s:sender_class} {s:visitor_class}\">{s:hero_badge_icon}{s:hero_icon}<span class=\"ChatPersona\">{s:event_crest}{s:battle_cup_icon}{s:persona}</span> {g:dota_filtered_string:message}</span>"
-	"DOTA_ChatMessage_HudOtherChannel"		"<span class=\"{s:target_class} {s:sender_class} {s:visitor_class}\"><span class=\"ChatTarget\">[{s:target}] <span class=\"ChatPersona\"><span class=\"{s:player_color_class}\">{s:event_crest}{s:battle_cup_icon}{s:persona}</span></span></span>: {g:dota_filtered_string:message}</span>"
+	"DOTA_ChatMessage_HudEmote"				"<span class=\"{s:target_class} {s:sender_class} {s:visitor_class}\">{s:hero_badge_icon}{s:hero_icon}<span class=\"ChatPersona\">{s:event_crest}{s:battle_cup_icon}{s:new_player_icon}{s:persona}</span> {g:dota_filtered_string:message}</span>"
+	"DOTA_ChatMessage_HudOtherChannel"		"<span class=\"{s:target_class} {s:sender_class} {s:visitor_class}\"><span class=\"ChatTarget\">[{s:target}] <span class=\"ChatPersona\"><span class=\"{s:player_color_class}\">{s:event_crest}{s:battle_cup_icon}{s:new_player_icon}{s:persona}</span></span></span>: {g:dota_filtered_string:message}</span>"
 
 	"DOTA_ChatTarget_Format_Default"		"{g:dota_filtered_string:target}"
 	"DOTA_ChatTarget_Prompt_Default"		"A ({g:dota_filtered_string:target}):"
@@ -24956,6 +24958,7 @@ Para unirte como jugador experimentado, debes tener al menos {d:new_player_req_g
 	"DOTA_HeroRole_Description_Pusher"		"Puede asediar y destruir rápidamente torres y barracones en cualquier momento de la partida."
 	"DOTA_HeroRole_Description_Initiator"	"Bueno iniciando peleas de equipo."
 
+	"DOTA_HeroTags"							"Etiquetas"
     "DOTA_HeroGrid_Sort_By"                        "Ordenar por:"
 
 	"DOTA_HeroGrid_Loading"						"Cargando cuadrícula de héroes..."
@@ -26141,6 +26144,7 @@ Para unirte como jugador experimentado, debes tener al menos {d:new_player_req_g
 
 	"DOTA_ChangeLog_TI9AllStarVoting" "Ya ha comenzado la votación para la partida All Star de TI9"
 	"DOTA_ChangeLog_TI0CompendiumEnded" "El Compendio de The International 2021 ha finalizado. Haz clic aquí para ver los resultados finales."
+	"DOTA_ChangeLog_BP2022Ended" "El pase de batalla de 2022 ha terminado. Haz clic aquí para reclamar las recompensas finales."
 
 	"DOTA_GlobalLiveSpectatorChat_Title"			"Nueva función - Chat de espectadores global en vivo"
 	"DOTA_GlobalLiveSpectatorChat_Details"			"No hace falta que estés en el KeyArena para disfrutar de The International junto a los cientos de miles de asistentes. Hemos aumentado la capacidad del chat de espectadores del juego y ahora un mismo canal puede albergar a una gran cantidad de ellos. Además puedes acceder al canal de chat de espectadores desde la nueva pestaña Partida en curso en la ventana de chat del menú."
@@ -26365,6 +26369,9 @@ Para unirte como jugador experimentado, debes tener al menos {d:new_player_req_g
 
 	"DOTA_Banned_Title"			"Vetado"
 	"DOTA_Banned"				"Tu cuenta ha sido vetada para jugar a Dota 2."
+
+	"DOTA_China_SpecialDisabled_Title" "Desactivado"
+	"DOTA_China_SpecialDisabled" "Estimados jugadores, en respuesta al aviso pertinente, los servidores de Dota 2 estarán inactivos desde las 0:00 hasta las 23:59 del 6 de diciembre de 2022 (hora del Pacífico). Gracias por vuestro apoyo."
 
 	"DOTA_AntiAddiction_Initial_With_ID_18Plus"		"Última conexión: %s1\nÚltima dirección IP: %s2"
 	"DOTA_AntiAddiction_Initial_With_ID_Under_18"	"Tienes menos de 18 años. El sistema antiadicción está activado.\nÚltima conexión: %s1\nÚltima dirección IP: %s2"
@@ -27286,6 +27293,7 @@ Para unirte como jugador experimentado, debes tener al menos {d:new_player_req_g
 	"DOTA_Popup_CardPack_Model_Winter2022"			"TOUR DE INVIERNO 2022 DEL CPD"
 	"DOTA_Popup_CardPack_Model_Spring2022"			"Tour de primavera 2022 del CPD"
 	"DOTA_Popup_CardPack_Model_Summer2022"			"Tour de verano 2022 del CPD"
+	"DOTA_Popup_CardPack_Model_Winter2023"			"Tour de invierno del CPD 2023"
 	"DOTA_Popup_CardPack_Model_PackCount"			"Lote de cinco"
 	"DOTA_Popup_CardPack_Model_PremiumPackCount"	"Lote de cinco prémium"
 	"DOTA_Popup_CardPack_Model_MainTitle"			"Cromos de\njugadores"
@@ -31179,7 +31187,7 @@ Con las apariciones de héroes de presión como Zeus y Death Prophet, el éxito 
 	"DOTA_SplashAd_TI10_Weekend_Sale_Title" "Disponible hasta el 28 de junio"
 	"DOTA_SplashAd_TI10_Weekend_Sale_Title2" "Disponible hasta el 2 de julio"
 	"DOTA_SplashAd_TI10_Weekend_Sale_Purchase_Btn" "Comprar lote"
-	"DOTA_SplashAd_TI10_Weekend_Sale_Purchase_Limit_Expanded" "Cada usuario puede comprar hasta <span class='BundleAmount'>dos packs</span>"
+	"DOTA_SplashAd_TI10_Weekend_Sale_Purchase_Limit_Expanded" "Cada usuario puede comprar hasta <span class='BundleAmount'>dos lotes</span>"
 	"DOTA_SplashAd_TI10_Weekend_Sale_75Percent" "Ahorra un 75%"
 	"DOTA_SplashAd_TI10_Weekend_Sale_Purchase_One" "Comprar 1"
 	"DOTA_SplashAd_TI10_Weekend_Sale_Purchase_Two" "Comprar 2"
@@ -32454,6 +32462,7 @@ Con las apariciones de héroes de presión como Zeus y Death Prophet, el éxito 
 	"DOTA_HeroLevelReward_Currency:p{currency_amount}"	"{d:currency_amount} fragmento#|#{d:currency_amount} fragmentos"
 	"DOTA_HeroLevelReward500_Currency"	"500 fragmentos"
 	"DOTA_HeroLevelReward350_Currency"	"350 fragmentos"
+	"DOTA_HeroLevelReward700_Currency"	"700 fragmentos"
 	"DOTA_HeroLevelReward_ChatWheel"	"Nueva frase para la rueda de chat:<br>\"{s:chat_wheel_message}\""
 
 	"DOTA_ReadyCheck"	"¿Preparados?"
@@ -32648,7 +32657,7 @@ Con las apariciones de héroes de presión como Zeus y Death Prophet, el éxito 
 	"DOTA_PlusPurchase_Feature_LaneSetupSuggestions"	"Sugerencias de estrategia de senda"
 	"DOTA_PlusPurchase_Feature_Friends_Foes"			"Calculadora de amigos y enemigos"
 	"DOTA_PlusPurchase_Feature_DeathSummary"			"Resumen de muerte detallado"
-	"DOTA_PlusPurchase_Feature_WinProbability"			"Espectadores con probabilidad de victoria"
+	"DOTA_PlusPurchase_Feature_WinProbability"			"Gráficos para espectadores de probabilidad de victoria"
 	"DOTA_PlusPurchase_Feature_StackPullTimers"			"Contadores de acumulación y atracción"
 	"DOTA_PlusPurchase_Feature_RolesGrid"				"Cuadrícula de roles de héroes"
 	"DOTA_PlusPurchase_Feature_HeroTrends"				"Tendencias de héroes"
@@ -32817,7 +32826,7 @@ Con las apariciones de héroes de presión como Zeus y Death Prophet, el éxito 
 	"DOTA_PlusWelcome_SelectPlusGuide_Name"						"Selecciona la guía del Asistente Plus"
 	"DOTA_PlusWelcome_SelectPlusGuide_Description"				"Abre la tienda durante una partida y cambia tu guía seleccionada al Asistente Plus."
 	"DOTA_PlusWelcome_PickSuggestedHero_Name"					"Elige un héroe recomendado de Amigos y Enemigos"
-	"DOTA_PlusWelcome_PickSuggestedHero_Description"			"Al seleccionar héroe, elige uno recomendado por el Amigos y Enemigos."
+	"DOTA_PlusWelcome_PickSuggestedHero_Description"			"Al seleccionar héroe, elige uno recomendado por Amigos y Enemigos."
 	"DOTA_PlusWelcome_ViewPostGameAnalytics_Name"				"Mira los análisis pospartida"
 	"DOTA_PlusWelcome_ViewPostGameAnalytics_Description"		"Cuando acabe una partida, mira la pestaña Desgloses para analizar tu efectividad o la pestaña Rendimiento para comparar tus resultados con las medias de tu clasificación."
 	"DOTA_PlusWelcome_ViewHeroTrends_Name"						"Ve las tendencias de clasif. mundial de héroe"
@@ -32849,15 +32858,15 @@ Con las apariciones de héroes de presión como Zeus y Death Prophet, el éxito 
 	"DOTA_PlusWelcome_ReachHeroLevel_Name"						"Alcanza el nivel de héroe 3 con cualquier héroe"
 	"DOTA_PlusWelcome_ReachHeroLevel_Description"				"Juega partidas y completa desafíos con un mismo héroe hasta que alcance el nivel de héroe 3."
 	"DOTA_PlusWelcome_BecomeDotaPlusMember_Name"				"Hazte miembro de Dota Plus"
-	"DOTA_PlusWelcome_BecomeDotaPlusMember_Description"			"¡Bienvenido a Dota Plus! Haz clic en el botón para reclamar tu primera recompensa."
+	"DOTA_PlusWelcome_BecomeDotaPlusMember_Description"			"¡Te damos la bienvenida a Dota Plus! Haz clic en el botón para reclamar tu primera recompensa."
 	"DOTA_PlusWelcome_PlayRankedRoles_Name"						"Gana 5 partidas clasificatorias con roles" 
 	"DOTA_PlusWelcome_PlayRankedRoles_Description"				"Gana 5 partidas de emparejamiento clasificatorio con roles."
 
 	"DOTA_PlusDBPage_Title" "Dota Plus"
 	"DOTA_PlusDBPage_RewardLog" "Registro de recompensas"
-	"DOTA_PlusDBPage_SubscribedOn" "Suscrito el {T:s:plus_subscription_start_date}"
+	"DOTA_PlusDBPage_SubscribedOn" "Desde el {T:s:plus_subscription_start_date}"
 	"DOTA_PlusDBPage_RenewsOn" "Se renovará el {T:s:plus_subscription_end_date}"
-	"DOTA_PlusDBPage_ExpiresOn" "Caducará el {T:s:plus_subscription_end_date}"
+	"DOTA_PlusDBPage_ExpiresOn" "Hasta el {T:s:plus_subscription_end_date}"
 	"DOTA_PlusDBPage_Manage" "Gestionar suscripción"
 	"DOTA_PlusDBPage_Subscribe" "Suscríbete"
 	"DOTA_PlusDBPage_ProgressLabel" "{d:achievement_score}/{d:completion_score}"
@@ -33674,7 +33683,7 @@ Con las apariciones de héroes de presión como Zeus y Death Prophet, el éxito 
 
 	"DOTA_QueenOfPainArcana_ArcanaProgress_Score"					"{s:current_score} / {d:unlock_value}"
 	"DOTA_QueenOfPainArcana_ArcanaProgress_Description:p{unlock_value}"	"Atormenta a {d:unlock_value} héroe con Onda Sónica en partidas victoriosas para desbloquear el estilo alternativo.#|#Atormenta a {d:unlock_value} héroes con Onda Sónica en partidas victoriosas para desbloquear el estilo alternativo."
-	"KillEaterEventType_QueenOfPain_ArcanaProgress"					"Héroes atormentados por Onda Sónica"
+	"KillEaterEventType_QueenOfPain_ArcanaProgress"					"Héroes atormentados por Onda Sónica en partidas ganadas"
 
 	"DOTA_QueenOfPainArcana_Hud_Title"								"Combo de {d:combo_count}" 
 	
@@ -34980,6 +34989,21 @@ Con las apariciones de héroes de presión como Zeus y Death Prophet, el éxito 
 
 	"DOTA_WeeklyQuest_Win_And_High_Fives_Completed_Name"			"Chocar los cinco es universal"
 	"DOTA_WeeklyQuest_Win_And_High_Fives_Completed_Description"		"Choca esos cinco con jugadores {s:current_tier_score} veces en partidas ganadas."
+		
+	"DOTA_WeeklyQuest_Win_With_Ranged_Hero_Name"					"Un asunto de misiles"
+	"DOTA_WeeklyQuest_Win_With_Ranged_Hero_Description"				"Gana {s:current_tier_score} partidas con héroes a distancia."
+		
+	"DOTA_WeeklyQuest_Win_With_Melee_Hero_Name"						"Toque final"
+	"DOTA_WeeklyQuest_Win_With_Melee_Hero_Description"				"Gana {s:current_tier_score} partidas con héroes cuerpo a cuerpo."
+		
+	"DOTA_WeeklyQuest_Disarm_Duration_Name"							"Sostén esto"
+	"DOTA_WeeklyQuest_Disarm_Duration_Description"					"Desarma a enemigos durante {s:current_tier_score} s."
+		
+	"DOTA_WeeklyQuest_Neutral_Items_Earned_Name"					"Mercado rojo"
+	"DOTA_WeeklyQuest_Neutral_Items_Earned_Description"				"Descubre {s:current_tier_score} objetos neutrales."
+		
+	"DOTA_WeeklyQuest_Use_Ability_Charges_Name"						"Carga completa"
+	"DOTA_WeeklyQuest_Use_Ability_Charges_Description"				"Usa {s:current_tier_score} cargas de habilidades de héroe."
 
 	// End Weekly Quest Names
 
@@ -35708,6 +35732,13 @@ Con las apariciones de héroes de presión como Zeus y Death Prophet, el éxito 
 	"DOTA_DPCTeams_SeasonPeriod_Event37_Dates"		"Del 6 de junio al 14 de agosto de 2022"
 	"DOTA_DPCTeams_SeasonPeriod_Event38_Name"		"The International 2022"
 	"DOTA_DPCTeams_SeasonPeriod_Event38_Dates"		"Del 8 al 30 de octubre de 2022"
+
+	"DOTA_DPCTeams_RegistrationPeriod8"				"Tour de invierno"
+	"DOTA_DPCTeams_RegistrationPeriodDates8"		"Del 9 de enero al 5 de marzo de 2023"
+	"DOTA_DPCTeams_RegistrationPeriodSeason8"		"Temporada 2023"
+	"DOTA_DPCTeams_SeasonPeriod_Event41_Name"		"Tour de invierno"
+	"DOTA_DPCTeams_SeasonPeriod_Event41_Dates"		"Del 9 de enero al 5 de marzo de 2023"
+
 
 	"DOTA_FavoriteTeamSet"							"Equipo favorito seleccionado"
 	"DOTA_NewFavoriteTeam"							"{s:favorite_team} es ahora tu equipo destacado. Esto se reflejará en diferentes lugares del menú principal y de la partida."
@@ -39782,14 +39813,14 @@ Si crees que no has podido dedicar el nivel de atención necesario para llegar a
 		"DOTA_International2022_SwagBag_DotaPlus_RewardText"				"30 DÍAS DE SUSCRIPCIÓN A DOTA PLUS"
 
 		//Swag Bag Widget
-		"DOTA_International2022_Swagbag_WidgetLabel"				"Bolsa sorpresa de The International"
+		"DOTA_International2022_Swagbag_WidgetLabel"				"Bolsa sorpresa de The International"
 		"DOTA_International2022_Swagbag_WidgetDescription"			"Únete a la celebración y reclama tu bolsa sorpresa."
 		"DOTA_International2022_Swagbag_ProgressBarLabel"			"{d:progress_current} / {d:progress_required} partidas jugadas"
 		"DOTA_International2022_Swagbag_ViewSwagButtonLabel"		"Ver bolsa sorpresa"
 		"DOTA_International2022_Swagbag_ClaimSwagButtonLabel"		"Reclamar bolsa sorpresa"
 
 		//Swag Bag Claim screen
-		"DOTA_International2022_Swagbag_SectionTitle"				"Bolsa sorpresa de The International"
+		"DOTA_International2022_Swagbag_SectionTitle"				"Bolsa sorpresa de The International"
 		"DOTA_International2022_Swagbag_SectionDescriptionOld"		"Celebra una alegre temporada de Dota reclamando tu set arcano gratuito, el pase de batalla y acceso a Dota Plus."
 		"DOTA_International2022_Swagbag_SectionDescription"			"Celebra una alegre temporada de Dota reclamando 30 días de Dota Plus, el pase de batalla y un set arcano gratuitos."
 		"DOTA_International2022_Swagbag_ClaimedLabel"				"Reclamado"
@@ -39864,6 +39895,7 @@ Si crees que no has podido dedicar el nivel de atención necesario para llegar a
 		"DOTA_CandyShop_Error_NotEnoughSpace"			"No hay suficiente espacio en el inventario"
 		"DOTA_CandyShop_Error_NotEnoughBags"			"No hay suficientes sacos"
 		"DOTA_CandyShop_Error_InvalidRecipe"			"Receta no válida."
+		"DOTA_CandyShop_Error_ExpiredShop"				"Esta caramelería ya no está disponible."
 		"DOTA_CandyShop_CandySackInfo"					"Juega a Dota o sube de nivel tu pase de batalla para obtener más caramelos."
 		"DOTA_CandyShop_InventorySlotInfo"				"Sube de nivel tu pase de batalla para desbloquear espacios de inventario."
 
@@ -40081,7 +40113,7 @@ Si crees que no has podido dedicar el nivel de atención necesario para llegar a
 		// tutorial popup - used both in-game and in the dash
 		"winter2022_game_info_header_how_to_play"						"CÓMO JUGAR"
 		"winter2022_game_info_body_how_to_play"							"Asesina a los Greevils, consigue caramelos y mételos en los pozos del <b>ENEMIGO</b>."
-		"winter2022_game_info_confirm_how_to_play"						"¡Lo tengo!"
+		"winter2022_game_info_confirm_how_to_play"						"¡Entendido!"
 		"winter2022_game_info_brief_description"						"Aprovecha la fuerza de Roshan para destruir todos los pozos de caramelos del equipo enemigo."
         "winter2022_game_info_punch_greevils_header"					"GOLPEA A LOS GREEVILS"
         "winter2022_game_info_punch_greevils"							"¡Los Greevils han robado los caramelos de Roshan! Inflígeles daño para recuperarlos."
@@ -44730,13 +44762,18 @@ Si crees que no has podido dedicar el nivel de atención necesario para llegar a
 		"DOTA_BattlePass2022_Schedule_LastChangeQual_Heading"					"Clasificatorias de última oportunidad"
 		"DOTA_BattlePass2022_Schedule_LastChangeQual_Description"				"Una última oportunidad para dos equipos para asegurar su puesto en The International."
 
-		"DOTA_BattlePass2022_Schedule_SwagBag_Heading"							"Bolsa sorpresa de The International"
+		"DOTA_BattlePass2022_Schedule_SwagBag_Heading"							"Bolsa sorpresa de The International"
 		"DOTA_BattlePass2022_Schedule_SwagBag_Description"						"Celebra una alegre temporada de Dota reclamando tu set arcano gratuito, el pase de batalla y acceso a Dota Plus."
 
 		"DOTA_BattlePass2022_Schedule_TIPointsSale_Heading"						"¡Lote en oferta!"
 		"DOTA_BattlePass2022_Schedule_TIPointsSale_SubTitle"					"The International 2022"
 		"DOTA_BattlePass2022_Schedule_TIPointsSale_Description"					"<b>¡Oferta de un solo uso: rebaja del 75 %!<br/>Disponible: 12-30 de octubre</b><br/>- 120 niveles del pase de batalla<br/>- 9 Tesoros Inmortales I<br/>- 6 Tesoros Inmortales II<br/>- 6 Colecciones de Tesoros<br/>- 6 Tesoros de las Herencias Eternas"
 		"DOTA_BattlePass2022_Schedule_TIPointsSale_ActionLabel"					"Comprar por {s:item_price}"
+
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_Heading"					"¡Lote en oferta!"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_SubTitle"					"El Despertar Dire 2022"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_Description"				"<b>¡Oferta final: rebaja del 75 %!<br/>Disponible: del 15 de diciembre al 12 de enero</b><br/>- 120 niveles del pase de batalla<br/>- 9 Tesoros Inmortales I<br/>- 6 Tesoros Inmortales II<br/>- 6 Tesoros de la Colección<br/>- 6 Tesoros de las Herencias Eternas"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_ActionLabel"				"Comprar por {s:item_price}"
 
 		"DOTA_BattlePass2022_Schedule_PrimalBeastPrestige_Heading"				"Set de prestigio de Primal Beast"
 		"DOTA_BattlePass2022_Schedule_PrimalBeastPrestige_Description"			"Mucho antes de su llegada a Tomo'kan, un intento fallido de controlar a Primal Beast lo dejó cubierto de placas y obligado imprudentemente a participar en la batalla..."
@@ -45008,6 +45045,8 @@ Si crees que no has podido dedicar el nivel de atención necesario para llegar a
 		"DOTA_StickerStore_TalentComingSoon"					"Próximamente"
 		"DOTA_StickerStore_MoreStickersComingSoon"				"¡Más pegatinas próximamente!"
 		"DOTA_StickerStore_TalentStickersLabel"					"Pegatinas de talentos"
+		"DOTA_StickerStore_NoStickersAvailable"					"No hay pegatinas a la venta."
+
 		"DOTA_StickerHero_AssignSticker"						"Asignar pegatina"
 		"DOTA_StickerHero_ReplaceSticker"						"Reemplazar pegatina"
 
@@ -45017,7 +45056,7 @@ Si crees que no has podido dedicar el nivel de atención necesario para llegar a
 		"DOTA_StickerPopup_NewStickers_ActionLabel"				"Ver nuevas pegatinas"
 		"DOTA_StickerPopup_NewStickers_AboutStickers"			"Acerca de las pegatinas"
 
-		"DOTA_StickerPopup_SwagBag_Title"						"Bolsa sorpresa de The International"
+		"DOTA_StickerPopup_SwagBag_Title"						"Bolsa sorpresa de The International"
 		"DOTA_StickerPopup_SwagBag_Description"					"¡Reclama tu bolsa sorpresa para obtener un mes gratuito de Dota Plus, un pase de batalla de nivel 1 (vale 24 niveles de batalla para usuarios que ya tengan uno) y una ficha de arcano canjeable!"
 		"DOTA_StickerPopup_SwagBag_ActionLabel"					"Reclamar"
 
@@ -45093,7 +45132,7 @@ Si crees que no has podido dedicar el nivel de atención necesario para llegar a
 		"DOTA_PrimalBeastPrestige_Level"						"Nivel 223 del pase de batalla"
 
 		// FACELESS VOID ARCANA
-		"KillEaterEvent_FacelessVoid_ArcanaProgress"		"Enemigos asesinados en la Cronoesfera"
+		"KillEaterEvent_FacelessVoid_ArcanaProgress"		"Enemigos asesinados en la Cronoesfera en partidas ganadas"
 
 		//TI Championship stickers
 		"DOTA_Stickers_Store_ChampionsTitle"							"¡Enhorabuena<br/>Tundra Esports!"
@@ -45106,6 +45145,7 @@ Si crees que no has podido dedicar el nivel de atención necesario para llegar a
 		"DOTA_BattlePass2022_Schedule_CollectorsCacheVoting_Heading" "Votación del Alijo del Coleccionista"
 		"DOTA_International2022_CollectorsCacheVoting" "Votar"
 
+		"DOTA_BattlePass2022_Schedule_CollectorsCache2Available_Heading" "Alijo del Coleccionista II disponible"
 		"DOTA_BattlePass2022_Schedule_CollectorsCacheAvailable_Heading" "Alijo del Coleccionista disponible"
 		"DOTA_International2022_CollectorsCacheAvailable" "Ver tesoro"
 
@@ -45122,6 +45162,13 @@ Si crees que no has podido dedicar el nivel de atención necesario para llegar a
 		"DOTA_2022Diretide_CollectorsCache_Treasure_1"		"1 tesoro"
 		"DOTA_2022Diretide_CollectorsCache_Treasure_2"		"7 tesoros"
 		"DOTA_2022Diretide_CollectorsCache_Treasure_3"		"14 tesoros"
-		"DOTA_2022Diretide_CollectorsCache_Disclaimer"		"Los objetos del Alijo solo están disponibles hasta el 18 de diciembre."
+		"DOTA_2022Diretide_CollectorsCache_Disclaimer"		"Los objetos del Alijo solo están disponibles hasta el 12 de enero."
+
+        "DOTA_BattlePass2022_Schedule_MoreActiveEventsUp" "+{d:num_more_active_events_up} eventos activos arriba"
+        "DOTA_BattlePass2022_Schedule_MoreActiveEventsDown" "+{d:num_more_active_events_down} eventos activos abajo"
+
+		"DOTA_BattlePassEndingTitle"				"Finaliza en"
+		"DOTA_BattlePassEndingCountdown"			"0 <b>días</b> 0 <b>h</b> 0 <b>min</b> 0 <b>s</b>"
+		"DOTA_BattlePassEndingDescription"			"Consigue tus <a href=\"event:DOTAPurchaseEventLevels( EVENT_ID_INTERNATIONAL_2022 )\">niveles</a>, <a href=\"event:DOTAShowSplashAdPopup('bundle_sale_2022_2')\">lotes</a>, el <a href=\"event:DOTAShowTreasurePage(26880)\">Alijo del Coleccionista I</a> y el <a href=\"event:DOTAShowTreasurePage(26932)\">Alijo del Coleccionista II</a>."
 	}
 }

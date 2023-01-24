@@ -5644,6 +5644,7 @@ As each stone's cultural influence spread, it eventually came in conflict with t
 		"dota_hud_error_infest_zombie"					"Cannot Infest Zombies."
 		"dota_hud_error_broodmother_sticky_snare_line_intersection"	"Can't overlap Spinner's Snares"
 		"dota_hud_error_underlord_dark_portal"			"Portal on wrong team"
+		"dota_hud_error_underlord_dark_portal_while_snowballing"	"Can't Use Portal While Snowballing"
 		"dota_hud_error_can_only_use_on_river"			"Item is only usable on the River"
 		"dota_hud_error_can_only_use_on_unpainted_river"	"Item cannot be used if the river has been painted."
 		"dota_hud_error_stronger_paint"					"Item cannot be used because there's a stronger paint active."
@@ -15316,9 +15317,8 @@ Special Techies Taunt"
 		"DOTA_TrophyName_International2022BattlePass_CavernChallenge"	"Cavern Crawl Award"
 		"DOTA_TrophyDesc_International2022BattlePass_CavernChallenge"	"Cavern Crawl Hero Sets claimed in Battle Pass 2022"
 
-
 		"DOTA_TrophyName_MVPTrophy"						"MVP Trophy"
-		"DOTA_TrophyDesc_MVPTrophy"						"Commemorates how many times you have been voted match MVP."
+		"DOTA_TrophyDesc_MVPTrophy"						"Commemorates how many times you have been awarded match MVP."
 		"DOTA_TrophyUnits_MVP:p"						"%s1 MVP Award#|#%s1 MVP Awards"
 
 		"DOTA_TrophyName_TI6SeasonalMMR_Solo"			"International 2016 Peak Solo Rank"
@@ -20415,7 +20415,7 @@ Special Techies Taunt"
 		"DOTA_ChallengeDesc_Phoenix_Stun_With_Supernova"   "Stun <font color='#ffffff'>%s1</font> total enemy heroes with <font color='#ffffff'>Supernova</font>"
 		"DOTA_ChallengeDesc_Razor_Damage_On_Static_Linked"   "Deal <font color='#ffffff'>%s1</font> damage to enemy Heroes drained with <font color='#ffffff'>Static Link</font>"
 		"DOTA_ChallengeDesc_Razor_DamageWithUnstableCurrent"   "Deal <font color='#ffffff'>%s1</font> damage to enemy Heroes with <font color='#ffffff'>Unstable Current</font>"
-		"DOTA_ChallengeDesc_ShadowDemon_KillsUnderSoulCatcher"   "Get <font color='#ffffff'>%s1</font> kills or assists on enemy Heroes affected by <font color='#ffffff'>Soul Catcher</font>."
+		"DOTA_ChallengeDesc_ShadowDemon_KillsUnderDisseminate"   "Get <font color='#ffffff'>%s1</font> kills or assists on enemy Heroes affected by <font color='#ffffff'>Disseminate</font>."
 
 
 
@@ -21334,7 +21334,7 @@ Special Techies Taunt"
 	"DOTA_Trophies_ViewMyCollection"	"My Collection"
 	"DOTA_Trophies_ViewAll"			"All"
 	"DOTA_Trophies_ViewActive"		"Active"
-	"DOTA_Trophies_Info"	"Earn Trophies to increase your Dota Level.<br><br>Each trophy `tributes a different amount of Trophy Points toward your next Dota level. Trophy Points are awarded whenever a trophy is earned, or is upgraded to a new tier.<br><br>100 Trophy Points = 1 Dota Level."
+	"DOTA_Trophies_Info"	"Earn Trophies to increase your Dota Level.<br><br>Each trophy contributes a different amount of Trophy Points toward your next Dota level. Trophy Points are awarded whenever a trophy is earned, or is upgraded to a new tier.<br><br>100 Trophy Points = 1 Dota Level."
 	"DOTA_About_Badges"				"About Trophies"
 
 	"DOTA_TrophyName"			"{s:trophy_name}"
@@ -24980,6 +24980,7 @@ To join as an experienced player, you must have at least {d:new_player_req_games
 	"DOTA_HeroRole_Description_Pusher"		"Can quickly siege and destroy towers and barracks at all points of the game."
 	"DOTA_HeroRole_Description_Initiator"	"Good at starting a teamfight."
 
+	"DOTA_HeroTags"							"Tags"
     "DOTA_HeroGrid_Sort_By"                        "Sort By:"
 
 	"DOTA_HeroGrid_Loading"						"Loading hero grid..."
@@ -26166,6 +26167,7 @@ To join as an experienced player, you must have at least {d:new_player_req_games
 
 	"DOTA_ChangeLog_TI9AllStarVoting" "TI9 All Star Game Voting Now Available"
 	"DOTA_ChangeLog_TI0CompendiumEnded" "The International 2021 Compendium has ended. Click here to view any final results."
+	"DOTA_ChangeLog_BP2022Ended" "The 2022 Battle Pass has ended. Click here to claim any final rewards."
 
 	"DOTA_GlobalLiveSpectatorChat_Title"			"New Feature - Global Live Spectator Chat"
 	"DOTA_GlobalLiveSpectatorChat_Details"			"You don't need to be at KeyArena to take in the The International alongside a crowd of thousands. In-game spectator chat now has increased capacity, and can support large numbers of viewers in a single channel. You may also access the spectator chat channel in the new Live Game tab in the dashboard chat window."
@@ -27314,6 +27316,7 @@ To join as an experienced player, you must have at least {d:new_player_req_games
 	"DOTA_Popup_CardPack_Model_Winter2022"			"DPC WINTER 2022 TOUR"
 	"DOTA_Popup_CardPack_Model_Spring2022"			"DPC Spring 2022 TOUR"
 	"DOTA_Popup_CardPack_Model_Summer2022"			"DPC Summer Tour 2022"
+	"DOTA_Popup_CardPack_Model_Winter2023"			"DPC Winter Tour 2023"
 	"DOTA_Popup_CardPack_Model_PackCount"			"Pack of Five"
 	"DOTA_Popup_CardPack_Model_PremiumPackCount"	"Premium Pack of Five"
 	"DOTA_Popup_CardPack_Model_MainTitle"			"Player Cards"
@@ -32486,6 +32489,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_HeroLevelReward_Currency:p{currency_amount}"	"{d:currency_amount} Shard#|#{d:currency_amount} Shards"
 	"DOTA_HeroLevelReward500_Currency"	"500 Shards"
 	"DOTA_HeroLevelReward350_Currency"	"350 Shards"
+	"DOTA_HeroLevelReward700_Currency"	"700 Shards"
 	"DOTA_HeroLevelReward_ChatWheel"	"Unlock Hero Chat Wheel<br>\"{s:chat_wheel_message}\""
 
 	"DOTA_ReadyCheck"	"Ready Check"
@@ -33709,7 +33713,7 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 
 	"DOTA_QueenOfPainArcana_ArcanaProgress_Score"					"{s:current_score} / {d:unlock_value}"
 	"DOTA_QueenOfPainArcana_ArcanaProgress_Description:p{unlock_value}"	"Torment {d:unlock_value} hero with Sonic Wave in victories to unlock the alternate style.#|#Torment {d:unlock_value} heroes with Sonic Wave in victories to unlock the alternate style."
-	"KillEaterEventType_QueenOfPain_ArcanaProgress"					"Heroes tormented by Sonic Wave"
+	"KillEaterEventType_QueenOfPain_ArcanaProgress"					"Heroes Tormented by Sonic Wave in Winning Games"
 
 	"DOTA_QueenOfPainArcana_Hud_Title"								"{d:combo_count}x Combo" 
 	
@@ -35017,6 +35021,21 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 
 	"DOTA_WeeklyQuest_Win_And_High_Fives_Completed_Name"			"High Fives are Universal"
 	"DOTA_WeeklyQuest_Win_And_High_Fives_Completed_Description"		"High Five Players {s:current_tier_score} Times in Winning Games"
+		
+	"DOTA_WeeklyQuest_Win_With_Ranged_Hero_Name"					"Missile Material"
+	"DOTA_WeeklyQuest_Win_With_Ranged_Hero_Description"				"Win {s:current_tier_score} games with Ranged Heroes."
+		
+	"DOTA_WeeklyQuest_Win_With_Melee_Hero_Name"						"Finishing Touch"
+	"DOTA_WeeklyQuest_Win_With_Melee_Hero_Description"				"Win {s:current_tier_score} games with Melee Heroes."
+		
+	"DOTA_WeeklyQuest_Disarm_Duration_Name"							"Here Hold This"
+	"DOTA_WeeklyQuest_Disarm_Duration_Description"					"Disarm enemies for {s:current_tier_score} seconds."
+		
+	"DOTA_WeeklyQuest_Neutral_Items_Earned_Name"					"Red Market"
+	"DOTA_WeeklyQuest_Neutral_Items_Earned_Description"				"Discover {s:current_tier_score} Neutral Items."
+		
+	"DOTA_WeeklyQuest_Use_Ability_Charges_Name"						"Fully Charged"
+	"DOTA_WeeklyQuest_Use_Ability_Charges_Description"				"Use {s:current_tier_score} hero ability charges."
 
 	// End Weekly Quest Names
 
@@ -35746,6 +35765,13 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 	"DOTA_DPCTeams_SeasonPeriod_Event37_Dates"		"Jun 6, 2022 - Aug 14, 2022"
 	"DOTA_DPCTeams_SeasonPeriod_Event38_Name"		"The International 2022"
 	"DOTA_DPCTeams_SeasonPeriod_Event38_Dates"		"Oct 8, 2022 - Oct 30, 2022"
+
+	"DOTA_DPCTeams_RegistrationPeriod8"				"Winter Tour"
+	"DOTA_DPCTeams_RegistrationPeriodDates8"		"Jan 9, 2023 - Mar 5, 2023"
+	"DOTA_DPCTeams_RegistrationPeriodSeason8"		"2023 Season"
+	"DOTA_DPCTeams_SeasonPeriod_Event41_Name"		"Winter Tour"
+	"DOTA_DPCTeams_SeasonPeriod_Event41_Dates"		"Jan 9, 2023 - Mar 5, 2023"
+
 
 	"DOTA_FavoriteTeamSet"							"Favorite Team Set"
 	"DOTA_NewFavoriteTeam"							"{s:favorite_team} is now set as your featured team. This will be reflected in different parts of the dashboard interface and in-game."
@@ -39910,6 +39936,7 @@ If you don't feel that you were able to dedicate the appropriate attention level
 		"DOTA_CandyShop_Error_NotEnoughSpace"			"Not enough space in the inventory"
 		"DOTA_CandyShop_Error_NotEnoughBags"			"Not enough bags"
 		"DOTA_CandyShop_Error_InvalidRecipe"			"Invalid recipe."
+		"DOTA_CandyShop_Error_ExpiredShop"				"This candy shop is no longer available."
 		"DOTA_CandyShop_CandySackInfo"					"Play Dota or level your Battle Pass for more candy."
 		"DOTA_CandyShop_InventorySlotInfo"				"Level your Battle Pass to unlock inventory slots."
 
@@ -44794,6 +44821,11 @@ If you don't feel that you were able to dedicate the appropriate attention level
 		"DOTA_BattlePass2022_Schedule_TIPointsSale_Description"					"<b>Single-use offer, 75% savings!<br/>Available Oct 12-30</b><br/>- 120 Battle Pass levels<br/>- 9 Immortal I Treasures<br/>- 6 Immortal II Treasures<br/>- 6 Collection Treasures<br/>- 6 Ageless Heirlooms Treasures"
 		"DOTA_BattlePass2022_Schedule_TIPointsSale_ActionLabel"					"Purchase {s:item_price}"
 
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_Heading"					"Bundle Sale!"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_SubTitle"					"The Diretide 2022"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_Description"				"<b>Final offer, 75% savings!<br/>Available Dec 15-Jan 12</b><br/>- 120 Battle Pass levels<br/>- 9 Immortal I Treasures<br/>- 6 Immortal II Treasures<br/>- 6 Collection Treasures<br/>- 6 Ageless Heirlooms Treasures"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_ActionLabel"				"Purchase {s:item_price}"
+
 		"DOTA_BattlePass2022_Schedule_PrimalBeastPrestige_Heading"				"Primal Beast Prestige Set"
 		"DOTA_BattlePass2022_Schedule_PrimalBeastPrestige_Description"			"Long before his arrival in the Tomo'kan, one attempt to control the beast found him clad in plate and foolishly pressed into battle..."
 
@@ -45064,6 +45096,8 @@ If you don't feel that you were able to dedicate the appropriate attention level
 		"DOTA_StickerStore_TalentComingSoon"					"Coming Soon"
 		"DOTA_StickerStore_MoreStickersComingSoon"				"More stickers coming soon!"
 		"DOTA_StickerStore_TalentStickersLabel"					"Talent Stickers"
+		"DOTA_StickerStore_NoStickersAvailable"					"There are no stickers for sale."
+
 		"DOTA_StickerHero_AssignSticker"						"Assign Sticker"
 		"DOTA_StickerHero_ReplaceSticker"						"Replace Sticker"
 
@@ -45149,7 +45183,7 @@ If you don't feel that you were able to dedicate the appropriate attention level
 		"DOTA_PrimalBeastPrestige_Level"						"Battle Pass Level 223"
 
 		// FACELESS VOID ARCANA
-		"KillEaterEvent_FacelessVoid_ArcanaProgress"		"Enemies Killed In Chrono"
+		"KillEaterEvent_FacelessVoid_ArcanaProgress"		"Enemies Killed In Chrono in Winning Games"
 
 		//TI Championship stickers
 		"DOTA_Stickers_Store_ChampionsTitle"							"Congratulations<br/>Tundra Esports!"
@@ -45162,6 +45196,7 @@ If you don't feel that you were able to dedicate the appropriate attention level
 		"DOTA_BattlePass2022_Schedule_CollectorsCacheVoting_Heading" "Collectors Cache Vote"
 		"DOTA_International2022_CollectorsCacheVoting" "Vote"
 
+		"DOTA_BattlePass2022_Schedule_CollectorsCache2Available_Heading" "Collectors Cache 2 Available"
 		"DOTA_BattlePass2022_Schedule_CollectorsCacheAvailable_Heading" "Collectors Cache Available"
 		"DOTA_International2022_CollectorsCacheAvailable" "See Treasure"
 
@@ -45178,6 +45213,13 @@ If you don't feel that you were able to dedicate the appropriate attention level
 		"DOTA_2022Diretide_CollectorsCache_Treasure_1"		"1 Treasure"
 		"DOTA_2022Diretide_CollectorsCache_Treasure_2"		"7 Treasures"
 		"DOTA_2022Diretide_CollectorsCache_Treasure_3"		"14 Treasures"
-		"DOTA_2022Diretide_CollectorsCache_Disclaimer"		"Cache items are only available until December 18th."
+		"DOTA_2022Diretide_CollectorsCache_Disclaimer"		"Cache items are only available until January 12th."
+
+        "DOTA_BattlePass2022_Schedule_MoreActiveEventsUp" "+{d:num_more_active_events_up} active events above"
+        "DOTA_BattlePass2022_Schedule_MoreActiveEventsDown" "+{d:num_more_active_events_down} active events below"
+
+		"DOTA_BattlePassEndingTitle"				"Ending in"
+		"DOTA_BattlePassEndingCountdown"			"0 <b>Days</b> 0 <b>Hrs</b> 0 <b>Mins</b> 0 <b>Secs</b>"
+		"DOTA_BattlePassEndingDescription"			"Grab your <a href=\"event:DOTAPurchaseEventLevels( EVENT_ID_INTERNATIONAL_2022 )\">Levels</a>, <a href=\"event:DOTAShowSplashAdPopup('bundle_sale_2022_2')\">Bundles</a>, <a href=\"event:DOTAShowTreasurePage(26880)\">Collector's Cache 1</a> and <a href=\"event:DOTAShowTreasurePage(26932)\">Collector's Cache 2</a>."
 	}
 }

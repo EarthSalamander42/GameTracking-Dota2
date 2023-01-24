@@ -3,7 +3,7 @@
 																Unsupported PSD color mode!
 			<table>			<tr>			<th align="left"><b>Aggressive</b></th>			<th align="left">Removes any bones which are not skinned or referenced</th>			</tr>			<tr>			<th align="left"><b>Leaf Only</b></th>			<th align="left">Removes any bones which are not skinned or referenced that have no children</th>			</tr>			<tr>			<th align="left"><b>None</b></th>			<th align="left">Doesn't remove any bones</th>			</tr>			</table>
 		%.*s
-		g_pMemAlloc
+		_V_strEndsWith
 	 The lexer was matching from line %d, offset %d, which
 	 This indicates a poorly specified lexer RULE
 	 or unterminated input element such as: "STRING["]
@@ -27,9 +27,18 @@
 	D$0H
 	NAN encountered in element '%s' guid %s attribute '%s'!
 	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
+	_V_StringAfterPrefix
+	_V_StringAfterPrefixCaseSensitive
+	_V_StripLastDir
+	_V_strcspn
+	_V_strncat
+	_V_strncmp
+	_V_strncpy
+	_V_strnicmp_fast
 	body_groups = %s
-	g_bUpdateStringTokenDatabase
-	g_pThreadPool
+	g_Mathlib_GammaToLinearByteTable
+	g_TSPointerListNodes
+	g_VProfCurrentProfile
 	kE>fvw
 	material_group = "%s"
 	overlap %i: [%s @ %.1f %.1f %.1f] slot %i
@@ -212,6 +221,7 @@
  Failed to process map file %s
  Failed to read map file %s
  Found: 
+ G	N.
  H3E H3E
  H;l$P
  Hc)3
@@ -323,6 +333,7 @@
 !KcD'
 !hn7!
 !m_bNeedsSort
+"	g_bUpdateStringTokenDatabase
 " -ie 
 " -oe 
 "%s" 
@@ -693,21 +704,27 @@ $rHcE
 'exists'
 'return'
 ( (int64)m_nAllocationCount + (int64)num ) <= 0x7FFFFFFF
-(%&C@
+(%6I@
+(%TZj
 (%d) %s
 (%d)pin: %s
 (%d,%d
 (%d,%d)
 (%d,%d,%d
 (%d,%d,%d,%d
+(%dnj
 (%i) %s
 (*%s*), 
 (,*2,&*2.($  @0,224&226($  ,8<>$<P@&<
-(5fJj
-(5r99
+(-OMx
+(5(~i
+(5,xj
+(5R)]
+(5\2x
 (;^ |
-(=}Wk
-(=}ik
+(=[)]
+(=m^k
+(=mpk
 (?SetName@FbxObject@fbxsdk@@QEAAXPEBD@Z
 (A\_^[
 (A]A\_[
@@ -1208,6 +1225,7 @@ $rHcE
 )l$@L
 )l$@f
 )l$PD
+)l$PE
 )l$`D
 )l$p@
 )l$pA
@@ -1336,9 +1354,9 @@ $rHcE
 )|$pI
 )|$pL
 )|$pM
-)|$pf
 )|B?d!
 )}pMc
+*	g_pMemAlloc
 * - Match Any
 * ?timerEvent@QTextEdit@@MEAAXPEAVQTimerEvent@@@Z
 *$J&j(
@@ -1483,14 +1501,14 @@ $rHcE
 -sse4
 -unknown source-
 -unknown source-(
+.	g_pThreadPool
 .$**0N2"4$.$*"6
 .*,^0j2H4R6:8R::<j>:$
 ...or incorrect match of interpretation: 
 ../../
 ..om?
 .00cfg
-.58O8
-.>6bj
+.5HU8
 .>PJ;I:qE>
 .?AU?$TArrayDeleter@C@v11@AbcCoreAbstract@Alembic@@
 .?AU?$TArrayDeleter@E@v11@AbcCoreAbstract@Alembic@@
@@ -1729,6 +1747,7 @@ $rHcE
 .?AUCAttr_m_angAngle@?1??GetStaticAttributes@CModelDocMeshModifier_ForceUnweightedBindposeBonePositions@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_angAngle@?1??GetStaticAttributes@CModelDocPhysicsHullFromPoints_Point@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_angLocator@?1??GetAttributeTable_CMapNavLink@CMapNavLink@@SAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
+.?AUCAttr_m_angRotation@?1??GetStaticAttributes@CModelDocAnimForceBonePosition@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_animOrder@?1??GetStaticAttributes@CModelDocAnimOrder@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_ankleBoneName@?1??GetStaticAttributes@CModelDocFoot@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_bAcceleration@?1??GetStaticAttributes@CModelDocClothEffectSpeedup@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
@@ -1983,7 +2002,6 @@ $rHcE
 .?AUCAttr_m_eHandType@?1??GetStaticAttributes@CModelDocSkeletalInputSettings@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_eKeyType@?1??GetStaticAttributes@CModelDocFaceposerKeys@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_eMotionType@?1??GetStaticAttributes@CModelDocExtractMotion@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
-.?AUCAttr_m_eRotation@?1??GetStaticAttributes@CModelDocAnimForceBonePosition@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_eRotation@?1??GetStaticAttributes@CModelDocAnimOffset@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_eRotationOffsetXYZ@?1??GetStaticAttributes@CModelDocAnimConstraintParent@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_expression@?1??GetStaticAttributes@CModelDocMorphRule@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
@@ -2558,6 +2576,7 @@ $rHcE
 .?AV<lambda_2887709de013a8e5b1a2ea1c1e8f4ad6>@@
 .?AV<lambda_2b0bb58368661ec4233acaf238ff9b45>@@
 .?AV<lambda_32465114f5cc6ed93c29eb84a734df64>@@
+.?AV<lambda_349db98dc3c24d36a5dd53a9a6f4d68d>@@
 .?AV<lambda_5263acd9547022b0b57b495cd292952b>@@
 .?AV<lambda_53bf1297b117ab3eb9378f912d642086>@@
 .?AV<lambda_54fedc5b46335bf25c7b076395d32c74>@@
@@ -2566,7 +2585,6 @@ $rHcE
 .?AV<lambda_60c5de84e69e46aa92419d47e2f3ad51>@@
 .?AV<lambda_713ee8bbd6b08550d59c52695cab5ce3>@@
 .?AV<lambda_72a88e06160bb68c438cf7af9d85b505>@@
-.?AV<lambda_73b039c5e2046e2106411e93162a52d5>@@
 .?AV<lambda_763529b0c7473cbc215a52d189ac9b18>@@
 .?AV<lambda_85226a1ade6d27c19b16702c44b1a394>@@
 .?AV<lambda_887c2d9e393fc559c9d021a1d24edee1>@@
@@ -2950,7 +2968,6 @@ $rHcE
 .?AV?$CBaseConcreteToolAttr@VColor@@VCModelDocVSNAPParticle@@@@
 .?AV?$CBaseConcreteToolAttr@VColor@@VCTileMeshFace@@@@
 .?AV?$CBaseConcreteToolAttr@VDegreeEuler@@VCModelDocAnimConstraintParent@@@@
-.?AV?$CBaseConcreteToolAttr@VDegreeEuler@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CBaseConcreteToolAttr@VDegreeEuler@@VCModelDocAnimOffset@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCMapNavLink@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCMapNode@@@@
@@ -2959,6 +2976,7 @@ $rHcE
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintBoneInput@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintSlave@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintTwist@@@@
+.?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocAttachmentBase@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocBaseBreakPiece@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocBaseParametricMeshOp@@@@
@@ -3518,7 +3536,6 @@ $rHcE
 .?AV?$CConcreteToolAttr@VColor@@VCModelDocVSNAPParticle@@X@@
 .?AV?$CConcreteToolAttr@VColor@@VCTileMeshFace@@X@@
 .?AV?$CConcreteToolAttr@VDegreeEuler@@VCModelDocAnimConstraintParent@@X@@
-.?AV?$CConcreteToolAttr@VDegreeEuler@@VCModelDocAnimForceBonePosition@@X@@
 .?AV?$CConcreteToolAttr@VDegreeEuler@@VCModelDocAnimOffset@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCMapNavLink@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCMapNode@@X@@
@@ -3527,6 +3544,7 @@ $rHcE
 .?AV?$CConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintBoneInput@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintSlave@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintTwist@@X@@
+.?AV?$CConcreteToolAttr@VQAngle@@VCModelDocAnimForceBonePosition@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCModelDocAttachmentBase@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCModelDocBaseBreakPiece@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCModelDocBaseParametricMeshOp@@X@@
@@ -4420,13 +4438,13 @@ $rHcE
 .?AV?$CModelDocAttr@VColor@@VCModelDocMeshModifier_MeshOpBakeTextureToVertexData@@@@
 .?AV?$CModelDocAttr@VColor@@VCModelDocVSNAPParticle@@@@
 .?AV?$CModelDocAttr@VDegreeEuler@@VCModelDocAnimConstraintParent@@@@
-.?AV?$CModelDocAttr@VDegreeEuler@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CModelDocAttr@VDegreeEuler@@VCModelDocAnimOffset@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocAnimConstraintAim@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocAnimConstraintAttachmentInput@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocAnimConstraintBoneInput@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocAnimConstraintSlave@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocAnimConstraintTwist@@@@
+.?AV?$CModelDocAttr@VQAngle@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocAttachmentBase@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocBaseBreakPiece@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocBaseParametricMeshOp@@@@
@@ -4606,8 +4624,8 @@ $rHcE
 .?AV?$CMutableRefCounted@V?$CMutableRefCountBase@VCRefMT@@@@@@
 .?AV?$CParallelLambdaJob@V<lambda_104fad39bdd1b5a2f4ac74e516ed02d2>@@@CParallelProcessLauncher@@
 .?AV?$CParallelLambdaJob@V<lambda_15d0b226922fb76cf7649a2875ecb3e2>@@@CParallelProcessLauncher@@
-.?AV?$CParallelLambdaJob@V<lambda_1cefafe28e24c16b3beba36563012fac>@@@CParallelProcessLauncher@@
 .?AV?$CParallelLambdaJob@V<lambda_7f65d9639fc34678bc587587969c7d7c>@@@CParallelProcessLauncher@@
+.?AV?$CParallelLambdaJob@V<lambda_ecb62f1a89b9b7c670c681d926842822>@@@CParallelProcessLauncher@@
 .?AV?$CParallelLambdaJob@V<lambda_ecd22fb1041651b7d7f7d27d4d9b0a67>@@@CParallelProcessLauncher@@
 .?AV?$CParallelProcessorAbstract@V?$CParallelLoopProcessor@VFloatBitMap_t@@V?$CLoopMemberFuncJobItemProcessor@VFloatBitMap_t@@V1@V1@@@@@@@
 .?AV?$CParallelProcessorAbstract@V?$CParallelProcessor@HV?$CLambdaJobItemProcessor@H@@$00@@@@
@@ -4984,7 +5002,6 @@ $rHcE
 .?AV?$CToolAttrGetSetAccess@VColor@@VCModelDocVSNAPParticle@@@@
 .?AV?$CToolAttrGetSetAccess@VColor@@VCTileMeshFace@@@@
 .?AV?$CToolAttrGetSetAccess@VDegreeEuler@@VCModelDocAnimConstraintParent@@@@
-.?AV?$CToolAttrGetSetAccess@VDegreeEuler@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CToolAttrGetSetAccess@VDegreeEuler@@VCModelDocAnimOffset@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCMapNavLink@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCMapNode@@@@
@@ -4993,6 +5010,7 @@ $rHcE
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocAnimConstraintBoneInput@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocAnimConstraintSlave@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocAnimConstraintTwist@@@@
+.?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocAttachmentBase@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocBaseBreakPiece@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocBaseParametricMeshOp@@@@
@@ -5633,13 +5651,13 @@ $rHcE
 .?AV?$CValueAttributeWrapper@VColor@@VCModelDocMeshModifier_MeshOpBakeTextureToVertexData@@@@
 .?AV?$CValueAttributeWrapper@VColor@@VCModelDocVSNAPParticle@@@@
 .?AV?$CValueAttributeWrapper@VDegreeEuler@@VCModelDocAnimConstraintParent@@@@
-.?AV?$CValueAttributeWrapper@VDegreeEuler@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CValueAttributeWrapper@VDegreeEuler@@VCModelDocAnimOffset@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocAnimConstraintAim@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocAnimConstraintAttachmentInput@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocAnimConstraintBoneInput@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocAnimConstraintSlave@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocAnimConstraintTwist@@@@
+.?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocAttachmentBase@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocBaseBreakPiece@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocBaseParametricMeshOp@@@@
@@ -5956,12 +5974,12 @@ $rHcE
 .?AV?$_Func_impl_no_alloc@V<lambda_2887709de013a8e5b1a2ea1c1e8f4ad6>@@XAEAH@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_2b0bb58368661ec4233acaf238ff9b45>@@XAEAH@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_32465114f5cc6ed93c29eb84a734df64>@@XAEBULightId_t@CComputeBakedShadowAssignment@@AEBUAABB_t@@@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_349db98dc3c24d36a5dd53a9a6f4d68d>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_5263acd9547022b0b57b495cd292952b>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_53bf1297b117ab3eb9378f912d642086>@@XAEAH@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_54fedc5b46335bf25c7b076395d32c74>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_5b729ead22014322669caed6d11c0254>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_72a88e06160bb68c438cf7af9d85b505>@@XAEAH@std@@
-.?AV?$_Func_impl_no_alloc@V<lambda_73b039c5e2046e2106411e93162a52d5>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_887c2d9e393fc559c9d021a1d24edee1>@@XAEBULightId_t@CComputeBakedShadowAssignment@@_NH@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_9edc3ebc02e99e2bd17aebac8ed77e98>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_ad753c1e821d108e1a311dfa79cd9d31>@@X$$V@std@@
@@ -7256,11 +7274,11 @@ $rHcE
 .xdata
 .xdata$x
 .~kfi
-/%E77
-/%]XN
-/%g47
-/%y=h
-/-737
+/%U=7
+/%iDh
+/%w:7
+/-+<7
+/-G97
 // 						"BA_INT_AMBUSH"		someone please define this - I have no idea what it does
 // 						"BA_INT_COMBAT"		break out of this anim if combat occurs in my line of sight (bullet hits, grenades, etc), -OR- the max time is reached
 // 						"BA_INT_DANGER"		break out of this anim only if threatened
@@ -7279,9 +7297,8 @@ $rHcE
 // %511s
 // FRAMERATE=%f
 /2GG>!B
-/5MLg
-/5W77
-/5{47
+/5]Rg
+/5g=7
 /6riH
 />58d%
 /A@v'
@@ -7526,7 +7543,7 @@ $rHcE
 220323000000Z
 220801000000Z
 220921000000Z
-221203185159Z0/
+230112002024Z0/
 241009235959Z0a1
 255 255 255 255
 2D Aim
@@ -7552,6 +7569,7 @@ $rHcE
 2_BONE_IK
 2accepted()
 2clicked()
+2gt4_
 2http://crl3.digicert.com/DigiCertTrustedRootG4.crl0 
 2mapped(bool)
 2mapped(int)
@@ -7648,7 +7666,7 @@ $rHcE
 8,tBH
 8-byte data pool
 80tWD
-8:`s}
+8:@~}
 8A]A\_[
 8A]_^[
 8A^A\
@@ -7881,9 +7899,7 @@ $rHcE
 ; tris:
 ;.u1L
 ;1} H
-;593O
-;=<Uw
-;=C3O
+;=^\N
 ;>}sH
 ;C0}/;
 ;C0}2;
@@ -8184,6 +8200,7 @@ $rHcE
 <unnamed>
 <utT@:
 <}uGA
+= Qf@
 == (or missing)
 ======
 =KP*;Q>.
@@ -9390,7 +9407,6 @@ $rHcE
 @84)u
 @84/u
 @848u
-@85MfO
 @87t8H
 @87t?H
 @87tDH
@@ -9429,8 +9445,12 @@ $rHcE
 @8|$ht
 @8|$x
 @8}gt'A
+@:-FU
+@:5lhX
+@:=\hX
 @:t$PH
 @>%>b
+@@CMapPrefab CUtlMemoryPool
 @@HcL
 @A\_[
 @A\_]
@@ -9506,6 +9526,7 @@ $rHcE
 @A__^][
 @CMapTerrainFeature CUtlMemoryPool
 @CStatic Overlay %s
+@Hc5'
 @HcA03
 @HcD$0L
 @HcD$4I
@@ -9515,7 +9536,6 @@ $rHcE
 @Integer overflow in %s
 @L99t
 @L;d$p
-@Lc5c
 @Lcq H
 @Mcg<M
 @Physics
@@ -11219,7 +11239,6 @@ CMapPhysicsPin
 CMapPhysicsPin CUtlMemoryPool
 CMapPoint CUtlMemoryPool
 CMapPrefab
-CMapPrefab CUtlMemoryPool
 CMapPrefabSubInstance
 CMapPrefabSubInstance CUtlMemoryPool
 CMapProxy
@@ -13756,7 +13775,6 @@ D8(u3H
 D8*t#Ic
 D8+tDH
 D8,:u
-D8-A~
 D8.tDH
 D80t@A
 D80u&H
@@ -13820,7 +13838,7 @@ D8{xt
 D8|$0A
 D8|$`t
 D9 tT
-D9%|%
+D9%,+
 D9&~)I
 D9'uCL
 D9'uE
@@ -13829,7 +13847,6 @@ D9*u*H
 D9+~=I
 D9+~?I
 D9,$D
-D9-}-
 D9.~/
 D9.~1fff
 D91t'
@@ -14856,6 +14873,7 @@ F8l08
 F8l10t	H
 F8|)8t
 F>qUxv
+F@8=4
 FABRIK
 FATAL ERROR: unable to register all schema data: %s
 FBX file version %d.%d.%d - %s
@@ -15310,6 +15328,7 @@ GameUIService_001
 Gameplay Identifier
 Gaussian
 Gd$HH
+Geditormodel
 General
 Generate Filenames.  Base Name:
 Generate decal UVs on the specified channel
@@ -15412,7 +15431,6 @@ GetUserDefaultLocaleName
 GetUserObjectInformationW
 GetWindowLongPtrA
 GhL94
-Ghammer_render_model_bounding_spheres
 Given a face selection, select all faces using those materials.
 Gl$8H
 Gl$8L
@@ -15532,27 +15550,19 @@ H33M3
 H9(t8
 H9(t|
 H9+t	H
-H9- M
-H9-#j
-H9-$i
-H9-XR
-H9-aO
-H9-f_
-H9-od
-H9-{L
-H9-{]{
+H9-3^
+H9-fX
+H9-{6
 H9/t	H
 H92u,
 H92u1
 H93t	H
-H950[
-H95@g
-H95Vt
-H95rm
+H95(I
+H95Sm
 H97u+A
 H99tjH
 H9;t	H
-H9=s{
+H9=Jd{
 H9>t	H
 H9A(u
 H9APumH
@@ -15797,7 +15807,7 @@ Has Yaw Constraint
 Hc+;k
 Hc+Ic
 Hc+IcL
-Hc-22g
+Hc-r7g
 Hc.;n
 Hc/;o
 Hc/E3
@@ -16796,6 +16806,7 @@ JPEG datastream contains no image
 JPEG parameter struct mismatch: library thinks size is %u, caller expects %u
 JPEGMEM
 JT&"LBN2L<P$LJ&
+Jan 11 2023
 January
 JcD* E3
 JcL HI
@@ -17240,30 +17251,30 @@ L0hE3
 L6,E3
 L9#t	H
 L9$9u)A
-L9%md
-L9%yi
+L9%G8
+L9%Yl
+L9%a>
+L9%d;
 L9't	H
 L9+t	H
 L9,2H
-L9-Jg
+L9-X	
+L9-ll
 L93t	H
-L95)C
-L953?
+L95ro
 L96thH
 L97t	H
 L98t"
 L9;t	H
 L9<:H
-L9=+`
-L9=7S
-L9=@X
-L9=GP
-L9=G^
-L9=Pc
-L9=VK
-L9=W[
-L9=kQ
-L9={\
+L9=+b
+L9=7U
+L9=@Z
+L9=G`
+L9=Pe
+L9=W]
+L9=gh
+L9={^
 L9>t	H
 L9?t	H
 L9B A
@@ -18548,7 +18559,6 @@ Note: References deleted asset(s) that will be remapped.
 Note: References to %s will be replaced.
 Note: There are %d references to this asset that would break if deleted.
 Notes
-Nov  3 2022
 November
 Nudge
 Null physics joint.
@@ -18562,7 +18572,6 @@ O!t/H
 O(I+O 
 O*9y]
 O0JcD
-O=5Uw
 OBJECT
 OCTAL_ESC
 OF>;^
@@ -18659,7 +18668,6 @@ Opfff
 Optimization Algorithm
 OptimizeCollisionV2
 Optional pattern for attribute names (* for wildcards.) Note that this matches against non-display (ie. raw view) attribute names.
-Oq	(}
 Order of animation sequences in compiled model.  Specified entries will be ordered first, unspecified entries will be added after ordered entries in an unspecified order.
 Ordered constructor wrapped type has no default constructor.
 Orient Rotation to 2D Direction
@@ -19288,7 +19296,6 @@ RHH=vmdlt
 RHH=vmdlu*H
 RHH=vpcf
 ROTATION
-RSDS"
 RST%d
 Radial Basis Function Type
 Radius
@@ -19510,6 +19517,7 @@ RootNode
 RootSelectionSet
 RotateConstrain
 RotateToolUseRelativeMode
+Rotation
 Rotation Basic
 Rotation Orient to 2D Direction
 Rotation Random
@@ -20355,7 +20363,7 @@ T$xL9+t
 T$xLc,
 T$xM;
 T$xfff
-T-#67
+T-3<7
 T0<A#
 T1TA#
 T?pos@QCursor@@SA?AVQPoint@@XZ
@@ -21297,8 +21305,8 @@ VolumetricFog
 Vortices
 Voxel volume (%i components)
 W fff
-W%hpd
-W-f7|
+W%Hwd
+W=x2x
 W?scaled@QPixmap@@QEBA?AV1@AEBVQSize@@W4AspectRatioMode@Qt@@W4TransformationMode@4@@Z
 WARNING content and game files are in different mods:
 WARNING: %d Assets have references to this asset that will be broken.
@@ -21432,11 +21440,10 @@ X UVWH
 X UWAVH
 X VWATH
 X!t5~
-X%`67
-X-x67
-X5K&n
-X5ch-
-X=!3g
+X%N%d
+X%p<7
+X5	Le
+X5+-n
 X?setBrush@QPainter@@QEAAXAEBVQBrush@@@Z
 X?setColor@QPalette@@QEAAXW4ColorRole@1@AEBVQColor@@@Z
 X?setColor@QPen@@QEAAXAEBVQColor@@@Z
@@ -21492,23 +21499,27 @@ XtZ6\\^*X&`
 X|$ A
 X|$8E
 Y - Left
-Y%>27
-Y%Dhk
-Y%F/!
-Y%\Jp
-Y%c5p
+Y%%6x
+Y%4ok
+Y%65!
+Y%<Qp
+Y%C<p
+Y%N87
+Y%_Cn
+Y%bxo
 Y(Hcy
-Y-gWN
-Y-t5p
-Y-uhk
-Y-{5x
-Y56x,
-Y5=\k
-Y5G@X
+Y-T<p
+Y-eok
+Y5-ck
+Y57GX
+Y5V~,
+Y5y]k
+Y5}&n
 Y8~tH
-Y=R\n
-Y=U$:
-Y=i7o
+Y=2cn
+Y=I>o
+Y=b&n
+Y=u*:
 Y>kX>M
 Y?setFont@QPainter@@QEAAXAEBVQFont@@@Z
 Y?setGreen@QColor@@QEAAXH@Z
@@ -21530,7 +21541,6 @@ YD$TA
 YD$\A
 YD$\E
 YD9xluSD9
-YL$0A
 YL$8E
 YL$DA
 YL$XE
@@ -21600,6 +21610,7 @@ Zpm"U
 [8HcA
 [;D$Ht6E;
 [?setStyle@QPen@@QEAAXW4PenStyle@Qt@@@Z
+[@8=T
 [DUPLICATE] %s is the original.
 [EDIT IN PLACE]
 [Index: 
@@ -21904,8 +21915,6 @@ Zpm"U
 ]'H9]
 ])6M>&
 ]0IcM@A
-]5+Yn
-]=v	S
 ]>)2X
 ]D$ D
 ]D$@E
@@ -21926,6 +21935,7 @@ Zpm"U
 ^ HcF 
 ^0Lc~(I
 ^<V7w
+^@:-z5
 ^@`LLlF:
 ^HHcF@
 ^HHcF@L
@@ -21939,8 +21949,8 @@ Zpm"U
 _ HcW(H
 _0HcG(H
 _0Hcw(H
-_5%;y
-_5G|O
+_5cZD
+_5eBy
 _89_D
 _8tDH
 _<HcO0;
@@ -21964,15 +21974,6 @@ _TIFFVSetField
 _V_ExtractFileExtension
 _V_FileBase
 _V_FixupPathName
-_V_StringAfterPrefix
-_V_StringAfterPrefixCaseSensitive
-_V_StripLastDir
-_V_strEndsWith
-_V_strcspn
-_V_strncat
-_V_strncmp
-_V_strncpy
-_V_strnicmp_fast
 _\$$E
 _\$4E
 _\$HH
@@ -22067,7 +22068,7 @@ _|$XI
 ` UAVAWH
 `+!]?
 `.rdata
-`2P[H
+`2@eH
 `;k8|
 `A;n8
 `A;o@
@@ -22363,6 +22364,7 @@ atan2
 ati_compress_wrapper.dll
 attach
 attach_point
+attached_prop_physics
 attachment
 attachment_key
 attachment_name
@@ -23173,6 +23175,7 @@ disabled
 disabledInLowQuality
 disableinlowquality
 disablemerging
+disablemultiplegravitygrab
 disableshadows
 disallowOverride
 displacementInput
@@ -23284,7 +23287,6 @@ editorType
 editor_only
 editorbuild
 editorconfig
-editormodel
 editorversion
 effect_configuration
 effect_name
@@ -23404,7 +23406,6 @@ eyeOffset
 eyelid
 f!C"3
 f$>&*(L&Z
-f1$gk(
 f3EZf
 f4MaxDist
 f4MinDist
@@ -23671,9 +23672,6 @@ fuvA;
 g cMesh
 g default
 g,H9+t
-g_Mathlib_GammaToLinearByteTable
-g_TSPointerListNodes
-g_VProfCurrentProfile
 g_bFogTypeEnabled
 g_bOtherFxEnabled
 g_bRoughnessParams
@@ -23892,7 +23890,9 @@ grassOpacity
 grassParams
 grass_exclusion_radius
 gravity
+gravity_grab_priority
 gravity_z
+gravitygrabignoremassandsize
 green
 gridHeight
 gridWidth
@@ -23983,6 +23983,7 @@ hammer_nav_attrib_color
 hammer_overlay_draw_projection_triangles
 hammer_parallel_terrain_update
 hammer_raytrace_debug_draw
+hammer_render_model_bounding_spheres
 hammer_show_light_truncation_error
 hammer_tile_border_size
 hammer_vis_opacity
@@ -24071,15 +24072,14 @@ hullivr_edge_merge_tan
 hullivr_faceisland_merge_disp
 hullivr_faceisland_merge_tan
 hullivr_version
-hxB`s}
-hxJ`s}
+hxB@~}
+hxJ@~}
 i	&4((*l,"2
 iD$x1'
 iG(1'
 iOS SM 4.0 (VULKAN)
 iOS SM 4.1 (VULKAN)
 iOS SM 5.0 (VULKAN)
-iX~jTt0
 iconsprite
 identifier removed
 ignore_Translation
@@ -24243,6 +24243,7 @@ ispc_texcomp.dll
 isprefab
 iszString
 itemFile
+item_item_crate
 iterate_to_element
 iterations
 iu+-,
@@ -24300,7 +24301,7 @@ kDisableShadows_Baked
 kDisableShadows_None
 kDisableShadows_Realtime
 kE_PL
-kPH9-Nex
+kPH9-
 kPH9k(H
 kX?setBlue@QColor@@QEAAXH@Z
 keep_colliders
@@ -25902,7 +25903,7 @@ model_subkey
 modelanimevent
 modelbreakcommand
 modelconfig
-modeldoc31
+modeldoc32
 modeldoc_editor
 modeldoc_utils
 modeldocattr
@@ -26113,6 +26114,7 @@ numcascades
 numchannels
 numframes
 n|$`fA
+o%X"c
 o<	u33
 o@H9)t
 o@Hcw
@@ -26473,6 +26475,9 @@ propTypes
 prop_data
 prop_dynamic
 prop_dynamic_client_fadeout
+prop_physics
+prop_physics_override
+prop_physics_respawnable
 prop_static
 propdataname
 properties
@@ -26668,7 +26673,7 @@ row_weight_list
 runspeed
 s ;7}@H
 s ;7}VH
-s H95R
+s H95
 s L93t	H
 s L9e
 s WATAUAVAWH
@@ -27129,7 +27134,7 @@ t$ AV
 t$ AVAW
 t$ AVAWH
 t$ AVH
-t$ AVHc-
+t$ AVHc-hu
 t$ AVL
 t$ AW
 t$ AWH
@@ -28890,7 +28895,7 @@ vortex_cell_size
 vortex_choppiness
 vortex_count
 vortex_max_speed_mph
-vpcf45
+vpcf51
 vpcfH
 vphzc
 vpost
@@ -29008,7 +29013,7 @@ x%fff
 x%i (
 x&E;B
 x&fff
-x'H957<
+x'H95wB
 x(	s4H
 x(;w`}#H
 x(;~`}#H
@@ -29507,6 +29512,7 @@ znear
 |9u0H
 |>H;L$p
 |E94$
+|H'Ey
 |HH;L$h
 |HL;|$h
 |Lu?c

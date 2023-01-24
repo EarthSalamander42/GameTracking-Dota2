@@ -5,7 +5,6 @@
 		 Simplify CH[
 		 [Refining] Number of clipping planes 
 		 [Regular sampling] Number of clipping planes 
-		g_pMemAlloc
 	 # inside surface           
 	 # on surface               
 	 # primitives               
@@ -16,7 +15,11 @@
 	!s99
 	NAN encountered in element '%s' guid %s attribute '%s'!
 	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
-	g_bUpdateStringTokenDatabase
+	_V_StringAfterPrefix
+	_V_StringAfterPrefixCaseSensitive
+	_V_strncmp
+	_V_strncpy
+	g_VProfCurrentProfile
 	kE>fvw
  	% t
                           
@@ -106,6 +109,7 @@
  {%d,%d,%d}
 !>6'Y
 !hn7!
+"	g_bUpdateStringTokenDatabase
 " -ie 
 " -oe 
 "%s" 
@@ -137,6 +141,7 @@ $prefix_element$
 %.04f
 %.10f
 %05d,     0x%p,     %5d,      '%s'
+%A1(@!
 %D8d$8t
 %GoU?*
 %d %d %d
@@ -189,6 +194,7 @@ $prefix_element$
 %sEdgeCurveType
 %sEdgeValue
 %sIndices
+%wp;w
 &?PPPPPPP?
 &YA1A
 ',=?k
@@ -535,6 +541,7 @@ $prefix_element$
 )|$pL
 )|B?d!
 )}pMc
+*	g_pMemAlloc
 *** Converter error - element "%s" already has a non-int attribute "%s"!
 *** Element "%s" has attribute "%s" with an unexpected type!
 *** Log "%s" has attribute "%s" with an unexpected type (expected int array)!
@@ -555,6 +562,7 @@ $prefix_element$
 *StO9>T
 + Generate 
 + Simplify 
++%G4o
 +A$Lc
 +AhHc
 +AlLc
@@ -1435,7 +1443,7 @@ $prefix_element$
 220323000000Z
 220801000000Z
 220921000000Z
-221203185126Z0/
+230112002026Z0/
 241009235959Z0a1
 2D;KPsIL
 2DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA
@@ -1461,8 +1469,8 @@ $prefix_element$
 64 283 0
 6OB,n_
 6YA1A
+7*Q'(W
 70503
-7@r9<
 7http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0E
 8-byte data pool
 80tWD
@@ -1595,6 +1603,7 @@ $prefix_element$
 <undefined>
 <utT@:
 ======
+=P{.nM
 =imb;D
 =m_CollisionAttributes
 =rIQU
@@ -1755,7 +1764,6 @@ $prefix_element$
 ?material
 ?udHcJ
 ?{Q}<
-?~ac<
 @ HcI0H
 @.data
 @.reloc
@@ -2895,10 +2903,10 @@ D( Hc
 D+AHH
 D+Ap+YpD+YhD+Ql
 D+RhE
-D5v0k
 D8 tZH
 D8&t 
 D8&t4H
+D8=mP
 D8L$0uP
 D8\0>t
 D8a$t
@@ -2919,7 +2927,7 @@ D9'uG
 D9.~QA
 D91~HH
 D92uAA
-D9=H.&
+D9=X>&
 D9Ppu
 D9Xhu
 D9Xlu
@@ -3437,6 +3445,7 @@ H+uhA
 H33M3
 H9(t|
 H93t	H
+H95}4
 H97u+A
 H98t$H
 H99tjH
@@ -3701,7 +3710,6 @@ IsValidCodePage
 IsValidLocale
 IsValidLocaleName
 Iteration 
-JDBLa
 January
 JcD* E3
 JlA+KlA
@@ -3880,7 +3888,6 @@ L$xMc
 L+A@L
 L+m`I
 L9#t	H
-L9%#$
 L9BHA
 L9IHA
 L9NHt
@@ -4278,6 +4285,7 @@ RtlLookupFunctionEntry
 RtlPcToFileHeader
 RtlUnwindEx
 RtlVirtualUnwind
+Rvmbn
 S(fA;
 S0Q0O
 S89S4
@@ -4438,6 +4446,7 @@ T$`fA;
 T$hD#
 T$hE9U0~eHc
 T$hIcD
+T$oYc
 T$pA;
 T$vfD;
 T$x;T
@@ -4739,7 +4748,6 @@ XL$$H
 XLcC0A
 XhD+ApD+YhA
 Xt$TA
-Y-Md"
 Y>kX>M
 YD$ A
 YD$@f
@@ -4862,15 +4870,10 @@ Zod(^?
 ]J<0"0i3
 ^<V7w
 ^RfN>
-^opc}
 _89_D
 _8tDH
 _RDATA
 _V_SetExtension
-_V_StringAfterPrefix
-_V_StringAfterPrefixCaseSensitive
-_V_strncmp
-_V_strncpy
 __UNKNOWN__
 __based(
 __cdecl
@@ -4938,6 +4941,7 @@ _oD>Kg
 `placement delete[] closure'
 `scalar deleting destructor'
 `string'
+`s|&$
 `typeof'
 `udt returning'
 `vbase destructor'
@@ -5008,6 +5012,7 @@ argument out of domain
 assemblyCmds
 assumeWorldSpace
 atan2
+attached_prop_physics
 attachmentName
 attribute
 audioTarget
@@ -5290,6 +5295,7 @@ disableOverride
 disableShadows
 disableShadows2
 disabled
+disablemultiplegravitygrab
 disallowOverride
 displayScale
 displaySet
@@ -5499,7 +5505,6 @@ functionName
 fuvA;
 g cMesh
 g default
-g_VProfCurrentProfile
 ga_frame
 gameSoundName
 gameitemclass
@@ -5516,6 +5521,8 @@ goalOrientation
 goalPosition
 graphCurve
 gravity
+gravity_grab_priority
+gravitygrabignoremassandsize
 green
 gridspacing
 groupColor
@@ -5612,7 +5619,9 @@ isEnabledByDefault
 isGroup
 isOrientation
 isPosition
+item_item_crate
 iu+-,
+j:XQK
 j>>A?1
 j?V()
 j?{$*
@@ -5644,7 +5653,7 @@ k<9s@~DL
 k<9{@~:L
 k<9{@~EL
 k<9{@~FL
-kPH9-
+kPH9->
 keyValues
 keysInTime_0
 keysInTime_1
@@ -6248,7 +6257,6 @@ o|$0f
 p AVH
 p WATAUAVAWH
 p WAVAWH
-p'F!K
 pA+{pE
 pA\[]
 pA\^[
@@ -6337,6 +6345,9 @@ projectionMode
 prop 
 prop_dynamic
 prop_dynamic with resource name %s has no model path attribute. That's really strange.
+prop_physics
+prop_physics_override
+prop_physics_respawnable
 prop_static
 propdataname
 properties
@@ -6748,7 +6759,6 @@ t7HcP
 t8H9_ t2H
 t8L;T$@H
 t;LcF
-t<Os(
 t>;S(s9H
 t?@8:t:H
 t?fff
@@ -7008,6 +7018,7 @@ v=Y]Bv
 vB8_(t
 vC8_(t
 vPHcFHM
+vS%]H
 vSize
 vSphere
 value

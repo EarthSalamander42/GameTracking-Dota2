@@ -2674,7 +2674,7 @@ Jak se kulturní vliv obou kamenů šířil, došlo k nevyhnutelnému rozporu me
 		"DOTA_Tooltip_EconItem_Used_By_Fmt_9"	"Používá: %s1, %s2, %s3, %s4, %s5, %s6, %s7, %s8 a %s9"
 		"DOTA_Tooltip_EconItem_Used_By_Fmt_10"	"Používá: %s1, %s2, %s3, %s4, %s5, %s6, %s7, %s8, %s9 a %s10"
 
-		"DOTA_Tooltip_Ability_Next_Upgrade_Level"	"Další vylepšení schopnosti na úrovni %s1"
+		"DOTA_Tooltip_Ability_Next_Upgrade_Level"	"Další vylepšení schopnosti na %s1. úrovni"
 		"DOTA_Tooltip_Ability_Upgradable"			"Vylepšitelné"
 		"DOTA_Tooltip_Ability_Build_Comment"		"%s1"
 		"DOTA_Tooltip_Ability_NoScepter"			"Ultimátní schopnost tohoto hrdiny nelze vylepšit Aghanimem."
@@ -6943,7 +6943,7 @@ Jak se kulturní vliv obou kamenů šířil, došlo k nevyhnutelnému rozporu me
 		"Notification_Action_Taken_Title"		"Děkujeme ti"
 		"Notification_Action_Taken"				"Nedávno jsme zasáhli proti jednomu nebo více hráčům, které jsi nahlásil za špatné chování.<br /><br />Odměnou ti budiž jedno další nahlášení. Díky, že pomáháš dělat z komunity hry Dota 2 přátelštější místo."
 		"Notification_Action_Taken_OverwatchMajor"				"Nejméně jeden hráč, kterého jsi nahlásil za špatné chování, byl Dozorem nedávno shledán vinným ze spáchání přestupku. Odměnou ti budiž jedno další nahlášení. Díky, že pomáháš dělat z komunity hry Dota 2 přátelštější místo."
-		"Notification_Action_Taken_OverwatchMinor"				"Nejméně jeden hráč, kterého jsi nahlásil za špatné chování, bylo Dozorem nedávno shledán vinným ze spáchání přestupku. Odměnou ti budiž jedno další nahlášení. Díky, že pomáháš dělat z komunity hry Dota 2 přátelštější místo."
+		"Notification_Action_Taken_OverwatchMinor"				"Nejméně jeden hráč, kterého jsi nahlásil za špatné chování, byl Dozorem nedávno shledán vinným ze spáchání přestupku. Odměnou ti budiž jedno další nahlášení. Díky, že pomáháš dělat z komunity hry Dota 2 přátelštější místo."
 		"Notification_Action_Taken_Short"		"Nedávno jsme zasáhli proti jednomu nebo více hráčům, které jsi nahlásil za špatné chování."
 		"Notification_Action_Taken_Short_OverwatchMajor"		"Nejméně jeden hráč, kterého jsi nahlásil, byl Dozorem nedávno shledán vinným ze spáchání přestupku."
 		"Notification_Action_Taken_Short_OverwatchMinor"		"Nejméně jeden hráč, kterého jsi nahlásil, byl Dozorem nedávno shledán vinným ze spáchání přestupku."
@@ -12633,6 +12633,9 @@ Jak se kulturní vliv obou kamenů šířil, došlo k nevyhnutelnému rozporu me
 		"DOTA_Style_qop_2022_immortal_legs_0"	"Eminence"
 		"DOTA_Style_qop_2022_immortal_legs_1"	"Královna"
 
+		"DOTA_Item_Frightful_Revelries_0"	"Frightful Revelries"
+		"DOTA_Item_Frightful_Revelries_1"	"Harvest Night"
+
 
 //DOTA_ITEM_STYLES_END
 //DOTA_ITEM_STYLE_END
@@ -15303,7 +15306,6 @@ Speciální taunt pro hrdinu Techies"
 		"DOTA_TrophyDesc_International2022BattlePass_Level"				"Trofej zaznamenávající úroveň tvého Bitevního deníku roku 2022."
 		"DOTA_TrophyName_International2022BattlePass_CavernChallenge"	"Ohněm a ledem zocelený"
 		"DOTA_TrophyDesc_International2022BattlePass_CavernChallenge"	"Trofej zaznamenávající, kolik setů jsi získal z minihry Výprava do neznáma v průběhu sezóny Bitevní deník roku 2022."
-
 
 		"DOTA_TrophyName_MVPTrophy"						"Trofej nejlepšího hráče"
 		"DOTA_TrophyDesc_MVPTrophy"						"Trofej zaznamenávající, kolikrát jsi byl vybrán jako nejlepší hráč zápasu."
@@ -19879,7 +19881,7 @@ Speciální taunt pro hrdinu Techies"
 
 		"KillEaterEvent_Bristleback_KillsUnderFourQuillStacks"			"Zabití se čtyřnás. sečtením Quill"
 		"KillEaterEvent_Bristleback_TripleHeroNasalGoo"					"Zásahy tří hrdinů pomocí Nasal Goo"
-		"KillEaterEvent_Bristleback_MaxWarpathStackDuration"			"Max. trvání sečtení Warpath"
+		"KillEaterEvent_Bristleback_MaxWarpathStackDuration"			"Trvání max. sečtení Warpath"
 		"KillEaterEvent_Bristleback_QuillStackDamage"					"Poškození sečtení Quill"
 		"KillEaterEvent_Bristleback_BristlebackTriggeredDamage"			"Vynucené poškození Bristleback"
 
@@ -20390,7 +20392,7 @@ Speciální taunt pro hrdinu Techies"
 		"DOTA_ChallengeDesc_Phoenix_Stun_With_Supernova"   "Omrač schopností <font color='#ffffff'>Supernova</font> celkem <font color='#ffffff'>%s1</font> nepřátelských hrdinů."
 		"DOTA_ChallengeDesc_Razor_Damage_On_Static_Linked"   "Uděl celkem <font color='#ffffff'>%s1</font> bodů poškození nepřátelským hrdinům, se kterými jsi spojen schopností <font color='#ffffff'>Static Link</font>."
 		"DOTA_ChallengeDesc_Razor_DamageWithUnstableCurrent"   "Schopností <font color='#ffffff'>Unstable Current</font> uděl nepřátelským hrdinům celkem <font color='#ffffff'>%s1</font> bodů poškození."
-		"DOTA_ChallengeDesc_ShadowDemon_KillsUnderSoulCatcher"   "Celkem <font color='#ffffff'>%s1×</font> zabij nebo asistuj u zabití nepřátel, na které působí schopnost <font color='#ffffff'>Soul Catcher</font>."
+		"DOTA_ChallengeDesc_ShadowDemon_KillsUnderDisseminate"   "Celkem <font color='#ffffff'>%s1×</font> zabij nebo asistuj u zabití nepřátel, na které působí schopnost <font color='#ffffff'>Disseminate</font>."
 
 
 
@@ -24955,6 +24957,7 @@ Aby se mohl připojit zkušenější hráč, musí mít odehráno nejméně {d:n
 	"DOTA_HeroRole_Description_Pusher"		"Tento hrdina dokáže rychle obléhat a ničit nepřátelské věže a kasárny v průběhu celého zápasu."
 	"DOTA_HeroRole_Description_Initiator"	"Tento hrdina je dobrý pro zahajování týmových potyček."
 
+	"DOTA_HeroTags"							"Značky"
     "DOTA_HeroGrid_Sort_By"                        "Třídit dle:"
 
 	"DOTA_HeroGrid_Loading"						"Načítání mřížky hrdinů..."
@@ -26141,6 +26144,7 @@ Aby se mohl připojit zkušenější hráč, musí mít odehráno nejméně {d:n
 
 	"DOTA_ChangeLog_TI9AllStarVoting" "Hlasování o zápasu hvězd pro TI9"
 	"DOTA_ChangeLog_TI0CompendiumEnded" "Přehled šampionátu The International 2021 vypršel. Kliknutím si prohlédni konečné výsledky."
+	"DOTA_ChangeLog_BP2022Ended" "Bitevní deník roku 2022 skončil. Kliknutím zde si vyzvedni případné zbývající odměny."
 
 	"DOTA_GlobalLiveSpectatorChat_Title"			"Nová vlastnost – globální chat diváků"
 	"DOTA_GlobalLiveSpectatorChat_Details"			"Aby sis šampionát The International užili společně s tisíci dalšími fanoušky, nemusíš být v Seattlu, stačí ti naskočit do jednoho z chatů diváků, které od nynějška pojmou mnohem více hráčů v jednom kanálu. Mimo toho můžeš kanál chatu diváků také nalézt v nové záložce „Živý zápas“."
@@ -26365,6 +26369,9 @@ Aby se mohl připojit zkušenější hráč, musí mít odehráno nejméně {d:n
 
 	"DOTA_Banned_Title"			"Jsi zabanován"
 	"DOTA_Banned"				"Na tvůj účet byl uvalen ban a nemůžeš tak hrát hru Dota 2."
+
+	"DOTA_China_SpecialDisabled_Title" "Servery mimo provoz"
+	"DOTA_China_SpecialDisabled" "Vážení hráči, v reakci na nedávnou událost budou servery hry Dota 2 6. prosince 2022 od 0.00 do 23.59 mimo provoz. Děkujeme za pochopení."
 
 	"DOTA_AntiAddiction_Initial_With_ID_18Plus"		"Naposledy online: %s1\nPoslední IP adresa: %s2"
 	"DOTA_AntiAddiction_Initial_With_ID_Under_18"	"Je ti méně než 18 let. Systém proti závislosti je aktivní.\nNaposledy online: %s1\nPoslední IP adresa: %s2"
@@ -27286,6 +27293,7 @@ Aby se mohl připojit zkušenější hráč, musí mít odehráno nejméně {d:n
 	"DOTA_Popup_CardPack_Model_Winter2022"			"ZIMNÍ ČÁST AL 2021–2022"
 	"DOTA_Popup_CardPack_Model_Spring2022"			"JARNÍ ČÁST AL 2021–2022"
 	"DOTA_Popup_CardPack_Model_Summer2022"			"LETNÍ ČÁST AL 2021–2022"
+	"DOTA_Popup_CardPack_Model_Winter2023"			"ZIMNÍ ČÁST AL 2023"
 	"DOTA_Popup_CardPack_Model_PackCount"			"Balíček pěti"
 	"DOTA_Popup_CardPack_Model_PremiumPackCount"	"Prémiový balíček pěti"
 	"DOTA_Popup_CardPack_Model_MainTitle"			"karet hráčů"
@@ -32456,6 +32464,7 @@ Oblíbenosti se těší také pusheři prvních fází hry (jmenovitě Zeus a De
 	"DOTA_HeroLevelReward_Currency:p{currency_amount}"	"{d:currency_amount} střep#|#{d:currency_amount} střepy#|#{d:currency_amount} střepů#|#{d:currency_amount} střepu"
 	"DOTA_HeroLevelReward500_Currency"	"500 plusových střepů"
 	"DOTA_HeroLevelReward350_Currency"	"350 plusových střepů"
+	"DOTA_HeroLevelReward700_Currency"	"700 plusových střepů"
 	"DOTA_HeroLevelReward_ChatWheel"	"Fráze pro hrdinovo chatovací kolečko:<br>„{s:chat_wheel_message}“"
 
 	"DOTA_ReadyCheck"	"Připravenost"
@@ -33679,7 +33688,7 @@ Oblíbenosti se těší také pusheři prvních fází hry (jmenovitě Zeus a De
 
 	"DOTA_QueenOfPainArcana_ArcanaProgress_Score"					"{s:current_score}/{d:unlock_value}"
 	"DOTA_QueenOfPainArcana_ArcanaProgress_Description:p{unlock_value}"	"Umuč schopností Sonic Wave ve vítězných zápasech celkem {d:unlock_value} nepřítele a odemkni alternativní styl.#|#Umuč schopností Sonic Wave ve vítězných zápasech celkem {d:unlock_value} nepřátele a odemkni alternativní styl.#|#Umuč schopností Sonic Wave ve vítězných zápasech celkem {d:unlock_value} nepřátel a odemkni alternativní styl.#|#Umuč schopností Sonic Wave ve vítězných zápasech celkem {d:unlock_value} nepřítele a odemkni alternativní styl."
-	"KillEaterEventType_QueenOfPain_ArcanaProgress"					"Hrdinové umučení pomocí Sonic Wave"
+	"KillEaterEventType_QueenOfPain_ArcanaProgress"					"Hrdinové umučení pomocí Sonic Wave ve vyhraných zápasech"
 
 	"DOTA_QueenOfPainArcana_Hud_Title"								"{d:combo_count}× kombo" 
 	
@@ -34987,6 +34996,21 @@ Oblíbenosti se těší také pusheři prvních fází hry (jmenovitě Zeus a De
 
 	"DOTA_WeeklyQuest_Win_And_High_Fives_Completed_Name"			"Vítězné dlaně"
 	"DOTA_WeeklyQuest_Win_And_High_Fives_Completed_Description"		"Ve vyhraných zápasech si celkem {s:current_tier_score}× s někým plácni"
+		
+	"DOTA_WeeklyQuest_Win_With_Ranged_Hero_Name"					"Vztah na dálku"
+	"DOTA_WeeklyQuest_Win_With_Ranged_Hero_Description"				"Vyhraj celkem {s:current_tier_score} zápasů jako hrdina s útoky na dálku"
+		
+	"DOTA_WeeklyQuest_Win_With_Melee_Hero_Name"						"Blízká setkání"
+	"DOTA_WeeklyQuest_Win_With_Melee_Hero_Description"				"Vyhraj celkem {s:current_tier_score} zápasů jako hrdina s útoky na blízko"
+		
+	"DOTA_WeeklyQuest_Disarm_Duration_Name"							"Čím že mě zabiješ?"
+	"DOTA_WeeklyQuest_Disarm_Duration_Description"					"Odzbroj nepřátelské hrdiny celkem na {s:current_tier_score} sekund."
+		
+	"DOTA_WeeklyQuest_Neutral_Items_Earned_Name"					"Neutrální tržiště"
+	"DOTA_WeeklyQuest_Neutral_Items_Earned_Description"				"Najdi celkem {s:current_tier_score} neutrálních předmětů"
+		
+	"DOTA_WeeklyQuest_Use_Ability_Charges_Name"						"Nabito a odjištěno"
+	"DOTA_WeeklyQuest_Use_Ability_Charges_Description"				"Použij celkem {s:current_tier_score} nabití schopností hrdinů"
 
 	// End Weekly Quest Names
 
@@ -35715,6 +35739,13 @@ Oblíbenosti se těší také pusheři prvních fází hry (jmenovitě Zeus a De
 	"DOTA_DPCTeams_SeasonPeriod_Event37_Dates"		"6. čvn. – 14. srp. 2022"
 	"DOTA_DPCTeams_SeasonPeriod_Event38_Name"		"The International 2022"
 	"DOTA_DPCTeams_SeasonPeriod_Event38_Dates"		"8.–30. říj. 2022"
+
+	"DOTA_DPCTeams_RegistrationPeriod8"				"Zimní část"
+	"DOTA_DPCTeams_RegistrationPeriodDates8"		"9. led. – 5. bře. 2023"
+	"DOTA_DPCTeams_RegistrationPeriodSeason8"		"Sezóna 2023"
+	"DOTA_DPCTeams_SeasonPeriod_Event41_Name"		"Zimní část"
+	"DOTA_DPCTeams_SeasonPeriod_Event41_Dates"		"9. led. – 5. bře. 2023"
+
 
 	"DOTA_FavoriteTeamSet"							"Oblíbený tým nastaven"
 	"DOTA_NewFavoriteTeam"							"Tým {s:favorite_team} je nyní nastaven jako tvůj vybraný tým, se kterým budeš spjat na různých místech hlavní nabídky i přímo ve hře."
@@ -39877,11 +39908,12 @@ Jestli ses ale dostatečně nesoustředil a nemůžeš zaručit, že o tomto př
 		"DOTA_CandyShop_Error_NotEnoughSpace"			"Nemáš dost místa v inventáři."
 		"DOTA_CandyShop_Error_NotEnoughBags"			"Nemáš dost sáčků."
 		"DOTA_CandyShop_Error_InvalidRecipe"			"Neplatný recept."
+		"DOTA_CandyShop_Error_ExpiredShop"				"Cukrárna zavřela své brány."
 		"DOTA_CandyShop_CandySackInfo"					"Pro získání dalších sladkostí hraj zápasy nebo vylepšuj svůj Bitevní deník."
 		"DOTA_CandyShop_InventorySlotInfo"				"Pro odemčení dalších slotů inventáře vylepši svůj Bitevní deník."
 
 		"DOTA_CandyShop_InventorySizeIncrease"			"+{d:inventory_size_increase} sloty inventáře v cukrárně"
-		"DOTA_CandyShop_ExchangeRecipeRefreshTimer"		"Nový recept za {i:refresh_days}D {s:refresh_hours}H {s:refresh_minutes}M {s:refresh_seconds}S"
+		"DOTA_CandyShop_ExchangeRecipeRefreshTimer"		"Nové recepty za {i:refresh_days}D {s:refresh_hours}H {s:refresh_minutes}M {s:refresh_seconds}S"
 		"DOTA_CandyShop_OpenBags"						"Otevřít sáčky"
 		"DOTA_CandyShop_FillSlots"						"Zaplnit sloty"
 		"DOTA_CandyShop_SlotsFull"						"Plné sloty"
@@ -44750,6 +44782,11 @@ Jestli ses ale dostatečně nesoustředil a nemůžeš zaručit, že o tomto př
 		"DOTA_BattlePass2022_Schedule_TIPointsSale_Description"					"<b>Jednorázová nabídka 75% slevy!<br/>Dostupné od 12. do 30. října</b><br/>– 120 úrovní Deníku<br/>– 9× Immortal truhla I<br/>– 6× Immortal truhla II<br/>– 6× truhla Battle Pass Collection<br/>– 6× truhla Ageless Heirlooms"
 		"DOTA_BattlePass2022_Schedule_TIPointsSale_ActionLabel"					"Zakoupit – {s:item_price}"
 
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_Heading"					"Balíček úrovní"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_SubTitle"					"Bitevní deník roku 2022"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_Description"				"<b>Poslední šance na 75% slevu!<br/>Dostupné od 15. pro. do 12. led.</b><br/>– 120 úrovní Deníku<br/>– 9× Immortal truhla I<br/>– 6× Immortal truhla II<br/>– 6× truhla Battle Pass Collection<br/>– 6× truhla Ageless Heirlooms"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_ActionLabel"				"Zakoupit – {s:item_price}"
+
 		"DOTA_BattlePass2022_Schedule_PrimalBeastPrestige_Heading"				"Prestižní set pro Primal Beasta"
 		"DOTA_BattlePass2022_Schedule_PrimalBeastPrestige_Description"			"Před příchodem do lesů Tomo'kan byl Primal Beast vystaven mnoha nezdařeným pokusům o zkrocení, nicméně jeden se vymykal..."
 
@@ -45020,6 +45057,8 @@ Jestli ses ale dostatečně nesoustředil a nemůžeš zaručit, že o tomto př
 		"DOTA_StickerStore_TalentComingSoon"					"Již brzy"
 		"DOTA_StickerStore_MoreStickersComingSoon"				"Další samolepky již brzy!"
 		"DOTA_StickerStore_TalentStickersLabel"					"Samolepky uvaděčů"
+		"DOTA_StickerStore_NoStickersAvailable"					"V prodeji nejsou žádné samolepky."
+
 		"DOTA_StickerHero_AssignSticker"						"Přiřadit samolepku"
 		"DOTA_StickerHero_ReplaceSticker"						"Nahradit samolepku"
 
@@ -45105,7 +45144,7 @@ Jestli ses ale dostatečně nesoustředil a nemůžeš zaručit, že o tomto př
 		"DOTA_PrimalBeastPrestige_Level"						"Odměna 223. úrovně Deníku"
 
 		// FACELESS VOID ARCANA
-		"KillEaterEvent_FacelessVoid_ArcanaProgress"		"Zabití v Chronosphere"
+		"KillEaterEvent_FacelessVoid_ArcanaProgress"		"Zabití v Chronosphere ve vyhraných zápasech"
 
 		//TI Championship stickers
 		"DOTA_Stickers_Store_ChampionsTitle"							"Gratulujeme týmu<br/>Tundra Esports!"
@@ -45118,6 +45157,7 @@ Jestli ses ale dostatečně nesoustředil a nemůžeš zaručit, že o tomto př
 		"DOTA_BattlePass2022_Schedule_CollectorsCacheVoting_Heading" "Hlasování o obsahu Collector's Cache"
 		"DOTA_International2022_CollectorsCacheVoting" "Hlasovat"
 
+		"DOTA_BattlePass2022_Schedule_CollectorsCache2Available_Heading" "Collector's Cache II (Diretide 2022)"
 		"DOTA_BattlePass2022_Schedule_CollectorsCacheAvailable_Heading" "Collector's Cache (Diretide 2022)"
 		"DOTA_International2022_CollectorsCacheAvailable" "Zobrazit truhlu"
 
@@ -45134,6 +45174,13 @@ Jestli ses ale dostatečně nesoustředil a nemůžeš zaručit, že o tomto př
 		"DOTA_2022Diretide_CollectorsCache_Treasure_1"		"1 truhla"
 		"DOTA_2022Diretide_CollectorsCache_Treasure_2"		"7 truhel"
 		"DOTA_2022Diretide_CollectorsCache_Treasure_3"		"14 truhel"
-		"DOTA_2022Diretide_CollectorsCache_Disclaimer"		"Obsah truhly je exkluzivní a lze jej získat pouze do 18. prosince 2022."
+		"DOTA_2022Diretide_CollectorsCache_Disclaimer"		"Obsah truhly je exkluzivní a lze jej získat pouze do 12. ledna 2023."
+
+        "DOTA_BattlePass2022_Schedule_MoreActiveEventsUp" "+ další ({d:num_more_active_events_up}) probíhající události výše"
+        "DOTA_BattlePass2022_Schedule_MoreActiveEventsDown" "+ další ({d:num_more_active_events_down}) probíhající události níže"
+
+		"DOTA_BattlePassEndingTitle"				"Končí za"
+		"DOTA_BattlePassEndingCountdown"			"0 <b>dnů</b> 0 <b>hod</b> 0 <b>min</b> 0 <b>sek</b>"
+		"DOTA_BattlePassEndingDescription"			"Poslední šance na <a href=\"event:DOTAPurchaseEventLevels( EVENT_ID_INTERNATIONAL_2022 )\">úrovně</a>, <a href=\"event:DOTAShowSplashAdPopup('bundle_sale_2022_2')\">balíčky</a>, <a href=\"event:DOTAShowTreasurePage(26880)\">Collector's Cache I</a> a <a href=\"event:DOTAShowTreasurePage(26932)\">Collector's Cache II</a>"
 	}
 }

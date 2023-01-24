@@ -906,6 +906,7 @@ $tI
 0 <= i
 0.7.2
 00000000-0000-0000-0000-000000000000
+00:02:55
 0123456789abcdef
 0: Force z prepass off. 1: Force on. -1: Don't force
 0: Use normals reconstructed from depth. 1: Output correct normals in z prepass.
@@ -1113,7 +1114,6 @@ $tI
 14IRenderHandler
 14IRenderService
 14ISource2Engine
-15:04:49
 15CBaseSpawnGroup
 15CDemoConsoleCmd
 15CDemoCustomData
@@ -2218,6 +2218,7 @@ CEventDispatcher_Base::RegisterEventListener_Base(CUtlAbstractDelegate const&, u
 CEventDispatcher_Base::UnregisterEventListener_Base(CUtlAbstractDelegate const&, CUtlVector<CEventDispatcher_Base::EventListenerInfo_t, int, CUtlMemory<CEventDispatcher_Base::EventListenerInfo_t, int> >&)
 CFiber::ReachedZeroReferences()
 CFinalizeConnectionPrerequisite
+CFormatStringElement::CFormatStringElement(char const*)
 CFrameSnapshot CUtlMemoryPoolMT
 CGameClient::SendHltvReplaySnapshot
 CGameClientConnectPrerequisite
@@ -2758,6 +2759,7 @@ CRenderingWorldSession::OnClientPreOutput
 CRenderingWorldSession::OnFrameBoundary
 CRenderingWorldSession::OnLoopActivate
 CResourceManifestPrerequisite
+CSOAContainer(%d x %d x %d, channels=%?)
 CSOAContainer::SetAttributeType - ERROR, trying to change type of previously-defined attribute %d!
 CScreenshotService
 CScriptComponent::Storage_t
@@ -3915,6 +3917,8 @@ Force uncompressed update
 Force user input to this split screen player.
 Forced by cvar
 Forcing engine to render for the next %d frames
+FormatArgumentsToBuffer(IFormatOutputStream*, char const*, CTypeErasedFormattingWrapper const*, int)
+FormatTo(IFormatOutputStream*, CFormatStringElement, int)
 Forward
 Forward command to server.
 Found %d lines of sight!
@@ -4344,6 +4348,7 @@ JPEG datastream contains no image
 JPEG parameter struct mismatch: library thinks size is %u, caller expects %u
 JPEGMEM
 Jan
+Jan 12 2023
 Javanese
 Jul
 Jumping to random tick %d (%.2f min)
@@ -5034,7 +5039,6 @@ Note that enum values use C++ scoping rules, meaning that enum values are siblin
 Note: Changes to sv_pure take effect when the next map is loaded.
 Note: should use "addip" instead of "banip".
 Nov
-Nov  3 2022
 Now recording to "%s", recorded length so far is %s.
 Num3dSkyboxSceneWorlds
 Number of immediate Steam friends: %d (all friends %d)
@@ -9406,7 +9410,7 @@ usergroup
 userid "%d" not found
 userinfo
 users
-utlsoacontainer.cpp:2362
+utlsoacontainer.cpp:2402
 utlstringtoken
 v
 v2f

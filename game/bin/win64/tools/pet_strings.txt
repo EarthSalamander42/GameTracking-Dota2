@@ -11,7 +11,7 @@
 			Shadows 1
 		%.*s
 		PointLight
-		g_pMemAlloc
+		_V_strEndsWith
 	 The lexer was matching from line %d, offset %d, which
 	 This indicates a poorly specified lexer RULE
 	 or unterminated input element such as: "STRING["]
@@ -42,9 +42,14 @@
 	Default
 	NAN encountered in element '%s' guid %s attribute '%s'!
 	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
-	`DB<
-	g_bUpdateStringTokenDatabase
-	g_pThreadPool
+	_V_StringAfterPrefix
+	_V_StringAfterPrefixCaseSensitive
+	_V_strncmp
+	_V_strncpy
+	_V_strnicmp_fast
+	g_Mathlib_GammaToLinearByteTable
+	g_TSPointerListNodes
+	g_VProfCurrentProfile
 	kE>fvw
 	u+Nct
 	wrHc
@@ -239,6 +244,7 @@
 !>6'Y
 !?triggered@QAction@@QEAAX_N@Z
 !hn7!
+"	g_bUpdateStringTokenDatabase
 " -ie 
 " -oe 
 " ?timerEvent@QListView@@MEAAXPEAVQTimerEvent@@@Z
@@ -321,7 +327,6 @@
 #bML"
 #s>pC
 #t'fA
-$"N`|
 $#?windowIcon@QWidget@@QEBA?AVQIcon@@XZ
 $$LcH
 $<atk<r
@@ -353,7 +358,6 @@ $prefix_element$
 %30s		%5d		%5d
 %D8d$8t
 %GoU?*
-%QX${z
 %[?setRange@QIntValidator@@UEAAXHH@Z
 %\?setUnderline@QFont@@QEAAX_N@Z
 %]?sibling@QStandardItemModel@@UEBA?AVQModelIndex@@HHAEBV2@@Z
@@ -551,21 +555,19 @@ $prefix_element$
 ( (int64)m_nAllocationCount + (int64)num ) <= 0x7FFFFFFF
 (#%d)
 (#?windowModality@QWidget@@QEBA?AW4WindowModality@Qt@@XZ
-(%*jE
 (%.2f %.2f %.2f)
 (%1,%2)
-(%RmK
-(%^!T
-(%^"T
 (%d,%d,%d)
 (%g,%g,%g)
-(%j>3
-(%z%)
-(%z+3
+(%z9)
 (*%s*), 
+(-AN2
 (3 Independent Floats)
-(5!!T
-(5t"T
+(5Gm#
+(5agT
+(=CfT
+(=V/2
+(=cR6
 (A]A\^[
 (A]A\_]
 (A]^][
@@ -615,7 +617,6 @@ $prefix_element$
 (D$0f
 (D$0ff
 (D$0z	u
-(D$@A
 (D$@D
 (D$@H
 (D$@L
@@ -754,6 +755,7 @@ $prefix_element$
 (t$pf
 (t$pt
 (u?A;
+(x4w?
 (|$ A
 (|$ D
 (|$ H
@@ -907,6 +909,7 @@ $prefix_element$
 )l$@D
 )l$@M;
 )l$PD
+)l$PE
 )l$PI
 )l$`D
 )l$pA
@@ -931,7 +934,6 @@ $prefix_element$
 )t$0@
 )t$0A
 )t$0D
-)t$0E
 )t$0H
 )t$0H;
 )t$0I
@@ -1001,10 +1003,10 @@ $prefix_element$
 )|$pD
 )|$pIc
 )|$pL
-)|$pf
 )|B?d!
 )}p@8
 )}pMc
+*	g_pMemAlloc
 * ?timerEvent@QTextEdit@@MEAAXPEAVQTimerEvent@@@Z
 * Rehandling active codes
 * { font-size: 10px }
@@ -1070,6 +1072,7 @@ $prefix_element$
 - Add Active Code: %s
 - Remove Active Code: %s
 -"?updateGeometries@QTreeView@@MEAAXXZ
+-)J#)
 ---- dmxconvert cmdline ----
 ---- dmxconvert output ----
 ---------------------------
@@ -1091,6 +1094,7 @@ $prefix_element$
 -unknown source-
 -unknown source-(
 -vsync
+.	g_pThreadPool
 .#?windowTitle@QWidget@@QEBA?AVQString@@XZ
 ..om?
 .00cfg
@@ -1129,6 +1133,7 @@ $prefix_element$
 .?AV<lambda_32cc5c046a14ae976909232f12cf6f16>@@
 .?AV<lambda_34476f123c6757c46fc2e0ac9e4e10ab>@@
 .?AV<lambda_344b379c9dc23465b3c2c82cadb0851c>@@
+.?AV<lambda_349db98dc3c24d36a5dd53a9a6f4d68d>@@
 .?AV<lambda_38ea7eb0d0fa18037f8bb8a5c2485e27>@@
 .?AV<lambda_3a855f383ed4f1949a63872743a43751>@@
 .?AV<lambda_3ba5dcea8a6cf42a6f472bb621b3c614>@@
@@ -1141,6 +1146,7 @@ $prefix_element$
 .?AV<lambda_4d2dbd6075234fbb183042f944016002>@@
 .?AV<lambda_4d57300c901a4ffe548e28062e6bf42a>@@
 .?AV<lambda_4d58e524b5635583dc3b5f103bcd5fad>@@
+.?AV<lambda_4f8ce6f345f6f803cae706b8128b8cab>@@
 .?AV<lambda_54627f95248cd77e85a7ce8c42d41ce5>@@
 .?AV<lambda_54a1f106804251eb548e98dfa3745393>@@
 .?AV<lambda_54fedc5b46335bf25c7b076395d32c74>@@
@@ -1164,7 +1170,6 @@ $prefix_element$
 .?AV<lambda_713ee8bbd6b08550d59c52695cab5ce3>@@
 .?AV<lambda_71b04e6654261c3f6a2ac62c35ff22b3>@@
 .?AV<lambda_73ab71cc9fd85dba627b415f4bfc58d5>@@
-.?AV<lambda_73b039c5e2046e2106411e93162a52d5>@@
 .?AV<lambda_74b8cbb5c3009c44b8de4467127e279a>@@
 .?AV<lambda_7603338aa329abfe457a07a41fb424db>@@
 .?AV<lambda_763529b0c7473cbc215a52d189ac9b18>@@
@@ -1179,6 +1184,7 @@ $prefix_element$
 .?AV<lambda_86ecb6787cbe86967a5568a13c7d3322>@@
 .?AV<lambda_8775f3b07391aa9c7ca7a57a58a470aa>@@
 .?AV<lambda_89468f7b4d47eb1f4bb58d81e5f5a829>@@
+.?AV<lambda_8b28d7710a98b40371cf0b560f3e1b7d>@@
 .?AV<lambda_8eefe88590ebf80ad66564a4b683fb2d>@@
 .?AV<lambda_9095bc3f6cf7fe2e3757fbda38ffcd08>@@
 .?AV<lambda_950e71c6059784ad7103e895869f1e08>@@
@@ -1190,6 +1196,7 @@ $prefix_element$
 .?AV<lambda_9f5fc79cd17868883d47272265e85036>@@
 .?AV<lambda_a040577cec81e293416b7ce8de1891a8>@@
 .?AV<lambda_a34b765dc8fccc4a188835b688fc237f>@@
+.?AV<lambda_a4b6f58b51422390bef212d9701ea6af>@@
 .?AV<lambda_a58821bb23b5cd2f8a4101d3fc101feb>@@
 .?AV<lambda_a5edd39d87b56f2a51e14ff6a5c156aa>@@
 .?AV<lambda_a69a96779a63f0cdd40bb4f40d3beb70>@@
@@ -1236,6 +1243,7 @@ $prefix_element$
 .?AV<lambda_f05a2745ccd6fef9e3f1bda27e7974eb>@@
 .?AV<lambda_f065a41dd4b32b778ee82e030d16e432>@@
 .?AV<lambda_f102eaf40f68d2c175b330e0dcf50658>@@
+.?AV<lambda_f1dd043d9791eb87ebce2e10f6915437>@@
 .?AV<lambda_f25c37099038263181b5186a3fa41b37>@@
 .?AV<lambda_f53023d03acaba37a1030b9f6d296a60>@@
 .?AV<lambda_f6ebf071d899e494ea57c59bced62965>@@
@@ -1461,7 +1469,7 @@ $prefix_element$
 .?AV?$CEntityComponentHelperT@VCScriptComponent@@V?$CEntityComponentHelperReferenced@VCScriptComponent@@@@@@
 .?AV?$CParallelLambdaJob@V<lambda_104fad39bdd1b5a2f4ac74e516ed02d2>@@@CParallelProcessLauncher@@
 .?AV?$CParallelLambdaJob@V<lambda_15d0b226922fb76cf7649a2875ecb3e2>@@@CParallelProcessLauncher@@
-.?AV?$CParallelLambdaJob@V<lambda_1cefafe28e24c16b3beba36563012fac>@@@CParallelProcessLauncher@@
+.?AV?$CParallelLambdaJob@V<lambda_ecb62f1a89b9b7c670c681d926842822>@@@CParallelProcessLauncher@@
 .?AV?$CParallelLambdaJob@V<lambda_ecd22fb1041651b7d7f7d27d4d9b0a67>@@@CParallelProcessLauncher@@
 .?AV?$CParallelProcessorAbstract@V?$CParallelProcessor@HV?$CLambdaJobItemProcessor@H@@$00@@@@
 .?AV?$CParallelProcessorAbstract@V?$CParallelProcessor@PEAVCRenderableBinding@@V?$CMemberFuncJobItemProcessor@PEAVCRenderableBinding@@VCRenderableUpdater@@V2@@@$00@@@@
@@ -1469,12 +1477,14 @@ $prefix_element$
 .?AV?$CPropertyAttributeEditorFactoryBase@VCQParticleCollectionFloatInput@@@@
 .?AV?$CPropertyAttributeEditorFactoryBase@VCQParticleCollectionVecInput@@@@
 .?AV?$CPropertyAttributeEditorFactoryBase@VCQParticleRemapFloatInput@@@@
+.?AV?$CPropertyAttributeEditorFactoryBase@VCQParticleTransformInputEditor@@@@
 .?AV?$CPropertyAttributeEditorFactoryBase@VCQPerParticleFloatInputEditor@@@@
 .?AV?$CPropertyAttributeEditorFactoryBase@VCQPerParticleVecInputEditor@@@@
 .?AV?$CPropertyAttributeEditorFactoryBase@VCQSequencePickerWidget@@@@
 .?AV?$CPropertyAttributeEditorFactoryBaseDynamicHeight@VCQParticleCollectionFloatInput@@@@
 .?AV?$CPropertyAttributeEditorFactoryBaseDynamicHeight@VCQParticleCollectionVecInput@@@@
 .?AV?$CPropertyAttributeEditorFactoryBaseDynamicHeight@VCQParticleRemapFloatInput@@@@
+.?AV?$CPropertyAttributeEditorFactoryBaseDynamicHeight@VCQParticleTransformInputEditor@@@@
 .?AV?$CPropertyAttributeEditorFactoryBaseDynamicHeight@VCQPerParticleFloatInputEditor@@@@
 .?AV?$CPropertyAttributeEditorFactoryBaseDynamicHeight@VCQPerParticleVecInputEditor@@@@
 .?AV?$CPropertyAttributeEditorFactoryBaseFixedHeight@VCQAttributeEditor_SoundPicker@@@@
@@ -1717,6 +1727,7 @@ $prefix_element$
 .?AV?$_Func_impl_no_alloc@V<lambda_32cc5c046a14ae976909232f12cf6f16>@@XPEAVCGlobalHotkeyCommands@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_34476f123c6757c46fc2e0ac9e4e10ab>@@XPEAVCBindableCamera@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_344b379c9dc23465b3c2c82cadb0851c>@@XPEAVCBindableCamera@@@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_349db98dc3c24d36a5dd53a9a6f4d68d>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_38ea7eb0d0fa18037f8bb8a5c2485e27>@@XPEAVCBasePetNode@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_3a855f383ed4f1949a63872743a43751>@@XPEAVCPetApp@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_3ba5dcea8a6cf42a6f472bb621b3c614>@@XPEAVCBasePetNode@@@std@@
@@ -1729,6 +1740,7 @@ $prefix_element$
 .?AV?$_Func_impl_no_alloc@V<lambda_4d2dbd6075234fbb183042f944016002>@@XPEAVCQSessionCycleWidget@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_4d57300c901a4ffe548e28062e6bf42a>@@XPEAVCPetSession@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_4d58e524b5635583dc3b5f103bcd5fad>@@XPEAVCBindableCamera@@@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_4f8ce6f345f6f803cae706b8128b8cab>@@XPEAVCBasePetNode@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_54627f95248cd77e85a7ce8c42d41ce5>@@XPEAVCBasePetNode@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_54a1f106804251eb548e98dfa3745393>@@XPEAVCQSessionCycleWidget@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_54fedc5b46335bf25c7b076395d32c74>@@X$$V@std@@
@@ -1749,7 +1761,6 @@ $prefix_element$
 .?AV?$_Func_impl_no_alloc@V<lambda_6e8427a5a47c913e9e57e49371407067>@@XPEAVCPetApp@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_71b04e6654261c3f6a2ac62c35ff22b3>@@XPEAVCPetApp@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_73ab71cc9fd85dba627b415f4bfc58d5>@@XPEAVCGlobalHotkeyCommands@@@std@@
-.?AV?$_Func_impl_no_alloc@V<lambda_73b039c5e2046e2106411e93162a52d5>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_74b8cbb5c3009c44b8de4467127e279a>@@XPEAVCGlobalHotkeyCommands@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_7603338aa329abfe457a07a41fb424db>@@XPEAVCPetApp@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_7a09fe176ef951e19c3c82125795c6fc>@@XPEAVCBindableCamera@@@std@@
@@ -1762,6 +1773,7 @@ $prefix_element$
 .?AV?$_Func_impl_no_alloc@V<lambda_86ecb6787cbe86967a5568a13c7d3322>@@XPEAVCBasePetNode@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_8775f3b07391aa9c7ca7a57a58a470aa>@@XPEAVCBindableCamera@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_89468f7b4d47eb1f4bb58d81e5f5a829>@@XPEAVCBindableCamera@@@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_8b28d7710a98b40371cf0b560f3e1b7d>@@XPEAVCBasePetNode@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_8eefe88590ebf80ad66564a4b683fb2d>@@XPEAVCPetApp@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_9095bc3f6cf7fe2e3757fbda38ffcd08>@@XPEAVCBasePetNode@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_950e71c6059784ad7103e895869f1e08>@@XPEAVCBindableCamera@@@std@@
@@ -1773,6 +1785,7 @@ $prefix_element$
 .?AV?$_Func_impl_no_alloc@V<lambda_9f5fc79cd17868883d47272265e85036>@@XPEAVCGlobalHotkeyCommands@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_a040577cec81e293416b7ce8de1891a8>@@XPEAVCBindableCamera@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_a34b765dc8fccc4a188835b688fc237f>@@XPEAVCBindableCamera@@@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_a4b6f58b51422390bef212d9701ea6af>@@XPEAVCBasePetNode@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_a58821bb23b5cd2f8a4101d3fc101feb>@@XPEAVKeyValues3@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_a5edd39d87b56f2a51e14ff6a5c156aa>@@XPEAVCGlobalHotkeyCommands@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_a69a96779a63f0cdd40bb4f40d3beb70>@@XPEAVCPetSession@@@std@@
@@ -1817,6 +1830,7 @@ $prefix_element$
 .?AV?$_Func_impl_no_alloc@V<lambda_f05a2745ccd6fef9e3f1bda27e7974eb>@@XPEAVCQParticlePreview@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_f065a41dd4b32b778ee82e030d16e432>@@XAEBUAssetSelectionInfo_t@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_f102eaf40f68d2c175b330e0dcf50658>@@XPEAVCPetApp@@@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_f1dd043d9791eb87ebce2e10f6915437>@@XPEAVCBasePetNode@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_f53023d03acaba37a1030b9f6d296a60>@@XPEAVCBindableCamera@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_f6ebf071d899e494ea57c59bced62965>@@XPEAVCLightingControlRig@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_f8ba1fb61ff30c4859fd88b6b2a9f057>@@XPEAVCGlobalHotkeyCommands@@@std@@
@@ -2083,6 +2097,7 @@ $prefix_element$
 .?AVCQParticlePreviewControls@@
 .?AVCQParticleRemapFloatInput@@
 .?AVCQParticleRenameDialog@@
+.?AVCQParticleTransformInputEditor@@
 .?AVCQParticleVecInputEditor@@
 .?AVCQPerParticleFloatInputEditor@@
 .?AVCQPerParticleVecInputEditor@@
@@ -2464,9 +2479,10 @@ $prefix_element$
 .xJ>Hf
 .xdata
 .xdata$x
-/-{,%
 /2GG>!B
-/5o<0
+/5*? 
+/5oP0
+/5{'C
 />58d%
 /D$pv
 /D$tv
@@ -2644,6 +2660,7 @@ $prefix_element$
 1OnBodyPartComboChanged()
 1OnBodyPartValueChanged()
 1OnBrowse()
+1OnCPMaxNumberEdited()
 1OnCPNumberEdited()
 1OnCPVectorEdited()
 1OnCancelled()
@@ -2670,6 +2687,7 @@ $prefix_element$
 1OnEditReturnPressed()
 1OnEditingFinished()
 1OnEnableDisableBoxChanged( int )
+1OnEndGrowthTimeEdited()
 1OnFileOpChanged()
 1OnFilterTextChanged(QString)
 1OnFlagToggled(int)
@@ -2952,8 +2970,8 @@ $prefix_element$
 220323000000Z
 220801000000Z
 220921000000Z
-221203185234Z0/
 2222<<
+230112002026Z0/
 241009235959Z0a1
 255 255 255
 2?&4}?
@@ -3070,7 +3088,7 @@ $prefix_element$
 331121235959Z0F1
 333333
 33333333H+
-333?333?333?333?fff?fff?fff?fff?
+333?333?333?333?fff?fff?fff?fff? (P
 370322235959Z0c1
 3>N;kU
 3>fvw
@@ -5287,6 +5305,8 @@ $prefix_element$
 @84)u
 @848u
 @8;t?H
+@8=(QK
+@8=XQK
 @8krt_
 @8l$Ht
 @8l$pt
@@ -5352,8 +5372,6 @@ $prefix_element$
 @A__[
 @A__[H
 @A__^
-@FHEP
-@Hc5G!F
 @HcAp3
 @Integer overflow in %s
 @JcD9
@@ -5887,9 +5905,9 @@ BGRA8888_LINEAR
 BGRX8888
 BGRX8888_LINEAR
 BKbhTb~XBK!;
+BP8GP
 B`8Nbt
 B`8Nbt 
-B`9G`
 B`?translate@QPainter@@QEAAXAEBVQPointF@@@Z
 BackBufferBlit
 BackGroundFill_t
@@ -5931,6 +5949,7 @@ BaselineExposure
 BaselineNoise
 BaselineSharpness
 BayerGreenSplit
+Bd9Gd
 Begin mouse capture [%i]: %s
 Bellevue1
 BenchmarkService001
@@ -6270,11 +6289,13 @@ CP#%d.%s Speed
 CP-Relative Direction
 CP-Relative Position
 CP-Relative Random Direction
+CPMax#
 CParticleProperty
 CParticleProperty::AddControlPoint
 CParticleProperty::SetControlPoint
 CParticleSystemDefinition
 CPetApp
+CPetKV3PropertyDomain*
 CPetParticleSystem
 CPetSession
 CPiecewiseCurve
@@ -6384,6 +6405,7 @@ CQParticlePreview
 CQParticlePreviewControls
 CQParticleRemapFloatInput
 CQParticleRenameDialog
+CQParticleTransformInputEditor
 CQParticleVecInputEditor
 CQPerParticleFloatInputEditor
 CQPerParticleVecInputEditor
@@ -6839,6 +6861,10 @@ CVertexListSceneObject
 CWD>~3
 C_INIT_InitFloat
 C_INIT_InitVec
+C_INIT_RemapInitialDirectionToTransformToVector
+C_INIT_RemapInitialTransformDirectionToRotation
+C_INIT_RemapTransformOrientationToRotations
+C_INIT_RemapTransformToVector
 C_NetworkUtlVectorBase
 C_OP_SetFloat
 C_OP_SetVec
@@ -6986,6 +7012,7 @@ Constraint
 Content Folder
 Context
 Contrast
+Control Point Range
 Control Point Value
 Control Points
 ControlPointConfiguration
@@ -7019,6 +7046,9 @@ Could not check out file(s): %s
 Could not write file.
 Count
 Courier
+Create a DirectionToTransformToVector that mimics the old 'Direction to CP To Vector' operator
+Create a RemapTransformOrientationToRotations that mimics the old 'Remap CP Orientation To Rotations' operator
+Create a TransformDirectionToRotation that mimics the old 'Transform CP To Rotation' operator
 Create an Float that mimics the old 'Remap CP To Scalar' operator
 Create an Float that mimics the old 'Remap Scalar' operator
 Create an Float that mimics the old 'Remap Speed To Scalar' operator
@@ -7034,6 +7064,7 @@ Create an InitFloat that mimics the old 'random scalar' operator
 Create an InitVec that mimics the old 'Add Vector to Vector' operator
 Create an InitVec that mimics the old 'Offset Vector' operator
 Create an InitVec that mimics the old 'Random Vector' operator
+Create an TransformToVector that mimics the old 'Remap CP To Vector' operator
 CreateEventExW
 CreateEventW
 CreateFileW
@@ -7102,6 +7133,7 @@ D$ R.
 D$ `4
 D$ d=
 D$ eH
+D$ er
 D$ fA
 D$ fA;
 D$ fD
@@ -7167,6 +7199,7 @@ D$0QZA
 D$0`4
 D$0d=
 D$0eH
+D$0er
 D$0fA
 D$0fH
 D$0h[)
@@ -7427,14 +7460,16 @@ D8*t#Ic
 D8,2u
 D8,9u
 D8,>u
+D8-8,B
+D8-H(B
+D8-h)B
+D8-y-B
 D83tu
 D84;u
 D84>u
-D85jwI
 D8;tAH
 D8<;u
-D8=SGG
-D8=x"C
+D8=?sG
 D8L$0uP
 D8\0>t
 D8a$t
@@ -7620,6 +7655,7 @@ DigiCert, Inc.1A0?
 DigiCert1$0"
 Direct Offset
 Direct Value Copy
+Direction to CP To Vector (DirectionToTransformToVector)
 Directory %i
 Directory error
 DirtyAndUpdateAttributesFromEditor
@@ -8019,14 +8055,12 @@ F @8{ru
 F HcGdH
 F(@8{Yu)H
 F(I9@
-F*n{ 
 F0H!k
 F0I9@
 F8,3u
 F8I9@
 F8Lc?H
 F>qUxv
-F@8=D
 F@I9@ u	
 FATAL ERROR: unable to register all schema data: %s
 FHA9@(tYH
@@ -8231,6 +8265,7 @@ FocusChainDebug_Toggle
 FocusChanged
 FocusLeft
 Folder
+Follow Value
 FontManager_001
 ForceGenerator
 FourQuaternions
@@ -8274,8 +8309,6 @@ GL$XH
 GL$xH
 GLA+@
 GP90D
-GP9BP
-GP9CP
 GPSIFDOffset
 GPt	H
 GT$(E3
@@ -8295,6 +8328,8 @@ GT$hH
 GT$hI
 GT$xH
 GT$xI
+GT9BT
+GT9CT
 G\$(H
 G\$8H
 G\$8L
@@ -8399,6 +8434,7 @@ Greyscale
 Ground:
 Group3Options
 Group4Options
+Growth Time
 Gt$(H
 Gt$8D
 Gt$@H
@@ -8440,19 +8476,21 @@ H9(t8
 H9(t|
 H9+t	H
 H9+udH
-H9-=CF
-H9-PvG
+H9-&MG
+H9-SkF
+H9-rlF
+H9-{"Y
 H9.t	H
 H9/t	H
 H91tB
 H93t	H
-H95~mX
+H95ClG
 H97u+A
 H98t$H
 H98t'
 H98tE
 H99tjH
-H9=)OF
+H9=}GB
 H9A(u
 H9D$0
 H9D$PuCH
@@ -9155,6 +9193,7 @@ L9#t	H
 L9+t	H
 L97t	H
 L9;t	H
+L9=t0I
 L9?t	H
 L9AHA
 L9Qhs
@@ -9441,7 +9480,6 @@ Literal Float
 Literal Vector
 Live Preview
 Lj[;>
-LjjCd
 Lkh9Fgc^A
 Load Autosave On Crash
 LoadAtiCompress
@@ -9490,6 +9528,7 @@ M9 tqM
 M9!tOM
 M9,$t	I
 M9}ht
+M;Gj$
 M?globalX@QMouseEvent@@QEBAHXZ
 M?globalY@QMouseEvent@@QEBAHXZ
 MATCHFRAMEWORK_001
@@ -9746,6 +9785,7 @@ N?hsvSaturationF@QColor@@QEBANXZ
 N?index@QStandardItemModel@@UEBA?AVQModelIndex@@HHAEBV2@@Z
 NAN(IND)
 NAN(SNAN)
+NC1`I
 NEGATIVE_TOK
 NEWLINE
 NJ2"v
@@ -9894,6 +9934,7 @@ OnBiasTypeComboChanged
 OnBodyPartComboChanged
 OnBodyPartValueChanged
 OnBrowse
+OnCPMaxNumberEdited
 OnCPNumberEdited
 OnCPVectorEdited
 OnCancelled
@@ -9929,6 +9970,7 @@ OnEditModeChanged
 OnEditReturnPressed
 OnEditingFinished
 OnEnableDisableBoxChanged
+OnEndGrowthTimeEdited
 OnEndUpdateAttributesFromEditor
 OnFileOpChanged
 OnFilterChanged
@@ -9937,6 +9979,7 @@ OnFlagToggled
 OnFloatComponentEdit
 OnFloatInterpEdit
 OnFocusOut
+OnFollowChanged
 OnFooterMouseEvent
 OnForceRenderingChanged
 OnGradientEdited
@@ -10228,6 +10271,7 @@ PHHcT$PD
 PHciHH
 POS_FLOATLITERAL
 POS_INTLITERAL
+PT_TYPE_CONTROL_POINT
 PVEC_TYPE_RANDOM_UNIFORM
 PVEC_TYPE_RANDOM_UNIFORM_OFFSET
 PXLc3A
@@ -10288,6 +10332,7 @@ ParticlePreview
 ParticlePreviewBodyGroup_t
 ParticlePreviewState_t
 ParticleSystemMgr003
+ParticleTransformType_t
 ParticleVecType_t
 Particles
 Particles/Budget_ActualTraces
@@ -10395,6 +10440,7 @@ PopUpAndActivate
 PopUpScrollerCleanUpAfterDestroy
 PopUpScrollerOffsetUpdate
 PopulateList
+PopulateNamedValueVectorCombo
 PopupClosed
 Position
 Position:
@@ -10432,6 +10478,7 @@ PropEdModifyType_t
 PropEdSpecificAttr_t
 Properties
 PropertyEditorSystem_001
+PublishChange
 Q,A3P
 Q2XXR
 Q5rHg,>
@@ -10439,6 +10486,7 @@ Q?loadResource@QTextDocument@@MEAA?AVQVariant@@HAEBVQUrl@@@Z
 QAbstractButton*
 QAction*
 QAngle
+QComboBox*
 QD$`H
 QD9Ql
 QLabel { padding: 0px; font-weight: bold; }
@@ -10532,6 +10580,7 @@ RHH=vmdluAM
 RMouse
 RMouseDoubleClick
 RPL9|$Pt
+RSDS_7
 RST%d
 RW?restore@QPainter@@QEAAXXZ
 R^?supportedDropActions@QStandardItemModel@@UEBA?AV?$QFlags@W4DropAction@Qt@@@@XZ
@@ -10596,7 +10645,9 @@ Reload
 Reload this file?<br><pre>"%1"</pre>
 Reload?
 ReloadLightRigDefinitions
+Remap CP Orientation to Rotation(Remap CP Orientation to Rotations)
 Remap CP To Scalar (Init Float)
+Remap CP To Vector (Transform->Vec)
 Remap Scalar (Init Float)
 Remap Speed To Scalar (Init Float)
 RemapFloatInput
@@ -11202,7 +11253,7 @@ T$pfD
 T$vfD;
 T$x;T
 T$xE3
-T%	.%
+T%)9%
 T?parent@QStandardItemModel@@UEBA?AVQModelIndex@@AEBV2@@Z
 T?pos@QCursor@@SA?AVQPoint@@XZ
 T?pos@QDropEvent@@QEBA?AVQPoint@@XZ
@@ -11365,6 +11416,8 @@ Trace
 Track Largest System Bounds
 Track Mouse & Focus
 TransferFunction
+Transform CP to Rotation(TransformDirectionToRotation)
+TransformInput
 TryAcquireSRWLockExclusive
 TryEnterCriticalSection
 Tuesday
@@ -11596,6 +11649,8 @@ UpdateNewEffects
 UpdateNoiseImage
 UpdatePlayStopButton
 UpdateSliderFromEdit
+UpdateUIAndTopology
+UpdateUINoTopologyChange
 UpdateVersionControlSubmenu
 Upgrade Version
 Upgrade Version + Children
@@ -11778,12 +11833,9 @@ Visualization Sphere Solid
 Visualization Sphere Wireframe
 Visualize
 Visualize Attribute
-W5A!T
+W%yi(
+W5j[0
 W9vE3
-W=([Q
-W=2h0
-W=8`0
-W=wt0
 W?resetTransform@QPainter@@QEAAXXZ
 W?rowCount@QStandardItemModel@@UEBAHAEBVQModelIndex@@@Z
 W?save@QPainter@@QEAAXXZ
@@ -11860,7 +11912,6 @@ X UVWAUAVH
 X UVWH
 X VWATH
 X!t5~
-X5E!?
 X?setBrush@QPainter@@QEAAXAEBVQBrush@@@Z
 X?setBrush@QPainter@@QEAAXW4BrushStyle@Qt@@@Z
 X?setBrush@QPalette@@QEAAXW4ColorGroup@1@W4ColorRole@1@AEBVQBrush@@@Z
@@ -11905,15 +11956,16 @@ Xq499vV
 X|$ A
 X|$8E
 Y Component
-Y%7Z(
-Y-}jP
-Y5=fN
-Y5FO0
-Y5R52
-Y5dO0
+Y%7n(
+Y%XQ2
+Y-",H
+Y-7R=
+Y-L()
+Y-U:3
+Y54Z0
+Y5}:3
 Y8HcA0H
-Y=1Q%
-Y=@1,
+Y=q:3
 Y>kX>M
 Y?setData@QStandardItem@@UEAAXAEBVQVariant@@H@Z
 Y?setData@QStandardItemModel@@UEAA_NAEBVQModelIndex@@AEBVQVariant@@H@Z
@@ -11939,7 +11991,6 @@ YD$LJ
 YD$TA
 YD9xluSD9
 YL$(E
-YL$0A
 YO?insertColumns@QStandardItemModel@@UEAA_NHHAEBVQModelIndex@@@Z
 YPosition
 YResolution
@@ -12008,7 +12059,6 @@ Zpm"U
 [?setStyle@QPen@@QEAAXW4PenStyle@Qt@@@Z
 [?setText@QClipboard@@QEAAXAEBVQString@@W4Mode@1@@Z
 [?setTexture@QBrush@@QEAAXAEBVQPixmap@@@Z
-[@8=To]
 [Inactive]
 [Index: 
 [NoWidget]
@@ -12139,8 +12189,8 @@ Zpm"U
 \$xIc
 \$xu#H
 \$xv.
-\%/-%
-\%S*%
+\%O8%
+\%s5%
 \?setWeight@QFont@@QEAAXH@Z
 \?setWidth@QPen@@QEAAXH@Z
 \?setWidthF@QPen@@QEAAXN@Z
@@ -12153,8 +12203,9 @@ Zpm"U
 ])6M>&
 ]0tKH
 ]0tLH
-]58S)
+]58g)
 ]8tIH
+]=42'
 ]>)2X
 ]?sharedPainter@QPaintDevice@@MEBAPEAVQPainter@@XZ
 ]?staticMetaObject@QTextDocument@@2UQMetaObject@@B
@@ -12190,12 +12241,6 @@ _TIFFVGetField
 _TIFFVSetField
 _V_FileBase
 _V_FixupPathName
-_V_StringAfterPrefix
-_V_StringAfterPrefixCaseSensitive
-_V_strEndsWith
-_V_strncmp
-_V_strncpy
-_V_strnicmp_fast
 _XHcGPH
 _XHcGPL
 __IsValveCQTabbedStyle
@@ -12219,6 +12264,7 @@ _addons
 _autosave
 _cabs
 _class
+_d*Ox
 _empty
 _gUT^
 _hidden
@@ -12449,6 +12495,7 @@ bR?metaObject@QDoubleValidator@@UEBAPEBUQMetaObject@@XZ
 bTakesFocusOnHover
 bTentative
 bTopological
+bTopologyChange
 bUserEdit
 bWrapValueIn
 back_persona_1
@@ -12911,6 +12958,7 @@ for field info array
 for strip array
 forcemultitrack
 forwardParity
+frB!6
 frexp
 fromAttribute
 fromElement
@@ -12919,9 +12967,6 @@ function not supported
 future
 future already retrieved
 fuvA;
-g_Mathlib_GammaToLinearByteTable
-g_TSPointerListNodes
-g_VProfCurrentProfile
 game:
 game:tools/images/assetbrowser/appicon.ico
 game:tools/images/buildwatch/appicon.png
@@ -13237,7 +13282,6 @@ k(L9d$Ht
 k(u H
 k0i0$
 k4+kP+
-k6=~0W
 k<9s@~;L
 k<9s@~>L
 k<9s@~?L
@@ -13382,7 +13426,6 @@ l$xHc
 l$xIcu`
 l$xL;
 l$xM+
-l+N.ph
 l6qnk
 lR?metaObject@QIntValidator@@UEBAPEBUQMetaObject@@XZ
 labelPos
@@ -13435,6 +13478,7 @@ m_PreEmissionOperators
 m_RefCount
 m_Renderers
 m_Stops
+m_TransformInput
 m_Value
 m_angOffset
 m_attachmentName
@@ -13449,6 +13493,7 @@ m_bDisableOperator
 m_bDontRemove
 m_bDrawLast
 m_bEndCap
+m_bFollowNamedValue
 m_bForceNoDraw
 m_bFreezeTargetState
 m_bFreezeTransitionActive
@@ -13482,6 +13527,7 @@ m_entityName
 m_fDataObjectTypes
 m_flBiasParameter
 m_flDelay
+m_flEndCPGrowthTime
 m_flFireTime
 m_flFreezeTransitionDuration
 m_flFreezeTransitionStart
@@ -13535,6 +13581,7 @@ m_materialGroupName
 m_nBehaviorVersion
 m_nBiasType
 m_nControlPoint
+m_nControlPointRangeMax
 m_nFireParticleOnSequenceFrame
 m_nFlags
 m_nIncomingTangent
@@ -13789,9 +13836,8 @@ nt$(H
 ntelA
 n|$`fA
 o0H9o
-o5Yj!
-o=2\!
-o=i4!
+o5yu!
+o=Rg!
 oD$ H
 oD$ f
 oD$@H
@@ -13873,8 +13919,11 @@ pA_A^_^]
 pA__^][
 pAction
 pAsset
+pCombo
 pCurrentFocusWidget
 pD$PUL
+pDescription
+pDomain
 pEvent
 pFilter
 pItem
@@ -14197,6 +14246,7 @@ suppressed_field
 surface_properties
 svBE3
 synched
+system_root_transform
 t	?addFile@QIcon@@QEAAXAEBVQString@@AEBVQSize@@W4Mode@1@W4State@1@@Z
 t	fE#
 t <.u
@@ -14473,7 +14523,7 @@ tU;\$0tH
 tUHcE0
 tWHcC
 tWfff
-tY@85"hI
+tY@85
 tYfff
 t[fff
 t\HcE
@@ -14614,6 +14664,7 @@ u7E9F
 u8Hc~
 u:Hcw
 u:Lc@
+u:d^tM 
 u;D9~
 u;Lc~
 u;fD9
@@ -14774,7 +14825,7 @@ voice
 voice_persona_1
 volume
 vpHcFhI
-vpcf45
+vpcf51
 vpcfH
 vphzc
 vpost
@@ -14974,7 +15025,7 @@ znear
 |$8t2f
 |$8u!
 |$8u)H
-|$<;=!
+|$<;=
 |$@-D
 |$@-H
 |$@;k

@@ -1974,7 +1974,7 @@
 		"npc_dota_hero_primal_beast:n"			"#|m|#Primal Beast"
 
 		// Hero Hype
-		"npc_dota_hero_abaddon_hype"				"Abaddon è in grado di trasformare gli attacchi nemici in <b>cure</b> che lo aiutano a sopravvivere alla maggior parte degli assalti. Capace di <b>proteggere gli alleati con il suo scudo</b> e usare la sua <b>spirale a doppio taglio</b> contro amici o nemici, Abaddon è sempre pronto a lanciarsi nel vivo della battaglia."
+		"npc_dota_hero_abaddon_hype"				"Abaddon è in grado di trasformare gli attacchi nemici in <b>effetti curativi</b> che lo aiutano a sopravvivere alla maggior parte degli assalti. Capace di <b>proteggere gli alleati con il suo scudo</b> e usare la sua <b>spirale a doppio taglio</b> contro amici o nemici, Abaddon è sempre pronto a lanciarsi nel vivo della battaglia."
 		"npc_dota_hero_alchemist_hype"				"Sintetizzando <b>risorse aggiuntive</b> dalle uccisioni, Alchemist non ha difficoltà a procurarsi gli strumenti necessari per distruggere i nemici. Tendendo imboscate con <b>acidi corrosivi</b> e un arsenale di <b>miscugli instabili</b>, cerca in tutti i modi di combattere per continuare a scorrazzare indisturbato."
 		"npc_dota_hero_ancient_apparition_hype"		"Grazie alla sua <b>esplosione glaciale</b> a gittata globale, Ancient Apparition minaccia di distruggere i nemici indeboliti ovunque si trovino. La sua abilità di rallentare i nemici migliorando al contempo l'efficacia dei suoi alleati lo rende un pericolo costante."
 		"npc_dota_hero_antimage_hype"				"Quando Anti-Mage raggiunge la sua massima potenza, in pochi possono dirsi in grado di fermare i suoi assalti. I suoi attacchi che <b>prosciugano il mana</b> dei nemici ad ogni colpo e la possibilità di <b>teletrasportarsi a breve distanza</b> per fuggire da un'imboscata lo rendono un bersaglio difficile da mettere alle strette."
@@ -12629,6 +12629,9 @@ Se un tuo oggetto viene scelto per la vendita all'interno del gioco, ne guadagne
 		"DOTA_Style_qop_2022_immortal_legs_0"	"Eminenza"
 		"DOTA_Style_qop_2022_immortal_legs_1"	"Regale"
 
+		"DOTA_Item_Frightful_Revelries_0"	"I Festeggiamenti Spaventosi"
+		"DOTA_Item_Frightful_Revelries_1"	"La Notte del Raccolto"
+
 
 //DOTA_ITEM_STYLES_END
 //DOTA_ITEM_STYLE_END
@@ -15299,7 +15302,6 @@ Provocazione speciale per Techies"
 		"DOTA_TrophyDesc_International2022BattlePass_Level"				"Livelli ottenuti nel Pass Battaglia 2022"
 		"DOTA_TrophyName_International2022BattlePass_CavernChallenge"	"Trofeo della Caverna dei Segreti"
 		"DOTA_TrophyDesc_International2022BattlePass_CavernChallenge"	"Set di oggetti della Caverna dei Segreti ottenuti nel Pass Battaglia 2022"
-
 
 		"DOTA_TrophyName_MVPTrophy"						"Trofeo MVP"
 		"DOTA_TrophyDesc_MVPTrophy"						"Commemora quante volte sei stato votato come MVP della partita dai tuoi alleati."
@@ -20388,7 +20390,7 @@ i set più popolari dei tesori passati. Disponibile ora a soli {g:dota_item_pric
 		"DOTA_ChallengeDesc_Phoenix_Stun_With_Supernova"   "Stordisci un totale di <font color='#ffffff'>%s1</font> Eroi nemici con <font color='#ffffff'>Supernova</font>"
 		"DOTA_ChallengeDesc_Razor_Damage_On_Static_Linked"   "Infliggi <font color='#ffffff'>%s1</font> danni agli Eroi nemici affetti da <font color='#ffffff'>Collegamento statico</font>"
 		"DOTA_ChallengeDesc_Razor_DamageWithUnstableCurrent"   "Infliggi <font color='#ffffff'>%s1</font> danni agli Eroi nemici con <font color='#ffffff'>Corrente instabile</font>"
-		"DOTA_ChallengeDesc_ShadowDemon_KillsUnderSoulCatcher"   "Uccidi o aiuta ad uccidere <font color='#ffffff'>%s1</font> Eroi nemici affetti da <font color='#ffffff'>Cattura-anime</font>."
+		"DOTA_ChallengeDesc_ShadowDemon_KillsUnderDisseminate"   "Uccidi o aiuta a uccidere <font color='#ffffff'>%s1</font> Eroi nemici affetti da <font color='#ffffff'>Diffusione</font>."
 
 
 
@@ -24954,6 +24956,7 @@ Per unirti come giocatore esperto, devi aver giocato ad almeno {d:new_player_req
 	"DOTA_HeroRole_Description_Pusher"		"Può distruggere rapidamente le strutture nemiche ed esercitare una forte pressione sul fronte delle corsie."
 	"DOTA_HeroRole_Description_Initiator"	"Può iniziare efficacemente i combattimenti di squadra."
 
+	"DOTA_HeroTags"							"Etichette"
     "DOTA_HeroGrid_Sort_By"                        "Ordina per:"
 
 	"DOTA_HeroGrid_Loading"						"Caricamento griglia degli Eroi..."
@@ -26140,6 +26143,7 @@ Per unirti come giocatore esperto, devi aver giocato ad almeno {d:new_player_req
 
 	"DOTA_ChangeLog_TI9AllStarVoting" "Votazione per la partita All-Star del TI9"
 	"DOTA_ChangeLog_TI0CompendiumEnded" "Il Compendio del The International 2021 è terminato. Clicca qui per i risultati finali."
+	"DOTA_ChangeLog_BP2022Ended" "Il Pass Battaglia 2022 è terminato. Clicca qui per ricevere le ricompense finali."
 
 	"DOTA_GlobalLiveSpectatorChat_Title"			"Nuova funzionalità: Chat degli spettatori in diretta globale"
 	"DOTA_GlobalLiveSpectatorChat_Details"			"Non è necessario essere presenti alla KeyArena per assistere al The International insieme ad altri migliaia di spettatori. La chat degli spettatori è stata migliorata per supportare un numero ancora maggiore di spettatori in ogni canale. Adesso è possibile accedere al canale della chat degli spettatori dalla nuova finestra \"Partita in diretta\" della dashboard della chat."
@@ -26364,6 +26368,9 @@ Per unirti come giocatore esperto, devi aver giocato ad almeno {d:new_player_req
 
 	"DOTA_Banned_Title"			"Bandito"
 	"DOTA_Banned"				"Il tuo account è stato bandito da Dota 2."
+
+	"DOTA_China_SpecialDisabled_Title" "Disabilitato"
+	"DOTA_China_SpecialDisabled" "Cari giocatori, in risposta a un'importante comunicazione, i server del gioco rimarranno fuori servizio dalle ore 00:00 alle ore 23:59 del 6 dicembre 2022 PST (dalle 09:00 del 6 dicembre alle 08:59 del 7 dicembre). Grazie per la vostra comprensione."
 
 	"DOTA_AntiAddiction_Initial_With_ID_18Plus"		"Ultimo accesso: %s1\nUltimo indirizzo IP: %s2"
 	"DOTA_AntiAddiction_Initial_With_ID_Under_18"	"Hai meno di 18 anni. Il sistema anti-assuefazione è attivo.\nUltimo accesso: %s1\nUltimo indirizzo IP: %s2"
@@ -27285,6 +27292,7 @@ Per unirti come giocatore esperto, devi aver giocato ad almeno {d:new_player_req
 	"DOTA_Popup_CardPack_Model_Winter2022"			"TOUR INVERNALE DPC 2022"
 	"DOTA_Popup_CardPack_Model_Spring2022"			"TOUR PRIMAVERILE DPC 2022"
 	"DOTA_Popup_CardPack_Model_Summer2022"			"Tour estivo del DPC 2022"
+	"DOTA_Popup_CardPack_Model_Winter2023"			"Tour invernale del DPC 2023"
 	"DOTA_Popup_CardPack_Model_PackCount"			"Pacchetto da 5"
 	"DOTA_Popup_CardPack_Model_PremiumPackCount"	"Pacchetto premium da 5"
 	"DOTA_Popup_CardPack_Model_MainTitle"			"Giocatori"
@@ -32450,6 +32458,7 @@ Anche altri Eroi sono riusciti a distinguersi: Eroi specializzati nell'esercitar
 	"DOTA_HeroLevelReward_Currency:p{currency_amount}"	"{d:currency_amount} Frammento#|#{d:currency_amount} Frammenti"
 	"DOTA_HeroLevelReward500_Currency"	"500 Frammenti"
 	"DOTA_HeroLevelReward350_Currency"	"350 Frammenti"
+	"DOTA_HeroLevelReward700_Currency"	"700 Frammenti"
 	"DOTA_HeroLevelReward_ChatWheel"	"Nuova frase per la chat radiale<br>\"{s:chat_wheel_message}\""
 
 	"DOTA_ReadyCheck"	"Tutti pronti?"
@@ -33673,7 +33682,7 @@ Anche altri Eroi sono riusciti a distinguersi: Eroi specializzati nell'esercitar
 
 	"DOTA_QueenOfPainArcana_ArcanaProgress_Score"					"{s:current_score} / {d:unlock_value}"
 	"DOTA_QueenOfPainArcana_ArcanaProgress_Description:p{unlock_value}"	"Tormenta {d:unlock_value} Eroe con Onda sonica in partite vittoriose per sbloccare lo stile alternativo.#|#Tormenta {d:unlock_value} Eroi con Onda sonica in partite vittoriose per sbloccare lo stile alternativo."
-	"KillEaterEventType_QueenOfPain_ArcanaProgress"					"Eroi tormentati da Onda sonica"
+	"KillEaterEventType_QueenOfPain_ArcanaProgress"					"Eroi tormentati da Onda Sonica in partite vittoriose"
 
 	"DOTA_QueenOfPainArcana_Hud_Title"								"Combo: {d:combo_count}x" 
 	
@@ -34979,6 +34988,21 @@ Anche altri Eroi sono riusciti a distinguersi: Eroi specializzati nell'esercitar
 
 	"DOTA_WeeklyQuest_Win_And_High_Fives_Completed_Name"			"Un gesto universale"
 	"DOTA_WeeklyQuest_Win_And_High_Fives_Completed_Description"		"Batti il cinque ai giocatori per {s:current_tier_score} volte in partite vittoriose"
+		
+	"DOTA_WeeklyQuest_Win_With_Ranged_Hero_Name"					"Guerra a distanza"
+	"DOTA_WeeklyQuest_Win_With_Ranged_Hero_Description"				"Vinci {s:current_tier_score} partite con Eroi a distanza."
+		
+	"DOTA_WeeklyQuest_Win_With_Melee_Hero_Name"						"Tocco finale"
+	"DOTA_WeeklyQuest_Win_With_Melee_Hero_Description"				"Vinci {s:current_tier_score} partite con Eroi da mischia."
+		
+	"DOTA_WeeklyQuest_Disarm_Duration_Name"							"Reggimi questo, grazie"
+	"DOTA_WeeklyQuest_Disarm_Duration_Description"					"Disarma i nemici per {s:current_tier_score} secondi."
+		
+	"DOTA_WeeklyQuest_Neutral_Items_Earned_Name"					"Mercato rosso"
+	"DOTA_WeeklyQuest_Neutral_Items_Earned_Description"				"Scopri {s:current_tier_score} oggetti neutrali."
+		
+	"DOTA_WeeklyQuest_Use_Ability_Charges_Name"						"Carica completa"
+	"DOTA_WeeklyQuest_Use_Ability_Charges_Description"				"Usa {s:current_tier_score} cariche delle abilità."
 
 	// End Weekly Quest Names
 
@@ -35707,6 +35731,13 @@ Anche altri Eroi sono riusciti a distinguersi: Eroi specializzati nell'esercitar
 	"DOTA_DPCTeams_SeasonPeriod_Event37_Dates"		"Dal 6 giugno al 14 agosto 2022"
 	"DOTA_DPCTeams_SeasonPeriod_Event38_Name"		"The International 2022"
 	"DOTA_DPCTeams_SeasonPeriod_Event38_Dates"		"Dall'8 al 30 ottobre 2022"
+
+	"DOTA_DPCTeams_RegistrationPeriod8"				"Tour invernale"
+	"DOTA_DPCTeams_RegistrationPeriodDates8"		"Dal 9 gennaio al 5 marzo 2023"
+	"DOTA_DPCTeams_RegistrationPeriodSeason8"		"Stagione 2023"
+	"DOTA_DPCTeams_SeasonPeriod_Event41_Name"		"Tour invernale"
+	"DOTA_DPCTeams_SeasonPeriod_Event41_Dates"		"Dal 9 gennaio al 5 marzo 2023"
+
 
 	"DOTA_FavoriteTeamSet"							"Nuova squadra preferita"
 	"DOTA_NewFavoriteTeam"							"Ora {s:favorite_team} è impostata come la tua squadra preferita. Questa modifica avrà effetto sul menu principale e in partita."
@@ -37820,7 +37851,7 @@ Se ritieni di non aver potuto dedicare l'attenzione necessaria al raggiungimento
 
 		// Hero New Player Descriptions
 		"DOTA_SimilarHeroes"	"Eroi simili:"
-		"npc_dota_hero_abaddon_npedesc1"	"Protegge dagli attacchi se stesso o i suoi alleati"
+		"npc_dota_hero_abaddon_npedesc1"	"Protegge se stesso o i suoi alleati dagli attacchi"
 
 		"npc_dota_hero_alchemist_npedesc1"	"Ottiene oro aggiuntivo uccidendo le Unità e raccogliendo le Rune della Generosità"
 
@@ -39864,6 +39895,7 @@ Se ritieni di non aver potuto dedicare l'attenzione necessaria al raggiungimento
 		"DOTA_CandyShop_Error_NotEnoughSpace"			"Spazio insufficiente nell'inventario"
 		"DOTA_CandyShop_Error_NotEnoughBags"			"Sacchetti insufficienti"
 		"DOTA_CandyShop_Error_InvalidRecipe"			"Ricetta non valida."
+		"DOTA_CandyShop_Error_ExpiredShop"				"Questa Dolceria non è più disponibile."
 		"DOTA_CandyShop_CandySackInfo"					"Gioca a Dota o aumenta il livello del Pass Battaglia per ottenere altri dolci."
 		"DOTA_CandyShop_InventorySlotInfo"				"Aumenta il livello del Pass Battaglia per sbloccare altri slot nell'inventario."
 
@@ -44747,6 +44779,11 @@ Se ritieni di non aver potuto dedicare l'attenzione necessaria al raggiungimento
 		"DOTA_BattlePass2022_Schedule_TIPointsSale_Description"					"<b>1 pacchetto per utente, risparmia il 75%!<br/>Disponibile dal 12 al 30 ottobre</b><br/>- 120 liv. del Pass Battaglia<br/>- 9 Tesori Immortali I<br/>- 6 Tesori Immortali II<br/>- 6 Tesori della Collezione<br/>- 6 tesori dei Cimeli Eterni"
 		"DOTA_BattlePass2022_Schedule_TIPointsSale_ActionLabel"					"Acquista {s:item_price}"
 
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_Heading"					"Pacchetto in saldo!"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_SubTitle"					"Il Diretide 2022"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_Description"				"<b>Ultima offerta, risparmia il 75%!<br/>Disponibile dal 15 dicembre al 12 gennaio</b><br/>- 120 liv. del Pass Battaglia<br/>- 9 Tesori Immortali I<br/>- 6 Tesori Immortali II<br/>- 6 Tesori della Collezione<br/>- 6 tesori dei Cimeli Eterni"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_ActionLabel"				"Acquista {s:item_price}"
+
 		"DOTA_BattlePass2022_Schedule_PrimalBeastPrestige_Heading"				"Pacchetto prestigio di Primal Beast"
 		"DOTA_BattlePass2022_Schedule_PrimalBeastPrestige_Description"			"Molto prima del suo arrivo nella Selva di Tomo'kan, un tentativo di controllare la belva ha sortito l'effetto di corazzarla e spingerla nel mezzo della battaglia..."
 
@@ -45017,6 +45054,8 @@ Se ritieni di non aver potuto dedicare l'attenzione necessaria al raggiungimento
 		"DOTA_StickerStore_TalentComingSoon"					"Prossimamente"
 		"DOTA_StickerStore_MoreStickersComingSoon"				"Altri adesivi in arrivo a breve!"
 		"DOTA_StickerStore_TalentStickersLabel"					"Adesivi dei talenti"
+		"DOTA_StickerStore_NoStickersAvailable"					"Non ci sono adesivi in vendita."
+
 		"DOTA_StickerHero_AssignSticker"						"Assegna adesivo"
 		"DOTA_StickerHero_ReplaceSticker"						"Sostituisci adesivo"
 
@@ -45102,7 +45141,7 @@ Se ritieni di non aver potuto dedicare l'attenzione necessaria al raggiungimento
 		"DOTA_PrimalBeastPrestige_Level"						"Livello 223 del Pass Battaglia"
 
 		// FACELESS VOID ARCANA
-		"KillEaterEvent_FacelessVoid_ArcanaProgress"		"Nemici uccisi nella Cronosfera"
+		"KillEaterEvent_FacelessVoid_ArcanaProgress"		"Nemici uccisi nella Cronosfera in partite vittoriose"
 
 		//TI Championship stickers
 		"DOTA_Stickers_Store_ChampionsTitle"							"Congratulazioni a<br/>Tundra Esports!"
@@ -45115,6 +45154,7 @@ Se ritieni di non aver potuto dedicare l'attenzione necessaria al raggiungimento
 		"DOTA_BattlePass2022_Schedule_CollectorsCacheVoting_Heading" "Bottino del Collezionista"
 		"DOTA_International2022_CollectorsCacheVoting" "Vota"
 
+		"DOTA_BattlePass2022_Schedule_CollectorsCache2Available_Heading" "Bottino del Collezionista 2 disponibile"
 		"DOTA_BattlePass2022_Schedule_CollectorsCacheAvailable_Heading" "Bottino del Collezionista disponibile"
 		"DOTA_International2022_CollectorsCacheAvailable" "Mostra tesoro"
 
@@ -45131,6 +45171,13 @@ Se ritieni di non aver potuto dedicare l'attenzione necessaria al raggiungimento
 		"DOTA_2022Diretide_CollectorsCache_Treasure_1"		"1 tesoro"
 		"DOTA_2022Diretide_CollectorsCache_Treasure_2"		"7 tesori"
 		"DOTA_2022Diretide_CollectorsCache_Treasure_3"		"14 tesori"
-		"DOTA_2022Diretide_CollectorsCache_Disclaimer"		"Gli oggetti del Bottino sono disponibili soltanto fino al 18 dicembre."
+		"DOTA_2022Diretide_CollectorsCache_Disclaimer"		"Gli oggetti del Bottino sono disponibili soltanto fino al 12 gennaio."
+
+        "DOTA_BattlePass2022_Schedule_MoreActiveEventsUp" "+{d:num_more_active_events_up} eventi attivi qui sopra"
+        "DOTA_BattlePass2022_Schedule_MoreActiveEventsDown" "+{d:num_more_active_events_down} eventi attivi qui sotto"
+
+		"DOTA_BattlePassEndingTitle"				"Termina tra"
+		"DOTA_BattlePassEndingCountdown"			"0 <b>giorni</b> 0 <b>ore</b> 0 <b>min</b> 0 <b>sec</b>"
+		"DOTA_BattlePassEndingDescription"			"Ottieni i tuoi <a href=\"event:DOTAPurchaseEventLevels( EVENT_ID_INTERNATIONAL_2022 )\">livelli</a>, <a href=\"event:DOTAShowSplashAdPopup('bundle_sale_2022_2')\">pacchetti</a>, <a href=\"event:DOTAShowTreasurePage(26880)\">Bottino del Collezionista 1</a> e <a href=\"event:DOTAShowTreasurePage(26932)\">Bottino del Collezionista 2</a>."
 	}
 }

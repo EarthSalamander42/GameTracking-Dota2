@@ -199,7 +199,7 @@
 		"DOTA_Tooltip_ability_antimage_mana_overload"									"闪烁碎片"
 		"DOTA_Tooltip_ability_antimage_mana_overload_Description"						"使一个幻象闪烁至敌方目标或地点，对其发动攻击，持续一段较短的时间。施放法术反制时碎片幻象也有效果。拥有3点能量点数。"
 		"DOTA_Tooltip_ability_antimage_mana_overload_duration"							"幻象持续时间："
-		"DOTA_Tooltip_ability_antimage_mana_overload_outgoing_damage"					"%幻象继承攻击力："
+		"DOTA_Tooltip_ability_antimage_mana_overload_outgoing_damage"					"%幻象攻击力减少："
 		
 		"DOTA_Tooltip_ability_antimage_mana_focus"										"破法专注"
 		"DOTA_Tooltip_ability_antimage_mana_focus_Description"							"敌法师创造出一个反魔法的光环，使敌人的技能魔耗增加，每次敌人施放技能时敌法师还将获得法力损毁能量点数。被动使敌法师根据法力损毁的能量点数获得攻击速度加成。"
@@ -638,10 +638,8 @@
 		"DOTA_Tooltip_ability_vengefulspirit_wave_of_terror_vision_duration"			"视野持续时间："
 		"DOTA_Tooltip_ability_vengefulspirit_command_aura"								"复仇光环"
 		"DOTA_Tooltip_ability_vengefulspirit_command_aura_Description"					"复仇之魂的存在提升了附近友方英雄的攻击力。"
-		"DOTA_Tooltip_ability_vengefulspirit_command_aura_scepter_description"  		"死亡时产生一个复仇之魂的强幻象，继承全额攻击力，承受100%%伤害，可以施放自己的所有技能。幻象拥有%scepter_illusion_ms_bonus_pct%%%移动速度加成。复仇之魂复活时若幻象依然存在，则自身会直接将其取代。幻象获得的经验将给予英雄。"
+		"DOTA_Tooltip_ability_vengefulspirit_command_aura_scepter_description"  		"死亡时产生一个复仇之魂的强幻象，继承全额攻击力，承受100%%伤害，可以施放自己的所有技能。幻象拥有%scepter_illusion_ms_bonus_pct%%%移动速度加成。复仇之魂复活时若幻象依然存在，则自身会直接将其取代。幻象获得的经验将给予英雄。强幻象不会被相关技能秒杀。"
 		"DOTA_Tooltip_ability_vengefulspirit_command_aura_Lore"							"尽管盟友可能不会理解她对于复仇那无休止的热爱，但作战时他们还是会利用她的狂热。"
-		"DOTA_Tooltip_ability_vengefulspirit_command_aura_Note0"						"复仇幻象在复仇之魂死后还将继续提供复仇光环。"
-		"DOTA_Tooltip_ability_vengefulspirit_command_aura_Note1"						"强幻象不会被法术秒杀。"
 		"DOTA_Tooltip_ability_vengefulspirit_command_aura_bonus_base_damage"			"%基础攻击力加成："
 		"DOTA_Tooltip_ability_vengefulspirit_command_aura_aura_radius"					"作用范围："
 		"DOTA_Tooltip_ability_vengefulspirit_nether_swap"								"移形换位"
@@ -856,7 +854,7 @@
 		"DOTA_Tooltip_ability_pudge_flesh_heap_flesh_heap_range"						"距离："
 		"DOTA_Tooltip_ability_pudge_flesh_heap_duration"								"持续时间："
 		"DOTA_Tooltip_ability_pudge_dismember"											"肢解"
-		"DOTA_Tooltip_ability_pudge_dismember_Description"								"持续施法 - 帕吉撕咬一个敌方单位，使其失去行动能力并受到持续伤害。帕吉会将该单位以每秒%pull_units_per_second%的速度向自身牵引，最多牵引%pull_distance_limit%距离。帕吉将回复与伤害量相等的生命。对非英雄单位的持续时间更长。"
+		"DOTA_Tooltip_ability_pudge_dismember_Description"								"持续施法 - 帕吉撕咬一个敌方单位，使其失去行动能力并受到持续伤害。伤害量为基础伤害加上帕吉力量值的一定百分比，帕吉将回复与伤害量相等的生命。帕吉会将该单位以每秒%pull_units_per_second%的速度向自身牵引，最多牵引%pull_distance_limit%距离。对非英雄单位的持续时间更长。"
 		"DOTA_Tooltip_ability_pudge_dismember_shard_description"						"降低冷却时间，肢解可以对友军施放，此时施法距离提升，将其生吞，每秒治疗他们最大生命值的一定百分比。"
 		"DOTA_Tooltip_ability_pudge_dismember_Lore"										"“等我干掉这些蠢货以后，就可以把它们做成肉饼了！”"
 		"DOTA_Tooltip_ability_pudge_dismember_Note0"									"即使肢解的目标在受到作用的过程中隐身，还是不会脱离肢解的作用。"
@@ -929,6 +927,8 @@
 		"DOTA_Tooltip_modifier_bane_nightmare_Description"	"睡眠中"
 		"DOTA_Tooltip_modifier_bane_fiends_grip"	"魔爪"
 		"DOTA_Tooltip_modifier_bane_fiends_grip_Description"	"被控制，并受到伤害。损失最大魔法值的%fMODIFIER_PROPERTY_TOOLTIP%%%，每经过%fMODIFIER_PROPERTY_TOOLTIP%秒。"
+		"DOTA_Tooltip_modifier_bane_fiends_grip_cast_illusion"				"魔爪"
+		"DOTA_Tooltip_modifier_bane_fiends_grip_cast_illusion_Description"	"被控制。"
 		
 		//EARTHSHAKER
 		"DOTA_Tooltip_ability_earthshaker_fissure"										"沟壑"
@@ -1019,9 +1019,7 @@
 		"DOTA_Tooltip_modifier_sandking_sand_storm"					"沙尘暴"
 		"DOTA_Tooltip_modifier_sandking_sand_storm_Description"		"使自己隐身，并且每秒对附近单位造成%dMODIFIER_PROPERTY_TOOLTIP%点伤害。"
 		"DOTA_Tooltip_modifier_sand_king_caustic_finale_orb"		"腐尸毒"
-		"DOTA_Tooltip_modifier_sand_king_caustic_finale_orb_Description"	"被沙王的攻击注入毒素。你死亡时会爆炸，造成范围伤害。"
-		"DOTA_Tooltip_modifier_sand_king_caustic_finale_slow"		"腐尸毒减速"
-		"DOTA_Tooltip_modifier_sand_king_caustic_finale_slow_Description"	"移动速度减缓%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%。"
+		"DOTA_Tooltip_modifier_sand_king_caustic_finale_orb_Description"	"沙王的攻击注入了毒素。移动速度被减缓%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%。死亡时将会爆炸，造成范围伤害。"
 		"DOTA_Tooltip_modifier_sand_king_epicenter"						"地震"
 		"DOTA_Tooltip_modifier_sand_king_epicenter_Description"			"向大地发出震颤，造成范围伤害和减速。"
 		"DOTA_Tooltip_modifier_sand_king_epicenter_slow"				"地震减速"
@@ -1229,6 +1227,7 @@
 		"DOTA_Tooltip_ability_skeleton_king_vampiric_aura_vampiric_aura"				"%吸血："
 		"DOTA_Tooltip_ability_skeleton_king_vampiric_aura_max_skeleton_charges"			"最大能量点数："
 		"DOTA_Tooltip_ability_skeleton_king_vampiric_aura_skeleton_duration"			"骷髅兵持续时间："
+		"DOTA_Tooltip_ability_skeleton_king_vampiric_aura_skeleton_damage_tooltip"		"骷髅兵攻击力："
 		"DOTA_Tooltip_ability_skeleton_king_mortal_strike"								"本命一击"
 		"DOTA_Tooltip_ability_skeleton_king_mortal_strike_Description"					"冥魂大帝被动地在攻击时造成额外伤害，本技能具有冷却时间。"
 		"DOTA_Tooltip_ability_skeleton_king_mortal_strike_Lore"							"单凭一击，斩敌无匹。"
@@ -1330,7 +1329,7 @@
 
 
 		"DOTA_Tooltip_modifier_drowranger_wave_of_silence"					"狂风"
-		"DOTA_Tooltip_modifier_drowranger_wave_of_silence_Description"					"被卓尔游侠沉默。攻击丢失几率增加%dMODIFIER_PROPERTY_MISS_PERCENTAGE%%%。"
+		"DOTA_Tooltip_modifier_drowranger_wave_of_silence_Description"					"被卓尔游侠沉默。"
 		"DOTA_Tooltip_modifier_drow_ranger_wave_of_silence_buff"					"狂风"
 		"DOTA_Tooltip_modifier_drow_ranger_wave_of_silence_buff_Description"					"获得%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%移动速度加成。"
 
@@ -1423,19 +1422,19 @@
 		"DOTA_Tooltip_modifier_morphling_adaptive_strike_Description"		"被眩晕。"
 
 		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_strength_buff"							"变形力量吸取"
-		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_strength_buff_Description"				"获得%dMODIFIER_PROPERTY_STATS_STRENGTH_BONUS%点力量和%dMODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING%%%状态抗性。"
+		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_strength_buff_Description"				"获得%dMODIFIER_PROPERTY_STATS_STRENGTH_BONUS%点力量、%dMODIFIER_PROPERTY_STATS_AGILITY_BONUS%点敏捷、%dMODIFIER_PROPERTY_STATS_INTELLECT_BONUS%点智力和%dMODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING%%%状态抗性。"
 		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_strength_debuff"						"变形力量吸取"
-		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_strength_debuff_Description"			"失去%dMODIFIER_PROPERTY_STATS_STRENGTH_BONUS_PERCENTAGE%点力量和%dMODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING%%%状态抗性。"
+		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_strength_debuff_Description"			"失去%dMODIFIER_PROPERTY_STATS_STRENGTH_BONUS_PERCENTAGE%%%属性和%dMODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING%%%状态抗性。"
 
 		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_agility_buff"							"变形敏捷吸取"
-		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_agility_buff_Description"				"获得%dMODIFIER_PROPERTY_STATS_AGILITY_BONUS%点敏捷以及%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%攻击速度加成。"
+		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_agility_buff_Description"				"获得%dMODIFIER_PROPERTY_STATS_STRENGTH_BONUS%点力量、%dMODIFIER_PROPERTY_STATS_AGILITY_BONUS%点敏捷、%dMODIFIER_PROPERTY_STATS_INTELLECT_BONUS%点智力和%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%攻击速度。"
 		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_agility_debuff"						"变形敏捷吸取"
-		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_agility_debuff_Description"			"失去%dMODIFIER_PROPERTY_STATS_AGILITY_BONUS_PERCENTAGE%点敏捷以及%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%攻击速度加成。"
+		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_agility_debuff_Description"			"失去%dMODIFIER_PROPERTY_STATS_AGILITY_BONUS_PERCENTAGE%%%属性以及%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%攻击速度加成。"
 
 		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_intelligence_buff"						"变形智力吸取"
-		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_intelligence_buff_Description"			"获得%dMODIFIER_PROPERTY_STATS_INTELLECT_BONUS%点智力以及%dMODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE%%%技能增强。"
+		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_intelligence_buff_Description"			"获得%dMODIFIER_PROPERTY_STATS_STRENGTH_BONUS%点力量、%dMODIFIER_PROPERTY_STATS_AGILITY_BONUS%点敏捷、%dMODIFIER_PROPERTY_STATS_INTELLECT_BONUS%点智力和%dMODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE%%%技能增强。"
 		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_intelligence_debuff"					"变形智力吸取"
-		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_intelligence_debuff_Description"		"失去%dMODIFIER_PROPERTY_STATS_INTELLECT_BONUS_PERCENTAGE%点智力以及%dMODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE%%%技能增强。"
+		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_intelligence_debuff_Description"		"失去%dMODIFIER_PROPERTY_STATS_INTELLECT_BONUS_PERCENTAGE%%%属性以及%dMODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE%%%技能增强。"
 
 		//BLOOD SEEKER
 		"DOTA_Tooltip_ability_bloodseeker_bloodrage"									"血怒"
@@ -2582,7 +2581,8 @@
 		"DOTA_Tooltip_ability_tinker_defense_matrix_Description"    	"以友方单位为目标，施加一个护盾，可以抵挡部分伤害，并提供状态抗性。"
 		"DOTA_Tooltip_ability_tinker_keen_teleport"					"基恩载具"
 		"DOTA_Tooltip_ability_tinker_keen_teleport_Lore"					"就像鲍什经常挂在嘴边的，“只要时间足够，奥术能实现的东西，求知的心也能重现。当然，一定的资助也少不了。”"
-		"DOTA_Tooltip_ability_tinker_keen_teleport_Description"		"持续施法 - 经过%abilitychanneltime%秒持续施法后传送至友方建筑目标。2级可以传送至友方单位，3级可以传送至友方英雄。"
+		"DOTA_Tooltip_ability_tinker_keen_teleport_Description"				"持续施法 - 传送至友方建筑目标。2级可以传送至友方单位，3级可以传送至友方英雄。"
+		"DOTA_Tooltip_ability_tinker_keen_teleport_channel_time_tooltip"		"持续施法时间："
 
 		"DOTA_Tooltip_modifier_tinker_laser_blind"					"致盲激光"
 		"DOTA_Tooltip_modifier_tinker_laser_blind_Description"		"%dMODIFIER_PROPERTY_MISS_PERCENTAGE%%%的攻击落空。"
@@ -2787,11 +2787,11 @@
 		"DOTA_Tooltip_ability_beastmaster_wild_axes_scepter_cooldown"							"冷却时间："
 		"DOTA_Tooltip_ability_beastmaster_wild_axes_scepter_description"				"野性之斧没有冷却时间，返回后就能再次使用。"
 		"DOTA_Tooltip_ability_beastmaster_call_of_the_wild_boar"						"野性呼唤豪猪"
-		"DOTA_Tooltip_ability_beastmaster_call_of_the_wild_boar_Description"				"兽王召唤一头豪猪前来助阵。"
+		"DOTA_Tooltip_ability_beastmaster_call_of_the_wild_boar_Description"				"兽王召唤一头豪猪前来助阵。豪猪拥有被动的毒素攻击，可以减缓攻击和移动速度。"
 		"DOTA_Tooltip_ability_beastmaster_call_of_the_wild_boar_Lore"						"度过了与异兽互惠互助的孩童时期，兽王学会了如何随时召唤野兽。"
 		"DOTA_Tooltip_ability_beastmaster_call_of_the_wild_boar_duration"				"召唤物持续时间："
 		"DOTA_Tooltip_ability_beastmaster_call_of_the_wild_boar_boar_base_max_health"				"豪猪基础生命值："
-		"DOTA_Tooltip_ability_beastmaster_call_of_the_wild_boar_boar_base_damage"			"豪猪基础攻击力："
+		"DOTA_Tooltip_ability_beastmaster_call_of_the_wild_boar_boar_total_damage_tooltip"			"豪猪攻击力："
 		"DOTA_Tooltip_ability_beastmaster_call_of_the_wild_boar_boar_moveslow_tooltip"			"%豪猪减速："
 		"DOTA_Tooltip_ability_beastmaster_call_of_the_wild_boar_boar_poison_duration_tooltip"	"豪猪毒素持续时间："
 		"DOTA_Tooltip_ability_beastmaster_call_of_the_wild_hawk"						"野性呼唤战鹰"
@@ -5105,7 +5105,7 @@
 		"DOTA_Tooltip_ability_brewmaster_primal_split_tooltip_storm_brewling_hp"	"<font color=\"#87ceeb\">狂风战士生命值</font>："
 		"DOTA_Tooltip_ability_brewmaster_primal_split_tooltip_fire_brewling_hp"		"<font color=\"#FF0000\">烈火战士生命值</font>："
 		"DOTA_Tooltip_ability_brewmaster_primal_split_shard_description"			"元素分离现在会产生虚无战士，拥有灵体脉冲技能。"
-		"DOTA_Tooltip_ability_brewmaster_primal_split_shard_tooltip_void_brewling_hp"	"生命值："
+		"DOTA_Tooltip_ability_brewmaster_primal_split_shard_tooltip_void_brewling_hp"	"<font color=\"#662375\">虚无战士生命值</font>："
 		"DOTA_Tooltip_ability_brewmaster_primal_split_scepter_description"			"元素分离拥有2点能量点数。而且可以随时中止。充能时间与原来的冷却时间相同。"
 		"DOTA_Tooltip_ability_brewmaster_primal_split_scepter_movementspeed"		"移动速度加成："
 		"DOTA_Tooltip_ability_brewmaster_primal_split_cancel"								"元素分离中止"
@@ -5611,6 +5611,7 @@
 		"DOTA_Tooltip_ability_undying_tombstone_duration"				"墓碑持续时间："
 		"DOTA_Tooltip_ability_undying_tombstone_radius"					"僵尸产生范围："
 		"DOTA_Tooltip_ability_undying_tombstone_zombie_interval"		"僵尸产生间隔："
+		"DOTA_Tooltip_ability_undying_tombstone_zombie_damage_tooltip"	"僵尸攻击力："
 		"DOTA_Tooltip_ability_undying_tombstone_health_threshold_pct_tooltip"	"%死亡渴望触发百分比："
 		"DOTA_Tooltip_ability_undying_tombstone_zombie_deathstrike"		"死亡渴望"
 		"DOTA_Tooltip_ability_undying_tombstone_zombie_deathstrike_Description"		"攻击时对敌方单位造成减速。如果目标单位的生命值低于临界值，僵尸会获得移动和攻击速度加成。"
@@ -5784,9 +5785,9 @@
 		"DOTA_Tooltip_ability_nyx_assassin_spiked_carapace_stun_duration"		"眩晕时间："
 		"DOTA_Tooltip_ability_nyx_assassin_spiked_carapace_damage_reflect_pct"	"%反弹伤害："
 		"DOTA_Tooltip_ability_nyx_assassin_vendetta"							"复仇"
-		"DOTA_Tooltip_ability_nyx_assassin_vendetta_shard_description"			"提升复仇的移动速度加成，并且破隐一击可以使受到的技能伤害增加。"
+		"DOTA_Tooltip_ability_nyx_assassin_vendetta_shard_description"			"提升复仇的移动速度加成，并且破隐一击可以使目标受到的技能伤害增加。"
 		"DOTA_Tooltip_ability_nyx_assassin_vendetta_Description"				"司夜刺客进入隐身状态并获得移动速度加成。如果司夜刺客以攻击打破隐身，那一次攻击将会造成超高的额外伤害。"
-				"DOTA_Tooltip_ability_nyx_assassin_vendetta_Lore"						"圣甲虫为女王的荣耀而杀戮。"
+		"DOTA_Tooltip_ability_nyx_assassin_vendetta_Lore"						"圣甲虫为女王的荣耀而杀戮。"
 		"DOTA_Tooltip_ability_nyx_assassin_vendetta_Note0"						"进入隐身时间为%fade_time%秒。"
 		"DOTA_Tooltip_ability_nyx_assassin_vendetta_Note1"						"如果在隐身期间使用了技能，或者隐身时间结束，额外伤害的效果将会消失。"
 		"DOTA_Tooltip_ability_nyx_assassin_vendetta_duration"					"持续时间："
@@ -6646,7 +6647,7 @@
 		"DOTA_Tooltip_ability_skywrath_mage_arcane_bolt_bolt_damage"		"基础伤害："
 		"DOTA_Tooltip_ability_skywrath_mage_arcane_bolt_int_multiplier"		"智力伤害系数："
 		"DOTA_Tooltip_ability_skywrath_mage_concussive_shot"				"震荡光弹"
-		"DOTA_Tooltip_ability_skywrath_mage_concussive_shot_Description"	"天怒法师释放一个远距离的光弹，将击中超大范围内最近的英雄。被击中后英雄附近一定范围内单位将受到伤害，移动速度也会减缓。"
+		"DOTA_Tooltip_ability_skywrath_mage_concussive_shot_Description"	"天怒法师释放一个远距离的光弹，将击中超大范围内最近的英雄。被击中后英雄附近一定范围内单位将受到伤害，移动速度也会减缓。对非英雄单位造成%creep_damage_pct%%%伤害。"
 		"DOTA_Tooltip_ability_skywrath_mage_concussive_shot_Lore"			"侍奉苍白之巢王庭就会对身边的暗流涌动不加关注。必须要时刻明白周围最近的危险所在。"
 		"DOTA_Tooltip_ability_skywrath_mage_concussive_shot_Note0"			"如果作用范围内没有英雄或英雄处于迷雾中，震荡光弹将以最近的敌方小兵或中立生物为目标。"
 		"DOTA_Tooltip_ability_skywrath_mage_concussive_shot_Note1"			"击中英雄后附近的小兵也会受到相同伤害。"
@@ -7869,7 +7870,7 @@
 		"DOTA_Tooltip_modifier_mars_bulwark_Description"				"格挡%dMODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE%%%来自正面的物理伤害，来自侧面的为一半数值。"
 
 		"DOTA_Tooltip_modifier_mars_bulwark_soldier_thinker"				"护身甲盾士兵"
-		"DOTA_Tooltip_modifier_mars_bulwark_soldier_thinker_Description"	"士兵继承全额攻击力+75点，并且可以触发攻击特效。攻击造成20%%减速，持续1秒。每个敌人同一时间只能被一个士兵攻击。"
+		"DOTA_Tooltip_modifier_mars_bulwark_soldier_thinker_Description"	"士兵继承全额攻击力+75点，并且可以触发攻击特效。攻击造成30%%减速，持续1秒。每个敌人同一时间只能被一个士兵攻击。"
 
 		"DOTA_Tooltip_modifier_mars_scepter_damage_slow"					"护身甲盾"
 		"DOTA_Tooltip_modifier_mars_scepter_damage_slow_Description"		"移动速度减少%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%。"
@@ -8049,7 +8050,7 @@
 		"DOTA_Tooltip_ability_snapfire_lil_shredder_armor_duration"	"护甲降低持续时间："
 
 		"DOTA_Tooltip_modifier_snapfire_lil_shredder_buff"				"霹雳铁手"
-		"DOTA_Tooltip_modifier_snapfire_lil_shredder_buff_Description"	"攻击速度提升%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%，而且攻击附带降低攻速效果。"
+		"DOTA_Tooltip_modifier_snapfire_lil_shredder_buff_Description"	"攻击距离提升%dMODIFIER_PROPERTY_ATTACK_RANGE_BONUS%，而且攻击附带降低护甲效果。"
 
 		"DOTA_Tooltip_modifier_snapfire_lil_shredder_debuff"				"霹雳铁手"
 		"DOTA_Tooltip_modifier_snapfire_lil_shredder_debuff_Description"	"这个单位的护甲已被削弱。"
@@ -9023,7 +9024,7 @@
 		"DOTA_Tooltip_ability_special_bonus_unique_pudge_1"	"{s:bonus_flesh_heap_strength_buff_amount}倍 腐肉堆积力量/伤害格挡 "
 		"DOTA_Tooltip_ability_special_bonus_unique_pudge_2"	"+{s:value} 腐烂伤害"
 		"DOTA_Tooltip_ability_special_bonus_unique_pudge_3"	"{s:bonus_dismember_damage}倍 肢解伤害/治疗"
-		"DOTA_Tooltip_ability_special_bonus_unique_pudge_4"	"{s:value}% 腐烂减速"
+		"DOTA_Tooltip_ability_special_bonus_unique_pudge_4"	"+{s:value}% 腐烂减速"
 		"DOTA_Tooltip_ability_special_bonus_unique_pudge_5"	"-{s:bonus_AbilityCooldown}秒 肉钩冷却"
 		"DOTA_Tooltip_ability_special_bonus_unique_pudge_6"	"+{s:bonus_AbilityChannelTime}秒 肢解持续时间"
 		"DOTA_Tooltip_ability_special_bonus_unique_pudge_7"	"+{s:bonus_damage} 肉钩伤害"
@@ -10765,7 +10766,7 @@
 
 		"DOTA_Tooltip_ability_black_drake_magic_amplification_aura"										"魔法增强光环"
 		"DOTA_Tooltip_ability_black_drake_magic_amplification_aura_Description"							"黑蜉蝣的凝视让敌人更难抵挡法术伤害。"
-		"DOTA_Tooltip_ability_black_drake_magic_amplification_aura_"									"%受到法术伤害增加："
+		"DOTA_Tooltip_ability_black_drake_magic_amplification_aura_spell_amp"							"%受到法术伤害增加："
 		"DOTA_Tooltip_ability_black_drake_magic_amplification_aura_radius"								"作用范围："
 
 		"DOTA_Tooltip_modifier_black_drake_magic_amplification"											"魔法增强光环"
@@ -11330,7 +11331,7 @@
 		"DOTA_Tooltip_ability_item_bloodthorn_bonus_attack_speed"               "+$attack"
 		"DOTA_Tooltip_ability_item_bloodthorn_bonus_damage"                     "+$damage"
 		"DOTA_Tooltip_ability_item_bloodthorn_bonus_mana_regen"                 "+$mana_regen"
-		"DOTA_Tooltip_ability_item_bloodthorn_bonus_magic_resist"                 "%+$spell_resist"
+		"DOTA_Tooltip_ability_item_bloodthorn_bonus_magic_resist"               "%+$spell_resist"
 		"DOTA_Tooltip_ability_item_bloodthorn_spell_amp"						"%+技能增强"
 		"DOTA_Tooltip_ability_item_bloodthorn_mana_regen_multiplier"			"%+魔法恢复增强"
 
@@ -11448,6 +11449,7 @@
 		"DOTA_Tooltip_ability_item_cyclone_Note0"								"不能对队友使用龙卷风。"
 		"DOTA_Tooltip_ability_item_cyclone_Note1"								"对自己施放龙卷风时无视技能免疫。"
 		"DOTA_Tooltip_ability_item_cyclone_Note2"								"龙卷风可以驱散部分正面和负面状态。"
+		"DOTA_Tooltip_ability_item_cyclone_Note3"								"龙卷风持续时间不受状态抗性影响。"
 		"DOTA_Tooltip_ability_item_cyclone_bonus_intellect"						"+$int"
 		"DOTA_Tooltip_ability_item_cyclone_bonus_mana_regen"					"+$mana_regen"
 		"DOTA_Tooltip_ability_item_cyclone_bonus_movement_speed"				"+$move_speed"	
@@ -11458,6 +11460,7 @@
 		"DOTA_Tooltip_ability_item_wind_waker_Lore"							"对于部分人来说，足以证明看不见的势力操控着现实位面发生的事件。"
 		"DOTA_Tooltip_ability_item_wind_waker_Note0"						"龙卷风可以驱散部分正面和负面状态。"
 		"DOTA_Tooltip_ability_item_wind_waker_Note1"						"对自身施放时，龙卷风可以任意移动，移动速度为360。"
+		"DOTA_Tooltip_ability_item_wind_waker_Note2"						"龙卷风持续时间不受状态抗性影响。"
 		"DOTA_Tooltip_ability_item_wind_waker_bonus_movement_speed"			"+$move_speed"	
 		"DOTA_Tooltip_ability_item_wind_waker_cast_range_bonus"             "+$cast_range"	
 		"DOTA_Tooltip_ability_item_wind_waker_bonus_mana_regen"				"+$mana_regen"                     
@@ -11826,6 +11829,7 @@
 		//"DOTA_Tooltip_ability_item_guardian_greaves_replenish_radius"		"AURA/MEND RADIUS:"
 		"DOTA_Tooltip_ability_item_guardian_greaves_Lore"						"为了向全能之神致敬所打造的众多圣器之一。"
 		"DOTA_Tooltip_ability_item_guardian_greaves_Note0"				"光环效果仅对英雄有效。"
+		"DOTA_Tooltip_ability_item_guardian_greaves_Note1"				"卫士胫甲的冷却时间内回复不能作用于已经被修复或梅肯斯姆的回复作用过的单位。"
 		
 		"DOTA_Tooltip_modifier_item_guardian_greaves_aura"		"守护光环"
 		"DOTA_Tooltip_modifier_item_guardian_greaves_aura_Description"	"提供%fMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT%点/秒生命恢复和%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲。"
@@ -11840,6 +11844,7 @@
 		"DOTA_Tooltip_ability_item_solar_crest_self_movement_speed"			"+$move_speed"
 		"DOTA_Tooltip_ability_item_solar_crest_bonus_mana_regen_pct"		"+$mana_regen"
 		"DOTA_Tooltip_ability_item_solar_crest_Lore"						"为了纪念炎日天空所打造的护符。"
+		"DOTA_Tooltip_ability_item_solar_crest_Note0"						"与勇气勋章共用冷却时间。"
 
 		"DOTA_Tooltip_modifier_item_solar_crest_armor_reduction"		"炎阳纹章"
 		"DOTA_Tooltip_modifier_item_solar_crest_armor_reduction_Description"		"降低%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲，减缓%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%移动速度，降低%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%攻击速度。"
@@ -12017,7 +12022,7 @@
 
 		"DOTA_Tooltip_ability_item_mekansm_Description"							"<h1>主动：回复</h1>为%heal_radius%范围内友方单位回复%heal_amount%点生命值。\n\n<h1>被动：梅肯斯姆光环</h1>提升%aura_radius%范围内友方单位%aura_health_regen%点/秒生命恢复。"
 		"DOTA_Tooltip_ability_item_mekansm_Lore"							    "各种散件不知是怎样完美地组合起来，形成了散发着光芒的珠宝。"
-		"DOTA_Tooltip_ability_item_mekansm_Note0"								"回复不能作用于梅肯斯姆冷却时间内已经被回复作用过的单位。"
+		"DOTA_Tooltip_ability_item_mekansm_Note0"								"梅肯斯姆的冷却时间内回复不能作用于已经被回复或卫士胫甲的修复作用过的单位。"
 		"DOTA_Tooltip_ability_item_mekansm_Note1" 								"多个梅肯斯姆光环效果不会叠加。"
 		"DOTA_Tooltip_ability_item_mekansm_bonus_armor"						"+$armor"
 		
@@ -12128,7 +12133,7 @@
 		"DOTA_Tooltip_ability_item_witch_blade_projectile_speed"				"+$projectile_speed"
 
 		"DOTA_Tooltip_modifier_item_witch_blade_slow"				"巫师之刃"
-		"DOTA_Tooltip_modifier_item_witch_blade_slow_Description"	"每秒受到伤害，移动速度倍减缓%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%。"
+		"DOTA_Tooltip_modifier_item_witch_blade_slow_Description"	"每秒受到伤害，移动速度被减缓%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%。"
 						
 		"DOTA_Tooltip_ability_item_ogre_axe_Lore"								"只要双手握着就会变得强壮。"
 		"DOTA_Tooltip_ability_item_ogre_axe_bonus_strength"						"+$str"
@@ -12723,6 +12728,7 @@
 
 		"DOTA_Tooltip_ability_item_medallion_of_courage_Description"			"<h1>主动：无畏</h1> 如果对队友施放可以在降低自身%bonus_armor%点护甲的同时，提升目标%bonus_armor%点护甲。<br><br>如果对敌人施放将同时降低自身和目标%bonus_armor%点护甲。<br><br>无法对技能免疫单位施放。<br><br>施法距离：%abilitycastrange%"
 		"DOTA_Tooltip_ability_item_medallion_of_courage_Lore"					"持有者将无惧于战斗。"
+		"DOTA_Tooltip_ability_item_medallion_of_courage_Note0"					"与炎阳纹章共享冷却时间。"
 		"DOTA_Tooltip_ability_item_medallion_of_courage_bonus_armor"			"+$armor"
 		"DOTA_Tooltip_ability_item_medallion_of_courage_bonus_mana_regen_pct"	"+$mana_regen"
 		//"DOTA_Tooltip_ability_item_medallion_of_courage_armor_reduction"		"VALOR ARMOR REDUCTION:"
@@ -12806,7 +12812,7 @@
 		//"DOTA_Tooltip_ability_item_nullifier_bonus_mana_regen"					"+$mana_regen"
 
 		"DOTA_Tooltip_modifier_item_nullifier_mute" 						"否决坠饰"
-		"DOTA_Tooltip_modifier_item_nullifier_mute_Description" 			"目标正在被持续驱散。每次目标受到攻击都会被减速。"
+		"DOTA_Tooltip_modifier_item_nullifier_mute_Description" 			"目标正持续被驱散。"
 		"DOTA_Tooltip_modifier_item_nullifier_slow"							"否决坠饰减速"
 		"DOTA_Tooltip_modifier_item_nullifier_slow_Description"				"被减速%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%"
 
@@ -12986,13 +12992,13 @@
 		"DOTA_Tooltip_ability_item_flicker_Lore"		"严格意义上说到做到的“传送装置”，由一个声名狼藉的仙灵欺诈师打造。"
 		"DOTA_Tooltip_ability_item_flicker_bonus_movement_speed"		"+$move_speed"
 		
-		"DOTA_Tooltip_ability_item_spy_gadget_Description"		"<h1>被动：预知光环</h1>扫描的冷却时间减少%scan_cooldown_reduction%%%。提升%aura_range%范围内友军的攻击距离和施法距离。"
+		"DOTA_Tooltip_ability_item_spy_gadget_Description"		"<h1>被动：预知光环</h1>扫描的冷却时间减少%scan_cooldown_reduction%%%。提升%aura_range%范围内友军（仅远程）的攻击距离和施法距离。"
 		"DOTA_Tooltip_ability_item_spy_gadget_scan_cooldown_reduction"		"%扫描冷却时间减少："
-		"DOTA_Tooltip_ability_item_spy_gadget_attack_range"		"光环攻击距离加成："
+		"DOTA_Tooltip_ability_item_spy_gadget_attack_range"		"光环攻击距离加成（仅远程）："
 		"DOTA_Tooltip_ability_item_spy_gadget_cast_range"		"光环施法距离加成："
 		"DOTA_Tooltip_ability_item_spy_gadget_Lore"		"可靠的工具，可以让远处的东西变得更近。"
 		"DOTA_Tooltip_modifier_item_spy_gadget"					"预知光环"
-		"DOTA_Tooltip_modifier_item_spy_gadget_Description"		"提升攻击和施法距离。"
+		"DOTA_Tooltip_modifier_item_spy_gadget_Description"		"提升攻击距离（仅远程）和施法距离"
 		
 		"DOTA_Tooltip_Ability_item_ocean_heart_Description"		"<h1>被动：水中恢复</h1>在河道里提供%water_hp_regen%点/秒生命恢复和%water_mp_regen%点/秒魔法恢复。"
 		"DOTA_Tooltip_Ability_item_ocean_heart_Lore"		"苍洋议会祝福过的一个护符。"
@@ -13515,7 +13521,7 @@
 		"DOTA_Tooltip_modifier_rune_doubledamage"				"双倍伤害"
 		"DOTA_Tooltip_modifier_rune_doubledamage_Description"	"基础攻击提高%dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%。"
 		"DOTA_Tooltip_modifier_rune_regen"						"恢复神符"
-		"DOTA_Tooltip_modifier_rune_regen_Description"			"每秒恢复%dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT%点生命值和%dMODIFIER_PROPERTY_MANA_REGEN_CONSTANT%点魔法值。"
+		"DOTA_Tooltip_modifier_rune_regen_Description"			"每秒恢复%dMODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE%%%生命值和%dMODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE%%%魔法值。"
 		"DOTA_Tooltip_modifier_rune_arcane"						"奥术"
 		"DOTA_Tooltip_modifier_rune_arcane_Description"			"冷却时间减少30%%，魔法消耗减少30%%"
 		"DOTA_Tooltip_modifier_rune_haste"						"极速神符"

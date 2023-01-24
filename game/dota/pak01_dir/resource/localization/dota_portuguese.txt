@@ -3505,7 +3505,7 @@
 		"Team_Create_Desc2"			 "Quando 5 membros de uma equipa estão num grupo em Matchmaking Competitivo, eles podem assumir a identidade da equipa. As informações da equipa serão exibidas na partida, as estatísticas da equipa na partida ficarão registadas e o MMR da equipa será atualizado com base no resultado da partida.\nAlém disso, quando 5 membros de uma equipa estão juntos num lobby de treino ou de um torneio, a equipa será detetada. Para organizações de jogadores profissionais, será fornecido um sexto lugar de administrador para fins de gestão e que deverá pertencer ao dono da equipa."
 		"Team_Create_Full_Name"     "Nome Completo da Equipa"
 		"Team_Create_Full_Name_Desc" "Isto será mostrado na página de perfil da tua equipa."
-		"Team_Create_Tag"           "Tag da Equipa/Abreviação"
+		"Team_Create_Tag"           "Tag/Abreviatura da equipa"
 		"Team_Create_Tag_Desc"		"Isto será mostrado em lobbies, tabelas de pontuação e na interface do jogo."
 		"Team_Create_Logo"          "Enviar Logos da Equipa"
 		"Team_Create_pixels"		"pixels"
@@ -12628,6 +12628,9 @@
 		"DOTA_Style_qop_2022_immortal_legs_0"	"Eminence"
 		"DOTA_Style_qop_2022_immortal_legs_1"	"Royal"
 
+		"DOTA_Item_Frightful_Revelries_0"	"Frightful Revelries"
+		"DOTA_Item_Frightful_Revelries_1"	"Harvest Night"
+
 
 //DOTA_ITEM_STYLES_END
 //DOTA_ITEM_STYLE_END
@@ -15300,9 +15303,8 @@ Provocação especial para os Techies"
 		"DOTA_TrophyName_International2022BattlePass_CavernChallenge"	"Troféu da Caverna"
 		"DOTA_TrophyDesc_International2022BattlePass_CavernChallenge"	"Conjuntos da Caverna Secreta obtidos no Passe de Batalha de 2022"
 
-
 		"DOTA_TrophyName_MVPTrophy"						"Troféu de MVP"
-		"DOTA_TrophyDesc_MVPTrophy"						"Troféu que comemora o número de vezes que foste eleito MVP de uma partida."
+		"DOTA_TrophyDesc_MVPTrophy"						"Troféu que comemora o número de vezes em que foste o MVP de uma partida."
 		"DOTA_TrophyUnits_MVP:p"						"%s1 troféu de MVP#|#%s1 troféus de MVP"
 
 		"DOTA_TrophyName_TI6SeasonalMMR_Solo"			"International 2016 - Classificação Solo Máxima"
@@ -20384,7 +20386,7 @@ Provocação especial para os Techies"
 		"DOTA_ChallengeDesc_Phoenix_Stun_With_Supernova"   "Atordoa <font color='#ffffff'>%s1</font> heróis inimigos usando a habilidade <font color='#ffffff'>Supernova</font>."
 		"DOTA_ChallengeDesc_Razor_Damage_On_Static_Linked"   "Causa <font color='#ffffff'>%s1</font> de dano a heróis inimigos afetados pela habilidade <font color='#ffffff'>Static Link</font>."
 		"DOTA_ChallengeDesc_Razor_DamageWithUnstableCurrent"   "Causa <font color='#ffffff'>%s1</font> de dano a heróis inimigos usando a habilidade <font color='#ffffff'>Unstable Current</font>."
-		"DOTA_ChallengeDesc_ShadowDemon_KillsUnderSoulCatcher"   "Mata ou ajuda a matar <font color='#ffffff'>%s1</font> heróis inimigos afetados pela habilidade <font color='#ffffff'>Soul Catcher</font>."
+		"DOTA_ChallengeDesc_ShadowDemon_KillsUnderDisseminate"   "Mata ou ajuda a matar <font color='#ffffff'>%s1</font> heróis inimigos afetados pela habilidade <font color='#ffffff'>Disseminate</font>."
 
 
 
@@ -24949,6 +24951,7 @@ Jogadores experientes que queiram entrar terão de ter jogado pelo menos {d:new_
 	"DOTA_HeroRole_Description_Pusher"		"Pode atacar e destruir rapidamente edifícios em qualquer altura do jogo."
 	"DOTA_HeroRole_Description_Initiator"	"Bom em iniciar combates com os heróis inimigos."
 
+	"DOTA_HeroTags"							"Marcadores"
     "DOTA_HeroGrid_Sort_By"                        "Ordenar por:"
 
 	"DOTA_HeroGrid_Loading"						"A carregar grelha de heróis..."
@@ -26135,6 +26138,7 @@ Jogadores experientes que queiram entrar terão de ter jogado pelo menos {d:new_
 
 	"DOTA_ChangeLog_TI9AllStarVoting" "Votação para a Partida All Star do TI9"
 	"DOTA_ChangeLog_TI0CompendiumEnded" "O compêndio do International 2021 terminou. Clica aqui para veres os resultados finais."
+	"DOTA_ChangeLog_BP2022Ended" "O Passe de Batalha de 2022 terminou. Clica aqui para reclamares as recompensas restantes."
 
 	"DOTA_GlobalLiveSpectatorChat_Title"			"Novidade - Chat global de espectadores"
 	"DOTA_GlobalLiveSpectatorChat_Details"			"Não precisas de estar na KeyArena para assistires ao International numa plateia de milhares de fãs. O chat de espectadores no jogo suporta agora um grande número de espectadores num só canal. Também podes aceder ao canal de chat dos espectadores no novo separador de \"Partida em Direto\" na janela de chat do menu principal."
@@ -26359,6 +26363,9 @@ Jogadores experientes que queiram entrar terão de ter jogado pelo menos {d:new_
 
 	"DOTA_Banned_Title"			"Conta banida"
 	"DOTA_Banned"				"A tua conta foi banida e está agora impedida de jogar Dota 2."
+
+	"DOTA_China_SpecialDisabled_Title" "Desativado"
+	"DOTA_China_SpecialDisabled" "Caros jogadores, em resposta ao aviso relevante, os servidores do jogo estarão indisponíveis entre a meia-noite e as 23:59 do dia 6 de dezembro de 2022. Agradecemos a vossa compreensão."
 
 	"DOTA_AntiAddiction_Initial_With_ID_18Plus"		"Última sessão: %s1\nÚltimo endereço IP: %s2"
 	"DOTA_AntiAddiction_Initial_With_ID_Under_18"	"Tens menos de 18 anos de idade. O sistema anti-vício foi ativado.\nÚltima sessão: %s1\nÚltimo endereço IP: %s2"
@@ -27280,6 +27287,7 @@ Jogadores experientes que queiram entrar terão de ter jogado pelo menos {d:new_
 	"DOTA_Popup_CardPack_Model_Winter2022"			"TOUR DE INVERNO - DPC 2022"
 	"DOTA_Popup_CardPack_Model_Spring2022"			"TOUR DE PRIMAVERA - DPC 2022"
 	"DOTA_Popup_CardPack_Model_Summer2022"			"Tour de Verão do DPC 2022"
+	"DOTA_Popup_CardPack_Model_Winter2023"			"Tour de Inverno do DPC 2023"
 	"DOTA_Popup_CardPack_Model_PackCount"			"Pacote com 5"
 	"DOTA_Popup_CardPack_Model_PremiumPackCount"	"Pacote premium de 5"
 	"DOTA_Popup_CardPack_Model_MainTitle"			"Jogadores"
@@ -32453,6 +32461,7 @@ Outros heróis também ficaram em destaque: heróis que fazem pressão no iníci
 	"DOTA_HeroLevelReward_Currency:p{currency_amount}"	"{d:currency_amount} Fragmento#|#{d:currency_amount} Fragmentos"
 	"DOTA_HeroLevelReward500_Currency"	"500 Fragmentos"
 	"DOTA_HeroLevelReward350_Currency"	"350 Fragmentos"
+	"DOTA_HeroLevelReward700_Currency"	"700 Fragmentos"
 	"DOTA_HeroLevelReward_ChatWheel"	"Nova fala para a Chat Wheel<br>\"{s:chat_wheel_message}\""
 
 	"DOTA_ReadyCheck"	"Todos prontos?"
@@ -33675,7 +33684,7 @@ Outros heróis também ficaram em destaque: heróis que fazem pressão no iníci
 
 	"DOTA_QueenOfPainArcana_ArcanaProgress_Score"					"{s:current_score} / {d:unlock_value}"
 	"DOTA_QueenOfPainArcana_ArcanaProgress_Description:p{unlock_value}"	"Atormenta {d:unlock_value} herói com Sonic Wave em partidas vitoriosas para desbloqueares o estilo alternativo.#|#Atormenta {d:unlock_value} heróis com Sonic Wave em partidas vitoriosas para desbloqueares o estilo alternativo."
-	"KillEaterEventType_QueenOfPain_ArcanaProgress"					"Heróis atormentados por Sonic Wave"
+	"KillEaterEventType_QueenOfPain_ArcanaProgress"					"Heróis atormentados por Sonic Wave em partidas vitoriosas"
 
 	"DOTA_QueenOfPainArcana_Hud_Title"								"{d:combo_count}x Combo" 
 	
@@ -34983,6 +34992,21 @@ Outros heróis também ficaram em destaque: heróis que fazem pressão no iníci
 
 	"DOTA_WeeklyQuest_Win_And_High_Fives_Completed_Name"			"Gesto Universal"
 	"DOTA_WeeklyQuest_Win_And_High_Fives_Completed_Description"		"Faz o \"dá cá mais cinco\" com jogadores {s:current_tier_score} vezes em partidas vitoriosas."
+		
+	"DOTA_WeeklyQuest_Win_With_Ranged_Hero_Name"					"Guerra à Distância"
+	"DOTA_WeeklyQuest_Win_With_Ranged_Hero_Description"				"Vence {s:current_tier_score} partida(s) com um herói Ranged."
+		
+	"DOTA_WeeklyQuest_Win_With_Melee_Hero_Name"						"Toque Final"
+	"DOTA_WeeklyQuest_Win_With_Melee_Hero_Description"				"Vence {s:current_tier_score} partida(s) com um herói Melee."
+		
+	"DOTA_WeeklyQuest_Disarm_Duration_Name"							"Desarmado em Bom"
+	"DOTA_WeeklyQuest_Disarm_Duration_Description"					"Faz com que inimigos estejam desarmados durante {s:current_tier_score} segundos."
+		
+	"DOTA_WeeklyQuest_Neutral_Items_Earned_Name"					"Despojos de Guerra"
+	"DOTA_WeeklyQuest_Neutral_Items_Earned_Description"				"Descobre {s:current_tier_score} itens neutros."
+		
+	"DOTA_WeeklyQuest_Use_Ability_Charges_Name"						"À Carga"
+	"DOTA_WeeklyQuest_Use_Ability_Charges_Description"				"Usa {s:current_tier_score} cargas de habilidades de heróis."
 
 	// End Weekly Quest Names
 
@@ -35711,6 +35735,13 @@ Outros heróis também ficaram em destaque: heróis que fazem pressão no iníci
 	"DOTA_DPCTeams_SeasonPeriod_Event37_Dates"		"6 jun 2022 - 14 ago 2022"
 	"DOTA_DPCTeams_SeasonPeriod_Event38_Name"		"The International 2022"
 	"DOTA_DPCTeams_SeasonPeriod_Event38_Dates"		"8 out 2022 - 30 out 2022"
+
+	"DOTA_DPCTeams_RegistrationPeriod8"				"Tour de Inverno"
+	"DOTA_DPCTeams_RegistrationPeriodDates8"		"9 jan. 2023 - 5 mar. 2023"
+	"DOTA_DPCTeams_RegistrationPeriodSeason8"		"Temporada 2023"
+	"DOTA_DPCTeams_SeasonPeriod_Event41_Name"		"Tour de Inverno"
+	"DOTA_DPCTeams_SeasonPeriod_Event41_Dates"		"9 jan. 2023 - 5 mar. 2023"
+
 
 	"DOTA_FavoriteTeamSet"							"Equipa favorita definida"
 	"DOTA_NewFavoriteTeam"							"{s:favorite_team} é agora a tua equipa de destaque e irá aparecer em partes específicas do menu principal e durante partidas."
@@ -39873,6 +39904,7 @@ Contudo, se achares que não conseguiste dedicar o nível de atenção apropriad
 		"DOTA_CandyShop_Error_NotEnoughSpace"			"Sem espaço suficiente no inventário"
 		"DOTA_CandyShop_Error_NotEnoughBags"			"Sem sacos suficientes"
 		"DOTA_CandyShop_Error_InvalidRecipe"			"Receita inválida."
+		"DOTA_CandyShop_Error_ExpiredShop"				"Esta loja de doces já não está disponível."
 		"DOTA_CandyShop_CandySackInfo"					"Joga Dota ou aumenta o nível do teu Passe de Batalha para obteres mais doces."
 		"DOTA_CandyShop_InventorySlotInfo"				"Aumenta o nível do teu Passe de Batalha para teres mais espaços para doces."
 
@@ -44758,6 +44790,11 @@ Contudo, se achares que não conseguiste dedicar o nível de atenção apropriad
 		"DOTA_BattlePass2022_Schedule_TIPointsSale_Description"					"<b>1 pacote p/ utilizador, poupa 75%!<br/>Disponível de 12 a 30 de out.</b><br/>- 120 níveis p/ o Passe de Batalha<br/>- 9 Tesouros Imortais I<br/>- 6 Tesouros Imortais II<br/>- 6 tesouros da Coleção<br/>- 6 tesouros Ageless Heirlooms"
 		"DOTA_BattlePass2022_Schedule_TIPointsSale_ActionLabel"					"Comprar ({s:item_price})"
 
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_Heading"					"Pacote promocional!"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_SubTitle"					"Pacote de Diretide 2022"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_Description"				"<b>Última oportunidade, poupa 75%!<br/>Disponível de 15/12 a 12/01</b><br/>- 120 níveis p/ o Passe de Batalha<br/>- 9 Tesouros Imortais I<br/>- 6 Tesouros Imortais II<br/>- 6 tesouros da Coleção<br/>- 6 tesouros Ageless Heirlooms"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_ActionLabel"				"Comprar ({s:item_price})"
+
 		"DOTA_BattlePass2022_Schedule_PrimalBeastPrestige_Heading"				"Conjunto de Prestígio do Primal Beast"
 		"DOTA_BattlePass2022_Schedule_PrimalBeastPrestige_Description"			"Muito antes da chegada do monstro primordial a Tomo'kan, uma tentativa de o domar equipou-o com armadura e levou-o para o meio da batalha..."
 
@@ -45028,6 +45065,8 @@ Contudo, se achares que não conseguiste dedicar o nível de atenção apropriad
 		"DOTA_StickerStore_TalentComingSoon"					"Disponíveis em breve"
 		"DOTA_StickerStore_MoreStickersComingSoon"				"Mais autocolantes em breve!"
 		"DOTA_StickerStore_TalentStickersLabel"					"Autocolantes de Talentos"
+		"DOTA_StickerStore_NoStickersAvailable"					"Não há autocolantes à venda."
+
 		"DOTA_StickerHero_AssignSticker"						"Colar autocolante"
 		"DOTA_StickerHero_ReplaceSticker"						"Substituir autocolante"
 
@@ -45113,7 +45152,7 @@ Contudo, se achares que não conseguiste dedicar o nível de atenção apropriad
 		"DOTA_PrimalBeastPrestige_Level"						"Nível 223 do Passe de Batalha"
 
 		// FACELESS VOID ARCANA
-		"KillEaterEvent_FacelessVoid_ArcanaProgress"		"Inimigos mortos na Chronosphere"
+		"KillEaterEvent_FacelessVoid_ArcanaProgress"		"Inimigos mortos na Chronosphere em partidas vitoriosas"
 
 		//TI Championship stickers
 		"DOTA_Stickers_Store_ChampionsTitle"							"Parabéns<br/>Tundra Esports!"
@@ -45126,6 +45165,7 @@ Contudo, se achares que não conseguiste dedicar o nível de atenção apropriad
 		"DOTA_BattlePass2022_Schedule_CollectorsCacheVoting_Heading" "Votação: Collector's Cache"
 		"DOTA_International2022_CollectorsCacheVoting" "Votar"
 
+		"DOTA_BattlePass2022_Schedule_CollectorsCache2Available_Heading" "Collector's Cache 2 disponível"
 		"DOTA_BattlePass2022_Schedule_CollectorsCacheAvailable_Heading" "Collector's Cache disponível"
 		"DOTA_International2022_CollectorsCacheAvailable" "Ver tesouro"
 
@@ -45142,6 +45182,13 @@ Contudo, se achares que não conseguiste dedicar o nível de atenção apropriad
 		"DOTA_2022Diretide_CollectorsCache_Treasure_1"		"1 tesouro"
 		"DOTA_2022Diretide_CollectorsCache_Treasure_2"		"7 tesouros"
 		"DOTA_2022Diretide_CollectorsCache_Treasure_3"		"14 tesouros"
-		"DOTA_2022Diretide_CollectorsCache_Disclaimer"		"Os itens da Cache só estão disponíveis até 18 de dezembro."
+		"DOTA_2022Diretide_CollectorsCache_Disclaimer"		"Os itens da Cache só estão disponíveis até 12 de janeiro."
+
+        "DOTA_BattlePass2022_Schedule_MoreActiveEventsUp" "+{d:num_more_active_events_up} eventos ativos acima"
+        "DOTA_BattlePass2022_Schedule_MoreActiveEventsDown" "+{d:num_more_active_events_down} eventos ativos abaixo"
+
+		"DOTA_BattlePassEndingTitle"				"Acaba em"
+		"DOTA_BattlePassEndingCountdown"			"0 <b>Dias</b> 0 <b>Hr</b> 0 <b>Min</b> 0 <b>Seg</b>"
+		"DOTA_BattlePassEndingDescription"			"Obtém já os teus <a href=\"event:DOTAPurchaseEventLevels( EVENT_ID_INTERNATIONAL_2022 )\">Níveis</a>, <a href=\"event:DOTAShowSplashAdPopup('bundle_sale_2022_2')\">Pacotes</a>, <a href=\"event:DOTAShowTreasurePage(26880)\">Collector's Cache 1</a> e <a href=\"event:DOTAShowTreasurePage(26932)\">Collector's Cache 2</a>."
 	}
 }

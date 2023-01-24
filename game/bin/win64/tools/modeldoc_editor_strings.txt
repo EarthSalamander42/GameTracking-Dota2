@@ -14,7 +14,7 @@
 			Shadows 1
 		%.*s
 		PointLight
-		g_pMemAlloc
+		_V_strEndsWith
 	 The lexer was matching from line %d, offset %d, which
 	 This indicates a poorly specified lexer RULE
 	 or unterminated input element such as: "STRING["]
@@ -63,11 +63,19 @@
 	TYPE_BOOL
 	TYPE_ENUM
 	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
+	_V_StringAfterPrefix
+	_V_StringAfterPrefixCaseSensitive
+	_V_StripExtension
+	_V_StripLastDir
+	_V_strncmp
+	_V_strncpy
+	_V_strnicmp_fast
 	enum_type
 	extension
 	f;0s-I
-	g_bUpdateStringTokenDatabase
-	g_pThreadPool
+	g_Mathlib_GammaToLinearByteTable
+	g_TSPointerListNodes
+	g_VProfCurrentProfile
 	host_loss
 	json_name
 	kE>fvw
@@ -405,6 +413,7 @@
  t&H;
  t(<#t
  tDE3
+ t]!p7
  tjH;
  type does not match
  uncorrected errors
@@ -431,7 +440,6 @@
 !>6'Y
 !?triggered@QAction@@QEAAX_N@Z
 !CNETMsg_SpawnGroup_ManifestUpdate
-!IWO#u
 !NETWORK_DISCONNECT_HLTVRESTRICTED
 !NETWORK_DISCONNECT_INTERNAL_ERROR
 !NETWORK_DISCONNECT_KICKED_SUICIDE
@@ -443,6 +451,7 @@
 !host_framestarttime_std_deviation
 !m_bNeedsSort
 !root
+"	g_bUpdateStringTokenDatabase
 " -ie 
 " -oe 
 " ?timerEvent@QListView@@MEAAXPEAVQTimerEvent@@@Z
@@ -985,6 +994,7 @@ $schemasystem/schema_enable_defines.h
 %s_spline_delta
 %suncompressed data
 %u (0x%x)
+%v\F!
 & ?timerEvent@QMenuBar@@MEAAXPEAVQTimerEvent@@@Z
 &#GameUI_Disconnect_InvalidMessageError
 &#GameUI_Disconnect_NoPeerGroupHandlers
@@ -1105,21 +1115,19 @@ $schemasystem/schema_enable_defines.h
 (#GameUI_Disconnect_RemoteProblem_Timeout
 (%.2f, %.2f, %.2f)
 (%1,%2)
-(%L+<
-(%t,h
+(%l*<
 (*%s*), 
 (0`hpx
-(5	Sh
-(5#6h
-(5>Mc
-(5T+g
-(5}/W
+(5	oh
+(535h
+(5@	6
+(5t*g
+(9=_q
 (9Q(t:H
 (;^ |
 (;l$(
 (<strong><font color='%s'>%d</font></strong> max verts)
-(=3w,
-(=P:`
+(=Sv,
 (A;@,|
 (A;H,|
 (A\_H
@@ -1193,7 +1201,6 @@ $schemasystem/schema_enable_defines.h
 (D$0f
 (D$0ff
 (D$0z	u
-(D$@A
 (D$@D
 (D$@H
 (D$@I
@@ -1688,6 +1695,7 @@ $schemasystem/schema_enable_defines.h
 )l$@L
 )l$@M;
 )l$PD
+)l$PE
 )l$PI
 )l$`D
 )l$p@
@@ -1807,11 +1815,11 @@ $schemasystem/schema_enable_defines.h
 )|$pD
 )|$pL
 )|$pM
-)|$pf
 )|$pt,H
 )|B?d!
 )}p@8
 )}pMc
+*	g_pMemAlloc
 * ?timerEvent@QTextEdit@@MEAAXPEAVQTimerEvent@@@Z
 * Rehandling active codes
 * { font-size: 10px }
@@ -1959,10 +1967,12 @@ $schemasystem/schema_enable_defines.h
 -unknown source-
 -unknown source-(
 -vsync
+.	g_pThreadPool
 .#?windowTitle@QWidget@@QEBA?AVQString@@XZ
 ...<truncated>...
 ..om?
 .00cfg
+.5>C(
 .>PJ;I:qE>
 .?AU?$_InitialTaskHandle@XV<lambda_5a9ef80d79df7873994019ff15dceae5>@@U_TypeSelectorNoAsync@details@Concurrency@@@?$task@E@Concurrency@@
 .?AU?$_InitialTaskHandle@XV<lambda_60c5de84e69e46aa92419d47e2f3ad51>@@U_TypeSelectorNoAsync@details@Concurrency@@@?$task@E@Concurrency@@
@@ -2122,6 +2132,7 @@ $schemasystem/schema_enable_defines.h
 .?AUCAttr_m_angAngle@?1??GetStaticAttributes@CModelDocMeshModifier_ForceRealignBone@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_angAngle@?1??GetStaticAttributes@CModelDocMeshModifier_ForceUnweightedBindposeBonePositions@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_angAngle@?1??GetStaticAttributes@CModelDocPhysicsHullFromPoints_Point@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
+.?AUCAttr_m_angRotation@?1??GetStaticAttributes@CModelDocAnimForceBonePosition@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_animOrder@?1??GetStaticAttributes@CModelDocAnimOrder@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_ankleBoneName@?1??GetStaticAttributes@CModelDocFoot@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_bAcceleration@?1??GetStaticAttributes@CModelDocClothEffectSpeedup@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
@@ -2353,7 +2364,6 @@ $schemasystem/schema_enable_defines.h
 .?AUCAttr_m_eHandType@?1??GetStaticAttributes@CModelDocSkeletalInputSettings@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_eKeyType@?1??GetStaticAttributes@CModelDocFaceposerKeys@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_eMotionType@?1??GetStaticAttributes@CModelDocExtractMotion@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
-.?AUCAttr_m_eRotation@?1??GetStaticAttributes@CModelDocAnimForceBonePosition@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_eRotation@?1??GetStaticAttributes@CModelDocAnimOffset@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_eRotationOffsetXYZ@?1??GetStaticAttributes@CModelDocAnimConstraintParent@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
 .?AUCAttr_m_expression@?1??GetStaticAttributes@CModelDocMorphRule@@MEAAXPEAV?$CUtlVector@PEAVIBaseToolAttr@@HV?$CUtlMemory@PEAVIBaseToolAttr@@H@@@@@Z@
@@ -3058,6 +3068,7 @@ $schemasystem/schema_enable_defines.h
 .?AV<lambda_3410267d1f900838d932a0f280a24691>@@
 .?AV<lambda_34476f123c6757c46fc2e0ac9e4e10ab>@@
 .?AV<lambda_344b379c9dc23465b3c2c82cadb0851c>@@
+.?AV<lambda_349db98dc3c24d36a5dd53a9a6f4d68d>@@
 .?AV<lambda_385866510987922bb48d7587afd3bc56>@@
 .?AV<lambda_38b900a41b1d91dd17e35ebbb7a6563f>@@
 .?AV<lambda_3923d18fd27d663a0f7a83f0f9cc25fd>@@
@@ -3111,7 +3122,6 @@ $schemasystem/schema_enable_defines.h
 .?AV<lambda_719a722b9a8dd15e4dff63afafcbb403>@@
 .?AV<lambda_72a88e06160bb68c438cf7af9d85b505>@@
 .?AV<lambda_73ab71cc9fd85dba627b415f4bfc58d5>@@
-.?AV<lambda_73b039c5e2046e2106411e93162a52d5>@@
 .?AV<lambda_74b8cbb5c3009c44b8de4467127e279a>@@
 .?AV<lambda_757f43d3d70e076b3e2d2c041db81efa>@@
 .?AV<lambda_763529b0c7473cbc215a52d189ac9b18>@@
@@ -3563,13 +3573,13 @@ $schemasystem/schema_enable_defines.h
 .?AV?$CBaseConcreteToolAttr@VColor@@VCModelDocMeshModifier_MeshOpBakeTextureToVertexData@@@@
 .?AV?$CBaseConcreteToolAttr@VColor@@VCModelDocVSNAPParticle@@@@
 .?AV?$CBaseConcreteToolAttr@VDegreeEuler@@VCModelDocAnimConstraintParent@@@@
-.?AV?$CBaseConcreteToolAttr@VDegreeEuler@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CBaseConcreteToolAttr@VDegreeEuler@@VCModelDocAnimOffset@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintAim@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintAttachmentInput@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintBoneInput@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintSlave@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintTwist@@@@
+.?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocAttachmentBase@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocBaseBreakPiece@@@@
 .?AV?$CBaseConcreteToolAttr@VQAngle@@VCModelDocBaseParametricMeshOp@@@@
@@ -4150,13 +4160,13 @@ $schemasystem/schema_enable_defines.h
 .?AV?$CConcreteToolAttr@VColor@@VCModelDocMeshModifier_MeshOpBakeTextureToVertexData@@X@@
 .?AV?$CConcreteToolAttr@VColor@@VCModelDocVSNAPParticle@@X@@
 .?AV?$CConcreteToolAttr@VDegreeEuler@@VCModelDocAnimConstraintParent@@X@@
-.?AV?$CConcreteToolAttr@VDegreeEuler@@VCModelDocAnimForceBonePosition@@X@@
 .?AV?$CConcreteToolAttr@VDegreeEuler@@VCModelDocAnimOffset@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintAim@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintAttachmentInput@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintBoneInput@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintSlave@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCModelDocAnimConstraintTwist@@X@@
+.?AV?$CConcreteToolAttr@VQAngle@@VCModelDocAnimForceBonePosition@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCModelDocAttachmentBase@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCModelDocBaseBreakPiece@@X@@
 .?AV?$CConcreteToolAttr@VQAngle@@VCModelDocBaseParametricMeshOp@@X@@
@@ -4915,13 +4925,13 @@ $schemasystem/schema_enable_defines.h
 .?AV?$CModelDocAttr@VColor@@VCModelDocMeshModifier_MeshOpBakeTextureToVertexData@@@@
 .?AV?$CModelDocAttr@VColor@@VCModelDocVSNAPParticle@@@@
 .?AV?$CModelDocAttr@VDegreeEuler@@VCModelDocAnimConstraintParent@@@@
-.?AV?$CModelDocAttr@VDegreeEuler@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CModelDocAttr@VDegreeEuler@@VCModelDocAnimOffset@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocAnimConstraintAim@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocAnimConstraintAttachmentInput@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocAnimConstraintBoneInput@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocAnimConstraintSlave@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocAnimConstraintTwist@@@@
+.?AV?$CModelDocAttr@VQAngle@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocAttachmentBase@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocBaseBreakPiece@@@@
 .?AV?$CModelDocAttr@VQAngle@@VCModelDocBaseParametricMeshOp@@@@
@@ -5126,7 +5136,7 @@ $schemasystem/schema_enable_defines.h
 .?AV?$CMutableRefCounted@V?$CMutableRefCountBase@VCRefMT@@@@@@
 .?AV?$CParallelLambdaJob@V<lambda_104fad39bdd1b5a2f4ac74e516ed02d2>@@@CParallelProcessLauncher@@
 .?AV?$CParallelLambdaJob@V<lambda_15d0b226922fb76cf7649a2875ecb3e2>@@@CParallelProcessLauncher@@
-.?AV?$CParallelLambdaJob@V<lambda_1cefafe28e24c16b3beba36563012fac>@@@CParallelProcessLauncher@@
+.?AV?$CParallelLambdaJob@V<lambda_ecb62f1a89b9b7c670c681d926842822>@@@CParallelProcessLauncher@@
 .?AV?$CParallelLambdaJob@V<lambda_ecd22fb1041651b7d7f7d27d4d9b0a67>@@@CParallelProcessLauncher@@
 .?AV?$CParallelProcessorAbstract@V?$CParallelProcessor@HV?$CLambdaJobItemProcessor@H@@$00@@@@
 .?AV?$CParallelProcessorAbstract@V?$CParallelProcessor@PEAVCRenderableBinding@@V?$CMemberFuncJobItemProcessor@PEAVCRenderableBinding@@VCRenderableUpdater@@V2@@@$00@@@@
@@ -5478,13 +5488,13 @@ $schemasystem/schema_enable_defines.h
 .?AV?$CToolAttrGetSetAccess@VColor@@VCModelDocMeshModifier_MeshOpBakeTextureToVertexData@@@@
 .?AV?$CToolAttrGetSetAccess@VColor@@VCModelDocVSNAPParticle@@@@
 .?AV?$CToolAttrGetSetAccess@VDegreeEuler@@VCModelDocAnimConstraintParent@@@@
-.?AV?$CToolAttrGetSetAccess@VDegreeEuler@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CToolAttrGetSetAccess@VDegreeEuler@@VCModelDocAnimOffset@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocAnimConstraintAim@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocAnimConstraintAttachmentInput@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocAnimConstraintBoneInput@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocAnimConstraintSlave@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocAnimConstraintTwist@@@@
+.?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocAttachmentBase@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocBaseBreakPiece@@@@
 .?AV?$CToolAttrGetSetAccess@VQAngle@@VCModelDocBaseParametricMeshOp@@@@
@@ -6198,13 +6208,13 @@ $schemasystem/schema_enable_defines.h
 .?AV?$CValueAttributeWrapper@VColor@@VCModelDocMeshModifier_MeshOpBakeTextureToVertexData@@@@
 .?AV?$CValueAttributeWrapper@VColor@@VCModelDocVSNAPParticle@@@@
 .?AV?$CValueAttributeWrapper@VDegreeEuler@@VCModelDocAnimConstraintParent@@@@
-.?AV?$CValueAttributeWrapper@VDegreeEuler@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CValueAttributeWrapper@VDegreeEuler@@VCModelDocAnimOffset@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocAnimConstraintAim@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocAnimConstraintAttachmentInput@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocAnimConstraintBoneInput@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocAnimConstraintSlave@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocAnimConstraintTwist@@@@
+.?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocAnimForceBonePosition@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocAttachmentBase@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocBaseBreakPiece@@@@
 .?AV?$CValueAttributeWrapper@VQAngle@@VCModelDocBaseParametricMeshOp@@@@
@@ -6618,6 +6628,7 @@ $schemasystem/schema_enable_defines.h
 .?AV?$_Func_impl_no_alloc@V<lambda_3410267d1f900838d932a0f280a24691>@@XPEAVCModelDocEditorSession@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_34476f123c6757c46fc2e0ac9e4e10ab>@@XPEAVCBindableCamera@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_344b379c9dc23465b3c2c82cadb0851c>@@XPEAVCBindableCamera@@@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_349db98dc3c24d36a5dd53a9a6f4d68d>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_385866510987922bb48d7587afd3bc56>@@XPEAVCQMultiTimelineHeaderWidget@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_38b900a41b1d91dd17e35ebbb7a6563f>@@XPEAVCModelDocEditorSession@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_3923d18fd27d663a0f7a83f0f9cc25fd>@@XPEAVCModelDocEditorApp@@@std@@
@@ -6668,7 +6679,6 @@ $schemasystem/schema_enable_defines.h
 .?AV?$_Func_impl_no_alloc@V<lambda_719a722b9a8dd15e4dff63afafcbb403>@@XPEAVCModelDocEditorSession@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_72a88e06160bb68c438cf7af9d85b505>@@XAEAH@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_73ab71cc9fd85dba627b415f4bfc58d5>@@XPEAVCGlobalHotkeyCommands@@@std@@
-.?AV?$_Func_impl_no_alloc@V<lambda_73b039c5e2046e2106411e93162a52d5>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_74b8cbb5c3009c44b8de4467127e279a>@@XPEAVCGlobalHotkeyCommands@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_757f43d3d70e076b3e2d2c041db81efa>@@XPEAVCQModelDocEditorTimeline@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_77034cabc8530bb1e7ac059c2a4f479f>@@XPEAVCQModelDocEditorSceneWidget@@@std@@
@@ -8360,9 +8370,10 @@ $schemasystem/schema_enable_defines.h
 .xJ>Hf
 .xdata
 .xdata$x
+/--lA
+/-P=G
 /2GG>!B
-/5XT.
-/=&9T
+/5xS.
 />58d%
 /A@v'
 /AHs<
@@ -9144,7 +9155,7 @@ $schemasystem/schema_enable_defines.h
 220323000000Z
 220801000000Z
 220921000000Z
-221203185202Z0/
+230112002026Z0/
 241009235959Z0a1
 255 255 255
 2AnyConfigStateChanged()
@@ -9301,7 +9312,7 @@ $schemasystem/schema_enable_defines.h
 333333
 3333333
 33333333H+
-333?333?333?333?
+333?333?333?333?x
 370322235959Z0c1
 3<$u?A
 3>N;kU
@@ -9627,10 +9638,11 @@ $schemasystem/schema_enable_defines.h
 ; tris:
 ;.u1L
 ;1} H
-;5N*w
-;5v*w
+;5N)w
+;5v)w
 ;9^ ~6H
-;=vj^
+;;=`J
+;=&i^
 ;>}sH
 ;A0}?
 ;A8u	;YH
@@ -10330,7 +10342,6 @@ $schemasystem/schema_enable_defines.h
 ?IsEqual_CaseSensitive@CUtlString@@QEBA_NPEBD@Z
 ?IsEqual_FastCaseInsensitive@CUtlString@@QEBA_NPEBD@Z
 ?IsKV3Data@@YA_NPEBVCUtlBuffer@@PEAUKV3ID_t@@@Z
-?Lb]$oh
 ?Left@CUtlString@@QEBA?AV1@H@Z
 ?LoadFromBuffer@KeyValues@@QEAA_NPEBD0PEAVIFileSystem@@0P6A_N0PEAX@ZPEAVIKeyValuesErrorSpew@@20@Z
 ?LoadFromBuffer@KeyValues@@QEAA_NPEBDAEAVCUtlBuffer@@PEAVIFileSystem@@0P6A_N0PEAX@ZPEAVIKeyValuesErrorSpew@@30@Z
@@ -12199,7 +12210,6 @@ $schemasystem/schema_enable_defines.h
 @8;tFH
 @8<0u
 @8<2u
-@8=ta
 @8A9A8}
 @8krt_
 @8l$Ht
@@ -12308,7 +12318,7 @@ $schemasystem/schema_enable_defines.h
 @D9CD
 @DA9AD}
 @HPX&E
-@Hc5gCd
+@Hc5GBd
 @HcAp3
 @HcD$0L
 @Integer overflow in %s
@@ -16789,6 +16799,7 @@ D8$0u
 D8$2u
 D8$8u
 D8$;u
+D8%"`{
 D8&t 
 D8&t4H
 D8(tVH
@@ -16802,8 +16813,8 @@ D8+tDH
 D8,2u
 D8,9u
 D8,>u
-D8-(Cv
-D8-9Gv
+D8-8Bv
+D8-IFv
 D80t.
 D80uEH
 D80u`H
@@ -16818,9 +16829,9 @@ D88u*D8
 D8:uJH
 D8;tAH
 D8<;u
-D8="9v
-D8=&5v
-D8=W6v
+D8=28v
+D8=64v
+D8=g5v
 D8Aut
 D8CqA
 D8KHt
@@ -16880,7 +16891,7 @@ D9'|#Hc
 D9+~=I
 D9+~?I
 D9,$D
-D9-+}
+D9-;}
 D9.~/
 D9.~1fff
 D91t'
@@ -16888,7 +16899,7 @@ D91~HH
 D92tp
 D92uAA
 D92~0A
-D95[W
+D95kW
 D9>|%Hc
 D9?|#Hc
 D9@(|
@@ -16982,7 +16993,7 @@ D9|$d
 D9|$hu*H
 D9~(D
 D;	s6E
-D;%Q%
+D;%a%
 D;AP|
 D;Ah|
 D;C(|
@@ -18735,23 +18746,25 @@ H9(t8
 H9(t|
 H9+t	H
 H9+udH
-H9-9:{
-H9-@8
-H9-PXx
-H9-kPv
+H9-7>
+H9-P8
+H9-PWx
+H9-[Ov
+H9-i9{
+H9-o"s
 H9.t	H
 H9/t	H
 H90u#H
 H91tB
 H93t	H
-H95g|r
+H95W{r
 H97u+A
 H98tE
 H99teH
 H99tjH
 H9;t	H
-H9=1ix
-H9=Q 
+H9=1hx
+H9=a 
 H9>t	H
 H9A s
 H9A(u
@@ -19002,7 +19015,7 @@ Hc7Hc
 Hc9E3
 Hc;D+
 Hc;E3
-Hc=<9
+Hc=L9
 HcA 3
 HcA(H
 HcA(L
@@ -19491,7 +19504,6 @@ I(9K0
 I(9N0H
 I(D9I0D
 I(IcA0
-I(O;xyQ55
 I+J(H
 I8A9H8|
 I8Lcjh
@@ -20459,29 +20471,29 @@ L+|$8
 L0hE3
 L9#t	H
 L9$9u)A
-L9%`4
-L9%w#
+L9%p4
 L9&tQI
 L9+t	H
-L9-M s
-L9-xD
+L9-L]
+L9-f\
 L93t	H
-L95	4
-L95)W
-L95\Y{
+L959W
+L95Y3
+L95c/
 L97t	H
 L98t"
 L9;t	H
-L9= H
-L9='N
-L9=0S
-L9=7K
-L9=7Y
-L9=GV
-L9=[L
-L9=kW
-L9=pb
-L9=wJ
+L9= K
+L9=$<{
+L9='Q
+L9=0V
+L9=7N
+L9=GY
+L9=[O
+L9=f?
+L9=kZ
+L9=pG
+L9=wM
 L9>t	H
 L9?t	H
 L9@ s
@@ -21285,7 +21297,6 @@ MaxSampleValue
 Maximum
 Maximum Degrees
 Maximum supported image dimension is %u pixels
-MbP?x
 Mc)E3
 Mc+E3
 Mc,$A
@@ -22621,7 +22632,6 @@ PHciHH
 PHcyxE3
 PHczxE3
 PLACEHOLDER_VALUE
-PM-q0
 POINT
 POSE_SPACE_BONE
 POSE_SPACE_MORPH
@@ -25406,7 +25416,6 @@ Volumetric Clusters
 Vortices
 W fff
 W(IcH
-W5R		
 W?resetTransform@QPainter@@QEAAXXZ
 W?rowCount@QStandardItem@@QEBAHXZ
 W?rowCount@QStandardItemModel@@UEBAHAEBVQModelIndex@@@Z
@@ -25553,11 +25562,9 @@ X UWAVH
 X VWATH
 X VWAVH
 X!t5~
-X%];G
 X-Ray:
 X0 Node Name
 X1 Node Name
-X5j;G
 X7fff
 X8;V0t
 X?setBrush@QPainter@@QEAAXAEBVQBrush@@@Z
@@ -25631,35 +25638,35 @@ X|$ A
 X|$8E
 Y - Left
 Y$	Hi
-Y%2:v
-Y%2Cm
-Y%5`;
-Y%@i;
-Y%PiP
-Y%Z`;
-Y%qi;
+Y% iP
+Y%B9v
+Y%E_;
+Y%Ph;
+Y%YhP
+Y%]iP
+Y%ay~
+Y%j_;
+Y%nhP
 Y(HcA H
 Y(jdH
 Y,	Hi
-Y-CiP
-Y-S\G
+Y-jiP
+Y-vhP
 Y0 Node Name
 Y0HcR
 Y1 Node Name
-Y5$Nd
-Y5,kO
-Y53!D
-Y57e!
-Y5Z}1
-Y5q:k
-Y5s@k
+Y5'd!
+Y5-iP
+Y59_G
+Y5A:k
+Y5QhP
+Y5fjO
+Y5s D
 Y8HcA0H
-Y=	Ld
-Y=#lO
-Y='gO
-Y=ASv
-Y=K;k
-Y=oeO
+Y=/dO
+Y=E_G
+Y=QRv
+Y=[:k
 Y>kX>M
 Y?setData@QStandardItem@@UEAAXAEBVQVariant@@H@Z
 Y?setData@QStandardItemModel@@UEAA_NAEBVQModelIndex@@AEBVQVariant@@H@Z
@@ -25691,7 +25698,6 @@ YD$LJ
 YD$\E
 YD9xluSD9
 YL$(E
-YL$0A
 YL$8E
 YO?insertColumns@QStandardItemModel@@UEAA_NHHAEBVQModelIndex@@@Z
 YPHcAHH
@@ -26108,7 +26114,7 @@ Zpm"U
 ]0IcM@A
 ]0tKH
 ]0tLH
-]5-Ko
+]5)VY
 ]8tIH
 ]>)2X
 ]?sharedPainter@QPaintDevice@@MEBAPEAVQPainter@@XZ
@@ -26131,6 +26137,8 @@ Zpm"U
 ^ L;d$(
 ^ fff
 ^(Hc~ H
+^)Pkk^O
+^-hnbwU
 ^<:_<u
 ^<V7w
 ^?text@QClipboard@@QEBA?AVQString@@W4Mode@1@@Z
@@ -26151,6 +26159,7 @@ _ HcO0
 _ Hc^ H
 _(HcG H
 _(IcG H
+_5sQn
 _89_D
 _8HcG0H
 _8Hc^8H
@@ -26187,14 +26196,6 @@ _V_ExtractFileExtension
 _V_ExtractFilePath
 _V_FileBase
 _V_SetExtension
-_V_StringAfterPrefix
-_V_StringAfterPrefixCaseSensitive
-_V_StripExtension
-_V_StripLastDir
-_V_strEndsWith
-_V_strncmp
-_V_strncpy
-_V_strnicmp_fast
 _XHcGPH
 _XHcOPH
 _]?source@QDropEvent@@QEBAPEAVQObject@@XZ
@@ -27621,10 +27622,8 @@ fF94+
 fG9$Ou
 fJBGo
 fNewDefaultValueIn
-fTBeq
 fValueChanged
 fValueSetChanged
-f_N7b
 faceMergeAngle
 faceSets
 face_count
@@ -27648,9 +27647,9 @@ falloff_right
 false
 false"
 false:7
+false:<
 false:=
 false:?
-false:@
 features
 feeder_bone
 fetched: %s : %.3f
@@ -27824,9 +27823,6 @@ fw\hH
 g	?cap@QRegExp@@QEAA?AVQString@@H@Z
 g cMesh
 g default
-g_Mathlib_GammaToLinearByteTable
-g_TSPointerListNodes
-g_VProfCurrentProfile
 g_pApplication is not yet initialized!
 game:
 game:tools/images/assetbrowser/appicon.ico
@@ -29709,7 +29705,7 @@ model_subkey
 modelanimevent
 modelbreakcommand
 modelconfig
-modeldoc31
+modeldoc32
 modeldoc_editor
 modeldoc_editor.dll
 modeldoc_editor_preview_model
@@ -30109,7 +30105,6 @@ pLightRigButton
 pMeshName
 pName
 pNewSettings
-pO=fj
 pPHc@HM
 pPreset
 pPrevFocusWidget
@@ -30792,6 +30787,7 @@ state not recoverable
 static
 staticImpactVolume
 steamid
+steamlearn_count
 steamml_is_timestamp
 steamml_max_entries
 stereo
@@ -30899,7 +30895,7 @@ t$ A;
 t$ ATAVAWH
 t$ AVAWH
 t$ AVH
-t$ AVHc-
+t$ AVHc- 
 t$ AVL
 t$ AWH
 t$ Ai
@@ -31563,7 +31559,7 @@ tW?rotate@QPainter@@QEAAXN@Z
 tWHcC
 tWHcKxI
 tWfff
-tY@852
+tY@85B
 tYD8!tT
 tYfff
 t[;S`sDI
@@ -32555,7 +32551,7 @@ vortex_cell_size
 vortex_choppiness
 vortex_count
 vortex_max_speed_mph
-vpcf45
+vpcf51
 vpcfH
 vphzc
 vpost
@@ -32803,7 +32799,6 @@ yellow
 z%u#H
 z/u-A
 z/u-E
-z4!0"
 z8u6H
 zU?qt_metacall@QDrag@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z
 zX?setBottom@QDoubleValidator@@QEAAXN@Z
@@ -33002,7 +32997,7 @@ znear
 |$8u)H
 |$8uEH
 |$8xjL
-|$<;=1Yj
+|$<;=AXj
 |$@	u
 |$@ u
 |$@-D

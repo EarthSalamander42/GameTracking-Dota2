@@ -1,7 +1,5 @@
-		g_pMemAlloc
 	!s99
 	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
-	g_bUpdateStringTokenDatabase
 	kE>fvw
                           
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
@@ -25,14 +23,17 @@
  delete
  delete[]
  new[]
+ oJYl
  tDE3
 !>6'Y
 !hn7!
+"	g_bUpdateStringTokenDatabase
+$a#)!
 %D8d$8t
 %VGAME%\bin\win32;%PATH%;
 %s: Invalid capacity %u
 %s: Invalid grow amount %d
-&Tr6P
+%t@J 
 &YA1A
 ',=?k
 ( (int64)m_nAllocationCount + (int64)num ) <= 0x7FFFFFFF
@@ -49,6 +50,7 @@
 )t$ I
 )t$0H
 )t$`f
+*	g_pMemAlloc
 *StO9>T
 +C$Hc
 +C$Lc
@@ -61,8 +63,6 @@
 +o'q)}
 ,/<-w
 ,W5y+
-,|D"=
--1WS>18
 -sse2
 -sse3
 -sse4
@@ -101,7 +101,6 @@
 .rtc$IZZ
 .rtc$TAA
 .rtc$TZZ
-.tY:X
 .text
 .text$di
 .text$mn
@@ -111,7 +110,6 @@
 .xJ>Hf
 .xdata
 />58d%
-/W9]K
 0A\_]
 0A^A]A\_^
 0A^_^
@@ -129,7 +127,7 @@
 220323000000Z
 220801000000Z
 220921000000Z
-221203184406Z0/
+230112001546Z0/
 241009235959Z0a1
 2DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA
 2DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA0
@@ -147,7 +145,6 @@
 6OB,n_
 70503
 7http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0E
-8?5kft
 8A^A]
 8A_A\_]
 8A_A]
@@ -165,6 +162,7 @@
 =imb;D
 =rIQU
 >0<0:
+>1~gl
 >jtm}S
 ?7zQ6$
 ?:kP<
@@ -311,6 +309,7 @@ D8d$8t
 D9'uJA
 D9+~;M
 D;c@u8
+D[q5e
 December
 DeleteCriticalSection
 DigiCert Assured ID Root CA0
@@ -470,6 +469,7 @@ Plat_NonFatalErrorFunc
 Plat_ShouldCollectMiniDumpsForFatalErrors
 Process exited cleanly
 QueryPerformanceCounter
+R9_T9u
 RaiseException
 RegisterStringToken
 Release
@@ -546,7 +546,6 @@ WideCharToMultiByte
 WriteConsoleW
 WriteFile
 XA]A\
-YfJ5X
 \$ E3
 \$ UH
 \$ UVWATAUAVAWH
@@ -580,6 +579,7 @@ __thiscall
 __unaligned
 __vectorcall
 _gUT^
+`&EZK
 `.rdata
 `A^_^
 `A^_^[]
@@ -628,6 +628,7 @@ c(>\,
 cU	F9
 dddd, MMMM dd, yyyy
 e0A_A^A]A\]
+e;}^r
 e@E9g
 easeIn
 easeOut
@@ -670,7 +671,6 @@ k0i0$
 l$ E3
 l$ HcA
 l$ VWATAUAVH
-l$/Vl
 l$HA_A^A]A\_^
 l$`Hc
 l$xHc
@@ -694,7 +694,6 @@ r>@8o
 reassigning extractor pid from %u to %u
 received response from wrong address
 restrict(
-s(D.(
 t <.u
 t$ E3
 t$ WATAVH
@@ -726,11 +725,13 @@ uTH9Z
 uUH9Z
 ue!T$(H!T$ 
 ugfD9A
+ulyWgz
 utfD9A
 uzKs@>
 v=Y]Bv
 vB8_(t
 vC8_(t
+vD:'K<
 win32
 win64
 www.digicert.com1!0

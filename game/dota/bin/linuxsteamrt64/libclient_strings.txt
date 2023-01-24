@@ -553,6 +553,7 @@
 #DOTA_BuyBackStateAlert_ReapersScythe
 #DOTA_Cancel
 #DOTA_CandyShop_Error_Disabled
+#DOTA_CandyShop_Error_ExpiredShop
 #DOTA_CandyShop_Error_InternalError
 #DOTA_CandyShop_Error_InvalidItem
 #DOTA_CandyShop_Error_InvalidRecipe
@@ -1703,6 +1704,7 @@
 #DOTA_HeroLevelBadgeTier_Master
 #DOTA_HeroLevelBadgeTier_Platinum
 #DOTA_HeroLevelBadgeTier_Silver
+#DOTA_HeroLevelReward%u_Currency
 #DOTA_HeroLevelReward_ChatWheel
 #DOTA_HeroLevelReward_Currency
 #DOTA_HeroLevelReward_Tier
@@ -3768,6 +3770,7 @@
 #dota_hud_error_treejump_tree_target_same_tree
 #dota_hud_error_tutorial_shop_not_in_range
 #dota_hud_error_underlord_dark_portal
+#dota_hud_error_underlord_dark_portal_while_snowballing
 #dota_hud_error_unit_cant_attack
 #dota_hud_error_unit_cant_move
 #dota_hud_error_unit_command_restricted
@@ -4215,9 +4218,6 @@ $playerteam
 %5.3f:%s: adding layer %d (order %d): %s : cycle %5.3f (weight %5.3f)
 %50.50s %32.32s: %s %s
 %50.50s: %2.2d bits == '%s'
-%50s    count      aveduration                    netmsg      sql    sleep waitlock    yield workitem
-%50s %8lld %16lld %13lld %11lld %8lld %8lld %8lld %8lld %8lld
-%50s --- running jobs (usec)-- -- locks held -- ----- pause reasons ---------------------------------
 %5d%9.0f%8d%9.0f%10.0f   %*s%s
 %5d%9.0f%8s%9s%10s   %*s%s
 %5d:  %5d -> %5d (%5d bytes): %s
@@ -4226,8 +4226,11 @@ $playerteam
 %6.2f%%
 %6.3f%%
 %60s        count   averuntime   maxruntime  aveduration #yielded  attempted waited   failed longheld longwait wait-t/o  t/o-msg jobfailed longslice
+%60s    count      aveduration                    netmsg      sql    sleep waitlock    yield workitem
 %60s  --- completed jobs (usec)----------------------------------  ------ lock counts----------------------------------  ------ failures -----------
 %60s %12lld %12lld %12lld %12lld %8lld %8lld %8lld %8lld %8lld %8lld %8lld %8lld %8lld %8lld
+%60s %8lld %16lld %13lld %11lld %8lld %8lld %8lld %8lld %8lld
+%60s --- running jobs (usec)-- -- locks held -- ----- pause reasons ---------------------------------
 %6d %4d
 %8.3f
 %8.3f %8.3f %8.3f
@@ -4235,7 +4238,6 @@ $playerteam
 %8.4f : %30s : %5.3f [%5.3f]: %4.2f %s
 %8.6f
 %8.8s: %-5d entries, '%s', ...
-%8s | %12s | %12s
 %8u | %12u | %12u
 %9s
 %Y-%m-%dT%H:%M:%SZ
@@ -5743,6 +5745,7 @@ $playerteam
 *ZN29C_EnvCombinedLightProbeVolume9PreRenderE16CSplitScreenSlotEUlvE_
 *ZN30CDOTAFavoritePlayersController28ReceivedFavoritePlayerInviteEjEUlPN8panorama8CPanel2DEE_
 *ZN30CDOTA_DB_HeroPlusPickWinBanRow10InitializeERK26CMsgHeroGlobalDataResponseiiE8SContext
+*ZN30CDOTA_DB_Page_Comp_DPC_Fantasy16UpdateDirtyPanelEvEUlPN8panorama14IUIPanelClientES2_E7_
 *ZN30CDOTA_DB_Page_Comp_DPC_FantasyC4EPN8panorama8CPanel2DEPKcEUlS2_iS2_E0_
 *ZN30CDOTA_DB_Page_Comp_DPC_FantasyC4EPN8panorama8CPanel2DEPKcEUlS2_iS2_E_
 *ZN30CDOTA_DB_Page_ProfileHeroStats11UpdateStatsEvEUlPN8panorama15CDelayLoadPanelEE_
@@ -6452,6 +6455,7 @@ $playerteam
 10CMsgIDLinkILj16ELj1ELj2599E33CMsgGCToClientCurrencyPricePointsE
 10CMsgIDLinkILj1ELj16ELj2003E26CMsgDevUnlockAllItemStylesE
 10CMsgIDLinkILj1ELj16ELj2609E44CMsgClientToGCGetLimitedItemPurchaseQuantityE
+10CMsgIDLinkILj1ELj16ELj4523E30CMsgClientToGCAggregateMetricsE
 10CMsgIDLinkILj1ELj16ELj7078E26CMsgDOTASubmitPlayerReportE
 10CMsgIDLinkILj1ELj16ELj7359E24CMsgDOTAChatModeratorBanE
 10CMsgIDLinkILj1ELj16ELj7527E27CMsgClientToGCGetTrophyListE
@@ -11418,6 +11422,7 @@ $playerteam
 18CMsgSDONoMemcached
 18CMsgSOCacheVersion
 18CMsgSOSingleObject
+18CMsgSteamLearnData
 18CMsgSuccessfulHero
 18CMsgTEBeamEntPoint
 18CMsgTEEnergySplash
@@ -12425,6 +12430,8 @@ $playerteam
 22CMsgSosStartSoundEvent
 22CMsgSpectateFriendGame
 22CMsgSpectatorLobbyList
+22CMsgSteamLearnDataList
+22CMsgSteamLearnHMACKeys
 22CMsgStickerbookSticker
 22CMsgWeekendTourneyOpts
 22CPeriodicResourceCache
@@ -13294,6 +13301,8 @@ $playerteam
 24CMsgPullTabsData_Jackpot
 24CMsgQuickJoinCustomLobby
 24CMsgResetStrangeGemCount
+24CMsgSteamLearnDataObject
+24CMsgSteamLearnDataSource
 24CMsgTeamFanContentStatus
 24CNetworkFieldScratchData
 24CPaginatedAsyncDataCacheI7NoKey_t25FavoritePlayerMatchData_t31FavoritePlayerPaginationState_tE
@@ -13694,6 +13703,8 @@ $playerteam
 25CMsgProfileUpdateResponse
 25CMsgRecentAccomplishments
 25CMsgSosStopSoundEventHash
+25CMsgSteamLearnDataElement
+25CMsgSteamLearn_AccessData
 25CNETMsg_SpawnGroup_Unload
 25CNetworkTransmitComponent
 25CP2P_WatchSynchronization
@@ -14421,6 +14432,7 @@ $playerteam
 27CMsgGetTeamAuditInformation
 27CMsgHeroGlobalDataAllHeroes
 27CMsgIDLinkGCToGenericClientILj1ELj2599E33CMsgGCToClientCurrencyPricePointsE
+27CMsgIDLinkGenericClientToGCILj1ELj4523E30CMsgClientToGCAggregateMetricsE
 27CMsgIDLinkGenericClientToGCILj1ELj7359E24CMsgDOTAChatModeratorBanE
 27CMsgIDLinkGenericClientToGCILj1ELj7669E31CMsgClientToGCUpdatePartyBeaconE
 27CMsgIDLinkGenericClientToGCILj1ELj7682E20CMsgClientToGCMMInfoE
@@ -15571,6 +15583,7 @@ $playerteam
 30CMsgBattleReportAggregateStats
 30CMsgBotWorldState_EventAbility
 30CMsgBotWorldState_TeleportInfo
+30CMsgClientToGCAggregateMetrics
 30CMsgClientToGCApplyGemCombiner
 30CMsgClientToGCCreateHeroStatue
 30CMsgClientToGCGetQuestProgress
@@ -16411,6 +16424,7 @@ $playerteam
 32CMsgResetStrangeGemCountResponse
 32CMsgSocialFeedResponse_FeedEvent
 32CMsgSource1LegacyGameEvent_key_t
+32CMsgSteamLearn_CacheData_Request
 32CNETMsg_SpawnGroup_LoadCompleted
 32CPlayer_GetNicknameList_Response
 32CPortraitBackgroundLightModifier
@@ -16776,6 +16790,7 @@ $playerteam
 33CMsgPredictionRankings_Prediction
 33CMsgRequestWeekendTourneySchedule
 33CMsgSetItemPositions_ItemPosition
+33CMsgSteamLearn_CacheData_Response
 33CMsgTeamFanContentAutographStatus
 33CNETMsg_SpawnGroup_ManifestUpdate
 33CPlayer_MovementServices_Humanoid
@@ -16928,6 +16943,7 @@ $playerteam
 34CDOTA_DB_Page_Treasure_StickerPack
 34CDOTA_DB_Page_Watch_Standings_Base
 34CDOTA_DB_Popup_Diretide2020Details
+34CDOTA_DB_Popup_Diretide2022_Bundle
 34CDOTA_Hud_PlayerDuelRequestedToast
 34CDOTA_Hud_PortraitStatsClickRegion
 34CDOTA_Item_Recipe_Enchanted_Quiver
@@ -17132,6 +17148,8 @@ $playerteam
 34CMsgPracticeLobbyListResponseEntry
 34CMsgSOMultipleObjects_SingleObject
 34CMsgSpectatorLobbyGameDetails_Team
+34CMsgSteamLearnDataSourceDescObject
+34CMsgSteamLearn_GetHMACKeys_Request
 34CNETMsg_SpawnGroup_SetCreationTick
 34CP2P_VRAvatarPosition_COrientation
 34CPanoramaDOTA_GameStateEnumBinding
@@ -17602,6 +17620,8 @@ $playerteam
 35CMsgPlayerHeroRecentAccomplishments
 35CMsgPurchaseHeroRandomRelicResponse
 35CMsgSerializedSOCache_Cache_Version
+35CMsgSteamLearnDataSourceDescElement
+35CMsgSteamLearn_GetHMACKeys_Response
 35CMsgTeamFanContentStatus_TeamStatus
 35CMsgWeekendTourneySchedule_Division
 35CPlayer_GetGameBadgeLevels_Response
@@ -17973,6 +17993,7 @@ $playerteam
 36CMsgNotificationOfSuspiciousActivity
 36CMsgSOCacheSubscribed_SubscribedType
 36CMsgSource1LegacyGameEventList_key_t
+36CMsgSteamLearnHMACKeys_CacheDataKeys
 36CMsgStickerbookTeamPageOrderSequence
 36CNetworkSerializerBindingBuildFilter
 36CPublishedFile_GetUserFiles_Response
@@ -18306,6 +18327,7 @@ $playerteam
 37CMsgGCLobbyUpdateBroadcastChannelInfo
 37CMsgGCMsgMasterSetWebAPIRouting_Entry
 37CMsgGCRequestSubGCSessionInfoResponse
+37CMsgGCToClientAggregateMetricsBackoff
 37CMsgGCToClientBattlePassRollupRequest
 37CMsgGCToClientGuildMembersDataUpdated
 37CMsgGCToClientManageFavoritesResponse
@@ -18316,6 +18338,7 @@ $playerteam
 37CMsgPracticeLobbyJoinBroadcastChannel
 37CMsgPredictionRankings_PredictionLine
 37CMsgPredictionResults_ResultBreakdown
+37CMsgSteamLearn_BatchOperation_Request
 37CMsgTeamFanContentAssetStatusResponse
 37CMsgWatchGameResponse_WatchGameResult
 37CPointClientUIWorldTextPanelPreviewer
@@ -18668,6 +18691,8 @@ $playerteam
 38CMsgJoinableCustomLobbiesResponseEntry
 38CMsgLookupMultipleAccountNamesResponse
 38CMsgPracticeLobbyCloseBroadcastChannel
+38CMsgSteamLearn_BatchOperation_Response
+38CMsgSteamLearn_SnapshotProject_Request
 38CPlayer_GetFriendsGameplayInfo_Request
 38CPlayer_IncomingInviteMutualFriendList
 38CWorkshop_GetItemDailyRevenue_Response
@@ -18921,6 +18946,7 @@ $playerteam
 39CDOTA_Modifier_Watch_Tower_Invulnerable
 39CDOTA_Modifier_Windrunner_Windrun_Invis
 39CDOTA_Modifier_Wisp_Spirit_Invulnerable
+39CDOTA_Modifier_Wisp_Tether_Stun_Tracker
 39CDOTA_Modifier_WitchDoctor_Cask_Thinker
 39CDOTA_Modifier_Woodland_Striders_Active
 39CDOTA_Modifier_Zuus_Heavenly_Jump_Boost
@@ -18962,6 +18988,7 @@ $playerteam
 39CMsgMatchEventActionGrants_PlayerGrants
 39CMsgPurchaseItemWithEventPointsResponse
 39CMsgRequestCrateEscalationLevelResponse
+39CMsgSteamLearn_SnapshotProject_Response
 39CPlayer_GetCommunityPreferences_Request
 39CPlayer_GetFriendsGameplayInfo_Response
 39CPlayer_GetPerFriendPreferences_Request
@@ -19627,6 +19654,7 @@ $playerteam
 41CMsgLobbyEventPoints_PeriodicResourceData
 41CMsgLobbyGauntletProgress_AccountProgress
 41CMsgQuickJoinCustomLobby_LegacyRegionPing
+41CMsgSteamLearn_RegisterDataSource_Request
 41COAuthToken_ImplicitGrantNoPrompt_Request
 41CPlayer_GetGameBadgeLevels_Response_Badge
 41CPublishedFile_RefreshVotingQueue_Request
@@ -19911,6 +19939,8 @@ $playerteam
 42CMsgLobbyEventPoints_ChatWheelMessageRange
 42CMsgLobbyEventPoints_PingWheelMessageRange
 42CMsgSocialFeedCommentsResponse_FeedComment
+42CMsgSteamLearnHMACKeys_SnapshotProjectKeys
+42CMsgSteamLearn_RegisterDataSource_Response
 42COAuthToken_ImplicitGrantNoPrompt_Response
 42CPublishedFile_RefreshVotingQueue_Response
 42CUserMsg_ParticleManager_ParticleCanFreeze
@@ -20214,6 +20244,7 @@ $playerteam
 43CInlineJob_CMsgGCToClientMatchGroupsVersion
 43CInlineJob_CMsgGCToClientPartySearchInvites
 43CMsgAMSendEmail_PersonaNameReplacementToken
+43CMsgClientToGCAggregateMetrics_SingleMetric
 43CMsgClientToGCCreateStickerbookPageResponse
 43CMsgClientToGCDeleteStickerbookPageResponse
 43CMsgClientToGCGetBattleReportAggregateStats
@@ -21644,6 +21675,7 @@ $playerteam
 48CDOTA_Modifier_Winter_Wyvern_Splinter_Blast_Slow
 48CDOTA_UI_Popup_CollectorsCacheAvailableDataCache
 48CInlineJob_CMsgDOTAPostGameItemAwardNotification
+48CInlineJob_CMsgGCToClientAggregateMetricsBackoff
 48CInlineJob_CMsgGCToClientGuildMembersDataUpdated
 48CInlineJob_CMsgGCToClientOverwatchCasesAvailable
 48CMsgClientToGCCandyShopDevClearInventoryResponse
@@ -22757,7 +22789,6 @@ $playerteam
 55CDOTA_Modifier_Elder_Titan_NaturalOrder_MagicResistance
 55CDOTA_Modifier_Frostivus2018_Pangolier_ShieldCrash_Jump
 55CDOTA_Modifier_Greevil_Miniboss_White_Degen_Aura_Effect
-55CDOTA_Modifier_Item_AghsFort_Bloodstone_GainableCharges
 55CDOTA_Modifier_Item_Assault_Cuirass_Negative_Armor_Aura
 55CDOTA_Modifier_Item_Medallion_Of_Courage_Armor_Addition
 55CDOTA_Modifier_Jungle_Spirit_Storm_Cyclone_Invulnerable
@@ -23577,6 +23608,7 @@ $playerteam
 75CDOTA_Ability_Special_Bonus_Unique_Morokai_JungleHeal_SummonCreeps_Interval
 75CDOTA_Ability_Special_Bonus_Unique_Morokai_Range_Attack_Projectile_Duration
 75CDOTA_Modifier_AghsFort_Special_VoidSpirit_AetherRemnant_Bowling_ImpactSlow
+75CUserMsg_ParticleManager_SetParticleNamedValueContext_TransformContextValue
 76CDOTA_Ability_AghsFort_Special_Omniknight_Guardian_Angel_Single_Target_Dummy
 76CDOTA_Ability_Aghsfort_Special_Winter_Wyvern_Cold_Embrace_Magic_Damage_Block
 76CDOTA_Modifier_Aghsfort_Special_Disruptor_ThunderStrike_Int_Increase_Counter
@@ -23665,6 +23697,7 @@ $playerteam
 9CCallbackI28CPanoramaScript_SteamFriends19AvatarImageLoaded_tLb0EE
 9CCallbackI28CPanoramaScript_SteamFriends20PersonaStateChange_tLb0EE
 9CCallbackI30CSteamUnifiedMessageDispatcher38SteamUnifiedMessagesSendMethodResult_tLb0EE
+9CCallbackI30CSteamUnifiedMessageDispatcher38SteamUnifiedMessagesSendMethodResult_tLb1EE
 9CCallbackIN5GCSDK9CGCClientE20GCMessageAvailable_tLb0EE
 9CCallbackIN5GCSDK9CGCClientE23SteamServersConnected_tLb0EE
 9CCallbackIN5GCSDK9CGCClientE26SteamServersDisconnected_tLb0EE
@@ -26005,6 +26038,7 @@ AegisesLocal
 After a ready check is complete, how long the UI should linger up to display final results.
 After showing game end message, if server hasn't told us it signed out with the GC, then turn on warning text
 After this amount of time of standing in place but aiming to one side, go ahead and move feet to face upper body.
+After this event expires, you can no longer interact with this candy shop.
 After this many seconds of being basically stationary, the ragdoll will go to sleep.
 After waiting %.1f seconds, game server still hasn't told us that the match signed out properly.  Continuing anyway.
 AfterActive
@@ -26865,6 +26899,7 @@ BattlePass_Gift
 BattlePass_HomePageCell
 BattlePass_UpcomingRewards
 BattlePointReward
+BattlePointRewardTile
 BattlePointsConsumed
 BattlePointsPerContractMultipler
 BattleReportTab
@@ -29605,7 +29640,7 @@ CDOTA_DB_Page_HeroGuides::OnHeroGuideCreate
 CDOTA_DB_Page_HeroGuides::OnHeroGuideDelete
 CDOTA_DB_Page_HeroGuides::OnHeroGuidePublish
 CDOTA_DB_Page_HeroGuides::OnHeroGuidePublishAll
-CDOTA_DB_Page_Heroes::UpdateGameMode
+CDOTA_DB_Page_Heroes::SetupCavernCrawl
 CDOTA_DB_Page_Home::OnPostSocialFeedMessage
 CDOTA_DB_Page_LaneSuggestDebug::EventHeroSelected
 CDOTA_DB_Page_OwnedItemDetails - DefIndex: %u, AccountID: %u, ItemID: %llu
@@ -30379,6 +30414,7 @@ CFoWBlockerRegion
 CFogController
 CFootDefinition
 CFootstepTableHandle
+CFormatStringElement::CFormatStringElement(char const*)
 CFreeCamera
 CFullWorkshopQuery::SendQueryUGCRequest failed. Error = %d Result=%d
 CFuncBrush
@@ -30985,6 +31021,7 @@ CInlineJob_CMsgGCNotificationsUpdate
 CInlineJob_CMsgGCToClientAccountGuildEventDataUpdated
 CInlineJob_CMsgGCToClientActiveGuildChallengeUpdated
 CInlineJob_CMsgGCToClientActiveGuildContractsUpdated
+CInlineJob_CMsgGCToClientAggregateMetricsBackoff
 CInlineJob_CMsgGCToClientArcanaVotesUpdate
 CInlineJob_CMsgGCToClientCandyShopUserDataUpdated
 CInlineJob_CMsgGCToClientCavernCrawlMapPathCompleted
@@ -31359,6 +31396,7 @@ CRopeManager::AddToRenderCache count to large for cache!
 CRuleScriptBridge
 CRuleScriptBridge initializing...
 CRuleScriptBridge was double-initialized: tearing down and rebuilding
+CSOAContainer(%d x %d x %d, channels=%?)
 CSOAContainer::SetAttributeType - ERROR, trying to change type of previously-defined attribute %d!
 CSVCMsg_HLTVStatus_t
 CSaveMemory
@@ -37443,6 +37481,7 @@ DOTADiretide2020CosmeticsPage
 DOTADiretide2020DetailsPopup
 DOTADiretide2020MoreInfo
 DOTADiretide2020ToggleItemEquipped
+DOTADiretide2022PurchaseBundle
 DOTADiretideCancelOpeningSelectedTreasure
 DOTADiretideChangeItemDisplay
 DOTADiretideEquipSelectedTreasureItem
@@ -38762,6 +38801,7 @@ DOTAPopupBroadcasterToasts
 DOTAPopupCavernCrawl
 DOTAPopupChinaSSA
 DOTAPopupDebugVersusScreen
+DOTAPopupDiretide2022Bundle
 DOTAPopupEffigyEditor
 DOTAPopupFullscreenHTML
 DOTAPopupFullscreenHTMLClose
@@ -42906,6 +42946,7 @@ DisableStencil
 DisableUpdateDisplay
 Disabled: %s
 Disabler
+DisablerButton
 Disables right clicking on the minimap.
 Discard match history
 Discarded rule %s
@@ -43340,6 +43381,7 @@ Duplicate season_id '%u'
 Duplicate season_name '%s'
 Dur ms
 Durable
+DurableButton
 Duration before query times out
 Duration it takes for attached caption to ideal point
 Duration of ent_skeleton display
@@ -43584,6 +43626,7 @@ EVENT_ID_SPRING_2021
 EVENT_ID_SPRING_FESTIVAL
 EVENT_ID_TEAM_2021_2022_TOUR2
 EVENT_ID_TEAM_2021_2022_TOUR3
+EVENT_ID_TEAM_2023_TOUR1
 EVENT_ID_TEAM_FANDOM
 EVENT_ID_TEAM_FANDOM_FALL_2021
 EVENT_ID_TEAM_INTERNATIONAL_2022
@@ -43979,6 +44022,7 @@ ErrorPopup
 Error_global_client
 Escalating
 Escape exits have lower priority
+EscapeButton
 EssenceContainerLeft
 EssenceContainerRight
 Ester Bot
@@ -44683,6 +44727,7 @@ FantasyLevelProgressBar
 FantasyNextPeriod
 FantasyPeriod_t
 FantasyRecycling
+FantasyRewardTiles
 FantasyRewards
 FantasyRole%d
 FantasyRoster
@@ -45044,6 +45089,8 @@ Format: %s <substring search key>
 Format: ent_filter <list of flags to toggle, or all/none, parsed in order>
 Format: ent_find <substring>
 Format: ent_find_index <index>
+FormatArgumentsToBuffer(IFormatOutputStream*, char const*, CTypeErasedFormattingWrapper const*, int)
+FormatTo(IFormatOutputStream*, CFormatStringElement, int)
 Found %d candidate items
 Found %d matches.
 Found %s
@@ -45545,6 +45592,7 @@ General.CastFail_NoTarget
 General.CastFail_Silenced
 General.Coins
 General.CommandRestricted
+General.CompendiumLevelUp
 General.CompendiumLevelUpMinor
 General.Dead
 General.DisallowedItem
@@ -48068,6 +48116,7 @@ Initializing prereqs for scripted lesson
 Initializing scripted lesson
 Initializing...
 Initiator
+InitiatorButton
 InlineImage
 InlineImage%d
 InlinePanel%d
@@ -51768,6 +51817,7 @@ N5GCSDK12CProtoBufMsgI37CMsgDOTAPostGameItemAwardNotificationEE
 N5GCSDK12CProtoBufMsgI37CMsgDOTASetMatchHistoryAccessResponseEE
 N5GCSDK12CProtoBufMsgI37CMsgDOTATeamInvite_GCRequestToInviteeEE
 N5GCSDK12CProtoBufMsgI37CMsgGCLobbyUpdateBroadcastChannelInfoEE
+N5GCSDK12CProtoBufMsgI37CMsgGCToClientAggregateMetricsBackoffEE
 N5GCSDK12CProtoBufMsgI37CMsgGCToClientBattlePassRollupRequestEE
 N5GCSDK12CProtoBufMsgI37CMsgGCToClientGuildMembersDataUpdatedEE
 N5GCSDK12CProtoBufMsgI37CMsgGCToClientOverwatchCasesAvailableEE
@@ -51847,6 +51897,7 @@ N5GCSDK15CGCSODestroyJobE
 N5GCSDK15CProtoBufPtrMsgE
 N5GCSDK15CWorkThreadPoolE
 N5GCSDK16CGCClientLinkJobI27CMsgIDLinkGCToGenericClientILj1ELj2599E33CMsgGCToClientCurrencyPricePointsEEE
+N5GCSDK16CGCClientLinkJobI27CMsgIDLinkGCToGenericClientILj1ELj4524E37CMsgGCToClientAggregateMetricsBackoffEEE
 N5GCSDK16CGCClientLinkJobI27CMsgIDLinkGCToGenericClientILj1ELj7529E27CMsgGCToClientTrophyAwardedEEE
 N5GCSDK16CGCClientLinkJobI27CMsgIDLinkGCToGenericClientILj1ELj7581E33CMsgGCToClientSteamDatagramTicketEEE
 N5GCSDK16CGCClientLinkJobI27CMsgIDLinkGCToGenericClientILj1ELj7666E31CMsgGCToClientPlayerBeaconStateEEE
@@ -51916,6 +51967,7 @@ N5GCSDK17CGCClientProtoJobI34CMsgGCToClientRequestLaneSelectionEE
 N5GCSDK17CGCClientProtoJobI35CMsgGCToClientCavernCrawlMapUpdatedEE
 N5GCSDK17CGCClientProtoJobI36CMsgGCToClientGuildMembershipUpdatedEE
 N5GCSDK17CGCClientProtoJobI37CMsgDOTAPostGameItemAwardNotificationEE
+N5GCSDK17CGCClientProtoJobI37CMsgGCToClientAggregateMetricsBackoffEE
 N5GCSDK17CGCClientProtoJobI37CMsgGCToClientGuildMembersDataUpdatedEE
 N5GCSDK17CGCClientProtoJobI37CMsgGCToClientOverwatchCasesAvailableEE
 N5GCSDK17CGCClientProtoJobI38CMsgDOTARequestChatChannelListResponseEE
@@ -52047,7 +52099,9 @@ N5GCSDK17GCClientJobLambdaIZN15CAsyncDataCacheIj20CMsgGuildPersonaInfoE16BatchRe
 N5GCSDK17GCClientJobLambdaIZN15CAsyncDataCacheIj20CMsgGuildPersonaInfoE18RequestCurrentDataERKjEUlvE_EE
 N5GCSDK17GCClientJobLambdaIZN15CAsyncDataCacheIj20CMsgGuildPersonaInfoE20ScheduleBatchRequestEfEUlvE_EE
 N5GCSDK17GCClientJobLambdaIZN15CAsyncDataCacheIj24CAccountAllHeroChallengeE18RequestCurrentDataERKjEUlvE_EE
+N5GCSDK17GCClientJobLambdaIZN15CAsyncDataCacheIj24CMsgBattleReportInfoListE16BatchRequestDataEPKjiEUlvE_EE
 N5GCSDK17GCClientJobLambdaIZN15CAsyncDataCacheIj24CMsgBattleReportInfoListE18RequestCurrentDataERKjEUlvE_EE
+N5GCSDK17GCClientJobLambdaIZN15CAsyncDataCacheIj24CMsgBattleReportInfoListE20ScheduleBatchRequestEfEUlvE_EE
 N5GCSDK17GCClientJobLambdaIZN15CAsyncDataCacheIj24CMsgDraftTriviaVoteCountE18RequestCurrentDataERKjEUlvE_EE
 N5GCSDK17GCClientJobLambdaIZN15CAsyncDataCacheIj31CMsgDOTADPCTeamFavoriteRankingsE18RequestCurrentDataERKjEUlvE_EE
 N5GCSDK17GCClientJobLambdaIZN15CAsyncDataCacheIj31CMsgPlayerRecentAccomplishmentsE18RequestCurrentDataERKjEUlvE_EE
@@ -53274,6 +53328,7 @@ NoRecords
 NoRegularPrice
 NoResolution
 NoRestrictions
+NoRewardLine
 NoRewardType
 NoScore
 NoSearchMatches
@@ -53420,6 +53475,7 @@ NotifySOCacheUnsubscribed(%s) [not in cache]
 Notifying GC we don't need a session.
 Nov
 Nuker
+NukerButton
 Null ability name passed into FindAbilityByName!
 Num Active Viewers: %d
 Num Bones
@@ -54066,6 +54122,7 @@ PATTACH_ROOTBONE_FOLLOW
 PATTACH_WORLDORIGIN
 PB
 PBDEMS2
+PBUF
 PCRE does not support \L, \l, \N{name}, \U, or \u
 PC_NETWORKED_ONLY
 PC_NON_NETWORKED_ONLY
@@ -54295,6 +54352,8 @@ PackedAABB_t
 PadBackButton
 PadBackButtonUp
 Page%dActive
+Page/%s
+Page/%s/%s
 Page: %d, Sticker Number: %d, SubPage: %d Stencil: %d
 PageButton%d
 PageContents
@@ -55573,6 +55632,7 @@ PushTwoPack5LeftDeltaN
 PushTwoPack5LeftDeltaOne
 PushTwoPack5LeftDeltaZero
 Pusher
+PusherButton
 Pushes an identifier used to group overlays. Deletes all existing overlays using this overlay id.
 Pushes an identifier used to group overlays. Overlays marked with this identifier can be deleted in a big batch.
 PushingBar
@@ -56166,6 +56226,7 @@ RecomputeSprings
 ReconnectGameInterface
 ReconnectInProgress
 Record a hero for a transparent webm movie.
+RecordClientMetric
 RecordFirst
 RecordSecond
 RecordThird
@@ -56429,6 +56490,7 @@ Reply from GC timed out
 RepopulateAbilityDetails
 Report prediction copy overrides
 ReportClassError
+ReportDialog
 ReportList
 Report_AnyCategorySelected
 Report_EnableDidNotPlayRole
@@ -56678,7 +56740,6 @@ RewardItems
 RewardLevel_%s
 RewardLevel_Default
 RewardLevel_Ellipsis
-RewardLine
 RewardLineSnippet
 RewardListUIContainer
 RewardModel
@@ -56811,7 +56872,6 @@ Row2Wait
 RowBar
 RowCarouselContainer
 RowColor
-RowExpanded
 RowHeader
 RowType%d
 Roy
@@ -58097,6 +58157,7 @@ Sharada
 ShardAbility
 ShardPurchaseWinrate
 ShardQuantity
+ShardRewardTile
 ShardUpgradeDescription
 Shards Purchase. Price %d
 Shards.Count
@@ -59175,11 +59236,13 @@ SteamDurationControl: req from Steam
 SteamFriends017
 SteamGameCoordinator001
 SteamGameServer014
+SteamGameServer_GetHSteamUser
 SteamGuide
 SteamID %llu %s
 SteamInput006
 SteamInternal_ContextInit
 SteamInternal_CreateInterface
+SteamInternal_FindOrCreateGameServerInterface
 SteamInternal_FindOrCreateUserInterface
 SteamLeaderboardUpdated
 SteamMatchGameSearch001
@@ -60536,6 +60599,7 @@ TreasureQuantityDropDown
 TreasureRareItems
 TreasureRecyclingGrantEnabled
 TreasureRequiresKey
+TreasureRewardTile
 TreasureRow
 TreasureRows
 TreasureShardQuantityDropDown
@@ -64794,6 +64858,8 @@ blue_dragonspawn_overseer_evasion
 blue_dragonspawn_sorcerer_evasion
 blueviolet
 blv
+bo3
+bo5
 boar_bonus_damage
 body_groups
 body_head
@@ -65183,6 +65249,7 @@ bump_delay
 bump_delay_absolute
 bundle-item-def
 bundle_item_def
+bundle_sale_2022_2
 burlywood
 burn_amount
 burn_damage
@@ -65574,6 +65641,7 @@ cfg/latest_conduct_%u.%d.txt
 cfg/local_ingame_predictions.txt
 cfg/pending_replay_requests.lst
 cfg/saved_sets.kv
+cfg/stats.dat
 cfg/video_defaults_%d.txt
 cfg/viewedheropatches.cfg
 cfg/world_map.dat
@@ -66194,6 +66262,8 @@ clientSideEntity
 client_disconnect
 client_entities
 client_lobby.txt
+client_metrics_upload_batch_seconds
+client_metrics_upload_immediate
 client_out_of_date
 client_ragdoll
 client_reload_addon_game_keyvalues
@@ -66317,7 +66387,7 @@ cold_slow_melee
 cold_slow_ranged
 collapse
 collapsed %s 0x%p back into 0x%p
-collectors_cache_available
+collectors_cache_available_popup
 collision_group_override
 color-stop
 color-stop( %s,
@@ -69707,6 +69777,7 @@ enemy_slow
 enemy_team_left
 enemy_tower_killed
 engine2
+engine_gcmessages.proto
 english
 english-channel
 enigma_black_hole
@@ -71147,6 +71218,7 @@ file://{resources}/layout/popups/settings_enum.xml
 file://{resources}/layout/popups/settings_keybinder.xml
 file://{resources}/layout/popups/settings_slider.xml
 file://{resources}/layout/popups/splash_ads/popup_featured_gamemode.xml
+file://{resources}/layout/popups/splash_ads/popup_international2022_bundle_sale_2.xml
 file://{resources}/layout/post_game_mvp.xml
 file://{resources}/layout/post_game_mvp_vote.xml
 file://{resources}/layout/post_game_progress.xml
@@ -72438,6 +72510,8 @@ has weapon in slot
 has-tooltip-target-position
 has_controller_glyph
 has_debuff
+has_events_down
+has_events_up
 has_flying_movement
 has_magical_damage
 has_physical_damage
@@ -72680,6 +72754,8 @@ hero_semi_specific_relic_count
 hero_slot_index
 hero_source_%d
 hero_specific_relic_count
+hero_standings
+hero_standings_highest_seen_match_id
 hero_statue_forge
 hero_statue_reforge
 hero_statue_reforgeitem
@@ -74518,6 +74594,7 @@ k_EMsgClientToGCAddGuildRole
 k_EMsgClientToGCAddGuildRoleResponse
 k_EMsgClientToGCAddPlayerToGuildChat
 k_EMsgClientToGCAddPlayerToGuildChatResponse
+k_EMsgClientToGCAggregateMetrics
 k_EMsgClientToGCApplyGauntletTicket
 k_EMsgClientToGCApplyGemCombiner
 k_EMsgClientToGCBatchGetPlayerCardRosterRequest
@@ -75103,6 +75180,7 @@ k_EMsgGCTeamInvite_InviterToGC
 k_EMsgGCToClientAccountGuildEventDataUpdated
 k_EMsgGCToClientActiveGuildChallengeUpdated
 k_EMsgGCToClientActiveGuildContractsUpdated
+k_EMsgGCToClientAggregateMetricsBackoff
 k_EMsgGCToClientApplyRemoteConVars
 k_EMsgGCToClientArcanaVotesUpdate
 k_EMsgGCToClientAutomatedTournamentStateChange
@@ -75337,6 +75415,8 @@ k_EMsgGCToServerPredictionResult
 k_EMsgGCToServerRealtimeStatsStartStop
 k_EMsgGCToServerRecordTrainingData
 k_EMsgGCToServerScenarioSave
+k_EMsgGCToServerSetSteamLearnDisable
+k_EMsgGCToServerSetSteamLearnKeysChanged
 k_EMsgGCToServerSubmitCheerData
 k_EMsgGCToServerUpdateSteamBroadcasting
 k_EMsgGCTopCustomGamesList
@@ -77676,6 +77756,7 @@ m_eCompareContext != k_eAbsoluteValue
 m_eComparisonType
 m_eDoorState
 m_eEvent
+m_eExpireEvent
 m_eFormat
 m_eGameMode
 m_eHand
@@ -85600,6 +85681,8 @@ npc_dota_hero_witch_doctor
 npc_dota_hero_zuus
 npc_dota_ignis_fatuus
 npc_dota_invoker_forged_spirit
+npc_dota_item_wraith_pact_totem
+npc_dota_juggernaut_healing_ward
 npc_dota_jungle_varmint
 npc_dota_lesser_eidolon
 npc_dota_lich_ice_spire
@@ -85753,6 +85836,8 @@ num_games
 num_games_suffix
 num_heroes
 num_items
+num_more_active_events_down
+num_more_active_events_up
 num_pages
 num_params
 num_rapiers
@@ -88997,6 +89082,7 @@ rewardSprayWheelWidth
 reward_action_id
 reward_action_name
 reward_after_wins
+reward_amount
 reward_can_be_shown_in_toast
 reward_claimed_week
 reward_claimed_week_unowned
@@ -92155,6 +92241,7 @@ statname%d
 stats/%s_%u.txt
 stats_display
 stats_highlight_interval
+stats_history
 stats_state
 status_effect_blademail
 status_message
@@ -92632,6 +92719,7 @@ steammessages_int.proto
 steammessages_oauth.steamworkssdk.proto
 steammessages_player.steamworkssdk.proto
 steammessages_publishedfile.steamworkssdk.proto
+steammessages_steamlearn.steamworkssdk.proto
 steammessages_unified_base.steamworkssdk.proto
 stereo
 stick_pri_cold_time
@@ -93037,6 +93125,7 @@ synctofollowinggesture
 syntax = "$0";
 syntax error in subpattern name (missing terminator)
 sysconf
+system_root_transform
 szGroundMarkerFXName
 szIconImage
 szName
@@ -94020,6 +94109,7 @@ ui-scale-x
 ui-scale-y
 ui-scale-z
 ui.abilitydraft_yourturn
+ui.badge_levelup
 ui.click_back
 ui.comp_coins_tick
 ui.contextual_tip.popup
@@ -94320,7 +94410,7 @@ users_last_month
 uses_essence
 uses_premium_points
 ushort (%i)
-utlsoacontainer.cpp:2362
+utlsoacontainer.cpp:2402
 utlstring (%s)
 utlstringtoken
 uw
@@ -94333,7 +94423,6 @@ v0001
 v2f
 v8::Array::Length() const
 v8::Array::New(v8::Isolate*, int)
-v8::Boolean::Value() const
 v8::Context::Enter()
 v8::Context::Exit()
 v8::Context::GetIsolate()
@@ -94342,15 +94431,13 @@ v8::External::New(v8::Isolate*, void*)
 v8::External::Value() const
 v8::Function::Call(v8::Local<v8::Context>, v8::Local<v8::Value>, int, v8::Local<v8::Value>*)
 v8::Function::GetName() const
-v8::FunctionTemplate::New(v8::Isolate*, void (*)(v8::FunctionCallbackInfo<v8::Value> const&), v8::Local<v8::Value>, v8::Local<v8::Signature>, int, v8::ConstructorBehavior)
-v8::HandleScope::CreateHandle(v8::internal::HeapObject*, v8::internal::Object*)
-v8::HandleScope::CreateHandle(v8::internal::Isolate*, v8::internal::Object*)
+v8::FunctionTemplate::New(v8::Isolate*, void (*)(v8::FunctionCallbackInfo<v8::Value> const&), v8::Local<v8::Value>, v8::Local<v8::Signature>, int, v8::ConstructorBehavior, v8::SideEffectType, v8::CFunction const*, unsigned short, unsigned short, unsigned short)
+v8::HandleScope::CreateHandle(v8::internal::Isolate*, unsigned long)
 v8::HandleScope::HandleScope(v8::Isolate*)
 v8::HandleScope::~HandleScope()
 v8::Integer::New(v8::Isolate*, int)
 v8::Isolate::Enter()
 v8::Isolate::Exit()
-v8::Isolate::GetCallingContext()
 v8::Isolate::GetCurrent()
 v8::Isolate::GetCurrentContext()
 v8::Isolate::ThrowException(v8::Local<v8::Value>)
@@ -94359,26 +94446,22 @@ v8::Number::Value() const
 v8::Object::Get(v8::Local<v8::Context>, unsigned int)
 v8::Object::Get(v8::Local<v8::Context>, v8::Local<v8::Value>)
 v8::Object::GetPropertyNames(v8::Local<v8::Context>)
-v8::Object::InternalFieldCount()
+v8::Object::InternalFieldCount() const
 v8::Object::New(v8::Isolate*)
 v8::Object::Set(v8::Local<v8::Context>, unsigned int, v8::Local<v8::Value>)
 v8::Object::Set(v8::Local<v8::Context>, v8::Local<v8::Value>, v8::Local<v8::Value>)
 v8::Object::SlowGetInternalField(int)
-v8::ObjectTemplate::SetAccessor(v8::Local<v8::String>, void (*)(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Value> const&), void (*)(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&), v8::Local<v8::Value>, v8::AccessControl, v8::PropertyAttribute, v8::Local<v8::AccessorSignature>)
+v8::ObjectTemplate::SetAccessor(v8::Local<v8::String>, void (*)(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Value> const&), void (*)(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&), v8::Local<v8::Value>, v8::AccessControl, v8::PropertyAttribute, v8::SideEffectType, v8::SideEffectType)
 v8::Script::Compile(v8::Local<v8::Context>, v8::Local<v8::String>, v8::ScriptOrigin*)
 v8::Script::Run(v8::Local<v8::Context>)
 v8::String::NewFromUtf8(v8::Isolate*, char const*, v8::NewStringType, int)
-v8::String::Utf8Value::Utf8Value(v8::Local<v8::Value>)
+v8::String::Utf8Value::Utf8Value(v8::Isolate*, v8::Local<v8::Value>)
 v8::String::Utf8Value::~Utf8Value()
 v8::Template::Set(v8::Local<v8::Name>, v8::Local<v8::Data>, v8::PropertyAttribute)
 v8::TryCatch::HasCaught() const
 v8::TryCatch::TryCatch(v8::Isolate*)
 v8::TryCatch::~TryCatch()
-v8::V8::DisposeGlobal(v8::internal::Object**)
-v8::V8::FromJustIsNothing()
-v8::V8::GlobalizeReference(v8::internal::Isolate*, v8::internal::Object**)
-v8::V8::ToLocalEmpty()
-v8::Value::BooleanValue(v8::Local<v8::Context>) const
+v8::Value::BooleanValue(v8::Isolate*) const
 v8::Value::Int32Value(v8::Local<v8::Context>) const
 v8::Value::IsArray() const
 v8::Value::IsBoolean() const
@@ -94388,12 +94471,16 @@ v8::Value::IsNumber() const
 v8::Value::IsObject() const
 v8::Value::IsUint32() const
 v8::Value::NumberValue(v8::Local<v8::Context>) const
-v8::Value::ToBoolean(v8::Local<v8::Context>) const
 v8::Value::ToNumber(v8::Local<v8::Context>) const
 v8::Value::ToObject(v8::Local<v8::Context>) const
 v8::Value::ToString(v8::Local<v8::Context>) const
 v8::Value::TypeOf(v8::Isolate*)
 v8::Value::Uint32Value(v8::Local<v8::Context>) const
+v8::api_internal::DisposeGlobal(unsigned long*)
+v8::api_internal::FromJustIsNothing()
+v8::api_internal::GlobalizeReference(v8::internal::Isolate*, unsigned long*)
+v8::api_internal::ToLocalEmpty()
+v8::internal::IsolateFromNeverReadOnlySpaceObject(unsigned long)
 v8array
 v8callback
 v8object

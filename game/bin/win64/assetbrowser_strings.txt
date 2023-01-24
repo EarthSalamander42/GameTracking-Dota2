@@ -1,4 +1,3 @@
-		g_pMemAlloc
 	!s99
 	?addPixmap@QIcon@@QEAAXAEBVQPixmap@@W4Mode@1@W4State@1@@Z
 	?alphaF@QColor@@QEBANXZ
@@ -22,7 +21,11 @@
 	?defaultWidget@QWidgetAction@@QEBAPEAVQWidget@@XZ
 	QToolButton { 		background-color : rgb( 100, 100, 100 ); 		border: 2px solid rgb( 200, 200, 200 ); 		border-radius: %2px; 		background-image: url(game:tools/images/common/tag_add.png); 		background-repeat: no-repeat; 		background-position: center center; 		margin: 3px; 	} 	QToolButton:hover:!pressed { 		background-color : rgb( 0, 0, 0 ); 		border-color : rgb( 255, 255, 255 ); 	} 
 	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
-	g_bUpdateStringTokenDatabase
+	_V_StringAfterPrefix
+	_V_StripExtension
+	_V_strncmp
+	_V_strncpy
+	_V_strnicmp_fast
  	()|-:<>=~?!
  %41g
  (repeat)
@@ -87,6 +90,7 @@
 !?type@QGraphicsRectItem@@UEBAHXZ
 !hn7!
 !root
+"	g_bUpdateStringTokenDatabase
 " ?timerEvent@QListView@@MEAAXPEAVQTimerEvent@@@Z
 ""?updateEditorGeometry@QStyledItemDelegate@@UEBAXPEAVQWidget@@AEBVQStyleOptionViewItem@@AEBVQModelIndex@@@Z
 "%1" %2
@@ -217,7 +221,6 @@ $#?windowIcon@QWidget@@QEBA?AVQIcon@@XZ
 &YA1I
 ' ?timerEvent@QPlainTextEdit@@MEAAXPEAVQTimerEvent@@@Z
 ',=?k
-'26AdV
 ( %1 checked )
 ( %1, %2 )
 ( %1, %2, %3, %4% )
@@ -275,6 +278,7 @@ $#?windowIcon@QWidget@@QEBA?AVQIcon@@XZ
 )t$pH
 )t$pL
 )|$0f
+*	g_pMemAlloc
 * ?timerEvent@QTextEdit@@MEAAXPEAVQTimerEvent@@@Z
 * Rehandling active codes
 * { font-size: 10px }
@@ -973,7 +977,7 @@ $#?windowIcon@QWidget@@QEBA?AVQIcon@@XZ
 220323000000Z
 220801000000Z
 220921000000Z
-221203185454Z0/
+230112002002Z0/
 241009235959Z0a1
 255, 255, 255
 2AddTag()
@@ -3383,6 +3387,7 @@ B9t 0~a
 B;t 0|
 B;t' 
 BUTTON
+B\s&F&
 B`?translate@QPainter@@QEAAXAEBVQPointF@@@Z
 Background
 Backspace
@@ -3729,7 +3734,6 @@ CopyToClipboard
 Could not execute the command:
 Count
 Courier
-Cp6WF
 Create Changelist
 Create Failed
 Create New Working Set
@@ -3858,7 +3862,7 @@ D9t$H
 D9w8~;L
 D9~@uOH
 D9~@u[H
-D;5u3
+D;5e3
 D;B(|
 D;B@|
 D;Ch|
@@ -4152,6 +4156,7 @@ H_^][
 H_^][H
 HammerMapLoader001
 Hc+;k
+Hc=t3
 Hc>H;
 HcAPH
 HcAXH
@@ -4418,6 +4423,7 @@ LoggingSystem_IsChannelEnabled
 LoggingSystem_Log
 LoggingSystem_RegisterLoggingChannel
 M	?canDropMimeData@QAbstractProxyModel@@UEBA_NPEBVQMimeData@@W4DropAction@Qt@@HHAEBVQModelIndex@@@Z
+M$/U9
 M't?H
 M/dd/yyyy h:mm ap
 M9,$t	I
@@ -4846,6 +4852,7 @@ QMainWindow
 QMenu
 QMenuBar
 QModelIndex
+QNWwnW
 QObjectName
 QProgressBar
 QPushButton
@@ -4882,7 +4889,6 @@ REVERT
 RMouse
 RMouseDoubleClick
 RPL9|$Pt
-RSDS,$8
 RW?restore@QPainter@@QEAAXXZ
 R^?supportedDropActions@QStandardItemModel@@UEBA?AV?$QFlags@W4DropAction@Qt@@@@XZ
 RaiseException
@@ -5524,18 +5530,12 @@ Z]?sort@QStandardItemModel@@UEAAXHW4SortOrder@Qt@@@Z
 ^?text@QClipboard@@QEBA?AVQString@@W4Mode@1@@Z
 ^Pfff
 ^Q?lighter@QColor@@QEBA?AV1@H@Z
-^fM25PY
 _(Hcw H
 _8HcG0H
 _?texture@QBrush@@QEBA?AVQPixmap@@XZ
 _@Hcw8H
 _AssetMenuHelper
 _Q?lightness@QColor@@QEBAHXZ
-_V_StringAfterPrefix
-_V_StripExtension
-_V_strncmp
-_V_strncpy
-_V_strnicmp_fast
 _XD8k
 _XHcGPH
 __IsValveCQTabbedStyle
@@ -5802,7 +5802,6 @@ http://ocsp.digicert.com0C
 http://ocsp.digicert.com0X
 http://ocsp.digicert.com0\
 http://www.digicert.com/CPS0
-h|EoZ
 i ?topLevelWidgets@QApplication@@SA?AV?$QList@PEAVQWidget@@@@XZ
 i u H
 iAction
@@ -5814,6 +5813,7 @@ is_cqbasegridview_panel
 italic
 jY?setFamily@QFont@@QEAAXAEBVQString@@@Z
 jZ?setMimeData@QDrag@@QEAAXPEAVQMimeData@@@Z
+j^d34
 k HcKX;
 k VWAVH
 k"?value@QAbstractSlider@@QEBAHXZ
@@ -5857,7 +5857,6 @@ l$pHcx
 l$xE3
 l$xHc
 l$xHcE
-lP|oo
 left_label
 lifespan
 m0k0$
@@ -5868,7 +5867,6 @@ m_Input
 m_InputMacros
 m_Name
 mapped
-mbwIm
 menuAction
 menus
 message
@@ -5943,7 +5941,6 @@ props _color .psd
 props color -.vtex
 purecall
 qangle
-qf`Vm
 quiet
 r@UUUUUUUUUUUUUUUU
 ref:=
@@ -6159,7 +6156,6 @@ v&fff
 v=Y]Bv
 v@D;w8|
 vT?pointSize@QFont@@QEBAHXZ
-v[cTj
 valueEdited
 vcenter
 vector2
@@ -6281,7 +6277,6 @@ zU?qt_metacall@QDrag@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z
 |$xHcx
 |$xff
 |Lu?c
-}(m!h
 })fA;
 }8IcE0M
 }@Icw

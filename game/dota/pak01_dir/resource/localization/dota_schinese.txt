@@ -12624,6 +12624,9 @@
 		"DOTA_Style_qop_2022_immortal_legs_0"	"新尊"
 		"DOTA_Style_qop_2022_immortal_legs_1"	"皇极"
 
+		"DOTA_Item_Frightful_Revelries_0"	"恐怖狂欢"
+		"DOTA_Item_Frightful_Revelries_1"	"丰收之夜"
+
 
 //DOTA_ITEM_STYLES_END
 //DOTA_ITEM_STYLE_END
@@ -15294,7 +15297,6 @@
 		"DOTA_TrophyDesc_International2022BattlePass_Level"				"2022年勇士令状的相应等级"
 		"DOTA_TrophyName_International2022BattlePass_CavernChallenge"	"岩洞探险奖赏"
 		"DOTA_TrophyDesc_International2022BattlePass_CavernChallenge"	"2022年勇士令状中领取的岩洞挑战英雄套装"
-
 
 		"DOTA_TrophyName_MVPTrophy"						"MVP奖杯"
 		"DOTA_TrophyDesc_MVPTrophy"						"纪念被评选为比赛MVP的次数。"
@@ -20258,7 +20260,7 @@
 		"DOTA_ChallengeDesc_Phoenix_Stun_With_Supernova"   "施放<font color='#ffffff'>超新星</font>眩晕敌方英雄达到<font color='#ffffff'>%s1</font>次。"
 		"DOTA_ChallengeDesc_Razor_Damage_On_Static_Linked"   "对<font color='#ffffff'>静电连接</font>作用下敌方英雄造成<font color='#ffffff'>%s1</font>点伤害。"
 		"DOTA_ChallengeDesc_Razor_DamageWithUnstableCurrent"   "通过<font color='#ffffff'>不稳定电流</font>对敌方英雄造成<font color='#ffffff'>%s1</font>点伤害。"
-		"DOTA_ChallengeDesc_ShadowDemon_KillsUnderSoulCatcher"   "击杀<font color='#ffffff'>灵魂猎手</font>效果下敌方英雄或获得其助攻达到<font color='#ffffff'>%s1</font>次。"
+		"DOTA_ChallengeDesc_ShadowDemon_KillsUnderDisseminate"   "击杀<font color='#ffffff'>散播</font>效果下敌方英雄或获得其助攻达到<font color='#ffffff'>%s1</font>次。"
 
 
 
@@ -24823,6 +24825,7 @@
 	"DOTA_HeroRole_Description_Pusher"		"在游戏全期都可以快速推进，摧毁敌方防御塔和兵营。"
 	"DOTA_HeroRole_Description_Initiator"	"擅长发起团战。"
 
+	"DOTA_HeroTags"							"标签"
     "DOTA_HeroGrid_Sort_By"                        "整理依据:"
 
 	"DOTA_HeroGrid_Loading"						"正在载入英雄网格……"
@@ -26008,6 +26011,7 @@
 
 	"DOTA_ChangeLog_TI9AllStarVoting" "TI9全明星赛选择现已开启"
 	"DOTA_ChangeLog_TI0CompendiumEnded" "2021年国际邀请赛互动指南已经结束。请点击这里查看最终结果。"
+	"DOTA_ChangeLog_BP2022Ended" "2022年勇士令状已经结束。点击这里可以领取未领取的奖励。"
 
 	"DOTA_GlobalLiveSpectatorChat_Title"			"全新功能 - 全球直播观众聊天"
 	"DOTA_GlobalLiveSpectatorChat_Details"			"无需亲临钥匙体育馆即可与千万观众一同观看国际邀请赛。游戏内聊天的容纳人数已大幅上升，同个频道内可以支持大批观众。而且进入直播后在主界面的聊天窗口中也不会错过观众聊天频道。"
@@ -27156,6 +27160,7 @@
 	"DOTA_Popup_CardPack_Model_Winter2022"			"DPC 2022年冬季巡回"
 	"DOTA_Popup_CardPack_Model_Spring2022"			"DPC 2022年春季巡回"
 	"DOTA_Popup_CardPack_Model_Summer2022"			"2022年DPC夏季巡回"
+	"DOTA_Popup_CardPack_Model_Winter2023"			"2023年DPC冬季巡回"
 	"DOTA_Popup_CardPack_Model_PackCount"			"卡包（内有5张）"
 	"DOTA_Popup_CardPack_Model_PremiumPackCount"	"超值卡包（内有5张）"
 	"DOTA_Popup_CardPack_Model_MainTitle"			"选手卡包"
@@ -32318,6 +32323,7 @@
 	"DOTA_HeroLevelReward_Currency:p{currency_amount}"	"{d:currency_amount}块碎片#|#{d:currency_amount}块碎片"
 	"DOTA_HeroLevelReward500_Currency"	"500块碎片"
 	"DOTA_HeroLevelReward350_Currency"	"350块碎片"
+	"DOTA_HeroLevelReward700_Currency"	"700块碎片"
 	"DOTA_HeroLevelReward_ChatWheel"	"解锁英雄聊天轮盘<br>\"{s:chat_wheel_message}\""
 
 	"DOTA_ReadyCheck"	"就绪状态检测"
@@ -33538,7 +33544,7 @@
 
 	"DOTA_QueenOfPainArcana_ArcanaProgress_Score"					"{s:current_score} / {d:unlock_value}"
 	"DOTA_QueenOfPainArcana_ArcanaProgress_Description:p{unlock_value}"	"在胜利中使用超声冲击波折磨{d:unlock_value}名英雄后解锁额外款式。#|#在胜利中使用超声冲击波折磨{d:unlock_value}名英雄后解锁额外款式。"
-	"KillEaterEventType_QueenOfPain_ArcanaProgress"					"超声冲击波折磨的英雄"
+	"KillEaterEventType_QueenOfPain_ArcanaProgress"					"获胜比赛中超声冲击波折磨英雄数量"
 
 	"DOTA_QueenOfPainArcana_Hud_Title"								"{d:combo_count}x 连招" 
 	
@@ -34839,6 +34845,21 @@
 
 	"DOTA_WeeklyQuest_Win_And_High_Fives_Completed_Name"			"击掌称快"
 	"DOTA_WeeklyQuest_Win_And_High_Fives_Completed_Description"		"在获胜的比赛中与其他玩家击掌{s:current_tier_score}次"
+		
+	"DOTA_WeeklyQuest_Win_With_Ranged_Hero_Name"					"导弹材料"
+	"DOTA_WeeklyQuest_Win_With_Ranged_Hero_Description"				"使用远程英雄赢得{s:current_tier_score}场比赛."
+		
+	"DOTA_WeeklyQuest_Win_With_Melee_Hero_Name"						"临终一击"
+	"DOTA_WeeklyQuest_Win_With_Melee_Hero_Description"				"使用近战英雄赢得{s:current_tier_score}场比赛."
+		
+	"DOTA_WeeklyQuest_Disarm_Duration_Name"							"拿住别动"
+	"DOTA_WeeklyQuest_Disarm_Duration_Description"					"对敌人造成的缴械效果达到{s:current_tier_score}秒。"
+		
+	"DOTA_WeeklyQuest_Neutral_Items_Earned_Name"					"红市"
+	"DOTA_WeeklyQuest_Neutral_Items_Earned_Description"				"发现{s:current_tier_score}件中立物品。"
+		
+	"DOTA_WeeklyQuest_Use_Ability_Charges_Name"						"完全充能"
+	"DOTA_WeeklyQuest_Use_Ability_Charges_Description"				"使用{s:current_tier_score}次英雄技能的能量点数。"
 
 	// End Weekly Quest Names
 
@@ -35566,6 +35587,13 @@
 	"DOTA_DPCTeams_SeasonPeriod_Event37_Dates"		"2022年6月6日 - 8月14日"
 	"DOTA_DPCTeams_SeasonPeriod_Event38_Name"		"2022年国际邀请赛"
 	"DOTA_DPCTeams_SeasonPeriod_Event38_Dates"		"2022年10月8日 - 2022年10月30日"
+
+	"DOTA_DPCTeams_RegistrationPeriod8"				"冬季巡回"
+	"DOTA_DPCTeams_RegistrationPeriodDates8"		"2023年1月9日 - 2023年3月5日"
+	"DOTA_DPCTeams_RegistrationPeriodSeason8"		"2023赛年"
+	"DOTA_DPCTeams_SeasonPeriod_Event41_Name"		"冬季巡回"
+	"DOTA_DPCTeams_SeasonPeriod_Event41_Dates"		"2023年1月9日 - 2023年3月5日"
+
 
 	"DOTA_FavoriteTeamSet"							"最爱战队套装"
 	"DOTA_NewFavoriteTeam"							"{s:favorite_team}现在是你主推的队伍。这会使主界面和游戏内出现相应的变化。"
@@ -39724,6 +39752,7 @@
 		"DOTA_CandyShop_Error_NotEnoughSpace"			"库存内空间不足"
 		"DOTA_CandyShop_Error_NotEnoughBags"			"糖果袋不足"
 		"DOTA_CandyShop_Error_InvalidRecipe"			"配方无效。"
+		"DOTA_CandyShop_Error_ExpiredShop"				"糖果商店已经关门。"
 		"DOTA_CandyShop_CandySackInfo"					"游玩Dota或升级勇士令状可以获得更多糖果。"
 		"DOTA_CandyShop_InventorySlotInfo"				"升级勇士令状可以解锁库存槽位。"
 
@@ -44595,6 +44624,11 @@
 		"DOTA_BattlePass2022_Schedule_TIPointsSale_Description"					"<b>特别优惠75%！<br/>10月12-30日期间上架</b><br/>- 120级等级<br/>- 9件不朽宝藏 I<br/>- 6件不朽宝藏 II<br/>- 6件藏品珍藏<br/>- 6件永恒异宝珍藏"
 		"DOTA_BattlePass2022_Schedule_TIPointsSale_ActionLabel"					"购买{s:item_price}"
 
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_Heading"					"特惠礼包！"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_SubTitle"					"2022年夜魇暗潮"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_Description"				"<b>特别优惠75%！<br/>12月16日-1月12日期间上架</b><br/>- 120级等级<br/>- 9件不朽宝藏 I<br/>- 6件不朽宝藏 II<br/>- 6件藏品珍藏<br/>- 6件永恒异宝珍藏"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_ActionLabel"				"购买{s:item_price}"
+
 		"DOTA_BattlePass2022_Schedule_PrimalBeastPrestige_Heading"				"獸声望套装"
 		"DOTA_BattlePass2022_Schedule_PrimalBeastPrestige_Description"			"早在他来到托莫干森林之前，有人尝试控制他后发现他全身覆有鳞甲，就愚蠢地把他投入战场……"
 
@@ -44865,6 +44899,8 @@
 		"DOTA_StickerStore_TalentComingSoon"					"即将推出"
 		"DOTA_StickerStore_MoreStickersComingSoon"				"更多贴纸即将到来！"
 		"DOTA_StickerStore_TalentStickersLabel"					"解说贴纸"
+		"DOTA_StickerStore_NoStickersAvailable"					"没有在售的贴纸。"
+
 		"DOTA_StickerHero_AssignSticker"						"分配贴纸"
 		"DOTA_StickerHero_ReplaceSticker"						"替换贴纸"
 
@@ -44950,7 +44986,7 @@
 		"DOTA_PrimalBeastPrestige_Level"						"勇士令状223级"
 
 		// FACELESS VOID ARCANA
-		"KillEaterEvent_FacelessVoid_ArcanaProgress"		"时间结界内击杀敌人"
+		"KillEaterEvent_FacelessVoid_ArcanaProgress"		"获胜比赛中时间结界内击杀英雄次数"
 
 		//TI Championship stickers
 		"DOTA_Stickers_Store_ChampionsTitle"							"恭喜<br/>Tundra Esports！"
@@ -44963,6 +44999,7 @@
 		"DOTA_BattlePass2022_Schedule_CollectorsCacheVoting_Heading" "典藏宝瓶投票"
 		"DOTA_International2022_CollectorsCacheVoting" "投票"
 
+		"DOTA_BattlePass2022_Schedule_CollectorsCache2Available_Heading" "典藏宝瓶2现已推出"
 		"DOTA_BattlePass2022_Schedule_CollectorsCacheAvailable_Heading" "典藏宝瓶现已推出"
 		"DOTA_International2022_CollectorsCacheAvailable" "查看珍藏"
 
@@ -44979,6 +45016,13 @@
 		"DOTA_2022Diretide_CollectorsCache_Treasure_1"		"1 件珍藏"
 		"DOTA_2022Diretide_CollectorsCache_Treasure_2"		"7 件珍藏"
 		"DOTA_2022Diretide_CollectorsCache_Treasure_3"		"14 件珍藏"
-		"DOTA_2022Diretide_CollectorsCache_Disclaimer"		"宝瓶物品将于12月18日下架。"
+		"DOTA_2022Diretide_CollectorsCache_Disclaimer"		"宝瓶物品将于1月12日下架。"
+
+        "DOTA_BattlePass2022_Schedule_MoreActiveEventsUp" "+{d:num_more_active_events_up}个上方进行中活动"
+        "DOTA_BattlePass2022_Schedule_MoreActiveEventsDown" "+{d:num_more_active_events_down}个下方进行中活动"
+
+		"DOTA_BattlePassEndingTitle"				"即将结束"
+		"DOTA_BattlePassEndingCountdown"			"0 <b>天</b> 0 <b>时</b> 0 <b>分</b> 0 <b>秒</b>"
+		"DOTA_BattlePassEndingDescription"			"千万不要错过<a href=\"event:DOTAPurchaseEventLevels( EVENT_ID_INTERNATIONAL_2022 )\">等级</a>、<a href=\"event:DOTAShowSplashAdPopup('bundle_sale_2022_2')\">特惠礼包</a>、<a href=\"event:DOTAShowTreasurePage(26880)\">典藏宝瓶1</a>和<a href=\"event:DOTAShowTreasurePage(26932)\">典藏宝瓶2</a>。"
 	}
 }

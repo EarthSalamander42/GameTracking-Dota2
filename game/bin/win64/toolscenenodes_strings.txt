@@ -1,7 +1,7 @@
 					
 								
 																Unsupported PSD color mode!
-		g_pMemAlloc
+		_V_strEndsWith
 	!s99
 	#jT$
 	?addPixmap@QIcon@@QEAAXAEBVQPixmap@@W4Mode@1@W4State@1@@Z
@@ -22,13 +22,19 @@
 	L;l$p
 	NAN encountered in element '%s' guid %s attribute '%s'!
 	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
+	_V_StringAfterPrefix
+	_V_StringAfterPrefixCaseSensitive
+	_V_strncat
+	_V_strncmp
+	_V_strncpy
+	_V_strnicmp_fast
 	body_groups = %s
-	g_bUpdateStringTokenDatabase
-	g_pThreadPool
+	g_Mathlib_GammaToLinearByteTable
+	g_TSPointerListNodes
+	g_VProfCurrentProfile
 	kE>fvw
 	material_group = "%s"
 	overlap %i: [%s @ %.1f %.1f %.1f] slot %i
-	}>]jC
  	% t
                           
         %3d %3d %3d %3d %3d %3d %3d %3d
@@ -232,7 +238,6 @@
  uncorrected errors
  }%Hc
  }5Hc
- }v{n
 !!!!!!
 !!!!!!!!
 !!!!!!!!!!!!!!!!!!
@@ -241,6 +246,7 @@
 !?triggered@QAction@@QEAAX_N@Z
 !KcD'
 !hn7!
+"	g_bUpdateStringTokenDatabase
 " -ie 
 " -oe 
 " ?timerEvent@QListView@@MEAAXPEAVQTimerEvent@@@Z
@@ -312,6 +318,7 @@
 #?winId@QWidget@@QEBA_KXZ
 #?window@QWidget@@QEBAPEAV1@XZ
 #bML"
+#j2bC
 #t'fA
 $#?windowIcon@QWidget@@QEBA?AVQIcon@@XZ
 $$LcH
@@ -349,6 +356,7 @@ $rHcE
 %3333D
 %D8d$8t
 %GoU?*
+%I@gS
 %]?sibling@QStandardItemModel@@UEBA?AVQModelIndex@@HHAEBV2@@Z
 %d %d %d
 %d %d %d %d
@@ -496,6 +504,7 @@ $rHcE
 %suncompressed data
 %u (0x%x)
 &%1 %2
+&'#O$
 &?PPPPPPP?
 &Cascade
 &Tile
@@ -509,8 +518,11 @@ $rHcE
 ( %1, %2 )
 ( %1, %2, %3, %4% )
 ( (int64)m_nAllocationCount + (int64)num ) <= 0x7FFFFFFF
-(%	|$
 (%1,%2)
+(%738
+(%D\8
+(%Tp8
+(%XG8
 (%d) %s
 (%d)pin: %s
 (%d,%d
@@ -519,15 +531,11 @@ $rHcE
 (%d,%d,%d,%d
 (%i) %s
 (*%s*), 
-(-QSQ
-(-_N?
-(5$_8
-(5,y6
-(5Hs8
-(5^gQ
-(5|3?
-(=Ay6
-(=ty6
+(-E!$
+(5;<8
+(5de8
+(=0<8
+(=[$7
 (A\_^[
 (A]A\^[
 (A]A\_[
@@ -971,6 +979,7 @@ $rHcE
 )l$@E
 )l$@f
 )l$PD
+)l$PE
 )l$`D
 )l$pD
 )l$pE
@@ -1082,9 +1091,9 @@ $rHcE
 )|$pI
 )|$pL
 )|$pM
-)|$pf
 )|B?d!
 )}pMc
+*	g_pMemAlloc
 * - Match Any
 * Rehandling active codes
 * { font-size: 10px }
@@ -1181,6 +1190,7 @@ $rHcE
 -sse2
 -sse3
 -sse4
+.	g_pThreadPool
 .#?windowTitle@QWidget@@QEBA?AVQString@@XZ
 ..om?
 .00cfg
@@ -1340,6 +1350,7 @@ $rHcE
 .?AV<lambda_2f2717b13eeabab779b2b4e2e328c9c5>@@
 .?AV<lambda_32465114f5cc6ed93c29eb84a734df64>@@
 .?AV<lambda_32cc5c046a14ae976909232f12cf6f16>@@
+.?AV<lambda_349db98dc3c24d36a5dd53a9a6f4d68d>@@
 .?AV<lambda_3c81521779fa11ec9d40fcc10a622d8c>@@
 .?AV<lambda_4d2dbd6075234fbb183042f944016002>@@
 .?AV<lambda_5263acd9547022b0b57b495cd292952b>@@
@@ -1353,7 +1364,6 @@ $rHcE
 .?AV<lambda_713ee8bbd6b08550d59c52695cab5ce3>@@
 .?AV<lambda_72a88e06160bb68c438cf7af9d85b505>@@
 .?AV<lambda_73ab71cc9fd85dba627b415f4bfc58d5>@@
-.?AV<lambda_73b039c5e2046e2106411e93162a52d5>@@
 .?AV<lambda_74b8cbb5c3009c44b8de4467127e279a>@@
 .?AV<lambda_763529b0c7473cbc215a52d189ac9b18>@@
 .?AV<lambda_85226a1ade6d27c19b16702c44b1a394>@@
@@ -1939,8 +1949,8 @@ $rHcE
 .?AV?$CEntityComponentHelperT@VCScriptComponent@@V?$CEntityComponentHelperReferenced@VCScriptComponent@@@@@@
 .?AV?$CParallelLambdaJob@V<lambda_104fad39bdd1b5a2f4ac74e516ed02d2>@@@CParallelProcessLauncher@@
 .?AV?$CParallelLambdaJob@V<lambda_15d0b226922fb76cf7649a2875ecb3e2>@@@CParallelProcessLauncher@@
-.?AV?$CParallelLambdaJob@V<lambda_1cefafe28e24c16b3beba36563012fac>@@@CParallelProcessLauncher@@
 .?AV?$CParallelLambdaJob@V<lambda_7f65d9639fc34678bc587587969c7d7c>@@@CParallelProcessLauncher@@
+.?AV?$CParallelLambdaJob@V<lambda_ecb62f1a89b9b7c670c681d926842822>@@@CParallelProcessLauncher@@
 .?AV?$CParallelLambdaJob@V<lambda_ecd22fb1041651b7d7f7d27d4d9b0a67>@@@CParallelProcessLauncher@@
 .?AV?$CParallelProcessorAbstract@V?$CParallelLoopProcessor@VFloatBitMap_t@@V?$CLoopMemberFuncJobItemProcessor@VFloatBitMap_t@@V1@V1@@@@@@@
 .?AV?$CParallelProcessorAbstract@V?$CParallelProcessor@HV?$CLambdaJobItemProcessor@H@@$00@@@@
@@ -2282,6 +2292,7 @@ $rHcE
 .?AV?$_Func_impl_no_alloc@V<lambda_2f2717b13eeabab779b2b4e2e328c9c5>@@XPEAVCGlobalHotkeyCommands@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_32465114f5cc6ed93c29eb84a734df64>@@XAEBULightId_t@CComputeBakedShadowAssignment@@AEBUAABB_t@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_32cc5c046a14ae976909232f12cf6f16>@@XPEAVCGlobalHotkeyCommands@@@std@@
+.?AV?$_Func_impl_no_alloc@V<lambda_349db98dc3c24d36a5dd53a9a6f4d68d>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_3c81521779fa11ec9d40fcc10a622d8c>@@XPEAVCGlobalHotkeyCommands@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_4d2dbd6075234fbb183042f944016002>@@XPEAVCQSessionCycleWidget@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_5263acd9547022b0b57b495cd292952b>@@X$$V@std@@
@@ -2292,7 +2303,6 @@ $rHcE
 .?AV?$_Func_impl_no_alloc@V<lambda_5b729ead22014322669caed6d11c0254>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_72a88e06160bb68c438cf7af9d85b505>@@XAEAH@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_73ab71cc9fd85dba627b415f4bfc58d5>@@XPEAVCGlobalHotkeyCommands@@@std@@
-.?AV?$_Func_impl_no_alloc@V<lambda_73b039c5e2046e2106411e93162a52d5>@@X$$V@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_74b8cbb5c3009c44b8de4467127e279a>@@XPEAVCGlobalHotkeyCommands@@@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_887c2d9e393fc559c9d021a1d24edee1>@@XAEBULightId_t@CComputeBakedShadowAssignment@@_NH@std@@
 .?AV?$_Func_impl_no_alloc@V<lambda_9c50d0408972de481d14d547a594eb63>@@XPEAVCGlobalHotkeyCommands@@@std@@
@@ -3062,7 +3072,7 @@ $rHcE
 .xdata
 .xdata$x
 .~kfi
-/%eA%
+/%EH%
 // 						"BA_INT_AMBUSH"		someone please define this - I have no idea what it does
 // 						"BA_INT_COMBAT"		break out of this anim if combat occurs in my line of sight (bullet hits, grenades, etc), -OR- the max time is reached
 // 						"BA_INT_DANGER"		break out of this anim only if threatened
@@ -3079,9 +3089,7 @@ $rHcE
 // 	"min_time"			"Minimum time to spend in this busy anim"
 // "act busy name"		This is the name that a mapmaker must specify in the hint node.
 /2GG>!B
-/5=k:
 /6riH
-/='0K
 />58d%
 /D$0v
 /D$4v
@@ -3247,7 +3255,7 @@ $rHcE
 220323000000Z
 220801000000Z
 220921000000Z
-221203185242Z0/
+230112002026Z0/
 241009235959Z0a1
 255 255 255 255
 2D Views
@@ -3306,6 +3314,7 @@ $rHcE
 5sfm_v8
 64 283 0
 64 64 64
+6AB\aT
 6FaceSkyBox
 6Ic.D
 6OB,n_
@@ -3511,7 +3520,6 @@ $rHcE
 ; t)E3
 ;.u1L
 ;1} H
-;=\D6
 ;>}sH
 ;A8u	;YH
 ;C0}/;
@@ -4790,7 +4798,6 @@ $rHcE
 @8}gt'A
 @:t$PH
 @>%>b
-@@CMapSelectionSet CUtlMemoryPool
 @@HcL
 @A\_[
 @A\_]
@@ -6055,6 +6062,7 @@ CMapProxyInstance CUtlMemoryPool
 CMapRootElement
 CMapRootElement CUtlMemoryPool
 CMapSelectionSet
+CMapSelectionSet CUtlMemoryPool
 CMapSmartProp
 CMapSmartProp CUtlMemoryPool
 CMapSmartPropParameter::InitializeParameter()
@@ -7737,7 +7745,6 @@ D8$(u
 D8$0u
 D8$2u
 D8$8u
-D8%~{a
 D8&t 
 D8&t4H
 D8(tj
@@ -7805,16 +7812,15 @@ D8{xt
 D8|$0A
 D8|$`t
 D9 tT
+D9%)_:
 D9'uE
 D9'uG
 D9*u*H
 D9,$D
-D9-Mch
 D92tp
 D92uAA
-D95+=:
-D9=A\;
-D9=q$~
+D95{C:
+D9=Q4~
 D9>|$Hc
 D9>|%Hc
 D9?|$Hc
@@ -7871,6 +7877,7 @@ D9|$h~*f
 D9} u
 D9}ou
 D9~(D
+D:-oaL
 D;	s6E
 D;0u[H
 D;B s
@@ -8606,7 +8613,6 @@ F8l08
 F8l10t	H
 F8|)8t
 F>qUxv
-F@8=t
 FATAL ERROR: unable to register all schema data: %s
 FHHcD$ H
 FHHcD$ I
@@ -8981,17 +8987,15 @@ H9(t8
 H9(t|
 H9+t	H
 H9+udH
-H9-ceg
-H9-ddg
+H9-sYg
 H9.t	H
 H9/t	H
 H93t	H
-H95*ib
-H954q:
-H95Ajb
-H95Fn}
-H95nhz
-H95zzv
+H95Fpz
+H95Tpb
+H95dw:
+H95e|{
+H95koz
 H97u+A
 H98teA
 H98tjA
@@ -9792,6 +9796,7 @@ InvalidStream
 InvalidateUniqueId
 InvokeCommand
 InvokeMiniDumpHandler
+IqTpd
 IrradVolumeOuterHull
 IrradVolumeVoxels
 Is this element enabled? If not enabled, this element will not be evaluted and will have no effect on the result.
@@ -9817,6 +9822,7 @@ JFIF extension marker: type 0x%02x, length %u
 JPEG datastream contains no image
 JPEG parameter struct mismatch: library thinks size is %u, caller expects %u
 JPEGMEM
+Jan 11 2023
 January
 JcD* E3
 JcL HI
@@ -10168,15 +10174,14 @@ L9't	H
 L9+t	H
 L9,2H
 L93t	H
-L95(pb
-L95.!z
-L95l`:
+L95(vb
 L96thH
 L97t	H
 L9;t	H
 L9<:H
-L9=	Gi
-L9=kcb
+L9=Dib
+L9=Mm;
+L9=rSv
 L9>t	H
 L9?t	H
 L9B A
@@ -11012,7 +11017,6 @@ Not safe to 'new' this class due to alignment requirements
 Not synced to latest revision
 NotModelHasAnimgraph
 NotUsingAnimGraph
-Nov  3 2022
 November
 Nudge
 NumAdd
@@ -11029,7 +11033,6 @@ O!t/H
 O(I+O 
 O*9y]
 O0JcD
-O=UD6
 OBJECT
 OF>;^
 OX9JXt
@@ -11373,6 +11376,7 @@ QAngle
 QD$`H
 QD9Ql
 QLabel { padding: 0px; font-weight: bold; }
+QLq+0
 QObjectName
 QPt|L
 QShowEvent*
@@ -11577,6 +11581,7 @@ RtlPcToFileHeader
 RtlUnwind
 RtlUnwindEx
 RtlVirtualUnwind
+R|C7q
 S fff
 S(fA;
 S,;S(~9D
@@ -12140,9 +12145,10 @@ T$xIc
 T$xL9#t
 T$xL9+t
 T$xfff
-T%'o6
+T%7u6
 T0<A#
 T1TA#
+T=*(7
 T?parent@QStandardItemModel@@UEBA?AVQModelIndex@@AEBV2@@Z
 T?pos@QCursor@@SA?AVQPoint@@XZ
 T?pos@QMouseEvent@@QEBA?AVQPoint@@XZ
@@ -12619,10 +12625,10 @@ UwJc|*
 UwLcm
 V 8^(t
 V ?toolTip@QAction@@QEBA?AVQString@@XZ
+V#|zAi
 V(IcE
 V6E>`"(5
 V8u4M
-V:I)hM
 V?red@QColor@@QEBAHXZ
 V?redF@QColor@@QEBANXZ
 V?removeColumns@QStandardItemModel@@UEAA_NHHAEBVQModelIndex@@@Z
@@ -12804,10 +12810,9 @@ Visualize Values
 VolumetricFog
 Voxel volume (%i components)
 W fff
-W%(O1
-W%xg6
-W-VJM
-W5-M<
+W%Xn6
+W5bX1
+W=xP<
 W?rowCount@QStandardItemModel@@UEBAHAEBVQModelIndex@@@Z
 W?scaled@QPixmap@@QEBA?AV1@AEBVQSize@@W4AspectRatioMode@Qt@@W4TransformationMode@4@@Z
 WARNING
@@ -12889,8 +12894,8 @@ X UVWH
 X UWAVH
 X VWATH
 X!t5~
-X5[UB
-X5[g!
+X5;\B
+X5Kn!
 X?setBrush@QPainter@@QEAAXAEBVQBrush@@@Z
 X?setColumnCount@QStandardItemModel@@QEAAXH@Z
 XA\_][
@@ -12931,27 +12936,26 @@ Xl$pf
 Xt$xL
 X|$ A
 X|$8E
-Y%#d%
-Y%(ZF
-Y%/EF
-Y%5sD
-Y%a]-
-Y%lf-
-Y%rkP
+Y%Qd-
+Y%\m-
+Y%vd-
 Y(Hcy
-Y-@EF
-Y-\CE
-Y-jkP
-Y5!l.
-Y58W@
-Y5O0K
-Y5ru 
-Y5zkP
+Y-/3Q
+Y-0LF
+Y-_d&
+Y-k~D
+Y-lIE
+Y5/IE
+Y52[Q
+Y5?7K
+Y5VU@
+Y5]19
+Y5b| 
 Y8~tH
-Y=/I 
-Y=](&
-Y=s87
-Y=uD8
+Y=?O 
+Y=M/&
+Y=eK8
+Y=|x<
 Y>kX>M
 Y?setData@QStandardItem@@UEAAXAEBVQVariant@@H@Z
 Y?setData@QStandardItemModel@@UEAA_NAEBVQModelIndex@@AEBVQVariant@@H@Z
@@ -12972,7 +12976,6 @@ YD$LJ
 YD$TA
 YD$\A
 YD9xluSD9
-YL$0A
 YL$8E
 YL$DA
 YL$XE
@@ -13005,7 +13008,6 @@ Y|$XI
 Y|$`D
 Y|$hD
 Z* ,	
-Z.	c+
 Z?setItemData@QStandardItemModel@@UEAA_NAEBVQModelIndex@@AEBV?$QMap@HVQVariant@@@@@Z
 Z?setOverrideCursor@QGuiApplication@@SAXAEBVQCursor@@@Z
 Z?setPen@QPainter@@QEAAXAEBVQColor@@@Z
@@ -13039,6 +13041,7 @@ Zpm"U
 [8HcA
 [;D$Ht6E;
 [?setStyle@QFont@@QEAAXW4Style@1@@Z
+[@8=DY
 [NoWidget]
 [`IcA
 [aOni*{
@@ -13241,11 +13244,10 @@ Zpm"U
 \$xu#H
 \$xu-H
 \$xv.
-\%`<A
+\%PCA
 \) HcD)
 \)TA#
-\5-]U
-\=y0K
+\=i7K
 \?setWeight@QFont@@QEAAXH@Z
 \D$$D
 \D$hHc
@@ -13264,13 +13266,10 @@ Zpm"U
 \t3D8T$(t
 \u(Hc
 \|$HA
-\~R'Lq
 ] tLH
 ]'H9]
 ])6M>&
-]5*::
-]51!F
-]=.7:
+]5!(F
 ]>)2X
 ]D$ D
 ]D$@E
@@ -13286,6 +13285,7 @@ Zpm"U
 ]xHcMpLk
 ^ HcF 
 ^<V7w
+^@:-B'm
 ^RfN>
 ^hIcF`Hi
 ^oEZ_
@@ -13304,13 +13304,6 @@ _TIFFSetupFieldInfo
 _TIFFVGetField
 _TIFFVSetField
 _V_FileBase
-_V_StringAfterPrefix
-_V_StringAfterPrefixCaseSensitive
-_V_strEndsWith
-_V_strncat
-_V_strncmp
-_V_strncpy
-_V_strnicmp_fast
 _XHcGPH
 _\$$E
 _\$4E
@@ -13519,6 +13512,7 @@ associated_key
 at4<rt!<wt,L
 atan2
 ati_compress_wrapper.dll
+attached_prop_physics
 attenuation0
 attenuation1
 attenuation2
@@ -13919,7 +13913,7 @@ d$PLca A
 d$PLi
 d$PM;
 d$Pu$H
-d$Qu	D:%
+d$Qu	D:%jeL
 d$XE3
 d$XG;$
 d$XHc
@@ -14036,6 +14030,7 @@ disableShadows2
 disabledInLowQuality
 disableinlowquality
 disablemerging
+disablemultiplegravitygrab
 disableshadows
 disallowOverride
 displacement
@@ -14402,9 +14397,6 @@ functionName
 future
 future already retrieved
 fuvA;
-g_Mathlib_GammaToLinearByteTable
-g_TSPointerListNodes
-g_VProfCurrentProfile
 g_flBrightnessExposureBias
 g_pApplication is not yet initialized!
 g_tSkyTexture
@@ -14462,6 +14454,8 @@ grassOpacity
 grassParams
 grass_exclusion_radius
 gravity
+gravity_grab_priority
+gravitygrabignoremassandsize
 green
 gridHeight
 gridWidth
@@ -14683,6 +14677,7 @@ ispc_texcomp.dll
 isprefab
 iszString
 itemFile
+item_item_crate
 iu+-,
 j'Vlk
 j>>A?1
@@ -14727,7 +14722,7 @@ kDisableShadows_All
 kDisableShadows_Baked
 kDisableShadows_None
 kDisableShadows_Realtime
-kPH9-n
+kPH9-~
 keyframe
 keyframeclass
 keysInTime_0
@@ -14898,7 +14893,7 @@ l$H~0H
 l$H~BH
 l$PA+
 l$PD30A
-l$PD:-(_L
+l$PD:-xeL
 l$PD;
 l$PE2
 l$PE3
@@ -15928,6 +15923,9 @@ promise already satisfied
 propTypes
 prop_data
 prop_dynamic_client_fadeout
+prop_physics
+prop_physics_override
+prop_physics_respawnable
 prop_static
 propdataname
 properties
@@ -16354,7 +16352,7 @@ t	D8(t
 t	H90
 t	fE#
 t <.u
-t D:%0
+t D:%
 t IcC
 t fff
 t!9kh
@@ -16787,7 +16785,7 @@ t9D;G(s3H
 t9D;GXs3H
 t9D;G`s3H
 t9fff
-t:Hc5}
+t:Hc5
 t;HcC@
 t;HcK
 t;LcF
@@ -17341,7 +17339,7 @@ u	8Fp
 u	9i 
 u	D);
 u	D9G
-u	D:%
+u	D:%gaL
 u	D;G
 u	E9F
 u	E;F
@@ -17674,7 +17672,7 @@ x!Lcl$HM;
 x%fff
 x&E;B
 x&fff
-x'H95g8i
+x'H95w>i
 x*A;H
 x-;C`}(H
 x-A;M
@@ -17734,6 +17732,7 @@ z%u#H
 z/u-A
 z/u-E
 z8u6H
+zL]!i
 zY;>u:m	
 zip_line_node
 znear

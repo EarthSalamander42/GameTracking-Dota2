@@ -721,11 +721,11 @@
 		"DOTA_HP_Alert_Healer_Cooldown"	"%s4Sanctuary latautuu (%s3)"
 		"DOTA_HP_Alert_Courier_Respawn"	"%s2%s1 kuriirin syntymiseen"
 
-		"DOTA_XP_Alert_Self_Capped"	"Olen tasolla 25!"
+		"DOTA_XP_Alert_Self_Capped"	"Olen tasolla 30!"
 		"DOTA_XP_Alert_Self"		"Olen <font color='#DAAF01'>%s1 kokemuksen</font> päässä <font color='#DAAF01'>tasosta %s2</font>"
 		"DOTA_XP_Alert_Ally_Capped"	"<font color='%s1'>%s2</font> on tasolla 25!"
 		"DOTA_XP_Alert_Ally"		"<font color='%s1'>%s2</font> on <font color='#DAAF01'>%s3 kokemuksen</font> päässä <font color='#DAAF01'>tasosta %s4</font>"
-		"DOTA_XP_Alert_Enemy_Capped"	"Vastapuolen <font color='%s1'>%s2</font> on tasolla 25!"
+		"DOTA_XP_Alert_Enemy_Capped"	"Vastapuolen <font color='%s1'>%s2</font> on tasolla 30!"
 		"DOTA_XP_Alert_Enemy"			"Vastapuolen <font color='%s1'>%s2</font> on <font color='#DAAF01'>tasolla %s3</font>"
 
 		"DOTA_HPMana_Alert_Glyph_Ready"		"Glyph of Fortification %s1Valmiina"
@@ -13611,7 +13611,6 @@ Erikoispilkka Techiesille"
 		"DOTA_TrophyDesc_AghsLab2021BattlePass_CavernChallenge"		"Cavern Crawl -sankarikokoelmat lunastettu Aghanimin Labyrintti 2021 -taistelupassissa"
 
 		"DOTA_TrophyName_MVPTrophy"						"Tähtipelaajan pokaali"
-		"DOTA_TrophyDesc_MVPTrophy"						"Kertoo, kuinka monesti sinut on valittu tähtipelaajaksi."
 		"DOTA_TrophyUnits_MVP:p"						"%s1 kerran tähtipelaaja#|#%s1 kertaa tähtipelaaja"
 
 		"DOTA_TrophyName_TI6SeasonalMMR_Solo"			"International 2016:n korkein yksilöranking"
@@ -21391,6 +21390,7 @@ Erikoispilkka Techiesille"
 	"DOTA_HeroRole_Description_Pusher"		"Pystyy nopeasti tuhoamaan vihollisen rakennuksia pelin joka vaiheessa."
 	"DOTA_HeroRole_Description_Initiator"	"Hyvä aloittamaan taistelun."
 
+	"DOTA_HeroTags"							"Tunnisteet"
     "DOTA_HeroGrid_Sort_By"                        "Järjestä:"
 
 	"DOTA_HeroGrid_Loading"						"Ladataan sankariruudukkoa..."
@@ -21764,6 +21764,8 @@ Erikoispilkka Techiesille"
 	"DOTA_Armory_Capacity_Info" 		"Jos asevarastosi on 100 % täynnä, se vuotaa yli.
 
 Jos asevarastosi on täynnä, seuraavat toiminnot estetään:<br><br><br>- esineiden saaminen<br>- esinepakettien avaaminen<br>- uusien esineiden ostaminen.<br><br><br>Voit vapauttaa tilaa kierrättämällä tai poistamalla esineitä tai lahjoittamalla niitä kavereille. Klikkaa esinettä hiiren oikealla nähdäksesi nämä vaihtoehdot."
+	"DOTA_Armory_Stickers_Title"		"Tarrat"
+
 	"DOTA_Armory_ImportToCollection"		"Lisää kaikki esineet kokoelmaani"
 
 	"DOTA_Armory_Category_View"			"Ryhmittele tyypeittäin"
@@ -22509,7 +22511,6 @@ Jos asevarastosi on täynnä, seuraavat toiminnot estetään:<br><br><br>- esine
 	"DOTA_ChangeLog_Predictions"		"Veikkaukset nyt saatavilla"
 	"DOTA_ChangeLog_TI9AllStarVoting" "TI9 All Star -pelin äänestys nyt käynnissä"
 	"DOTA_ChangeLog_TI0CompendiumEnded" "The International 2021 -turnauskirja on päättynyt. Klikkaa tästä katsoaksesi lopulliset tulokset."
-
 	"DOTA_GlobalLiveSpectatorChat_Title"			"Uusi ominaisuus - Maailmanlaajuinen katsojakanava"
 	"DOTA_GlobalLiveSpectatorChat_Details"			"Voit kokea The Internationalin huuman tuhansien muiden kanssa, vaikka et olisikaan itse KeyArenalla. Pelinsisäisellä keskustelukanavalla on nyt paljon enemmän tilaa. Näet pelin keskustelun nyt myös päävalikon keskusteluikkunan välilehdestä."
 
@@ -29547,7 +29548,7 @@ Alkupelin sankareita kuten Zeusta ja Death Prophetia on nähty, puskijoita kuten
 	"DOTA_PlusPickBanWinStats_Start"	"Aloitus"
 	"DOTA_PlusPickBanWinStats_Trend"	"Trendi"
 	"DOTA_PlusPickBanWinStats_End"	"Loppu"
-	"DOTA_PlusPickBanWinStats_Change"	"Muuta"
+	"DOTA_PlusPickBanWinStats_Change"	"Erotus"
 	"DOTA_PlusPickBanWinStats_PickPercent"	"Valintaprosentti"
 	"DOTA_PlusPickBanWinStats_WinPercent"	"Voittoprosentti"
 	"DOTA_PlusPickBanWinStats_BanPercent"	"Kieltoprosentti"
@@ -35151,6 +35152,7 @@ uudet esinekuvakkeet."
 		"DOTA_Champions2022_WatchReplayButtonLabel"						"Katso uusinta"
 		"DOTA_Champions2022_BuyStickerButtonLabel"						"Osta mestaritarroja"
 
-		"DOTA_2022Diretide_CollectorsCache_Disclaimer"		"Kätkön esineet ovat saatavilla vain 18.12.22 asti."
-	}
+		"DOTA_BattlePassEndingTitle"				"Päättyy"
+		"DOTA_BattlePassEndingCountdown"			"0 <b>päivän</b> 0 <b>tunnin</b> 0 <b>minuutin</b> 0 <b>sekunnin</b> kuluttua"
+		}
 }

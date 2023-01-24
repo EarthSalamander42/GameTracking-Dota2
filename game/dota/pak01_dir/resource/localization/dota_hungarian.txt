@@ -12628,6 +12628,9 @@
 		"DOTA_Style_qop_2022_immortal_legs_0"	"Méltóságos"
 		"DOTA_Style_qop_2022_immortal_legs_1"	"Királyi"
 
+		"DOTA_Item_Frightful_Revelries_0"	"Rémisztő Tivornyák"
+		"DOTA_Item_Frightful_Revelries_1"	"Az Aratás Éjjele"
+
 
 //DOTA_ITEM_STYLES_END
 //DOTA_ITEM_STYLE_END
@@ -15299,9 +15302,8 @@ Különleges Techies gúnyolódás"
 		"DOTA_TrophyName_International2022BattlePass_CavernChallenge"	"Barlangmászás díj"
 		"DOTA_TrophyDesc_International2022BattlePass_CavernChallenge"	"A 2022-es Csatabelépőben megszerzett Barlangmászás hősszettek."
 
-
 		"DOTA_TrophyName_MVPTrophy"						"MVP trófea"
-		"DOTA_TrophyDesc_MVPTrophy"						"Annak állít emléket, hogy hányszor szavaztak téged a meccs MVP-jének."
+		"DOTA_TrophyDesc_MVPTrophy"						"Annak állít emléket, hogy hányszor lettél a meccs legjobbja."
 		"DOTA_TrophyUnits_MVP:p"						"%s1 MVP-jutalom#|#%s1 MVP-jutalom"
 
 		"DOTA_TrophyName_TI6SeasonalMMR_Solo"			"International 2016 legmagasabb szóló rang"
@@ -20385,7 +20387,7 @@ Különleges Techies gúnyolódás"
 		"DOTA_ChallengeDesc_Phoenix_Stun_With_Supernova"   "Béníts meg összesen <font color='#ffffff'>%s1</font> ellenségest hőst a <font color='#ffffff'>Supernova</font> használatával."
 		"DOTA_ChallengeDesc_Razor_Damage_On_Static_Linked"   "Okozz <font color='#ffffff'>%s1</font> sebzést a <font color='#ffffff'>Static Link</font>kel összekötött ellenséges hősöknek."
 		"DOTA_ChallengeDesc_Razor_DamageWithUnstableCurrent"   "Okozz <font color='#ffffff'>%s1</font> sebzést ellenséges hősöknek <font color='#ffffff'>Unstable Current</font> használatával."
-		"DOTA_ChallengeDesc_ShadowDemon_KillsUnderSoulCatcher"   "Szerezz <font color='#ffffff'>%s1</font> ölést vagy segítést <font color='#ffffff'>Soul Catcher</font> hatása alatti ellenséges hősökön."
+		"DOTA_ChallengeDesc_ShadowDemon_KillsUnderDisseminate"   "Szerezz <font color='#ffffff'>%s1</font> ölést vagy segítést <font color='#ffffff'>Disseminate</font> hatása alatti ellenséges hősökön."
 
 
 
@@ -24950,6 +24952,7 @@ Tapasztalt játékosként a csatlakozáshoz legalább {d:new_player_req_games_pl
 	"DOTA_HeroRole_Description_Pusher"		"Gyorsan ostromolhatja és lerombolhatja a tornyokat és barakkokat a játék minden szakaszában."
 	"DOTA_HeroRole_Description_Initiator"	"Jó a csapatharcok indításában."
 
+	"DOTA_HeroTags"							"Címkék"
     "DOTA_HeroGrid_Sort_By"                        "Rendezés:"
 
 	"DOTA_HeroGrid_Loading"						"Hősrács betöltése..."
@@ -26136,6 +26139,7 @@ Tapasztalt játékosként a csatlakozáshoz legalább {d:new_player_req_games_pl
 
 	"DOTA_ChangeLog_TI9AllStarVoting" "A TI9 All-Star játékszavazás mostantól elérhető"
 	"DOTA_ChangeLog_TI0CompendiumEnded" "A The International 2021 Összefoglaló lejárt. Kattints ide a végeredmények megnézéséhez."
+	"DOTA_ChangeLog_BP2022Ended" "A 2022-es Csatabelépő véget ért. Ha még van jutalmad, kattints ide a felvételéhez."
 
 	"DOTA_GlobalLiveSpectatorChat_Title"			"Új funkció - Globális élő nézői csevegés"
 	"DOTA_GlobalLiveSpectatorChat_Details"			"Nem kell a KeyArenában lenned ahhoz, hogy több ezres tömeg mellett tapasztald meg a The Internationalt. A játékbeli nézői csevegésnek mostantól megnövelt kapacitása van, és nagyszámú nézőt tud támogatni egyetlen csatornán. Mostantól hozzáférhetsz a nézői csevegőcsatornához az új Élő Játék fülön is a csevegőablak műszerfalán."
@@ -26360,6 +26364,9 @@ Tapasztalt játékosként a csatlakozáshoz legalább {d:new_player_req_games_pl
 
 	"DOTA_Banned_Title"			"Kitiltva"
 	"DOTA_Banned"				"A fiókodat kitiltották a Dota 2 játékból."
+
+	"DOTA_China_SpecialDisabled_Title" "Kikapcsolva"
+	"DOTA_China_SpecialDisabled" "Kedves játékosok! Az ide vonatkozó értesítésre reagálva, a játékszerverek 2022. december 6. 9:00 és december 7. 8:59 (CET) között üzemen kívül lesznek. Köszönjük megértéseteket."
 
 	"DOTA_AntiAddiction_Initial_With_ID_18Plus"		"Legutóbb online: %s1\nUtolsó IP-cím: %s2"
 	"DOTA_AntiAddiction_Initial_With_ID_Under_18"	"Még nem vagy 18 éves, ezért a függőség elleni rendszer aktív.\nLegutóbb online: %s1\nUtolsó IP-cím: %s2"
@@ -27281,6 +27288,7 @@ Tapasztalt játékosként a csatlakozáshoz legalább {d:new_player_req_games_pl
 	"DOTA_Popup_CardPack_Model_Winter2022"			"DHL 2022 TÉLI TURNUS"
 	"DOTA_Popup_CardPack_Model_Spring2022"			"DHL 2022 TAVASZI TURNUS"
 	"DOTA_Popup_CardPack_Model_Summer2022"			"2022-es DHL Nyári Turnus"
+	"DOTA_Popup_CardPack_Model_Winter2023"			"2023-as DHL Téli Turnus"
 	"DOTA_Popup_CardPack_Model_PackCount"			"Ötös csomag"
 	"DOTA_Popup_CardPack_Model_PremiumPackCount"	"Ötös prémiumcsomag"
 	"DOTA_Popup_CardPack_Model_MainTitle"			"Játékoskártyák"
@@ -32449,6 +32457,7 @@ Az olyan korai veszélyt jelentő hősök, mint Zeus és Death Prophet megjelen�
 	"DOTA_HeroLevelReward_Currency:p{currency_amount}"	"{d:currency_amount} szilánk#|#{d:currency_amount} szilánk"
 	"DOTA_HeroLevelReward500_Currency"	"500 szilánk"
 	"DOTA_HeroLevelReward350_Currency"	"350 szilánk"
+	"DOTA_HeroLevelReward700_Currency"	"700 szilánk"
 	"DOTA_HeroLevelReward_ChatWheel"	"Hős-csevegőkorong feloldás:<br>„{s:chat_wheel_message}”"
 
 	"DOTA_ReadyCheck"	"Készültségjelzés"
@@ -33669,7 +33678,7 @@ Az olyan korai veszélyt jelentő hősök, mint Zeus és Death Prophet megjelen�
 
 	"DOTA_QueenOfPainArcana_ArcanaProgress_Score"					"{s:current_score} / {d:unlock_value}"
 	"DOTA_QueenOfPainArcana_ArcanaProgress_Description:p{unlock_value}"	"Kínozz meg {d:unlock_value} hőst Sonic Wave-vel győzelmeid során az alternatív stílus feloldásához.#|#Kínozz meg {d:unlock_value} hőst Sonic Wave-vel győzelmeid során az alternatív stílus feloldásához."
-	"KillEaterEventType_QueenOfPain_ArcanaProgress"					"Sonic Wave-vel megkínzott hős"
+	"KillEaterEventType_QueenOfPain_ArcanaProgress"					"Győztes meccseken Sonic Wave-vel megkínzott hős"
 
 	"DOTA_QueenOfPainArcana_Hud_Title"								"{d:combo_count}x kombó" 
 	
@@ -34975,6 +34984,21 @@ Az olyan korai veszélyt jelentő hősök, mint Zeus és Death Prophet megjelen�
 
 	"DOTA_WeeklyQuest_Win_And_High_Fives_Completed_Name"			"A pacsi univerzális"
 	"DOTA_WeeklyQuest_Win_And_High_Fives_Completed_Description"		"Pacsizz le játékosokkal {s:current_tier_score} alkalommal győztes játékokban."
+		
+	"DOTA_WeeklyQuest_Win_With_Ranged_Hero_Name"					"Rakétaanyag"
+	"DOTA_WeeklyQuest_Win_With_Ranged_Hero_Description"				"Nyerj {s:current_tier_score} játékot távolsági hősökkel."
+		
+	"DOTA_WeeklyQuest_Win_With_Melee_Hero_Name"						"Befejező mozdulat"
+	"DOTA_WeeklyQuest_Win_With_Melee_Hero_Description"				"Nyerj {s:current_tier_score} játékot közelharci hősökkel."
+		
+	"DOTA_WeeklyQuest_Disarm_Duration_Name"							"Nesze, fogd ezt"
+	"DOTA_WeeklyQuest_Disarm_Duration_Description"					"Fegyverezz le ellenségeket {s:current_tier_score} másodpercre."
+		
+	"DOTA_WeeklyQuest_Neutral_Items_Earned_Name"					"Piros piac"
+	"DOTA_WeeklyQuest_Neutral_Items_Earned_Description"				"Fedezz fel {s:current_tier_score} semleges tárgyat."
+		
+	"DOTA_WeeklyQuest_Use_Ability_Charges_Name"						"Teljesen feltöltve"
+	"DOTA_WeeklyQuest_Use_Ability_Charges_Description"				"Használj {s:current_tier_score} hősképesség-töltetet."
 
 	// End Weekly Quest Names
 
@@ -35703,6 +35727,13 @@ Az olyan korai veszélyt jelentő hősök, mint Zeus és Death Prophet megjelen�
 	"DOTA_DPCTeams_SeasonPeriod_Event37_Dates"		"2022. június 6. – augusztus 14."
 	"DOTA_DPCTeams_SeasonPeriod_Event38_Name"		"The International 2022"
 	"DOTA_DPCTeams_SeasonPeriod_Event38_Dates"		"2022. október 8. – 2022. október 30."
+
+	"DOTA_DPCTeams_RegistrationPeriod8"				"Téli turnus"
+	"DOTA_DPCTeams_RegistrationPeriodDates8"		"2023. jan. 9. - 2023. márc. 5."
+	"DOTA_DPCTeams_RegistrationPeriodSeason8"		"A 2023-as szezon"
+	"DOTA_DPCTeams_SeasonPeriod_Event41_Name"		"Téli turnus"
+	"DOTA_DPCTeams_SeasonPeriod_Event41_Dates"		"2023. jan. 9. - 2023. márc. 5."
+
 
 	"DOTA_FavoriteTeamSet"							"Kedvenc csapat beállítva"
 	"DOTA_NewFavoriteTeam"							"Mostantól a(z) {s:favorite_team} van beállítva kiemelt csapatodként. Ez a műszerfal különböző helyein és játék során lesz látható."
@@ -39860,6 +39891,7 @@ Ha úgy érzed, nem tudtál a döntés meghozatalához szükséges szintű figye
 		"DOTA_CandyShop_Error_NotEnoughSpace"			"Nincs elég hely a raktárban."
 		"DOTA_CandyShop_Error_NotEnoughBags"			"Nincs elég zsák."
 		"DOTA_CandyShop_Error_InvalidRecipe"			"Érvénytelen recept."
+		"DOTA_CandyShop_Error_ExpiredShop"				"Ez a cukorkabolt már nem érhető el."
 		"DOTA_CandyShop_CandySackInfo"					"Még több cukorkáért játssz Dota meccseket, vagy növeld Csatabelépőd szintjét."
 		"DOTA_CandyShop_InventorySlotInfo"				"Raktárhelyek feloldásához növeld Csatabelépőd szintjét."
 
@@ -44731,6 +44763,11 @@ Ha úgy érzed, nem tudtál a döntés meghozatalához szükséges szintű figye
 		"DOTA_BattlePass2022_Schedule_TIPointsSale_Description"					"<b>Egyszeri ajánlat, 75% kedvezmény!<br/>Október 12–30. között érhető el.</b><br/>- 120 Csatabelépő-szint<br/>- 9 Halhatatlan Kincs I<br/>- 6 Halhatatlan Kincs II<br/>- 6 Gyűjtemény Kincs<br/>- 6 Kortalan Hagyatékok Kincs"
 		"DOTA_BattlePass2022_Schedule_TIPointsSale_ActionLabel"					"Vásárlás - {s:item_price}"
 
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_Heading"					"Csomagakció!"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_SubTitle"					"A Diretide 2022"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_Description"				"<b>Utolsó ajánlat, 75% kedvezmény!<br/>December 15. – január 12. között érhető el.</b><br/>- 120 Csatabelépő-szint<br/>- 9 Halhatatlan Kincs I<br/>- 6 Halhatatlan Kincs II<br/>- 6 Gyűjtemény Kincs<br/>- 6 Kortalan Hagyatékok Kincs"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_ActionLabel"				"Vásárlás - {s:item_price}"
+
 		"DOTA_BattlePass2022_Schedule_PrimalBeastPrestige_Heading"				"Primal Beast Presztízs Csomag"
 		"DOTA_BattlePass2022_Schedule_PrimalBeastPrestige_Description"			"Sokkal a Tomo'kanba érkezése előtt az egyik sikertelen kísérlet a bestia uralására páncélba öltöztette, és ostoba módon csatába kényszerítette azt..."
 
@@ -45001,6 +45038,8 @@ Ha úgy érzed, nem tudtál a döntés meghozatalához szükséges szintű figye
 		"DOTA_StickerStore_TalentComingSoon"					"Hamarosan"
 		"DOTA_StickerStore_MoreStickersComingSoon"				"További matricák hamarosan!"
 		"DOTA_StickerStore_TalentStickersLabel"					"Közreműködő-matricák"
+		"DOTA_StickerStore_NoStickersAvailable"					"Nincsenek megvásárolható matricák."
+
 		"DOTA_StickerHero_AssignSticker"						"Matrica hozzárendelése"
 		"DOTA_StickerHero_ReplaceSticker"						"Matrica lecserélése"
 
@@ -45086,7 +45125,7 @@ Ha úgy érzed, nem tudtál a döntés meghozatalához szükséges szintű figye
 		"DOTA_PrimalBeastPrestige_Level"						"223. Csatabelépő-szint"
 
 		// FACELESS VOID ARCANA
-		"KillEaterEvent_FacelessVoid_ArcanaProgress"		"Chronosphere-ben megölt ellenség"
+		"KillEaterEvent_FacelessVoid_ArcanaProgress"		"Győztes meccseken Chronosphere-ben megölt ellenség"
 
 		//TI Championship stickers
 		"DOTA_Stickers_Store_ChampionsTitle"							"Gratulálunk,<br/>Tundra Esports!"
@@ -45099,6 +45138,7 @@ Ha úgy érzed, nem tudtál a döntés meghozatalához szükséges szintű figye
 		"DOTA_BattlePass2022_Schedule_CollectorsCacheVoting_Heading" "Gyűjtők Ékkőládája szavazás"
 		"DOTA_International2022_CollectorsCacheVoting" "Szavazás"
 
+		"DOTA_BattlePass2022_Schedule_CollectorsCache2Available_Heading" "Elérhető a Gyűjtők Ékkőládája II"
 		"DOTA_BattlePass2022_Schedule_CollectorsCacheAvailable_Heading" "Elérhető a Gyűjtők Ékkőládája"
 		"DOTA_International2022_CollectorsCacheAvailable" "Kincs megnézése"
 
@@ -45115,6 +45155,13 @@ Ha úgy érzed, nem tudtál a döntés meghozatalához szükséges szintű figye
 		"DOTA_2022Diretide_CollectorsCache_Treasure_1"		"1 kincs"
 		"DOTA_2022Diretide_CollectorsCache_Treasure_2"		"7 kincs"
 		"DOTA_2022Diretide_CollectorsCache_Treasure_3"		"14 kincs"
-		"DOTA_2022Diretide_CollectorsCache_Disclaimer"		"Az ékkőládatárgyak csak december 18-ig érhetők el."
+		"DOTA_2022Diretide_CollectorsCache_Disclaimer"		"Az ékkőládatárgyak csak január 12-ig érhetők el."
+
+        "DOTA_BattlePass2022_Schedule_MoreActiveEventsUp" "+{d:num_more_active_events_up} aktív esemény fentebb"
+        "DOTA_BattlePass2022_Schedule_MoreActiveEventsDown" "+{d:num_more_active_events_down} aktív esemény alább"
+
+		"DOTA_BattlePassEndingTitle"				"Vége:"
+		"DOTA_BattlePassEndingCountdown"			"0 <b>nap</b> 0 <b>óra</b> 0 <b>perc</b> 0 <b>mp</b>"
+		"DOTA_BattlePassEndingDescription"			"Szerezz <a href=\"event:DOTAPurchaseEventLevels( EVENT_ID_INTERNATIONAL_2022 )\">szinteket</a>, <a href=\"event:DOTAShowSplashAdPopup('bundle_sale_2022_2')\">csomagokat</a>, <a href=\"event:DOTAShowTreasurePage(26880)\">Gyűjtők Ékkőládája I-et</a> és <a href=\"event:DOTAShowTreasurePage(26932)\">Gyűjtők Ékkőládája II-t</a>."
 	}
 }

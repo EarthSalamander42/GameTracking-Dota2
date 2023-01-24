@@ -7,7 +7,7 @@
 		%.*s
 		%s "%s"
 		Name = %s, Rule = %i, Enabled = %s
-		g_pMemAlloc
+		_V_strEndsWith
 	 ();,
 	 The lexer was matching from line %d, offset %d, which
 	 This indicates a poorly specified lexer RULE
@@ -50,11 +50,20 @@
 	UiName = %s
 	VariableState
 	You must construct it with ORDERED_CONSTRUCT macro in the dependency resolution function.
+	_V_StringAfterPrefix
+	_V_StringAfterPrefixCaseSensitive
+	_V_StripExtension
+	_V_StripLastDir
+	_V_strcspn
+	_V_strncat
+	_V_strncmp
+	_V_strncpy
+	_V_strnicmp_fast
 	bool = %i
 	enabled = %s
 	fD9t
-	g_bUpdateStringTokenDatabase
-	g_pThreadPool
+	g_Mathlib_GammaToLinearByteTable
+	g_VProfCurrentProfile
 	kE>fvw
 	min = %i, state = %i
 	options = %i
@@ -122,7 +131,6 @@
  - Drop with Modifier, Open paste special pop-up
  - MMB press stopping buttonless drag
  - RMB Drop - open context menu of interactions
- -8VI~
  -o "
  -of 
  -testmode
@@ -260,6 +268,7 @@
 !?triggered@QAction@@QEAAX_N@Z
 !?unsetCursor@QWidget@@QEAAXXZ
 !hn7!
+"	g_bUpdateStringTokenDatabase
 " -ie 
 " -oe 
 ""?updateEditorGeometry@QStyledItemDelegate@@UEBAXPEAVQWidget@@AEBVQStyleOptionViewItem@@AEBVQModelIndex@@@Z
@@ -846,6 +855,7 @@ $prefix_element$
 )|$pL
 )|B?d!
 )}pMc
+*	g_pMemAlloc
 * ?timerEvent@QTextEdit@@MEAAXPEAVQTimerEvent@@@Z
 *** %s "%s" in %s does not follow the 0..N format!
 *** %s "%s" in %s has max(%d) > 254!
@@ -1014,8 +1024,9 @@ $prefix_element$
 -sse4
 -unknown source-
 -unknown source-(
+.	g_pThreadPool
 .#?windowTitle@QWidget@@QEBA?AVQString@@XZ
-.%\?*
+.%4?*
 ../src/shaders
 ..om?
 .00cfg
@@ -1898,7 +1909,6 @@ $prefix_element$
 0123456789
 0123456789)"
 0123456789abcdefghijklmnopqrstuvwxyz
-08:13:33
 0=Wrap,1=Mirror,2=Clamp,3=Border,4=MirrorOnce
 0><[cZUg^>
 0A\^]
@@ -1965,6 +1975,7 @@ $prefix_element$
 1.2.11
 128 x 128
 16-byte data pool
+16:13:03
 1:1: Tokens : ( T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | BOOLLITERAL | ID | INTEGERLITERAL | HEXINTEGERLITERAL | FLOATLITERAL | COMMENT | WS );
 1<.	/>:
 1A26b
@@ -2263,8 +2274,8 @@ $prefix_element$
 220323000000Z
 220801000000Z
 220921000000Z
-221203185346Z0/
 222222
+230112002047Z0/
 241009235959Z0a1
 256 x 256
 2CalcValueAdded(double)
@@ -3048,6 +3059,7 @@ $prefix_element$
 ?TrimTail@CBufferString@@QEAAPEBDPEBD@Z
 ?UUUUUU
 ?UnqualifiedFilenameAlloc@CUtlString@@QEBA?AV1@XZ
+?VNMB
 ?V_SplitString@@YAXPEBD0AEAV?$CUtlVector@PEADHV?$CUtlMemory@PEADH@@@@@Z
 ?V_SplitString@@YAXPEBD0AEAV?$CUtlVector@VCUtlString@@HV?$CUtlMemory@VCUtlString@@H@@@@_N@Z
 ?V_stristr_fast@@YAPEBDPEBD0@Z
@@ -4289,7 +4301,7 @@ $prefix_element$
 @A__[
 @D8(t
 @HH;T
-@Hc5W
+@Hc5g
 @Integer overflow in %s
 @Mcg<M
 @RegisterConCommand: Unknown error registering con command "%s"!
@@ -6354,7 +6366,6 @@ F>qUxv
 FATAL ERROR: unable to register all schema data: %s
 FDL9|$@t
 FEATURES
-FGJeh
 FHcs 
 FHcw 
 FLA+@
@@ -6627,9 +6638,9 @@ H33M3
 H9(t8
 H9(t|
 H9+t	H
-H9-y`
 H93t	H
 H94:H
+H95$j
 H95m2:
 H97t	H
 H97u+A
@@ -7052,6 +7063,7 @@ JFIF extension marker: type 0x%02x, length %u
 JPEG datastream contains no image
 JPEG parameter struct mismatch: library thinks size is %u, caller expects %u
 JPEGMEM
+Jan 11 2023
 January
 JcD* E3
 K ?toggled@QAbstractButton@@QEAAX_N@Z
@@ -7790,7 +7802,6 @@ Not a TIFF file, bad version number %d (0x%x)
 Not enough
 Not implemented yet
 Nothing to import. Clipboard contents are empty.
-Nov  3 2022
 November
 NumberOfInks
 O H+O
@@ -8215,7 +8226,6 @@ QueryPerformanceCounter
 QueryPerformanceFrequency
 QufA;
 R channel not found!
-R"yn&
 R11_EAC
 R16G16_UINT
 R16_UINT
@@ -8250,7 +8260,7 @@ RGBA32323232_UINT
 RGBA8888_LINEAR
 RGBX8888
 RH@8t$PL
-RSDS"
+RSDS,,uk
 RST%d
 RW?restore@QPainter@@QEAAXXZ
 Radius
@@ -8889,6 +8899,7 @@ TexturePreviewFilteredMagnification
 TextureSheetData
 TextureSize
 TextureWrapModes
+Tf8a'
 The filename may only contain lower case alphanumeric characters, dashes, and underscores.
 The suggested alternate save path is
 There are %2 remaining materials.
@@ -8917,6 +8928,7 @@ TlsAlloc
 TlsFree
 TlsGetValue
 TlsSetValue
+To ^ilQ
 Toggle Favorite
 Toggle favorite status.
 Too many color components: %d, max %d
@@ -9288,6 +9300,7 @@ VariableChange_t
 VariableState
 Variables
 VariablesWindow
+VbP~&
 VeaFOfb
 VectorText
 Verbose resource compiles. Used to monitor compilation activity.
@@ -9326,6 +9339,7 @@ WAUAVAWH
 WAUAWH
 WAVAWH
 WH@8j9t<H
+WIjmB
 WP8_Xt
 WW:9999WWW
 WaNd?
@@ -9395,7 +9409,7 @@ X_^][
 X|$ A
 X|$8E
 X|$ls
-Y%,l.
+Y-p *
 Y>kX>M
 Y>t$7?
 Y?setDecimals@QDoubleValidator@@QEAAXH@Z
@@ -9592,7 +9606,7 @@ Zpm"U
 \materials
 ] u8H
 ])6M>&
-]5h"*
+]5@"*
 ]8H9}@t
 ]>)2X
 ]?sharedPainter@QPaintDevice@@MEBAPEAVQPainter@@XZ
@@ -9601,7 +9615,6 @@ Zpm"U
 ]J<0"0i3
 ]Lu1A
 ]X?setBackgroundMode@QPainter@@QEAAXW4BGMode@Qt@@@Z
-]nxH-`
 ]wH;]
 ^<V7w
 ^?text@QClipboard@@QEBA?AVQString@@W4Mode@1@@Z
@@ -9626,16 +9639,6 @@ _V_ComposeFileName
 _V_ExtractFileExtension
 _V_FileBase
 _V_SetExtension
-_V_StringAfterPrefix
-_V_StringAfterPrefixCaseSensitive
-_V_StripExtension
-_V_StripLastDir
-_V_strEndsWith
-_V_strcspn
-_V_strncat
-_V_strncmp
-_V_strncpy
-_V_strnicmp_fast
 _Variables
 __Attribute__
 __Expression__
@@ -10268,8 +10271,6 @@ function not supported
 future
 future already retrieved
 fuvA;
-g_Mathlib_GammaToLinearByteTable
-g_VProfCurrentProfile
 g_bFogTypeEnabled
 g_bLayerBlendEnable%i
 g_bOtherFxEnabled
@@ -10934,8 +10935,6 @@ ntelA
 n|$`fA
 o-C:&
 o5	;&
-o55/.
-o59V.
 o=@i7
 o@u H
 oD$ H
@@ -11051,7 +11050,6 @@ quaternion_array
 r	Vr.>T
 r>@8o
 rQ?lineTo@QPainterPath@@QEAAXNN@Z
-r`c6r
 radians
 random
 randomSeed

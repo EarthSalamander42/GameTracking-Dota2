@@ -12615,6 +12615,9 @@
 		"DOTA_Style_qop_2022_immortal_legs_0"	"존귀"
 		"DOTA_Style_qop_2022_immortal_legs_1"	"기품"
 
+		"DOTA_Item_Frightful_Revelries_0"	"오싹한 유흥"
+		"DOTA_Item_Frightful_Revelries_1"	"수확의 밤"
+
 
 //DOTA_ITEM_STYLES_END
 //DOTA_ITEM_STYLE_END
@@ -15285,7 +15288,6 @@
 		"DOTA_TrophyDesc_International2022BattlePass_Level"				"2022 전투 패스에 획득한 레벨"
 		"DOTA_TrophyName_International2022BattlePass_CavernChallenge"	"동굴 탐험상"
 		"DOTA_TrophyDesc_International2022BattlePass_CavernChallenge"	"2022 전투 패스에서 동굴 탐험으로 획득한 영웅 세트"
-
 
 		"DOTA_TrophyName_MVPTrophy"						"최우수 선수 승전물"
 		"DOTA_TrophyDesc_MVPTrophy"						"최우수 선수로 뽑힌 횟수를 기념합니다."
@@ -20199,7 +20201,7 @@
 		"DOTA_ChallengeDesc_Phoenix_Stun_With_Supernova"   "<font color='#ffffff'>초신성</font>으로 적 영웅 총 <font color='#ffffff'>%s1</font>명 기절시키기"
 		"DOTA_ChallengeDesc_Razor_Damage_On_Static_Linked"   "<font color='#ffffff'>정전기 연결</font>로 공격력을 흡수한 적 영웅에게 피해 <font color='#ffffff'>%s1</font> 주기"
 		"DOTA_ChallengeDesc_Razor_DamageWithUnstableCurrent"   "<font color='#ffffff'>불안정한 전류</font>로 적 영웅에게 피해 <font color='#ffffff'>%s1</font> 주기"
-		"DOTA_ChallengeDesc_ShadowDemon_KillsUnderSoulCatcher"   "<font color='#ffffff'>영혼 사냥꾼</font>에 영향받은 적 영웅을 처치 또는 처치 도움 <font color='#ffffff'>%s1</font>회"
+		"DOTA_ChallengeDesc_ShadowDemon_KillsUnderDisseminate"   "<font color='#ffffff'>퍼뜨리기</font>에 영향받은 적 영웅을 처치 또는 처치 도움 <font color='#ffffff'>%s1</font>회"
 
 
 
@@ -24762,6 +24764,7 @@
 	"DOTA_HeroRole_Description_Pusher"		"게임 중 어느 순간이라도 포탑과 병영을 압박하고 빠르게 파괴할 수 있습니다."
 	"DOTA_HeroRole_Description_Initiator"	"팀 간 전투를 시작하기 좋습니다."
 
+	"DOTA_HeroTags"							"태그"
     "DOTA_HeroGrid_Sort_By"                        "정렬 기준:"
 
 	"DOTA_HeroGrid_Loading"						"영웅 보기 불러오는 중..."
@@ -25947,6 +25950,7 @@
 
 	"DOTA_ChangeLog_TI9AllStarVoting" "TI9 올스타 게임 투표 지금 참여 가능"
 	"DOTA_ChangeLog_TI0CompendiumEnded" "The International 2021 기록서가 만료되었습니다. 여기를 클릭하면 최종 결과를 확인하실 수 있습니다."
+	"DOTA_ChangeLog_BP2022Ended" "2022 전투 패스가 만료되었습니다. 여기를 클릭하면 최종 보상을 받을 수 있습니다."
 
 	"DOTA_GlobalLiveSpectatorChat_Title"			"새로운 기능 - 실시간 관전자 전체 대화"
 	"DOTA_GlobalLiveSpectatorChat_Details"			"수천만 명의 관중과 함께 The International의 열기를 느끼려고 꼭 KeyArena에 올 필요는 없습니다. 이제 게임 안 관전자 대화 수용 인원이 증가하여 한 채널에서 더 많은 관전자와 이야기를 나눌 수 있습니다. 대시보드 대화 창의 새로운 라이브 게임 탭에서 관전자 대화 채널에 접속할 수 있습니다."
@@ -27095,6 +27099,7 @@
 	"DOTA_Popup_CardPack_Model_Winter2022"			"DPC 2022 겨울 투어"
 	"DOTA_Popup_CardPack_Model_Spring2022"			"DPC 2022 봄 투어"
 	"DOTA_Popup_CardPack_Model_Summer2022"			"DPC 2022 여름 투어"
+	"DOTA_Popup_CardPack_Model_Winter2023"			"DPC 2023 겨울 투어"
 	"DOTA_Popup_CardPack_Model_PackCount"			"다섯 장 팩"
 	"DOTA_Popup_CardPack_Model_PremiumPackCount"	"다섯 장 프리미엄 팩"
 	"DOTA_Popup_CardPack_Model_MainTitle"			"선수 카드"
@@ -32256,6 +32261,7 @@
 	"DOTA_HeroLevelReward_Currency:p{currency_amount}"	"파편 {d:currency_amount}개"
 	"DOTA_HeroLevelReward500_Currency"	"파편 500개"
 	"DOTA_HeroLevelReward350_Currency"	"파편 350개"
+	"DOTA_HeroLevelReward700_Currency"	"파편 700개"
 	"DOTA_HeroLevelReward_ChatWheel"	"영웅 휠 대화 잠금 해제<br>\"{s:chat_wheel_message}\""
 
 	"DOTA_ReadyCheck"	"준비 확인"
@@ -33477,7 +33483,7 @@
 
 	"DOTA_QueenOfPainArcana_ArcanaProgress_Score"					"{s:current_score} / {d:unlock_value}"
 	"DOTA_QueenOfPainArcana_ArcanaProgress_Description:p{unlock_value}"	"승리를 거두면서 초음파 비명으로 영웅 {d:unlock_value}명에게 고통을 안겨주면 교체 스타일이 해제됩니다."
-	"KillEaterEventType_QueenOfPain_ArcanaProgress"					"초음파 비명으로 고통받은 영웅"
+	"KillEaterEventType_QueenOfPain_ArcanaProgress"					"승리한 게임에서 초음파 비명으로 고통받은 영웅"
 
 	"DOTA_QueenOfPainArcana_Hud_Title"								"{d:combo_count}회 연계" 
 	
@@ -34778,6 +34784,21 @@
 
 	"DOTA_WeeklyQuest_Win_And_High_Fives_Completed_Name"			"하이파이브를 온 누리에"
 	"DOTA_WeeklyQuest_Win_And_High_Fives_Completed_Description"		"승리한 게임에서 플레이어와 하이파이브 {s:current_tier_score}회"
+		
+	"DOTA_WeeklyQuest_Win_With_Ranged_Hero_Name"					"미사일이 따로 없네"
+	"DOTA_WeeklyQuest_Win_With_Ranged_Hero_Description"				"원거리 영웅으로 {s:current_tier_score}게임 승리"
+		
+	"DOTA_WeeklyQuest_Win_With_Melee_Hero_Name"						"마무리 손길"
+	"DOTA_WeeklyQuest_Win_With_Melee_Hero_Description"				"근접 영웅으로 {s:current_tier_score}게임 승리"
+		
+	"DOTA_WeeklyQuest_Disarm_Duration_Name"							"이거 잠깐 들고 있어"
+	"DOTA_WeeklyQuest_Disarm_Duration_Description"					"적을 {s:current_tier_score}초 동안 무장 해제"
+		
+	"DOTA_WeeklyQuest_Neutral_Items_Earned_Name"					"도깨비시장"
+	"DOTA_WeeklyQuest_Neutral_Items_Earned_Description"				"중립 아이템 {s:current_tier_score}개 발견"
+		
+	"DOTA_WeeklyQuest_Use_Ability_Charges_Name"						"완전 충전"
+	"DOTA_WeeklyQuest_Use_Ability_Charges_Description"				"영웅 능력 충전 수 {s:current_tier_score}회 사용"
 
 	// End Weekly Quest Names
 
@@ -35505,6 +35526,13 @@
 	"DOTA_DPCTeams_SeasonPeriod_Event37_Dates"		"2022년 6월 6일-2022년 8월 14일"
 	"DOTA_DPCTeams_SeasonPeriod_Event38_Name"		"The International 2022"
 	"DOTA_DPCTeams_SeasonPeriod_Event38_Dates"		"2022년 10월 8일~2022년 10월 30일"
+
+	"DOTA_DPCTeams_RegistrationPeriod8"				"겨울 투어"
+	"DOTA_DPCTeams_RegistrationPeriodDates8"		"2023년 1월 9일~2023년 3월 5일"
+	"DOTA_DPCTeams_RegistrationPeriodSeason8"		"2023년 시즌"
+	"DOTA_DPCTeams_SeasonPeriod_Event41_Name"		"겨울 투어"
+	"DOTA_DPCTeams_SeasonPeriod_Event41_Dates"		"2023년 1월 9일~2023년 3월 5일"
+
 
 	"DOTA_FavoriteTeamSet"							"좋아하는 팀 세트"
 	"DOTA_NewFavoriteTeam"							"{s:favorite_team}이(가) 대표 팀으로 지정되었습니다. 해당 사항은 대시보드 인터페이스와 게임 안의 여러 부분에 반영됩니다."
@@ -39648,6 +39676,7 @@
 		"DOTA_CandyShop_Error_NotEnoughSpace"			"보관함에 자리가 없습니다"
 		"DOTA_CandyShop_Error_NotEnoughBags"			"가방이 부족합니다"
 		"DOTA_CandyShop_Error_InvalidRecipe"			"유효하지 않은 조합법입니다."
+		"DOTA_CandyShop_Error_ExpiredShop"				"더는 사탕전문점을 이용할 수 없습니다."
 		"DOTA_CandyShop_CandySackInfo"					"사탕을 더 받으려면 도타를 플레이하거나 전투 패스 레벨을 올리세요."
 		"DOTA_CandyShop_InventorySlotInfo"				"전투 패스 레벨을 올리면 보관함 칸이 해제됩니다."
 
@@ -44519,6 +44548,11 @@
 		"DOTA_BattlePass2022_Schedule_TIPointsSale_Description"					"<b>단 한 번의 특별 기회, 75% 할인!<br/>10월 12-30일 이용 가능</b><br/>- 전투 패스 120레벨<br/>- 불멸 I 보물 9개<br/>- 불멸 II 보물 6개<br/>- 수집품 보물 6개<br/>- 영구한 가보 보물 6개"
 		"DOTA_BattlePass2022_Schedule_TIPointsSale_ActionLabel"					"{s:item_price} 구매"
 
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_Heading"					"번들 할인!"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_SubTitle"					"2022 다이어타이드"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_Description"				"<b>마지막 특별 기회, 75% 할인!<br/>12월 15일-1월 12일 이용 가능</b><br/>- 전투 패스 120레벨<br/>- 불멸 I 보물 9개<br/>- 불멸 II 보물 6개<br/>- 수집품 보물 6개<br/>- 영구한 가보 보물 6개"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_ActionLabel"				"{s:item_price}개 구매"
+
 		"DOTA_BattlePass2022_Schedule_PrimalBeastPrestige_Heading"				"원시 야수 특수 세트"
 		"DOTA_BattlePass2022_Schedule_PrimalBeastPrestige_Description"			"토모칸에 도착하기 훨씬 이전에 야수를 통제하려고 시도했는데, 어처구니없게도 오히려 판금을 몸에 두른 상태로 전투에 투입되는 결과를 초래하고 말았습니다..."
 
@@ -44789,6 +44823,8 @@
 		"DOTA_StickerStore_TalentComingSoon"					"곧 출시 예정"
 		"DOTA_StickerStore_MoreStickersComingSoon"				"더 많은 스티커가 조만간 출시됩니다!"
 		"DOTA_StickerStore_TalentStickersLabel"					"중계진 스티커"
+		"DOTA_StickerStore_NoStickersAvailable"					"판매 중인 스티커가 없습니다."
+
 		"DOTA_StickerHero_AssignSticker"						"스티커 지정"
 		"DOTA_StickerHero_ReplaceSticker"						"스티커 다시 놓기"
 
@@ -44874,7 +44910,7 @@
 		"DOTA_PrimalBeastPrestige_Level"						"전투 패스 223레벨"
 
 		// FACELESS VOID ARCANA
-		"KillEaterEvent_FacelessVoid_ArcanaProgress"		"시간의 구슬 안에서 처치한 적"
+		"KillEaterEvent_FacelessVoid_ArcanaProgress"		"승리한 게임에서 시간의 구슬 안에 가두고 처치한 적"
 
 		//TI Championship stickers
 		"DOTA_Stickers_Store_ChampionsTitle"							"축하합니다<br/>Tundra Esports!"
@@ -44887,6 +44923,7 @@
 		"DOTA_BattlePass2022_Schedule_CollectorsCacheVoting_Heading" "수집가의 무기함 투표"
 		"DOTA_International2022_CollectorsCacheVoting" "투표"
 
+		"DOTA_BattlePass2022_Schedule_CollectorsCache2Available_Heading" "수집가의 무기함 2 이용 가능"
 		"DOTA_BattlePass2022_Schedule_CollectorsCacheAvailable_Heading" "수집가의 무기함 이용 가능"
 		"DOTA_International2022_CollectorsCacheAvailable" "보물 보기"
 
@@ -44903,6 +44940,13 @@
 		"DOTA_2022Diretide_CollectorsCache_Treasure_1"		"보물 1개"
 		"DOTA_2022Diretide_CollectorsCache_Treasure_2"		"보물 7개"
 		"DOTA_2022Diretide_CollectorsCache_Treasure_3"		"보물 14개"
-		"DOTA_2022Diretide_CollectorsCache_Disclaimer"		"무기함 아이템은 12월 18일까지만 구매할 수 있습니다."
+		"DOTA_2022Diretide_CollectorsCache_Disclaimer"		"무기함 아이템은 1월 12일까지만 획득할 수 있습니다."
+
+        "DOTA_BattlePass2022_Schedule_MoreActiveEventsUp" "위에 진행 중인 이벤트 +{d:num_more_active_events_up}개"
+        "DOTA_BattlePass2022_Schedule_MoreActiveEventsDown" "아래 진행 중인 이벤트 +{d:num_more_active_events_down}개"
+
+		"DOTA_BattlePassEndingTitle"				"종료"
+		"DOTA_BattlePassEndingCountdown"			"0 <b>일</b> 0 <b>시간</b> 0 <b>분</b> 0 <b>초</b> 후"
+		"DOTA_BattlePassEndingDescription"			"<a href=\"event:DOTAPurchaseEventLevels( EVENT_ID_INTERNATIONAL_2022 )\">레벨</a>, <a href=\"event:DOTAShowSplashAdPopup('bundle_sale_2022_2')\">번들</a>, <a href=\"event:DOTAShowTreasurePage(26880)\">수집가의 무기함 1</a>, <a href=\"event:DOTAShowTreasurePage(26932)\">수집가의 무기함 2</a>를 차지할 마지막 기회입니다."
 	}
 }

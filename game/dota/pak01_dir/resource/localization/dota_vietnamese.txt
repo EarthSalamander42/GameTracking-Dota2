@@ -12607,6 +12607,9 @@ nhiều vàng hơn nữa."
 		"DOTA_Style_qop_2022_immortal_legs_0"	"Điện hạ"
 		"DOTA_Style_qop_2022_immortal_legs_1"	"Hoàng gia"
 
+		"DOTA_Item_Frightful_Revelries_0"	"Frightful Revelries"
+		"DOTA_Item_Frightful_Revelries_1"	"Harvest Night"
+
 
 //DOTA_ITEM_STYLES_END
 //DOTA_ITEM_STYLE_END
@@ -15190,9 +15193,8 @@ Khiêu khích đặc biệt cho Techies"
 		"DOTA_TrophyName_International2022BattlePass_CavernChallenge"	"Phần thưởng Cavern Crawl"
 		"DOTA_TrophyDesc_International2022BattlePass_CavernChallenge"	"Bộ trang phục Cavern Crawl đạt được trong Battle Pass 2022"
 
-
 		"DOTA_TrophyName_MVPTrophy"						"Cúp người chơi đáng giá nhất"
-		"DOTA_TrophyDesc_MVPTrophy"						"Kỷ niệm chương số lần bạn được bầu làm người chơi xuất sắc nhất trận."
+		"DOTA_TrophyDesc_MVPTrophy"						"Kỷ niệm chương số lần bạn được trao danh hiệu người chơi xuất sắc nhất trận."
 		"DOTA_TrophyUnits_MVP:p"						"%s1 danh hiệu MVP"
 
 		"DOTA_TrophyName_TI6SeasonalMMR_Solo"			"MMR đấu đơn tối đa International 2016"
@@ -20274,7 +20276,7 @@ Khiêu khích đặc biệt cho Techies"
 		"DOTA_ChallengeDesc_Phoenix_Stun_With_Supernova"   "Gây choáng tổng cộng <font color='#ffffff'>%s1</font> tướng địch bằng <font color='#ffffff'>Supernova</font>"
 		"DOTA_ChallengeDesc_Razor_Damage_On_Static_Linked"   "Gây <font color='#ffffff'>%s1</font> sát thương lên tướng địch đang bị <font color='#ffffff'>Static Link</font> hút sát thương"
 		"DOTA_ChallengeDesc_Razor_DamageWithUnstableCurrent"   "Gây <font color='#ffffff'>%s1</font> sát thương lên tướng địch bằng <font color='#ffffff'>Unstable Current</font>"
-		"DOTA_ChallengeDesc_ShadowDemon_KillsUnderSoulCatcher"   "Trợ lực hoặc giết <font color='#ffffff'>%s1</font> tướng địch bị ảnh hưởng bởi <font color='#ffffff'>Soul Catcher</font>."
+		"DOTA_ChallengeDesc_ShadowDemon_KillsUnderDisseminate"   "Trợ lực hoặc giết <font color='#ffffff'>%s1</font> tướng địch bị ảnh hưởng bởi <font color='#ffffff'>Disseminate</font>."
 
 
 
@@ -24829,7 +24831,7 @@ Khiêu khích đặc biệt cho Techies"
 	"DOTA_HeroRole_Description_Pusher"		"Có thể nhanh chóng phá trụ và nhà lính ở mọi thời điểm của trận đấu."
 	"DOTA_HeroRole_Description_Initiator"	"Có thể mở đầu giao tranh rất tốt."
 
-    "DOTA_HeroGrid_Sort_By"                        "Xếp theo:"
+	"DOTA_HeroGrid_Sort_By"                        "Xếp theo:"
 
 	"DOTA_HeroGrid_Loading"						"Đang tải lưới bố trí tướng..."
 	"DOTA_HeroGrid_FailedToLoad"				"Không thể nạp cách xếp tướng dạng lưới này. Xin hãy thử lại sau.<br><a href=\"event:DOTAHeroGridSelectDefaultConfig()\">Nhấp vào đây để chuyển về hiển thị lưới mặc định</a>"
@@ -25946,7 +25948,7 @@ Khiêu khích đặc biệt cho Techies"
 	"DOTA_ClientVersion"			"Phiên bản: <span class=\"VersionNumber\">{d:client_version_number}</span>"
 	"DOTA_GameplayVersion"	"Phiên bản: <span class=\"VersionNumber\">{g:dota_gameplay_version:gameplay_version_number}</span>"
 
-	"DOTA_Notifications_ViewAll"		"Xem tất"
+	"DOTA_Notifications_ViewAll"		"Xem tất cả"
 	"DOTA_Notifications_ViewRecent"		"Gần đây"
 	"DOTA_ChangeLog_View"					"Xem"
 	"DOTA_ChangeLog_Ti6BracketPredictions"	"Dự đoán nhánh cho The International 2016"
@@ -26015,7 +26017,6 @@ Khiêu khích đặc biệt cho Techies"
 
 	"DOTA_ChangeLog_TI9AllStarVoting" "Đã có thể bầu chọn cho trận đấu siêu sao TI9"
 	"DOTA_ChangeLog_TI0CompendiumEnded" "Compendium cho The International 2021 đã kết thúc. Nhấp vào đây để xem kết quả sau cùng."
-
 	"DOTA_GlobalLiveSpectatorChat_Title"			"Tính năng mới - Tán gẫu toàn cầu cho khán giả xem trực tiếp"
 	"DOTA_GlobalLiveSpectatorChat_Details"			"Bạn không cần có mặt tại KeyArena để hòa mình vào đám đông hàng ngàn người trong The International. Tán gẫu trong trận cho khán giả giờ đây được tăng sức chứa và có thể hỗ trợ một lượng người xem lớn trong một kênh duy nhất. Bạn cũng có thể truy cập vào kênh tán gẫu cho khán giải trong thẻ Trận trực tiếp trong cửa sổ trang tán gẫu chính."
 
@@ -26237,6 +26238,9 @@ Khiêu khích đặc biệt cho Techies"
 
 	"DOTA_Banned_Title"			"Bị cấm"
 	"DOTA_Banned"				"Tải khoản của bạn đã bị cấm chơi Dota 2."
+
+	"DOTA_China_SpecialDisabled_Title" "Đã tắt"
+	"DOTA_China_SpecialDisabled" "Gửi người chơi, theo thông báo liên quan, máy chủ Dota 2 sẽ ngưng phục vụ từ 0:00 đến 23:59 vào 6/12/2022. Cảm ơn các bạn đã ủng hộ."
 
 	"DOTA_AntiAddiction_Initial_With_ID_18Plus"		"Lần cuối trên mạng: %s1\nĐịa chỉ IP lần cuối: %s2"
 	"DOTA_AntiAddiction_Initial_With_ID_Under_18"	"Bạn dưới 18 tuồi. Hệ thống chống nghiện đang hoạt động.\nLần cuối trên mạng: %s1\nĐịa chỉ IP lần cuối: %s2"
@@ -33371,8 +33375,6 @@ Sân khấu được thiết lập tại Thượng Hải cho một giải đấu
 
 	"DOTA_QueenOfPainArcana_ArcanaProgress_Score"					"{s:current_score} / {d:unlock_value}"
 	"DOTA_QueenOfPainArcana_ArcanaProgress_Description:p{unlock_value}"	"Tra tấn {d:unlock_value} tướng với Sonic Wave trong các trận thắng để mở thêm kiểu dáng phụ."
-	"KillEaterEventType_QueenOfPain_ArcanaProgress"					"Tướng trúng Sonic Wave"
-
 	"DOTA_QueenOfPainArcana_Hud_Title"								"{d:combo_count}x Combo" 
 	
 	"Debut_Arcana_QueenOfPain_Feature_1_Title" 						"<span class='bullettitle'>Mô hình và bệ đài mới</span>"
@@ -34656,7 +34658,7 @@ Sân khấu được thiết lập tại Thượng Hải cho một giải đấu
 
 	"DOTA_WeeklyQuest_Win_And_High_Fives_Completed_Name"			"Nhà nhà đập tay"
 	"DOTA_WeeklyQuest_Win_And_High_Fives_Completed_Description"		"Đập tay với người chơi khác {s:current_tier_score} lần trong trận thắng"
-
+		
 	// End Weekly Quest Names
 
 
@@ -44669,10 +44671,7 @@ Nếu bạn không cảm thấy đủ tập trung chú ý để có thể đưa 
 		"DOTA_stickers_voice_lines_season_6_ru"					"Lời thoại khách mời tiếng Nga - TI 2022"
 		"DOTA_stickers_voice_lines_season_6_pt"					"Lời thoại khách mời tiếng Bồ Đào Nha - TI 2022"
 		"DOTA_stickers_voice_lines_season_6_es"					"Lời thoại khách mời tiếng Tây Ban Nha - TI 2022"
-		// FACELESS VOID ARCANA
-		"KillEaterEvent_FacelessVoid_ArcanaProgress"		"Kẻ địch giết trong Chrono"
-
-		//TI Championship stickers
+//TI Championship stickers
 		"DOTA_Stickers_Store_ChampionsTitle"							"Chúc mừng<br/>Tundra Esports!"
 		"DOTA_Stickers_Store_ChampionsDescription"						"Thu thập hình dán phiên bản nhà vô địch của năm nay để mừng thêm một kỳ The International."
 		"DOTA_Champions2022_CongratulationsTitle"						"Chúc mừng, Tundra Esports!"
@@ -44683,6 +44682,7 @@ Nếu bạn không cảm thấy đủ tập trung chú ý để có thể đưa 
 		"DOTA_BattlePass2022_Schedule_CollectorsCacheVoting_Heading" "Bầu chọn Collector Cache"
 		"DOTA_International2022_CollectorsCacheVoting" "Bỏ phiếu"
 
+		"DOTA_BattlePass2022_Schedule_CollectorsCache2Available_Heading" "Đã có Collectors Cache 2"
 		"DOTA_BattlePass2022_Schedule_CollectorsCacheAvailable_Heading" "Đã có Collectors Cache"
 		"DOTA_International2022_CollectorsCacheAvailable" "Xem kho báu"
 
@@ -44699,5 +44699,10 @@ Nếu bạn không cảm thấy đủ tập trung chú ý để có thể đưa 
 		"DOTA_2022Diretide_CollectorsCache_Treasure_1"		"1 kho báu"
 		"DOTA_2022Diretide_CollectorsCache_Treasure_2"		"7 kho báu"
 		"DOTA_2022Diretide_CollectorsCache_Treasure_3"		"14 kho báu"
+		"DOTA_2022Diretide_CollectorsCache_Disclaimer"		"Chỉ có thể nhận vật phẩm Cache cho đến 12/1."
+
+        "DOTA_BattlePass2022_Schedule_MoreActiveEventsUp" "+{d:num_more_active_events_up} sự kiện đang diễn ra bên trên"
+        "DOTA_BattlePass2022_Schedule_MoreActiveEventsDown" "+{d:num_more_active_events_down} sự kiện đang diễn ra bên dưới"
+
 		}
 }

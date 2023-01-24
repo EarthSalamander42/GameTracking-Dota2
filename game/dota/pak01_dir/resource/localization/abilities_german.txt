@@ -127,7 +127,7 @@
 		"DOTA_Tooltip_ability_courier_autodeliver_Description"						"Automatische Lieferung von Gegenständen ein-/ausschalten."
 		
 		//NECRONOMICON
-		"DOTA_Tooltip_ability_necronomicon_warrior_mana_burn"							"Manabrand"
+		"DOTA_Tooltip_ability_necronomicon_warrior_mana_burn"							"Mana Break"
 		"DOTA_Tooltip_ability_necronomicon_warrior_mana_burn_Description"				"Mana wird bei jedem Treffer verbrannt, ein Teil wird als Schaden zugefügt."
 		"DOTA_Tooltip_ability_necronomicon_warrior_mana_burn_burn_amount"				"MANABRAND PRO TREFFER:"
 		"DOTA_Tooltip_ability_necronomicon_warrior_mana_burn_burn_damage_conversion"	"%IN SCHADEN UMGEWANDELT:"
@@ -616,6 +616,7 @@
 		"DOTA_Tooltip_modifier_lion_voodoo_Description"			"Sie sind ein Frosch. Sie können weder angreifen noch Zauber wirken."
 		"DOTA_Tooltip_modifier_lion_mana_drain"					"Drain"
 		"DOTA_Tooltip_modifier_lion_mana_drain_Description"		"Verliert %dMODIFIER_PROPERTY_TOOLTIP% Mana pro Sekunde und ist um %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE% %% verlangsamt."
+		"DOTA_Tooltip_modifier_lion_mana_drain_immunity"				"Manaraub"
 		"DOTA_Tooltip_modifier_lion_mana_drain_immunity_Description"	"Zauberimmun."
 		
 		"DOTA_Tooltip_modifier_lion_finger_of_death"						"Finger des Todes"
@@ -644,10 +645,7 @@
 		"DOTA_Tooltip_ability_vengefulspirit_wave_of_terror_vision_duration"			"SICHTDAUER:"
 		"DOTA_Tooltip_ability_vengefulspirit_command_aura"								"Vengeance Aura"
 		"DOTA_Tooltip_ability_vengefulspirit_command_aura_Description"					"Vengeful Spirits Anwesenheit erhöht den Schaden verbündeter Helden in ihrer Nähe."
-		"DOTA_Tooltip_ability_vengefulspirit_command_aura_scepter_description"  		"Erschafft beim Tod eine starke Illusion, die alle Fähigkeiten einsetzen kann und normalen Schaden verursacht/erleidet. Die Illusion bewegt sich %scepter_illusion_ms_bonus_pct% %% schneller. Falls die Illusion noch besteht, wenn Vengeful Spirit wieder einsteigt, nimmt sie deren Platz ein. Von der Illusion erlangte EP werden Vengeful Spirit gutgeschrieben."
 		"DOTA_Tooltip_ability_vengefulspirit_command_aura_Lore"							"Obwohl sie nicht unbedingt ihre endlose Leidenschaft für Rache teilen, stützen sich ihre Verbündeten im Kampf auf ihren Fanatismus."
-		"DOTA_Tooltip_ability_vengefulspirit_command_aura_Note0"						"Die Illusion der Rache gewährt auch nach Vengeful Spirits Tod noch die Vengeance Aura."
-		"DOTA_Tooltip_ability_vengefulspirit_command_aura_Note1"						"Starke Illusionen werden von Zaubern nicht sofort zerstört."
 		"DOTA_Tooltip_ability_vengefulspirit_command_aura_bonus_base_damage"			"%GRUNDSCHADENBONUS:"
 		"DOTA_Tooltip_ability_vengefulspirit_command_aura_aura_radius"					"RADIUS:"
 		"DOTA_Tooltip_ability_vengefulspirit_nether_swap"								"Nether Swap"
@@ -861,7 +859,6 @@
 		"DOTA_Tooltip_ability_pudge_flesh_heap_flesh_heap_range"						"REICHWEITE:"
 		"DOTA_Tooltip_ability_pudge_flesh_heap_duration"								"DAUER:"
 		"DOTA_Tooltip_ability_pudge_dismember"											"Dismember"
-		"DOTA_Tooltip_ability_pudge_dismember_Description"								"KANALISIEREND – Pudge nimmt einen Bissen von einer gegnerischen Einheit, was diese außer Gefecht setzt und kontinuierlich Schaden verursacht. Die Einheit wird mit einem Tempo von %pull_units_per_second% Einheiten pro Sekunde zu Pudge herangezogen. Max. Reichweite: %pull_distance_limit% Einheiten. Pudge wird dabei um den Betrag des verursachten Schadens geheilt. Dauer bei Dienern und neutralen Einheiten erhöht."
 		"DOTA_Tooltip_ability_pudge_dismember_shard_description"						"Reduziert Abklingzeit und erlaubt es, einen Verbündeten mit erhöhter Zauberreichweite anzuvisieren. Das Ziel wird verschlungen und pro Sekunde um einen Anteil seiner maximalen Lebenspunkte geheilt."
 		"DOTA_Tooltip_ability_pudge_dismember_Lore"										"\"Wenn ich mit diesem Gesindel fertig bin, sind sie bereit für 'ne Pastete!\""
 		"DOTA_Tooltip_ability_pudge_dismember_Note0"									"Wenn eine von Dismember betroffene Einheit unsichtbar wird, bleibt der Effekt von Dismember dennoch weiterhin bestehen."
@@ -935,6 +932,8 @@
 		"DOTA_Tooltip_modifier_bane_nightmare_Description"	"Schläft"
 		"DOTA_Tooltip_modifier_bane_fiends_grip"	"Teufelsgriff"
 		"DOTA_Tooltip_modifier_bane_fiends_grip_Description"	"Betäubt und erleidet Schaden. Verliert alle %fMODIFIER_PROPERTY_TOOLTIP% Sekunden %fMODIFIER_PROPERTY_TOOLTIP% %% des maximalen Manavorrats."
+		"DOTA_Tooltip_modifier_bane_fiends_grip_cast_illusion"				"Teufelsgriff"
+		"DOTA_Tooltip_modifier_bane_fiends_grip_cast_illusion_Description"	"Außer Gefecht gesetzt."
 		
 		//EARTHSHAKER
 		"DOTA_Tooltip_ability_earthshaker_fissure"										"Fissure"
@@ -1025,9 +1024,6 @@
 		"DOTA_Tooltip_modifier_sandking_sand_storm"					"Sandsturm"
 		"DOTA_Tooltip_modifier_sandking_sand_storm_Description"		"In der Nähe befindliche Einheiten erleiden %dMODIFIER_PROPERTY_TOOLTIP% Schaden pro Sekunde."
 		"DOTA_Tooltip_modifier_sand_king_caustic_finale_orb"		"Ätzendes Finale"
-		"DOTA_Tooltip_modifier_sand_king_caustic_finale_orb_Description"	"Durch Sand Kings Angriffe vergiftet. Sie werden beim Tod explodieren und im Umkreis Schaden verursachen."
-		"DOTA_Tooltip_modifier_sand_king_caustic_finale_slow"		"Verlangsamung durch Caustic Finale"
-		"DOTA_Tooltip_modifier_sand_king_caustic_finale_slow_Description"	"Bewegung um %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE% %% verlangsamt."
 		"DOTA_Tooltip_modifier_sand_king_epicenter"						"Epizentrum"
 		"DOTA_Tooltip_modifier_sand_king_epicenter_Description"			"Erzeugt eine Erschütterung in der Erde, verursacht Schaden und verlangsamt im Umkreis."
 		"DOTA_Tooltip_modifier_sand_king_epicenter_slow"				"Verlangsamung durch Epicenter"
@@ -1232,7 +1228,6 @@
 		"DOTA_Tooltip_ability_skeleton_king_vampiric_aura_Note1"						"Wird zu anderen Lebensraubeffekten hinzuaddiert."
 		"DOTA_Tooltip_ability_skeleton_king_vampiric_aura_vampiric_aura"				"%LEBENSRAUB:"
 		"DOTA_Tooltip_ability_skeleton_king_vampiric_aura_max_skeleton_charges"			"MAX. AUFLADUNGEN:"
-		"DOTA_Tooltip_ability_skeleton_king_vampiric_aura_skeleton_duration"			"SKELETTDAUER:"
 		"DOTA_Tooltip_ability_skeleton_king_mortal_strike"								"Mortal Strike"
 		"DOTA_Tooltip_ability_skeleton_king_mortal_strike_Description"					"Wraith King verursacht passiv Bonusschaden beim nächsten Angriff, mit einer Abklingzeit."
 		"DOTA_Tooltip_ability_skeleton_king_mortal_strike_Lore"							"Ein Schlag, um einen Feind zu zerschmettern."
@@ -1332,7 +1327,6 @@
 
 
 		"DOTA_Tooltip_modifier_drowranger_wave_of_silence"					"Böe"
-		"DOTA_Tooltip_modifier_drowranger_wave_of_silence_Description"					"Von Drow Ranger zum Schweigen gebracht. Verfehlt %dMODIFIER_PROPERTY_MISS_PERCENTAGE% %% aller Angriffe."
 		"DOTA_Tooltip_modifier_drow_ranger_wave_of_silence_buff"					"Böe"
 		"DOTA_Tooltip_modifier_drow_ranger_wave_of_silence_buff_Description"					"Bewegungstempo um %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE% %% erhöht."
 
@@ -1425,19 +1419,19 @@
 		"DOTA_Tooltip_modifier_morphling_adaptive_strike_Description"		"Betäubt"
 
 		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_strength_buff"							"Morph – Stärkeverlust"
-		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_strength_buff_Description"				"Erhält %dMODIFIER_PROPERTY_STATS_STRENGTH_BONUS% Stärke und %dMODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING% %% Statusresistenz."
+		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_strength_buff_Description"				"Erhält %dMODIFIER_PROPERTY_STATS_STRENGTH_BONUS% Stärke, %dMODIFIER_PROPERTY_STATS_AGILITY_BONUS% Agilität, %dMODIFIER_PROPERTY_STATS_INTELLECT_BONUS% Intelligenz und %dMODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING% %% Statusresistenz."
 		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_strength_debuff"						"Morph – Stärkeverlust"
-		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_strength_debuff_Description"			"Verliert %dMODIFIER_PROPERTY_STATS_STRENGTH_BONUS_PERCENTAGE% %% Stärke und %dMODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING% %% Statusresistenz."
+		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_strength_debuff_Description"			"Verliert %dMODIFIER_PROPERTY_STATS_STRENGTH_BONUS_PERCENTAGE% %% Attribute und %dMODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING% %% Statusresistenz."
 
 		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_agility_buff"							"Morph – Agilitätsverlust"
-		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_agility_buff_Description"				"Erhält %dMODIFIER_PROPERTY_STATS_AGILITY_BONUS% Agilität und %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT% Angriffstempo."
+		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_agility_buff_Description"				"Erhält %dMODIFIER_PROPERTY_STATS_STRENGTH_BONUS% Stärke, %dMODIFIER_PROPERTY_STATS_AGILITY_BONUS% Agilität, %dMODIFIER_PROPERTY_STATS_INTELLECT_BONUS% Intelligenz und %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT% Angriffstempo."
 		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_agility_debuff"						"Morph – Agilitätsverlust"
-		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_agility_debuff_Description"			"Verliert %dMODIFIER_PROPERTY_STATS_AGILITY_BONUS_PERCENTAGE% %% Agilität und %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT% Angriffstempo."
+		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_agility_debuff_Description"			"Verliert %dMODIFIER_PROPERTY_STATS_AGILITY_BONUS_PERCENTAGE% %% Attribute und %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT% Angriffstempo."
 
 		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_intelligence_buff"						"Morph – Intelligenzverlust"
-		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_intelligence_buff_Description"			"Erhält %dMODIFIER_PROPERTY_STATS_INTELLECT_BONUS% Intelligenz und %dMODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE% %% Zauberverstärkung."
+		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_intelligence_buff_Description"			"Erhält %dMODIFIER_PROPERTY_STATS_STRENGTH_BONUS% Stärke, %dMODIFIER_PROPERTY_STATS_AGILITY_BONUS% Agilität, %dMODIFIER_PROPERTY_STATS_INTELLECT_BONUS% Intelligenz und %dMODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE% %% Zauberverstärkung."
 		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_intelligence_debuff"					"Morph – Intelligenzverlust"
-		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_intelligence_debuff_Description"		"Verliert %dMODIFIER_PROPERTY_STATS_INTELLECT_BONUS_PERCENTAGE% %% Intelligenz und %dMODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE% %% Zauberverstärkung."
+		"DOTA_Tooltip_modifier_morphling_scepter_stats_drain_intelligence_debuff_Description"		"Verliert %dMODIFIER_PROPERTY_STATS_INTELLECT_BONUS_PERCENTAGE% %% Attribute und %dMODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE% %% Zauberverstärkung."
 
 		//BLOOD SEEKER
 		"DOTA_Tooltip_ability_bloodseeker_bloodrage"									"Bloodrage"
@@ -1862,6 +1856,7 @@
 		"DOTA_Tooltip_modifier_kunkka_tidebringer"				"Flutbringer"
 		"DOTA_Tooltip_modifier_kunkka_tidebringer_Description"	"Physischer Schaden bei Flächenangriffen um %dMODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE% erhöht."
 		"DOTA_Tooltip_modifier_kunkka_tidebringer_slow"						"Flutbringer"
+		"DOTA_Tooltip_modifier_kunkka_tidebringer_slow_Description"			"Bewegungstempo um %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE% %% reduziert."
 		"DOTA_Tooltip_modifier_kunkka_torrent"					"Sturzflut"
 		"DOTA_Tooltip_modifier_kunkka_torrent_Description"		"Betäubt von einem massiven Schwall von Wasser."
 		"DOTA_Tooltip_modifier_kunkka_torrent_slow"				"Verlangsamung durch Torrent"
@@ -2788,11 +2783,10 @@
 		"DOTA_Tooltip_ability_beastmaster_wild_axes_scepter_cooldown"							"ABKLINGZEIT:"
 		"DOTA_Tooltip_ability_beastmaster_wild_axes_scepter_description"				"Entfernt die Abklingzeit von Wild Axes, sodass diese sofort nach ihrer Rückkehr wieder geworfen werden können."
 		"DOTA_Tooltip_ability_beastmaster_call_of_the_wild_boar"						"Call of the Wild: Keiler"
-		"DOTA_Tooltip_ability_beastmaster_call_of_the_wild_boar_Description"				"Beastmaster ruft einen Keiler herbei, der ihm im Kampf zur Seite steht."
 		"DOTA_Tooltip_ability_beastmaster_call_of_the_wild_boar_Lore"						"Nachdem er sich während seiner Kindheit mit der seltsamen Bestie angefreundet hatte, lernte Beastmaster Tiere in Zeiten der Not zu rufen."
 		"DOTA_Tooltip_ability_beastmaster_call_of_the_wild_boar_duration"				"BESCHWÖRUNGSDAUER:"
 		"DOTA_Tooltip_ability_beastmaster_call_of_the_wild_boar_boar_base_max_health"				"GRUNDLEBENSPUNKTE (KEILER):"
-		"DOTA_Tooltip_ability_beastmaster_call_of_the_wild_boar_boar_base_damage"			"GRUNDANGRIFFSSCHADEN (KEILER):"
+		"DOTA_Tooltip_ability_beastmaster_call_of_the_wild_boar_boar_total_damage_tooltip"			"ANGRIFFSSCHADEN (KEILER):"
 		"DOTA_Tooltip_ability_beastmaster_call_of_the_wild_boar_boar_moveslow_tooltip"			"%VERLANGSAMUNG:"
 		"DOTA_Tooltip_ability_beastmaster_call_of_the_wild_boar_boar_poison_duration_tooltip"	"GIFTDAUER:"
 		"DOTA_Tooltip_ability_beastmaster_call_of_the_wild_hawk"						"Call of the Wild: Falke"
@@ -4981,7 +4975,6 @@
 		"DOTA_Tooltip_ability_lone_druid_spirit_bear_entangle_hero_entangle_chance"		"%ENTANGLE-CHANCE (TRUE FORM):"
 		"DOTA_Tooltip_ability_lone_druid_spirit_bear_entangle_hero_duration"		"DAUER (HELDEN):"
 		"DOTA_Tooltip_ability_lone_druid_spirit_bear_demolish"						"Demolish"	
-		"DOTA_Tooltip_ability_lone_druid_spirit_bear_demolish_Description"			"Erhöht die Macht des Geisterbären, sodass er mehr Schaden an Gebäuden verursacht und zusätzliche Magieresistenz erhält."
 		"DOTA_Tooltip_ability_lone_druid_spirit_bear_demolish_bonus_building_damage""%BONUSSCHADEN AN GEBÄUDEN (BÄR):"
 		"DOTA_Tooltip_ability_lone_druid_spirit_bear_demolish_true_form_bonus_building_damage"		"%BONUSSCHADEN AN GEBÄUDEN (TRUE FORM):"		
 		"DOTA_Tooltip_ability_lone_druid_spirit_bear_demolish_spell_resistance"		"%MAGIERESISTENZ:"
@@ -5112,7 +5105,7 @@
 		"DOTA_Tooltip_ability_brewmaster_primal_split_tooltip_storm_brewling_hp"	"<font color=\"#87ceeb\">LEBENSPUNKTE (STURMLING)</font>:"
 		"DOTA_Tooltip_ability_brewmaster_primal_split_tooltip_fire_brewling_hp"		"<font color=\"#FF0000\">LEBENSPUNKTE (FEUERLING)</font>:"
 		"DOTA_Tooltip_ability_brewmaster_primal_split_shard_description"			"Primal Split erschafft jetzt auch einen Leerling mit der Fähigkeit „Astral Pulse“."
-		"DOTA_Tooltip_ability_brewmaster_primal_split_shard_tooltip_void_brewling_hp"	"LP:"
+		"DOTA_Tooltip_ability_brewmaster_primal_split_shard_tooltip_void_brewling_hp"	"<font color=\"#662375\">LEBENSPUNKTE (LEERLING)</font>:"
 		"DOTA_Tooltip_ability_brewmaster_primal_split_scepter_description"			"Primal Split hat jetzt 2 Aufladungen und kann jederzeit abgebrochen werden. Wiederaufladezeit entspricht der normalen Abklingzeit."
 		"DOTA_Tooltip_ability_brewmaster_primal_split_scepter_movementspeed"		"BONUSBEWEGUNGSTEMPO:"
 		"DOTA_Tooltip_ability_brewmaster_primal_split_cancel"								"Primal Split abbrechen"
@@ -5548,6 +5541,8 @@
 		"DOTA_Tooltip_ability_visage_summon_familiars_familiar_speed"		"FAMILIAR-TEMPO:"
 		"DOTA_Tooltip_ability_visage_summon_familiars_familiar_attack_damage"	"ANGRIFFSSCHADEN (FAMILIAR):"
 		"DOTA_Tooltip_ability_visage_summon_familiars_familiar_hp"			"LP:"
+		"DOTA_Tooltip_ability_visage_summon_familiars_tooltip_familiar_count"	"BEGLEITERANZAHL:"
+
 		"DOTA_Tooltip_ability_visage_summon_familiars_stone_form"					"Stone Form"
 		"DOTA_Tooltip_ability_visage_summon_familiars_stone_form_Description"		"Nach einer kurzen Verzögerung verwandelt sich der Familiar zu Stein und stürzt zu Boden, wobei er alle Ziele im Umfeld betäubt und schädigt. Der Familiar wird unverwundbar und regeneriert sehr schnell seine Lebenspunkte. Nach %stone_duration% Sekunden verlässt der Familiar automatisch die Stone Form."
 		"DOTA_Tooltip_ability_visage_summon_familiars_stone_form_stun_duration"		"BETÄUBUNGSDAUER:"
@@ -5796,9 +5791,8 @@
 		"DOTA_Tooltip_ability_nyx_assassin_spiked_carapace_stun_duration"		"BETÄUBUNGSDAUER:"
 		"DOTA_Tooltip_ability_nyx_assassin_spiked_carapace_damage_reflect_pct"	"%REFLEKTIERTER SCHADEN:"
 		"DOTA_Tooltip_ability_nyx_assassin_vendetta"							"Vendetta"
-		"DOTA_Tooltip_ability_nyx_assassin_vendetta_shard_description"			"Erhöht das Bonusbewegungstempo. Ein erfolgreicher Treffer reduziert jetzt die Magieresistenz des Ziels."
 		"DOTA_Tooltip_ability_nyx_assassin_vendetta_Description"				"Nyx Assassin wird unsichtbar und erhält zusätzliches Bewegungstempo. Wenn Nyx Assassin angreift und so die Unsichtbarkeit unterbricht, wird erheblicher Bonusschaden verursacht."
-				"DOTA_Tooltip_ability_nyx_assassin_vendetta_Lore"						"Der Skarabäus tötet für den Ruhm seiner Königin."
+		"DOTA_Tooltip_ability_nyx_assassin_vendetta_Lore"						"Der Skarabäus tötet für den Ruhm seiner Königin."
 		"DOTA_Tooltip_ability_nyx_assassin_vendetta_Note0"						"Hat eine Übergangszeit von %fade_time% Sekunden."
 		"DOTA_Tooltip_ability_nyx_assassin_vendetta_Note1"						"Wird die Unsichtbarkeit durch einen Zauber aufgehoben oder ihre Dauer überschritten, so geht der Bonus Schaden ebenfalls verloren."
 		"DOTA_Tooltip_ability_nyx_assassin_vendetta_duration"					"DAUER:"
@@ -6658,7 +6652,6 @@
 		"DOTA_Tooltip_ability_skywrath_mage_arcane_bolt_bolt_damage"		"GRUNDSCHADEN:"
 		"DOTA_Tooltip_ability_skywrath_mage_arcane_bolt_int_multiplier"		"BONUSSCHADEN PRO INT.:"
 		"DOTA_Tooltip_ability_skywrath_mage_concussive_shot"				"Concussive Shot"
-		"DOTA_Tooltip_ability_skywrath_mage_concussive_shot_Description"	"Skywrath Mage setzt zu einem weitreichenden Schuss an, der den nächsten Helden innerhalb eines großen Radius trifft. Alle gegnerischen Einheiten um das Ziel erhalten Schaden und werden verlangsamt."
 		"DOTA_Tooltip_ability_skywrath_mage_concussive_shot_Lore"			"Jene, die am Hof des Grausamen Horsts dienen, befinden sich in einem ständigen Geheimkrieg. Man muss stets wissen, wo sich die Gefahr verbirgt."
 		"DOTA_Tooltip_ability_skywrath_mage_concussive_shot_Note0"			"Falls sich keine gegnerischen Helden in Reichweite befinden oder diese durch Nebel verdeckt sind, trifft Concussive Shot den am nächsten befindlichen gegnerischen Diener."
 		"DOTA_Tooltip_ability_skywrath_mage_concussive_shot_Note1"			"Fügt Creeps innerhalb des Wirkungsradius Schaden zu."
@@ -7521,7 +7514,7 @@ Sobald er ein Ziel findet, entlädt er sich auf dieses, verursacht dabei magisch
 
 		// Monkey King
 		"DOTA_Tooltip_ability_monkey_king_tree_dance"				"Tree Dance"
-		"DOTA_Tooltip_ability_monkey_king_tree_dance_Description"	"Monkey King springt an einen Baum und setzt sich auf dessen Spitze. Während er sitzt, erhält er die Fähigkeit \"Primal Spring\", ein kanalisierter Sprungangriff. Falls der Baum unter Monkey King zerstört wird, fällt er zu Boden und wird 4 Sekunden lang betäubt. Schaden von Spieler-kontrollierten Einheiten oder Roshan, während Sie auf dem Boden sind, deaktiviert Tree Jump temporär."
+		"DOTA_Tooltip_ability_monkey_king_tree_dance_Description"	"Monkey King springt an einen Baum und setzt sich auf dessen Spitze. Während er sitzt, erhält er die Fähigkeit „Primal Spring“, ein kanalisierter Sprungangriff. Falls der Baum unter Monkey King zerstört wird, fällt er zu Boden und wird 4 Sekunden lang betäubt. Schaden von Spieler-kontrollierten Einheiten oder Roshan, während Sie auf dem Boden sind, deaktiviert Tree Jump temporär."
 		"DOTA_Tooltip_ability_monkey_king_tree_dance_Lore"			"Sun Wukong tanzt gewandt im Blätterdach der Baumkronen, stets gerade noch so außer Reichweite."
 		"DOTA_Tooltip_ability_monkey_king_tree_dance_Note0"			"Die Abklingzeit von Tree Dance beginnt bei der Landung."
 		"DOTA_Tooltip_ability_monkey_king_tree_dance_Note1"			"Auf den Boden rechtsklicken, um vom Baum zu springen."
@@ -7877,8 +7870,6 @@ Sobald er ein Ziel findet, entlädt er sich auf dieses, verursacht dabei magisch
 		"DOTA_Tooltip_modifier_mars_bulwark_Description"				"Blockt %dMODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE% %% des Angriffsschadens, wenn dieser von vorne kommt und den halben Wert bei Angriffen von den Seiten."
 
 		"DOTA_Tooltip_modifier_mars_bulwark_soldier_thinker"				"Bollwerksoldaten"
-		"DOTA_Tooltip_modifier_mars_bulwark_soldier_thinker_Description"	"Soldaten verursachen Mars' vollen Schaden + 75 und können auch Angriffseffekte auslösen. Angriffe verlangsamen Gegner für 1 Sekunde um 20 %%. Ein Gegner kann immer nur von einem Soldaten gleichzeitig angegriffen werden."
-
 		"DOTA_Tooltip_modifier_mars_scepter_damage_slow"					"Bollwerk"
 		"DOTA_Tooltip_modifier_mars_scepter_damage_slow_Description"		"Bewegungstempo um %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE% %% reduziert."
 
@@ -8059,8 +8050,6 @@ Sobald er ein Ziel findet, entlädt er sich auf dieses, verursacht dabei magisch
 		"DOTA_Tooltip_ability_snapfire_lil_shredder_armor_duration"	"MALUSDAUER:"
 
 		"DOTA_Tooltip_modifier_snapfire_lil_shredder_buff"				"Lil' Shredder"
-		"DOTA_Tooltip_modifier_snapfire_lil_shredder_buff_Description"	"Angriffstempo um %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT% erhöht und Angriffe verlangsamen das Angriffstempo des Ziels."
-
 		"DOTA_Tooltip_modifier_snapfire_lil_shredder_debuff"				"Lil' Shredder"
 		"DOTA_Tooltip_modifier_snapfire_lil_shredder_debuff_Description"	"Diese Einheit hat reduzierte Rüstung."
 
@@ -10777,7 +10766,7 @@ Sobald er ein Ziel findet, entlädt er sich auf dieses, verursacht dabei magisch
 
 		"DOTA_Tooltip_ability_black_drake_magic_amplification_aura"										"Aura der Zauberverstärkung"
 		"DOTA_Tooltip_ability_black_drake_magic_amplification_aura_Description"							"Der starre Blick der Schwarzwürmer macht Gegner anfälliger für Zauberschaden."
-		"DOTA_Tooltip_ability_black_drake_magic_amplification_aura_"									"%ZUSÄTZLICH ERLITTENER ZAUBERSCHADEN:"
+		"DOTA_Tooltip_ability_black_drake_magic_amplification_aura_spell_amp"							"%ZUSÄTZLICH ERLITTENER ZAUBERSCHADEN:"
 		"DOTA_Tooltip_ability_black_drake_magic_amplification_aura_radius"								"RADIUS:"
 
 		"DOTA_Tooltip_modifier_black_drake_magic_amplification"											"Aura der Zauberverstärkung"
@@ -11342,7 +11331,7 @@ Sobald er ein Ziel findet, entlädt er sich auf dieses, verursacht dabei magisch
 		"DOTA_Tooltip_ability_item_bloodthorn_bonus_attack_speed"               "+$attack"
 		"DOTA_Tooltip_ability_item_bloodthorn_bonus_damage"                     "+$damage"
 		"DOTA_Tooltip_ability_item_bloodthorn_bonus_mana_regen"                 "+$mana_regen"
-		"DOTA_Tooltip_ability_item_bloodthorn_bonus_magic_resist"                 "+$spell_resist"
+		"DOTA_Tooltip_ability_item_bloodthorn_bonus_magic_resist"               "%+$spell_resist"
 		"DOTA_Tooltip_ability_item_bloodthorn_spell_amp"						"%+Zauberverstärkung"
 		"DOTA_Tooltip_ability_item_bloodthorn_mana_regen_multiplier"			"%+Manaregenerationsverstärkung"
 
@@ -11583,7 +11572,6 @@ Sobald er ein Ziel findet, entlädt er sich auf dieses, verursacht dabei magisch
 		"DOTA_Tooltip_ability_item_energy_booster_bonus_mana"					"+$mana"
 		
 		"DOTA_Tooltip_ability_item_ethereal_blade_Description"					"<h1>Aktiv: Ätherstoß</h1>Lässt die Zieleinheit eine ätherische Form annehmen, wodurch diese gegen physischen Schaden immun wird, aber nicht mehr angreifen kann und %ethereal_damage_bonus% %% mehr Magieschaden erleidet.<br><br>Gegnerische Ziele werden außerdem um %blast_movement_slow% %% verlangsamt und erleiden das %blast_agility_multiplier%-fache ihres Primärattributs + %blast_damage_base% als Magieschaden.<br><br>Reichweite: %abilitycastrange%<br>Dauer: %duration% Sekunden"
-		"DOTA_Tooltip_ability_item_ethereal_blade_Note0"						"Teilt die Abklingzeit mit Ghost Scepter."
 		"DOTA_Tooltip_ability_item_ethereal_blade_Note1"						"Ätherische Einheiten erleiden %ethereal_damage_bonus% %% mehr Magieschaden."
 		"DOTA_Tooltip_ability_item_ethereal_blade_Note3"						"Die ätherische Form wird durch Nutzen einer Town Portal Scroll oder Boots of Travel nicht unterbrochen."
 		"DOTA_Tooltip_ability_item_ethereal_blade_bonus_agility"				"+$agi"
@@ -11636,7 +11624,6 @@ Sobald er ein Ziel findet, entlädt er sich auf dieses, verursacht dabei magisch
 		"DOTA_Tooltip_ability_item_eagle_eye_Note0"									"Auf Kurier deaktiviert."
 		"DOTA_Tooltip_ability_item_ghost_Description"							"<h1>Aktiv: Geistgestalt</h1> Sie nehmen für %duration% Sekunden eine Geistform an, werden dadurch immun gegen physischen Schaden, können jedoch nicht angreifen und erleiden %extra_spell_damage_percent% %% mehr magischen Schaden."
 		"DOTA_Tooltip_ability_item_ghost_Note0"								"Endet, wenn Sie zauberimmun werden, und hat keinen Effekt, wenn Sie schon zauberimmun sind."
-		"DOTA_Tooltip_ability_item_ghost_Note1"								"Teilt die Abklingzeit mit Ethereal Blade."
 		"DOTA_Tooltip_ability_item_ghost_bonus_all_stats"						"+$all"
 		//"DOTA_Tooltip_ability_item_ghost_duration"							"GHOST DURATION:"
 		//"DOTA_Tooltip_ability_item_ghost_extra_spell_damage_percent"							"%GHOST ADDED MAGIC DAMAGE:"
@@ -11838,7 +11825,6 @@ Sobald er ein Ziel findet, entlädt er sich auf dieses, verursacht dabei magisch
 		//"DOTA_Tooltip_ability_item_guardian_greaves_replenish_radius"		"AURA/MEND RADIUS:"
 		"DOTA_Tooltip_ability_item_guardian_greaves_Lore"						"Eines von vielen heiligen Werkzeugen, konstruiert in Ehren des Allwissenden."
 		"DOTA_Tooltip_ability_item_guardian_greaves_Note0"				"Die Aura hat nur Auswirkungen auf Helden."
-		
 		"DOTA_Tooltip_modifier_item_guardian_greaves_aura"		"Schutzaura"
 		"DOTA_Tooltip_modifier_item_guardian_greaves_aura_Description"	"Gewährt %fMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% Lebensregeneration und %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS% Rüstung."
 
@@ -11852,7 +11838,6 @@ Sobald er ein Ziel findet, entlädt er sich auf dieses, verursacht dabei magisch
 		"DOTA_Tooltip_ability_item_solar_crest_self_movement_speed"			"+$move_speed"
 		"DOTA_Tooltip_ability_item_solar_crest_bonus_mana_regen_pct"		"+$mana_regen"
 		"DOTA_Tooltip_ability_item_solar_crest_Lore"						"Ein Talisman, geschmiedet zu Ehren des Himmels am Tage."
-
 		"DOTA_Tooltip_modifier_item_solar_crest_armor_reduction"		"Solar Crest"
 		"DOTA_Tooltip_modifier_item_solar_crest_armor_reduction_Description"		"Rüstung um %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%, Bewegungstempo um %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE% %% und Angriffstempo um %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT% reduziert."
 		"DOTA_Tooltip_modifier_item_solar_crest_armor_addition"		"Solar Crest"
@@ -12029,7 +12014,6 @@ Sobald er ein Ziel findet, entlädt er sich auf dieses, verursacht dabei magisch
 
 		"DOTA_Tooltip_ability_item_mekansm_Description"							"<h1>Aktiv: Wiederherstellung</h1>Heilt Verbündete im Umkreis von %heal_radius% Einheiten um %heal_amount% Lebenspunkte.\n\n<h1>Passiv: Mekansm-Aura</h1>Gewährt Verbündeten im Umkreis von %aura_radius% Einheiten %aura_health_regen% Lebensregeneration."
 		"DOTA_Tooltip_ability_item_mekansm_Lore"							    "Ein leuchtender Edelstein, der aus verschiedenen Teilen zusammengesetzt wurde, die aus irgendeinem Grund perfekt zusammenpassen."
-		"DOTA_Tooltip_ability_item_mekansm_Note0"								"Effekt wirkt nicht auf Einheiten, die während der Abklingzeit von Mekansm von Wiederherstellung profitiert haben."
 		"DOTA_Tooltip_ability_item_mekansm_Note1" 								"Mehrere Instanzen von Mekansm Aura werden nicht aufsummiert."
 		"DOTA_Tooltip_ability_item_mekansm_bonus_armor"						"+$armor"
 		
@@ -12185,16 +12169,7 @@ Sobald er ein Ziel findet, entlädt er sich auf dieses, verursacht dabei magisch
 		"DOTA_Tooltip_ability_item_pipe_Note1"									"Wirkt multiplikativ mit anderen Quellen von Magieresistenz."
 		"DOTA_Tooltip_ability_item_pipe_health_regen"							"+$hp_regen"
 		"DOTA_Tooltip_ability_item_pipe_magic_resistance"							"%+$spell_resist"
-		//"DOTA_Tooltip_ability_item_pipe_bonus_all_stats"					"+$all"
-        //"DOTA_Tooltip_ability_item_pipe_aura_health_regen"					"AURA HEALTH REGEN:"
-		//"DOTA_Tooltip_ability_item_pipe_magic_resistance_aura"			"%AURA MAGIC RESISTANCE:"
-		//"DOTA_Tooltip_ability_item_pipe_aura_radius"							"AURA RADIUS:"
-		//"DOTA_Tooltip_ability_item_pipe_barrier_block"							"BARRIER SPELL BLOCK:"
-		//"DOTA_Tooltip_ability_item_pipe_barrier_duration"						"BARRIER DURATION:"
-		//"DOTA_Tooltip_ability_item_pipe_barrier_radius"							"BARRIER CAST RADIUS:"
-		
-		"DOTA_Tooltip_modifier_item_pipe_aura"				"Insight-Aura"
-		"DOTA_Tooltip_modifier_item_pipe_aura_Description"	"Regeneriert %fMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% LP pro Sekunde und erhält +%dMODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS% %% Magieresistenz."
+"DOTA_Tooltip_modifier_item_pipe_aura_Description"	"Regeneriert %fMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% LP pro Sekunde und erhält +%dMODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS% %% Magieresistenz."
 		"DOTA_Tooltip_modifier_item_pipe_barrier"				"Barriere"
 		"DOTA_Tooltip_modifier_item_pipe_barrier_Description"	"Magischer Schild, der %dMODIFIER_PROPERTY_INCOMING_SPELL_DAMAGE_CONSTANT% Magieschaden abblockt."
 
@@ -12771,7 +12746,7 @@ Sobald er ein Ziel findet, entlädt er sich auf dieses, verursacht dabei magisch
 		"DOTA_Tooltip_modifier_item_revenants_brooch_counter"					"Brosche des Wiedergängers"
 		"DOTA_Tooltip_modifier_item_revenants_brooch_counter_Description"		"Angriffe können nicht verfehlen und verursachen Magieschaden."
 
-		"DOTA_Tooltip_ability_item_veil_of_discord_Description"					"<h1>Aktiv: Magieschwäche</h1> Eine Explosion mit einem Radius von %debuff_radius% Einheiten verstärkt bei getroffenen gegnerischen Helden den erlittenen Magieschaden um %spell_amp% %%.<br><br>Reichweite: %abilitycastrange%<br>Dauer: %resist_debuff_duration% Sekunden\n\n<h1>Passiv: Basilius' Aura</h1>Gewährt Verbündeten %aura_mana_regen% Manaregeneration.<br><br>Radius: %aura_radius%"
+		"DOTA_Tooltip_ability_item_veil_of_discord_Description"					"<h1>Aktiv: Zauberschwäche</h1> Eine Explosion mit einem Radius von %debuff_radius% Einheiten verstärkt bei getroffenen gegnerischen Helden den erlittenen Magieschaden um %spell_amp% %%.<br><br>Reichweite: %abilitycastrange%<br>Dauer: %resist_debuff_duration% Sekunden\n\n<h1>Passiv: Basilius' Aura</h1>Gewährt Verbündeten %aura_mana_regen% Manaregeneration.<br><br>Radius: %aura_radius%"
 		"DOTA_Tooltip_ability_item_veil_of_discord_Lore"						"Die Kopfbedeckung von korrupten Magiern."
 		"DOTA_Tooltip_ability_item_veil_of_discord_bonus_all_stats"			"+$all"
 
@@ -12820,7 +12795,7 @@ Sobald er ein Ziel findet, entlädt er sich auf dieses, verursacht dabei magisch
 		//"DOTA_Tooltip_ability_item_nullifier_bonus_mana_regen"					"+$mana_regen"
 
 		"DOTA_Tooltip_modifier_item_nullifier_mute" 						"Nullifier"
-		"DOTA_Tooltip_modifier_item_nullifier_mute_Description" 			"Wird kontinuierlich entzaubert. Gegnerische Angriffe verlangsamen kurzzeitig."
+		"DOTA_Tooltip_modifier_item_nullifier_mute_Description" 			"Das Ziel wird kontinuierlich entzaubert."
 		"DOTA_Tooltip_modifier_item_nullifier_slow"							"Nullifier-Verlangsamung"
 		"DOTA_Tooltip_modifier_item_nullifier_slow_Description"				"Um %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE% %% verlangsamt."
 
@@ -13000,14 +12975,10 @@ Sobald er ein Ziel findet, entlädt er sich auf dieses, verursacht dabei magisch
 		"DOTA_Tooltip_ability_item_flicker_Lore"		"Ein „Teleportationsgerät“, das rein technisch gesehen durchaus tut, was es tun soll. Erschaffen von einer berüchtigten Feenschwindlerin."
 		"DOTA_Tooltip_ability_item_flicker_bonus_movement_speed"		"+$move_speed"
 		
-		"DOTA_Tooltip_ability_item_spy_gadget_Description"		"<h1>Passiv: Vorausschauende Aura</h1> Verringert die Abklingzeit von Scan um %scan_cooldown_reduction% %%. Erhöht Angriffs- und Zauberreichweite von Verbündeten im Umkreis von %aura_range% Einheiten."
 		"DOTA_Tooltip_ability_item_spy_gadget_scan_cooldown_reduction"		"%ABKLINGZEITREDUZIERUNG (SCAN):"
-		"DOTA_Tooltip_ability_item_spy_gadget_attack_range"		"BONUSANGRIFFSREICHWEITE:"
 		"DOTA_Tooltip_ability_item_spy_gadget_cast_range"		"BONUSZAUBERREICHWEITE:"
 		"DOTA_Tooltip_ability_item_spy_gadget_Lore"		"Ein praktisches Werkzeug, das aus der Nähe zeigt, was einst fern war."
 		"DOTA_Tooltip_modifier_item_spy_gadget"					"Vorausschauende Aura"
-		"DOTA_Tooltip_modifier_item_spy_gadget_Description"		"Erhöht Angriffs- und Zauberreichweite"
-		
 		"DOTA_Tooltip_Ability_item_ocean_heart_Description"		"<h1>Passiv: Wasserregeneration</h1> Gewährt im Fluss %water_hp_regen% Lebensregeneration und %water_mp_regen% Manaregeneration."
 		"DOTA_Tooltip_Ability_item_ocean_heart_Lore"		"Ein vom Salzkonklave gesegneter Talisman."
 		"DOTA_Tooltip_Ability_item_ocean_heart_all_stats"		"+$all"
@@ -13533,7 +13504,6 @@ Sobald er ein Ziel findet, entlädt er sich auf dieses, verursacht dabei magisch
 		"DOTA_Tooltip_modifier_rune_doubledamage"				"Doppelter Schaden"
 		"DOTA_Tooltip_modifier_rune_doubledamage_Description"	"Grundschaden um %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE% %% erhöht."
 		"DOTA_Tooltip_modifier_rune_regen"						"Rune der Regeneration"
-		"DOTA_Tooltip_modifier_rune_regen_Description"			"Regeneriert %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% LP und %dMODIFIER_PROPERTY_MANA_REGEN_CONSTANT% Mana pro Sekunde."
 		"DOTA_Tooltip_modifier_rune_arcane"						"Arkan"
 		"DOTA_Tooltip_modifier_rune_arcane_Description"			"Reduziert Abklingzeiten und Manakosten um 30 %%."
 		"DOTA_Tooltip_modifier_rune_haste"						"Rune der Hast"

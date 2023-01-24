@@ -115,6 +115,8 @@
 		"DOTA_ProCircuit"		"Circuito profesional"
 		"DOTA_LevelUpAttributes"	"+2 para todos los atributos."
 		"DOTA_SeasonalGameMode"				"Modo de juego estacional"
+		"DOTA_PlayDiretide"				"Jugar Despertar Dire"
+
 		"DOTA_Keybind_ALT"		"ALT"
 		"DOTA_Keybind_SHIFT"	"MAYÚS"
 		"DOTA_Keybind_WINDOWS"	"WINDOWS"
@@ -1861,6 +1863,7 @@ Al extenderse su influencia cultural, entraron en conflicto entre sí. La interf
 		"npc_dota_hero_pudge:n"					"#|m|#Pudge"
 		"npc_dota_hero_bane:n"					"#|m|#Bane"
 		"npc_dota_hero_crystal_maiden:n"		"#|f|#Crystal Maiden"
+		"npc_dota_hero_crystal_maiden_persona1:n"		"#|f|#Crystal Maiden (Lobo)"
 		"npc_dota_hero_sven:n"					"#|m|#Sven"
 		"npc_dota_hero_skeleton_king:n"			"#|m|#Wraith King"
 		"npc_dota_hero_storm_spirit:n"			"#|m|#Storm Spirit"
@@ -2117,6 +2120,7 @@ Al extenderse su influencia cultural, entraron en conflicto entre sí. La interf
 		"npc_dota_roshanboo"							"Roooshaaan"
 		"npc_dota_roshan_halloween_minion"				"Roooshaaan"
 		"npc_dota_neutral_creep"						"Creep neutral"
+		"npc_dota_creep_neutral"						"Creep neutral"
 		"npc_dota_necronomicon_warrior"					"Guerrero del Necronomicón"
 		"npc_dota_necronomicon_warrior_1"				"Guerrero del Necronomicón"
 		"npc_dota_necronomicon_warrior_2"				"Guerrero del Necronomicón"
@@ -4293,6 +4297,9 @@ Los jugadores que no han elegido un héroe están perdiendo 1 oro por segundo. S
 		"DOTA_ToolTip_Dispellable_Item_Yes_Strong"	"Disipable solamente por disipaciones fuertes."
 		"DOTA_ToolTip_Dispellable_Item_Yes_Soft"	"Disipable."
 
+		"DOTA_ToolTip_Disabled_By_Root"		"No se puede lanzar mientras se está atrapado."
+
+
 		"DOTA_ToolTip_Aghanim"				"Mejorable con el Cetro de Aghanim."
 		
 		"DOTA_ToolTip_Level" "NIVEL"
@@ -5447,6 +5454,9 @@ Los jugadores que no han elegido un héroe están perdiendo 1 oro por segundo. S
 
 		"game_mode_event_10v10"										"Elección libre: 10 contra 10"
 		"game_mode_event_10v10_desc"								"Una versión de Elección libre donde cada equipo tiene 10 jugadores."
+
+		"game_mode_event_winter_2022"								"Despertar Dire"
+		"game_mode_event_winter_2022_play"							"Jugar Despertar Dire"
 
 		"dota_matchmaking_language_1"								"Inglés"
 		"dota_matchmaking_language_2"								"Ruso"
@@ -7233,7 +7243,7 @@ Los jugadores que no han elegido un héroe están perdiendo 1 oro por segundo. S
 
 		"DOTA_Diretide_Frontpage_Label"	"Despertar Dire"
 		"DOTA_Diretide_Frontpage_Title"	"¡El Despertar Dire ha vuelto!"
-		"DOTA_Diretide_Frontpage_Desc"	"¡Roshan ha vuelto más hambriento que nunca! Visita el sitio web de Despertar Dire para ver detalles de todos los dulces y trucos del evento."
+		"DOTA_Diretide_Frontpage_Desc"	"¡Roshan ha vuelto más hambriento que nunca! Visita el sitio web de Despertar Dire para ver detalles de todos los caramelos y trucos del evento."
 
 		"DOTA_Diretide_Frontpage_Sm_Title"	"Despertar Dire disponible hasta el 22 de diciembre"
 		"DOTA_Diretide_Frontpage_Sm_Desc"	"¡Regresó Roshan, más hambriento que nunca! Haz clic aquí para obtener más información sobre todos los trucos y tratos del evento."
@@ -7754,6 +7764,7 @@ Los jugadores que no han elegido un héroe están perdiendo 1 oro por segundo. S
 		"LoadoutSlot_Taunt_Invoker_Kid"						"Burla (niño)"
 		"LoadoutSlot_Voice_Invoker_Kid"						"Voz (niño)"
 		"LoadoutSlot_Back_Invoker_Kid"						"Espalda (niño)"
+		"LoadoutSlot_Persona_Summon_1"						"Unidad Invocada (personaje)"
 		"LoadoutSlot_Clinkz_Army"							"Ejército Ardiente"
 		"LoadoutSlot_Tiny_Body_0"							"Tiny"
 		"LoadoutSlot_Tiny_Body_1"							"Pequeño"
@@ -7776,7 +7787,14 @@ Los jugadores que no han elegido un héroe están perdiendo 1 oro por segundo. S
 		"LoadoutSlot_Offhand_Weapon_Antimage_Persona"							"Arma secundaria (personaje)"
 		"LoadoutSlot_Armor_Antimage_Persona"								"Armadura (Personaje)"
 		"LoadoutSlot_Head_Antimage_Persona"								"Cabeza (Personaje)"
-//Hero Loadoutslots
+		//CRYSTAL MAIDEN PERSONA
+		"LoadoutSlot_Taunt_Crystal_Maiden_Persona"						"Burla (personaje)"
+		"LoadoutSlot_Head_Crystal_Maiden_Persona"						"Crin (personaje)"
+		"LoadoutSlot_Armor_Crystal_Maiden_Persona"						"Armadura (Personaje)"
+		"LoadoutSlot_Misc_Crystal_Maiden_Persona"						"Cristales (personaje)"
+		"LoadoutSlot_Tail_Crystal_Maiden_Persona"						"Cola (personaje)"
+		"LoadoutSlot_Pet_Crystal_Maiden_Persona"						"Mascota (personaje)"
+		//Hero Loadoutslots
 		"LoadoutSlot_Alchemist_TinyArmor"					"Armadura de Tiny"
 		"LoadoutSlot_Alchemist_Flask"						"Frasco"
 		"LoadoutSlot_Alchemist_TinyHead"					"Cabeza de Tiny"
@@ -10275,6 +10293,16 @@ Disponible para los poseedores del pase de batalla de The International 2017."
 		"DOTA_Announcer_Preview_Gaben_Killing_Spree_03"	"Incluso ahora aprendo de nuestros clientes."
 		"DOTA_Announcer_Preview_Gaben_Killing_Spree_04"	"Por favor, escríbeme a gabe n arroba valvesoftware punto com e infórmame sobre tu racha."
 		
+		"DOTA_Announcer_Preview_cavej_01"	"Habla Cave Johnson. Fundador y director general de DOTA."
+		"DOTA_Announcer_Preview_cavej_02"	"Muy bien, juguemos a esto. Solo es un jueguito que hice en mi tiempo libre. Espero que les guste."
+		"DOTA_Announcer_Preview_cavej_03"	"No hay tiempo para regodearse. Ah, rayos. De acuerdo, un segundo para regodearse. Te lo mereces. Voy a cronometrarte. Yyyyyyy uno."
+		"DOTA_Announcer_Preview_cavej_04"	"Zeus. ¿No he visto a Mars en alguna parte? ¿Y a un Satanás de verdad? No estoy seguro de la mitología desde este lugar."
+		
+		"DOTA_Announcer_Preview_cavej_Killing_Spree_01"	"¡Lo estás DESTROZANDO! Destrozando al doble. Necesitamos un término para lo que estás haciendo."
+		"DOTA_Announcer_Preview_cavej_Killing_Spree_02"	"Mira, yo solo sé de dos cosas: Me encanta la violencia sin sentido y puedo contar hasta tres. Eso sí es un triple asesinato."
+		"DOTA_Announcer_Preview_cavej_Killing_Spree_03"	"¿Qué demonios está pasando ahí abajo? ¿Es una racha de asesinatos? Porque yo no he autorizado para esto."
+		"DOTA_Announcer_Preview_cavej_Killing_Spree_04"	"¡NO puedo creer lo que ven mis ojos! ¡Mis ojos son unos mentirosos! Sal de mi cráneo, ojos. Que yo no tengo tiempo para los mentirosos."
+		
 		"DOTA_Announcer_Preview_ti10_vog_01"	"Diez jugadores compiten por la máxima gloria."
 		"DOTA_Announcer_Preview_ti10_vog_02"	"Un solo momento puede provocar el ascenso a la grandeza."
 		"DOTA_Announcer_Preview_ti10_vog_03"	"¿Quién estará a la altura de este desafío?"
@@ -12096,6 +12124,8 @@ Tres días de partidas eliminatorias a doble grupo aguardan a jugadores y fans, 
 		"DOTA_Item_Maiden_of_Icewrack"					"Chal y Lobezno"
 		"DOTA_Item_Maiden_of_Icewrack_NoPet"				"Solo Chal"
 		"DOTA_Item_Maiden_of_Icewrack_Pet2"				"Chal y Lobezno Mejorado"
+		"DOTA_Item_Maiden_of_Icewrack_Pet3"				"Chal y Lobezno Mejorado del Corazón Azul"
+
 		"DOTA_Item_Horns_of_Tendrillar_Style0"	"Con Cuernos"
 		"DOTA_Item_Horns_of_Tendrillar_Style1"	"Sin Cuernos"
 
@@ -12534,6 +12564,8 @@ Tres días de partidas eliminatorias a doble grupo aguardan a jugadores y fans, 
 
 		"DOTA_Style_Deep_One_Slayer_arms_0"	"Original"
 		"DOTA_Style_Deep_One_Slayer_arms_1"	"Transmutado"		
+		"DOTA_Style_Deep_One_Slayer_arms_2"	"Segunda transmutación"		
+
 		"DOTA_Style_Deep_One_Slayer_back_0"	"Original"
 		"DOTA_Style_Deep_One_Slayer_back_1"	"Transmutado"		
 		"DOTA_Style_Deep_One_Slayer_back_2"	"Segunda transmutación"
@@ -12552,6 +12584,8 @@ Tres días de partidas eliminatorias a doble grupo aguardan a jugadores y fans, 
 
 		"DOTA_Style_miyamoto_musash_arms_0"	"Original"
 		"DOTA_Style_miyamoto_musash_arms_1"	"Transmutado"		
+		"DOTA_Style_miyamoto_musash_arms_2"	"Segunda transmutación"		
+
 		"DOTA_Style_miyamoto_musash_back_0"	"Original"
 		"DOTA_Style_miyamoto_musash_back_1"	"Transmutado"	
 		"DOTA_Style_miyamoto_musash_back_2"	"Segunda transmutación"	
@@ -12566,6 +12600,8 @@ Tres días de partidas eliminatorias a doble grupo aguardan a jugadores y fans, 
 
 		"DOTA_Style_miyamoto_musash_ward_0"	"Original"
 		"DOTA_Style_miyamoto_musash_ward_1"	"Transmutado"	
+		"DOTA_Style_miyamoto_musash_ward_2"	"Segunda transmutación"	
+
 		"DOTA_Style_miyamoto_musash_weapon_0"	"Original"
 		"DOTA_Style_miyamoto_musash_weapon_1"	"Transmutado"	
 		"DOTA_Style_miyamoto_musash_weapon_2"	"Segunda transmutación"
@@ -12576,6 +12612,8 @@ Tres días de partidas eliminatorias a doble grupo aguardan a jugadores y fans, 
 
 		"DOTA_Style_Lady_Whitewind_arms_0"	"Original"
 		"DOTA_Style_Lady_Whitewind_arms_1"	"Transmutado"	
+		"DOTA_Style_Lady_Whitewind_arms_2"	"Segunda transmutación"	
+
 		"DOTA_Style_Lady_Whitewind_back_0"	"Original"
 		"DOTA_Style_Lady_Whitewind_back_1"	"Transmutado"	
 		"DOTA_Style_Lady_Whitewind_back_2"	"Segunda transmutación"
@@ -12599,7 +12637,17 @@ Tres días de partidas eliminatorias a doble grupo aguardan a jugadores y fans, 
 		"DOTA_Style_hood_2022_immortal_weapon_0"	"Original"
 		"DOTA_Style_hood_2022_immortal_weapon_1"	"Tomo'kan"
 		
-		//DOTA_ITEM_STYLES_END
+		"DOTA_Style_qop_2022_immortal_0"	"Eminencia"
+		"DOTA_Style_qop_2022_immortal_1"	"Real"
+
+		"DOTA_Style_qop_2022_immortal_legs_0"	"Eminencia"
+		"DOTA_Style_qop_2022_immortal_legs_1"	"Real"
+
+		"DOTA_Item_Frightful_Revelries_0"	"Jarana Aterradora"
+		"DOTA_Item_Frightful_Revelries_1"	"Cosecha Nocturna"
+
+
+//DOTA_ITEM_STYLES_END
 //DOTA_ITEM_STYLE_END
 
 		"TeamCup_Description"	"Obtenido por los fans durante la Copa por Equipos Semanal de The International"
@@ -15271,9 +15319,8 @@ Burla especial de Techies"
 		"DOTA_TrophyName_International2022BattlePass_CavernChallenge"	"Recompensa de Expedición de la Gruta"
 		"DOTA_TrophyDesc_International2022BattlePass_CavernChallenge"	"Sets de héroe de Aventura de la Gruta reclamados en el Pase de batalla de 2022"
 
-
 		"DOTA_TrophyName_MVPTrophy"						"Trofeo al MJ"
-		"DOTA_TrophyDesc_MVPTrophy"						"Conmemora la cantidad de veces que has sido votado como Jugador Más Valioso de la partida."
+		"DOTA_TrophyDesc_MVPTrophy"						"Conmemora la cantidad de veces que has sido reconocido como jugador más valioso de la partida."
 		"DOTA_TrophyUnits_MVP:p"						"%s1 premio al MJ#|#%s1 premios al MJ"
 
 		"DOTA_TrophyName_TI6SeasonalMMR_Solo"			"Máxima clasificación en solitario en The International 2016"
@@ -19139,6 +19186,8 @@ Burla especial de Techies"
 		"DOTA_ChatWheelPhraseLocked_PlusSubscriptionExpired"	"Renueva tu suscripción a Dota Plus para recuperar el acceso."
 		"DOTA_ChatWheelPhraseLocked_GuildLevel"		"Categoría {s:required_guild_tier}"
 		"DOTA_ChatWheelPhraseLocked_ItemDefLevel"		"Requiere {g:dota_item_name:required_itemdef} Nivel {d:required_itemdef_level}"
+		"DOTA_ChatWheel_HideLocked"					"Ocultar mensajes bloqueados"
+
 		"DOTA_ChatWheelPurchase_Name"			"Rueda de chat comprada"
 		"DOTA_ChatWheelPurchase_Description"	"Mensaje de rueda de chat \"{s:chat_wheel_label}\" comprado"
 
@@ -20353,7 +20402,7 @@ Burla especial de Techies"
 		"DOTA_ChallengeDesc_Phoenix_Stun_With_Supernova"   "Aturde a un total de <font color='#ffffff'>%s1</font> héroes enemigos con <font color='#ffffff'>Supernova</font>."
 		"DOTA_ChallengeDesc_Razor_Damage_On_Static_Linked"   "Causa <font color='#ffffff'>%s1</font> de daño a los héroes enemigos drenados por <font color='#ffffff'>Vínculo Estático</font>."
 		"DOTA_ChallengeDesc_Razor_DamageWithUnstableCurrent"   "Causa <font color='#ffffff'>%s1</font> de daño a héroes enemigos con <font color='#ffffff'>Corriente Inestable</font>"
-		"DOTA_ChallengeDesc_ShadowDemon_KillsUnderSoulCatcher"   "Mata o ayuda a matar a<font color='#ffffff'>%s1</font> héroes enemigos afectados por <font color='#ffffff'>Cazador de Almas</font>."
+		"DOTA_ChallengeDesc_ShadowDemon_KillsUnderDisseminate"   "Mata o ayuda a matar a<font color='#ffffff'>%s1</font> héroes enemigos afectados por <font color='#ffffff'>Diseminar</font>."
 
 
 
@@ -20731,7 +20780,7 @@ Burla especial de Techies"
 	"DOTA_Plus_ProfileCard_TimeRemainingHours:p{hours_left}"		"{i:hours_left} hora restante#|#{i:hours_left} horas restantes"
 	"DOTA_Plus_ProfileCard_TimeRemainingMinutes:p{minutes_left}"	"{i:minutes_left} minuto restante#|#{i:minutes_left} minutos restantes"
 
-	"DOTA_Popup_PlusStatus_WelcomeHeader"	"¡Bienvenido a Dota Plus!"
+	"DOTA_Popup_PlusStatus_WelcomeHeader"	"¡Te damos la bienvenida a Dota Plus!"
 	"DOTA_Popup_PlusStatus_ExpiredHeader"	"Tu suscripción a Dota Plus ha expirado"
 	"DOTA_Popup_PlusStatus_WelcomeMessage"	"Dota Plus te ayuda a expandir los límites de tu habilidad para tus héroes preferidos, mejorar tu conocimiento general de Dota y mantenerte al día en un metajuego en constante evolución, todo sin salir de él."
 	"DOTA_Popup_PlusStatus_CurrencyBurstExplanation"	"Como nuevo suscriptor de Dota Plus, comenzarás con un saldo de fragmentos para gastar en reliquias y otras recompensas exclusivas de Plus."
@@ -24568,6 +24617,14 @@ Para unirte como jugador experimentado, debes tener al menos {d:new_player_req_g
 	"dota_settings_steam_text_filter"			"Ajustes del filtrado de texto de Steam"
 	"dota_settings_fsr"							"FidelityFX Super Resolution"
 	"dota_settings_fsr_tooltip"					"Mejora de escala de alta calidad cuando la calidad de la pantalla de renderizado del juego es inferior al 100 %.\nRequiere que la API de renderizado esté establecida en Direct3D 11 o Vulkan, y que esté el suavizado de bordes habilitado."
+	"dota_settings_low_latency"					"Baja latencia (NVIDIA Reflex)"
+	"dota_settings_lowlatency_off"				"Desactivada"
+	"dota_settings_lowlatency_on"				"Activada"
+	"dota_settings_lowlatency_boost"			"Activada con potenciador"
+	"dota_settings_low_latency_tooltip_off"		"El modo de baja latencia está desactivado."
+	"dota_settings_low_latency_tooltip_on"		"El modo de baja latencia está ahora activado y optimiza la latencia del sistema."
+	"dota_settings_low_latency_tooltip_boost"	"El modo de baja latencia está ahora activado y optimiza la latencia del sistema. Incluye técnicas que pueden consumir más energía de la tarjeta gráfica y afectar ligeramente los FPS para reducir la latencia lo máximo posible."
+
 	"dota_settings_CPUInLowPowerMode"			"Modo de ahorro de energía detectado"
 	"dota_settings_CPUInLowPowerMode_tooltip"	"Tu PC está configurada en modo de ahorro de energía, lo que dará como resultado una velocidad de fotogramas inferior al jugar Dota."
 
@@ -24910,6 +24967,7 @@ Para unirte como jugador experimentado, debes tener al menos {d:new_player_req_g
 	"DOTA_HeroRole_Description_Pusher"		"Puede asediar y destruir rápidamente torres y barracones en cualquier momento de la partida."
 	"DOTA_HeroRole_Description_Initiator"	"Bueno iniciando peleas de equipo."
 
+	"DOTA_HeroTags"							"Etiquetas"
     "DOTA_HeroGrid_Sort_By"                        "Ordenar por:"
 
 	"DOTA_HeroGrid_Loading"						"Cargando la cuadrícula del héroe..."
@@ -26095,6 +26153,7 @@ Para unirte como jugador experimentado, debes tener al menos {d:new_player_req_g
 
 	"DOTA_ChangeLog_TI9AllStarVoting" "Ya comenzó la votación para la partida All Star de TI9"
 	"DOTA_ChangeLog_TI0CompendiumEnded" "Ya finalizó el Compendio de The International 2021. Haz clic aquí para ver los resultados finales."
+	"DOTA_ChangeLog_BP2022Ended" "El pase de batalla de 2022 ha terminado. Haz clic aquí para reclamar las recompensas finales."
 
 	"DOTA_GlobalLiveSpectatorChat_Title"			"Nueva función - Chat de espectadores global en vivo"
 	"DOTA_GlobalLiveSpectatorChat_Details"			"No hace falta que estés en el KeyArena para disfrutar de The International junto a los cientos de miles de asistentes. Hemos aumentado la capacidad del chat de espectadores del juego y ahora un mismo canal puede albergar a una gran cantidad de ellos. Además puedes acceder al canal de chat de espectadores desde la nueva pestaña Partida en curso en la ventana de chat del menú."
@@ -26171,7 +26230,7 @@ Para unirte como jugador experimentado, debes tener al menos {d:new_player_req_g
 	"DOTA_Treasure_SearchPlaceholder"	"Buscar tesoros"
 	"DOTA_Treasure_ViewAll"				"Ver todos los tesoros"
 	"DOTA_Treasure_QuantityOption"		"Cant.: {d:quantity}"
-	"DOTA_Treasure_Gift"				"Regalo"
+	"DOTA_Treasure_Gift"				"Regalar"
 	"DOTA_Treasure_Open"				"Abrir"
 	"DOTA_Treasure_OpenPW"				"Recibir {g:dota_item_name:peek_item_def}"
 	"DOTA_Treasure_OpenPWPlural"		"Recibir objetos"
@@ -26319,6 +26378,9 @@ Para unirte como jugador experimentado, debes tener al menos {d:new_player_req_g
 
 	"DOTA_Banned_Title"			"Vetado"
 	"DOTA_Banned"				"Tu cuenta ha sido vetada de jugar a Dota 2."
+
+	"DOTA_China_SpecialDisabled_Title" "Desactivado"
+	"DOTA_China_SpecialDisabled" "Estimados jugadores, en respuesta al aviso pertinente, los servidores de Dota 2 estarán inactivos desde las 0:00 hasta las 23:59 del 6 de diciembre de 2022 (hora del Pacífico). Gracias por su apoyo."
 
 	"DOTA_AntiAddiction_Initial_With_ID_18Plus"		"Última conexión: %s1\nÚltima dirección IP: %s2"
 	"DOTA_AntiAddiction_Initial_With_ID_Under_18"	"Tienes menos de 18 años. El sistema antiadicción está activado.\nÚltima conexión: %s1\nÚltima dirección IP: %s2"
@@ -27240,6 +27302,7 @@ Para unirte como jugador experimentado, debes tener al menos {d:new_player_req_g
 	"DOTA_Popup_CardPack_Model_Winter2022"			"TOUR DE INVIERNO 2022 DEL CPD"
 	"DOTA_Popup_CardPack_Model_Spring2022"			"Tour de primavera 2022 del CPD"
 	"DOTA_Popup_CardPack_Model_Summer2022"			"Tour de verano del CPD 2022"
+	"DOTA_Popup_CardPack_Model_Winter2023"			"Tour de invierno del CPD 2023"
 	"DOTA_Popup_CardPack_Model_PackCount"			"Lote de cinco"
 	"DOTA_Popup_CardPack_Model_PremiumPackCount"	"Lote de cinco prémium"
 	"DOTA_Popup_CardPack_Model_MainTitle"			"Cromos de Jugadores"
@@ -32414,6 +32477,7 @@ Europa Oriental"
 	"DOTA_HeroLevelReward_Currency:p{currency_amount}"	"{d:currency_amount} fragmento#|#{d:currency_amount} fragmentos"
 	"DOTA_HeroLevelReward500_Currency"	"500 fragmentos"
 	"DOTA_HeroLevelReward350_Currency"	"350 fragmentos"
+	"DOTA_HeroLevelReward700_Currency"	"700 fragmentos"
 	"DOTA_HeroLevelReward_ChatWheel"	"Respuesta de héroe desbloqueada:<br>\"{s:chat_wheel_message}\""
 
 	"DOTA_ReadyCheck"	"¿Preparados?"
@@ -32585,7 +32649,7 @@ Europa Oriental"
 
 	
 
-	"DOTA_PlusPurchase_Features_Label"					"Qué incluye:"
+	"DOTA_PlusPurchase_Features_Label"					"¿Qué incluye?"
 	"DOTA_PlusPurchase_HeroProgression"					"Progresión de héroe avanzada"
 	"DOTA_PlusPurchase_HeroProgression_Description"		"Ya sea que disfrutas de una gran variedad de héroes o que juegas cientos de partidas con solo uno o dos, ahora obtendrás EXP para el progreso del nivel de ese héroe en cada partida. ¡Con Dota Plus, puedes avanzar el nivel de tu héroe hasta el nivel 30!"
 	"DOTA_PlusPurchase_Assistant"						"Asistente Plus"
@@ -32603,12 +32667,12 @@ Europa Oriental"
 
 	"DOTA_PlusPurchase_Feature_ItemSuggestions"			"Sugerencias de objetos y habilidades"
 	"DOTA_PlusPurchase_Feature_HeroPickSuggestions"		"Sugerencias de selección de héroe"
-	"DOTA_PlusPurchase_Feature_ComparativeTracking"		"Análisis comparativos en tiempo real"
+	"DOTA_PlusPurchase_Feature_ComparativeTracking"		"Análisis comparativo en tiempo real"
 	"DOTA_PlusPurchase_Feature_PostGameAnalysis"		"Análisis pospartida"
 	"DOTA_PlusPurchase_Feature_LaneSetupSuggestions"	"Sugerencias de estrategia de senda"
 	"DOTA_PlusPurchase_Feature_Friends_Foes"			"Calculadora de amigos y enemigos"
 	"DOTA_PlusPurchase_Feature_DeathSummary"			"Resumen de muerte detallado"
-	"DOTA_PlusPurchase_Feature_WinProbability"			"Espectadores con probabilidad de victoria"
+	"DOTA_PlusPurchase_Feature_WinProbability"			"Gráficas para espectadores de probabilidad de victoria"
 	"DOTA_PlusPurchase_Feature_StackPullTimers"			"Contadores de acumulación y atracción"
 	"DOTA_PlusPurchase_Feature_RolesGrid"				"Cuadrícula de roles de héroe"
 	"DOTA_PlusPurchase_Feature_HeroTrends"				"Tendencias de héroes"
@@ -32809,15 +32873,15 @@ Europa Oriental"
 	"DOTA_PlusWelcome_ReachHeroLevel_Name"						"Alcanza el nivel de héroe 3 con cualquier héroe"
 	"DOTA_PlusWelcome_ReachHeroLevel_Description"				"Juega partidas y completa desafíos con un mismo héroe hasta que alcance el nivel de héroe 3."
 	"DOTA_PlusWelcome_BecomeDotaPlusMember_Name"				"Hazte miembro de Dota Plus"
-	"DOTA_PlusWelcome_BecomeDotaPlusMember_Description"			"¡Bienvenido a Dota Plus! Haz clic en el botón para reclamar tu primera recompensa."
+	"DOTA_PlusWelcome_BecomeDotaPlusMember_Description"			"¡Te damos la bienvenida a Dota Plus! Haz clic en el botón para reclamar tu primera recompensa."
 	"DOTA_PlusWelcome_PlayRankedRoles_Name"						"Gana 5 partidas clasificatorias con roles" 
 	"DOTA_PlusWelcome_PlayRankedRoles_Description"				"Gana 5 partidas de emparejamiento clasificatorio con roles."
 
 	"DOTA_PlusDBPage_Title" "Dota Plus"
 	"DOTA_PlusDBPage_RewardLog" "Historial de recompensas"
-	"DOTA_PlusDBPage_SubscribedOn" "Suscrito el {T:s:plus_subscription_start_date}"
+	"DOTA_PlusDBPage_SubscribedOn" "Desde el {T:s:plus_subscription_start_date}"
 	"DOTA_PlusDBPage_RenewsOn" "Se renovará el {T:s:plus_subscription_end_date}"
-	"DOTA_PlusDBPage_ExpiresOn" "Caducará el {T:s:plus_subscription_end_date}"
+	"DOTA_PlusDBPage_ExpiresOn" "Hasta el {T:s:plus_subscription_end_date}"
 	"DOTA_PlusDBPage_Manage" "Gestionar suscripción"
 	"DOTA_PlusDBPage_Subscribe" "Suscríbete"
 	"DOTA_PlusDBPage_ProgressLabel" "{d:achievement_score}/{d:completion_score}"
@@ -33550,7 +33614,14 @@ Incluye un logotipo en 3D de tu Club de seguidores del equipo en TI durante tele
 	"DOTA_Armory_Category_DeathEffects"							"Efectos de muerte"
 	"LoadoutSlot_Death_Effect"										"Efectos de muerte"
 	"death_effect"													"Efectos de muerte"
-//Diretide Cosmetics equip page
+
+	//Roshan global equip page
+	"DOTA_GlobalItems_Roshan"									"Roshan"
+	"DOTA_Armory_Category_Roshan"								"Roshan"
+	"LoadoutSlot_Roshan"										"Roshan"
+	"roshan"													"Roshan"
+
+	//Diretide Cosmetics equip page
 	"DOTA_GlobalItems_Diretide"										"Efectos estacionales del Despertar Dire."
 	"DOTA_Armory_Category_Diretide_2020"							"Despertar Dire 2020"
 
@@ -33639,7 +33710,7 @@ Incluye un logotipo en 3D de tu Club de seguidores del equipo en TI durante tele
 
 	"DOTA_QueenOfPainArcana_ArcanaProgress_Score"					"{s:current_score} / {d:unlock_value}"
 	"DOTA_QueenOfPainArcana_ArcanaProgress_Description:p{unlock_value}"	"Atormenta a {d:unlock_value} héroe con Onda Sónica en partidas victoriosas para desbloquear el estilo alternativo.#|#Atormenta a {d:unlock_value} héroes con Onda Sónica en partidas victoriosas para desbloquear el estilo alternativo."
-	"KillEaterEventType_QueenOfPain_ArcanaProgress"					"Héroes atormentados por Onda Sónica"
+	"KillEaterEventType_QueenOfPain_ArcanaProgress"					"Héroes atormentados por Onda Sónica en partidas ganadas"
 
 	"DOTA_QueenOfPainArcana_Hud_Title"								"Combo de {d:combo_count}" 
 	
@@ -34294,6 +34365,7 @@ Incluye un logotipo en 3D de tu Club de seguidores del equipo en TI durante tele
 	"DOTACavernCrawl_LegendUltraRare_Desc_TI2019"					"¡Otorga un <font color='#88FCBD'>Roshan Bebé de Jade</font> ultrarraro!"
 	"DOTACavernCrawl_Description_TI2019"							"Adéntrate en las ruinas escondidas de la jungla en una aventura para descubrir sus secretos. Los héroes que bloqueen tu avance han de ser derrotados ganándoles la partida para poder abrirte camino en el descubrimiento de puntos de batalla adicionales, fragmentos de Dota Plus y sets de objetos exclusivos."
 	"DOTACavernCrawl_Description_Turbo"								"<b>Aviso:</b> Necesitas dos victorias en modo Turbo para derrotar a un héroe. La primera lo hiere y la segunda lo derrota. Puedes usar la <b><i>Hoja Selectiva</i></b> para acabar con héroes heridos."
+	"DOTACavernCrawl_Tutorial_ButtonLabel"							"Cómo jugar"
 	"DOTACavernCrawl_Reward_Label_TI2019"						    "Recompensa ultrarrara"
 	"DOTACavernCrawl_Reward_Title_TI2019"						    "Inténtalo para tener la oportunidad de descubrir uno de los 200 mensajeros ultrarraros"
 	"DOTACavernCrawl_Reward_Desc_TI2019"						    "Los Roshan Bebés se han escondido en lo más profundo de la jungla, desbroza espacios para ver si te conviertes en uno de los afortunados ganadores."
@@ -34401,6 +34473,8 @@ Incluye un logotipo en 3D de tu Club de seguidores del equipo en TI durante tele
 	"DOTACavernCrawl_Cavern_ToggleMapVariant"						"Entrar en {s:other_map_variant_name}"
 	"DOTACavernCrawl_Cavern_PreviewMapVariant"						"Ver {s:other_map_variant_name}"
 	"DOTACavernCrawl_Cavern_ClaimMapVariant"						"Reclamar {s:other_map_variant_name}"
+	"DOTACavernCrawl_Cavern_Enter"									"Entrar"
+
 	"DOTACavernCrawl_Cavern_RewardSmall"							"Lote de puntos"
 	"DOTACavernCrawl_Cavern_RewardXL"								"Lote XL"
 
@@ -34538,10 +34612,15 @@ Incluye un logotipo en 3D de tu Club de seguidores del equipo en TI durante tele
 	"DOTACavernCrawl_Title_TI2022"									"Expedición de la Gruta"
 	"DOTACavernCrawl_Title_Short_TI2022"							"Expedición"
 	"DOTACavernCrawl_MapLogoTitle_TI2022"							"Los Fuegos de Ulmarain"
-	"DOTACavernCrawl_Description_TI2022"							"Explora caminos fundidos tallados por los Fuegos de Ulmarain, en cuyas llamas se forjó la poderosa Égida. Triunfa aquí y obtendrás puntos de batalla, fragmentos de Dota Plus y sets de objetos exclusivos. Cae, y el próximo tesoro legendario se forjará con el calor de tus huesos carbonizados."
+	"DOTACavernCrawl_MapLogoTitle_2_TI2022"							"Los Abismos del Corazón Azul"
+	"DOTACavernCrawl_Description_TI2022"							"Explora caminos fundidos tallados por los Fuegos de Ulmarain, en cuyas llamas se forjó la poderosa Égida. Triunfa aquí y obtendrás puntos de batalla, fragmentos de Dota Plus y sets de objetos exclusivos. Fracasa, y el próximo tesoro legendario se forjará con el calor de tus huesos carbonizados."
+	"DOTACavernCrawl_Description_TI2022_2"							"Explora pasos helados que serpentean bajo la desolación del Corazón Azul, donde solo los héroes más fuertes se atreven a ir. Triunfa aquí y obtendrás puntos de batalla, fragmentos de Dota Plus y sets de objetos exclusivos. Fracasa, y el próximo viajero se orientará con tus huesos congelados."
 	"DOTACavernCrawl_Tooltip_LockedDoor_TI2022"						"Flujo de Lava - Se puede atravesar con las Botas Aladas"
 	"DOTACavernCrawl_LegendLockedDoor_Title_TI2022"					"Flujo de Lava"
 	"DOTACavernCrawl_LegendLockedDoor_Desc_TI2022"					"Vuela sobre esta lava caliente con las Botas Aladas."
+	"DOTACavernCrawl_Tooltip_LockedDoor_2_TI2022"					"Río Helado - Se puede atravesar con las Botas Aladas"
+	"DOTACavernCrawl_LegendLockedDoor_Title_2_TI2022"				"Río Helado"
+	"DOTACavernCrawl_LegendLockedDoor_Desc_2_TI2022"				"Vuela sobre este río hipotérmico con las Botas Aladas."
 	"DOTACavernCrawl_LegendKey_Title_TI2022"						"Botas Aladas"
 	"DOTACavernCrawl_LegendKey_Desc_TI2022"							"Las Botas Aladas se pueden usar para sobrevolar obstáculos."
 	"DOTACavernCrawl_RewardName_Key_TI2022"							"Botas Aladas"
@@ -34549,6 +34628,9 @@ Incluye un logotipo en 3D de tu Club de seguidores del equipo en TI durante tele
 	"DOTACavernCrawl_Tooltip_CaveIn_TI2022"							"Muro de Fuego - Se puede neutralizar con una Runa Elemental"
 	"DOTACavernCrawl_LegendCaveIn_Title_TI2022"						"Muro de Fuego"
 	"DOTACavernCrawl_LegendCaveIn_Desc_TI2022"						"Fuego místico bloquea el camino. Usa una Runa Elemental para abrir un agujero en el fuego."
+	"DOTACavernCrawl_Tooltip_CaveIn_2_TI2022"						"Muro de Hielo - Se puede neutralizar con una Runa Elemental"
+	"DOTACavernCrawl_LegendCaveIn_Title_2_TI2022"					"Muro de Hielo"
+	"DOTACavernCrawl_LegendCaveIn_Desc_2_TI2022"					"Hielo místico bloquea el camino. Usa una Runa Elemental para abrir un agujero en el hielo."
 	"DOTACavernCrawl_LegendShovel_Title_TI2022"						"Runa Elemental"
 	"DOTACavernCrawl_LegendShovel_Desc_TI2022"						"Esta piedra contiene un hechizo para neutralizar la magia elemental."
 	"DOTACavernCrawl_RewardName_Shovel_TI2022"						"Runa Elemental"
@@ -34561,7 +34643,15 @@ Incluye un logotipo en 3D de tu Club de seguidores del equipo en TI durante tele
 	"DOTACavernCrawl_RewardName_SmallTreasure_TI2022_Part2"			"125 fragmentos de Dota Plus"
 	"DOTACavernCrawl_RewardName_LargeTreasure_TI2022_Part1"			"2000 puntos de batalla +"
 	"DOTACavernCrawl_RewardName_LargeTreasure_TI2022_Part2"			"1000 fragmentos de Dota Plus"
-  	"DOTACavernCrawl_RewardName_CarryStyleUnlock_TI2022"			"Fragmento de desbloqueo de estilo para Isla de Dragones"
+  	"DOTACavernCrawl_LegendSmallTreasure_Desc_2_TI2022"				"Descubre 125 puntos de batalla y 75 fragmentos de Dota Plus."
+ 	"DOTACavernCrawl_LegendLargeTreasure_Desc_2_TI2022"				"Descubre 1000 puntos de batalla y 500 fragmentos de Dota Plus."
+	"DOTACavernCrawl_RewardName_SmallTreasure_2_TI2022"				"125 puntos de batalla y 75 fragmentos de Dota Plus"
+	"DOTACavernCrawl_RewardName_LargeTreasure_2_TI2022"				"1000 puntos de batalla y 500 fragmentos de Dota Plus"
+	"DOTACavernCrawl_RewardName_SmallTreasure_2_TI2022_Part1"		"125 puntos de batalla +"
+	"DOTACavernCrawl_RewardName_SmallTreasure_2_TI2022_Part2"		"75 fragmentos de Dota Plus"
+	"DOTACavernCrawl_RewardName_LargeTreasure_2_TI2022_Part1"		"1000 puntos de batalla +"
+	"DOTACavernCrawl_RewardName_LargeTreasure_2_TI2022_Part2"		"500 fragmentos de Dota Plus"
+	"DOTACavernCrawl_RewardName_CarryStyleUnlock_TI2022"			"Fragmento de desbloqueo de estilo para Isla de Dragones"
 	"DOTACavernCrawl_RewardName_SupportStyleUnlock_TI2022"			"Fragmento de desbloqueo de estilo para la Maga Guerrera de Vientoblanco"
 	"DOTACavernCrawl_RewardName_UtilityStyleUnlock_TI2022"			"Fragmento de desbloqueo de estilo para el Renegado de los Peces Piedra"
 	"DOTACavernCrawl_RewardName_CarryStyleUnlock_2_TI2022"			"Fragmento de desbloqueo de estilo II para Isla de Dragones"
@@ -34921,6 +35011,21 @@ Incluye un logotipo en 3D de tu Club de seguidores del equipo en TI durante tele
 
 	"DOTA_WeeklyQuest_Win_And_High_Fives_Completed_Name"			"Chocarla es universal"
 	"DOTA_WeeklyQuest_Win_And_High_Fives_Completed_Description"		"Chócala con jugadores {s:current_tier_score} veces en partidas ganadas."
+		
+	"DOTA_WeeklyQuest_Win_With_Ranged_Hero_Name"					"Guerra nuclear"
+	"DOTA_WeeklyQuest_Win_With_Ranged_Hero_Description"				"Gana {s:current_tier_score} partidas con héroes a distancia."
+		
+	"DOTA_WeeklyQuest_Win_With_Melee_Hero_Name"						"Toque final"
+	"DOTA_WeeklyQuest_Win_With_Melee_Hero_Description"				"Gana {s:current_tier_score} partidas con héroes cuerpo a cuerpo."
+		
+	"DOTA_WeeklyQuest_Disarm_Duration_Name"							"Sostén esto"
+	"DOTA_WeeklyQuest_Disarm_Duration_Description"					"Desarma a enemigos durante {s:current_tier_score} s."
+		
+	"DOTA_WeeklyQuest_Neutral_Items_Earned_Name"					"Mercado Rojo"
+	"DOTA_WeeklyQuest_Neutral_Items_Earned_Description"				"Descubre {s:current_tier_score} objetos neutrales."
+		
+	"DOTA_WeeklyQuest_Use_Ability_Charges_Name"						"Carga completa"
+	"DOTA_WeeklyQuest_Use_Ability_Charges_Description"				"Usa {s:current_tier_score} cargas de habilidades de héroe."
 
 	// End Weekly Quest Names
 
@@ -35110,6 +35215,7 @@ Incluye un logotipo en 3D de tu Club de seguidores del equipo en TI durante tele
 	"DOTA_LiveSpectating_Error_WrongLobbyType"			"Solo puedes ver a tus amigos en directo en partidas de emparejamiento activas."
 	"DOTA_LiveSpectating_Error_PlayerNotPlayer"			"Tu amigo debe estar en los Radiant o los Dire para ver su partida en directo."
 	"DOTA_LiveSpectating_Error_TooManySpectators"		"No quedan más espacios para espectadores amigos en esta partida."
+	"DOTA_LiveSpectating_Error_SpectatorSwitchedTeams"	"No puedes ver en directo está partida porque te has desconectado recientemente de la misma y/o has cambiado de equipo para verla."
 	"DOTA_LiveSpectating_Error_FriendsOnBothSides"		"No puedes ver una partida en directo si tienes amigos en ambos equipos."
 	"DOTA_LiveSpectating_Error_LobbyIsLeague"			"No puedes ver en directo una partida de liga."
 
@@ -35656,6 +35762,13 @@ Cada día, la primera de tus partidas de Frosthaven que complete la ronda 5 acti
 	"DOTA_DPCTeams_SeasonPeriod_Event38_Name"		"The International 2022"
 	"DOTA_DPCTeams_SeasonPeriod_Event38_Dates"		"Del 8 al 30 de octubre de 2022"
 
+	"DOTA_DPCTeams_RegistrationPeriod8"				"Tour de invierno"
+	"DOTA_DPCTeams_RegistrationPeriodDates8"		"Del 9 de enero al 5 de marzo de 2023"
+	"DOTA_DPCTeams_RegistrationPeriodSeason8"		"Temporada 2023"
+	"DOTA_DPCTeams_SeasonPeriod_Event41_Name"		"Tour de invierno"
+	"DOTA_DPCTeams_SeasonPeriod_Event41_Dates"		"Del 9 de enero al 5 de marzo de 2023"
+
+
 	"DOTA_FavoriteTeamSet"							"Equipo favorito marcado"
 	"DOTA_NewFavoriteTeam"							"{s:favorite_team} es ahora tu equipo destacado. Esto se reflejará en diferentes lugares del menú principal y de la partida."
 	"DOTA_DPCTeams_Place1"							"1.º"
@@ -35896,6 +36009,7 @@ Cada día, la primera de tus partidas de Frosthaven que complete la ronda 5 acti
 	"DOTA_Collectors_Cache_Vote_Remaining"				"Quedan para votar"
 	"DOTA_Collectors_Cache_Vote_Finished"				"La votación ha terminado"
 	"DOTA_Collectors_Cache_Vote_TimeRemaining"			"Quedan {t:d:t:T:countdown_time} para votar"
+	"DOTA_Collectors_Cache_Winter2022_Vote_PageTitle"	"Alijo del Coleccionista del Despertar Dire 2022"
 	"DOTA_Collectors_Cache_Vote_PageSubtitle"			"Votación del tesoro"
 	"DOTA_Collectors_Cache_Vote_CreatorsTitle"			"Creadores"
 	"DOTA_Collectors_Cache_Vote_CreatorsFailedToLoad"	"No se puede recuperar la lista de creadores."
@@ -36129,6 +36243,9 @@ para la próxima temporada competitiva"
 
 	"DOTA_Plus_Fall2022_Update_Title"						"Actualización de la temporada de otoño 2022"
 	"DOTA_Plus_Fall2022_Update_Desc"						"Una nueva temporada de misiones, un tesoro por tiempo limitado y mucho más ha sido añadido a Dota Plus."
+
+	"DOTA_Plus_Winter2022_Update_Title"						"Actualización de la temporada de invierno 2022"
+	"DOTA_Plus_Winter2022_Update_Desc"						"Una nueva temporada de misiones, un tesoro por tiempo limitado y mucho más ha sido añadido a Dota Plus."
 
 	"DOTA_Plus_Autumn_Assitant_Title"						"Nuevas funciones de asistente"
 	"DOTA_Plus_Autumn_Assitant_Desc"						"Los suscriptores de Plus ahora pueden usar la característica de Evitar jugador, sugeridor de amigos y enemigos, sugerencias de guardián y otras características de asistencia."
@@ -37445,6 +37562,11 @@ Cada región tiene un marcador activo que se usará para calcular la clasificaci
 		"DOTA_PlusSeason_SeasonFall2022_Subtitle"				"La temporada de otoño 2022 finalizará el 1 de diciembre de 2022."
 		"DOTA_PlusSeason_SeasonFall2022_TreasureDescription"	"Disponible exclusivamente hasta el final de la temporada de otoño 2022, el 1 de diciembre de 2022."
 
+		"DOTA_PlusSeason_SeasonWinter2022_Name"					"Invierno 2022"
+		"DOTA_PlusSeason_SeasonWinter2022_Quests"				"Misiones de invierno 2022"
+		"DOTA_PlusSeason_SeasonWinter2022_Subtitle"				"La temporada de invierno 2022 termina el 1 de marzo de 2023."
+		"DOTA_PlusSeason_SeasonWinter2022_TreasureDescription"	"Disponible exclusivamente hasta el final de la temporada de invierno 2022 el 1 de marzo de 2023."
+
 		"DOTA_MatchRewards"							"Recompensas por partida"
 		"DOTA_MatchRewards_YourShards"				"Tus fragmentos"
 		"DOTA_MatchRewards_TotalShards"				"Total de fragmentos"
@@ -37593,7 +37715,7 @@ Cada región tiene un marcador activo que se usará para calcular la clasificaci
 		"diretide2020_game_info_header_how_to_play"						"CÓMO JUGAR"
 		"diretide2020_game_info_brief_description"						"Lucha contra el equipo enemigo para recolectar más caramelos en cada ronda antes de que se acabe el tiempo. El primer equipo que gane tres rondas se lleva la victoria."
         "diretide2020_game_info_collect_candy_header"					"RECOGE CARAMELOS"
-        "diretide2020_game_info_collect_candy"							"¡El tiempo corre! Liquida a esos creeps y quédate con sus caramelos de Greevil. Los héroes también dejan caer sus dulces al ser derrotados, ¡así que recógelos deprisa!"
+        "diretide2020_game_info_collect_candy"							"¡El tiempo corre! Liquida a esos creeps y quédate con sus caramelos de Greevil. Los héroes también dejan caer sus caramelos al ser derrotados, ¡así que recógelos deprisa!"
         "diretide2020_game_info_score_candy_header"						"LLENA TU CUBO"
         "diretide2020_game_info_score_candy"							"Acumula montones de caramelos en tu cubo, pero ten cuidado con los robos y tretas del enemigo. Una vez que uno de tus Pozos de Caramelos es destruido, ¡tus oponentes pueden quitártelo todo!"
         "diretide2020_game_info_feed_roshan_header"						"SACIA A LA BESTIA"
@@ -39649,6 +39771,9 @@ Fase tardía - <b>30:00 o más </b>"
 		"DOTA_International2022_DiretideSpray"					"Próximamente - Aerosol estacional del Despertar Dire"
 		"DOTA_International2022_AnnouncerPack"					"Próximamente - Lotes de locutor"
 		"DOTA_International2022_CustomGameUpgrade"				"Potenciador de modo de juego"
+		"DOTA_International2022_CustomGameUpgrade_WeeklyCandyRate_1"	"+20 % Tasa de progreso de caramelos semanales"
+		"DOTA_International2022_CustomGameUpgrade_WeeklyCandyRate_2"	"+20 % Tasa de progreso de caramelos semanales"
+		"DOTA_International2022_CustomGameUpgrade_WeeklyCandyMaxBoost"	"+1 de caramelos máximos semanales"
 		"DOTA_International2022_PreviewShort"					"Ver"
 		"DOTA_International2022_The2022"						"2022"
 		"DOTA_International2022_AvailableInPart2"				"Parte 2 disponible"
@@ -39668,6 +39793,19 @@ Fase tardía - <b>30:00 o más </b>"
 		"Debut_Phantom_Assassin_Persona_Feature_4_Desc" "Asan incluye efectos completamente nuevos para Daga Sofocante, Golpe Fantasmal, Desvanecer, Giro de Cuchillos y Golpe de Gracia."
 		"Debut_Phantom_Assassin_Persona_Feature_5_Title" "MÁS DE 900 LÍNEAS DE VOZ EXCLUSIVAS"
 		"Debut_Phantom_Assassin_Persona_Feature_5_Desc" "Este personaje tiene una interpretación con líneas de voz completamente nuevas. Después de toda una vida de aislamiento disciplinado, Asan está listo para dejar que se escuche su voz."
+		
+		"DOTA_Crystal_Maiden_Persona_Splash_Title" "Personaje de Crystal Maiden"
+		"Debut_Crystal_Maiden_Persona_Lore" "Solo los magos más fuertes pueden soportar las enseñanzas que revelan los poderes ocultos del Corazón Azul. Aquellos que se atreven a intentarlo solo tienen un maestro a quien recurrir: un avatar eterno cuya primera lección es que el éxito solo genera obligación, y el fracaso abre la puerta a una muerte solitaria."
+		"Debut_Crystal_Maiden_Persona_Feature_1_Title" "MODELO TOTALMENTE NUEVO"
+		"Debut_Crystal_Maiden_Persona_Feature_1_Desc" "Este personaje sustituye completamente al personaje y modelo originales de Crystal Maiden por el avatar de un lobo eterno que posee la magia del Corazón Azul, acompañado de forma opcional por un pequeño lobezno."
+		"Debut_Crystal_Maiden_Persona_Feature_2_Title" "ANIMACIONES TOTALMENTE NUEVAS"
+		"Debut_Crystal_Maiden_Persona_Feature_2_Desc" "Surgiendo de lo más profundo del Corazón Azul, el Conducto está en contacto con los orígenes de la magia gélida, con animaciones completamente nuevas perfectas para esta forma que eligió por su cuenta."
+		"Debut_Crystal_Maiden_Persona_Feature_3_Title" "RECURSOS DE HÉROE PERSONALIZADOS"
+		"Debut_Crystal_Maiden_Persona_Feature_3_Desc" "Incluye un nuevo retrato de héroe, otro para la barra superior, un ícono de minimapa e íconos de habilidad."
+		"Debut_Crystal_Maiden_Persona_Feature_4_Title" "EFECTOS COMPLETAMENTE NUEVOS"
+		"Debut_Crystal_Maiden_Persona_Feature_4_Desc" "El Conducto incluye efectos nuevos para las habilidades Explosión Cristalina y Campo Congelante, así como efectos de muerte y ataque personalizados."
+		"Debut_Crystal_Maiden_Persona_Feature_5_Title" "MÁS DE 600 LÍNEAS DE VOZ EXCLUSIVAS"
+		"Debut_Crystal_Maiden_Persona_Feature_5_Desc" "Este personaje tiene una interpretación con líneas de voz completamente nuevas para que el Conducto pueda impartir conocimientos directamente a la mente del alumno."
 		
 		//RAZOR ARCANA DEBUT SPLASH
 		"Debut_Arcana_razor_Intro" 								"Nuevo lote arcano para Razor" 
@@ -39763,7 +39901,57 @@ Fase tardía - <b>30:00 o más </b>"
 		"DOTA_International2022_CandyShop_CandyBags"			"Sacos de caramelos"
 		"DOTA_International2022_CandyShop_OpeningSoon"			"Próxima apertura"
 		
+		"DOTA_International2022_CandyShop_Released_Rules_01"	"<b>Recoge Sacos de Caramelos</b> entre tus recompensas del pase de batalla y consigue más caramelos jugando a Dota."
+		"DOTA_International2022_CandyShop_Released_Rules_02"	"Intercambia combos de caramelos por recompensas, como <b>objetos exclusivos del Despertar Dire, puntos de batalla, objetos inmortales</b> y <b>sets arcanos</b>."
+		"DOTA_International2022_CandyShop_Released_Rules_03"	"Si no tienes los ingredientes necesarios, <b>intercambia</b> los que tengas en tu alijo por los que te faltan."
+		"DOTA_International2022_CandyShop_Released_Rules_04"	"¿No te gusta lo que te ofrecen Sithil y Quirt? <b>Juega a Dota para ganar reelecciones</b> (10 por semana como máximo) y actualizar la estantería."
+
+
+		
+		"DOTA_CandyShop_HelpText"						"Intercambia caramelos por objetos. Juega a Dota para obtener reelecciones."
+		"DOTA_CandyShop_Purchase"						"Intercambiar"
+		"DOTA_CandyShop_PurchaseErrorTitle"				"Fallo al intercambiar"
+		"DOTA_CandyShop_OpenBagErrorTitle"				"No se pudo abrir la bolsa"
+		"DOTA_CandyShop_AvailableRolls"					"Renovaciones disponibles:"
+		"DOTA_CandyShop_MaxRolls"						"10 renovaciones por semana como máximo."
+		"DOTA_CandyShop_OutOfRolls"						"Gana partidas para obtener más."
+		"DOTA_CandyShop_EmptyInventory"					"El inventario de caramelos está vacío."
 		"DOTA_CandyShop_WeeklyRerolls"					"{d:rerolls_earned}/{d:rerolls_max} por semana"
+		"DOTA_CandyShop_RerollItems"					"Renovar objetos"
+		"DOTA_CandyShop_RerollErrorTitle"				"Fallo al renovar"
+		"DOTA_CandyShop_ExchangeErrorTitle"				"No se pudo realizar el intercambio de caramelos"
+		"DOTA_CandyShop_Error_Unknown"					"Error desconocido"
+		"DOTA_CandyShop_Error_InternalError"			"Error interno"
+		"DOTA_CandyShop_Error_Success"					"Completado"
+		"DOTA_CandyShop_Error_TooBusy"					"Demasiadas solicitudes. Inténtalo de nuevo más tarde."
+		"DOTA_CandyShop_Error_Disabled"					"Temporalmente desactivado. Inténtalo de nuevo más tarde."
+		"DOTA_CandyShop_Error_Timeout"					"No se pudo conectar con el coordinador del juego. Inténtalo de nuevo más tarde."
+		"DOTA_CandyShop_Error_InvalidShop"				"Caramelería no válida."
+		"DOTA_CandyShop_Error_InvalidReward"			"La recompensa no es válida."
+		"DOTA_CandyShop_Error_NoRerollCharges"			"No hay cargas de reelecciones disponibles."
+		"DOTA_CandyShop_Error_NotEnoughCandy"			"No hay suficientes caramelos."
+		"DOTA_CandyShop_Error_NotAllowed"				"No está permitido"
+		"DOTA_CandyShop_Error_NotEnoughSpace"			"No hay suficiente espacio en el inventario"
+		"DOTA_CandyShop_Error_NotEnoughBags"			"No hay suficientes bolsas"
+		"DOTA_CandyShop_Error_InvalidRecipe"			"Receta inválida."
+		"DOTA_CandyShop_Error_ExpiredShop"				"Esta caramelería ya no está disponible."
+		"DOTA_CandyShop_CandySackInfo"					"Juega a Dota o sube de nivel del pase de batalla para obtener más caramelos."
+		"DOTA_CandyShop_InventorySlotInfo"				"Sube de nivel del pase de batalla para desbloquear espacios del inventario."
+
+		"DOTA_CandyShop_InventorySizeIncrease"			"+{d:inventory_size_increase} espacios de inventario de la Caramelería"
+		"DOTA_CandyShop_ExchangeRecipeRefreshTimer"		"Nueva receta en {i:refresh_days} d {s:refresh_hours} h {s:refresh_minutes} m {s:refresh_seconds} s"
+		"DOTA_CandyShop_OpenBags"						"Abrir bolsas"
+		"DOTA_CandyShop_FillSlots"						"Llenar espacios"
+		"DOTA_CandyShop_YourCandy"						"Tus caramelos"
+		"DOTA_CandyShop_Exchange"						"Intercambiar"
+		"DOTA_CandyShop_Custom"							"Personalizado"
+
+		"DOTA_CandyShop_CandyType_1"					"Gomitas de Helio"
+		"DOTA_CandyShop_CandyType_2"					"Caramelos de Stonehall"
+		"DOTA_CandyShop_CandyType_3"					"Paletas de Jidi"
+		"DOTA_CandyShop_CandyType_4"					"Regalices de Redmaw"
+		"DOTA_CandyShop_CandyType_5"					"Tiras Azucaradas de Silkmire"
+
 		// International2022 Weekly Quests
 
 		"DOTA_International2022_WeeklyStarClaimRewardLabel"				"Reclamar"
@@ -39911,10 +40099,43 @@ Fase tardía - <b>30:00 o más </b>"
 		"DOTA_International2022_Quest_Diretide_Stars_Name_Week18"		"Estrellas del Despertar Dire"
 		"DOTA_International2022_Quest_Diretide_Stars_Name_Week19"		"Estrellas del Despertar Dire"
 		"DOTA_International2022_Quest_Diretide_Stars_Description"		"Obtén hasta <span class=\"ScoreTier1\">5</span> estrellas de misión semanales soltadas en el juego del evento del Despertar Dire."
-"DOTA_International2022_Quest_Diretide_CollectTreat_Description"			"Recoge {s:current_tier_score} dulces soltados por Greevils."
-"winter2022_game_info_score_candy_header"						"METE LOS CARAMELOS"
+		
+		// Diretide 2022 QUESTS
+		"DOTA_International2022_Quest_Diretide_ScoreCandy_Name"						"El vándalo de los caramelos"
+		"DOTA_International2022_Quest_Diretide_ScoreCandy2_Name"					"Felices Greevilaciones" // Christmas week
+		"DOTA_International2022_Quest_Diretide_ScoreCandy_Description"				"Mete {s:current_tier_score} caramelos en los pozos de los enemigos."
+
+		"DOTA_International2022_Quest_Diretide_RedirectRoshan_Name"					"No queremos visitas"
+		"DOTA_International2022_Quest_Diretide_RedirectRoshan_Description"			"Redirige a Roshan después de que tenga tu pozo como objetivo en {s:current_tier_score} partidas ganadas."
+
+		"DOTA_International2022_Quest_Diretide_StealCandy_Name"						"Desperdiciado pero no un desperdicio"
+		"DOTA_International2022_Quest_Diretide_StealCandy2_Name"					"Algo huele bien"
+		"DOTA_International2022_Quest_Diretide_StealCandy_Description"				"Recoge {s:current_tier_score} caramelos que hayan dejado caer enemigos asesinados."
+
+		"DOTA_International2022_Quest_Diretide_HitEnemiesWithMount_Name"			"Esta noche cabalgamos"
+		"DOTA_International2022_Quest_Diretide_CollectTreat_Description"			"Recoge {s:current_tier_score} caramelos soltados por Greevils."
+"npc_dota_mount_ogreseal"										"Ogrofoca"
+		"npc_dota_mount_snowball"										"Bola de Nieve"
+		"npc_dota_mount_frosttoad"										"Sapo Congelado"
+		"npc_dota_feedable_roshan"										"Roshan"
+		
+		"dota_winter2022_title"											"DESPERTAR DIRE"
+
+		// tutorial popup - used both in-game and in the dash
+		"winter2022_game_info_header_how_to_play"						"CÓMO JUGAR"
+		"winter2022_game_info_body_how_to_play"							"Acaba con los Greevils, consigue caramelos y mételos en los pozos del <b>ENEMIGO</b>."
+		"winter2022_game_info_confirm_how_to_play"						"¡Entendido!"
+		"winter2022_game_info_brief_description"						"Aprovecha la fuerza de Roshan para destruir todos los pozos de caramelos del enemigo."
+        "winter2022_game_info_punch_greevils_header"					"GOLPEA A LOS GREEVILS"
+        "winter2022_game_info_punch_greevils"							"¡Los Greevils han robado los caramelos de Roshan! Hazles daño para recuperarlos."
+        "winter2022_game_info_score_candy_header"						"METE LOS CARAMELOS"
         "winter2022_game_info_score_candy"								"¡Los Greevils han robado los caramelos de Roshan! Inflígeles daño para recuperar los caramelos y lánzalos a los pozos de caramelos del <b>ENEMIGO</b>."
-        //JUGGERNAUT
+        "winter2022_game_info_destroy_buildings_header"					"APROVECHA EL PODER DE ROSHAN"
+        "winter2022_game_info_destroy_buildings"						"Después de cada ciclo, Roshan destruirá el pozo con más caramelos. El primer equipo que pierda los 4 pozos pierde la partida."
+		"winter2022_game_info_mount_header"								"SÚBETE"
+		"winter2022_game_info_mount"									"Elige un corcel fiel e invernal para desplazarte más fácilmente por la tundra. ¿Te gusta el pingüino, la ogrofoca, la bola de nieve o el sapo congelado?"
+
+		//JUGGERNAUT
 		"DOTA_Tooltip_ability_aghsfort_juggernaut_blade_fury"									"Furia de la Hoja"
 		"DOTA_Tooltip_ability_aghsfort_juggernaut_blade_fury_Description"						"En inglés: <b><font color='#F2A93E'>Blade Fury</font></b>.\n \nProvoca un torbellino de fuerza destructiva alrededor de Juggernaut que lo hace inmune a la magia e inflige daño a las unidades enemigas cercanas. \n\nTIPO DE DISIPACIÓN: Básica"
 		"DOTA_Tooltip_ability_aghsfort_juggernaut_blade_fury_Lore"								"Las famosas técnicas con la katana de Yurnero son temidas tanto por los guerreros como por los hechiceros."
@@ -44432,7 +44653,7 @@ Fase tardía - <b>30:00 o más </b>"
 		"DOTA_Talent_ComingSoonSectionTitle"					"Talentos de TI"
 		"DOTA_Talent_ComingSoonLaunchDate"						"Próximamente"
 
-		"DOTA_International2022_CustomGameUpcomingDescription"	"Los ritmos y caprichos de Roshan son favorables de predecir, despertando el interés de todos, desde confabuladores despiadados hasta héroes poderosos y señores de alta alcurnia. Pero esta vez, ni siquiera Roshan está listo para las repercusiones de su locura por los dulces semicíclica, dirigiéndose de cabeza hacia nuevos giros helados. Así que prepara tus cubos de caramelos y prepara un par de mitones extra y tu daga favorita. Después de que los campeones de The International sean coronados en Singapur, comienza una nueva y destructiva temporada del Despertar Dire."
+		"DOTA_International2022_CustomGameUpcomingDescription"	"Los ritmos y caprichos de Roshan son favorables de predecir, despertando el interés de todos, desde confabuladores despiadados hasta héroes poderosos y señores de alta alcurnia. Pero esta vez, ni siquiera Roshan está listo para las repercusiones de su locura por los caramelos semicíclica, dirigiéndose de cabeza hacia nuevos giros helados. Así que prepara tus cubos de caramelos y prepara un par de mitones extra y tu daga favorita. Después de que los campeones de The International sean coronados en Singapur, comienza una nueva y destructiva temporada del Despertar Dire."
 
 		// Faceless Void Arcana
 
@@ -44554,6 +44775,11 @@ Fase tardía - <b>30:00 o más </b>"
 		"DOTA_BattlePass2022_Schedule_TIPointsSale_SubTitle"					"The International 2022"
 		"DOTA_BattlePass2022_Schedule_TIPointsSale_Description"					"<b>Oferta de un solo uso, ¡hasta un 75 % de descuento!<br/>Disponible del 12 al 30 de octubre</b><br/>- 120 niveles del pase de batalla<br/>- 9 Tesoros de Aspecto Inmortal I<br/>- 6 Tesoros de Aspecto Inmortal II<br/>- 6 Tesoros de colección del pase de batalla<br/>- 6 Tesoros de las Herencias Eternas"
 		"DOTA_BattlePass2022_Schedule_TIPointsSale_ActionLabel"					"Comprar {s:item_price}"
+
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_Heading"					"¡Lote en oferta!"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_SubTitle"					"El Despertar Dire 2022"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_Description"				"<b>¡Oferta final: rebaja del 75 %!<br/>Disponible: 15 de diciembre al 12 de enero</b><br/>- 120 niveles del pase de batalla<br/>- 9 Tesoros Inmortales I<br/>- 6 Tesoros Inmortales II<br/>- 6 Colecciones de Tesoros<br/>- 6 Tesoros de las Herencias Eternas"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_ActionLabel"				"Comprar {s:item_price}"
 
 		"DOTA_BattlePass2022_Schedule_PrimalBeastPrestige_Heading"				"Set de prestigio de Primal Beast"
 		"DOTA_BattlePass2022_Schedule_PrimalBeastPrestige_Description"			"Mucho antes de su llegada al Tomo'kan, un intento de controlar a la bestia le llevó a vestirse con una armadura y a entrar tontamente a la batalla..."
@@ -44812,6 +45038,8 @@ Fase tardía - <b>30:00 o más </b>"
 		"DOTA_StickerStore_TalentComingSoon"					"Próximamente"
 		"DOTA_StickerStore_MoreStickersComingSoon"				"¡Pronto habrá más calcomanías!"
 		"DOTA_StickerStore_TalentStickersLabel"					"Calcomanías de talentos"
+		"DOTA_StickerStore_NoStickersAvailable"					"No hay calcomanías a la venta."
+
 		"DOTA_StickerHero_AssignSticker"						"Asignar calcomanía"
 		"DOTA_StickerHero_ReplaceSticker"						"Reemplazar calcomanía"
 
@@ -44895,7 +45123,11 @@ Fase tardía - <b>30:00 o más </b>"
 		"DOTA_stickers_voice_lines_season_6_es_desc"			"Líneas de voz exclusivas obtenidas por pegar calcomanías holográficas o doradas de talentos."
 
 		"DOTA_PrimalBeastPrestige_Level"						"Nivel 223 del pase de batalla"
-//TI Championship stickers
+
+		// FACELESS VOID ARCANA
+		"KillEaterEvent_FacelessVoid_ArcanaProgress"		"Enemigos asesinados en la Cronoesfera en partidas ganadas"
+
+		//TI Championship stickers
 		"DOTA_Stickers_Store_ChampionsTitle"							"¡Felicidades,<br/>Tundra Esports!"
 		"DOTA_Stickers_Store_ChampionsDescription"						"Colecciona calcomanías de la edición de campeones de los ganadores de este año para celebrar otro año más de The International."
 		"DOTA_Champions2022_CongratulationsTitle"						"¡Felicidades, Tundra Esports!"
@@ -44903,6 +45135,7 @@ Fase tardía - <b>30:00 o más </b>"
 		"DOTA_Champions2022_WatchReplayButtonLabel"						"Ver repetición"
 		"DOTA_Champions2022_BuyStickerButtonLabel"						"Comprar calcomanía del campeón"
 
+		"DOTA_BattlePass2022_Schedule_CollectorsCache2Available_Heading" "Alijo del Coleccionista II disponible"
 		"DOTA_BattlePass2022_Schedule_CollectorsCacheAvailable_Heading" "Alijo del Coleccionista disponible"
 		"DOTA_International2022_CollectorsCacheAvailable" "Ver Tesoro"
 
@@ -44919,6 +45152,10 @@ Fase tardía - <b>30:00 o más </b>"
 		"DOTA_2022Diretide_CollectorsCache_Treasure_1"		"1 tesoro"
 		"DOTA_2022Diretide_CollectorsCache_Treasure_2"		"7 Tesoros"
 		"DOTA_2022Diretide_CollectorsCache_Treasure_3"		"14 Tesoros"
-		"DOTA_2022Diretide_CollectorsCache_Disclaimer"		"Los objetos del Alijo solo estarán disponibles hasta el 18 de diciembre."
-	}
+		"DOTA_2022Diretide_CollectorsCache_Disclaimer"		"Los objetos del Alijo solo estarán disponibles hasta el 12 de enero."
+
+        "DOTA_BattlePass2022_Schedule_MoreActiveEventsUp" "+{d:num_more_active_events_up} eventos activos arriba"
+        "DOTA_BattlePass2022_Schedule_MoreActiveEventsDown" "+{d:num_more_active_events_down} eventos activos abajo"
+
+		}
 }

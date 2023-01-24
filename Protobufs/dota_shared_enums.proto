@@ -105,6 +105,7 @@ enum EEvent {
 	EVENT_ID_TEAM_2021_2022_TOUR3 = 37;
 	EVENT_ID_TEAM_INTERNATIONAL_2022 = 38;
 	EVENT_ID_PERMANENT_GRANTS = 39;
+	EVENT_ID_TEAM_2023_TOUR1 = 41;
 }
 
 enum DOTALeaverStatus_t {
@@ -729,6 +730,7 @@ message CMsgDOTACombatLogEntry {
 	optional uint32 neutral_camp_team = 76;
 	optional float regenerated_health = 77;
 	optional bool will_reincarnate = 78;
+	optional bool uses_charges = 79;
 }
 
 message CMsgPendingEventAward {

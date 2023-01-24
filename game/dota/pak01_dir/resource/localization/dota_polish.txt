@@ -12179,7 +12179,11 @@
 		"DOTA_Style_Venge_Lost_Seraph_Style_1"	"Światła"
 		"DOTA_Style_Venge_Lost_Seraph_Style_2"	"Królewska"
 		
-		//DOTA_ITEM_STYLES_END
+		"DOTA_Item_Frightful_Revelries_0"	"Przerażające Hulanki"
+		"DOTA_Item_Frightful_Revelries_1"	"Noc Żniw"
+
+
+//DOTA_ITEM_STYLES_END
 //DOTA_ITEM_STYLE_END
 
 		"TeamCup_Description"	"Zdobyte przez fanów podczas cotygodniowego pucharu drużyn The International"
@@ -12726,6 +12730,8 @@
 		"ExchangeItemsForOffering_UnknownError"			"Ofiara nie powiodła się - nieznany błąd."
 
 		"DOTA_HelpTips_NeverShowTips"	"Nigdy nie pokazuj wskazówek"
+		"DOTA_HelpTips_DismissTip"		"Rozumiem!"
+
 		// Hint system titles
 		"dota_tip_browse_guides_title"	"Poradniki społeczności"
  		"dota_tip_browse_guides_desc"	"Te poradniki to napisane przez społeczność rekomendacje na temat wyboru przedmiotów oraz umiejętności podczas gry. Kliknij, aby przeglądać istniejące poradniki."
@@ -14778,9 +14784,7 @@ Specjalna drwina Techiesów"
 		"DOTA_TrophyName_International2022BattlePass_CavernChallenge"	"Nagroda wędrówki grotołaza"
 		"DOTA_TrophyDesc_International2022BattlePass_CavernChallenge"	"Zestawy dla bohaterów zdobyte poprzez wędrówkę grotołaza podczas Przepustki Bitewnej 2022"
 
-
 		"DOTA_TrophyName_MVPTrophy"						"Trofeum MVP"
-		"DOTA_TrophyDesc_MVPTrophy"						"Upamiętnia, ile razy okrzyknięto cię MVP meczu."
 		"DOTA_TrophyUnits_MVP:p"						"%s1 nagroda MVP#|#%s1 nagrody MVP#|#%s1 nagród MVP#|#%s1 nagrody MVP"
 
 		"DOTA_TrophyName_TI6SeasonalMMR_Solo"			"Najwyższa ranga solo sezonu The International 2016"
@@ -19763,11 +19767,6 @@ Specjalna drwina Techiesów"
 		"DOTA_ChallengeDesc_Phoenix_Stun_With_Supernova"   "Ogłusz łącznie <font color='#ffffff'>%s1</font> wrogich bohaterów za pomocą <font color='#ffffff'>Supernova</font>."
 		"DOTA_ChallengeDesc_Razor_Damage_On_Static_Linked"   "Zadaj <font color='#ffffff'>%s1</font> pkt. obrażeń wrogim bohaterom, którym wyssano obrażenia za pomocą <font color='#ffffff'>Static Link</font>."
 		"DOTA_ChallengeDesc_Razor_DamageWithUnstableCurrent"   "Zadaj <font color='#ffffff'>%s1</font> pkt. obrażeń wrogim bohaterom za pomocą <font color='#ffffff'>Unstable Current</font>."
-		"DOTA_ChallengeDesc_ShadowDemon_KillsUnderSoulCatcher"   "Zabij lub asystuj w zabójstwie <font color='#ffffff'>%s1</font> wrogich bohaterów, którzy są pod wpływem umiejętności <font color='#ffffff'>Soul Catcher</font>."
-
-
-
-
 		"DOTA_PostGame_DamageDetails"			"Obrażenia"
 		"DOTA_PostGame_BuffDetails"				"Efekty"
 		"DOTA_PostGame_Breakdowns"				"Analizy"
@@ -24006,7 +24005,7 @@ Aby dołączyć jako doświadczony gracz, liczba rozegranych przez ciebie gier m
 	"DOTA_HeroRole_Description_Pusher"		"Pozwala na szybkie oblężenie i zniszczenie wieży lub koszar w dowolnym momencie gry."
 	"DOTA_HeroRole_Description_Initiator"	"Postać przystosowana do rozpoczynania potyczek drużynowych."
 
-    "DOTA_HeroGrid_Sort_By"                        "Sortuj wg:"
+	"DOTA_HeroGrid_Sort_By"                        "Sortuj wg:"
 
 	"DOTA_HeroGrid_Loading"						"Wczytywanie siatki bohaterów..."
 	"DOTA_HeroGrid_FailedToLoad"				"Nie udało się wczytać tego układu siatki. Spróbuj ponownie później.<br><a href=\"event:DOTAHeroGridSelectDefaultConfig()\">Kliknij tutaj, by powrócić do domyślnego układu siatki.</a>"
@@ -25178,7 +25177,6 @@ Aby dołączyć jako doświadczony gracz, liczba rozegranych przez ciebie gier m
 
 	"DOTA_ChangeLog_TI9AllStarVoting" "Głosowanie na mecz gwiazd TI9 już dostępne"
 	"DOTA_ChangeLog_TI0CompendiumEnded" "Kompendium The International 2021 zakończyło się. Kliknij tutaj, by zobaczyć finalne wyniki."
-
 	"DOTA_GlobalLiveSpectatorChat_Title"			"Nowa funkcja - globalny czat widzów na żywo"
 	"DOTA_GlobalLiveSpectatorChat_Details"			"Nie musisz być na KeyArena, by być częścią wielotysięcznego tłumu. Liczba widzów na pojedynczym kanale czatowym w grze została zwiększona. Od teraz masz również dostęp do kanału czatowego widzów w nowej zakładce „Gra na żywo” w oknie czatu w menu głównym."
 
@@ -32490,8 +32488,6 @@ With early pressure heroes like Zeus and Death Prophet making appearances, split
 
 	"DOTA_QueenOfPainArcana_ArcanaProgress_Score"					"{s:current_score}/{d:unlock_value}"
 	"DOTA_QueenOfPainArcana_ArcanaProgress_Description:p{unlock_value}"	"Udręcz {d:unlock_value} bohatera umiejętnością Sonic Wave w zwycięskich meczach, by odblokować alternatywny styl.#|#Udręcz {d:unlock_value} bohaterów umiejętnością Sonic Wave w zwycięskich meczach, by odblokować alternatywny styl.#|#Udręcz {d:unlock_value} bohaterów umiejętnością Sonic Wave w zwycięskich meczach, by odblokować alternatywny styl.#|#Udręcz {d:unlock_value} bohaterów umiejętnością Sonic Wave w zwycięskich meczach, by odblokować alternatywny styl."
-	"KillEaterEventType_QueenOfPain_ArcanaProgress"					"Bohaterowie udręczeni um. Sonic Wave"
-
 	"DOTA_QueenOfPainArcana_Hud_Title"								"{d:combo_count}x kombinacja" 
 	
 	"Debut_Arcana_QueenOfPain_Feature_1_Title" 						"<span class='bullettitle'>Całkowicie nowy model i piedestał</span>"

@@ -8363,6 +8363,9 @@
 
 		"DOTA_Style_qop_2022_immortal_legs_0"	"Eminense"
 		"DOTA_Style_qop_2022_immortal_legs_1"	"Kongelig"
+
+		"DOTA_Item_Frightful_Revelries_0"	"Frightful Revelries"
+		"DOTA_Item_Frightful_Revelries_1"	"Harvest Night"
 "DOTA_Shutdown_Header"		"Feil"
 
 
@@ -9203,7 +9206,6 @@
 		"DOTA_TrophyDesc_International2022BattlePass_Level"				"Opptjente nivå i battlepasset 2022."
 		"DOTA_TrophyName_International2022BattlePass_CavernChallenge"	"Grottevandringspris"
 		"DOTA_TrophyDesc_International2022BattlePass_CavernChallenge"	"Heltesett mottatt fra grottevandringen i battlepasset 2022."
-
 
 		"DOTA_TrophyName_MVPTrophy"						"MVP-trofé"
 		"DOTA_TrophyDesc_MVPTrophy"						"Et minne om hvor mange ganger du er blitt kåret til kampens MVP."
@@ -10080,6 +10082,11 @@
 		"DOTA_ChallengeDesc_Techies_StickyBombsAttached"			"Fest <font color='#ffffff'>%s1</font> <font color='#ffffff'>Sticky Bombs</font> på fiendtlige helter."
 
 		"DOTA_ChallengeDesc_Queenofpain_Scream_Of_Pain_Fears"		"Sett <font color='#ffffff'>frykt</font> i fiendtlige helter med <font color='#ffffff'>Scream of Pain</font> totalt <font color='#ffffff'>%s1</font> ganger."
+
+		"DOTA_ChallengeDesc_ShadowDemon_KillsUnderDisseminate"   "Få <font color='#ffffff'>%s1</font> drap eller medvirkninger på fiendtlige helter påvirket av <font color='#ffffff'>Disseminate</font>."
+
+
+
 
 		"DOTA_PostGame_DamageDetails"			"Skade"
 		"DOTA_PostGame_BuffDetails"				"Styrkelser"
@@ -13694,6 +13701,7 @@ Du må ha minst {d:new_player_req_games_played} spilte kamper og et atferdsresul
 	"DOTA_HeroRole_Description_Pusher"		"Kan raskt beleire og ødelegge tårn og brakker når som helst i kampen."
 	"DOTA_HeroRole_Description_Initiator"	"God til å sette i gang lagkamper."
 
+	"DOTA_HeroTags"							"Merkelapper"
     "DOTA_HeroGrid_Sort_By"                        "Sorter etter:"
 
 	"DOTA_HeroGrid_Loading"						"Laster inn helterutenett …"
@@ -14542,6 +14550,7 @@ Du må ha minst {d:new_player_req_games_played} spilte kamper og et atferdsresul
 
 	"DOTA_ChangeLog_TI9AllStarVoting" "Utvelgelsen til stjernekampen er tilgjengelig nå"
 	"DOTA_ChangeLog_TI0CompendiumEnded" "The International-kompendiet 2021 er over. Trykk her for å se endelige resultater."
+	"DOTA_ChangeLog_BP2022Ended" "Battlepasset 2022 har tatt slutt. Trykk her for å løse inn eventuelle siste belønninger."
 
 	"DOTA_Credits"			"Anerkjennelser"
 	"DOTA_Credits_EnglishVoices"	"Engelske stemmeskuespillere"
@@ -14684,6 +14693,9 @@ Du må ha minst {d:new_player_req_games_played} spilte kamper og et atferdsresul
 
 	"DOTA_Banned_Title"			"Utestengt"
 	"DOTA_Banned"				"Kontoen din er blitt utestengt fra å spille Dota 2."
+
+	"DOTA_China_SpecialDisabled_Title" "Deaktivert"
+	"DOTA_China_SpecialDisabled" "Alle spillere, som svar på aktuelt varsel kommer tjenerne til å være ute av drift fra 00.00 til 23.59 den 6. desember 2022. Takk for støtten."
 
 	"DOTA_AntiAddiction_JoinFailed_Title"           "Overskredet tillatt spilletid"
     "DOTA_AntiAddiction_JoinFailed_Body"            "Du eller et gruppemedlem har overskredet spilletiden på nett for i dag. Ta en pause til i morgen."
@@ -15125,6 +15137,7 @@ Du må ha minst {d:new_player_req_games_played} spilte kamper og et atferdsresul
 	"DOTA_Popup_CardPack_Model_Winter2022"			"DPC: VINTERSERIEN 2022"
 	"DOTA_Popup_CardPack_Model_Spring2022"			"DPC: VÅRSERIEN 2022"
 	"DOTA_Popup_CardPack_Model_Summer2022"			"DPC 2022: Sommerserien"
+	"DOTA_Popup_CardPack_Model_Winter2023"			"DPC 2023: Vinterserien"
 	"DOTA_Popup_CardPack_Model_PackCount"			"Fempakning"
 	"DOTA_Popup_CardPack_Model_PremiumPackCount"	"Premiumpakke med fem"
 	"DOTA_Popup_CardPack_Model_MainTitle"			"Spillerkort"
@@ -17704,6 +17717,7 @@ Du må ha minst {d:new_player_req_games_played} spilte kamper og et atferdsresul
 	"DOTA_HeroLevelReward_Currency:p{currency_amount}"	"{d:currency_amount} skår#|#{d:currency_amount} skår"
 	"DOTA_HeroLevelReward500_Currency"	"500 skår"
 	"DOTA_HeroLevelReward350_Currency"	"350 skår"
+	"DOTA_HeroLevelReward700_Currency"	"700 skår"
 	"DOTA_HeroLevelReward_ChatWheel"	"Uttrykk til heltesamtalehjulet:<br>«{s:chat_wheel_message}»"
 
 	"DOTA_ReadyCheck"	"Alle klare?"
@@ -19537,6 +19551,21 @@ Du må ha minst {d:new_player_req_games_played} spilte kamper og et atferdsresul
 
 	"DOTA_WeeklyQuest_Win_And_High_Fives_Completed_Name"			"En universell gest"
 	"DOTA_WeeklyQuest_Win_And_High_Fives_Completed_Description"		"Gi spillere high five {s:current_tier_score} ganger i kamper du vinner."
+		
+	"DOTA_WeeklyQuest_Win_With_Ranged_Hero_Name"					"Missilenes mester"
+	"DOTA_WeeklyQuest_Win_With_Ranged_Hero_Description"				"Vinn {s:current_tier_score} kamper med fjernkamphelter."
+		
+	"DOTA_WeeklyQuest_Win_With_Melee_Hero_Name"						"Siste hånd på verket"
+	"DOTA_WeeklyQuest_Win_With_Melee_Hero_Description"				"Vinn {s:current_tier_score} kamper med nærkamphelter."
+		
+	"DOTA_WeeklyQuest_Disarm_Duration_Name"							"Slepphendt"
+	"DOTA_WeeklyQuest_Disarm_Duration_Description"					"Avvæpn fiender i {s:current_tier_score} sekunder."
+		
+	"DOTA_WeeklyQuest_Neutral_Items_Earned_Name"					"Organisk marked"
+	"DOTA_WeeklyQuest_Neutral_Items_Earned_Description"				"Oppdag {s:current_tier_score} nøytrale gjenstander."
+		
+	"DOTA_WeeklyQuest_Use_Ability_Charges_Name"						"Fulladet"
+	"DOTA_WeeklyQuest_Use_Ability_Charges_Description"				"Bruk {s:current_tier_score} ladninger av helters evner."
 
 	// End Weekly Quest Names
 
@@ -20144,6 +20173,13 @@ Du må ha minst {d:new_player_req_games_played} spilte kamper og et atferdsresul
 	"DOTA_DPCTeams_SeasonPeriod_Event37_Dates"		"6. juni–14. august 2022"
 	"DOTA_DPCTeams_SeasonPeriod_Event38_Name"		"The International 2022"
 	"DOTA_DPCTeams_SeasonPeriod_Event38_Dates"		"8.–30. oktober 2022"
+
+	"DOTA_DPCTeams_RegistrationPeriod8"				"Vinterserien"
+	"DOTA_DPCTeams_RegistrationPeriodDates8"		"9. januar–5. mars 2023"
+	"DOTA_DPCTeams_RegistrationPeriodSeason8"		"Sesongen 2023"
+	"DOTA_DPCTeams_SeasonPeriod_Event41_Name"		"Vinterserien"
+	"DOTA_DPCTeams_SeasonPeriod_Event41_Dates"		"9. januar–5. mars 2023"
+
 
 	"DOTA_FavoriteTeamSet"							"Angi favorittlag"
 	"DOTA_NewFavoriteTeam"							"{s:favorite_team} er nå angitt som favorittlaget ditt. Dette gjenspeiles ulike steder på dashbordet og i spillet."
@@ -24034,6 +24070,7 @@ Hvis du føler du ikke var i stand til å vie nok oppmerksomhet til saken for å
 		"DOTA_CandyShop_Error_NotEnoughSpace"			"Ikke nok plass i lageret"
 		"DOTA_CandyShop_Error_NotEnoughBags"			"Ikke nok poser"
 		"DOTA_CandyShop_Error_InvalidRecipe"			"Ugyldig oppskrift."
+		"DOTA_CandyShop_Error_ExpiredShop"				"Denne godtebutikken er ikke lenger tilgjengelig."
 		"DOTA_CandyShop_CandySackInfo"					"Spill Dota eller øk nivået på battlepasset for å få mer godteri."
 		"DOTA_CandyShop_InventorySlotInfo"				"Øk battlenivået for å låse opp flere plasser."
 
@@ -28490,6 +28527,11 @@ Hvis du føler du ikke var i stand til å vie nok oppmerksomhet til saken for å
 		"DOTA_BattlePass2022_Schedule_TIPointsSale_Description"					"<b>Engangstilbud, 75 % rabatt<br/>Tilgjengelig 12.–30. oktober</b><br/>– 120 battlepassnivå<br/>– 9 udødelige skatter I<br/>– 6 udødelige skatter II<br/>– 6 battlepassamlinger<br/>– 6 tidløse arvestykker"
 		"DOTA_BattlePass2022_Schedule_TIPointsSale_ActionLabel"					"Kjøp {s:item_price}"
 
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_Heading"					"Pakkesalg!"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_SubTitle"					"Diretide 2022"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_Description"				"<b>Siste tilbud, 75 % rabatt!<br/>Tilgjengelig 15. desember til 12. januar</b><br/>–120 battlepassnivå<br/>– 9 udødelige skatter I<br/>– 6 udødelige skatter II<br/>– 6 battlepassamlinger<br/>– 6 tidløse arvestykker"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_ActionLabel"				"Kjøp {s:item_price}"
+
 		"DOTA_BattlePass2022_Schedule_PrimalBeastPrestige_Heading"				"Prestisjesett til Primal Beast"
 		"DOTA_BattlePass2022_Schedule_PrimalBeastPrestige_Description"			"Lenge før han kom til Tomo'kan i et forsøk på å temme udyret, ble han kledd i rustning og hodeløst jaget ut på slagmarken …"
 
@@ -28760,6 +28802,8 @@ Hvis du føler du ikke var i stand til å vie nok oppmerksomhet til saken for å
 		"DOTA_StickerStore_TalentComingSoon"					"Kommer snart"
 		"DOTA_StickerStore_MoreStickersComingSoon"				"Flere klistremerker kommer snart!"
 		"DOTA_StickerStore_TalentStickersLabel"					"Ekspertklistremerker"
+		"DOTA_StickerStore_NoStickersAvailable"					"Det finnes ingen klistremerker som kan kjøpes."
+
 		"DOTA_StickerHero_AssignSticker"						"Tildel klistremerke"
 		"DOTA_StickerHero_ReplaceSticker"						"Erstatt klistremerke"
 
@@ -28843,11 +28887,7 @@ Hvis du føler du ikke var i stand til å vie nok oppmerksomhet til saken for å
 		"DOTA_stickers_voice_lines_season_6_es_desc"			"Eksklusive replikker fra å ha festet ekspertklistremerker i holo eller gull."
 
 		"DOTA_PrimalBeastPrestige_Level"						"Battlepass – Nivå 223"
-
-		// FACELESS VOID ARCANA
-		"KillEaterEvent_FacelessVoid_ArcanaProgress"		"Fiender drept i Chronosphere"
-
-		//TI Championship stickers
+//TI Championship stickers
 		"DOTA_Stickers_Store_ChampionsTitle"							"Gratulerer<br/>Tundra Esports!"
 		"DOTA_Stickers_Store_ChampionsDescription"						"Samle mesterklistremerker av årets vinnere for å feire enda et år med The International."
 		"DOTA_Champions2022_CongratulationsTitle"						"Gratulerer, Tundra Esports!"
@@ -28858,6 +28898,7 @@ Hvis du føler du ikke var i stand til å vie nok oppmerksomhet til saken for å
 		"DOTA_BattlePass2022_Schedule_CollectorsCacheVoting_Heading" "Collector's Cache-avstemning"
 		"DOTA_International2022_CollectorsCacheVoting" "Stem"
 
+		"DOTA_BattlePass2022_Schedule_CollectorsCache2Available_Heading" "Collector's Cache 2 tilgjengelig"
 		"DOTA_BattlePass2022_Schedule_CollectorsCacheAvailable_Heading" "Collector's Cache tilgjengelig"
 		"DOTA_International2022_CollectorsCacheAvailable" "Se skatt"
 
@@ -28874,6 +28915,13 @@ Hvis du føler du ikke var i stand til å vie nok oppmerksomhet til saken for å
 		"DOTA_2022Diretide_CollectorsCache_Treasure_1"		"1 skatt"
 		"DOTA_2022Diretide_CollectorsCache_Treasure_2"		"7 skatter"
 		"DOTA_2022Diretide_CollectorsCache_Treasure_3"		"14 skatter"
-		"DOTA_2022Diretide_CollectorsCache_Disclaimer"		"Cache-gjenstander er kun tilgjengelige frem til 18. desember."
+		"DOTA_2022Diretide_CollectorsCache_Disclaimer"		"Cache-gjenstander er kun tilgjengelige frem til 12. januar."
+
+        "DOTA_BattlePass2022_Schedule_MoreActiveEventsUp" "+{d:num_more_active_events_up} aktive begivenheter ovenfor"
+        "DOTA_BattlePass2022_Schedule_MoreActiveEventsDown" "+{d:num_more_active_events_down} aktive begivenheter nedenfor"
+
+		"DOTA_BattlePassEndingTitle"				"Slutter om"
+		"DOTA_BattlePassEndingCountdown"			"0 <b>dager</b> 0 <b>timer</b> 0 <b>min</b> 0 <b>sek</b>"
+		"DOTA_BattlePassEndingDescription"			"Skaff deg <a href=\"event:DOTAPurchaseEventLevels( EVENT_ID_INTERNATIONAL_2022 )\">nivå</a>, <a href=\"event:DOTAShowSplashAdPopup('bundle_sale_2022_2')\">pakker</a>, <a href=\"event:DOTAShowTreasurePage(26880)\">Collector's Cache 1</a> og <a href=\"event:DOTAShowTreasurePage(26932)\">Collector's Cache 2</a>."
 	}
 }

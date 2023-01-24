@@ -8709,7 +8709,7 @@ Os Ancestrais, tanto Iluminado como Temido, traziam muitas vantagens: energia ci
 		"StoreBanner_Text_Pudge_Arcana_Bundle"			"O novo Arcano para Pudge chegou, exalando novos efeitos, animações, provocação e mais."
 
 		"StoreBanner_Header_International2018_BattlePass"			"Passe de batalha do International 2018"
-		"StoreBanner_Text_International2018_BattlePass"			"O passe de batalha do International está repleto de novos tesouros Imortais para abrir, dois novos modos de jogo e incontáveis novos recursos para explorar."
+		"StoreBanner_Text_International2018_BattlePass"			"O passe de batalha do International está repleto de novos Tesouros Imortais para abrir, dois novos modos de jogo e incontáveis novos recursos para explorar."
 
 		"StoreBanner_Header_Rubick_Arcana_Bundle"			"Pacote da Cifra do Mago"
 		"StoreBanner_Text_Rubick_Arcana_Bundle"			"O novo Arcano para Rubick chegou, exalando novos efeitos, animações e mais."
@@ -10819,7 +10819,7 @@ Os Ancestrais, tanto Iluminado como Temido, traziam muitas vantagens: energia ci
 		"DOTA_TIP_ME_PRED39_A"		"2 ou menos"
 		"DOTA_TIP_ME_PRED39_B"		"3 ou mais"
 		"DOTA_TIP_ME_PRED39_I"		"O Cheese foi usado %s1 vezes em uma única partida."
-		"DOTA_TIP_ME_PRED40"		"ÉDIGES ARREBATADAS NO EVENTO"
+		"DOTA_TIP_ME_PRED40"		"ÉGIDES ARREBATADAS NO EVENTO"
 		"DOTA_TIP_ME_PRED40_A"		"4 ou menos"
 		"DOTA_TIP_ME_PRED40_B"		"5 ou mais"
 		"DOTA_TIP_ME_PRED40_I"		"A Égide foi roubada %s1 vez(es)."
@@ -12568,6 +12568,9 @@ Os Ancestrais, tanto Iluminado como Temido, traziam muitas vantagens: energia ci
 
 		"DOTA_Style_qop_2022_immortal_legs_0"	"Eminência"
 		"DOTA_Style_qop_2022_immortal_legs_1"	"Realeza"
+
+		"DOTA_Item_Frightful_Revelries_0"	"Festim Assustador"
+		"DOTA_Item_Frightful_Revelries_1"	"Noite da Colheita"
 
 
 //DOTA_ITEM_STYLES_END
@@ -14859,7 +14862,7 @@ Os Ancestrais, tanto Iluminado como Temido, traziam muitas vantagens: energia ci
 
 		"DOTA_CompendiumBundleUpsell_Header" "PACOTE DO INTERNATIONAL"
 		"DOTA_CompendiumBundleUpsell_SubHeader"	"COMPRE JÁ PARA RECEBER <font color=\"#FFFFFF\">TODOS ESSES ITENS</font> E MAIS"
-		"DOTA_CompendiumBundleUpsell_1" "2 tesouros Imortais"
+		"DOTA_CompendiumBundleUpsell_1" "2 Tesouros Imortais"
 		"DOTA_CompendiumBundleUpsell_2" "Entregador Mini Pudge"
 		"DOTA_CompendiumBundleUpsell_3" "9 telas de carregamento"
 		"DOTA_CompendiumBundleUpsell_4" "3 fenômenos atmosféricos"
@@ -15181,9 +15184,8 @@ Provocação especial para os Techies"
 		"DOTA_TrophyName_International2022BattlePass_CavernChallenge"	"Explorador da Caverna Arcana"
 		"DOTA_TrophyDesc_International2022BattlePass_CavernChallenge"	"Conjuntos de heróis resgatados durante o passe de batalha de 2022."
 
-
 		"DOTA_TrophyName_MVPTrophy"						"Troféu de destaque"
-		"DOTA_TrophyDesc_MVPTrophy"						"Celebra a quantidade de vezes você foi votado como destaque da partida."
+		"DOTA_TrophyDesc_MVPTrophy"						"Celebra quantas vezes escolheram você como destaque da partida."
 		"DOTA_TrophyUnits_MVP:p"						"%s1 destaque#|#%s1 destaques"
 
 		"DOTA_TrophyName_TI6SeasonalMMR_Solo"			"Pico da Avaliação Solo do International 2016"
@@ -18794,7 +18796,7 @@ Provocação especial para os Techies"
 
 		"DOTA_GuideOverview_Title"			"Visão geral"
 
-		"DOTA_HeroGuidePage_PublishHelp"	"Publicar um guia de herói o envia para a Oficina Steam, tornando-o visível para outros usuários. O botão ficará amarelo caso o guia tenha alterações locais ainda não submetidas à Oficina Steam."
+		"DOTA_HeroGuidePage_PublishHelp"	"Publicar um guia de herói o envia para a Oficina Steam, tornando-o visível para outros usuários. O botão ficará amarelo caso o guia tenha alterações locais ainda não enviadas à Oficina Steam."
 		"DOTA_HeroGuidePage_PublishAllHelp"	"Esse botão envia todas as alterações em guias de heróis publicados previamente à Oficina Steam. O botão ficará amarelo caso tenha alterações locais não submetidas à Oficina Steam."
 		"DOTA_HeroGuide_PublishAll"			"Publicar tudo"
 		"DOTA_HeroGuide_Publish"			"Publicar"
@@ -20170,6 +20172,11 @@ Provocação especial para os Techies"
 		"DOTA_ChallengeDesc_Kills_After_Meteor_Hammer"				"Obtenha <font color='#ffffff'>%s1</font> vítimas ou assistências em heróis inimigos depois de atingi-los com <font color='#ffffff'>Martelo Meteorítico</font>."
 
 		"DOTA_ChallengeDesc_DarkSeer_DamageWithIllusions"   "Cause <font color='#ffffff'>%s1</font> de dano a heróis inimigos com <font color='#ffffff'>Ilusões</font>."
+		"DOTA_ChallengeDesc_ShadowDemon_KillsUnderDisseminate"   "Obtenha <font color='#ffffff'>%s1</font> vítimas ou assistências em heróis inimigos afetados por <font color='#ffffff'>Disseminar</font>."
+
+
+
+
 		"DOTA_PostGame_DamageDetails"			"Dano"
 		"DOTA_PostGame_BuffDetails"				"Efeitos positivos"
 		"DOTA_PostGame_Breakdowns"				"Resumo"
@@ -24227,7 +24234,7 @@ Provocação especial para os Techies"
 	"DOTA_Hotkeys_Tooltip_Group"  "Selecionar um grupo de unidades predefinido para controlá-lo. Para definir um grupo de controle, selecione as unidades desejadas e então pressione uma dessas teclas enquanto segura CTRL."
 	"DOTA_Hotkeys_Tooltip_Legacy"  "Usar todas as teclas associadas com o Dota 1. As teclas de habilidades serão diferentes para cada herói."
 	"DOTA_Hotkeys_Tooltip_PerUnitHotkeys"  "Ativar atalhos de habilidade diferentes por unidade."
-	"DOTA_Hotkeys_Tooltip_Quickcast"  "Os atalhos rápidos ativarão as habilidades no local atual do cursor do mouse assim que forem pressionados.<br><br>Para vincular teclas específicas para atalhos rápidos e uso automático, acesse as opções avançadas"
+	"DOTA_Hotkeys_Tooltip_Quickcast"  "Atalhos rápidos ativarão as habilidades no local atual do cursor do mouse assim que forem pressionados.<br><br>Para vincular teclas específicas para atalhos rápidos e uso automático, acesse as opções avançadas"
 	"DOTA_Hotkeys_Tooltip_Quickcast_Items"  "Atalhos rápidos ativarão o item no local atual do cursor do mouse assim que forem pressionados. <br><br>Para vincular teclas específicas para atalhos rápidos e uso automático, acesse as opções avançadas"
 	"DOTA_Hotkeys_Tooltip_Autocast"  "O atalho automático permite que lance certas habilidades automaticamente assim que estiverem prontas."
 	"DOTA_Hotkeys_Tooltip_Cast"  "Atalhos para lançar uma habilidade do herói atual."
@@ -24514,6 +24521,7 @@ Provocação especial para os Techies"
 	"DOTA_HeroRole_Description_Pusher"		"Pode cercar e destruir torres e quarteis rapidamente a qualquer momento da partida."
 	"DOTA_HeroRole_Description_Initiator"	"Bom em iniciar combates com os heróis inimigos."
 
+	"DOTA_HeroTags"							"Marcadores"
     "DOTA_HeroGrid_Sort_By"                        "Ordenar por:"
 
 	"DOTA_HeroGrid_Loading"						"Carregando grade de heróis..."
@@ -25698,7 +25706,6 @@ Provocação especial para os Techies"
 
 	"DOTA_ChangeLog_TI9AllStarVoting" "TI9: Votação da partida das estrelas no ar"
 	"DOTA_ChangeLog_TI0CompendiumEnded" "O compêndio do International 2021 acabou. Clique aqui para ver os resultados finais."
-
 	"DOTA_GlobalLiveSpectatorChat_Title"			"Novo recurso — Conversa global para espectadores ao vivo"
 	"DOTA_GlobalLiveSpectatorChat_Details"			"Você não precisa estar na KeyArena para assistir ao International em uma plateia com milhares de fãs. A conversa de espectadores agora tem uma maior capacidade, permitindo um grande número de usuários em um só canal. Você também pode acessar o canal de conversa de espectadores na nova aba \"Partida ao vivo\" na janela de conversas do menu."
 
@@ -25922,6 +25929,9 @@ Provocação especial para os Techies"
 
 	"DOTA_Banned_Title"			"Banido(a)"
 	"DOTA_Banned"				"A sua conta foi banida de jogar Dota 2."
+
+	"DOTA_China_SpecialDisabled_Title" "Desativado"
+	"DOTA_China_SpecialDisabled" "Caros usuários, em resposta a um fato relevante, os servidores do Dota 2 ficarão desativados da 0h às 23h59 do dia 6 de dezembro de 2022 (fuso horário local). Agradecemos o seu apoio."
 
 	"DOTA_AntiAddiction_Initial_With_ID_18Plus"		"Última conexão: %s1\nÚltimo endereço IP: %s2"
 	"DOTA_AntiAddiction_Initial_With_ID_Under_18"	"Você tem menos de 18 anos de idade. O sistema anti-vício foi ativado.\nÚltima conexão: %s1\nÚltimo endereço IP: %s2"
@@ -26832,6 +26842,7 @@ Provocação especial para os Techies"
 	"DOTA_Popup_CardPack_Model_Winter2022"			"ETAPA DO INVERNO DE 2022 DO CPD"
 	"DOTA_Popup_CardPack_Model_Spring2022"			"ETAPA DA PRIMAVERA DE 2022"
 	"DOTA_Popup_CardPack_Model_Summer2022"			"Etapa do Verão de 2022"
+	"DOTA_Popup_CardPack_Model_Winter2023"			"Etapa do Inverno de 2023"
 	"DOTA_Popup_CardPack_Model_PackCount"			"Pacote com cinco"
 	"DOTA_Popup_CardPack_Model_PremiumPackCount"	"Pacote especial de cinco"
 	"DOTA_Popup_CardPack_Model_MainTitle"			"Figurinhas"
@@ -31800,6 +31811,7 @@ Com heróis de pressão, como Zeus e a Death Prophet, dando as caras, \"ratos\" 
 	"DOTA_HeroLevelReward_Currency:p{currency_amount}"	"{d:currency_amount} fragmento#|#{d:currency_amount} fragmentos"
 	"DOTA_HeroLevelReward500_Currency"	"500 fragmentos"
 	"DOTA_HeroLevelReward350_Currency"	"350 fragmentos"
+	"DOTA_HeroLevelReward700_Currency"	"700 fragmentos"
 	"DOTA_HeroLevelReward_ChatWheel"	"Nova frase para a roda de mensagens:<br>\"{s:chat_wheel_message}\""
 
 	"DOTA_ReadyCheck"	"Verificação"
@@ -32446,7 +32458,7 @@ Com heróis de pressão, como Zeus e a Death Prophet, dando as caras, \"ratos\" 
 	"DOTA_TI10_DivinePath_Desc"										"Encontre riquezas incalculáveis na floresta enluarada de Noiteprata e nas realidades distorcidas do Decaduto."
 	"DOTA_TI10_DivinePath_Btn"										"Abrir Caverna Arcana"
 	"DOTA_TI10_Immortal_1_Title"									"Tesouro Imortal I"
-	"DOTA_TI10_Immortal_1_Desc"										"Fature o primeiro lote de tesouros Imortais inéditos, apresentando itens para o Lifestealer, Tinker, Night Stalker e mais."
+	"DOTA_TI10_Immortal_1_Desc"										"Fature o primeiro lote de Tesouros Imortais inéditos, apresentando itens para o Lifestealer, Tinker, Night Stalker e mais."
 	"DOTA_TI10_View_Treasure"										"Ver tesouro"
 	"DOTA_TI10_WraithKing_Arcana_Label"								"Já disponível"
 	"DOTA_TI10_WraithKing_Arcana_Title"								"O Verdadeiro Rei"
@@ -32599,7 +32611,7 @@ Com heróis de pressão, como Zeus e a Death Prophet, dando as caras, \"ratos\" 
 	"DOTA_TI10_FrontPage_Website_Desc"								"Visite a página do passe de batalha para saber mais sobre os recursos e recompensas deste ano."
 	"DOTA_TI10_FrontPage_Features_Title"							"Passe de batalha"
 	"DOTA_TI10_FrontPage_Immortal1_Title"							"Tesouro Imortal I"
-	"DOTA_TI10_FrontPage_Immortal1_Desc"							"Destrave tesouros Imortais através de recompensas do passe de batalha ou compre mais na loja."
+	"DOTA_TI10_FrontPage_Immortal1_Desc"							"Destrave Tesouros Imortais através de recompensas do passe de batalha ou compre mais na loja."
 	"DOTA_TI10_FrontPage_Guilds_Title"								"Novos clãs"
 	"DOTA_TI10_FrontPage_Guilds_Desc"								"Trabalhe em equipe cumprindo contratos e desafios para ganhar pontos de batalha e subir o nível do seu clã."
 	"DOTA_TI10_FrontPage_Gauntlet_Title"							"Maratona de Batalhas"
@@ -32982,7 +32994,7 @@ Com heróis de pressão, como Zeus e a Death Prophet, dando as caras, \"ratos\" 
 
 	"DOTA_QueenOfPainArcana_ArcanaProgress_Score"					"{s:current_score} / {d:unlock_value}"
 	"DOTA_QueenOfPainArcana_ArcanaProgress_Description:p{unlock_value}"	"Atormente {d:unlock_value} herói com Ondas Sônicas em partidas vitoriosas para destravar o estilo alternativo.#|#Atormente {d:unlock_value} heróis com Ondas Sônicas em partidas vitoriosas para destravar o estilo alternativo."
-	"KillEaterEventType_QueenOfPain_ArcanaProgress"					"Heróis atormentados pela Onda Sônica"
+	"KillEaterEventType_QueenOfPain_ArcanaProgress"					"Heróis atormentados pela Onda Sônica em partidas vitoriosas"
 
 	"DOTA_QueenOfPainArcana_Hud_Title"								"Atingiu {d:combo_count}" 
 	
@@ -33617,7 +33629,7 @@ Com heróis de pressão, como Zeus e a Death Prophet, dando as caras, \"ratos\" 
 	"DOTACavernCrawl_LegendSmallTreasure_Title"						"Baú de pontos pequeno"
  	"DOTACavernCrawl_LegendSmallTreasure_Desc_TI2019"				"Encontre 300 pontos de batalha e 150 fragmentos do Dota+."
 	"DOTACavernCrawl_LegendLargeTreasure_Title"						"Baú de pontos grande"
- 	"DOTACavernCrawl_LegendLargeTreasure_Desc_TI2019"				"Encontre 2.000 pontos de batalhas e 1.000 fragmentos do Dota+."
+ 	"DOTACavernCrawl_LegendLargeTreasure_Desc_TI2019"				"Encontre 2.000 pontos de batalha e 1.000 fragmentos do Dota+."
 	"DOTACavernCrawl_LegendStyle_Desc_TI2019"						"Encontre 3 fragmentos para destravar um estilo no conjunto da recompensa final."
 	"DOTACavernCrawl_LegendUltraRare_Desc_TI2019"					"Fornece o Ultrarraro <font color='#88FCBD'>Bebê Roshan de Jade!</font>"
 	"DOTACavernCrawl_Description_Turbo"								"<b>Observação:</b> são necessárias 2 vitórias em partidas turbo para derrotar um herói. A 1ª vitória deixa o herói ferido e a 2ª o derrota. O item <b><i>Lâmina de Abate</i></b> pode eliminar heróis feridos."
@@ -33831,7 +33843,7 @@ Com heróis de pressão, como Zeus e a Death Prophet, dando as caras, \"ratos\" 
 	"DOTACavernCrawl_RewardName_Shovel_Fall2021"					"Talismã do Contínuo"
 	"DOTACavernCrawl_Tooltip_Shovel_Fall2021"						"Use o Talismã do Contínuo em um Totem para contornar as armadilhas."
   	"DOTACavernCrawl_LegendSmallTreasure_Desc_Fall2021"				"Encontre 250 pontos de batalha e 125 fragmentos do Dota+."
- 	"DOTACavernCrawl_LegendLargeTreasure_Desc_Fall2021"				"Encontre 2.000 pontos de batalhas e 1.000 fragmentos do Dota+."
+ 	"DOTACavernCrawl_LegendLargeTreasure_Desc_Fall2021"				"Encontre 2.000 pontos de batalha e 1.000 fragmentos do Dota+."
 	"DOTACavernCrawl_RewardName_SmallTreasure_Fall2021"				"250 pontos de batalha e 125 fragmentos do Dota+"
 	"DOTACavernCrawl_RewardName_LargeTreasure_Fall2021"				"2.000 pontos de batalha e 1.000 fragmentos do Dota+"
 	"DOTACavernCrawl_RewardName_SmallTreasure_Fall2021_Part1"		"250 pontos de batalha e"
@@ -34255,7 +34267,7 @@ Com heróis de pressão, como Zeus e a Death Prophet, dando as caras, \"ratos\" 
 
 	"DOTA_WeeklyQuest_Win_And_High_Fives_Completed_Name"			"Tocando aqui!"
 	"DOTA_WeeklyQuest_Win_And_High_Fives_Completed_Description"		"Cumprimente outros jogadores com um \"toca aqui\" {s:current_tier_score} vezes em partidas vitoriosas"
-
+		
 	// End Weekly Quest Names
 
 
@@ -34933,6 +34945,13 @@ Com heróis de pressão, como Zeus e a Death Prophet, dando as caras, \"ratos\" 
 	"DOTA_DPCTeams_SeasonPeriod_Event38_Name"		"The International 2022"
 	"DOTA_DPCTeams_SeasonPeriod_Event38_Dates"		"8 a 30 de outubro de 2022"
 
+	"DOTA_DPCTeams_RegistrationPeriod8"				"Etapa do Inverno"
+	"DOTA_DPCTeams_RegistrationPeriodDates8"		"9/jan. a 5/mar."
+	"DOTA_DPCTeams_RegistrationPeriodSeason8"		"Temporada 2023"
+	"DOTA_DPCTeams_SeasonPeriod_Event41_Name"		"Etapa do Inverno"
+	"DOTA_DPCTeams_SeasonPeriod_Event41_Dates"		"9/jan. a 5/mar."
+
+
 	"DOTA_FavoriteTeamSet"							"Equipe favorita definida"
 	"DOTA_NewFavoriteTeam"							"Agora, {s:favorite_team} é a sua equipe em destaque. Isso será refletido em diferentes partes do painel e em partidas."
 	"DOTA_DPCTeams_Place1"							"1º"
@@ -35196,6 +35215,7 @@ Com heróis de pressão, como Zeus e a Death Prophet, dando as caras, \"ratos\" 
 	"DOTA_TI10_CollectorsCache_Treasure_2"				"8 tesouros"
 	"DOTA_TI10_CollectorsCache_Treasure_3"				"15 tesouros"
 
+	"DOTA_SplashAd_TI10_CollectorsCache_2_Title" 			"Suplemento de Colecionador do International 2020 II"
 	"DOTA_SplashAd_TI10_CollectorsCache_2_Exclusive_Text" 	"Já disponível, o Suplemento de Colecionador apresenta 14 conjuntos, além da chance de obter 3 conjuntos raros adicionais."
 	"DOTA_SplashAd_TI10_CollectorsCache_2_Alt_Header" 		"Obtenha até 34 níveis de batalha"
 	"DOTA_TI10_CollectorsCache_2_HeaderText"				"Obtenha 34 níveis adicionais de batalha"
@@ -36718,7 +36738,9 @@ Em seções de <b>antijogo</b>, fique de olho em ações negativas em direção 
 		"DOTA_DPCScheduleAllTeams"	"TODAS"
 		"DOTA_DPCScheduleDivision1"	"1ª DIV"
 		"DOTA_DPCScheduleDivision2"	"2ª DIV"
-"npc_dota_hero_abaddon_npedesc1"	"Protege os seus aliados ou a si mesmo de ataques"
+		// Hero New Player Descriptions
+		"DOTA_SimilarHeroes"	"Heróis similares:"
+		"npc_dota_hero_abaddon_npedesc1"	"Protege os seus aliados ou a si mesmo de ataques"
 
 		"npc_dota_hero_alchemist_npedesc1"	"Ganha ouro adicional de unidades mortas e runas de Recompensas"
 
@@ -38672,11 +38694,13 @@ Em seções de <b>antijogo</b>, fique de olho em ações negativas em direção 
 		"DOTA_International2022_CandyShop_CandyBags"			"Sacos de doces"
 		"DOTA_International2022_CandyShop_OpeningSoon"			"Inauguração em breve"
 		
+		"DOTA_CandyShop_HelpText"						"Troque doces por itens. Jogue Dota para renovar o estoque."
 		"DOTA_CandyShop_Purchase"						"Trocar"
 		"DOTA_CandyShop_PurchaseErrorTitle"				"Falha ao trocar"
 		"DOTA_CandyShop_OpenBagErrorTitle"				"Falha ao abrir saco"
 		"DOTA_CandyShop_AvailableRolls"					"Renovações:"
 		"DOTA_CandyShop_MaxRolls"						"Até 10 por semana."
+		"DOTA_CandyShop_OutOfRolls"						"Vença partidas para ganhar mais."
 		"DOTA_CandyShop_EmptyInventory"					"Inventário de doces vazio."
 		"DOTA_CandyShop_WeeklyRerolls"					"{d:rerolls_earned}/{d:rerolls_max} na semana"
 		"DOTA_CandyShop_RerollItems"					"Renovar estoque"
@@ -38696,6 +38720,7 @@ Em seções de <b>antijogo</b>, fique de olho em ações negativas em direção 
 		"DOTA_CandyShop_Error_NotEnoughSpace"			"Sem espaço suficiente no inventário"
 		"DOTA_CandyShop_Error_NotEnoughBags"			"Sem sacos suficientes"
 		"DOTA_CandyShop_Error_InvalidRecipe"			"Receita inválida."
+		"DOTA_CandyShop_Error_ExpiredShop"				"Esta loja de doces não está mais disponível."
 		"DOTA_CandyShop_InventorySizeIncrease"			"+{d:inventory_size_increase} espaços de doce no Empório"
 		"DOTA_CandyShop_ExchangeRecipeRefreshTimer"		"Nova receita em {i:refresh_days}D {s:refresh_hours}H {s:refresh_minutes}M {s:refresh_seconds}S"
 		"DOTA_CandyShop_OpenBags"						"Abrir sacos"
@@ -43135,6 +43160,11 @@ Em seções de <b>antijogo</b>, fique de olho em ações negativas em direção 
 		"DOTA_BattlePass2022_Schedule_TIPointsSale_Description"					"<b>Compra única, 75% de desconto!<br/>Disponível de 12 a 30 de outubro</b><br/>• 120 níveis de batalha<br/>• 9 Tesouros Imortais I<br/>• 6 Tesouros Imortais II<br/>• 6 Tesouros da Coleção<br/>• 6 Tesouros das Heranças Eternas"
 		"DOTA_BattlePass2022_Schedule_TIPointsSale_ActionLabel"					"Comprar {s:item_price}"
 
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_Heading"					"Pacote promocional!"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_SubTitle"					"Diretide 2022:"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_Description"				"<b>Última chance — 75% de desconto!<br/>Disponível de 15 de dezembro a 12 de janeiro</b><br/>• 120 níveis de batalha<br/>• 9 Tesouros Imortais I<br/>• 6 Tesouros Imortais II<br/>• 6 Tesouros da Coleção<br/>• 6 Tesouros das Heranças Eternas"
+		"DOTA_BattlePass2022_Schedule_TIPointsSale_2_ActionLabel"				"Comprar {s:item_price}"
+
 		"DOTA_BattlePass2022_Schedule_PrimalBeastPrestige_Heading"				"Conjunto de prestígio para a Fera Primal"
 		"DOTA_BattlePass2022_Schedule_PrimalBeastPrestige_Description"			"Muito antes da sua chegada a Tomo'kan, uma tentativa tola e fracassada de controlar a Fera a deixou protegida e forçada a entrar em uma batalha..."
 
@@ -43401,6 +43431,8 @@ Em seções de <b>antijogo</b>, fique de olho em ações negativas em direção 
 		"DOTA_StickerStore_TalentComingSoon"					"Em breve"
 		"DOTA_StickerStore_MoreStickersComingSoon"				"Mais adesivos em breve!"
 		"DOTA_StickerStore_TalentStickersLabel"					"Adesivos de personalidades"
+		"DOTA_StickerStore_NoStickersAvailable"					"Não há adesivos à venda."
+
 		"DOTA_StickerHero_AssignSticker"						"Vincular adesivo"
 		"DOTA_StickerHero_ReplaceSticker"						"Substituir adesivo"
 
@@ -43486,7 +43518,7 @@ Em seções de <b>antijogo</b>, fique de olho em ações negativas em direção 
 		"DOTA_PrimalBeastPrestige_Level"						"Nível de batalha 223"
 
 		// FACELESS VOID ARCANA
-		"KillEaterEvent_FacelessVoid_ArcanaProgress"		"Inimigos mortos na Cronosfera"
+		"KillEaterEvent_FacelessVoid_ArcanaProgress"		"Inimigos mortos na Cronosfera em partidas vitoriosas"
 
 		//TI Championship stickers
 		"DOTA_Stickers_Store_ChampionsTitle"							"Parabéns,<br/>Tundra Esports!"
@@ -43499,6 +43531,7 @@ Em seções de <b>antijogo</b>, fique de olho em ações negativas em direção 
 		"DOTA_BattlePass2022_Schedule_CollectorsCacheVoting_Heading" "Votação do Suplemento de Colecionador"
 		"DOTA_International2022_CollectorsCacheVoting" "Votar"
 
+		"DOTA_BattlePass2022_Schedule_CollectorsCache2Available_Heading" "Suplemento de Colecionador II disponível"
 		"DOTA_BattlePass2022_Schedule_CollectorsCacheAvailable_Heading" "Suplemento de Colecionador disponível"
 		"DOTA_International2022_CollectorsCacheAvailable" "Ver tesouro"
 
@@ -43515,6 +43548,13 @@ Em seções de <b>antijogo</b>, fique de olho em ações negativas em direção 
 		"DOTA_2022Diretide_CollectorsCache_Treasure_1"		"1 tesouro"
 		"DOTA_2022Diretide_CollectorsCache_Treasure_2"		"7 tesouros"
 		"DOTA_2022Diretide_CollectorsCache_Treasure_3"		"14 tesouros"
-		"DOTA_2022Diretide_CollectorsCache_Disclaimer"		"Itens do Suplemento só estarão disponíveis até 18 de dezembro."
+		"DOTA_2022Diretide_CollectorsCache_Disclaimer"		"Os itens dos Suplementos só estarão disponíveis até 12 de janeiro."
+
+        "DOTA_BattlePass2022_Schedule_MoreActiveEventsUp" "+{d:num_more_active_events_up} eventos ativos acima"
+        "DOTA_BattlePass2022_Schedule_MoreActiveEventsDown" "+{d:num_more_active_events_down} eventos ativos abaixo"
+
+		"DOTA_BattlePassEndingTitle"				"Termina em"
+		"DOTA_BattlePassEndingCountdown"			"0 <b>D</b> 0 <b>H</b> 0 <b>M</b> 0 <b>S</b>"
+		"DOTA_BattlePassEndingDescription"			"Pegue os seus <a href=\"event:DOTAPurchaseEventLevels( EVENT_ID_INTERNATIONAL_2022 )\">níveis</a>, <a href=\"event:DOTAShowSplashAdPopup('bundle_sale_2022_2')\">pacotes</a>, <a href=\"event:DOTAShowTreasurePage(26880)\">Suplementos de Colecionador I</a> e <a href=\"event:DOTAShowTreasurePage(26932)\">Suplementos de Colecionador II</a>."
 	}
 }

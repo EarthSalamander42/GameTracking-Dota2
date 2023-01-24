@@ -1,5 +1,4 @@
 					
-		g_pMemAlloc
 	!s99
 	?blockSignals@QObject@@QEAA_N_N@Z
 	?cast@QMetaObject@@QEBAPEAVQObject@@PEAV2@@Z
@@ -101,6 +100,7 @@ $Ib?s
 )>6{1n
 )t$`H
 )|B?d!
+*	g_pMemAlloc
 * ?timerEvent@QTextEdit@@MEAAXPEAVQTimerEvent@@@Z
 *StO9>T
 +M<7>
@@ -315,11 +315,12 @@ $Ib?s
 1OnTitleChanged()
 1OnUseComponentOwner()
 1map()
+1~b}5
 211007000000Z
 220323000000Z
 220801000000Z
 220921000000Z
-221203185346Z0/
+230112001722Z0/
 241009235959Z0a1
 2DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA
 2DigiCert Trusted G4 RSA4096 SHA256 TimeStamping CA0
@@ -361,7 +362,6 @@ $Ib?s
 8]?size@QPixmap@@QEBA?AVQSize@@XZ
 8ke?;
 9)~P3
-96|C>
 99~CE
 9>powf
 9>~@H
@@ -373,6 +373,7 @@ $Ib?s
 :>t6k'
 ;H9>&X
 ;I9}(tiH
+;k	TT
 ;wait 50;setpause bug
 < t=<	t9
 < u\A
@@ -381,6 +382,7 @@ $Ib?s
 <>#n2
 <empty>
 <no failure reason set>
+=bAD`
 =imb;D
 =rIQU
 >0<0:
@@ -1570,6 +1572,7 @@ Missing '%s' interface for '%s'.
 Missing interface '%s' for '%s'.
 ModelDocUtils001
 Monday
+Mr^8gMF
 MultiByteToWideChar
 N3`d?
 N>O=I9
@@ -1670,6 +1673,7 @@ Qt5Widgets.dll
 QueryPerformanceCounter
 R?metric@QPixmap@@MEBAHW4PaintDeviceMetric@QPaintDevice@@@Z
 R?mimeData@QClipboard@@QEBAPEBVQMimeData@@W4Mode@1@@Z
+RSDSx
 RaiseException
 Refresh
 Refresh Log Capture
@@ -1793,6 +1797,7 @@ ToolService_001
 TryAcquireSRWLockExclusive
 TryEnterCriticalSection
 Tuesday
+Tx(.).
 U?qt_metacall@QIntValidator@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z
 U?qt_metacast@QIntValidator@@UEAAPEAXPEBD@Z
 UA>N0Wl
@@ -1978,6 +1983,7 @@ _oD>Kg
 `vector vbase copy constructor iterator'
 `vftable'
 `virtual displacement map'
+aI:U9
 abcdefghijklmnopqrstuvwxyz
 address family not supported
 address in use
@@ -2008,7 +2014,6 @@ c [1>H'
 c(>\,
 c0&>`
 c?FA@s}
-cDfFIng
 cU	F9
 category
 clicked
@@ -2023,7 +2028,6 @@ console
 consolelog
 consolelog_auto_truncate
 consolelog_max_megabytes
-cpyvh
 cross device link
 d$ D!
 d$ E3
@@ -2099,6 +2103,7 @@ mL+7H
 map/set too long
 mapped
 message size
+mr $^
 mwtMH
 n03>Pu
 nFromTabIndex
@@ -2236,7 +2241,6 @@ u3HcH<H
 u4I9}(
 u9Hcw
 uF8Z(t
-uIm;tt
 uTH9Z
 uUH9Z
 ue!T$(H!T$ 
@@ -2293,6 +2297,5 @@ zY;>u:m
 |b=})>
 }BfD;
 }LuHO
-~m@SUn
 ~qj#k"
 ~t&LN
