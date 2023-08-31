@@ -152,6 +152,11 @@
 	]
 ]
 
+@ModelAnimEvent = AE_CL_PANORAMA_EVENT
+[
+	label(string) [report]		: "Label"
+]
+
 @ModelAnimEvent = AE_CL_PLAYSOUND_ATTACHMENT
 [
 	name(sound) [report] : "Sound"
@@ -211,6 +216,10 @@
 	name(sound) [report] : "Sound"
 ]
 
+@ModelAnimEvent = AE_CL_STOP_RAGDOLL_CONTROL
+[
+]
+
 @ModelAnimEvent = AE_CL_CREATE_PARTICLE_EFFECT_CFG 
 [
 	name(resource:particle)		[report, group="Particles"] : "Particle System"
@@ -259,6 +268,7 @@
 @ModelAnimEvent = AE_SV_PLAYSOUND 
 [
 	name(sound) : "Sound Name"
+	tags(string) : "Tags"
 ]
 
 @ModelAnimEvent = AE_SCRIPT_EVENT_SOUND 

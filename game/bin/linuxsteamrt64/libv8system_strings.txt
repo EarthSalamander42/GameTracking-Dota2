@@ -1,6 +1,31 @@
+!
+!=
 $ORIGIN
-( (int64)m_nAllocationCount + (int64)num ) <= 0x7FFFFFFF
+%
+%=
+%s: Invalid capacity %u
+%s: Invalid grow amount %d
+&&
+&=
+'
+()
+(...
+(anonymous namespace)
+)#
+*=
+++
++=
+,
+--
 --stack-size=384 --disallow-code-generation-from-strings
+-=
+->
+->*
+-in-
+.*
+...)
+/
+/=
 10IAppSystem
 14CBaseAppSystemI16ISource2V8SystemE
 15CTier0AppSystemI16ISource2V8SystemLx0EE
@@ -9,58 +34,94 @@ $ORIGIN
 16CSource2V8System
 16ISource2V8System
 20CPostConnectCallback
+20IResourceTypeManager
+22CJavaScriptTypeManager
 22CSchemaInstallCallback
+22CTypeScriptTypeManager
 22V8ArrayBufferAllocator
+23CKV3ResourceBlockHelper
+25IAsyncProcessedDataResult
+:
+::*
+<<
+<<=
+<=>
 <no failure reason set>
+==
+>(
+>>
+>>=
+?
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!
-AlignedByteArray not properly aligned
 AnimGraphEditorUtils001
 AnimationSystemUtils_001
 AnimationSystem_001
-Assert_ConditionFailed(_AssertCompileTimeConstantStruct_t const&)
 Assert_ConditionFailed(_AssertCompileTimeConstantStruct_t const&, char const*, ...)
 AssetBrowserSystem_001
 AssetPreviewSystem_001
 AssetRenameSystem_001
 AssetSystem001
 AssetSystemTest001
+Bad KV3 data for resource '%s': %s
 BakedLODBuilderMgr001
 BenchmarkService001
 BinaryProperties_GetValue
-CBufferString::Format(char const*, ...)
+CBufferString::FixSlashes(char)
+CBufferString::FixupPathName(char)
 CBufferString::Insert(int, char const*, int, bool)
+CBufferString::MoveFrom(CBufferString&)
 CBufferString::Purge(int)
-CCommand::Tokenize: Encountered command which overflows the tokenizer buffer.. Skipping!
+CBufferString::RemoveAt(int, int)
+CBufferString::SetExtension(char const*, bool)
+CBufferString::SetLength(int, bool, int*)
+CBufferString::ToLowerFast(int)
+CRawAllocator::Alloc(RawAllocatorType_t, unsigned long, unsigned long*)
+CRawAllocator::Free(RawAllocatorType_t, void*, unsigned long)
+CUtlBuffer::CUtlBuffer(int, int, int)
 CUtlBuffer::CUtlBuffer(void const*, int, int)
-CUtlBuffer::ParseToken(characterset_t const*, char*, int, bool)
+CUtlBuffer::CheckArbitraryPeekGet(int, int&)
+CUtlBuffer::CheckGet(int)
+CUtlBuffer::Get(void*, int)
+CUtlMemoryBlockAllocator::Alloc(unsigned int)
+CUtlMemoryBlockAllocator::CUtlMemoryBlockAllocator(int, unsigned int, RawAllocatorType_t)
+CUtlMemoryBlockAllocator::Purge()
+CUtlMemoryBlockAllocator::~CUtlMemoryBlockAllocator()
+CUtlRBTree overflow with %u elements!
 CUtlString::FreeMemoryBlock()
-CUtlString::IsEqual_FastCaseInsensitive(char const*) const
-CUtlString::Set(char const*)
-CXXABI_1.3
-CXXABI_1.3.9
+ClientToolsInfo_001
 ConnectInterfaceSingletons
 CreateInterface
 DemoUpconverterVersion001
+ERROR: CUtlSymbolTableLarge element limit of %u exceeded
+ERROR: Resource name "%s" has the incorrect extension "%s" for the specified resource type (expected "%s")!
 EXPORTSYSTEM_INTERFACE_VERSION_001
 EarlyInit_Tier0
 EconItemToolModel_001
 EngineServiceMgr001
+EnsureCapacity
+FATAL ERROR: CUtlSymbolTableLarge element limit of %u exceeded
 FATAL ERROR: unable to register all schema data: %s
+FATAL: %s called on a pool context (no root available)
+Fatal V8 Error: %s - %s
+FixupResourceName: Illegal full path passed in ("%s")!
+FixupResourceName: Illegal path, missing extension passed in ("%s")!
 FlattenedSerializersVersion001
 FontManager_001
-GCC: (SteamRT 5.4.0-7.really.6+steamrt1.2+srt2) 5.4.1 20160803
+GCC: (SteamRT 10.3.0-3+steamrt3.1+bsrt3.1) 10.3.0
 GLIBC_2.14
 GLIBC_2.2.5
-GLIBC_2.4
+GLIBC_2.3
 GNU
 GameResourceServiceClientV001
 GameResourceServiceServerV001
 GameUIService_001
 GetResourceManifestCount
 GetResourceManifests
+Grow
 HammerMapLoader001
 HelpSystem_001
 HostStateMgr001
+IPulseSystem_001
 InputService_001
 InputStackSystemVersion001
 InputSystemVersion001
@@ -68,18 +129,27 @@ InstallSchemaBindings
 Intentionally vague touch behavior for %p
 KeyValueCache001
 LOG_GENERAL
+LoadKV3(CKeyValues3Context*, CUtlString*, CUtlBuffer*, KV3ID_t const&, char const*)
 Localize_001
 LoggingSystem_IsChannelEnabled
 LoggingSystem_Log(int, LoggingSeverity_t, LeafCodeInfo_t const&, char const*, ...)
 LoggingSystem_RegisterLoggingChannel
 MATCHFRAMEWORK_001
-MODEL_PROCESSING_SCRIPT_INTERFACE_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MapListService_001
 MaterialUtils_001
+MemAlloc_StrDupFunc
 MeshSystem001
 MeshUtils001
 ModelDocUtils001
+N10__cxxabiv115__forced_unwindE
+N10__cxxabiv117__class_type_infoE
+N10__cxxabiv119__foreign_exceptionE
+N10__cxxabiv120__si_class_type_infoE
+N9__gnu_cxx20recursive_init_errorE
+N9__gnu_cxx24__concurrence_lock_errorE
+N9__gnu_cxx26__concurrence_unlock_errorE
+NavGameTest001
 NetworkClientService_001
 NetworkMessagesVersion001
 NetworkP2PService_001
@@ -94,10 +164,11 @@ PhysicsBuilderMgr001
 Plat_DebugPrint
 Plat_ExitProcess
 Plat_FatalErrorFunc
-Plat_NonFatalErrorFunc
 Plat_ShouldCollectMiniDumpsForFatalErrors
 PostProcessingSystem_001
 PropertyEditorSystem_001
+RESOURCE_TYPE_JAVASCRIPT
+RESOURCE_TYPE_TYPESCRIPT
 RegisterConCommand: Unknown error registering con command "%s"!
 RegisterConVar: Unknown error registering convar "%s"!
 Release
@@ -110,12 +181,14 @@ ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
 ResourceSystem013
+Root
 SceneSystem_002
 SceneUtils_001
 SchemaSystem_001
 SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
 SerializedEntitiesVersion001
+ServerToolsInfo_001
 SoundOpSystem001
 SoundOpSystemEdit001
 SoundService_001
@@ -132,18 +205,25 @@ Source2GameEntities001
 Source2Host001
 Source2Server001
 Source2V8System001
+St11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE
+St13bad_exception
+St16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE
+St19_Sp_make_shared_tag
+St9exception
+St9type_info
 StatsService_001
 SteamAudio001
+TLS init function for
+TLS wrapper function for
 TestScriptMgr001
 TextLayout_001
-This convar is being accessed prior to ConVar_Register being called
 ToolFramework2_002
 ToolSceneNodeFactory_001
 ToolService_001
 UtlMemory_Alloc
 UtlMemory_CalcNewAllocationCount
+UtlMemory_FailedAllocation
 V8FatalErrorHandler
-VApplication001
 VAsyncFileSystem2_001
 VAvi001
 VBik001
@@ -157,62 +237,340 @@ VPhysics2_Handle_Interface_001
 VPhysics2_Interface_001
 VProcessUtils002
 VProfService_001
-VR_001
 VRenderDeviceSetupV001
 VScript
 VScriptDbg
 VScriptManager010
 VStringTokenSystem001
+VTT for
+V_GetFileExtension
+V_IsAbsolutePath
+V_RemoveDotSlashes
+V_StringToBool
+V_StringToInt64
+V_StringToUint16
+V_StringToUint32
 V_qsort_s
-V_sscanf
 V_stricmp_fast
 VisBuilder_001
+Vrad3_001
 Warning
 WorldRendererMgr001
+[abi:
+[clone
+^
+^=
+_Accum
+_Complex
+_Fract
+_GLOBAL_
 _ITM_deregisterTMCloneTable
 _ITM_registerTMCloneTable
-_Jv_RegisterClasses
-_V_strncmp
-__bss_start
+_Imaginary
+_Sat
+_V_strncpy
+__cxa_allocate_dependent_exception
+__cxa_allocate_exception
 __cxa_atexit
+__cxa_begin_catch
+__cxa_call_terminate
+__cxa_call_unexpected
+__cxa_current_exception_type
+__cxa_deleted_virtual
+__cxa_demangle
+__cxa_end_catch
 __cxa_finalize
+__cxa_free_dependent_exception
+__cxa_free_exception
+__cxa_get_exception_ptr
+__cxa_get_globals
+__cxa_get_globals_fast
+__cxa_guard_abort
 __cxa_guard_acquire
 __cxa_guard_release
+__cxa_init_primary_exception
 __cxa_pure_virtual
+__cxa_rethrow
+__cxa_throw
+__cxxabiv1::__class_type_info::__do_catch(std::type_info const*, void**, unsigned int) const
+__cxxabiv1::__class_type_info::__do_dyncast(long, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
+__cxxabiv1::__class_type_info::__do_find_public_src(long, void const*, __cxxabiv1::__class_type_info const*, void const*) const
+__cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__upcast_result&) const
+__cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void**) const
+__cxxabiv1::__class_type_info::~__class_type_info()
+__cxxabiv1::__forced_unwind::~__forced_unwind()
+__cxxabiv1::__foreign_exception::~__foreign_exception()
+__cxxabiv1::__si_class_type_info::__do_dyncast(long, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
+__cxxabiv1::__si_class_type_info::__do_find_public_src(long, void const*, __cxxabiv1::__class_type_info const*, void const*) const
+__cxxabiv1::__si_class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__upcast_result&) const
+__cxxabiv1::__si_class_type_info::~__si_class_type_info()
+__cxxabiv1::__terminate(void (*)())
+__cxxabiv1::__terminate_handler
+__cxxabiv1::__unexpected(void (*)())
+__cxxabiv1::__unexpected_handler
+__float128
+__gcclibcxx_demangle_callback
 __gmon_start__
-__stack_chk_fail
-_edata
-_end
-_fini
-_init
+__gnu_cxx::__concurrence_lock_error
+__gnu_cxx::__concurrence_lock_error::what() const
+__gnu_cxx::__concurrence_lock_error::~__concurrence_lock_error()
+__gnu_cxx::__concurrence_unlock_error
+__gnu_cxx::__concurrence_unlock_error::what() const
+__gnu_cxx::__concurrence_unlock_error::~__concurrence_unlock_error()
+__gnu_cxx::__freeres()
+__gnu_cxx::__throw_concurrence_lock_error()
+__gnu_cxx::__verbose_terminate_handler()
+__gnu_cxx::recursive_init_error::recursive_init_error()
+__gnu_cxx::recursive_init_error::~recursive_init_error()
+__gxx_personality_v0
+__pthread_key_create
+__tls_get_addr
+__vector(
+aN
+aS
+aa
+ad
+alignof
+auto
+auto:
+aw
+az
+basic_iostream
+basic_istream
+basic_ostream
+bool
+boolean
+byte
+cc
+char16_t
+char32_t
+char8_t
+cl
+cm
+co
+co_await
+const
+const_cast
+construction vtable for
+covariant return thunk to
+dV
+da
+dc
+de
+decimal128
+decimal32
+decimal64
+decltype (
+decltype(auto)
+decltype(nullptr)
+delete
+delete[]
+deleted virtual method called
+dl
+dl_iterate_phdr
+ds
+dt
+dv
+dynamic_cast
+eO
+eo
+eq
+fL
+fR
 false
+fl
+float
+fputc
+fputs
+fr
+free
+fwrite
 g_pMemAlloc
+ge
+generic
+global constructors keyed to
+global destructors keyed to
+gs
+gt
+guard variable for
+half
+hidden alias for
+ix
+java Class for
+java resource
+lS
+ld-linux-x86-64.so.2
+li
 libc.so.6
 libpthread.so.0
-libstdc++.so.6
 libtier0.so
 libv8.so
 libv8_libplatform.so
 libv8system.so
+long double
+ls
+lt
+mI
+mL
+malloc
+memcmp
 memcpy
-memmove
 memset
+mi
+ml
+mm
+na
+ne
+new
+new[]
+noexcept
+non-transaction clone for
+non-virtual thunk to
+nw
+oR
+oo
+operator
 operator delete(void*)
+operator delete(void*, std::align_val_t)
 operator delete(void*, unsigned long)
+operator delete(void*, unsigned long, std::align_val_t)
 operator delete[](void*)
+operator delete[](void*, std::align_val_t)
+operator delete[](void*, unsigned long)
+operator delete[](void*, unsigned long, std::align_val_t)
 operator new(unsigned long)
+operator new(unsigned long, std::align_val_t)
+operator new(unsigned long, std::align_val_t, std::nothrow_t const&)
 operator new(unsigned long, std::nothrow_t const&)
 operator new[](unsigned long)
+operator new[](unsigned long, std::align_val_t)
+operator new[](unsigned long, std::align_val_t, std::nothrow_t const&)
 operator new[](unsigned long, std::nothrow_t const&)
+operator""
+pL
+pl
+pm
+ps
+pthread_mutex_lock
+pthread_mutex_unlock
+pthread_once
+pure virtual method called
+qu
+rM
+rS
+rc
+realloc
+reference temporary #
+reinterpret_cast
+resourcesystem
+restrict
+rm
+rs
+sP
+sZ
+sc
 singletons.cpp
-strchr
+sizeof
+sizeof...
+sprintf
+ss
+static_cast
+std
+std::_Sp_make_shared_tag::_S_ti()::__tag
+std::allocator
+std::bad_exception
+std::bad_exception::what() const
+std::bad_exception::~bad_exception()
+std::basic_iostream<char, std::char_traits<char> >
+std::basic_istream<char, std::char_traits<char> >
+std::basic_ostream<char, std::char_traits<char> >
+std::basic_string
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+std::exception
+std::exception::what() const
+std::exception::~exception()
+std::get_terminate()
+std::get_unexpected()
+std::iostream
+std::istream
+std::ostream
+std::set_terminate(void (*)())
+std::set_unexpected(void (*)())
+std::string
+std::terminate()
+std::type_info::__do_catch(std::type_info const*, void**, unsigned int) const
+std::type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void**) const
+std::type_info::__is_function_p() const
+std::type_info::__is_pointer_p() const
+std::type_info::~type_info()
+std::uncaught_exception()
+std::uncaught_exceptions()
+std::unexpected()
+stderr
 strcmp
+string literal
 strlen
+syscall
+sz
+template parameter object for
+terminate called after throwing an instance of '
+terminate called without an active exception
+this
+throw
+tr
+transaction clone for std::bad_exception::what() const
+transaction clone for std::bad_exception::~bad_exception() const
+transaction clone for std::exception::what() const
+transaction clone for std::exception::~exception() const
+transaction_safe
+true
+tw
+typeinfo fn for
+typeinfo for
+typeinfo for __cxxabiv1::__class_type_info
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo for __cxxabiv1::__si_class_type_info
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::recursive_init_error
+typeinfo for std::_Mutex_base<(__gnu_cxx::_Lock_policy)2>
+typeinfo for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>
+typeinfo for std::bad_exception
+typeinfo for std::exception
+typeinfo for std::type_info
 typeinfo for v8::ArrayBuffer::Allocator
+typeinfo name for
+typeinfo name for __cxxabiv1::__class_type_info
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
+typeinfo name for __cxxabiv1::__si_class_type_info
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __gnu_cxx::recursive_init_error
+typeinfo name for std::_Mutex_base<(__gnu_cxx::_Lock_policy)2>
+typeinfo name for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>
+typeinfo name for std::_Sp_make_shared_tag
+typeinfo name for std::bad_exception
+typeinfo name for std::exception
+typeinfo name for std::type_info
+ul
+ull
+unsigned
+unsigned __int128
+unsigned char
+unsigned int
+unsigned long
+unsigned long long
+unsigned short
 v8::ArrayBuffer::Allocator::Reallocate(void*, unsigned long, unsigned long)
 v8::Isolate::CreateParams::CreateParams()
 v8::Isolate::CreateParams::~CreateParams()
+v8::Isolate::Dispose()
+v8::Isolate::Enter()
+v8::Isolate::Exit()
 v8::Isolate::New(v8::Isolate::CreateParams const&)
+v8::Isolate::SetCaptureStackTraceForUncaughtExceptions(bool, int, v8::StackTrace::StackTraceOptions)
 v8::Isolate::SetFatalErrorHandler(void (*)(char const*, char const*))
 v8::ResourceConstraints::ConfigureDefaults(unsigned long, unsigned long)
 v8::V8::Dispose()
@@ -223,5 +581,25 @@ v8::V8::SetFlagsFromString(char const*, unsigned long)
 v8::platform::V_NewDefaultPlatform(int)
 v8system
 v8system.cpp
+void
+volatile
 vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
 vtable for __cxxabiv1::__si_class_type_info
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
+vtable for __gnu_cxx::recursive_init_error
+vtable for std::bad_exception
+vtable for std::exception
+vtable for std::type_info
+wchar_t
+what():
+{default arg#
+{lambda(
+{parm#
+{unnamed type#
+|=
+||
+}::
+~

@@ -4,9 +4,6 @@ import "dota_client_enums.proto";
 import "base_gcmessages.proto";
 import "dota_gcmessages_common_lobby.proto";
 
-option optimize_for = SPEED;
-option cc_generic_services = false;
-
 enum EStartFindingMatchResult {
 	k_EStartFindingMatchResult_Invalid = 0;
 	k_EStartFindingMatchResult_OK = 1;
@@ -46,6 +43,7 @@ enum EStartFindingMatchResult {
 	k_EStartFindingMatchResult_MatchmakingBusy = 132;
 	k_EStartFindingMatchResult_SteamChinaBanned = 133;
 	k_EStartFindingMatchResult_SteamChinaInvalidMixedParty = 134;
+	k_EStartFindingMatchResult_RestrictedFromRanked = 135;
 }
 
 message CMsgStartFindingMatch {
@@ -128,7 +126,6 @@ message CMsgPracticeLobbySetDetails {
 	optional bool fill_with_bots = 11;
 	optional bool intro_mode = 12;
 	optional bool allow_spectating = 13;
-	optional .DOTAGameVersion game_version = 14 [default = GAME_VERSION_CURRENT];
 	optional string pass_key = 15;
 	optional uint32 leagueid = 16;
 	optional uint32 penalty_level_radiant = 17;
@@ -161,6 +158,7 @@ message CMsgPracticeLobbySetDetails {
 	repeated uint32 requested_hero_ids = 50;
 	optional .CMsgLobbyScenarioSave scenario_save = 51;
 	optional .CMsgPracticeLobbySetDetails.AbilityDraftSpecificDetails ability_draft_specific_details = 52;
+	optional bool do_player_draft = 53;
 }
 
 message CMsgPracticeLobbyCreate {

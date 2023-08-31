@@ -102,7 +102,7 @@
 		"DOTA_Tooltip_ability_creature_self_haste_Description"				"지속하는 이동 속도 보너스 효과를 얻습니다."
 		"DOTA_Tooltip_Ability_creature_hatch_broodmother"					"부화"
 		"DOTA_Tooltip_ability_creature_hatch_broodmother_Description"		"아마 달갑지 않은 생물이 태어날 것입니다.Likely something undesirable."
-		"DOTA_Tooltip_Ability_creature_spawn_spider"						"새끼거미 소환"
+		"DOTA_Tooltip_Ability_creature_spawn_spider"						"새끼거미 생성"
 		"DOTA_Tooltip_ability_creature_spawn_spider_Description"			"여러 마리의 새끼거미를 낳아 인근 대상을 공격합니다."
 		"DOTA_Tooltip_Ability_creature_fire_breath"							"불꽃 숨결"
 		"DOTA_Tooltip_ability_creature_fire_breath_Description"				"시전자 앞에서 불기둥이 포물선을 그리며 뿜어져 나옵니다. 방해할 수 없습니다."
@@ -283,7 +283,7 @@
 		"DOTA_Tooltip_axe_battle_rage_modifier_Description"						"전투를 향한 욕망은 준 피해에 따라 체력을 흡수합니다."
 		
 		"DOTA_Tooltip_ability_holdout_shackleshot"									"올가미 투척"
-		"DOTA_Tooltip_ability_holdout_shackleshot_Description"						"대상을 일직선상으로 뒤에 있는 적 유닛 또는 나무에 묶습니다. 뒤에 유닛이나 적이 없으면 기절의 지속시간이 0.75초로 줄어듭니다.  <font color='#70EA72'>대상이 유닛에 묶이면 올가미는 최대 횟수에 도달하거나 묶을 수 있는 유닛 또는 나무가 없을 때까지 그 뒤로 계속 이어집니다.</font>"
+		"DOTA_Tooltip_ability_holdout_shackleshot_Description"						"대상을 일직선상에서 뒤에 있는 적 유닛 또는 나무에 묶습니다. 뒤에 유닛이나 나무가 없으면 기절의 지속시간이 0.75초로 줄어듭니다.  <font color='#70EA72'>대상이 유닛에 묶이면 올가미는 최대 횟수에 도달하거나 묶을 수 있는 유닛 또는 나무가 없을 때까지 그 뒤로 계속 이어집니다.</font>"
 		"DOTA_Tooltip_ability_holdout_shackleshot_Lore"								"바람순찰자가 활을 다루는 기술은 매우 다양합니다. 그중 하나는 두꺼운 밧줄이 달린 화살을 날려 도주하는 적의 발을 묶는 것입니다."
 		"DOTA_Tooltip_ability_holdout_shackleshot_shackle_count"						"<font color='#70EA72'>올가미 횟수:</font>"
 		"DOTA_Tooltip_ability_holdout_shackleshot_Note0"								"두 명의 적을 묶어 동시에 기절 효과를 줄 수 있습니다."
@@ -485,7 +485,7 @@
 
 		"DOTA_Tooltip_ability_holdout_omnislash"									"비밀의 검"
 		"DOTA_Tooltip_ability_holdout_omnislash_Description"						"<font color='#70EA72'>가면무사가 자신의 환영을 내보내어 충돌하는 대상을 수집합니다. 환영이 목적지에 도달하면 가면무사가 환영을 향해 돌진해 환영과 연결된 모든 유닛을 공격하여 추가 피해를 줍니다.</font>"
-		"DOTA_Tooltip_ability_holdout_omnislash_image_radius"						"반경:RADIUS:"
+		"DOTA_Tooltip_ability_holdout_omnislash_image_radius"						"반경:"
 		"DOTA_Tooltip_ability_holdout_omnislash_range"								"범위:"
 		"DOTA_Tooltip_ability_holdout_omnislash_bonus_damage"						"보너스 피해:"
 		"DOTA_Tooltip_ability_holdout_omnislash_num_attacks"						"대상당 공격:"
@@ -849,7 +849,7 @@
 		"DOTA_Tooltip_ability_dark_seer_wall_of_replica_nb2017_tooltip_outgoing"				"%복제 피해:"
 		"DOTA_Tooltip_ability_dark_seer_wall_of_replica_nb2017_tooltip_replica_total_damage_incoming"		"%복제가 받는 피해:"
 		"DOTA_Tooltip_ability_dark_seer_wall_of_replica_nb2017_range_tooltip"					"시전 범위:"
-		"DOTA_Tooltip_ability_dark_seer_wall_of_replica_nb2017_movement_slow"		            "%이동 속도:"
+		"DOTA_Tooltip_ability_dark_seer_wall_of_replica_nb2017_movement_slow"		            "%이동 둔화:"
 		"DOTA_Tooltip_ability_dark_seer_wall_of_replica_nb2017_slow_duration"		            "둔화 지속시간:"
 
 		"DOTA_Tooltip_ability_zeus_thundergods_wrath_nb2017"									"천둥신의 구원"

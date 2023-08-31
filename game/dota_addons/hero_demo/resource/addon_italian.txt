@@ -20,8 +20,8 @@
 		"MaxLevelEnemy_Msg"							"Nemico: Liv. max"
 		"SpawnDummyTarget_Msg"						"Manichino creato"
 		"RemoveSpawnedUnits_Msg"					"Unità rimosse"
-		"LaneCreepsOn_Msg"							"Creep della corsia: sì"
-		"LaneCreepsOff_Msg"							"Creep della corsia: no"		
+		"LaneCreepsOn_Msg"							"Creep di corsia: sì"
+		"LaneCreepsOff_Msg"							"Creep di corsia: no"		
 
 		"DemoOptions_MinimizeButton"				"Opzioni"
 		"DemoOptions_UnMinimizeButton"				"  >&#xD;&#xD;&#xD;&#xD;  >"
@@ -78,6 +78,7 @@
 		"RuneSpawn_Invisibility_Button"				"Invisibilità"
 		"RuneSpawn_Regeneration_Button"				"Rigenerazione"
 		"RuneSpawn_Arcane_Button"					"Arcana"
+		"RuneSpawn_Shield_Button"					"Protezione"
 
 		"NewSpawn_ButtonCategory"					"UNITÀ"
 		"SpawnUnits_ButtonCategory"					"CREA"

@@ -165,7 +165,7 @@
 		"scenario_sven_task_kill_more_creeps"			"¡Oh no, más guardias! ¡Estos parecen más fuertes! ¡Deshazte de ellos con cuidado!"
 		"scenario_sven_task_kill_a_lot_of_creeps"		"Qué montón de gnolls. ¡Tal vez prefieras curarte antes de luchar contra ellos!"
 		"scenario_sven_task_pickup_rune"				"¡Encuentra una forma de restaurar tu vida y maná!"
-		"scenario_sven_task_buy_item"					"Encuentra al tendero y sácale algo de información."
+		"scenario_sven_task_buy_item"					"Encuentra al Vendedor y sácale algo de información."
 
 		"scenario_sven_hint_narration_sven1_1"			"SVEN: Tengo que infiltrarme en el calabozo y matar a Shadow Fiend, pero no hay forma de sortear la torre de vigilancia. Tal vez matando a algunos gnolls, los otros me digan por dónde ir..."
 		"scenario_sven_hint_narration_sven1_2"			"Gnoll: Agghhh"
@@ -283,7 +283,7 @@ Sven: ¡Al diablo, hay que matarlos a todos!"
 		"wizard_tip_failed_tp_interrupted_Text"							"¡Ups! El Pergamino de Teletransporte es una habilidad canalizada; ¡no podrás hacer nada más cuando lo utilices o se cancelará! Tu Pergamino de Teletransporte está restablecido, ¡así que intentémoslo de nuevo!"
 
 		"scenario_economy_dialog_complete_echo_sabre"	"Necesitaré objetos para acabar con Shadow Fiend. Debería completar el Sable de Eco, así le haré más daño."
-		"scenario_economy_dialog_last_hit_enemy_creep"	"Puedo conseguir oro asestando el último golpe en creeps enemigos."
+		"scenario_economy_dialog_last_hit_enemy_creep"	"Puedo conseguir oro dando el último golpe en creeps enemigos."
 		"scenario_economy_dialog_use_the_courier"		"¡No tengo que estar en la base para recibir mis objetos; mi fiel mensajero puede hacerlo por mí!"
 		"scenario_economy_dialog_farm_jungle"			"¡Ahora que tengo Gran Hendidura, puedo despejar campamentos de creeps neutrales para obtener más oro y experiencia!"
 		"scenario_economy_dialog_found_imp_claw"		"¡Ah, una Garra de Diablillo! ¡Aunque solo puedo usar un objeto neutral a la vez, las Garras de Diablillo potencian aún más mi daño, así que será perfecto!"
@@ -614,7 +614,7 @@ Sven: ¡Al diablo, hay que matarlos a todos!"
 		"scenario_items_task_buy_boots_of_travel_Description"				"Haz clic en el botón de la tienda para abrirla, y luego clic derecho en las Botas de Viaje."
 		
 		"scenario_items_wizard_tip_share_tango_Text"					"Los Tangos son uno de los pocos objetos que se pueden compartir con los compañeros de equipo."
-		"scenario_items_wizard_tip_support_Text"							"Los héroes de apoyo a menudo dan un Tango a sus compañeros de equipo para obtener ventaja."
+		"scenario_items_wizard_tip_support_Text"							"Los héroes de apoyo suelen dar un Tango a sus compañeros de equipo para ayudarles a curarse."
 		"scenario_items_wizard_tip_disassemble_Text"					"Las referencias de objetos específicos para héroes a veces involucran deshacerse de objetos al principio de la partida para hacerte con otros objetos más adelante."
 		"scenario_items_wizard_tip_recipe_Text"							"Las recetas no aparecen en la tienda, excepto en la sección de combinar objetos."
 		

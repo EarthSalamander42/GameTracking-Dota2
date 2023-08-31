@@ -47,7 +47,7 @@
 		"MaxLevel_Button"							"Maximální úroveň"
 		"UltraMaxLevel_Button"						"+"
 		"UltraMaxLevel_Tooltip"						"Navýší úroveň na 30. s talenty a přidá předměty Scepter a Shard."
-		"FreeSpells_Button"							"Neomez. schopn."
+		"FreeSpells_Button"							"Neom. schopn."
 		"Invulnerability_Button"					"Nezranitelnost"
 		"Reset_Button"								"Resetovat"
 		"InvulnOn_Button"							"Nezran. +"
@@ -78,6 +78,7 @@
 		"RuneSpawn_Invisibility_Button"				"Neviditelnost"
 		"RuneSpawn_Regeneration_Button"				"Regenerace"
 		"RuneSpawn_Arcane_Button"					"Kouzla"
+		"RuneSpawn_Shield_Button"					"Ochrana"
 
 		"NewSpawn_ButtonCategory"					"JEDNOTKY"
 		"SpawnUnits_ButtonCategory"					"HRDINOVÉ A RUNY"

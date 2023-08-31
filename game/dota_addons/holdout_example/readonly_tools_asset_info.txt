@@ -32,8 +32,6 @@ materials/props_gameplay/rock_001_detailmask_tga_bbfcb8d.vtex
 materials/props_gameplay/rock_001_normal_psd_427a9069.vtex
 materials/props_gameplay/rock_001_specmask_tga_50f8e3ae.vtex
 models/props_gameplay/rock_001.vmdl
-models/props_gameplay/rock_001.vmesh
-models/props_gameplay/rock_001.vphys
 particles/creature_splitter/earthspirit_stone_clap_shock.vpcf
 particles/creature_splitter/earthspirit_stone_clap_shock_b.vpcf
 particles/creature_splitter/earthspirit_stone_clap_warp.vpcf
@@ -404,3 +402,16 @@ materials/props_gameplay/rock_001_normal.txt
 materials/props_gameplay/rock_001_selfillummask.tga
 materials/props_gameplay/rock_001_specmask.tga
 models/props_gameplay/dmx/rock_001.dmx
+scripts/vscripts/addon_game_mode.lua
+scripts/vscripts/ai_core.lua
+scripts/vscripts/broodking_ai.lua
+scripts/vscripts/broodmother_ai.lua
+scripts/vscripts/broodmother_egg_ai.lua
+scripts/vscripts/gyrocopter_ai.lua
+scripts/vscripts/holdout_ai_ancient_apparition.lua
+scripts/vscripts/holdout_ai_attack_ancient.lua
+scripts/vscripts/holdout_ai_pudge.lua
+scripts/vscripts/holdout_game_round.lua
+scripts/vscripts/holdout_game_spawner.lua
+scripts/vscripts/ogre_magi.lua
+scripts/vscripts/spiderling_ai.lua

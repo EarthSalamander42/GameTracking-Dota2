@@ -1,7 +1,5 @@
 import "networkbasetypes.proto";
 
-option cc_generic_services = false;
-
 enum CLC_Messages {
 	clc_ClientInfo = 20;
 	clc_Move = 21;
@@ -211,7 +209,7 @@ message CSVCMsg_ServerInfo {
 	optional int32 c_os = 6;
 	optional int32 max_clients = 10;
 	optional int32 max_classes = 11;
-	optional int32 player_slot = 12;
+	optional int32 player_slot = 12 [default = -1];
 	optional float tick_interval = 13;
 	optional string game_dir = 14;
 	optional string map_name = 15;
@@ -225,7 +223,6 @@ message CSVCMsg_ServerInfo {
 message CSVCMsg_ClassInfo {
 	message class_t {
 		optional int32 class_id = 1;
-		optional string data_table_name = 2;
 		optional string class_name = 3;
 	}
 
@@ -255,7 +252,7 @@ message CSVCMsg_Sounds {
 		optional uint32 volume = 4;
 		optional float delay_value = 5;
 		optional int32 sequence_number = 6;
-		optional int32 entity_index = 7;
+		optional int32 entity_index = 7 [default = -1];
 		optional int32 channel = 8;
 		optional int32 pitch = 9;
 		optional int32 flags = 10;
@@ -280,8 +277,8 @@ message CSVCMsg_Prefetch {
 }
 
 message CSVCMsg_SetView {
-	optional int32 entity_index = 1;
-	optional int32 slot = 2;
+	optional int32 entity_index = 1 [default = -1];
+	optional int32 slot = 2 [default = -1];
 }
 
 message CSVCMsg_FixAngle {
@@ -296,7 +293,7 @@ message CSVCMsg_CrosshairAngle {
 message CSVCMsg_BSPDecal {
 	optional .CMsgVector pos = 1;
 	optional int32 decal_texture_index = 2;
-	optional int32 entity_index = 3;
+	optional int32 entity_index = 3 [default = -1];
 	optional int32 model_index = 4;
 	optional bool low_priority = 5;
 }
@@ -304,7 +301,7 @@ message CSVCMsg_BSPDecal {
 message CSVCMsg_SplitScreen {
 	optional .ESplitScreenMessageType type = 1 [default = MSG_SPLITSCREEN_ADDUSER];
 	optional int32 slot = 2;
-	optional int32 player_index = 3;
+	optional int32 player_index = 3 [default = -1];
 }
 
 message CSVCMsg_GetCvarValue {
@@ -404,6 +401,7 @@ message CSVCMsg_CreateStringTable {
 	optional bytes string_data = 7;
 	optional int32 uncompressed_size = 8;
 	optional bool data_compressed = 9;
+	optional bool using_varint_bitcounts = 10;
 }
 
 message CSVCMsg_UpdateStringTable {
@@ -414,11 +412,12 @@ message CSVCMsg_UpdateStringTable {
 
 message CSVCMsg_VoiceData {
 	optional .CMsgVoiceAudio audio = 1;
-	optional int32 client = 2;
+	optional int32 client = 2 [default = -1];
 	optional bool proximity = 3;
 	optional fixed64 xuid = 4;
 	optional int32 audible_mask = 5;
 	optional uint32 tick = 6;
+	optional int32 passthrough = 7;
 }
 
 message CSVCMsg_PacketReliable {
@@ -460,7 +459,7 @@ message CMsgIPCAddress {
 }
 
 message CMsgServerPeer {
-	optional int32 player_slot = 1;
+	optional int32 player_slot = 1 [default = -1];
 	optional fixed64 steamid = 2;
 	optional .CMsgIPCAddress ipc = 3;
 	optional bool they_hear_you = 4;
@@ -474,9 +473,15 @@ message CSVCMsg_PeerList {
 
 message CSVCMsg_ClearAllStringTables {
 	optional string mapname = 1;
+	optional bool create_tables_skipped = 3;
 }
 
 message ProtoFlattenedSerializerField_t {
+	message polymorphic_field_t {
+		optional int32 polymorphic_field_serializer_name_sym = 1;
+		optional int32 polymorphic_field_serializer_version = 2;
+	}
+
 	optional int32 var_type_sym = 1;
 	optional int32 var_name_sym = 2;
 	optional int32 bit_count = 3;
@@ -487,6 +492,7 @@ message ProtoFlattenedSerializerField_t {
 	optional int32 field_serializer_version = 8;
 	optional int32 send_node_sym = 9;
 	optional int32 var_encoder_sym = 10;
+	repeated .ProtoFlattenedSerializerField_t.polymorphic_field_t polymorphic_types = 11;
 }
 
 message ProtoFlattenedSerializer_t {
@@ -560,7 +566,7 @@ message CMsgServerNetworkStats {
 
 message CSVCMsg_HltvReplay {
 	optional int32 delay = 1;
-	optional int32 primary_target = 2;
+	optional int32 primary_target = 2 [default = -1];
 	optional int32 replay_stop_at = 3;
 	optional int32 replay_start_at = 4;
 	optional int32 replay_slowdown_begin = 5;
@@ -573,7 +579,7 @@ message CCLCMsg_HltvReplay {
 	optional int32 request = 1;
 	optional float slowdown_length = 2;
 	optional float slowdown_rate = 3;
-	optional int32 primary_target = 4;
+	optional int32 primary_target = 4 [default = -1];
 	optional float event_time = 5;
 }
 

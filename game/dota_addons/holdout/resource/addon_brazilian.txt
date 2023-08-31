@@ -123,6 +123,7 @@
 		"DOTA_Tooltip_Ability_creature_minor_chain_frost"					"Congelamento em Cadeia"
 		"DOTA_Tooltip_ability_creature_minor_chain_frost_Description"		"Em inglês: <font color='#F2A93E'>Chain Frost</font>\n \nLança um orbe gélido que rebate entre heróis."
 		"DOTA_Tooltip_modifier_holdout_gods_strength"						"Força Divina"
+		"DOTA_Tooltip_modifier_holdout_gods_strength_Description"			"Mais %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%% de dano base e %dMODIFIER_PROPERTY_STATS_STRENGTH_BONUS% de Força. Reduz intervalos entre usos ao matar inimigos."
 		"DOTA_Tooltip_aura_health_regen"									"Aura de Cura"
 		"DOTA_Tooltip_witch_buff"											"Bônus de velocidade de ataque"
 				
@@ -270,7 +271,7 @@
 		"DOTA_Tooltip_ability_holdout_coup_de_grace_crit_bonus"					"%DANO CRÍTICO:"
 		"DOTA_Tooltip_ability_holdout_coup_de_grace_crit_radius"				"RAIO DA TRANSPOSIÇÃO:"
 		"DOTA_Tooltip_ability_holdout_coup_de_grace_crit_cleave_damage"			"%DANO TRANSPOSTO:"
-		"DOTA_Tooltip_ability_phantom_assassin_fan_of_knives_Description"		"Em inglês: <b><font color='#F2A9E'>Fan of Knives</font></b>\n \nA Phantom Assassin lança lâminas afiadas ao seu redor, causando dano proporcional à vida máxima de cada vítima no impacto, <font color='#70EA72'>até um máximo de %max_damage_initial%</font>, e aplicando uma quebra."
+		"DOTA_Tooltip_ability_phantom_assassin_fan_of_knives_Description"		"Em inglês: <b><font color='#F2A93E'>Fan of Knives</font></b>\n \nA Phantom Assassin lança lâminas afiadas ao seu redor, causando dano proporcional à vida máxima de cada vítima no impacto, <font color='#70EA72'>até um máximo de %max_damage_initial%</font>, e aplicando uma quebra."
 		"DOTA_Tooltip_ability_phantom_assassin_fan_of_knives_max_damage_initial"		"<font color='#70EA72'>DANO MÁXIMO:</font>"
 
 		"DOTA_Tooltip_ability_axe_battle_rage"									"Fúria de Batalha"
@@ -835,7 +836,6 @@
 
 		"DOTA_Tooltip_ability_treant_great_protector"							"Grande Protetor"
 		"DOTA_Tooltip_ability_treant_great_protector_Description"				"Em inglês: <font color='#F2A93E'>Great Protector</font>\n \nO Treant planta as suas raízes e cresce de tamanho, recebendo uma grande quantidade de Força adicional e perdendo velocidade de movimento."
-		"DOTA_Tooltip_ability_treant_great_protector_Lore"						" "
 		"DOTA_Tooltip_ability_treant_great_protector_bonus_strength"			"FORÇA ADICIONAL:"
 		"DOTA_Tooltip_ability_treant_great_protector_move_speed"				"VELOCIDADE DE MOVIMENTO:"
 		"DOTA_Tooltip_ability_treant_great_protector_duration"					"DURAÇÃO:"

@@ -80,13 +80,13 @@
 		"scenario_roshan_task_move_to_location_1"				"Reúnete con tus compañeros de equipo."
 		"scenario_roshan_task_move_to_location_1_Description"	"Haz clic derecho cerca del punto de destino para que tu héroe se mueva."
 
-		"scenario_roshan_task_kill_roshan"					"Derrota a Roshan en su cueva."
+		"scenario_roshan_task_kill_roshan"					"Derrota a Roshan en su foso."
 		"scenario_roshan_task_kill_roshan_Description"		"Usa tus ataques y habilidades contra Roshan."
 
 		"scenario_roshan_task_pick_up_aegis"				"Recoge la Égida del Inmortal."
 		"scenario_roshan_task_pick_up_aegis_Description"	"Haz clic derecho en la Égida para recogerla."
 
-		"scenario_roshan_task_exit_pit"						"Sal de la cueva de Roshan."
+		"scenario_roshan_task_exit_pit"						"Sal del foso de Roshan."
 		"scenario_roshan_task_exit_pit_Description"			"Haz clic derecho cerca del punto de destino para mover a tu héroe."
 
 		"scenario_roshan_task_kill_juggernaut"				"Derrota a Juggernaut con el poder de la Égida."
@@ -94,7 +94,7 @@
 
 		"scenario_roshan_wizard_tip_intro_Text"					"Roshan es una poderosa bestia inmortal que porta grandes recompensas, ¡incluida la Égida del Inmortal! Vamos a matarlo."
 
-		"scenario_roshan_wizard_tip_fight_Text"					"Roshan aparece en su cueva al comienzo de la partida, pero para derrotarlo deberías subir de nivel, hacerte con algunos objetos y llevar a tus compañeros de equipo."
+		"scenario_roshan_wizard_tip_fight_Text"					"Roshan aparece en su foso al comienzo de la partida, pero para derrotarlo deberías subir de nivel, hacerte con algunos objetos y llevar a tus compañeros de equipo."
 
 		"scenario_roshan_wizard_tip_rosh_killed_Text"			"Matar a Roshan otorga oro y EXP a todo tu equipo. Reaparecerá pasado cierto tiempo y tendrá más recompensas a su vuelta."
 
@@ -613,7 +613,7 @@
 		"scenario_items_task_buy_boots_of_travel_Description"				"Haz clic en el botón de la tienda para abrirla, y luego clic derecho en las Botas de Viaje."
 		
 		"scenario_items_wizard_tip_share_tango_Text"					"Los Tangos son uno de los pocos objetos que se pueden compartir con los compañeros de equipo."
-		"scenario_items_wizard_tip_support_Text"							"Los héroes de apoyo a menudo dan un Tango a sus compañeros de equipo para obtener ventaja."
+		"scenario_items_wizard_tip_support_Text"							"Los héroes de apoyo a menudo dan un Tango a sus compañeros de equipo para ayudarlos a curarse."
 		"scenario_items_wizard_tip_disassemble_Text"					"Las referencias de objetos específicas para héroes a veces involucran deshacerse de objetos al principio de la partida para hacerte con otros objetos más adelante."
 		"scenario_items_wizard_tip_recipe_Text"							"Las recetas no aparecen en la tienda, excepto en la sección de combinar objetos."
 		
@@ -832,7 +832,7 @@
 		// Scenario: Tower
 		"scenario_tower_main_objective"										"Aprende la mecánica básica de las torres."
 		"scenario_tower_task_move_to_location_1"							"Mueve a tu héroe a la ubicación."
-		"scenario_tower_task_move_to_location_1_Description"				"Haz clic derecho en el suelo para moverte. Mantén pulsada la tecla Alt para ver el alcance de la torre."
+		"scenario_tower_task_move_to_location_1_Description"				"Haz clic derecho en el suelo para moverte. Mantén pulsada la tecla «Alt» para ver el alcance de la torre."
 		"scenario_tower_task_move_to_location_2"							"No recibas daño al hacer que tu héroe vaya hasta la ubicación."
 		"scenario_tower_task_move_to_location_2_Description"				"Clic derecho en el suelo para moverte. Permite que los creeps se muevan delante de tu héroe."
 		"scenario_tower_task_attack_enemy_tower"							"Ataca a la torre enemiga."

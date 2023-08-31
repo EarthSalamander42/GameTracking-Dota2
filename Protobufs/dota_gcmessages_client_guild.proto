@@ -1,8 +1,5 @@
 import "dota_shared_enums.proto";
 
-option optimize_for = SPEED;
-option cc_generic_services = false;
-
 enum EGuildAuditAction {
 	k_EGuildAuditAction_Invalid = 0;
 	k_EGuildAuditAction_GuildCreated = 1;
@@ -154,6 +151,7 @@ message CMsgClientToGCCreateGuildResponse {
 		k_eGuildLimit = 13;
 		k_eInvalidMotD = 14;
 		k_eBlocked = 15;
+		k_eFreeTrialNotAllowed = 16;
 	}
 
 	optional .CMsgClientToGCCreateGuildResponse.EResponse result = 1 [default = k_eInternalError];

@@ -81,23 +81,17 @@
 		"HasModAppSystems" "1"
 		"Capable64Bit" "1"
 		"PanoramaUIClientFromClient" "1" // IPanoramaUIClient is implemented by client.dll
-		"HasGameUI" "1" // dota uses gameui
-		"GameUIFromClient" "1"  // AND that gameui comes from client.dll
+		"HasLegacyGameUI" "1" // dota uses some legacy gameui systems
 		"URLName" "dota2"
 		"MsaaOverrideType" "0"
 		"UsesBink" "0"
         "MaxNetworkableEntities" "10000"
         "MaxNonNetworkableEntities" "10000"
-        // The shader binary cache on Linux can be over 100MB so
-        // we have to allow very large allocations.
-		"AllocWarnMB_linuxsteamrt64" "200"
-		// Also currently demo files are loaded entirely into
-		// memory for 64-bit binaries so they can use well
-		// over 100MB at load time.  Zoid is looking at
-		// converting that to streaming.
-		"AllocWarnMB_osx64" "200"
-		"AllocWarnMB_pc64" "200"
-		"AllocWarnMB" "100"
+        // The shader binary cache on non-Windows can be over 500MB.
+		// Also currently demo files are loaded entirely into memory for
+		// 64-bit binaries so they can easily use 100's of MB at load time.
+        // Go ahead and allow very large allocations, essentially removing this warning.
+		"AllocWarnMB" "2000"
 		"ReserveWarnMB" "64"
 
 		"DefaultRenderSystem"					"-vulkan" [ $LINUX || $OSX ] // macOS/Linux default to Vulkan
@@ -119,6 +113,8 @@
 			"Product" "dota"
 			"Component" "dota"
 		}
+
+		"NoResetInputOnGameOverlay" "1"
 	}
 
 	SceneFileCache
@@ -129,7 +125,7 @@
 	SceneSystem
 	{
 		"SunLightManagerCount" "0"
-		"TransformTextureRowCount" "1024"
+		"TransformTextureRowCount" "2048"
 		"CMTAtlasWidth" "1024"
 		"CMTAtlasHeight" "512"
 		"CMTAtlasChunkSize" "128"
@@ -150,6 +146,7 @@
 		"DeveloperHelpURL" "https://developer.valvesoftware.com/wiki/Dota_2_Workshop_Tools"
 		"ToolsProductName" "Dota2 Workshop Tools"
 		"HideCoreMod"	"1"
+		"SupportsActivities"	"1"
 	}
 
 	Hammer
@@ -183,8 +180,6 @@
 
 	ModelCompile
 	{
-		"AllowLegacyModelFormat"	"1" // modeldoc not required (yet)
-		"UseShadowFastPathHeuristic"	"1"
 	}
 	
 	ModelDoc
@@ -207,6 +202,22 @@
 		"DotaTileGrid"	"1"
 
 		"DeprecatedBehaviorVersionsAllowed"	"1"
+
+	        MeshCompiler
+	        {
+	            EncodeVertexBuffer      "1"
+	            EncodeIndexBuffer       "1"
+	        }
+
+		WorldRendererBuilder
+		{
+			UseAggregateInstances       	    "1"
+			VisibilityGuidedMeshClustering      "1"
+			MinimumTrianglesPerClusteredMesh    "512"
+			MinimumVerticesPerClusteredMesh     "512"
+			MinimumVolumePerClusteredMesh       "1024"
+			MaxPrecomputedVisClusterMembership  "16"
+		}
 	}
 
 	RenderPipelineAliases
@@ -223,7 +234,8 @@
 
 	Particles
 	{
-		"GameSupportsLegacyShaders"	"1"
+		"GameSupportsLegacyShaders"			"1"
+		"features"							"no_gpu_blobs"
 	}
 
 	Panorama
@@ -234,7 +246,7 @@
 	RenderSystem
 	{
 		SwapChainSampleableDepth 1
-		"VulkanUseSecondaryCommandBuffers"	"1" // Use secondary command buffers for more efficiency on tiled based renderers. All platforms to limit configurations.
+		//"VulkanUseSecondaryCommandBuffers"	"1" // Use secondary command buffers for more efficiency on tiled based renderers. All platforms to limit configurations. (Disabled due to GPU blobulator incompatibility)
 		"VulkanSteamShaderCache"			"1"
 		"OpenGLForceSM30"					"1"
 		"LowLatency"						"1"

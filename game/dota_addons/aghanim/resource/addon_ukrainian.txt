@@ -43,7 +43,7 @@
 		"npc_dota_boss_tinker_structure"			"Мастацький вузол"
 		"npc_aghsfort_morty_mango_orchard"			"Фруктолас"
 		"npc_dota_creature_ogre_tank_mango_farmer"	"Торговець фруктами"
-		"npc_dota_creature_aghsfort_primal_beast_boss"		"Первинний звір"
+		"npc_dota_creature_aghsfort_primal_beast_boss"		"Первісний Звір"
 		"aghsfort_primal_beast_rock"				"Каменюка"
 		"aghsfort_primal_beast_rock_golem"			"Первісний кам’яний ґолем"
 		"npc_dota_creature_slardar_smashy"			"Різака"
@@ -183,7 +183,7 @@
 		"DOTA_Tooltip_modifier_aghsfort_arc_warden_boss_flux_Description"	"Сповільнено й отримує шкоду, коли не біля союзної істоти."
 
 		"DOTA_Tooltip_Ability_aghsfort_hoodwink_hunters_boomerang"								"Лускальний бумеранг"
-		"DOTA_Tooltip_Ability_aghsfort_hoodwink_hunters_boomerang_Description"					"Надсилає бумеранг, що лускає цілі. Максимальна дальність: 2 000."
+		"DOTA_Tooltip_Ability_aghsfort_hoodwink_hunters_boomerang_Description"					"Надсилає бумеранг, що лускає цілі. Максимальна дальність: 2000."
 		
 		"DOTA_Tooltip_Ability_ogre_tank_melee_smash"						"БЛИЖНІЙ УДАР"
 		//"DOTA_Tooltip_Ability_ogre_tank_melee_smash_Description"			"CLUB SMASH"

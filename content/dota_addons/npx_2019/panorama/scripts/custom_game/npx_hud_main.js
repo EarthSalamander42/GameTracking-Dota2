@@ -336,7 +336,7 @@ function StartDialog( event )
 
 	if ( g_nDialogEnt !== -1 )
 	{
-		var szSpeakingEntityName = $.Localize( "#" + Entities.GetUnitName( g_nDialogEnt ) );
+		var szSpeakingEntityName = GameUI.GetUnitNameLocalized( Entities.GetUnitName( g_nDialogEnt ) );
 		DialogPanel.SetDialogVariable( "dialog_npc_name", szSpeakingEntityName );
 	}
 }
@@ -488,8 +488,8 @@ function OnTimerHide( event )
 GameEvents.Subscribe( "show_wizard_tip", ShowWizardTip ); 
 function ShowWizardTip( event )
 {
-	var szTipText = event[ "tip_name" ] + "_Text";
-	var szTipAnnotation = event[ "tip_name" ] + "_Annotation";
+	var szTipText = '#' + event[ "tip_name" ] + "_Text";
+	var szTipAnnotation = '#' + event[ "tip_name" ] + "_Annotation";
 	var flDuration = event[ "tip_duration" ];
 	var referencedAbilities = null
 	if ( event[ "tip_ability_names" ] != null ) 

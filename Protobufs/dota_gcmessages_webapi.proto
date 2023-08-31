@@ -1,9 +1,8 @@
 import "steammessages.proto";
 import "gcsdk_gcmessages.proto";
 import "dota_shared_enums.proto";
-
-option optimize_for = SPEED;
-option cc_generic_services = false;
+import "dota_gcmessages_common.proto";
+import "dota_match_metadata.proto";
 
 enum ETeamFanContentStatus {
 	TEAM_FAN_CONTENT_STATUS_INVALID = 0;
@@ -268,6 +267,8 @@ message CMsgDPCEvent {
 	optional uint32 timestamp_drop_lock = 12;
 	optional uint32 timestamp_add_lock = 13;
 	optional uint32 timestamp_content_deadline = 14;
+	optional bool is_fantasy_enabled = 15;
+	optional uint32 timestamp_content_review_deadline = 16;
 }
 
 message CMsgDPCEventList {
@@ -299,7 +300,7 @@ message CMsgDOTAFantasyCardLineup {
 	}
 
 	message Period {
-		optional uint32 fantasy_period = 1;
+		optional uint32 fantasy_period = 1 [default = 4294967295];
 		optional uint32 timestamp_start = 2;
 		optional uint32 timestamp_end = 3;
 		repeated .CMsgDOTAFantasyCardLineup.League leagues = 4;
@@ -327,10 +328,22 @@ message CMsgDOTAFantasyCardList {
 	repeated .CMsgDOTAFantasyCardList.Card cards = 1;
 }
 
+message CMsgChatToxicityToxicPlayerMatchesReport {
+	message IndividualRow {
+		optional uint32 player_account_id = 1;
+		optional uint32 num_matches_seen = 2;
+		optional uint32 num_messages = 3;
+		optional uint32 num_messages_toxic = 4;
+		optional uint64 first_match_seen = 5;
+		optional uint64 last_match_seen = 6;
+	}
+
+	repeated .CMsgChatToxicityToxicPlayerMatchesReport.IndividualRow rows = 1;
+}
+
 message CMsgChatToxicityReport {
 	optional uint32 num_matches_seen = 1;
 	optional uint32 num_messages = 2;
-	optional uint32 num_messages_human_thinks_toxic = 3;
 	optional uint32 num_messages_ml_thinks_toxic = 4;
 	optional string status = 5;
 	optional uint32 result = 6;
@@ -351,4 +364,9 @@ message CMsgGetTeamAuditInformation {
 	optional string team_name = 2;
 	repeated .CMsgGetTeamAuditInformation.Action actions = 3;
 	optional uint32 last_updated = 4;
+}
+
+message CMsgDOTADPCMatch {
+	optional .CMsgDOTAMatch match = 1;
+	optional .CDOTAMatchMetadata metadata = 2;
 }

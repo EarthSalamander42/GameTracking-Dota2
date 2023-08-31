@@ -26,9 +26,12 @@
 		"Hero_ButtonCategory"						"Sankari"
 		"Spawn_ButtonCategory"						"Muut"
 		"Misc_ButtonCategory"						"Mukauta"
+		"Map_ButtonCategory"						"Kartta"
+
 		"SpawnCreeps_Button"						"Kätyriaallot"
 		"SpawnCreepsOn_Msg"							"Kätyriaallot: päällä"
 		"SpawnCreepsOff_Msg"						"Kätyriaallot: pois päältä"
+		"SpawnSingleCreepWave_Button"				"+"
 		"TowersEnabled_Button"						"Tornit"
 		"TowersEnabledOn_Msg"						"Tornit: päällä"
 		"TowersEnabledOff_Msg"						"Tornit: pois päältä"
@@ -43,9 +46,25 @@
 		"LevelUpEnemy_Button"						"Nosta vihollisen tasoa"
 		"MaxLevelEnemy_Button"						"Ylimmän tason viholliset"
 
+		"RemoveSpawns_Button"						"Poista"
 		"PauseDemo_Button"							"Pysäytä"
 		"QuitDemo_Button"							"Poistu"
+		"NightEnable_Button"						"Yöaika"
+
+		"RuneSpawn_DoubleDamage_Button"				"Tuplavahinko"
+		"RuneSpawn_Haste_Button"					"Nopeus"
+		"RuneSpawn_Illusion_Button"					"Harha"
+		"RuneSpawn_Invisibility_Button"				"Invisibility"
+		"RuneSpawn_Regeneration_Button"				"Palautuminen"
+		"RuneSpawn_Arcane_Button"					"Loitsu"
+		"SpawnUnits_ButtonCategory"					"LISÄÄ SANKARI"
+		"LevelUpSelectedHeroes_Button"				"UUSI TASO"
 		"NewHero_Button"							"Uusi sankari"
 
+		"SaveState_Button"							"Tallenna"
+		"RestoreState_Button"						"Lataa"
+
+		"SpeedIncrement_Tooltip"					"Lisää nopeutta"
+		"SpeedDecrement_Tooltip"					"Vähennä nopeutta"
 		}
 }

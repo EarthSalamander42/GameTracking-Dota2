@@ -80,13 +80,13 @@
 		"scenario_roshan_task_move_to_location_1"				"Срещнете се със съотборниците си"
 		"scenario_roshan_task_move_to_location_1_Description"	"Кликнете с десния бутон близо до маршрутната точка, за да придвижите героя си."
 
-		"scenario_roshan_task_kill_roshan"					"Разгромете Roshan в рова му"
+		"scenario_roshan_task_kill_roshan"					"Разгромете Roshan в ямата му"
 		"scenario_roshan_task_kill_roshan_Description"		"Използвайте своите атаки и умения срещу Roshan."
 
 		"scenario_roshan_task_pick_up_aegis"				"Вземете Aegis of the Immortal"
 		"scenario_roshan_task_pick_up_aegis_Description"	"Кликнете с десния бутон върху Aegis, за да го вземете."
 
-		"scenario_roshan_task_exit_pit"						"Излезте от рова на Roshan"
+		"scenario_roshan_task_exit_pit"						"Излезте от ямата на Roshan"
 		"scenario_roshan_task_exit_pit_Description"			"Кликнете с десния бутон близо до маршрутната точка, за да придвижите героя си."
 
 		"scenario_roshan_task_kill_juggernaut"				"Разгромете Juggernaut с мощта на Aegis"
@@ -94,7 +94,7 @@
 
 		"scenario_roshan_wizard_tip_intro_Text"					"Roshan е могъщ безсмъртен звяр, който носи страхотни награди, включително и Aegis of the Immortal! Нека отидем да го убием."
 
-		"scenario_roshan_wizard_tip_fight_Text"					"Roshan се появява в своя ров при старта на играта, но ще е добре да повишите своето ниво, да се сдобиете с няколко предмета и да доведете съотборниците си, за да го разгромите."
+		"scenario_roshan_wizard_tip_fight_Text"					"Roshan се появява в своята яма при старта на играта, но ще е добре да повишите своето ниво, да се сдобиете с няколко предмета и да доведете съотборниците си, за да го разгромите."
 
 		"scenario_roshan_wizard_tip_rosh_killed_Text"			"Убиването на Roshan предоставя злато и опит на целия Ви отбор. Той ще се прероди след даден времеви период и ще разполага с още награди при завръщането си."
 
@@ -348,7 +348,7 @@
 		"scenario_navigation_time_spent"													"Прекарано време:"
 		
 		"scenario_navigation_wizard_tip_center_camera_Text"					"Центрирайте се над героя си, като кликнете върху неговия портрет."
-		"scenario_navigation_wizard_tip_leap_Text"									"Leap Ви позволява да преминавате над бариери или различни коти. Изпълняването на Leap ще намали броя на зарядите."
+		"scenario_navigation_wizard_tip_leap_Text"									"Leap Ви позволява да преминавате над бариери или различни коти. Изпълняването на Leap ще понижи броя на зарядите."
 		"scenario_navigation_wizard_tip_phase_Text"									"Phase Boots разполагат с време за изчакване, след като ги активирате. Можете да използвате Phase Boots всеки път, когато са активни, но въпреки това е възможно да бъдат по-полезни в други ситуации. Имайте предвид, че ботушите се считат за един предмет."
 		"scenario_navigation_wizard_tip_blink_Text"									"Blink Dagger Ви позволява да преминавате нормално през непроходими бариери."
 		"scenario_navigation_wizard_tip_block_Text"									"Единиците блокират други такива. Използването на Phase Boots временно Ви позволява ма преминавате през единици."
@@ -613,7 +613,7 @@
 		"scenario_items_task_buy_boots_of_travel_Description"				"Кликнете върху бутона „Магазин“, за да го отворите. Кликнете с десния бутон върху Boots of Travel."
 		
 		"scenario_items_wizard_tip_share_tango_Text"					"Tangos са едни от малкото предмети, които могат да бъдат споделяни със съотборници."
-		"scenario_items_wizard_tip_support_Text"							"Поддържащите герои често дават Tango на своите съотборници, за да се сдобият с преднина."
+		"scenario_items_wizard_tip_support_Text"							"Поддържащите герои често дават Tango на своите съотборници, за да им помогнат да се излекуват."
 		"scenario_items_wizard_tip_disassemble_Text"					"Специфичните билдове на предмети за герои понякога включват разглобяване на предмети от ранния етап на играта, за да се направят такива за късния ѝ."
 		"scenario_items_wizard_tip_recipe_Text"							"Рецептите не се появяват в магазина, освен в секцията „Комбиниране на предмети“."
 		
